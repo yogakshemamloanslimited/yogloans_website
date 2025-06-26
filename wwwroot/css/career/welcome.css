@@ -1,0 +1,67 @@
+ .hero-career {
+     background: url('/images/welcome/investors.jpg') center/cover no-repeat;
+
+            color: #fff;
+            padding: 80px 0 60px 0;
+            text-align: center;
+            position: relative;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hero-career::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.316);
+        }
+        .hero-career h1 { font-size: 3rem; margin-bottom: 10px; z-index: 2; position: relative; }
+        .hero-career p { font-size: 1.3rem; margin-bottom: 30px; text-align: center; position: relative; z-index: 2000;}
+        .cta-btn {
+            background: #0056b3;
+            color: #fff;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            z-index: 2; position: relative;
+        }
+        .cta-btn:hover { background: #003d80; }
+        .why-work {
+            background: #fff;
+            padding: 60px 0 50px 0;
+            text-align: center;
+        }
+        .why-work h2 { font-size: 2.2rem; margin-bottom: 30px; }
+        .why-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+        .why-icon {
+            background: #f0f4f8;
+            border-radius: 16px;
+            padding: 30px 20px;
+            width: 220px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .why-icon img { width: 48px; margin-bottom: 15px; }
+        .why-icon h4 { margin: 10px 0 8px 0; font-size: 1.1rem; }
+        .job-section {
+            padding: 60px 0 40px 0;
+            background: #f7f8fa;
+        }

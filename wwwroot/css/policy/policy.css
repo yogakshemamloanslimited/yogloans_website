@@ -1,0 +1,69 @@
+
+.report-cards {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+.section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.section-item h3 {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.section-item h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #044697;
+    border-radius: 50%;
+}
+
+.section-item p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.pdfs {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.pdfs a {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #044697;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.pdfs a:hover {
+    background-color: #002FEB;
+}
+

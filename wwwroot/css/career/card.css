@@ -1,0 +1,35 @@
+  .job-section {
+            padding: 60px 0 40px 0;
+            background: #f7f8fa;
+        }
+        .job-section h2 { text-align: center; font-size: 2rem; margin-bottom: 35px; }
+        .jobs-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 0 auto;
+         /*    max-width: 900px; */
+        }
+        .job-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 28px 22px;
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .job-card h3 { margin: 0 0 10px 0; font-size: 1.3rem; }
+        .job-card p { margin: 0 0 8px 0; color: #444; }
+        .job-card .apply-btn {
+            margin-top: 15px;
+            background: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 22px;
+            cursor: pointer;
+            font-size: 1rem;
+        }

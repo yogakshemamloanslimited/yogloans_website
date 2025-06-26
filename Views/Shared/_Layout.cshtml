@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - yogloans</title>
+ 
+
+    <link rel="stylesheet" href="~/css/layout.css">
+    <script src="~/js/site.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+          <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Add Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/png" href="~/images/logo/logo.png" />
+
+</head>
+
+<body>
+    <div class="loader-mask">
+            <div class="loader">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    <header>
+        <menu>
+            <div class="menu-container">
+                <img src="images/logo/logo.png" alt="" srcset="">
+                <div class="toggle">
+                    <img src="images/icon/open-menu.png" alt="" srcset="" id="menu">
+                </div>
+                <ul>
+                    <li onclick="window.location.href='/'">Home</li>
+                    <li onclick="window.location.href='/about'">About</li>
+                    <li class="services-link">Services</li>
+                    <ul class="service-list">
+                        <li onclick="window.location.href='/gold'">Gold Loan</li>
+                        <li onclick="window.location.href='/business'">Business Loan</li>
+                        <li onclick="window.location.href='/cd'">CD Loan</li>
+                        <li onclick="window.location.href='/vehicle'">Vehicle Loan</li>
+                    </ul>
+                    <li onclick="window.location.href='/investor'">Investors</li>
+                    <li onclick="window.location.href='/Onlineservices'">Online Services</li>
+                    <li onclick="window.location.href='/policies'">Policies</li>
+                    <li onclick="window.location.href='/career'">Career</li>
+                    <li onclick="window.location.href='/csr'">CSR</li>
+                    <li onclick="window.location.href='/contact'">Contact Us</li>
+                </ul>
+            </div>
+        </menu>
+        <menu id="res-menu">
+            <div class="menu-container">
+                <ul>
+                    <div class="toggle">
+                        <img src="images/icon/arrow(1).png" alt="" srcset="" id="close">
+                    </div>
+                    <li onclick="window.location.href='/'">Home</li>
+                    <li onclick="window.location.href='/about'">About</li>
+                    <li class="services-link2">Services</li>
+                    <ul class="service-list2" >
+                               <li onclick="window.location.href='/gold'">Gold Loan</li>
+                        <li onclick="window.location.href='/business'">Business Loan</li>
+                        <li onclick="window.location.href='/cd'">CD Loan</li>
+                        <li onclick="window.location.href='/vehicle'">Vehicle Loan</li>
+                    </ul>
+                    <li onclick="window.location.href='/investor'">Investors</li>
+                    <li onclick="window.location.href='/Onlineservices'">Online Services</li>
+                    <li onclick="window.location.href='/policies'">Policies</li>
+                    <li onclick="window.location.href='/career'">Career</li>
+                    <li onclick="window.location.href='/csr'">CSR</li>
+                    <li onclick="window.location.href='/contact'">Contact Us</li>
+                </ul>
+                <div class="contact">
+                    <div class="icons">
+                        <div class="item">
+                            <img src="images/icon/facebook.png" alt="" srcset="">
+                        </div>
+                        <div class="item">
+                            <img src="images/icon/social-media.png" alt="" srcset="">
+                        </div>
+                        <div class="item">
+                            <img src="images/icon/linkedin-logo.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </menu>
+    </header>
+  
+            @RenderBody()
+      
+     <footer class="footer-section">
+        <div class="container">
+            <!-- <div class="footer-cta pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="cta-text">
+                                    <h4>Find us</h4>
+                                    <span>  Aswini Junction, Thiruvambady-PO, Thrissur, Kerala-680022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-phone"></i>
+                                <div class="cta-text">
+                                    <h4>Call us</h4>
+                                    <span>9876543210 0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="far fa-envelope-open"></i>
+                                <div class="cta-text">
+                                    <h4>Mail us</h4>
+                                    <span>mail@info.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget" style="padding: 20px;">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="images/logo/logo.png" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>To emerge as the most trusted financial solution provider in India, with special
+                                    focus on emerging segments of society, through a nationwide, efficient and service
+                                    oriented network..</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/share/18qcUVv3fJ/?mibextid=wwXIfr" target="_blank"
+                                    style="background-color: white;"><img src="images/icon/facebook.png" alt=""
+                                        srcset=""></a>
+                                <a href="https://www.instagram.com/yogloansfinance?igsh=djhqZGI0dG92bGI0"
+                                    target="_blank"><img src="images/icon/social-media.png" alt="" srcset=""></a>
+                                <a href="https://www.linkedin.com/company/yogloans"><img
+                                        src="images/icon/linkedin-logo.png" alt="" srcset=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li> <a href="about.html">About Us</a></li>
+
+                                <li> <a href="investors.html">Investors</a></li>
+                                <li> <a href="online-services.html">Online Services</a></li>
+                                <li> <a href="policies.html">Policies</a></li>
+                                <li> <a href="csr.html">CSR</a></li>
+                                <li><a href="career.html">Career</a></li>
+                                <li> <a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><img src="images/icon/send.png" alt="" srcset=""></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>2025 YOGAKSHEMAM LOANS Ltd. All rights reserved. </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="loans.html">Gold Loan</a></li>
+                                <li><a href="vehicle.html">Vehicle Loan</a></li>
+                                <li><a href="personal.html">Business Loan</a></li>
+                                <li><a href="cd.html">CD Loan</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+       <script>
+           // Mobile services dropdown
+const servicesLinks = document.querySelector('.services-link2');
+const servicesList = document.querySelector('.service-list2');
+
+servicesLinks.onclick = function () {
+  const isActive = servicesList.classList.contains('active');
+
+  if (isActive) {
+    // Collapse
+    servicesList.style.height = servicesList.scrollHeight + 'px'; // set current height to allow transition
+    requestAnimationFrame(() => {
+      servicesList.style.height = '0px';
+    });
+    servicesList.classList.remove('active');
+  } else {
+    // Expand
+    servicesList.classList.add('active');
+    const fullHeight = servicesList.scrollHeight + 'px';
+    servicesList.style.height = fullHeight;
+
+    // After transition ends, remove the fixed height so it adapts naturally
+    servicesList.addEventListener(
+      'transitionend',
+      () => {
+        if (servicesList.classList.contains('active')) {
+          servicesList.style.height = 'auto';
+        }
+      },
+      { once: true }
+    );
+  }
+};
+        var menu = document.getElementById('menu');
+var close = document.getElementById('close');
+var res = document.getElementById('res-menu');
+
+menu.onclick = function() {
+ 
+    res.style.width = '60%';
+}
+
+close.onclick = function() {
+    res.style.width = '0%';
+   
+}
+            var owl2 = $("#owl-demo2");
+        owl2.owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            smartSpeed: 800,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 15
+                },
+                600: {
+                    items: 2,
+                    margin: 20
+                },
+                1000: {
+                    items: 3,
+                    margin: 20
+                }
+            }
+        });
+
+        var owl3 = $("#owl-demo3");
+        owl3.owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            smartSpeed: 800,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 15
+                },
+                600: {
+                    items: 2,
+                    margin: 20
+                },
+                1000: {
+                    items: 3,
+                    margin: 20
+                }
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+    const servicesLink = document.querySelector('.services-link');
+    const servicesList = document.querySelector('.service-list');
+
+    servicesLink.addEventListener('mouseover', function(e) {
+        servicesList.style.opacity = '1';
+        servicesList.style.display = 'flex';
+    });
+
+    servicesLink.addEventListener('mouseout', function(e) {
+        servicesList.style.opacity = '0';
+    });
+
+    servicesList.addEventListener('mouseover', function(e) {
+        servicesList.style.opacity = '1';
+        servicesList.style.display = 'flex';
+    });
+
+    servicesList.addEventListener('mouseout', function(e) {
+        servicesList.style.opacity = '0';
+        servicesList.style.zIndex = '0';
+        servicesList.style.display = 'none';
+    });
+});$(window).on('load', function() {
+    // Preloader
+    $('.loader').fadeOut();
+    $('.loader-mask').delay(350).fadeOut('slow');
+});
+       </script>
+           <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/680b1b094b378d190bfa0463/1iplm37ls';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+        <script src="~/js/site.js" asp-append-version="true"></script> 
+       <script  src="~/js/jaquery.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

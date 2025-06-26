@@ -1,0 +1,172 @@
+.details {
+    width: 100%;
+    max-width: 90%;
+    margin: 32px auto;
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    border: 1px solid #e0e7ef;
+    padding: 32px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.details .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.details .header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a237e;
+    letter-spacing: 1px;
+}
+
+.details form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 24px;
+}
+
+@media (max-width: 1300px) {
+    .details form {
+        grid-template-columns: repeat(2, 1fr) !important;
+
+    }
+    .details {
+        max-width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    .details {
+        padding: 16px 4px;
+    }
+    .details form {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px    ;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+    }
+   
+}
+
+.details form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.details label {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0px;
+    font-size: 0.80rem;
+}
+
+.details input[type="text"],
+.details select {
+    padding: 7px 10px;
+    border: 1.2px solid #bfc9d9;
+    border-radius: 5px;
+    font-size: 0.98rem;
+    background: #fff;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.details input[type="text"]:focus,
+.details select:focus {
+    border: 1.2px solid #1976d2;
+    outline: none;
+    box-shadow: 0 0 0 2px #e3f0fd;
+}
+
+.details input[type="radio"],
+.details input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: #1976d2;
+}
+
+.details .buttons {
+    grid-column: span 3;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+h4
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+@media (max-width: 1000px) {
+    .details .buttons {
+        grid-column: span 2;
+    }
+}
+@media (max-width: 700px) {
+    .details .buttons {
+        grid-column: span 1;
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+}
+
+.details button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 5px;
+    background: #1976d2;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+.details button[type="reset"] {
+    background: #757575;
+}
+
+.details button[type="button"] {
+    background: #e53935;
+}
+
+.details button:hover, .details button:focus {
+    opacity: 0.96;
+    background: #1251a3;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.13);
+}
+
+.details button[type="reset"]:hover, .details button[type="reset"]:focus {
+    background: #616161;
+}
+
+.details button[type="button"]:hover, .details button[type="button"]:focus {
+    background: #b71c1c;
+}
+
+.details form > div:has([name="assessed_to_tax"]) {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+.details form > div:has([name="assessed_to_tax"]) label {
+    margin-bottom: 0;
+    margin-right: 12px;
+    font-size: 0.80rem;
+}
+.details input[type="radio"] + label,
+.details input[type="radio"] {
+    margin-right: 8px;
+    margin-left: 0;
+    vertical-align: middle;
+}

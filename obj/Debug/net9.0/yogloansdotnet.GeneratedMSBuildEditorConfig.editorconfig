@@ -1,0 +1,405 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = yogloansdotnet
+build_property.RootNamespace = yogloansdotnet
+build_property.ProjectDir = D:\yogloansdotnet - Copy\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\yogloansdotnet - Copy
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/yogloansdotnet - Copy/Views/About/about.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcYWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/About/aboutcontainer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcYWJvdXRjb250YWluZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/About/director.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcZGlyZWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/About/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/About/model.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcbW9kZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/About/reviews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRccmV2aWV3cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/About/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/About/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQWJvdXRcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Career/departments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ2FyZWVyXGRlcGFydG1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Career/designation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ2FyZWVyXGRlc2lnbmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Career/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ2FyZWVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Career/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ2FyZWVyXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Counts/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ291bnRzXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Csr/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ3NyXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Homeloan/loansection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSG9tZWxvYW5cbG9hbnNlY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Homeloan/offer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSG9tZWxvYW5cb2ZmZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Homeloan/points.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSG9tZWxvYW5ccG9pbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Investors/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSW52ZXN0b3JzXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Login/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cTG9naW5caW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Online/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cT25saW5lXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/policy/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5ccG9saWN5XGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Branch/branchcard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXGJyYW5jaGNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Branch/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Branch/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Business/benefit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NcYmVuZWZpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Business/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NcZm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Business/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Business/map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3NcbWFwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Business/section.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3Ncc2VjdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Business/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzaW5lc3Ncd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Career/cardsection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXGNhcmRzZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Career/faq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXGZhcS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Career/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXGZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Career/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Career/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Cd/benefit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2RcYmVuZWZpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Cd/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2RcZm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Cd/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2RcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Cd/map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2RcbWFwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Cd/section.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Rcc2VjdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Cd/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Rcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Contact/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxmb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Contact/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Contact/map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxtYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Contact/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFx3ZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Csr/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3NyXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Csr/reportcard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3NyXHJlcG9ydGNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Csr/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3NyXFdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Gold/benefit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29sZFxiZW5lZml0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Gold/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29sZFxmb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Gold/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29sZFxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Gold/map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29sZFxtYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Gold/section.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29sZFxzZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Gold/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29sZFx3ZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Home/about.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Home/contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Home/count.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Home/loanitem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2FuaXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Home/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx3ZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Investor/creditrate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3JcY3JlZGl0cmF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Investor/director.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3JcZGlyZWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Investor/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3JcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Investor/list.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3JcbGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Investor/model.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3JcbW9kZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Investor/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3Jcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/nach/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbmFjaFxmb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/nach/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbmFjaFxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/nach/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbmFjaFxXZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Online15g/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lMTVnXGZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Online15g/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lMTVnXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Online15g/pdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lMTVnXHBkZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Online15g/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lMTVnXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Onlineservices/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lc2VydmljZXNcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Onlineservices/services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lc2VydmljZXNcc2VydmljZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Onlineservices/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lc2VydmljZXNcV2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Policies/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Policies/policy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNccG9saWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Policies/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Vehicle/benefit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxiZW5lZml0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Vehicle/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxmb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Vehicle/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Vehicle/map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxtYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Vehicle/section.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVxzZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Vehicle/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZVx3ZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-vr67hvh6yz
+
+[D:/yogloansdotnet - Copy/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wwjvih1rpr

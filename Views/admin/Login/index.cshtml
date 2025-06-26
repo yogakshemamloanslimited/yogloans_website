@@ -1,0 +1,156 @@
+@model yogloansdotnet.Models.LoginFormModel
+@{
+    ViewData["Title"] = "Admin Login";
+    Layout = "~/Views/admin/Shared/_Layout.cshtml";
+}
+
+<div class="main-content">
+    <form asp-controller="Admin" asp-action="Login" method="post" class="login">
+        @Html.AntiForgeryToken()
+        <h2>Welcome, Admin!</h2>
+        <p>Please log in</p>
+        
+        <div class="form-group">
+            <label asp-for="Username"></label>
+            <input asp-for="Username" class="form-control" placeholder="Enter Username"/>
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" type="password" class="form-control" placeholder="Enter Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        
+        <div asp-validation-summary="All" class="text-danger"></div>
+        
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger">@Model.ErrorMessage</div>
+        }
+        
+        <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<style>
+    .headers {
+        display: none;
+    }
+    .sidebar {
+        display: none;
+    }
+      .main-content {
+            margin-left: 0px;
+            padding-top: 0px;
+            min-height: calc(0vh - 0px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 700px;
+        }
+
+.login {
+ @*  margin: 20px auto; *@
+ @* 
+  max-width: 300px; *@
+   padding: 40px 50px;
+  width: 30%    ;
+  border-radius: 5px;
+  background: #fff;
+@*   box-shadow: 1px 1px 1px #666; *@
+box-shadow: 0px 0px 2px 0px #c0c0c0;
+}
+  .login input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 2px; 
+    font-family: Raleway, sans-serif;
+  }
+
+.login input[type=text],
+.login input[type=password] {
+  border: 1px solid #c0c0c0;
+  transition: .2s;
+}
+
+.login input[type=text]:hover {
+  border-color: #044697;
+  outline: none;
+  transition: all .2s ease-in-out;
+} 
+
+.login input[type=submit] {
+  border: none;
+  background: #044697;
+  color: white;
+  font-weight: bold;  
+  transition: 0.2s;
+  margin: 20px 0px;
+}
+
+.login input[type=submit]:hover {
+  
+  background-color: #044697;
+}
+
+  .login h2 {
+    margin: 20px 0 0; 
+    color: #044697;
+    font-size: 28px;
+  }
+
+.login p {
+  margin-bottom: 40px;
+}
+
+.links {
+  display: table;
+  width: 100%;  
+  box-sizing: border-box;
+  border-top: 1px solid #c0c0c0;
+  margin-bottom: 10px;
+}
+
+.links a {
+  display: table-cell;
+  padding-top: 10px;
+}
+
+.links a:first-child {
+  text-align: left;
+}
+
+.links a:last-child {
+  text-align: right;
+}
+
+  .login h2,
+  .login p,
+  .login a {
+    text-align: center;    
+  }
+
+.login a {
+  text-decoration: none;  
+  font-size: .8em;
+}
+
+.login a:visited {
+  color: inherit;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+</style> 

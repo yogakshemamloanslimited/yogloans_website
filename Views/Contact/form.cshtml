@@ -1,0 +1,103 @@
+
+
+<link rel="stylesheet" href="~/css/contact/contact.css" asp-append-version="true">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<section class="contact">
+        <div class="contact-container">
+            <div class="address">
+                <div class="item">
+                    <div class="image">
+                        <img src="images/icon/maps-and-flags.png" alt="" srcset="">
+                    </div>
+                    <p>
+                        Door No: 28/315 D2, 3rd Floor ,Ottappath Tower, Aswini Junction,Patturaikkal, Thiruvambady-PO,
+                        Thrissur, Kerala-680022
+                    </p>
+
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="images/icon/mail.png" alt="" srcset="">
+                    </div>
+                    <p>mail@yogloans.com</p>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="images/icon/telephone.png" alt="" srcset="">
+                    </div>
+                    <p>0487-2320102,2320103</p>
+                </div>
+            </div>
+                 <form id="enquiryForm">
+                <h2>Get In Touch</h2>
+                 <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:10px; ">
+                    <div class="redirect" style="width:300px; height:100px; display:flex; justify-content:center;align-items:center; cursor:pointer; box-shadow:0px 0px 1px 0px gray;" onclick="window.location.href='/branch'">
+                        View Nearby Branches
+                    </div>
+                </div>
+                <label for="enquiry_name">Full Name</label>
+                <input type="text" id="enquiry_name" name="enquiry_name" required>
+                <label for="email_id">Email Address</label>
+                <input type="email" id="email_id" name="email_id" required>
+                <label for="contact_no">Mobile Number</label>
+                <input type="text" id="contact_no" name="contact_no" required>
+                <label for="enquiry_address">Full Address</label>
+                <textarea id="enquiry_address" name="enquiry_address" required></textarea>
+                <button type="submit">Send Enquiry</button>
+            </form>
+
+        </div>
+    </section>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+    $(document).ready(function() {
+        $('#enquiryForm').on('submit', function(e) {
+            e.preventDefault();
+
+            var data = {
+                enquiry_name: $('#enquiry_name').val(),
+                enquiry_address: $('#enquiry_address').val(),
+                contact_no: $('#contact_no').val(),
+                email_id: $('#email_id').val(),
+                created_date: new Date().toISOString()
+            };
+
+            $.ajax({
+                url: 'http://localhost:8085/api/enquiry',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function(response) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Thank you!',
+                        text: response.Message || 'Your enquiry has been submitted successfully!',
+                        showConfirmButton: false,
+                        timer: 2000,
+                        background: '#f0fff0',
+                        color: '#155724',
+                        iconColor: '#28a745',
+                        position: 'center',
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    });
+                    $('#enquiryForm')[0].reset();
+                },
+                error: function(xhr) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Error submitting enquiry. Please try again.'
+                    });
+                }
+            });
+        });
+    });
+    </script>Z

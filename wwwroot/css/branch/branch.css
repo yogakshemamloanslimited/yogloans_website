@@ -1,0 +1,438 @@
+ /* Modern Branch Locator Styles */
+ .branch-locator-section {
+    /*    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
+     /*   padding: 60px 0; */
+       height: auto;
+       position: relative;
+       z-index: 2;
+       margin-bottom: 80px;
+      /*  background-color: red; */
+   }
+   
+
+   
+   .locator-header {
+       text-align: center;
+       margin-bottom: 50px;
+       width:100%;
+   /*     border:1px solid; */
+   color: #044697;
+   }
+   
+   .section-title {
+       font-size: 2.5rem;
+       font-weight: 700;
+       color: #2c3e50;
+       margin-bottom: 15px;
+       background: linear-gradient(135deg, #044697, #2980b9);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       background-clip: text;
+   }
+   
+   .section-subtitle {
+       font-size: 1.3rem;
+ color: #044697;
+      /*  max-width: 600px; */
+       margin: 0 auto;
+       line-height: 1.6;
+       width:100%;
+       /* border:1px solid; */
+   }
+   
+   .locator-content {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       /* gap: 40px; */
+       align-items: start;
+     /*   background-color: #044697; */
+       height: 550px;
+   }
+   
+   .selection-panel {
+       background: white;
+    height: 500px;
+       padding: 40px;
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+       border: 1px solid rgba(255, 255, 255, 0.2);
+   }
+   .selection-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+   }
+   /* .form-group {
+       margin-bottom: 25px;
+   } */
+   
+   .form-label {
+       display: block;
+       font-weight: 600;
+       color: #2c3e50;
+       margin-bottom: 8px;
+       font-size: 0.95rem;
+   }
+   
+   .form-select {
+       width: 100%;
+       padding: 15px 20px;
+       border: 2px solid #e9ecef;
+     /*   border-radius: 12px; */
+       font-size: 1rem;
+       background: #f8f9fa;
+       transition: all 0.3s ease;
+       color: #495057;
+   }
+   
+   .form-select:focus {
+       outline: none;
+       border-color: #044697;
+       background: white;
+       box-shadow: 0 0 0 3px rgba(4, 70, 151, 0.1);
+   }
+   
+   .branch-info {
+       margin-top: 30px;
+       display: none;
+   }
+   
+   .branch-info.active {
+       display: block;
+       animation: fadeInUp 0.5s ease;
+   }
+   
+   .info-card {
+       display: flex;
+       align-items: flex-start;
+       gap: 15px;
+       padding: 20px;
+       background: #f8f9fa;
+       border-radius: 12px;
+       margin-bottom: 15px;
+       border-left: 4px solid #044697;
+       transition: all 0.3s ease;
+   }
+   
+   .info-card:hover {
+       transform: translateY(-2px);
+       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   }
+   
+   .info-icon {
+       width: 40px;
+       height: 40px;
+       background: linear-gradient(135deg, #044697, #2980b9);
+       border-radius: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: white;
+       font-size: 1.1rem;
+       flex-shrink: 0;
+   }
+   
+   .info-content h4 {
+       margin: 0 0 8px 0;
+       font-size: 1rem;
+       font-weight: 600;
+       color: #2c3e50;
+   }
+   
+   .address-text, .contact-text {
+       color: #6c757d;
+       line-height: 1.5;
+       font-size: 0.9rem;
+   }
+   
+   /* Default and Dynamic Data Styles */
+   .default-data {
+       color: #6c757d;
+       font-style: italic;
+   }
+   
+   .dynamic-data {
+       color: #495057;
+       font-weight: 500;
+   }
+   
+   .map-panel {
+      /*  background: white; */
+     /*   border-radius: 20px; */
+     /*   padding: 30px; */
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+       border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 500px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 20px;
+   }
+   
+   .map-container {
+       position: relative;
+       height: 500px;
+       display: flex;
+       width: 100%;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   .branch-map {
+       width: 100%;
+       height: 80%;
+     /*   height: 500px; */
+/*        border-radius: 15px; */
+       overflow: hidden;
+       border: 2px solid #e9ecef;
+       background-color: white;
+       
+   }
+   
+   .directions-btn {
+       width: 50%;
+       position: relative;
+       /* left: 50%; */
+       padding: 15px 20px;
+       background: linear-gradient(135deg, #044697, #2980b9);
+       color: white;
+       border: none;
+       border-radius: 12px;
+       font-size: 1rem;
+       font-weight: 600;
+       margin-top: 20px;
+       cursor: pointer;
+       transition: all 0.3s ease;
+       display: none;
+   }
+   
+   .directions-btn:hover {
+       transform: translateY(-2px);
+       box-shadow: 0 8px 25px rgba(4, 70, 151, 0.3);
+   }
+   
+   .directions-btn i {
+       margin-right: 8px;
+   }
+   
+   /* Nearby Branches Section */
+   .branches {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       height: auto;
+    margin-top: -100px;
+    /*    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
+       /* padding: 60px 0; */
+   }
+   
+   .nearby-header {
+       text-align: center;
+       margin-bottom: 40px;
+   }
+   
+   .nearby-title {
+       font-size: 2rem;
+       font-weight: 700;
+       color: #2c3e50;
+       margin-bottom: 10px;
+       background: linear-gradient(135deg, #044697, #2980b9);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       background-clip: text;
+   }
+   
+   .nearby-subtitle {
+       font-size: 1.3rem;
+   color: #044697;
+       margin: 0;
+   }
+   
+   #branch-list {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+       gap: 20px;
+       width: 100%;
+       max-width: 1200px;
+       padding: 0 20px;
+          
+   }
+   
+   #branch-list .card {
+       background: white;
+       border-radius: 15px;
+       padding: 25px;
+       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+       border: 1px solid #e9ecef;
+       transition: all 0.3s ease;
+       text-align: center;
+   }
+   
+   #branch-list .card:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+   }
+   
+   #branch-list .card img {
+       width: 30px;
+       height: 30px;
+       margin-bottom: 15px;
+       filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+   }
+
+   #branch-list .card img:nth-child(2) {
+    cursor: pointer;
+   }
+   
+   #branch-list .card span {
+       display: block;
+       margin-top: 10px;
+   }
+   
+   #branch-list .card a {
+       background: linear-gradient(135deg, #044697, #2980b9);
+       color: white;
+       padding: 12px 24px;
+       border-radius: 25px;
+       text-decoration: none;
+       font-weight: 600;
+       transition: all 0.3s ease;
+       display: inline-block;
+       margin-top: 10px;
+   }
+   
+   #branch-list .card a:hover {
+       transform: translateY(-2px);
+       box-shadow: 0 8px 25px rgba(4, 70, 151, 0.3);
+   }
+   
+   /* Loading Spinner */
+   #spinners {
+       text-align: center;
+       margin: 40px 0;
+       padding: 40px;
+   }
+   
+   #spinners span {
+       color: #2c3e50;
+       font-size: 1.2rem;
+       font-weight: 500;
+       margin-bottom: 20px;
+       display: block;
+   }
+   
+   /* Animations */
+   @keyframes fadeInUp {
+       from {
+           opacity: 0;
+           transform: translateY(20px);
+       }
+       to {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
+   
+   @keyframes spin {
+       0% { transform: rotate(0deg); }
+       100% { transform: rotate(360deg); }
+   }
+   
+   /* Responsive Design */
+   @media (max-width: 768px) {
+    
+       .locator-content {
+           grid-template-columns: 1fr;
+           gap: 30px;
+       }
+       
+       .section-title {
+           font-size: 2rem;
+       }
+       
+       .selection-panel,
+       .map-panel {
+           padding: 25px;
+       }
+       
+       #branch-list {
+           grid-template-columns: repeat(2,1fr);
+           padding: 0 15px;
+            
+       }
+       #branch-list .card a {
+        padding: 0px;
+        border-radius: 0px;
+       }
+       #branch-list .card img {
+        width: 20px;
+        height: 20px;
+       }
+       .branches {
+        margin-top: -90px;
+       }
+       .container {
+           padding: 0 15px;
+           height: auto;
+          /*  background-color: red; */
+       }
+   }
+   
+   @media (max-width: 480px) {
+       .branch-locator-section {
+           padding: 40px 0;
+           height: 1100px;
+       }
+       
+       .section-title {
+           font-size: 1.8rem;
+       }
+       
+       .selection-panel,
+       .map-panel {
+           padding: 20px;
+       }
+       
+       .form-select {
+           padding: 12px 15px;
+       }
+       
+       .directions-btn {
+           padding: 12px 15px;
+       }
+   }
+   
+   /* Branch Loader Styles */
+   .branch-loader {
+       margin-top: 30px;
+       padding: 30px;
+       background: #f8f9fa;
+       border-radius: 12px;
+       border: 2px dashed #dee2e6;
+       text-align: center;
+   }
+   
+   .loader-content {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 15px;
+   }
+   
+   .loader-spinner {
+       width: 40px;
+       height: 40px;
+       border: 4px solid #e9ecef;
+       border-top: 4px solid #044697;
+       border-radius: 50%;
+       animation: spin 1s linear infinite;
+   }
+   
+   .loader-content p {
+       margin: 0;
+       color: #6c757d;
+       font-weight: 500;
+       font-size: 0.95rem;
+   }

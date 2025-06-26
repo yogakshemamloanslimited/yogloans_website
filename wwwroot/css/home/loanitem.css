@@ -1,0 +1,103 @@
+.loan-items{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 120px;
+}
+.loan-items .item-container{
+    width: 80%;
+    background-color: whitesmoke;
+    height: 120px;
+    margin-top: -50px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    padding: 10px;
+}
+.loan-items .item-container .item{
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid rgb(212, 209, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px   ;
+    cursor: pointer;
+}
+.loan-items .item-container .item img{
+    width: 45px;
+    height: 45px;
+}
+.loan-items .item-container .item p{
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+.loan-items .item-container .item.active{
+    background-color: #044697;
+    color: white;
+}
+.loan-items .item-container .item.active p{ 
+    color: white;
+}
+.loan-items .item-container .item.active img{
+    filter: invert(1);
+}
+.loan-item-details{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.loan-item-details .detail{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 20px   ;
+    height: auto;
+    box-shadow: 0px 0px 5px 0px rgb(203, 203, 203);
+}
+.loan-item-details .detail p{
+    color: black;
+    width: 70%;
+    background-color: whitesmoke;
+    padding: 20px;
+
+}
+.loan-item-details .detail ul{
+    color: black;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px   ;
+    padding: 10px;
+}
+.loan-item-details .detail ul li img{
+    width: 15px;
+    height: 15px;
+}
+.loan-item-details .detail ul button{
+    width: 50%;
+    padding: 5px;
+    background-color: #044697;
+    color: white;
+    border:none;
+    cursor: pointer;
+}
+@media (max-width:780px){
+    .loan-item-details .detail p {
+        width: 100%;
+    }
+    .loan-item-details .detail ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loan-items .item-container {
+        width: 90%;
+    }
+}

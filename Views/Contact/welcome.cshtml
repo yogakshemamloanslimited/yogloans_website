@@ -1,0 +1,120 @@
+    <section class="welcome-container"
+        style="background-image: url(images/welcome/contact.jpg);">
+        <h1 >Contact Us
+            </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
+    <div class="button">
+        <p><a href="/">Home</a>  <a href=""> - Contact Us</a></p>
+     </div>
+
+    </section>
+   
+<!-- 
+    <div id="spinners" style=" text-align:center; margin:20px;">
+        <span style="color:black; font-size:20px;">Loading nearby branches...</span>
+        <div style="border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; display:inline-block;"></div>
+    </div>
+
+    <div id="branch-list"></div> -->
+
+        
+    <style>
+        .welcome-container{
+            height: 300px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        @@keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+<!-- 
+    <script>
+    $(document).ready(function() {
+    $('#spinners').show();
+    navigator.geolocation.getCurrentPosition(function(position) {
+        const userLat = position.coords.latitude;
+        const userLng = position.coords.longitude;
+
+        $.ajax({
+            url: "http://localhost:8085/api/braches",
+            method: "GET",
+            success: function(response) {
+                $('#spinners').hide();
+                console.log("API response:", response); // Debug: log the response
+                let branches = [];
+                if (Array.isArray(response)) {
+                    branches = response;
+                } else if (Array.isArray(response.data)) {
+                    branches = response.data;
+                } else if (Array.isArray(response.Data)) {
+                    branches = response.Data;
+                } else {
+                    console.warn("Unexpected response format");
+                }
+                let foundNearby = false;
+                $('#branch-list').empty(); // Clear previous results
+                $.each(branches, function(index, branch) {
+                    const branchLat = parseFloat(branch.latitude); 
+                    const branchLng = parseFloat(branch.longitude);
+
+                    const distance = getDistanceInKm(userLat, userLng, branchLat, branchLng);
+
+                    if (distance <= 10) {
+                        foundNearby = true;
+                        const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLng}&destination=${branchLat},${branchLng}`;
+                        $('#branch-list').append(
+                          `<div style='margin-bottom:10px;'>
+                             <span style='font-weight:bold;'>${branch.branch_name}</span> <span>(${distance.toFixed(2)} km away)</span>
+                             <a href="${mapsUrl}" target="_blank" style='margin-left:10px; color:black;'>Get Directions</a>
+                           </div>`
+                        );
+                    }
+                });
+                if (!foundNearby) {
+                    $('#branch-list').empty();
+                    alert('No branches nearby. Click on more branches.');
+                }
+            },
+            error: function(xhr, status, error) {
+                $('#spinners').hide();
+                $('#branch-list').empty();
+                console.error("AJAX error:", error);
+            }
+        });
+
+    }, function(error) {
+        $('#spinners').hide();
+        $('#branch-list').empty();
+        // SweetAlert for location denied or error
+        if (typeof Swal !== 'undefined') {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Location Required',
+                text: 'Please allow location access to find nearby branches.',
+                confirmButtonText: 'OK'
+            });
+        } else {
+            alert('Please allow location access to find nearby branches.');
+        }
+        console.error("Geolocation error:", error);
+    });
+
+    // Haversine formula to calculate distance between two lat/lng points
+    function getDistanceInKm(lat1, lon1, lat2, lon2) {
+        const R = 6371; // Radius of the earth in km
+        const dLat = (lat2 - lat1) * Math.PI / 180;
+        const dLon = (lon2 - lon1) * Math.PI / 180;
+        const a =
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c;
+    }
+
+  
+    });
+    </script> -->

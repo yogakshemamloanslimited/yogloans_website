@@ -1,0 +1,423 @@
+@{
+    Layout = null;
+    var assesseeName = Context.Request.Query["assessee_name"];
+    var pan = Context.Request.Query["pan"];
+    var status = Context.Request.Query["status"];
+    var residentialStatus = Context.Request.Query["residential_status"];
+    var previousYear = Context.Request.Query["previous_year"];
+    var flatNo = Context.Request.Query["flat_no"];
+    var premisesName = Context.Request.Query["premises_name"];
+    var street = Context.Request.Query["street"];
+    var locality = Context.Request.Query["locality"];
+    var city = Context.Request.Query["city"];
+    var district = Context.Request.Query["district"];
+    var state = Context.Request.Query["state"];
+    var pin = Context.Request.Query["pin"];
+    var email = Context.Request.Query["email"];
+    var mobile = Context.Request.Query["mobile"];
+    var assessedToTax = Context.Request.Query["assessed_to_tax"];
+    var latestAssessmentYear = Context.Request.Query["latest_assessment_year"];
+    var estimatedIncome = Context.Request.Query["estimated_income"];
+    var estimatedTotalIncome = Context.Request.Query["estimated_total_income"];
+    var totalForms = Context.Request.Query["total_forms"];
+    var aggregateIncome = Context.Request.Query["aggregate_income"];
+    var incomeDetails = Context.Request.Query["income_details"];
+    var declarationAccepted = Context.Request.Query["declaration_accepted"];
+    var date = Context.Request.Query["date"];
+    var place = Context.Request.Query["place"];
+    var payerName = Context.Request.Query["payer_name"];
+    var payerUID = Context.Request.Query["payer_uid"];
+    var payerPan = Context.Request.Query["payer_pan"];
+    var payerAddress = Context.Request.Query["payer_address"];
+    var payerTAN = Context.Request.Query["payer_tan"];
+    var payerEmail = Context.Request.Query["payer_email"];
+    var payerPhone = Context.Request.Query["payer_phone"];
+    var incomePaid = Context.Request.Query["income_paid"];
+    var declarationReceivedDate = Context.Request.Query["declaration_received_date"];
+    var incomePaidDate = Context.Request.Query["income_paid_date"];
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Form No. 15G</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            padding: 24px;
+            background: #f8fafc;
+            color: #222;
+        }
+        h2, h3 {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        .section {
+            width:100%  ;
+         
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+       .section table {
+            width: 100%;
+      
+            border-collapse: collapse;
+            margin: 0 auto 24px auto;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        tr{
+            width:100%;
+        }
+        table td, table th {
+            border: 1px solid #bfc9d9;
+            padding: 8px 10px;
+            font-size: 1rem;
+            vertical-align: top;
+        }
+        table th {
+            background: #e3eaf7;
+            font-weight: 600;
+        }
+        table tr:nth-child(even) td {
+            background: #f4f8fb;
+        }
+        .dec {
+            border: 1.5px solid #1976d2;
+            background: #eaf3fb;
+            border-radius: 8px;
+            padding: 18px 24px;
+            margin: 32px 0 24px 0;
+            box-shadow: 0 2px 8px rgba(25,118,210,0.06);
+        }
+        .dec .head {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1976d2;
+            text-align: center;
+        }
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+            gap: 40px;
+        }
+        .bottom .left, .bottom .right {
+            flex: 1;
+        }
+        .bottom .right {
+            text-align: right;
+        }
+        .buttons{
+            position:fixed;
+            right:0%;
+            bottom:0%;
+            display:flex;
+            
+            gap:10px;
+            padding:10px;
+
+        }
+        .buttons div{
+            padding:10px;
+            border-radius:50%;
+            background-color:white  ;
+            display:flex; 
+            justify-content:center;
+            align-items:center;
+            height:60px;
+            width:60px;
+            border:1px solid #044697;
+             cursor:pointer;
+        }
+          .page-break {
+       page-break-before: always;
+       break-before: page;
+   }
+           .buttons div:hover{
+                background-color:#044697;
+               
+           }
+           .buttons div:hover img {
+    filter:  invert(1);
+}
+
+        .buttons div img{
+            width:40px;
+            height:40px;
+           
+        }
+        @@media print {
+            body {
+                background: #fff;
+                color: #000;
+                padding: 0;
+            }
+            .dec {
+                box-shadow: none;
+            }
+            table {
+                box-shadow: none;
+                font-size:12px;
+            }
+            table tr td{
+                font-size:12px;
+            }
+            div{
+                 font-size:12px;
+            }
+            p{
+                font-size:12px;
+            }
+            table tr th{
+                font-size:12px;
+            }
+            .dec {
+                padding:10px 5px;
+            }
+            .section {
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+            }
+            h2{
+                font-size:15px;
+            }
+        }
+        
+     /* These styles will only apply during PDF export */
+/* .pdf-export {
+    font-size: 12px;
+    color: black;
+    background: white;
+    padding: 20px;
+}
+ */
+
+
+.pdf-export table td, .pdf-export table th {
+   
+  
+        font-size: 12px;
+}
+
+.pdf-export div{
+                 font-size:12px;
+            }
+            .pdf-export p{
+                 font-size:12px;
+            }
+            .pdf-export h2{
+                 font-size:15px;
+            }
+          .pdf-export   .dec {
+                padding:10px 5px;
+            }
+               
+    </style>
+</head>
+<body>
+<!--     <div class="print-note" style="color: #d32f2f; margin-bottom: 10px;">
+        <b>Note:</b> For a clean print, please disable "Headers and footers" in your browser's print settings.
+    </div> -->
+    <div class="buttons">
+        <div id="printButton">
+            <img src="/images/icon/printer.png">
+        </div>
+        <div id="downloadPdfButton">
+            <img src="/images/icon/download-pdf.png">
+        </div>
+    </div>
+<section id="printSection">
+ <h2>FORM NO. 15G</h2>
+    <p style="text-align:center;">[See section 197A(1), 197A(1A) and rule 29C]</p>
+    <p style="text-align:center;">Declaration under section 197A(1) and section 197A(1A) to be made by an individual or a person (not being a company or firm) claiming certain incomes without deduction of tax.</p>
+
+    <div class="section">
+        <h3>PART I</h3>
+        <table>
+            <tr>
+                <td>1. Name of Assessee (Declarant):<b> @assesseeName</b></td>
+                <td>2. PAN of the Assessee:<b> @pan</b></td>
+                <td>3. Status:<b> @status</b></td>
+                <td>4. Previous year (P.Y.):<b> @previousYear</b></td>
+            </tr>
+            <tr>
+                <td>5. Residential Status:<b> @residentialStatus</b></td>
+                <td>6. Flat/Door/Block No.:<b> @flatNo</b></td>
+                <td>7. Name of Premises:<b> @premisesName</b></td>
+                <td>8. Road/Street/Lane:<b> @street</b></td>
+            </tr>
+            <tr>
+                <td>9. Area/Locality:<b> @locality</b></td>
+                <td>10. Town/City/District:<b> @district</b></td>
+                <td>11. State:<b> @state</b></td>
+                <td>12. PIN:<b> @pin</b></td>
+            </tr>
+            <tr>
+                <td>13. Email:<b> @email</b></td>
+                <td>14. Mobile:<b> @mobile</b></td>
+                <td colspan="2">15(a). Assessed to tax under Income-tax Act, 1961?: <b>@assessedToTax</b><br/>
+                    (b). Latest assessment year if assessed:<b> @latestAssessmentYear</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">16. Estimated income for which this declaration is made:<b> @estimatedIncome</b></td>
+                <td colspan="2">17. Estimated total income of P.Y.:<b> @estimatedTotalIncome</b></td>
+            </tr>
+            <tr>
+                <th colspan="2">Total No. of Form 15G filed</th>
+                <th colspan="2">Aggregate income for which Form 15G filed</th>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;"><b>@totalForms</b></td>
+                <td colspan="2" style="text-align:center;"><b>@aggregateIncome</b></td>
+            </tr>
+            <tr>
+                <td colspan="4"><b>Details of income for which declaration is filed:</b> @incomeDetails</td>
+            </tr>
+        </table>
+
+        <div class="dec">
+            <div class="head">
+                Declaration/Verification
+            </div>
+            <p>
+                I/We @assesseeName do hereby declare that to the best of my/our knowledge and belief what is stated above is correct, complete, and truly stated.
+                I/We declare that the incomes referred to in this form are not includible in the total income of any other person under sections 60 to 64 of the Income-tax Act, 1961.
+                I/We further declare that the tax on my/our estimated total income including income referred to in column 16 and the aggregate amount of income referred to in column 18 for the previous year ending on 31/03/2026 relevant to the assessment year 2026-27 will be nil.
+                I/We also declare that the income(s) referred to will not exceed the maximum amount not chargeable to income-tax.
+            </p>
+        </div>
+
+        <div class="bottom">
+            <div class="left">
+                <p>Place :</p>
+                <p><b>@place</b></p>
+            </div>
+            <div class="right">
+                <p>Digitally signed through OTP sent to the registered Mobile No: <b>@declarationAccepted</b> on <b>@date</b></p>
+                <p><b>Signature of the Declarant</b></p>
+            </div>
+        </div>
+    </div>
+
+
+     <div class="section" style="flex-direction:column; page-break-before: always; break-before: page;">
+        <h3>PART 2</h3>
+        <p style="width:100%; text-align:center;">
+           [To be filled by the person responsible for paying the income referred to in column 15 of Part I]
+        </p>
+        <table>
+            <tr>
+                <td>1. Name of the person responsible for paying :<b> @payerName</b></td>
+                <td>2. Unique Identification No :<b> @payerUID</b></td>
+                <td>3. PAN of the person responsible for paying :<b> @payerPan</b></td>
+                <td>4. Complete Address :<b> @payerAddress</b></td>
+            </tr>
+            <tr>
+                <td>5. TAN of the person responsible forpaying :<b> @residentialStatus</b></td>
+                <td>6. Email:<b>  @payerEmail</b></td>
+                <td>7. Telephone No. (with STD Code) and Mobile No :<b> @payerPhone</b></td>
+                <td>8. Amount of income paid:<b> @incomePaid</b></td>
+            </tr>
+            <tr>
+                <td colspan="2">9. Date on which Declaration is received(DD/MM/YYYY):<b>@declarationReceivedDate</b></td>
+                <td colspan="2">10. Date on which the income has been paid/credited(DD/MM/YYYY):<b>  @incomePaidDate</b></td>
+               <!--  <td>11. State:<b> @state</b></td>
+                <td>12. PIN:<b> @pin</b></td> -->
+            </tr>
+            <!-- <tr>
+                <td>13. Email:<b> @email</b></td>
+                <td>14. Mobile:<b> @mobile</b></td>
+                <td colspan="2">15(a). Assessed to tax under Income-tax Act, 1961?: <b>@assessedToTax</b><br/>
+                    (b). Latest assessment year if assessed:<b> @latestAssessmentYear</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">16. Estimated income for which this declaration is made:<b> @estimatedIncome</b></td>
+                <td colspan="2">17. Estimated total income of P.Y.:<b> @estimatedTotalIncome</b></td>
+            </tr>
+            <tr>
+                <th colspan="2">Total No. of Form 15G filed</th>
+                <th colspan="2">Aggregate income for which Form 15G filed</th>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;"><b>@totalForms</b></td>
+                <td colspan="2" style="text-align:center;"><b>@aggregateIncome</b></td>
+            </tr>
+            <tr>
+                <td colspan="4"><b>Details of income for which declaration is filed:</b> @incomeDetails</td>
+            </tr> -->
+        </table>
+
+        <div class="dec">
+            <!-- <div class="head">
+                Declaration/Verification
+            </div> -->
+            <p>
+              As per provisions of section 206AA(2), the declaration under section 197A(1C) shall be invalid if the declarant fails to furnish his valid Permanent AccountNumber (PAN).
+Declaration can be furnished by a resident individual who is of the age of 60 years or more at any time during the previous year.
+The financial year to which the income pertains.
+Please mention "Yes" if assessed to tax under the provisions of Income-tax Act, 1961 for any of the assessment year out of six assessment years precedingthe year in which the declaration is filed.
+Please mention "Yes" if assessed to tax under the provisions of Income-tax Act, 1961 for any of the assessment year out of six assessment years precedingthe year in which the declaration is filed.
+In case any declaration(s) in Form No. 15H is filed before filing this declaration during the previous year, mention the total number of such Form No. 15Hfiled along with the aggregate amount of income for which said declaration(s) have been filed.
+Mention the distinctive number of shares, account number of term deposit, recurring deposit, National Savings Schemes, life insurance policy number,employee code, etc.
+Before signing the declaration/verification, the declarant should satisfy himself that the information furnished in this form is true, correct and complete inall respects. Any person making a false statement in the declaration shall be liable to prosecution under section 277 of the Income-tax Act, 1961 and onconviction be punishable-
+(i) in a case where tax sought to be evaded exceeds twenty-five lakh rupees, with rigorous imprisonment which shall not be less than six months but whichmay extend to seven years and with fine;
+(ii) in any other case, with rigorous imprisonment which shall not be less than three months but which may extend to two years and with fine.
+The person responsible for paying the income referred to in column 15 of Part I shall allot a unique identification number to all the Form No. 15H receivedby him during a quarter of the financial year and report this reference number along with the particulars prescribed in rule 31A(4)(vii) of the Income-taxRules, 1962 in the TDS statement furnished for the same quarter. In case the person has also received Form No.15G during the same quarter, please allotseparate series of serial number for Form No.15H and Form No.15G.
+The person responsible for paying the income referred to in column 15 of Part I shall not accept the declaration where the amount of income of the naturereferred to in section 197A(1C) or the aggregate of the amounts of such income credited or paid or likely to be credited or paid during the previous year inwhich such income is to be included exceeds the maximum amount which is not chargeable to tax after allowing for deduction(s) under Chapter VI-A, ifany, or set off of loss, if any, under the head "income from house property" for which the declarant is eligible. For deciding the eligibility, he is required toverify income or the aggregate amount of incomes, as the case may be, reported by the declarant in columns 15 and 17.
+The person responsible for paying the income referred to in column 15 of Part I shall not accept the declaration where the amount of income of the naturereferred to in section 197A(1C) or the aggregate of the amounts of such income credited or paid or likely to be credited or paid during the previous year inwhich such income is to be included exceeds the maximum amount which is not chargeable to tax after allowing for deduction(s) under Chapter VI-A, ifany, or set off of loss, if any, under the head "income from house property" for which the declarant is eligible. For deciding the eligibility, he is required toverify income or the aggregate amount of incomes, as the case may be, reported by the declarant in columns 15 and 17.
+        </div>
+
+        <div class="bottom">
+            <div class="left">
+                <p>Place :<b> @place</b></p>
+                <p>Date :<b> @date</b></p>
+            </div>
+            <div class="right">
+    <!--             <p>Signature of the person responsible forpaying the income referred to in column 15of Part I</p> -->
+                <p><b>Signature of the person responsible forpaying the income referred to in column 15of Part I</b></p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+    function printDiv(divId) {
+        var printContents = document.getElementById(divId).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+
+    $('#printButton').click(function () {
+        printDiv('printSection');
+    });
+   $('#downloadPdfButton').click(function () {
+    var element = document.getElementById('printSection');
+    element.classList.add('pdf-export');
+
+    var opt = {
+        margin: 0.5,
+        filename: 'Form15G.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4' }
+    };
+
+    html2pdf().set(opt).from(element).save().then(function () {
+        element.classList.remove('pdf-export');
+    });
+});
+
+</script>
+
+</body>
+</html>

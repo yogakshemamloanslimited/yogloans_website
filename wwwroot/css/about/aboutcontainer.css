@@ -1,0 +1,38 @@
+
+
+
+.about-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.about-container .content{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px   ;
+    padding: 20px;
+   
+}
+.about-container .content p:nth-child(1){
+    font-size: 20px;
+    font-weight: bolder;
+    color: #044697;
+    width: 100%;
+    text-align: center;
+}
+.about-container .content p
+{width: 100%;
+    text-align: center;
+    color: black;
+}
+.about-container .content button{
+    width: 160px;
+    padding: 10px;
+    background-color: #044697;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

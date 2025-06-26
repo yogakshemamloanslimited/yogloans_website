@@ -1,0 +1,146 @@
+@model yogloansdotnet.Models.AboutContentModel
+@{
+    ViewData["Title"] = "About Content";
+    Layout = "~/Views/admin/Shared/_Layout.cshtml";
+}
+
+<style>
+    td{
+        text-align:center;
+    }
+    th{
+        text-align:center;
+    }
+    .point-input-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .remove-point {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+    .empty-table-btn {
+        background-color: #dc3545;
+        color: white;
+        padding: 10px;
+        width: 15%;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title"> About content</h4>
+                    
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @TempData["Success"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @TempData["Error"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    <form action="/admin/aboutcontent/about-create" method="post" class="col-12" style="display:flex; flex-direction:column; gap:20px; justify-content:center; align-items:center;">
+                        <input type="text" placeholder="header" class="form-control" name="Header" value="@(Model?.Header ?? "")">
+                        <textarea placeholder="content paragraph" class="form-control" style="height:350px;" name="Content">@(Model?.Content ?? "")</textarea>
+                        <button type="submit" style="background-color:#044697; color:white; padding:10px; width:15%; border:none;">Submit</button>
+                    </form>
+
+                    <!-- <form action="/admin/aboutcontent/empty-table" method="post" class="col-12" style="display:flex; justify-content:center;">
+                        <button type="submit" class="empty-table-btn" onclick="return confirm('Are you sure you want to empty the table? This action cannot be undone.')">Empty Table</button>
+                    </form> -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        function addmore() {
+            var container = document.getElementById('points-container');
+            var pointGroup = document.createElement('div');
+            pointGroup.className = 'point-input-group';
+            pointGroup.innerHTML = `
+                <input type="text" name="Points[]" class="form-control" placeholder="Enter Your Point" required>
+                <button type="button" class="remove-point" onclick="removePoint(this)">×</button>
+            `;
+            container.appendChild(pointGroup);
+            
+            // Show remove buttons if there's more than one point
+            var removeButtons = document.querySelectorAll('.remove-point');
+            removeButtons.forEach(button => {
+                button.style.display = removeButtons.length > 1 ? 'block' : 'none';
+            });
+        }
+
+        function removePoint(button) {
+            var pointGroup = button.parentElement;
+            pointGroup.remove();
+            
+            // Hide remove button if only one point remains
+            var removeButtons = document.querySelectorAll('.remove-point');
+            if (removeButtons.length === 1) {
+                removeButtons[0].style.display = 'none';
+            }
+        }
+
+        function deletePoint(id) {
+            if (confirm('Are you sure you want to delete this point?')) {
+                $.ajax({
+                    url: '/admin/homeloan/delete-point/' + id,
+                    type: 'POST',
+                    headers: {
+                        'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function(result) {
+                        if (result.success) {
+                            location.reload();
+                        } else {
+                            alert('Error deleting point: ' + result.message);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Error deleting point: ' + error);
+                    }
+                });
+            }
+        }
+
+        $(document).ready(function() {
+            $('#loansTable').DataTable({
+                responsive: true,
+                "order": [[0, "asc"]],
+                "columnDefs": [
+                    {
+                        "targets": 0,
+                        "render": function(data, type, row, meta) {
+                            return meta.row + 1;
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+}

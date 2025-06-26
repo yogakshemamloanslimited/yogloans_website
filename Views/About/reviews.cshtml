@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="~/css/about/reviews.css" asp-append-version="true">
+    <h2 id="review">What our customers say</h2>
+    <section class="reviews-section">
+    
+        <div class="reviews-carousel">
+            <button class="review-arrow left">&#8592;</button>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">Nicht nur ein toller Ausblick auf die Stadt Los Angeles, sondern...</div>
+                <div class="review-more">Read more</div>
+                <div class="review-google">Google</div>
+                <div class="review-user">
+                    <img src="images/icon/user.png" alt="User 1">
+                    <div>
+                        <div class="review-name">Jonas Günther</div>
+                        <div class="review-date">2 days ago</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">As you walk up to the building and the surrounding grounds...</div>
+                <div class="review-more">Read more</div>
+                <div class="review-google">Google</div>
+                <div class="review-user">
+                    <img src="images/icon/user.png" alt="User 1">
+                    <div>
+                        <div class="review-name">Reuben Reyes</div>
+                        <div class="review-date">4 days ago</div>
+                    </div>
+                </div>
+            </div>
+         <!--    <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">Nachdem uns das Wetter in LA leider etwas im Stich gelassen hat...</div>
+                <div class="review-more">Read more</div>
+                <div class="review-google">Google</div>
+                <div class="review-user">
+                    <img src="images/review3.jpg" alt="User 3">
+                    <div>
+                        <div class="review-name">Raffi Si</div>
+                        <div class="review-date">4 days ago</div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">Nachdem uns das Wetter in LA leider etwas im Stich gelassen hat...</div>
+                <div class="review-more">Read more</div>
+                <div class="review-google">Google</div>
+                <div class="review-user">
+                    <img src="images/icon/user.png" alt="User 1">
+                    <div>
+                        <div class="review-name">Raffi Si</div>
+                        <div class="review-date">4 days ago</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">Left a 5-star rating. Excellent!</div>
+                <div class="review-google">Google</div>
+                <div class="review-user">
+                    <img src="images/icon/user.png" alt="User 1">
+                    <div>
+                        <div class="review-name">Aaron Fay</div>
+                        <div class="review-date">4 days ago</div>
+                    </div>
+                </div>
+            </div>
+             <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">Left a 5-star rating. Excellent!</div>
+                <div class="review-google">Google</div>
+                <div class="review-user">
+                    <img src="images/icon/user.png" alt="User 1">
+                    <div>
+                        <div class="review-name">Aaron Fay</div>
+                        <div class="review-date">4 days ago</div>
+                    </div>
+                </div>
+            </div>
+            <button class="review-arrow right">&#8594;</button>
+        </div>
+    </section>
+
+    <script>
+        
+ document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('.reviews-carousel');
+        const cards = Array.from(document.querySelectorAll('.review-card'));
+        const leftBtn = document.querySelector('.review-arrow.left');
+        const rightBtn = document.querySelector('.review-arrow.right');
+        let start = 0;
+        const visibleCount = 4;
+
+        function updateCarousel() {
+            cards.forEach((card, i) => {
+                if (i >= start && i < start + visibleCount) {
+                    card.style.display = 'flex';
+                    card.style.opacity = '1';
+                } else {
+                    card.style.display = 'none';
+                    card.style.opacity = '0';
+                }
+            });
+
+            // Update button visibility
+            leftBtn.style.visibility = start === 0 ? 'hidden' : 'visible';
+            rightBtn.style.visibility = start + visibleCount >= cards.length ? 'hidden' : 'visible';
+        }
+
+        leftBtn.addEventListener('click', function() {
+            if (start > 0) {
+                start--;
+                updateCarousel();
+            }
+        });
+
+        rightBtn.addEventListener('click', function() {
+            if (start + visibleCount < cards.length) {
+                start++;
+                updateCarousel();
+            }
+        });
+
+        // Initialize carousel
+        updateCarousel();
+    });
+    </script>

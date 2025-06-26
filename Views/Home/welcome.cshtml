@@ -1,0 +1,48 @@
+@model yogloansdotnet.Models.LoanGroupViewModel
+<section class="welcome-container"
+        style="background-image: url(@(Model.Gold?.FirstOrDefault()?.Image1 ?? "images/welcome/Artboard.png"));">
+        <h1 id="header">@(Model.Gold?.FirstOrDefault()?.Header ?? "Gold Loan")</h1>
+        <p id="sub">@(Model.Gold?.FirstOrDefault()?.SubContent ?? "Experience Door Step Gold Loan Services")</p>
+        <div class="button">
+            <button>Apply Now</button>
+        </div>
+</section>
+
+@{
+    var goldData = Model.Gold?.FirstOrDefault();
+    var businessData = Model.Business?.FirstOrDefault();
+    var cdData = Model.CD?.FirstOrDefault();
+    var vehicleData = Model.Vehicle?.FirstOrDefault();
+}
+
+<input type="hidden" name="GoldData" value="@(goldData != null ? System.Text.Json.JsonSerializer.Serialize(new { 
+    header = goldData.Header,
+    subContent = goldData.SubContent,
+    image1 = goldData.Image1,
+    image2 = goldData.Image2,
+    detail = goldData.SubContent
+}) : null)" />
+
+<input type="hidden" name="BusinessData" value="@(businessData != null ? System.Text.Json.JsonSerializer.Serialize(new { 
+    header = businessData.Header,
+    subContent = businessData.SubContent,
+    image1 = businessData.Image1,
+    image2 = businessData.Image2,
+    detail = businessData.SubContent
+}) : null)" />
+
+<input type="hidden" name="CDData" value="@(cdData != null ? System.Text.Json.JsonSerializer.Serialize(new { 
+    header = cdData.Header,
+    subContent = cdData.SubContent,
+    image1 = cdData.Image1,
+    image2 = cdData.Image2,
+    detail = cdData.SubContent
+}) : null)" />
+
+<input type="hidden" name="VehicleData" value="@(vehicleData != null ? System.Text.Json.JsonSerializer.Serialize(new { 
+    header = vehicleData.Header,
+    subContent = vehicleData.SubContent,
+    image1 = vehicleData.Image1,
+    image2 = vehicleData.Image2,
+    detail = vehicleData.SubContent
+}) : null)" />

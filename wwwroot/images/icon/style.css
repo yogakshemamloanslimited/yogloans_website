@@ -1,0 +1,124 @@
+
+/* Investors Section Styles */
+.investors-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.investor-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.nav-item {
+    padding: 12px 24px;
+    background-color: #fff;
+    border-radius: 30px;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #1a73e8;
+    color: #fff;
+}
+
+.annual-reports {
+    padding: 20px;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.report-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.report-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.report-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.report-info {
+    flex: 1;
+}
+
+.report-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #1a73e8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #1557b0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .investor-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .nav-item {
+        text-align: center;
+    }
+    
+    .reports-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+}

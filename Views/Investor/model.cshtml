@@ -1,0 +1,114 @@
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Update the modal structure -->
+    <div class="modal fade" id="directorModal" tabindex="-1" aria-labelledby="directorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content instagram-modal">
+                <div class="modal-header instagram-header">
+                    <div class="d-flex align-items-center">
+                        <img src="" alt="" id="modalDirectorImage" class="director-avatar">
+                        <div class="ms-3">
+                            <h5 id="modalDirectorName" class="mb-0"></h5>
+                            <p id="modalDirectorPosition" class="text-muted mb-0"></p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body instagram-body">
+                    <div class="director-bio">
+                        <p id="modalDirectorBio"></p>
+                    </div>
+                </div>
+                <div class="modal-footer instagram-footer">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/18qcUVv3fJ/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/yogloansfinance?igsh=djhqZGI0dG92bGI0" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/yogloans" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                     
+                    </div>
+    
+    
+    
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    
+        // Director bios
+        const bio = {
+            'Ramachandran Ottapathu': "Mr. Ramachandran Ottapathu is a Chartered Accountant and a fellow member of ICAI, an Associate member of Botswana Institute of Accountants, and a certified SAP consultant. He has about 25 years of vast experience in the retail industry - handling both finance and operations. He is also an expert in areas such as Manufacturing, Packaging, Milling, and Medical distribution. He is presently serving as the Chief Executive Officer of Choppies Enterprises Ltd., a retail chain headquartered at Gaborone, Botswana, and has 246 stores spread across Botswana, South Africa, Zambia, Zimbabwe, Namibia, and Mozambique. Choppies Enterprises Ltd. is listed on the Botswana Stock Exchange and has a secondary listing on the Johannesburg Stock Exchange, Africa's biggest Stock Exchange. This company has bagged a turnover of about $ 1 Billion and is one of the biggest retailers in the continent. He has more than 50 business enterprises under his stewardship and was featured in Forbes Magazine (Forbes - Africa edition Mar 16). ",
+            'Unnikrishnan I': "A fellow member of The Institute of Chartered Accountants of India (ICAI) Mr. Unnikrishnan served on the board of Manappuram Finance Limited for 18 years starting 1997 and was one of the core team members who built that organization. He exited from the company in November 2014 as the Dy.CEO to join Yogakshemam. With a whopping 30 years of experience in advising and managing NBFCs, he is credited with bringing the highest amount of FDI into the State of Kerala in a single tranche to the extent of Rs 1000 crores. He has also raised not less than Rs 30000 cores on a cumulative basis as working capital limits from various banks and financial institutions. He has written numerous articles and presented papers on NBFCs, financial inclusions, etc. on various forums, served on the Executive committee of the 'Finance Companies Association' and is one of the founding members of the 'Association of Gold Loan Companies India'. ",
+            'Santosh Kurup':" Mr.Santosh Kurup is a CAIIB from the Indian Institute of Bankers. He is a graduate in BA Economics (Hons.) from St.Stephen's College and pursued his Post Graduation in M.A from Delhi School of Economics and MBA from prestigious Stern School of Bussiness,New York University. He has got 3 decades of expertise in Banking, Asset management and Non- Banking Finance. With his rich and vast experience in corporate development and financial sector he has acted in various capacities in India and abroad. He has served RBI, Mumbai as Assistant General Manager from 1981 to 93. He was The Vice President of Emerging Markets,JP Morgan based in New York from 1993 to 1996, acted as Director of Emerging Markets, Old Mutual Plc. London and Mumbai from 1996 to 2002,worked as an Independent Consultant in India and UK for Edelweiss Bank Project, Edelweiss Financial Services and Pipal Research Corporation.Besides serving our board he is also the Director and substantial shareholder of M/s Kurup Services Pvt. Ltd., He is a reg ular blogger on Financial Market Research at www.santoshkurup.bIogspot.com. He has also shown his interest as a lecturer in economics at St. Stephen's College, University of Delhi from 1979 to 1981.",
+            'N D Vijayan': "Mr. ND Vijayan is a Graduate in commerce with Diplomain Computer Application. Started his career in the year 1979 with Bank of Baroda, Abu Dhabi. Having served in various posts, ended the services with the organization as Current Account Manager in 1982 and joined with Arab Bank for Investment and Foreign Trade in 1983. He worked in the supervisory roles of almost again stall the internal departments during the course of service. With more than 30 odd years of service, took VRSin2011 asOperations-in-charge of IT department with an option to rejoin but decided not to. ",
+            'P.N.Unnirajan': "Sri.PoiyakuIeth Nelambaran Unnirajan IPS (Rtd.)is a post graduate in history.He retired from the Kerala Police on superannuation on 30th June 2018 while working as the Superintendent of Police, Crime Branch CID Ernakulum range. He was inducted as a Sub- Inspector in Kerala Police in 1981. He was promoted as Circle Inspector of Police in 1994 and promoted as DYSP in 2001 and Superintendent of Police on March 2010. He has served as the Assistant Director, Kerala Police Academy, Thrissur, Superintendent of Police, Special Branch, Thrissur Range, Superintended Internal security (Intelligence) Thiruvanathapuram and held several responsible posts. He was also awarded with the PRESIDENTS POLICEMEDAL FOR MERITORIOUS SERVICE during the year 2017. He had compIetedhisP.G in Criminology and Police administration. ",
+            'Mohandas Anchery': "Mr. Mohandas Anchery is Fellow member of the Institute of Chartered Accountants of India. He has become a Chartered Accountant in 1985 and since then he has built up a successful track record of more than 39 years as a Practicing Chartered Accountant with his expertise spanning in the field of accounting, finance, management, taxation and NBFC regulations. He is the Managing Partner of Mohandas & Associates, Chartered Accountants Thrissur. He has been associated with the financial service sector in various capacities like audit of Banks, NBFCs, Nidhi companies, Chits and Kuries in the capacity of auditor as well as advisor. ",
+            'Silpa Ramdas': "Ms.Silpa Ramdas is a Fellow member of the Institute of Chartered Accountants of India. Currently she is the partner of M/s. Ramdas and Venugopal, Chartered Accountants, Thrissur. She has become a member of the Institute in 2002 and started her career as a practicing Chartered Accountant in the year 2003 at Thrissur. She has been building her career successfully since then and gained a reputation of her own in the field. Her areas of practice includes audit functions of Nationalised and Private banks, NBFCs, Chit and Kuri companies. "
+        };
+
+        // Senior Management bios
+        const managementBio = {
+            'Rajeshkumar.K': 'He is a graduate in commerce and fellow member of the Institute of Company Secretaries of India. He also holds a diploma in mediation from Indian Institute of Arbitration and Mediation and obtained the membership of the Chartered Institute of Arbitrators, London. He has industrial experience of more than 25 years in the fields of corporate laws, strategic management and policy matters. He hadworked with major business houses in Kerala such as,Kuttukaran Group, Popular Motors group, Malabar Gold in different capacities. Prior to joining with YLL he was the General Manager & Company Secretary of Manappuram Finance Ltd., A, BSE and NSE listed NBFC with pan India presence. He has contributed articles of professional importance in Chartered Secretary and other professional publications. In addition to the secretarial functions he also oversees the General Management functions of the Company such as, HR, Administration, Risk &Compliances. ',
+            'K.K.Sreenivas': 'Mr. K K Sreenivas is a Commerce Graduate and Fellow Member of the Institute of Chartered Accounts of India. He holds certification in Information Systems Audit (DISA) from the Institute of Chartered Accounts of India. He also holds CAI I B certification from the Indian Institute of Banking & Finance. He is an intermediate pass of the ACS exam of the Institute of Company Secretaries of India. He has 7 years of banking experience (HDFC Bank &Dhanlaxmi Bank) in various fields such as retail asset products, SME Finance and Corporate Banking. He further has 5years experience with NBFCs (Bajaj Finance &Manappuram Finance) in the field of mortgage based lending prior to joining Yogakshemam in early 2016. Recently, he has cleared the Limited Insolvency Examination and qualified to be a member of the Insolvency and Bankruptcy Board of India (IBBI). ',
+            'Prasad.P': 'He is a Graduate in Commerce and a Chartered Accountant. He has more than 12 years of varied experience in Accounts, Finance and Taxation in various sectors. He has served as the Chief Financial Officer in one of the leading Public Limited Companies in Kerala. A significant part of his employment has been in the NBFC Sector (Manappuram Finance Ltd.) and in the Jewellery Retail Sector (Manappuram Jewellers Ltd. and Kalyan Jewellers India (Pvt.) Ltd.) He oversees the Finance, Accounts and Taxation functions of the company. ',
+            'Shaju K Balan': ' 29 Years of Experience in Financial Industry (Insurance & NBFC) B.Sc., MBA Association with our company since 2019 Key functional area » Business Development » Marketing » Team Management In the realm of strategic sales planning, we take the lead in driving business development while maintaining a relentless commitment to quality. Through demographic and marketing analysis, we identify trends and insights that enable us to maximise the effectiveness of our marketing efforts. By thoroughly analysing the business needs and strategic direction, we identify and implement initiatives that align with our strategic goals, facilitating the accomplishment of our overall business objectives.',
+            'Rakesh K Venugopal': '16+ Experience in Two Wheeler Loans ,Bank and NBFC, B.A Economics Association with our company since 2018 Key functional area » Marketing and Business Development » Credit and Asset quality » Team management Kerala offers a promising market for two-wheeler finance, and our company recognises the potential it holds. We have established ideal credit policies and loan underwriting practices, supported by the integration of the latest technology. This enables us to effectively compete with major players in the industry. Furthermore, our excellent sales and collection team plays a vital role in ensuring the healthy growth of our two-wheeler loan portfolio. Their dedication and expertise contribute to the overall success of our business by effectively managing sales and ensuring timely collections.'
+        };
+
+        // Modal functionality for both directors and management
+        $('.view').click(function() {
+            const card = $(this).closest('.blog-allof');
+            const name = card.find('.name p:first').text().trim();
+            const position = card.find('.name p:last').text().trim();
+            const image = card.css('background-image').replace(/url\(['"](.+)['"]\)/, '$1');
+
+            $('#modalDirectorName').text(name);
+            $('#modalDirectorPosition').text(position);
+            $('#modalDirectorImage').attr('src', image);
+            
+            // Check both bio objects
+            if (bio[name]) {
+                $('#modalDirectorBio').text(bio[name]);
+            } else if (managementBio[name]) {
+                $('#modalDirectorBio').text(managementBio[name]);
+            } else {
+                // Try to find a matching name (case-insensitive)
+                const matchingName = Object.keys(bio).find(key => 
+                    key.toLowerCase() === name.toLowerCase()
+                ) || Object.keys(managementBio).find(key => 
+                    key.toLowerCase() === name.toLowerCase()
+                );
+                
+                if (matchingName) {
+                    $('#modalDirectorBio').text(bio[matchingName] || managementBio[matchingName]);
+                } else {
+                    console.error('No biography found for:', name);
+                    $('#modalDirectorBio').text('No biography available.');
+                }
+            }
+            
+            // Update to Bootstrap 5 modal initialization
+            const directorModal = new bootstrap.Modal('#directorModal');
+            directorModal.show();
+        });
+
+</script>

@@ -1,0 +1,206 @@
+@model yogloansdotnet.Models.LoanPointsViewModel
+@{
+    ViewData["Title"] = "Points";
+    Layout = "~/Views/admin/Shared/_Layout.cshtml";
+}
+
+<style>
+    td{
+        text-align:center;
+    }
+    th{
+        text-align:center;
+    }
+    .point-input-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .remove-point {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 0 10px;
+        cursor: pointer;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Add Offer</h4>
+                    
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @TempData["Success"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @TempData["Error"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    <div class="col-12" style="display:flex; justify-content: end;">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Add Offer +</button>
+                    </div>
+
+                    <div class="table-responsive mt-3">
+                        <table id="loansTable" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Loan</th>
+                                    <th>Offer Header</th>
+                                    <th>Offer Content</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var offer in Model.Offer)
+                                {
+                                    <tr>
+                                        <td></td>
+                                       <td>
+                                            @{
+                                                var loan = Model.Loans.FirstOrDefault(l => l.Id.ToString() == offer.Loan);
+                                                @(loan?.Loanname ?? "Unknown Loan")
+                                            }
+                                        </td>
+                                        <td>@offer.OfferHeader</td>
+                                        <td>@offer.OfferContent</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-info">Edit</button>
+                                            <button class="btn btn-sm btn-danger" onclick="deleteOffer(@offer.Id)">Delete</button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Modal *@
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <form class="modal-content" method="post" action="/admin/Homeloan/offer-create">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Offer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @Html.AntiForgeryToken()
+                <div class="col-12">
+                    <div class="col-12" style="margin-top: 20px;">
+                        <div class="col-12">
+                            <div class="col-6" id="parent" style="padding:20px; display:flex; flex-direction:column; gap:10px; width:100%;">
+                                <select name="Loan" id="loanSelect" class="form-control" required>
+                                    <option value="">Select Loan</option>
+                                    @foreach (var loan in Model.Loans)
+                                    {
+                                        <option value="@loan.Id">@loan.Loanname</option>
+                                    }
+                                </select>
+                                <div id="points-container">
+                                    <div class="point-input-group">
+                                        <input type="text" name="offerheader[]" class="form-control" placeholder="Enter Your Offer Header" required>
+                                        <input type="text" name="offercontent[]" class="form-control" placeholder="Enter Your Offer Content" required>
+                                        <button type="button" class="remove-point" onclick="removePoint(this)" style="display:none;">×</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addmore()">Add More Offer</button>
+                <button type="submit" class="btn btn-success">Save Offer</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        function addmore() {
+            var container = document.getElementById('points-container');
+            var pointGroup = document.createElement('div');
+            pointGroup.className = 'point-input-group';
+            pointGroup.innerHTML = `
+                <input type="text" name="Points[]" class="form-control" placeholder="Enter Your Point" required>
+                <button type="button" class="remove-point" onclick="removePoint(this)">×</button>
+            `;
+            container.appendChild(pointGroup);
+            
+            // Show remove buttons if there's more than one point
+            var removeButtons = document.querySelectorAll('.remove-point');
+            removeButtons.forEach(button => {
+                button.style.display = removeButtons.length > 1 ? 'block' : 'none';
+            });
+        }
+
+        function removePoint(button) {
+            var pointGroup = button.parentElement;
+            pointGroup.remove();
+            
+            // Hide remove button if only one point remains
+            var removeButtons = document.querySelectorAll('.remove-point');
+            if (removeButtons.length === 1) {
+                removeButtons[0].style.display = 'none';
+            }
+        }
+
+        function deleteOffer(id) {
+            if (confirm('Are you sure you want to delete this offer?')) {
+                $.ajax({
+                    url: '/admin/homeloan/delete-offer/' + id,
+                    type: 'POST',
+                    headers: {
+                        'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function(result) {
+                        if (result.success) {
+                            location.reload();
+                        } else {
+                            alert('Error deleting point: ' + result.message);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Error deleting point: ' + error);
+                    }
+                });
+            }
+        }
+
+        $(document).ready(function() {
+            $('#loansTable').DataTable({
+                responsive: true,
+                "order": [[0, "asc"]],
+                "columnDefs": [
+                    {
+                        "targets": 0,
+                        "render": function(data, type, row, meta) {
+                            return meta.row + 1;
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+}

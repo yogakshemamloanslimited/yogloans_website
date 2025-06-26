@@ -1,0 +1,108 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<link rel="stylesheet" href="~/css/branch/branch.css" asp-append-version="true">
+
+    <div id="spinners" style="text-align:center; margin:40px 0; padding:40px;">
+        <span style="color:#2c3e50; font-size:1.2rem; font-weight:500; margin-bottom:20px; display:block;">Loading nearby branches...</span>
+        <div style="border: 4px solid #f3f3f3; border-top: 4px solid #044697; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; display:inline-block;"></div>
+    </div>
+    
+    <div class="branches">
+        <div class="container">
+            <div class="nearby-header">
+           <!--      <h3 class="nearby-title">Nearby Branches</h3> -->
+                <!-- <p class="nearby-subtitle">Branches within 10km of your location</p> -->
+            </div>
+            <div id="branch-list">
+            </div>
+        </div>
+    </div>
+
+<!-- Modern Branch Locator Section -->
+<section class="branch-locator-section" >
+    <div class="container">
+       <!--  <div class="locator-header">
+         
+            <p class="section-subtitle">Select your state and branch to get detailed information and directions</p>
+        </div> -->
+        
+        <div class="locator-content">
+            <!-- Branch Selection Panel -->
+            <div class="selection-panel">
+            <div class="form-group selection-content" >
+                <div class="form-group" style="width:50%; padding:20px;">
+                    <label for="states" class="form-label">Select State</label>
+                    <select id="states" class="form-select" style="width:100%;">
+                        <option value="">Choose a state...</option>
+                    </select>
+                </div>
+                
+               <div class="form-group" style="width:50%; padding:20px;">
+                    <label for="branch" class="form-label">Select Branch</label>
+                    <select id="branch" class="form-select" style="width:100%;">
+                        <option value="0">HO</option>
+                    </select>
+                </div>
+                </div>
+                <!-- Branch Information -->
+                <div class="branch-info" id="branch-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Branch Address</h4>
+                            <div id="branch-address" class="address-text">
+                                <div id="default-address" class="default-data">
+                                    XXVIII/429/1 <br>
+                                    Yogakshemam Apts.<br>
+                                    dfhdghfg<br>
+                                    Kallingal Lane<br>
+                                    Thrissur - 01<br>
+                                </div>
+                                <div id="dynamic-address" class="dynamic-data" style="display: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Contact Information</h4>
+                            <div id="mob-number" class="contact-text">
+                                <div id="default-contact" class="default-data">
+                                    Mobile: 9496001950
+                                </div>
+                                <div id="dynamic-contact" class="dynamic-data" style="display: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Branch Selection Loader -->
+                <div id="branch-loader" class="branch-loader" style="display: none;">
+                    <div class="loader-content">
+                        <div class="loader-spinner"></div>
+                        <p>Loading branch information...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Panel -->
+            <div class="map-panel">
+                <div class="map-container">
+                    <div id="branch-map" class="branch-map"></div>
+                    <button id="open-maps-btn" class="directions-btn">
+                        <i class="fas fa-directions"></i>
+                        Get Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/branch/branch.js" asp-append-version="true"></script> 
+

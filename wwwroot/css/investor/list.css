@@ -1,0 +1,468 @@
+
+    .list-doc {
+        width: 100%;
+        display: flex;
+        height: auto;
+        background-color: whitesmoke;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .list-doc ul {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 15px;
+        gap: 5px;
+        background-color: white;
+        /*     background-color: whitesmoke; */
+    }
+
+    .list-doc ul li {
+        width: 100%;
+        box-shadow: 0px 0px 2px 0px gray;
+        padding: 10px;
+    }
+
+    .list-doc ul li.active {
+        background-color: #044697;
+        color: white;
+    }
+
+    .list-doc .other {
+        width: 70%;
+        /*       background-color: whitesmoke; */
+        height: 100%;
+        min-height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .other .annual-report-content {
+        width: 100%;
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        /*  height: 100%; */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+    .other .annual-report-content.active {
+        display: grid;
+    }
+
+    .annual-report-content .reports {
+        width: 240px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: black;
+        padding: 15px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .annual-report-content .reports:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border: 1px solid #044697;
+    }
+
+    .other .announcements {
+        width: 100%;
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        /*  height: 100%; */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+    .other .announcements.active {
+        display: grid;
+    }
+
+    .announcements .reports {
+        width: 240px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: black;
+        padding: 15px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .announcements .reports:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border: 1px solid #044697;
+    }
+
+
+    .other .public-disclosure {
+        width: 100%;
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        /*  height: 100%; */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+    .other .public-disclosure.active {
+        display: grid;
+    }
+
+    .public-disclosure .reports {
+        width: 240px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: black;
+        padding: 15px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .public-disclosure .reports:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border: 1px solid #044697;
+    }
+
+    .other .form-for-tds {
+        width: 100%;
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        /*  height: 100%; */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+    .other .form-for-tds.active {
+        display: grid;
+    }
+
+    .form-for-tds .reports {
+        width: 240px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: black;
+        padding: 15px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .form-for-tds .reports:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border: 1px solid #044697;
+    }
+    .other .appointment-order {
+        width: 100%;
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        /*  height: 100%; */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+    .other .appointment-order.active {
+        display: grid;
+    }
+
+    .appointment-order .reports {
+        width: 240px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: black;
+        padding: 15px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .appointment-order .reports:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border: 1px solid #044697;
+    }
+    .unpaid-divident {
+        width: 100%;
+        padding: 2rem;
+        /*         background: #f8f9fa; */
+        display: none;
+        color: black;
+    }
+
+    .unpaid-divident.active {
+        display: block;
+    }
+
+    .unpaid-divident-content {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .digital-lending-partners {
+        width: 100%;
+        padding: 2rem;
+        /*         background: #f8f9fa; */
+        display: none;
+        color: black;
+    }
+
+    .digital-lending-partners.active {
+        display: block;
+    }
+
+    .digital-lending-partners-content
+{
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for content */
+    margin: 0 auto; /* Center the content */
+    display: flex; /* Use flexbox for centering the card */
+    justify-content: center; /* Center the card horizontally */
+    align-items: center; /* Center the card vertically */
+    padding: 1rem;
+}
+
+.digital-lending-partners-content .card {
+    width: 400px; /* Set a reasonable width for the card */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reports .img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.reports .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.detail {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.detail p {
+    color: black;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 0;
+    white-space: normal;
+}
+
+.investors-conatct {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: whitesmoke;
+    /* Consistent with list-doc background */
+}
+.investors-conatct.active 
+{
+    display: flex;
+}
+
+.investors-conatct-content {
+    width: 70%;
+    /* Match the width of the '.other' section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.investors-conatct-content .card {
+    width: 400px;
+    /* Set a reasonable width for the card */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card .top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.top .image {
+    width: 60px;
+    /* Set size for the image container */
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #044697;
+    /* Add a border similar to director images */
+    flex-shrink: 0;
+}
+
+.top .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top .name {
+    display: flex;
+    flex-direction: column;
+}
+
+.name h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+}
+
+.name p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.card .address {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.card .address p {
+    margin-bottom: 5px;
+    /* Add some space between address lines */
+}
+
+/* Style for the last address line to remove bottom margin */
+.card .address p:last-child {
+    margin-bottom: 0;
+}
+@media(max-width:900px){
+    .annual-report-content .reports {
+        width: 180px;
+    }
+      .other .annual-report-content {
+    grid-template-columns: repeat(3,1fr) !important;
+  }
+  .form-for-tds .reports {
+    width: 180px;
+  }
+  .announcements .reports {
+    width: 180px;
+  }
+  .public-disclosure .reports {
+    width: 180px;
+  }
+  .appointment-order .reports {
+    width: 180px;
+  }
+  .other .appointment-order {
+   grid-template-columns: repeat(3,1fr) !important;
+  }
+  .other .announcements {
+     grid-template-columns: repeat(3,1fr) !important;
+  }
+  .other .form-for-tds {
+    grid-template-columns: repeat(3,1fr) !important;
+  }
+}
+@media(max-width:780px){
+    .annual-report-content .reports {
+        width: 180px;
+    }
+      .other .annual-report-content {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+  .form-for-tds .reports {
+    width: 180px;
+  }
+  .announcements .reports {
+    width: 180px;
+  }
+  .public-disclosure .reports {
+    width: 180px;
+  }
+  .appointment-order .reports {
+    width: 180px;
+  }
+  .other .appointment-order {
+   grid-template-columns: repeat(2,1fr) !important;
+  }
+    .other .announcements {
+     grid-template-columns: repeat(2,1fr) !important;
+  }
+  .other .form-for-tds {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+}

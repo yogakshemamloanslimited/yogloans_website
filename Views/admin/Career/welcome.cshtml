@@ -1,0 +1,105 @@
+@model IEnumerable<yogloansdotnet.Models.CareerWelcomeModel>
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "~/Views/admin/Shared/_Layout.cshtml";
+    var firstWelcome = Model?.FirstOrDefault();
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title" style="margin-bottom:20px;">Add welcome images</h4>
+                    
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @TempData["Success"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @TempData["Error"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    <form action="/admin/careeradmin/add-career-welcome" method="post" enctype="multipart/form-data" class="col-12" style="display:flex; flex-direction:column; gap:20px; justify-content:center; align-items:center;">
+                  
+
+                     <div class="col-12">
+                            <p>For desktop (1536 x 400)</p>
+                                <div class="image-upload-group">
+                                    <label class="card" style="display: flex; justify-content: center; align-items: center; height:300px; cursor:pointer; position:relative; overflow: hidden;" for="cd-upload-1">
+                                        <input type="file" name="Image1" id="cd-upload-1" accept="image/*" style="width: 100%; height: 100%; position: absolute; visibility: hidden;">
+                                        <img id="cd-placeholder-1" src="@(firstWelcome?.Image1)" style="@(string.IsNullOrEmpty(firstWelcome?.Image1) ? "display: none;" : "width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0;")">
+                                        <img id="cd-preview-1" src="" style="display: none;width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0;" />
+<!--                                         <img id="cd-preview-1" src="@(firstWelcome?.Image1 ?? "images/icon/image.png")" style=";width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0; @(string.IsNullOrEmpty(firstWelcome?.Image1) ? "display: none;" : "width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0;")" /> -->
+                                    </label>
+                                    <span class="text-danger" id="cdImage1Error"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                              <p>For Mobile Screen (828 x 828)</p>
+                                <div class="image-upload-group">
+                                    <label class="card" style="display: flex; justify-content: center; align-items: center; height:300px; cursor:pointer; position:relative; overflow: hidden;" for="cd-upload-2">
+                                        <input type="file" name="Image2" id="cd-upload-2" accept="image/*" style="width: 100%; height: 100%; position: absolute; visibility: hidden;">
+                                        <!-- <img id="cd-placeholder-2" src="images/icon/image.png" alt="Upload" style="width: 80px; height: 80px; opacity: 0.1; position: absolute; z-index: 1;"> -->
+                                        <img id="cd-placeholder-2" src="@(firstWelcome?.Image2)" style="@(string.IsNullOrEmpty(firstWelcome?.Image2) ? "display: none;" : "width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0;")">
+                                        <img id="cd-preview-2" src="" style="display: none; width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0;"/>
+                                    </label>
+                                    <span class="text-danger" id="cdImage2Error"></span>
+                                </div>
+                            </div>
+                             <div class="col-12">
+                        <p>Main Header</p>
+                      <input  type="text" class="form-control" name="Mainhead" value="@(firstWelcome?.Mainhead)">
+                        <p>Sub Header</p>
+                      <textarea class="form-control" name="Subhead">@(firstWelcome?.Subhead)</textarea>
+                      </div>
+                         <input type="hidden" name="ExistingImage1" value="@firstWelcome?.Image1" />
+                         <input type="hidden" name="ExistingImage2" value="@firstWelcome?.Image2" />
+                         <button class="btn  btn-primary" type="submit">Submit</button>
+                    </form>
+
+                    <!-- <form action="/admin/aboutcontent/empty-table" method="post" class="col-12" style="display:flex; justify-content:center;">
+                        <button type="submit" class="empty-table-btn" onclick="return confirm('Are you sure you want to empty the table? This action cannot be undone.')">Empty Table</button>
+                    </form> -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+   function setupImageUpload(uploadId, previewId, placeholderId) {
+        const input = document.getElementById(uploadId);
+        const preview = document.getElementById(previewId);
+        const placeholder = document.getElementById(placeholderId);
+
+        input.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                    placeholder.style.display = 'none';
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+
+
+    setupImageUpload('cd-upload-1', 'cd-preview-1', 'cd-placeholder-1');
+    setupImageUpload('cd-upload-2', 'cd-preview-2', 'cd-placeholder-2');
+</script>

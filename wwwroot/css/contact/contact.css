@@ -1,0 +1,114 @@
+
+.contact{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.contact .contact-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.contact .contact-container .address{
+    background-color: #044697;
+    width: 100%;
+/*     height: 90px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+.contact .contact-container .address .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;
+    height: 100%;
+}
+.contact .contact-container .address .item p{
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    height: 65px;
+    text-align: center;
+}
+
+.contact .contact-container .address .item img{
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+.contact .contact-container .address .item .image{
+    height: 35px;
+    margin-bottom: 5px;
+}
+.contact .contact-container  form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px 0px rgb(183, 181, 181);
+    padding: 10px;
+    gap: 15px   ;
+}
+
+.contact .contact-container  form label{
+    width: 80%;
+    text-align: start;
+}
+.contact .contact-container  form input{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(224, 221, 221);
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+.contact .contact-container  form input:focus{
+    outline: none;
+    border-bottom: 2px solid #044697;
+}
+.contact .contact-container  form textarea{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(224, 221, 221);
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+    height: 200px;
+}
+.contact .contact-container  form textarea:focus{
+    outline: none;
+    border-bottom: 2px solid #044697;
+}
+.contact .contact-container  form button{
+    width: 25%;
+    padding: 15px   ;
+    background-color: #044697;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width:780px ){
+    
+
+.contact .contact-container form button {
+    width: auto;
+}
+.contact .contact-container .address .item p {
+    height: auto;
+    width: 100%;
+}
+.contact .contact-container .address .item {
+    width: 100%;
+}
+}

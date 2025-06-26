@@ -1,0 +1,383 @@
+D:\yogloansdotnet\bin\Debug\net9.0\appsettings.Development.json
+D:\yogloansdotnet\bin\Debug\net9.0\appsettings.json
+D:\yogloansdotnet\bin\Debug\net9.0\yogloansdotnet.staticwebassets.runtime.json
+D:\yogloansdotnet\bin\Debug\net9.0\yogloansdotnet.staticwebassets.endpoints.json
+D:\yogloansdotnet\bin\Debug\net9.0\yogloansdotnet.exe
+D:\yogloansdotnet\bin\Debug\net9.0\yogloansdotnet.deps.json
+D:\yogloansdotnet\bin\Debug\net9.0\yogloansdotnet.runtimeconfig.json
+D:\yogloansdotnet\bin\Debug\net9.0\yogloansdotnet.dll
+D:\yogloansdotnet\bin\Debug\net9.0\yogloansdotnet.pdb
+D:\yogloansdotnet\obj\Debug\net9.0\yogloansdotnet.GeneratedMSBuildEditorConfig.editorconfig
+D:\yogloansdotnet\obj\Debug\net9.0\yogloansdotnet.AssemblyInfoInputs.cache
+D:\yogloansdotnet\obj\Debug\net9.0\yogloansdotnet.AssemblyInfo.cs
+D:\yogloansdotnet\obj\Debug\net9.0\yogloansdotnet.csproj.CoreCompileInputs.cache
+D:\yogloansdotnet\obj\Debug\net9.0\yogloansdotnet.MvcApplicationPartsAssemblyInfo.cache
+D:\yogloansdotnet\obj\Debug\net9.0\yogloansdotnet.RazorAssemblyInfo.cache
+D:\yogloansdotnet\obj\Debug\net9.0\yogloansdotnet.RazorAssemblyInfo.cs
+D:\yogloansdotnet\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\yogloansdotnet\obj\Debug\net9.0\scopedcss\bundle\yogloansdotnet.styles.css
+D:\yogloansdotnet\obj\Debug\net9.0\scopedcss\projectbundle\yogloansdotnet.bundle.scp.css
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\662vehrkja-b9sayid5wm.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\h4nfgd743o-61n19gt1b8.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\xn842w2ih1-bqjiyaj88i.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\3a1rt0cxze-c2jlpeoesf.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\wzxndgy0kh-erw9l3u2r3.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\445421w9ak-aexeepp0ev.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\rznzwfecj6-d7shbmvgxk.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\hrf0c9k8i5-ausgxo2sd3.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\r8er31142r-k8d9w2qqmf.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\4odihw028h-cosvhxvwiu.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\d0kzazt4qm-ub07r2b239.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\0nto2c9bhj-fvhpjtyr6v.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\hr6u4pt0sm-b7pk76d08c.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\2zrcxqgtvv-fsbi9cje9m.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\dj2n6ngxmd-rzd6atqjts.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\t73f561w15-ee0r1s7dh0.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\d62lf3qxbk-dxx9fxp4il.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\9e5koq5xzy-jd9uben2k1.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\ueo86d4i95-khv3u5hwcm.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\8k1m3g99lu-r4e9w2rdcm.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\3jenfupibr-lcd1t2u6c8.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\h60x1hw6cz-c2oey78nd0.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\89snsk4lqe-tdbxkamptv.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\r8tci26ica-j5mq2jizvt.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\xrrtqrsnvl-06098lyss8.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\kcq71r6490-nvvlpmu67g.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\j0d6neyycm-s35ty4nyc5.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\swm5hwlfod-pj5nd1wqec.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\5m59ivtg3m-46ein0sx1k.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\6gsfp5zce5-v0zj4ognzu.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\ybagdx1jsb-37tfw0ft22.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\r42n2ejwnb-hrwsygsryq.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\5j2ujye0l2-pk9g2wxc8p.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\mgognln46h-ft3s53vfgj.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\yn1yt2rcc2-6cfz1n2cew.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\2eifh3j6nz-6pdc2jztkx.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\xp6xdbhb2f-493y06b0oq.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\c87ozxeg8w-iovd86k7lj.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\k6ntxt9t72-vr1egmr9el.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\2a1pw21lf7-kbrnm935zg.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\g2hjkcrown-jj8uyg4cgr.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\th22z9cnoi-y7v9cxd14o.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\8hzj5j9ohx-notf2xhcfb.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\zylj8r7hch-h1s4sie4z3.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\xr545id1g5-63fj8s7r0e.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\ghphiuaago-0j3bgjxly4.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\cn8nhgv94g-47otxtyo56.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\btfnnbhji5-4v8eqarkd7.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\4klnn465fk-356vix0kms.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\7b5zwhogk1-83jwlth58m.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\90b2ir106q-mrlpezrjn3.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\gxfzzrbssr-lzl9nlhx6b.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\s5muk3vbc4-ag7o75518u.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\v9z6x3m228-x0q3zqp4vz.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\7yvegt0sq0-0i3buxo5is.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\1ac3k5kh30-o1o13a6vjx.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\9eom5z135d-ttgo8qnofa.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\n7hl5epa1j-2z0ns9nrw6.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\x8mmc7hkdu-muycvpuwrr.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\wake4po0p8-87fc7y1x7t.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\e434phf3pn-mlv21k5csn.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\03v3t9vb31-eluqfljp9g.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\27imwwwibd-eluqfljp9g.gz
+D:\yogloansdotnet\obj\Debug\net9.0\staticwebassets.build.json
+D:\yogloansdotnet\obj\Debug\net9.0\staticwebassets.development.json
+D:\yogloansdotnet\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\yogloansdotnet\obj\Debug\net9.0\staticwebassets\msbuild.yogloansdotnet.Microsoft.AspNetCore.StaticWebAssets.props
+D:\yogloansdotnet\obj\Debug\net9.0\staticwebassets\msbuild.yogloansdotnet.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\yogloansdotnet\obj\Debug\net9.0\staticwebassets\msbuild.build.yogloansdotnet.props
+D:\yogloansdotnet\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.yogloansdotnet.props
+D:\yogloansdotnet\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.yogloansdotnet.props
+D:\yogloansdotnet\obj\Debug\net9.0\staticwebassets.pack.json
+D:\yogloansdotnet\obj\Debug\net9.0\yogloansdotnet.dll
+D:\yogloansdotnet\obj\Debug\net9.0\refint\yogloansdotnet.dll
+D:\yogloansdotnet\obj\Debug\net9.0\yogloansdotnet.pdb
+D:\yogloansdotnet\obj\Debug\net9.0\yogloansdotnet.genruntimeconfig.cache
+D:\yogloansdotnet\obj\Debug\net9.0\ref\yogloansdotnet.dll
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\05cdezug7r-180g9bfzcb.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\0x1km8oxjq-7958n68jxo.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\e66vs2ekmx-3tobktd3ut.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\vby8an2ra7-ai2dd32lqd.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\u3w50u8azq-xabihs3opq.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\fk7bb3rk17-bgghij0q3y.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\4ejy8gtjcv-h6puv8qieg.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\a7hjf7yvaf-7j09wfq3gk.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\rsqgh38mmq-g3a2l4qah2.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\88micy7443-96g3mqy2tg.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\p3fs1amq2a-zpq389zwb1.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\voz9tei4il-d1j2z3n2pv.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\2uk72kucmj-i3y4luciwf.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\6o5bm9dtot-yevbtd8c2z.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\dcdjonoais-vhsi10hdem.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\1k4dhw95d1-9isj0u039q.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\mfcj1t9qvc-mbp8agbaol.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\tvkkcrebz3-v0v960hheb.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\rqynun2trw-3dex4b2yun.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\g5vfzt5d9t-vtmuiv8mcw.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\72qp9rndbp-fzjtnmfj5c.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\inql6onuc8-4m06domx3y.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\4pg8pwdid3-j5iverje9n.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\f25cfgdxkh-lhwukfs3t1.gz
+D:\yogloansdotnet\obj\Debug\net9.0\compressed\zhjbtipgg6-2wicmnqvo0.gz
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\appsettings.Development.json
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\appsettings.json
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\yogloansdotnet.staticwebassets.runtime.json
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\yogloansdotnet.staticwebassets.endpoints.json
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\yogloansdotnet.exe
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\yogloansdotnet.deps.json
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\yogloansdotnet.runtimeconfig.json
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\yogloansdotnet.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\yogloansdotnet.pdb
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Azure.Core.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Azure.Identity.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Humanizer.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\Mono.TextTemplating.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.ClientModel.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.CodeDom.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Composition.Convention.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Composition.Hosting.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Composition.Runtime.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Composition.TypedParts.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Drawing.Common.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Formats.Asn1.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Memory.Data.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Runtime.Caching.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Security.Permissions.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Text.Json.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\System.Windows.Extensions.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\yogloansdotnet - Copy\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.csproj.AssemblyReference.cache
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.GeneratedMSBuildEditorConfig.editorconfig
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.AssemblyInfoInputs.cache
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.AssemblyInfo.cs
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.csproj.CoreCompileInputs.cache
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.MvcApplicationPartsAssemblyInfo.cache
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.RazorAssemblyInfo.cache
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.RazorAssemblyInfo.cs
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\scopedcss\Views\admin\Shared\_Layout.cshtml.rz.scp.css
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\scopedcss\bundle\yogloansdotnet.styles.css
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\scopedcss\projectbundle\yogloansdotnet.bundle.scp.css
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\voz9tei4il-d1j2z3n2pv.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\rsqgh38mmq-g3a2l4qah2.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\p3fs1amq2a-zpq389zwb1.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\a7hjf7yvaf-7j09wfq3gk.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\4ejy8gtjcv-h6puv8qieg.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\mfcj1t9qvc-mbp8agbaol.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\g5vfzt5d9t-vtmuiv8mcw.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\rqynun2trw-3dex4b2yun.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\tvkkcrebz3-v0v960hheb.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\inql6onuc8-4m06domx3y.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\72qp9rndbp-fzjtnmfj5c.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\4pg8pwdid3-j5iverje9n.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\f25cfgdxkh-lhwukfs3t1.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\vby8an2ra7-ai2dd32lqd.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\u3w50u8azq-xabihs3opq.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\fk7bb3rk17-bgghij0q3y.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\0x1km8oxjq-7958n68jxo.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\e66vs2ekmx-3tobktd3ut.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\6o5bm9dtot-yevbtd8c2z.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\2uk72kucmj-i3y4luciwf.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zhjbtipgg6-2wicmnqvo0.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\dcdjonoais-vhsi10hdem.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\1k4dhw95d1-9isj0u039q.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\662vehrkja-b9sayid5wm.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\h4nfgd743o-61n19gt1b8.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\05cdezug7r-180g9bfzcb.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\xn842w2ih1-bqjiyaj88i.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\3a1rt0cxze-c2jlpeoesf.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\wzxndgy0kh-erw9l3u2r3.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\445421w9ak-aexeepp0ev.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\rznzwfecj6-d7shbmvgxk.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\hrf0c9k8i5-ausgxo2sd3.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\r8er31142r-k8d9w2qqmf.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\4odihw028h-cosvhxvwiu.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\d0kzazt4qm-ub07r2b239.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\0nto2c9bhj-fvhpjtyr6v.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\hr6u4pt0sm-b7pk76d08c.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\2zrcxqgtvv-fsbi9cje9m.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\dj2n6ngxmd-rzd6atqjts.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\t73f561w15-ee0r1s7dh0.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\d62lf3qxbk-dxx9fxp4il.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\9e5koq5xzy-jd9uben2k1.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\ueo86d4i95-khv3u5hwcm.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\8k1m3g99lu-r4e9w2rdcm.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\3jenfupibr-lcd1t2u6c8.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\h60x1hw6cz-c2oey78nd0.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\89snsk4lqe-tdbxkamptv.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\r8tci26ica-j5mq2jizvt.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\xrrtqrsnvl-06098lyss8.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\kcq71r6490-nvvlpmu67g.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\j0d6neyycm-s35ty4nyc5.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\swm5hwlfod-pj5nd1wqec.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\5m59ivtg3m-46ein0sx1k.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\6gsfp5zce5-v0zj4ognzu.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\ybagdx1jsb-37tfw0ft22.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\r42n2ejwnb-hrwsygsryq.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\5j2ujye0l2-pk9g2wxc8p.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\mgognln46h-ft3s53vfgj.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\yn1yt2rcc2-6cfz1n2cew.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\2eifh3j6nz-6pdc2jztkx.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\xp6xdbhb2f-493y06b0oq.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\c87ozxeg8w-iovd86k7lj.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\k6ntxt9t72-vr1egmr9el.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\2a1pw21lf7-kbrnm935zg.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\g2hjkcrown-jj8uyg4cgr.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\th22z9cnoi-y7v9cxd14o.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\8hzj5j9ohx-notf2xhcfb.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zylj8r7hch-h1s4sie4z3.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\xr545id1g5-63fj8s7r0e.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\ghphiuaago-0j3bgjxly4.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\cn8nhgv94g-47otxtyo56.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\btfnnbhji5-4v8eqarkd7.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\4klnn465fk-356vix0kms.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\7b5zwhogk1-83jwlth58m.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\90b2ir106q-mrlpezrjn3.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\gxfzzrbssr-lzl9nlhx6b.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\s5muk3vbc4-ag7o75518u.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\v9z6x3m228-x0q3zqp4vz.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\7yvegt0sq0-0i3buxo5is.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\1ac3k5kh30-o1o13a6vjx.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\9eom5z135d-ttgo8qnofa.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\n7hl5epa1j-2z0ns9nrw6.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\x8mmc7hkdu-muycvpuwrr.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\wake4po0p8-87fc7y1x7t.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\e434phf3pn-mlv21k5csn.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\03v3t9vb31-z33nz24z9p.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\27imwwwibd-z33nz24z9p.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets.build.json
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets.development.json
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets\msbuild.yogloansdotnet.Microsoft.AspNetCore.StaticWebAssets.props
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets\msbuild.yogloansdotnet.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets\msbuild.build.yogloansdotnet.props
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.yogloansdotnet.props
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.yogloansdotnet.props
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets.pack.json
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloans.A33A1D1B.Up2Date
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.dll
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\refint\yogloansdotnet.dll
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.pdb
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.genruntimeconfig.cache
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\ref\yogloansdotnet.dll
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\88micy7443-t1zvwxoq65.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zitbjho43y-4sesli4jnu.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\q677rvfh81-xgfky6img6.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\ig32mwjwbs-m9qm4tazc0.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\7t9vvlxr1e-f8iekp3gzv.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\3zatwzz2c5-bkshd4yh2t.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\p1bgzrp416-4lj9kp7vux.gz
