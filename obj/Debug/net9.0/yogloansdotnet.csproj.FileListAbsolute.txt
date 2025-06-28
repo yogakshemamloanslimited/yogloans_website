@@ -379,5 +379,6 @@ D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zitbjho43y-4sesli4jnu.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\q677rvfh81-xgfky6img6.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\ig32mwjwbs-m9qm4tazc0.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\7t9vvlxr1e-f8iekp3gzv.gz
-D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\3zatwzz2c5-bkshd4yh2t.gz
-D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\p1bgzrp416-4lj9kp7vux.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.sourcelink.json
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\p1bgzrp416-xh6kpg4k2w.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\3zatwzz2c5-4gu87ubv8b.gz

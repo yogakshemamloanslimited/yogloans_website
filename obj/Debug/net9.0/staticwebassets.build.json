@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ju1UnYlDMLG9a8GITD0YdWdmPoi6sd7KWjE0xajuu60=",
+  "Hash": "tc8pNm4IU/Ou9QoEvfmBFBTcmM2+znvYm8XApwt2ZEU=",
   "Source": "yogloansdotnet",
   "BasePath": "_content/yogloansdotnet",
   "Mode": "Default",
@@ -290,12 +290,12 @@
       "OriginalItemSpec": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\3zatwzz2c5-bkshd4yh2t.gz",
+      "Identity": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\3zatwzz2c5-4gu87ubv8b.gz",
       "SourceId": "yogloansdotnet",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/yogloansdotnet",
-      "RelativePath": "js/online15/script#[.{fingerprint=bkshd4yh2t}]?.js.gz",
+      "RelativePath": "js/online15/script#[.{fingerprint=4gu87ubv8b}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -304,8 +304,8 @@
       "RelatedAsset": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\online15\\script.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "wuw29zmfg0",
-      "Integrity": "KLhB8agwnPL3x42bF6LEcGy5r8m7a0Qg994ljsR9Wyw=",
+      "Fingerprint": "h4lhhkrl2u",
+      "Integrity": "zwlfCshAAdyNnu7X6WnJfy5NTm8gnafE7mB9oxzwnoA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\online15\\script.js"
@@ -1340,12 +1340,12 @@
       "OriginalItemSpec": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js"
     },
     {
-      "Identity": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\p1bgzrp416-4lj9kp7vux.gz",
+      "Identity": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\p1bgzrp416-xh6kpg4k2w.gz",
       "SourceId": "yogloansdotnet",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/yogloansdotnet",
-      "RelativePath": "js/nach/script#[.{fingerprint=4lj9kp7vux}]?.js.gz",
+      "RelativePath": "js/nach/script#[.{fingerprint=xh6kpg4k2w}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1354,8 +1354,8 @@
       "RelatedAsset": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\nach\\script.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "butqhlvpk0",
-      "Integrity": "k26R4/enyykLj4ws+DFXdq0qflC8f/57exuiF8b2IT4=",
+      "Fingerprint": "6tlc5nosnv",
+      "Integrity": "alr5hGMN3TBcXwfb1cyePxoNPu5+IXae9Gk/ZHbyoqs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\nach\\script.js"
@@ -4903,8 +4903,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4lj9kp7vux",
-      "Integrity": "mGxpBiAgOMfMbzmLs8pMzgmBu8+MBZcJ0+1OvNQou+k=",
+      "Fingerprint": "xh6kpg4k2w",
+      "Integrity": "G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\nach\\script.js"
@@ -4924,8 +4924,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bkshd4yh2t",
-      "Integrity": "JTiDplcdq5n/teZYX5XEniqbRyCojzqY4yA2av9PXOw=",
+      "Fingerprint": "4gu87ubv8b",
+      "Integrity": "3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\online15\\script.js"
@@ -25526,13 +25526,13 @@
       ]
     },
     {
-      "Route": "js/nach/script.4lj9kp7vux.js",
-      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\p1bgzrp416-4lj9kp7vux.gz",
+      "Route": "js/nach/script.js",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\p1bgzrp416-xh6kpg4k2w.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000524658972"
+          "Quality": "0.000512820513"
         }
       ],
       "ResponseHeaders": [
@@ -25542,19 +25542,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1905"
+          "Value": "1949"
         },
         {
           "Name": "ETag",
-          "Value": "\"k26R4/enyykLj4ws+DFXdq0qflC8f/57exuiF8b2IT4=\""
+          "Value": "\"alr5hGMN3TBcXwfb1cyePxoNPu5+IXae9Gk/ZHbyoqs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 11:37:06 GMT"
+          "Value": "Fri, 27 Jun 2025 04:27:55 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -25570,26 +25570,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"mGxpBiAgOMfMbzmLs8pMzgmBu8+MBZcJ0+1OvNQou+k=\""
+          "Value": "W/\"G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "4lj9kp7vux"
-        },
-        {
-          "Name": "label",
-          "Value": "js/nach/script.js"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-mGxpBiAgOMfMbzmLs8pMzgmBu8+MBZcJ0+1OvNQou+k="
+          "Value": "sha256-G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA="
         }
       ]
     },
     {
-      "Route": "js/nach/script.4lj9kp7vux.js",
+      "Route": "js/nach/script.js",
       "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\nach\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -25599,7 +25591,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6772"
+          "Value": "8203"
         },
         {
           "Name": "Content-Type",
@@ -25607,11 +25599,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mGxpBiAgOMfMbzmLs8pMzgmBu8+MBZcJ0+1OvNQou+k=\""
+          "Value": "\"G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 11:37:06 GMT"
+          "Value": "Fri, 27 Jun 2025 04:27:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA="
+        }
+      ]
+    },
+    {
+      "Route": "js/nach/script.js.gz",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\p1bgzrp416-xh6kpg4k2w.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1949"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"alr5hGMN3TBcXwfb1cyePxoNPu5+IXae9Gk/ZHbyoqs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 04:27:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-alr5hGMN3TBcXwfb1cyePxoNPu5+IXae9Gk/ZHbyoqs="
+        }
+      ]
+    },
+    {
+      "Route": "js/nach/script.xh6kpg4k2w.js",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\p1bgzrp416-xh6kpg4k2w.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000512820513"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1949"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"alr5hGMN3TBcXwfb1cyePxoNPu5+IXae9Gk/ZHbyoqs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 04:27:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xh6kpg4k2w"
+        },
+        {
+          "Name": "label",
+          "Value": "js/nach/script.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA="
+        }
+      ]
+    },
+    {
+      "Route": "js/nach/script.xh6kpg4k2w.js",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\nach\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8203"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 27 Jun 2025 04:27:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25621,7 +25758,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4lj9kp7vux"
+          "Value": "xh6kpg4k2w"
         },
         {
           "Name": "label",
@@ -25629,13 +25766,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mGxpBiAgOMfMbzmLs8pMzgmBu8+MBZcJ0+1OvNQou+k="
+          "Value": "sha256-G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA="
         }
       ]
     },
     {
-      "Route": "js/nach/script.4lj9kp7vux.js.gz",
-      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\p1bgzrp416-4lj9kp7vux.gz",
+      "Route": "js/nach/script.xh6kpg4k2w.js.gz",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\p1bgzrp416-xh6kpg4k2w.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -25644,7 +25781,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1905"
+          "Value": "1949"
         },
         {
           "Name": "Content-Type",
@@ -25652,11 +25789,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"k26R4/enyykLj4ws+DFXdq0qflC8f/57exuiF8b2IT4=\""
+          "Value": "\"alr5hGMN3TBcXwfb1cyePxoNPu5+IXae9Gk/ZHbyoqs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 11:37:06 GMT"
+          "Value": "Fri, 27 Jun 2025 04:27:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25674,7 +25811,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4lj9kp7vux"
+          "Value": "xh6kpg4k2w"
         },
         {
           "Name": "label",
@@ -25682,18 +25819,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-k26R4/enyykLj4ws+DFXdq0qflC8f/57exuiF8b2IT4="
+          "Value": "sha256-alr5hGMN3TBcXwfb1cyePxoNPu5+IXae9Gk/ZHbyoqs="
         }
       ]
     },
     {
-      "Route": "js/nach/script.js",
-      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\p1bgzrp416-4lj9kp7vux.gz",
+      "Route": "js/online15/script.4gu87ubv8b.js",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\3zatwzz2c5-4gu87ubv8b.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000524658972"
+          "Quality": "0.000327761390"
         }
       ],
       "ResponseHeaders": [
@@ -25703,152 +25840,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1905"
+          "Value": "3050"
         },
         {
           "Name": "ETag",
-          "Value": "\"k26R4/enyykLj4ws+DFXdq0qflC8f/57exuiF8b2IT4=\""
+          "Value": "\"zwlfCshAAdyNnu7X6WnJfy5NTm8gnafE7mB9oxzwnoA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 11:37:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"mGxpBiAgOMfMbzmLs8pMzgmBu8+MBZcJ0+1OvNQou+k=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-mGxpBiAgOMfMbzmLs8pMzgmBu8+MBZcJ0+1OvNQou+k="
-        }
-      ]
-    },
-    {
-      "Route": "js/nach/script.js",
-      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\nach\\script.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6772"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"mGxpBiAgOMfMbzmLs8pMzgmBu8+MBZcJ0+1OvNQou+k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 11:37:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-mGxpBiAgOMfMbzmLs8pMzgmBu8+MBZcJ0+1OvNQou+k="
-        }
-      ]
-    },
-    {
-      "Route": "js/nach/script.js.gz",
-      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\p1bgzrp416-4lj9kp7vux.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1905"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"k26R4/enyykLj4ws+DFXdq0qflC8f/57exuiF8b2IT4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 11:37:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-k26R4/enyykLj4ws+DFXdq0qflC8f/57exuiF8b2IT4="
-        }
-      ]
-    },
-    {
-      "Route": "js/online15/script.bkshd4yh2t.js",
-      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\3zatwzz2c5-bkshd4yh2t.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000444839858"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2247"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KLhB8agwnPL3x42bF6LEcGy5r8m7a0Qg994ljsR9Wyw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 10:39:12 GMT"
+          "Value": "Sat, 28 Jun 2025 10:33:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25868,13 +25868,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"JTiDplcdq5n/teZYX5XEniqbRyCojzqY4yA2av9PXOw=\""
+          "Value": "W/\"3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bkshd4yh2t"
+          "Value": "4gu87ubv8b"
         },
         {
           "Name": "label",
@@ -25882,12 +25882,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JTiDplcdq5n/teZYX5XEniqbRyCojzqY4yA2av9PXOw="
+          "Value": "sha256-3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E="
         }
       ]
     },
     {
-      "Route": "js/online15/script.bkshd4yh2t.js",
+      "Route": "js/online15/script.4gu87ubv8b.js",
       "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\online15\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -25897,7 +25897,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8479"
+          "Value": "12185"
         },
         {
           "Name": "Content-Type",
@@ -25905,11 +25905,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JTiDplcdq5n/teZYX5XEniqbRyCojzqY4yA2av9PXOw=\""
+          "Value": "\"3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 10:39:12 GMT"
+          "Value": "Sat, 28 Jun 2025 10:33:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25919,7 +25919,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bkshd4yh2t"
+          "Value": "4gu87ubv8b"
         },
         {
           "Name": "label",
@@ -25927,13 +25927,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JTiDplcdq5n/teZYX5XEniqbRyCojzqY4yA2av9PXOw="
+          "Value": "sha256-3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E="
         }
       ]
     },
     {
-      "Route": "js/online15/script.bkshd4yh2t.js.gz",
-      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\3zatwzz2c5-bkshd4yh2t.gz",
+      "Route": "js/online15/script.4gu87ubv8b.js.gz",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\3zatwzz2c5-4gu87ubv8b.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -25942,7 +25942,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2247"
+          "Value": "3050"
         },
         {
           "Name": "Content-Type",
@@ -25950,11 +25950,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KLhB8agwnPL3x42bF6LEcGy5r8m7a0Qg994ljsR9Wyw=\""
+          "Value": "\"zwlfCshAAdyNnu7X6WnJfy5NTm8gnafE7mB9oxzwnoA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 10:39:12 GMT"
+          "Value": "Sat, 28 Jun 2025 10:33:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -25972,7 +25972,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bkshd4yh2t"
+          "Value": "4gu87ubv8b"
         },
         {
           "Name": "label",
@@ -25980,18 +25980,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KLhB8agwnPL3x42bF6LEcGy5r8m7a0Qg994ljsR9Wyw="
+          "Value": "sha256-zwlfCshAAdyNnu7X6WnJfy5NTm8gnafE7mB9oxzwnoA="
         }
       ]
     },
     {
       "Route": "js/online15/script.js",
-      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\3zatwzz2c5-bkshd4yh2t.gz",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\3zatwzz2c5-4gu87ubv8b.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000444839858"
+          "Quality": "0.000327761390"
         }
       ],
       "ResponseHeaders": [
@@ -26001,15 +26001,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2247"
+          "Value": "3050"
         },
         {
           "Name": "ETag",
-          "Value": "\"KLhB8agwnPL3x42bF6LEcGy5r8m7a0Qg994ljsR9Wyw=\""
+          "Value": "\"zwlfCshAAdyNnu7X6WnJfy5NTm8gnafE7mB9oxzwnoA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 10:39:12 GMT"
+          "Value": "Sat, 28 Jun 2025 10:33:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26029,13 +26029,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"JTiDplcdq5n/teZYX5XEniqbRyCojzqY4yA2av9PXOw=\""
+          "Value": "W/\"3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JTiDplcdq5n/teZYX5XEniqbRyCojzqY4yA2av9PXOw="
+          "Value": "sha256-3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E="
         }
       ]
     },
@@ -26050,7 +26050,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8479"
+          "Value": "12185"
         },
         {
           "Name": "Content-Type",
@@ -26058,11 +26058,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JTiDplcdq5n/teZYX5XEniqbRyCojzqY4yA2av9PXOw=\""
+          "Value": "\"3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 10:39:12 GMT"
+          "Value": "Sat, 28 Jun 2025 10:33:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26072,13 +26072,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JTiDplcdq5n/teZYX5XEniqbRyCojzqY4yA2av9PXOw="
+          "Value": "sha256-3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E="
         }
       ]
     },
     {
       "Route": "js/online15/script.js.gz",
-      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\3zatwzz2c5-bkshd4yh2t.gz",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\3zatwzz2c5-4gu87ubv8b.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -26087,7 +26087,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2247"
+          "Value": "3050"
         },
         {
           "Name": "Content-Type",
@@ -26095,11 +26095,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KLhB8agwnPL3x42bF6LEcGy5r8m7a0Qg994ljsR9Wyw=\""
+          "Value": "\"zwlfCshAAdyNnu7X6WnJfy5NTm8gnafE7mB9oxzwnoA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Jun 2025 10:39:12 GMT"
+          "Value": "Sat, 28 Jun 2025 10:33:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26117,7 +26117,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KLhB8agwnPL3x42bF6LEcGy5r8m7a0Qg994ljsR9Wyw="
+          "Value": "sha256-zwlfCshAAdyNnu7X6WnJfy5NTm8gnafE7mB9oxzwnoA="
         }
       ]
     },

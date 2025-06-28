@@ -5,5 +5,63 @@
 
 <link rel="stylesheet" href="~/css/home/welcome.css" asp-append-version="true">
 <partial name="welcome" />
-
+<input type="hidden" value="@ViewBag.pan_track_id" id="pantrack">
+<input type="hidden" value="@ViewBag.pan" id="pan">
 <partial name="form" />
+
+<div id="existPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:white; z-index:9999; display:none; align-items:center; justify-content:center;">
+    <div style="background:#fff; padding:40px 30px; border-radius:12px; text-align:center; min-width:320px; box-shadow:0 8px 32px rgba(0,0,0,0.18);">
+        <h2 style="margin-bottom:16px; color:#d32f2f;">Already Exists</h2>
+       <!--  <p id="existMessage" style="margin-bottom:24px; color:#333;">The customer already exists in the system.</p> -->
+        <button style="margin-right:12px; padding:8px 20px; background:#1976d2; color:#fff; border:none; border-radius:4px; cursor:pointer;" onclick="redirectpdf_page()">Get Details</button>
+        <button style="padding:8px 20px; background:#e0e0e0; color:#333; border:none; border-radius:4px; cursor:pointer;" onclick="document.getElementById('existPopup').style.display='none'">Return back</button>
+    </div>
+</div>
+<script src="~/js/online15/script.js" asp-append-version="true"></script>
+<style>
+#existPopup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#existPopup .popup-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 320px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+#existPopup h2 {
+    margin-bottom: 16px;
+    color: #d32f2f;
+}
+#existPopup p {
+    margin-bottom: 24px;
+    color: #333;
+}
+#existPopup button {
+    margin: 0 6px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#existPopup button:first-of-type {
+    background: #1976d2;
+    color: #fff;
+}
+#existPopup button:last-of-type {
+    background: #e0e0e0;
+    color: #333;
+}
+</style>
+
+
+

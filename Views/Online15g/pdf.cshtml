@@ -1,40 +1,7 @@
 @{
     Layout = null;
     var assesseeName = Context.Request.Query["assessee_name"];
-    var pan = Context.Request.Query["pan"];
-    var status = Context.Request.Query["status"];
-    var residentialStatus = Context.Request.Query["residential_status"];
-    var previousYear = Context.Request.Query["previous_year"];
-    var flatNo = Context.Request.Query["flat_no"];
-    var premisesName = Context.Request.Query["premises_name"];
-    var street = Context.Request.Query["street"];
-    var locality = Context.Request.Query["locality"];
-    var city = Context.Request.Query["city"];
-    var district = Context.Request.Query["district"];
-    var state = Context.Request.Query["state"];
-    var pin = Context.Request.Query["pin"];
-    var email = Context.Request.Query["email"];
-    var mobile = Context.Request.Query["mobile"];
-    var assessedToTax = Context.Request.Query["assessed_to_tax"];
-    var latestAssessmentYear = Context.Request.Query["latest_assessment_year"];
-    var estimatedIncome = Context.Request.Query["estimated_income"];
-    var estimatedTotalIncome = Context.Request.Query["estimated_total_income"];
-    var totalForms = Context.Request.Query["total_forms"];
-    var aggregateIncome = Context.Request.Query["aggregate_income"];
-    var incomeDetails = Context.Request.Query["income_details"];
-    var declarationAccepted = Context.Request.Query["declaration_accepted"];
-    var date = Context.Request.Query["date"];
-    var place = Context.Request.Query["place"];
-    var payerName = Context.Request.Query["payer_name"];
-    var payerUID = Context.Request.Query["payer_uid"];
-    var payerPan = Context.Request.Query["payer_pan"];
-    var payerAddress = Context.Request.Query["payer_address"];
-    var payerTAN = Context.Request.Query["payer_tan"];
-    var payerEmail = Context.Request.Query["payer_email"];
-    var payerPhone = Context.Request.Query["payer_phone"];
-    var incomePaid = Context.Request.Query["income_paid"];
-    var declarationReceivedDate = Context.Request.Query["declaration_received_date"];
-    var incomePaidDate = Context.Request.Query["income_paid_date"];
+  
 }
 <!DOCTYPE html>
 <html>
@@ -176,7 +143,7 @@
                 font-size:12px;
             }
             .dec {
-                padding:10px 5px;
+                padding:10px 2px;
             }
             .section {
                 margin-bottom: 0 !important;
@@ -219,169 +186,22 @@
     </style>
 </head>
 <body>
+<input type="hidden" value="@ViewBag.CustomerId" id="customer_id">
+<input type="hidden" value="@ViewBag.pantrack" id="pantrack">
+<input type="hidden" value="@ViewBag.pan" id="pan">
+<input type="hidden" value="@ViewBag.j" id="j">
+
 <!--     <div class="print-note" style="color: #d32f2f; margin-bottom: 10px;">
         <b>Note:</b> For a clean print, please disable "Headers and footers" in your browser's print settings.
     </div> -->
+   <section id="printSection">
+   </section>
     <div class="buttons">
         <div id="printButton">
             <img src="/images/icon/printer.png">
         </div>
-        <div id="downloadPdfButton">
+        <div id="downloadPdfButton" >
             <img src="/images/icon/download-pdf.png">
-        </div>
-    </div>
-<section id="printSection">
- <h2>FORM NO. 15G</h2>
-    <p style="text-align:center;">[See section 197A(1), 197A(1A) and rule 29C]</p>
-    <p style="text-align:center;">Declaration under section 197A(1) and section 197A(1A) to be made by an individual or a person (not being a company or firm) claiming certain incomes without deduction of tax.</p>
-
-    <div class="section">
-        <h3>PART I</h3>
-        <table>
-            <tr>
-                <td>1. Name of Assessee (Declarant):<b> @assesseeName</b></td>
-                <td>2. PAN of the Assessee:<b> @pan</b></td>
-                <td>3. Status:<b> @status</b></td>
-                <td>4. Previous year (P.Y.):<b> @previousYear</b></td>
-            </tr>
-            <tr>
-                <td>5. Residential Status:<b> @residentialStatus</b></td>
-                <td>6. Flat/Door/Block No.:<b> @flatNo</b></td>
-                <td>7. Name of Premises:<b> @premisesName</b></td>
-                <td>8. Road/Street/Lane:<b> @street</b></td>
-            </tr>
-            <tr>
-                <td>9. Area/Locality:<b> @locality</b></td>
-                <td>10. Town/City/District:<b> @district</b></td>
-                <td>11. State:<b> @state</b></td>
-                <td>12. PIN:<b> @pin</b></td>
-            </tr>
-            <tr>
-                <td>13. Email:<b> @email</b></td>
-                <td>14. Mobile:<b> @mobile</b></td>
-                <td colspan="2">15(a). Assessed to tax under Income-tax Act, 1961?: <b>@assessedToTax</b><br/>
-                    (b). Latest assessment year if assessed:<b> @latestAssessmentYear</b>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">16. Estimated income for which this declaration is made:<b> @estimatedIncome</b></td>
-                <td colspan="2">17. Estimated total income of P.Y.:<b> @estimatedTotalIncome</b></td>
-            </tr>
-            <tr>
-                <th colspan="2">Total No. of Form 15G filed</th>
-                <th colspan="2">Aggregate income for which Form 15G filed</th>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align:center;"><b>@totalForms</b></td>
-                <td colspan="2" style="text-align:center;"><b>@aggregateIncome</b></td>
-            </tr>
-            <tr>
-                <td colspan="4"><b>Details of income for which declaration is filed:</b> @incomeDetails</td>
-            </tr>
-        </table>
-
-        <div class="dec">
-            <div class="head">
-                Declaration/Verification
-            </div>
-            <p>
-                I/We @assesseeName do hereby declare that to the best of my/our knowledge and belief what is stated above is correct, complete, and truly stated.
-                I/We declare that the incomes referred to in this form are not includible in the total income of any other person under sections 60 to 64 of the Income-tax Act, 1961.
-                I/We further declare that the tax on my/our estimated total income including income referred to in column 16 and the aggregate amount of income referred to in column 18 for the previous year ending on 31/03/2026 relevant to the assessment year 2026-27 will be nil.
-                I/We also declare that the income(s) referred to will not exceed the maximum amount not chargeable to income-tax.
-            </p>
-        </div>
-
-        <div class="bottom">
-            <div class="left">
-                <p>Place :</p>
-                <p><b>@place</b></p>
-            </div>
-            <div class="right">
-                <p>Digitally signed through OTP sent to the registered Mobile No: <b>@declarationAccepted</b> on <b>@date</b></p>
-                <p><b>Signature of the Declarant</b></p>
-            </div>
-        </div>
-    </div>
-
-
-     <div class="section" style="flex-direction:column; page-break-before: always; break-before: page;">
-        <h3>PART 2</h3>
-        <p style="width:100%; text-align:center;">
-           [To be filled by the person responsible for paying the income referred to in column 15 of Part I]
-        </p>
-        <table>
-            <tr>
-                <td>1. Name of the person responsible for paying :<b> @payerName</b></td>
-                <td>2. Unique Identification No :<b> @payerUID</b></td>
-                <td>3. PAN of the person responsible for paying :<b> @payerPan</b></td>
-                <td>4. Complete Address :<b> @payerAddress</b></td>
-            </tr>
-            <tr>
-                <td>5. TAN of the person responsible forpaying :<b> @residentialStatus</b></td>
-                <td>6. Email:<b>  @payerEmail</b></td>
-                <td>7. Telephone No. (with STD Code) and Mobile No :<b> @payerPhone</b></td>
-                <td>8. Amount of income paid:<b> @incomePaid</b></td>
-            </tr>
-            <tr>
-                <td colspan="2">9. Date on which Declaration is received(DD/MM/YYYY):<b>@declarationReceivedDate</b></td>
-                <td colspan="2">10. Date on which the income has been paid/credited(DD/MM/YYYY):<b>  @incomePaidDate</b></td>
-               <!--  <td>11. State:<b> @state</b></td>
-                <td>12. PIN:<b> @pin</b></td> -->
-            </tr>
-            <!-- <tr>
-                <td>13. Email:<b> @email</b></td>
-                <td>14. Mobile:<b> @mobile</b></td>
-                <td colspan="2">15(a). Assessed to tax under Income-tax Act, 1961?: <b>@assessedToTax</b><br/>
-                    (b). Latest assessment year if assessed:<b> @latestAssessmentYear</b>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">16. Estimated income for which this declaration is made:<b> @estimatedIncome</b></td>
-                <td colspan="2">17. Estimated total income of P.Y.:<b> @estimatedTotalIncome</b></td>
-            </tr>
-            <tr>
-                <th colspan="2">Total No. of Form 15G filed</th>
-                <th colspan="2">Aggregate income for which Form 15G filed</th>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align:center;"><b>@totalForms</b></td>
-                <td colspan="2" style="text-align:center;"><b>@aggregateIncome</b></td>
-            </tr>
-            <tr>
-                <td colspan="4"><b>Details of income for which declaration is filed:</b> @incomeDetails</td>
-            </tr> -->
-        </table>
-
-        <div class="dec">
-            <!-- <div class="head">
-                Declaration/Verification
-            </div> -->
-            <p>
-              As per provisions of section 206AA(2), the declaration under section 197A(1C) shall be invalid if the declarant fails to furnish his valid Permanent AccountNumber (PAN).
-Declaration can be furnished by a resident individual who is of the age of 60 years or more at any time during the previous year.
-The financial year to which the income pertains.
-Please mention "Yes" if assessed to tax under the provisions of Income-tax Act, 1961 for any of the assessment year out of six assessment years precedingthe year in which the declaration is filed.
-Please mention "Yes" if assessed to tax under the provisions of Income-tax Act, 1961 for any of the assessment year out of six assessment years precedingthe year in which the declaration is filed.
-In case any declaration(s) in Form No. 15H is filed before filing this declaration during the previous year, mention the total number of such Form No. 15Hfiled along with the aggregate amount of income for which said declaration(s) have been filed.
-Mention the distinctive number of shares, account number of term deposit, recurring deposit, National Savings Schemes, life insurance policy number,employee code, etc.
-Before signing the declaration/verification, the declarant should satisfy himself that the information furnished in this form is true, correct and complete inall respects. Any person making a false statement in the declaration shall be liable to prosecution under section 277 of the Income-tax Act, 1961 and onconviction be punishable-
-(i) in a case where tax sought to be evaded exceeds twenty-five lakh rupees, with rigorous imprisonment which shall not be less than six months but whichmay extend to seven years and with fine;
-(ii) in any other case, with rigorous imprisonment which shall not be less than three months but which may extend to two years and with fine.
-The person responsible for paying the income referred to in column 15 of Part I shall allot a unique identification number to all the Form No. 15H receivedby him during a quarter of the financial year and report this reference number along with the particulars prescribed in rule 31A(4)(vii) of the Income-taxRules, 1962 in the TDS statement furnished for the same quarter. In case the person has also received Form No.15G during the same quarter, please allotseparate series of serial number for Form No.15H and Form No.15G.
-The person responsible for paying the income referred to in column 15 of Part I shall not accept the declaration where the amount of income of the naturereferred to in section 197A(1C) or the aggregate of the amounts of such income credited or paid or likely to be credited or paid during the previous year inwhich such income is to be included exceeds the maximum amount which is not chargeable to tax after allowing for deduction(s) under Chapter VI-A, ifany, or set off of loss, if any, under the head "income from house property" for which the declarant is eligible. For deciding the eligibility, he is required toverify income or the aggregate amount of incomes, as the case may be, reported by the declarant in columns 15 and 17.
-The person responsible for paying the income referred to in column 15 of Part I shall not accept the declaration where the amount of income of the naturereferred to in section 197A(1C) or the aggregate of the amounts of such income credited or paid or likely to be credited or paid during the previous year inwhich such income is to be included exceeds the maximum amount which is not chargeable to tax after allowing for deduction(s) under Chapter VI-A, ifany, or set off of loss, if any, under the head "income from house property" for which the declarant is eligible. For deciding the eligibility, he is required toverify income or the aggregate amount of incomes, as the case may be, reported by the declarant in columns 15 and 17.
-        </div>
-
-        <div class="bottom">
-            <div class="left">
-                <p>Place :<b> @place</b></p>
-                <p>Date :<b> @date</b></p>
-            </div>
-            <div class="right">
-    <!--             <p>Signature of the person responsible forpaying the income referred to in column 15of Part I</p> -->
-                <p><b>Signature of the person responsible forpaying the income referred to in column 15of Part I</b></p>
-            </div>
         </div>
     </div>
 </section>
@@ -416,7 +236,199 @@ The person responsible for paying the income referred to in column 15 of Part I 
         element.classList.remove('pdf-export');
     });
 });
+var customer_id = document.getElementById('customer_id').value;
+var pantrack = document.getElementById('pantrack').value;
+var pan = document.getElementById('pan').value;
 
+
+$.ajax({
+    url: "http://localhost:8085/api/15g/get-data",
+    method: "GET",
+    data: {
+        pantrack: pantrack,
+        pan: pan,
+      
+    },
+    success: function (response) {
+        console.log("Success:", response);
+        
+        // Extract the actual data from response.data
+        const data = response.data || response;
+        console.log("Extracted data:", data);
+        console.log("Available columns:", response.availableColumns);
+           
+            const formHtml = ` 
+            
+
+            
+ <h2>FORM NO. 15G</h2>
+    <p style="text-align:center;">[See section 197A(1), 197A(1A) and rule 29C]</p>
+    <p style="text-align:center;">Declaration under section 197A(1) and section 197A(1A) to be made by an individual or a person (not being a company or firm) claiming certain incomes without deduction of tax.</p>
+
+    <div class="section">
+        <h3>PART I</h3>
+        <table>
+            <tr>
+                <td>1. Name of Assessee (Declarant):<b>${data.customer_name || ''}</b></td>
+                <td>2. PAN of the Assessee:<b>${data.PancARdno || ''} </b></td>
+                <td>3. Status:<b>${data.status || ''} </b></td>
+                <td>4. Previous year (P.Y.):<b>${data.fy || ''} </b></td>
+            </tr>
+            <tr>
+                <td>5. Residential Status:<b id="residence">${data.resstatus} </b></td>
+                <td>6. Flat/Door/Block No.:<b>${data.c_housename || ''} </b></td>
+                <td>7. Name of Premises:<b> ${data.premises || ''}</b></td>
+                <td>8. Road/Street/Lane:<b>${data.c_street_name || ''} </b></td>
+            </tr>
+            <tr>
+                <td>9. Area/Locality:<b>${data.c_city} </b></td>
+                <td>10. Town/City/District:<b>${data.district_name || ''} </b></td>
+                <td>11. State:<b>${data.state_name || ''} </b></td>
+                <td>12. PIN:<b>${data.pin_code || ''} </b></td>
+            </tr>
+            <tr>
+                <td>13. Email:<b id="email-15g">${data.email_id} </b></td>
+                <td>14. Mobile:<b>${data.mobile_no || ''} </b></td>
+                <td colspan="2">15(a). Assessed to tax under Income-tax Act, 1961?: <b id="tax"></b><br/>
+                    (b). Latest assessment year if assessed:<b> </b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">16. Estimated income for which this declaration is made:<b id="estimated"> </b></td>
+                <td colspan="2">17. Estimated total income of P.Y.:<b>${data.esttotincom || ''} </b></td>
+            </tr>
+            <tr>
+                <th colspan="2">Total No. of Form 15G filed</th>
+                <th colspan="2">Aggregate income for which Form 15G filed</th>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;"><b>${data.tot_no_15_field || ''}</b></td>
+                <td colspan="2" style="text-align:center;"><b>${data.aggregate_amt || ''}</b></td>
+            </tr>
+            <tr>
+                <td colspan="4"><b>Details of income for which declaration is filed:</b> </td>
+            </tr>
+        </table>
+
+        <div class="dec">
+            <div class="head">
+                Declaration/Verification
+            </div>
+            <p>
+                I/We ${data.customer_name || ''} do hereby declare that to the best of my/our knowledge and belief what is stated above is correct, complete, and truly stated.
+                I/We declare that the incomes referred to in this form are not includible in the total income of any other person under sections 60 to 64 of the Income-tax Act, 1961.
+                I/We further declare that the tax on my/our estimated total income including income referred to in column 16 and the aggregate amount of income referred to in column 18 for the previous year ending on 31/03/2026 relevant to the assessment year 2026-27 will be nil.
+                I/We also declare that the income(s) referred to will not exceed the maximum amount not chargeable to income-tax.
+            </p>
+        </div>
+
+        <div class="bottom">
+            <div class="left">
+                <p>Place :</p>
+                <p><b></b></p>
+            </div>
+            <div class="right">
+                <p>Digitally signed through OTP sent to the registered Mobile No: <b>${data.mobile_no || ''}</b> on <b>${data.otpdt || ''}</b></p>
+                <p><b>Signature of the Declarant</b></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section" style="flex-direction:column; page-break-before: always; break-before: page;">
+    <h3>PART 2</h3>
+    <p style="width:100%; text-align:center;">
+        [To be filled by the person responsible for paying the income referred to in column 15 of Part I]
+    </p>
+
+    <table>
+        <tr>
+            <td>1. Name of the person responsible for paying : <b>YOGAKSHEMAM LOANS LTD.</b></td>
+            <td>2. Unique Identification No : <b>1</b></td>
+            <td>3. PAN of the person responsible for paying : <b>AAACY0903F</b></td>
+            <td>4. Complete Address : <b>Door No.28/315-D2, 3rd Floor, Ottappath Tower, Aswini Junction, Thiruvambady P.O, Thrissur 680 022</b></td>
+        </tr>
+        <tr>
+            <td>5. TAN of the person responsible for paying : <b>CHNY00031D</b></td>
+            <td>6. Email: <b>mail@yogloans.com</b></td>
+            <td>7. Telephone No. (with STD Code) and Mobile No : <b>0487-2320102</b></td>
+            <td>8. Amount of income paid: <b>14706</b></td>
+        </tr>
+        <tr>
+            <td colspan="2">9. Date on which Declaration is received (DD/MM/YYYY): <b>01/04/2023</b></td>
+            <td colspan="2">10. Date on which the income has been paid/credited (DD/MM/YYYY): <b>31/03/2026</b></td>
+        </tr>
+    </table>
+
+    <div class="dec">
+        <p>
+            As per provisions of section 206AA(2), the declaration under section 197A(1C) shall be invalid if the declarant fails to furnish his valid Permanent Account Number (PAN).
+            <br>
+            Declaration can be furnished by a resident individual who is of the age of 60 years or more at any time during the previous year.
+            <br>
+            The financial year to which the income pertains.
+            <br>
+            Please mention "Yes" if assessed to tax under the provisions of Income-tax Act, 1961 for any of the assessment year out of six assessment years preceding the year in which the declaration is filed.
+            <br>
+            Please mention the amount of estimated total income of the previous year for which the declaration is filed including the amount of income for which this declaration is made.
+            <br>
+            In case any declaration(s) in Form No. 15H is filed before filing this declaration during the previous year, mention the total number of such Form No. 15H filed along with the aggregate amount of income for which said declaration(s) have been filed.
+            <br>
+            Mention the distinctive number of shares, account number of term deposit, recurring deposit, National Savings Schemes, life insurance policy number, employee code, etc.
+            <br>
+            Before signing the declaration/verification, the declarant should satisfy himself that the information furnished in this form is true, correct and complete in all respects. Any person making a false statement in the declaration shall be liable to prosecution under section 277 of the Income-tax Act, 1961 and on conviction be punishable:
+            <br>
+            (i) in a case where tax sought to be evaded exceeds twenty-five lakh rupees, with rigorous imprisonment which shall not be less than six months but which may extend to seven years and with fine;
+            <br>
+            (ii) in any other case, with rigorous imprisonment which shall not be less than three months but which may extend to two years and with fine.
+            <br>
+            The person responsible for paying the income referred to in column 15 of Part I shall allot a unique identification number to all the Form No. 15H received by him during a quarter of the financial year and report this reference number along with the particulars prescribed in rule 31A(4)(vii) of the Income-tax Rules, 1962 in the TDS statement furnished for the same quarter. In case the person has also received Form No.15G during the same quarter, please allot separate series of serial number for Form No.15H and Form No.15G.
+            <br>
+            The person responsible for paying the income referred to in column 15 of Part I shall not accept the declaration where the amount of income of the nature referred to in section 197A(1C) or the aggregate of the amounts of such income credited or paid or likely to be credited or paid during the previous year in which such income is to be included exceeds the maximum amount which is not chargeable to tax after allowing for deduction(s) under Chapter VI-A, if any, or set off of loss, if any, under the head "income from house property" for which the declarant is eligible. For deciding the eligibility, he is required to verify income or the aggregate amount of incomes, as the case may be, reported by the declarant in columns 15 and 17.
+        </p>
+    </div>
+
+    <div class="bottom">
+        <div class="left">
+            <p>Place : <b>Thrissur</b></p>
+            <p>Date : <b>01/04/2023</b></p>
+        </div>
+        <div class="right">
+            <p><b>Signature of the person responsible for paying the income referred to in column 15 of Part I</b></p>
+        </div>
+    </div>
+</div>
+
+
+            `;
+
+            $('#printSection').html(formHtml);
+
+            $.ajax({
+                url: "http://localhost:8085/api/15g/get15g/" + customer_id,
+                method: "GET",
+                success: function (response) {
+                    console.log("Succes15gs:", response);
+                    $('#email-15g').text(response.email);
+                    $('#tax').text(response.tax);
+                    $('#estimated').text(response.estimate);
+                    $('#residence').text(response.resident);
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error fetching email:", error);
+                }
+            });
+        }});
 </script>
 
 </body>

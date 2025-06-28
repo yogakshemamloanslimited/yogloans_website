@@ -1,6 +1,28 @@
 $(document).ready(function () {
     var customer_id = document.getElementById('customer_id').value;
 
+
+    fetch(`http://localhost:8085/api/15g/find/${customer_id}`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Unexpected error occurred");
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.exists) {
+      /*       // Show the response in the popup
+            document.getElementById('existMessage').innerText = `true ${JSON.stringify(data)}`; */
+            document.getElementById('existPopup').style.display = 'flex';
+        } else {
+            // Customer does not exist — proceed with form submission or further logic
+            console.log("Customer not found. Proceed.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+
     $.ajax({
         url: "http://localhost:8085/api/15g/get-application-data/" + customer_id,
         method: "GET",
@@ -119,7 +141,11 @@ $(document).ready(function () {
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
         <button type="button" onclick="window.location.href='cancel.aspx'">Cancel</button>
-        <button type="button" onclick="redirectvalues()">Print</button>
+        <button type="button" onclick="redirectpdf_page()" disabled id="print-btn" style="cursor: not-allowed; background-color:white; color:gray;">Print</button>
+    </div>
+    <div >
+        <input type="text" id="pantrack_hidden" name="pantrack">
+        <input type="text" id="pan_hidden" name="pan">
     </div>
 </form>
             `;
@@ -175,7 +201,11 @@ $(document).ready(function () {
                             title: 'Success',
                             text: response.message || "Form submitted successfully!"
                         });
-                        // Optionally redirect or reset form
+                        $('#print-btn').prop('disabled', false);
+                        $('#print-btn').css('cursor', 'pointer');
+                        $('#print-btn').css('background-color', 'red');
+                        $('#print-btn').css('color', 'white');
+                        redirectvalues();
                     },
                     error: function (xhr) {
                         console.error(xhr);
@@ -200,18 +230,96 @@ $(document).ready(function () {
             console.error("Error:", error);
         }
     });
+
+   
 });
-
-
 function redirectvalues() {
-    var form = document.querySelector('.details form');
-    var formData = new FormData(form);
-    var params = new URLSearchParams();
+    var customer_id = document.getElementById('customer_id').value;
+  
+    $.ajax({
+        url: "http://localhost:8085/api/15g/get-pdf-data/" + customer_id, // ✅ route param
+        method: "GET", // ✅ correct method
+        contentType: "application/json",
+        success: function(response) {
+            console.log("success-response :", response);
+            
+            // Debug: Check if elements exist
+            const pantrackElement = $('#pantrack_hidden');
+            const panElement = $('#pan_hidden');
+            
+            console.log("pantrack element exists:", pantrackElement.length > 0);
+            console.log("pan element exists:", panElement.length > 0);
+            
+            // Handle response as array - get first element
+            const data = Array.isArray(response) ? response[0] : response;
+            console.log("Extracted data:", data);
+            
+            if (pantrackElement.length > 0) {
+                pantrackElement.val(data.pan_track_id);
+                console.log("Set pantrack value to:", data.pan_track_id);
+            } else {
+                console.error("pantrack element not found!");
+            }
+            
+            if (panElement.length > 0) {
+                panElement.val(data.PancARdno);
+                console.log("Set pan value to:", data.PancARdno);
+            } else {
+                console.error("pan element not found!");
+            }
+        },
+        
+        error: function(xhr) {
+            console.error("error-response :", xhr.responseText);
+        }
+    });
 
-    for (var pair of formData.entries()) {
-        params.append(pair[0], pair[1]);
-    }
 
-    // Redirect to the Online15g/pdf page with all form values as query parameters
-    window.location.href = '/Online15g/pdf?' + params.toString();
+
 }
+
+function redirectpdf(){
+    var pan_track_id = document.getElementById('pantrack_hidden').value;
+    var pan = document.getElementById('pan_hidden').value;
+    var j = "G"; // assuming "G" is the required value
+
+    $.ajax({
+        url: "http://localhost:8085/api/15g/get-data",
+        method: "GET",
+        data: {
+            pantrack: pan_track_id,
+            pan: pan,
+            j: j
+        },
+        success: function(response) {
+            console.log("Success:", response);
+        },
+        error: function(xhr, status, error) {
+            console.log("Error:", xhr.responseText);
+        }
+    });
+}
+
+
+
+function redirectpdf_page(){
+    var customer_id = document.getElementById('customer_id').value;
+    var pan_track_id = document.getElementById('pantrack_hidden').value;
+    var pan = document.getElementById('pan_hidden').value;
+    var j = "G"; 
+
+    console.log("Redirecting to PDF with parameters:");
+    console.log("customer_id:", customer_id);
+    console.log("pan_track_id:", pan_track_id);
+    console.log("pan:", pan);
+    console.log("j:", j);
+
+    var url = "http://localhost:5132/online15g/pdf?customer_id="+customer_id+"&pantrack="+pan_track_id+"&pan="+pan+"&j="+j;
+    console.log("Redirect URL:", url);
+
+    window.location.href = url;
+}
+
+
+
+   

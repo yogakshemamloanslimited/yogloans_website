@@ -177,3 +177,47 @@ function confirmStop() {
         }
     });
 }
+function cancel(){
+    const stopDate = document.getElementById('stop_date_input').value;
+    const customerId = document.getElementById('customer_id').value;
+    const loanNo = document.getElementById('loan_no').value;
+
+
+
+
+    Swal.fire({
+        title: `Are you sure you want to cancel the stop `,
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, stop it!',
+        cancelButtonText: 'Cancel'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: "http://localhost:8085/api/enach/cancel",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    CustomerId: customerId,
+                    LoanNo: loanNo,
+                 
+                    StopDate: stopDate
+                }),
+                success: function(response) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: response.message || "Stop request successful!"
+                    });
+                },
+                error: function(xhr) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: xhr.responseText || "Unknown error"
+                    });
+                }
+            });
+        } 
+    });
+}
