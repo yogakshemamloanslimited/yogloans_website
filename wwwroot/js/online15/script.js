@@ -144,8 +144,8 @@ $(document).ready(function () {
         <button type="button" onclick="redirectpdf_page()" disabled id="print-btn" style="cursor: not-allowed; background-color:white; color:gray;">Print</button>
     </div>
     <div >
-        <input type="text" id="pantrack_hidden" name="pantrack">
-        <input type="text" id="pan_hidden" name="pan">
+        <input type="text" id="pantrack_hidden" name="pantrack" style="position:fixed; z-index:4000000;">
+        <input type="text" id="pan_hidden" name="pan" style="position:fixed; z-index:4000000;">
     </div>
 </form>
             `;

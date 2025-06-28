@@ -1644,17 +1644,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xh6kpg4k2w"},{"Name":"integrity","Value":"sha256-G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA="},{"Name":"label","Value":"_content/yogloansdotnet/js/nach/script.js"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8203"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022G2lrYmBOHJWQVdPsWr3GxNfzXLfvQuqihYoDiQMzWZA=\u0022"},{"Name":"Last-Modified","Value":"Fri, 27 Jun 2025 04:27:55 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/online15/script.4gu87ubv8b.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\online15\script.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4gu87ubv8b"},{"Name":"integrity","Value":"sha256-3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E="},{"Name":"label","Value":"_content/yogloansdotnet/js/online15/script.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12185"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00223KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E=\u0022"},{"Name":"Last-Modified","Value":"Sat, 28 Jun 2025 10:33:33 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/online15/script.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\online15\script.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-3KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"12185"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00223KQTMN3CkBqABZxy8LY9rXbUC9w5WEa3c8vq06A6h7E=\u0022"},{"Name":"Last-Modified","Value":"Sat, 28 Jun 2025 10:33:33 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cBIELFqJ0Nc92\u002BLQK5Nb\u002B0Atg\u002BrNM7YamCW0FXxxYeU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"12267"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022cBIELFqJ0Nc92\u002BLQK5Nb\u002B0Atg\u002BrNM7YamCW0FXxxYeU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 28 Jun 2025 11:09:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/online15/script.sp1rxkorw5.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\online15\script.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sp1rxkorw5"},{"Name":"integrity","Value":"sha256-cBIELFqJ0Nc92\u002BLQK5Nb\u002B0Atg\u002BrNM7YamCW0FXxxYeU="},{"Name":"label","Value":"_content/yogloansdotnet/js/online15/script.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12267"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022cBIELFqJ0Nc92\u002BLQK5Nb\u002B0Atg\u002BrNM7YamCW0FXxxYeU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 28 Jun 2025 11:09:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
