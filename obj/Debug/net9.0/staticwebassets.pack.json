@@ -113,6 +113,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\Terms&conditions.pdf",
+      "PackagePath": "staticwebassets\\images\\Terms&conditions.pdf"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\crisil.jpg",
       "PackagePath": "staticwebassets\\images\\crisil.jpg"
     },
@@ -1043,6 +1047,14 @@
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\career_a7bac46c-5672-45fc-bb2e-40f84bf00955.png",
       "PackagePath": "staticwebassets\\uploads\\career\\career_a7bac46c-5672-45fc-bb2e-40f84bf00955.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\contact\\1_d5b1141b-ebf0-4d48-8fb0-744404d4f3a9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\contact\\1_d5b1141b-ebf0-4d48-8fb0-744404d4f3a9.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\contact\\show_1ac57d5a-e325-4374-a012-e87697314e97.png",
+      "PackagePath": "staticwebassets\\uploads\\contact\\show_1ac57d5a-e325-4374-a012-e87697314e97.png"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\d64c2a59-efad-4c83-b3c2-41b3419fa497_cdloan.png",
