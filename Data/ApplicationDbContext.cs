@@ -30,6 +30,12 @@ namespace yogloansdotnet.Data
         public DbSet<PolicyModel> Policy {get; set;}
         public DbSet<ServicesModel> Services {get; set;}
         public DbSet<CareerWelcomeModel> Career{get; set;}
+        public DbSet<yogloansdotnet.Models.AboutWelcome> AboutWelcome { get; set; }
+        public DbSet<yogloansdotnet.Models.InvestorsWelcome> InvestorsWelcome { get; set; }
+        public DbSet<yogloansdotnet.Models.OnlineWelcome> OnlineWelcome { get; set; }
+        public DbSet<yogloansdotnet.Models.PolicyWelcome> PolicyWelcome { get; set; }
+         public DbSet<yogloansdotnet.Models.CsrWelcome> CsrWelcome { get; set; }
+          public DbSet<yogloansdotnet.Models.ContactWelcome> ContactWelcome { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

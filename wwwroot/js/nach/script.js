@@ -186,7 +186,7 @@ function cancel(){
 
 
     Swal.fire({
-        title: `Are you sure you want to cancel the stop `,
+        title: `Are you sure you want to cancel `,
         icon: 'question',
         showCancelButton: true,
         confirmButtonText: 'Yes, stop it!',
@@ -207,7 +207,7 @@ function cancel(){
                     Swal.fire({
                         icon: 'success',
                         title: 'Success',
-                        text: response.message || "Stop request successful!"
+                        text: response.message || "cancel request successful!"
                     });
                 },
                 error: function(xhr) {

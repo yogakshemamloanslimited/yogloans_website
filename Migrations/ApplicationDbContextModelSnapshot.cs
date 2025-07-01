@@ -43,6 +43,35 @@ namespace yogloansdotnet.Migrations
                     b.ToTable("AboutContent");
                 });
 
+            modelBuilder.Entity("yogloansdotnet.Models.AboutWelcome", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Image1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mainhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AboutWelcome");
+                });
+
             modelBuilder.Entity("yogloansdotnet.Models.AdminLoginModel", b =>
                 {
                     b.Property<int>("Id")
@@ -139,7 +168,7 @@ namespace yogloansdotnet.Migrations
                     b.ToTable("Apporder");
                 });
 
-            modelBuilder.Entity("yogloansdotnet.Models.CareerWelcome", b =>
+            modelBuilder.Entity("yogloansdotnet.Models.CareerWelcomeModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -166,6 +195,35 @@ namespace yogloansdotnet.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CareerWelcome");
+                });
+
+            modelBuilder.Entity("yogloansdotnet.Models.ContactWelcome", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Image1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mainhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ContactWelcome");
                 });
 
             modelBuilder.Entity("yogloansdotnet.Models.CountsModel", b =>
@@ -208,6 +266,35 @@ namespace yogloansdotnet.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CSR");
+                });
+
+            modelBuilder.Entity("yogloansdotnet.Models.CsrWelcome", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Image1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mainhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CsrWelcome");
                 });
 
             modelBuilder.Entity("yogloansdotnet.Models.DisclosureModel", b =>
@@ -322,6 +409,35 @@ namespace yogloansdotnet.Migrations
                     b.ToTable("Investor");
                 });
 
+            modelBuilder.Entity("yogloansdotnet.Models.InvestorsWelcome", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Image1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mainhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("InvestorsWelcome");
+                });
+
             modelBuilder.Entity("yogloansdotnet.Models.LoanModel", b =>
                 {
                     b.Property<int>("Id")
@@ -393,6 +509,35 @@ namespace yogloansdotnet.Migrations
                     b.ToTable("Offer");
                 });
 
+            modelBuilder.Entity("yogloansdotnet.Models.OnlineWelcome", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Image1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mainhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OnlineWelcome");
+                });
+
             modelBuilder.Entity("yogloansdotnet.Models.PolicyModel", b =>
                 {
                     b.Property<int>("Id")
@@ -412,6 +557,35 @@ namespace yogloansdotnet.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Policy");
+                });
+
+            modelBuilder.Entity("yogloansdotnet.Models.PolicyWelcome", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Image1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mainhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subhead")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PolicyWelcome");
                 });
 
             modelBuilder.Entity("yogloansdotnet.Models.ServicesModel", b =>

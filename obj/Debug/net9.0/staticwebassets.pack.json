@@ -965,12 +965,28 @@
       "PackagePath": "staticwebassets\\uploads\\Csr\\KYCpolicy_ab595566-d6ae-4aa4-b4c1-5d5307d01b7e.pdf"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\show_71b719fa-5539-433d-9b87-7aa17f049fbe.png",
+      "PackagePath": "staticwebassets\\uploads\\Csr\\show_71b719fa-5539-433d-9b87-7aa17f049fbe.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\show_89cf2fb1-18f7-41db-8ad4-35121f29bea3.png",
+      "PackagePath": "staticwebassets\\uploads\\Csr\\show_89cf2fb1-18f7-41db-8ad4-35121f29bea3.png"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Formdts\\co-lending_c44d72bc-af98-4a23-84b3-8283f180ea50.pdf",
       "PackagePath": "staticwebassets\\uploads\\Formdts\\co-lending_c44d72bc-af98-4a23-84b3-8283f180ea50.pdf"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\1_3cfbc3d0-1322-4dc2-b5ac-57020fad05d6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\1_3cfbc3d0-1322-4dc2-b5ac-57020fad05d6.jpg"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\CSRProject2023-24_41893593-fb82-42ce-ad48-cfec4635a023.pdf",
       "PackagePath": "staticwebassets\\uploads\\Policy\\CSRProject2023-24_41893593-fb82-42ce-ad48-cfec4635a023.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\show_740a5289-c886-469d-93fd-5113b5e7fc88.png",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\show_740a5289-c886-469d-93fd-5113b5e7fc88.png"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Services\\locate 1_cbe0398d-1631-4010-a95e-581fc879db2b.png",
@@ -995,6 +1011,14 @@
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\aa512fae-bbd1-45e7-8fb5-de39e804a6b3_Screenshot 2025-05-15 142909.png",
       "PackagePath": "staticwebassets\\uploads\\aa512fae-bbd1-45e7-8fb5-de39e804a6b3_Screenshot 2025-05-15 142909.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\about\\3_f487f863-0f0e-432a-a65d-9b66175f06f3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\about\\3_f487f863-0f0e-432a-a65d-9b66175f06f3.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\about\\show_1bb42582-993f-43a8-9890-cc5587746eb9.png",
+      "PackagePath": "staticwebassets\\uploads\\about\\show_1bb42582-993f-43a8-9890-cc5587746eb9.png"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\ae848e36-4a41-4018-a749-25677b79ad35_vehicleloan.png",
@@ -1071,6 +1095,22 @@
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investor\\image_32910ada-fcfd-4490-9bc3-9e4ea763fa3e.png",
       "PackagePath": "staticwebassets\\uploads\\investor\\image_32910ada-fcfd-4490-9bc3-9e4ea763fa3e.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investors\\1_7b3f1dbe-9f9d-443a-ad9d-071967971b1a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\investors\\1_7b3f1dbe-9f9d-443a-ad9d-071967971b1a.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investors\\show_c8ea1751-3895-417f-b502-9583d64e3d12.png",
+      "PackagePath": "staticwebassets\\uploads\\investors\\show_c8ea1751-3895-417f-b502-9583d64e3d12.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\online\\show_831c0270-aa4d-41d6-b979-1cf416a4f1dd.png",
+      "PackagePath": "staticwebassets\\uploads\\online\\show_831c0270-aa4d-41d6-b979-1cf416a4f1dd.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\online\\show_be56c279-12f8-405e-99e3-24da87e2cd6d.png",
+      "PackagePath": "staticwebassets\\uploads\\online\\show_be56c279-12f8-405e-99e3-24da87e2cd6d.png"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\CSRProject2022-23_63070d3b-ebef-401d-b9ae-5e4729a2b398.pdf",
