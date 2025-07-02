@@ -4,18 +4,18 @@ using yogloansdotnet.Models;
 
 namespace yogloansdotnet.Controllers
 {
-    public class OnlineservicesController : Controller
+    public class OnlinepayController : Controller
     {
-        private readonly ILogger<AboutController> _logger;
+        private readonly ILogger<OnlinepayController> _logger;
 
-        public OnlineservicesController(ILogger<AboutController> logger)
+        public OnlinepayController(ILogger<OnlinepayController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string CustomerId)
         {
-          
+           ViewBag.CustomerId = CustomerId;
             return View();
         }
 
@@ -26,13 +26,6 @@ namespace yogloansdotnet.Controllers
             { 
                 RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier 
             });
-        }
-        [Route("payonline")]
-        public IActionResult Payonline(string CustomerId, string mobile)
-        {
-            ViewBag.CustomerId = CustomerId;
-            ViewBag.mobile = mobile;
-            return View("~/Views/Payonline/index.cshtml", ViewBag);
         }
     }
 }
