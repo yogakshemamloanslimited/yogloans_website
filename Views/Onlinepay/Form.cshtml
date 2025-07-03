@@ -1,0 +1,305 @@
+<section class="form-container">
+    <div class="card">
+        <img src="~/images/icon/user(2).png" alt="User Photo">
+        <div class="card-body">
+            <div class="form-group-text">
+                <p id="customerName"></p>
+                <p id="address"></p>
+            </div>
+
+            <div class="form-group d-flex" >
+                <input type="text" id="loaninput" class="form-control" placeholder="Find Your Loan Here ">
+                <button class="btn btn-success" id="search-loan">  <i class="fa fa-search" id="fa"></i> <div id="load" class="spinner-border text-primary" role="status" style="display:none; width: 1.5rem; height: 1.5rem;">
+                  <span class="visually-hidden">Loading...</span>
+                </div></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- result -->
+
+<section class="form-container" style="padding:30px; align-items:start;">
+
+<section class="form-container" id="result" style="width:50%;">
+
+</section>
+
+<!-- added payments -->
+ <div class="form-group" style="width:50%; padding:25px;" id="tables">
+    <table id="table-fill" class="bill-table" style="width:100%;">
+     
+     <tr>
+        <th>
+            Loan No
+        </th>
+        <th>
+        Product
+        </th>
+        <th>
+        Due Amount
+        </th>
+        <th>
+        Paying
+        </th>
+        <th>
+        Action
+        </th>
+     </tr>
+
+    </table>
+    <div class="form-group" id="total-amount-card">
+        <div class="total-card">
+            <p class="total-label">Total Payment</p>
+            <p id="totalpay" class="total-value"></p>
+             <button class="btn btn-success">Pay Now</button>
+        </div>
+       
+    </div>
+    </div>
+    </section>
+<input type="hidden" id="customerId" value="@ViewBag.CustomerId">
+<input type="hidden" id="mobile" value="@ViewBag.MobileNo">
+<link rel="stylesheet" href="~/css/onlinepay/style.css" asp-append-version="true">
+<!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    $(document).ready(function () {
+        // Hide spinner by default
+        $('#load').hide();
+        var customerId = $('#customerId').val();
+        var mobile = $('#mobile').val();
+        var loanno = $('#loaninput').val();
+
+        // Validate input before making the AJAX call
+        if (!customerId || !mobile) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Missing Info',
+                text: 'Customer ID and Mobile are required.'
+            });
+            return;
+        }
+
+        // Get Customer Info
+        $('#load').show(); // Show spinner before AJAX
+        $.ajax({
+            url: 'http://localhost:8085/api/payonline/get-customer/' + encodeURIComponent(customerId) + '/' + encodeURIComponent(mobile),
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            success: function (response) {
+                $('#load').hide(); // Hide spinner after AJAX
+                if (!response || !response.customer_data || response.customer_data.length === 0) {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'No Data',
+                        text: 'No data found.'
+                    });
+                    return;
+                }
+
+                // Populate fields with response
+                const customer = response.customer_data[0]; // assuming only one relevant record
+                $('#customerName').text(customer.customer_name || '');
+                $('#address').text(
+                    [customer.address, customer.city, customer.district_name]
+                        .filter(Boolean)
+                        .join(', ')
+                );
+            },
+            error: function (xhr, status, error) {
+                $('#load').hide(); // Hide spinner after AJAX
+                console.error('Error:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Failed to fetch customer data. Please check the API.'
+                });
+            }
+        });
+
+        // Loan Search
+       $('#search-loan').click(function () {
+    const loanno = $('#loaninput').val().trim(); // Trim whitespace
+    const customerId = $('#customerId').val(); // Assuming you're getting it from an input or variable
+
+    if (!loanno) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Missing Info',
+            text: 'Loan number is required.'
+        });
+        return;
+    }
+
+    /* if (!customerId) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Missing Info',
+            text: 'Customer ID is required.'
+        });
+        return;
+    }
+ */
+    $('#load').show(); 
+    $('#fa').hide();
+    $('#result').empty(); // Clear previous result
+
+    $.ajax({
+        url: 'http://localhost:8085/api/payonline/get-loan/' + encodeURIComponent(customerId) + '/' + encodeURIComponent(loanno),
+        method: 'GET',
+        success: function (response) {
+            $('#load').hide();
+            $('#fa').show();
+            $('#result').show();
+            $('#result').empty();
+            if (response && response.customer_data && response.customer_data.length > 0) {
+                const customer = response.customer_data[0];
+                let productDisplay = customer.product;
+                if (customer.product === 'VL') {
+                    productDisplay = "Vehicle Loan";
+                }
+                else if (customer.product === 'BL') {
+                    productDisplay = "Business Loan";
+                }
+                 else if (customer.product === 'TL') {
+                    productDisplay = "Term Loan";
+                }
+                else if (customer.product === 'CD') {
+                    productDisplay = "CD Loan";
+                }
+                 else if (customer.product === 'GL') {
+                    productDisplay = "Gold Loan";
+                }
+                $('#result').append(`
+  <div class="card credit-card-style mb-3">
+    <div class="card-body">
+      
+      <div class="cc-number" style="color:black">${customer.loan_no.replace(/(.{4})/g, '$1 ')}</div>
+      <div class="cc-row">
+        <div>
+          <div class="cc-label">Product</div>
+          <div class="cc-value"  style="color:black" id="product">${productDisplay}</div>
+        </div>
+        <div>
+          <div class="cc-label">Due Amount</div>
+          <div class="cc-value"  style="color:black">₹${customer.due_amount}</div>
+        </div>
+      </div>
+      <div class="cc-row">
+        <div>
+          <div class="cc-label">Other Charges</div>
+          <div class="cc-value"  style="color:black">₹${customer.other_charges}</div>
+        </div>
+        <div>
+          <div class="cc-label">Date</div>
+          <div class="cc-value"  style="color:black">${new Date(customer.trans_date).toLocaleDateString()}</div>
+        </div>
+      </div>
+      <div class="form-group" style="display:flex; gap:10px; margin-top:15px;">
+      <input type="text" class="form-control" style="height:50px;" id="amount">
+      <button class="btn btn-success pay-btn" data-loan="${customer.loan_no}" onclick="addpay('${customer.loan_no}', '${productDisplay}', ${customer.due_amount})" style="height:50px;">Add</button>
+      </div>
+    </div>
+  </div>
+`);
+            } else {
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Not Found',
+                    text: 'No loan data found.'
+                });
+            }
+        },
+        error: function (xhr, status, error) {
+            $('#load').hide();
+            $('#fa').show();
+            console.error('Loan fetch error:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'No Data Found Try Again'
+            });
+        }
+    });
+});
+
+/* $('#result').on('click', '.pay-btn', function() {
+    const loanNo = $(this).data('loan');
+    Swal.fire({
+        icon: 'info',
+        title: 'Pay Now',
+        text: `Proceed to payment for Loan No: ${loanNo}`,
+        // You can add more logic here to redirect or open a payment modal
+    });
+}); */
+  
+    });
+
+      function addpay(no, product, due_amount) {
+        // Check if the loan number already exists in the table
+        let exists = false;
+        $('#table-fill tr').each(function() {
+            // The first cell in each row contains the loan number
+            let loanNo = $(this).find('td:first').text();
+            if (loanNo === no) {
+                exists = true;
+                return false; // break loop
+            }
+        });
+
+        if (exists) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Duplicate Entry',
+                text: 'This loan number is already added.'
+            });
+            return;
+        }
+
+        $('#table-fill').show();
+        var amount = $('#amount').val();
+        $('#table-fill').append(
+            `
+            <tr>
+                <td>${no}</td>
+                <td>${product}</td>
+                <td>${due_amount}</td>
+                <td class="amount-pay">${amount}</td>
+                <td><button class="btn btn-danger btn-sm remove-row">Remove</button></td>
+            </tr>
+            `
+        );
+        updateTotalPay();
+    }
+
+    // Remove row on button click
+    $('#table-fill').on('click', '.remove-row', function () {
+        $(this).closest('tr').remove();
+        if ($('#table-fill tr').length === 1) {
+            $('#table-fill').hide();
+        }
+        updateTotalPay();
+    });
+
+
+    $(document).ready(function () {
+        if ($('#table-fill tr').length === 1) {
+            $('#table-fill').hide();
+        }
+    });
+
+    function updateTotalPay() {
+        let total = 0;
+        $('.amount-pay').each(function() {
+            let val = parseFloat($(this).text());
+            if (!isNaN(val)) {
+                total += val;
+            }
+        });
+        $('#totalpay').text(total.toFixed(2));
+    }
+</script>

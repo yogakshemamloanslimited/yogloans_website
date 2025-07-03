@@ -13,9 +13,10 @@ namespace yogloansdotnet.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(string CustomerId)
+        public IActionResult Index(string CustomerId, string mobile)
         {
            ViewBag.CustomerId = CustomerId;
+           ViewBag.MobileNo = mobile;
             return View();
         }
 

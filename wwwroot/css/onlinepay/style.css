@@ -1,0 +1,268 @@
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    background: #f4f6fb;
+}
+
+.card{
+    width: 30%;
+  /*   min-height: 180px; */
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column t;
+    align-items: center;
+    padding: 24px 20px 20px 20px;
+    position: relative;
+}
+
+.card img{
+    width: 64px;
+    height: 64px;
+    /* border-radius: 50%; */
+    object-fit: cover;
+    margin-bottom: 12px;
+    filter: invert(.7);
+   /*  filter: none; */
+ /*    border: 2px solid #e0e0e0; */
+   /*  background: #f9f9f9; */
+}
+
+.card-body {
+    width: 100%;
+   /*  display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0; */
+}
+
+.form-group.d-flex {
+    display: flex;
+
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px;
+}
+.form-group.d-flex img{
+    filter: invert(1);
+    width: 15px;
+    height: 15px;
+}
+.form-group.d-flex button{
+    display: flex;
+  /*   gap: 15px; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border-radius: 50%; */
+    height: 50px;
+    width: 50px;
+    color: white;
+}
+.form-group.d-flex input{
+    height: 50px;
+}
+.form-group-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.card p {
+    color: #222;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    border: none;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.card #address {
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    border: none;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.footer-section {
+    margin-top: 0px;
+}
+/* .btn{
+    background-color: rgb(77, 236, 77);
+} */
+.text-primary {
+    color: white !important;
+}
+
+.credit-card-style {
+/*     background: linear-gradient(135deg, #232526 0%, #414345 100%); */
+background-color: white;
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    padding: 28px 24px 24px 24px;
+
+
+    position: relative;
+    overflow: hidden;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+}
+.cc-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.cc-chip {
+    width: 40px;
+    height: 28px;
+    border-radius: 6px;
+    background: #e0e0e0;
+    object-fit: cover;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.cc-brand {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffd700;
+}
+.cc-number {
+    font-size: 1.2rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.cc-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.cc-label {
+    font-size: 0.8rem;
+    /* color: #bdbdbd; */
+    color: black;
+}
+.cc-value {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+.credit-card-style .btn-success {
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+/*     margin-top: 12px;
+    width: 100%; */
+}
+
+#result {
+    display: flex;
+   /*  width: 100%; */
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Default layout: 3 columns */
+/* #result:has(.card:nth-child(2)) {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* If only one .card, center it */
+
+
+#result .card {
+    width: 100%;
+    max-width: 450px;
+ /* optional, to avoid stretching too wide */
+}
+.bill-table {
+ /*    width: 100%; */
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1rem;
+    display: none;
+    
+}
+
+.bill-table th, .bill-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.bill-table th {
+    background: #f7f7f7;
+    color: #333;
+    font-weight: 600;
+}
+
+.bill-table tr:last-child td {
+    border-bottom: none;
+}
+
+.bill-table tr:hover {
+    background: #f0f8ff;
+    transition: background 0.2s;
+}
+.bill-table .total-row td {
+    font-weight: bold;
+    background: #e6f7ff;
+    color: #007bff;
+}
+
+#total-amount-card {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+.total-card {
+    background: #f7faff;
+    border: 1px solid #e0e7ef;
+    border-radius: 10px;
+    padding: 1.5rem 2.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    min-width: 250px;
+    text-align: left;
+}
+
+.total-label {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.total-value {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+#tables{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}

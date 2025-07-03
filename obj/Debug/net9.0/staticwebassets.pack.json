@@ -101,6 +101,10 @@
       "PackagePath": "staticwebassets\\css\\online\\services.css"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\onlinepay\\style.css",
+      "PackagePath": "staticwebassets\\css\\onlinepay\\style.css"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\policy\\policy.css",
       "PackagePath": "staticwebassets\\css\\policy\\policy.css"
     },
@@ -245,6 +249,10 @@
       "PackagePath": "staticwebassets\\images\\icon\\printer.png"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\search.png",
+      "PackagePath": "staticwebassets\\images\\icon\\search.png"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\seen.png",
       "PackagePath": "staticwebassets\\images\\icon\\seen.png"
     },
@@ -267,6 +275,10 @@
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\telephone.png",
       "PackagePath": "staticwebassets\\images\\icon\\telephone.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\user(2).png",
+      "PackagePath": "staticwebassets\\images\\icon\\user(2).png"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\user.png",

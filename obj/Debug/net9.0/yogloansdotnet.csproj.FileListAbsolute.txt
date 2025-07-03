@@ -382,3 +382,4 @@ D:\yogloansdotnet - Copy\bin\Debug\net9.0\yogloansdotnet.runtimeconfig.json
 D:\yogloansdotnet - Copy\bin\Debug\net9.0\yogloansdotnet.pdb
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.genruntimeconfig.cache
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\ref\yogloansdotnet.dll
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\lwabdmqn4b-sjo30402fw.gz

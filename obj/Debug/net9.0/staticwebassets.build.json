@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kWW4je0F5Sv40LBziyzaDVe3Ssn9eTNiwMJmgxkpXrs=",
+  "Hash": "PkE9I5hOjpUfc7iU/0r0aWXm3dnXvsxAp/gA5HV9bZA=",
   "Source": "yogloansdotnet",
   "BasePath": "_content/yogloansdotnet",
   "Mode": "Default",
@@ -1277,6 +1277,27 @@
       "OriginalItemSpec": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
+      "Identity": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\lwabdmqn4b-sjo30402fw.gz",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "css/onlinepay/style#[.{fingerprint=sjo30402fw}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\onlinepay\\style.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "vgjpr2sd67",
+      "Integrity": "MY6zuV0A4yTrw+nBWid+yHHdYTt3dTQmXRjk4ZvH28M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\onlinepay\\style.css"
+    },
+    {
       "Identity": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\mfcj1t9qvc-mbp8agbaol.gz",
       "SourceId": "yogloansdotnet",
       "SourceType": "Discovered",
@@ -2537,6 +2558,27 @@
       "OriginalItemSpec": "wwwroot\\css\\online15g\\form.css"
     },
     {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\onlinepay\\style.css",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "css/onlinepay/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sjo30402fw",
+      "Integrity": "+FAHLEYf9FaiITey5SUGTnp/ljEOTBQuz3U8RTaXBCk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\onlinepay\\style.css"
+    },
+    {
       "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\policy\\policy.css",
       "SourceId": "yogloansdotnet",
       "SourceType": "Discovered",
@@ -3272,6 +3314,27 @@
       "OriginalItemSpec": "wwwroot\\images\\icon\\printer.png"
     },
     {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\search.png",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "images/icon/search#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8prjxzlwoa",
+      "Integrity": "/I8kZthkMmgHeC6HSaXsffybqElCgKf1ZYqZDB5TnJo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icon\\search.png"
+    },
+    {
       "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\seen.png",
       "SourceId": "yogloansdotnet",
       "SourceType": "Discovered",
@@ -3417,6 +3480,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\icon\\user.png"
+    },
+    {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\user(2).png",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "images/icon/user(2)#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qovunzbetu",
+      "Integrity": "FvEFKVspfo7rEfX5Qz7dgBe3SJuiVYElAeH179HCmLI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icon\\user(2).png"
     },
     {
       "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\logo.png",
@@ -15319,6 +15403,304 @@
       ]
     },
     {
+      "Route": "css/onlinepay/style.css",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\lwabdmqn4b-sjo30402fw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000686341798"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1456"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MY6zuV0A4yTrw+nBWid+yHHdYTt3dTQmXRjk4ZvH28M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Jul 2025 05:53:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"+FAHLEYf9FaiITey5SUGTnp/ljEOTBQuz3U8RTaXBCk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+FAHLEYf9FaiITey5SUGTnp/ljEOTBQuz3U8RTaXBCk="
+        }
+      ]
+    },
+    {
+      "Route": "css/onlinepay/style.css",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\onlinepay\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5247"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+FAHLEYf9FaiITey5SUGTnp/ljEOTBQuz3U8RTaXBCk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Jul 2025 05:53:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+FAHLEYf9FaiITey5SUGTnp/ljEOTBQuz3U8RTaXBCk="
+        }
+      ]
+    },
+    {
+      "Route": "css/onlinepay/style.css.gz",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\lwabdmqn4b-sjo30402fw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1456"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MY6zuV0A4yTrw+nBWid+yHHdYTt3dTQmXRjk4ZvH28M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Jul 2025 05:53:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MY6zuV0A4yTrw+nBWid+yHHdYTt3dTQmXRjk4ZvH28M="
+        }
+      ]
+    },
+    {
+      "Route": "css/onlinepay/style.sjo30402fw.css",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\lwabdmqn4b-sjo30402fw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000686341798"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1456"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MY6zuV0A4yTrw+nBWid+yHHdYTt3dTQmXRjk4ZvH28M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Jul 2025 05:53:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"+FAHLEYf9FaiITey5SUGTnp/ljEOTBQuz3U8RTaXBCk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sjo30402fw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/onlinepay/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+FAHLEYf9FaiITey5SUGTnp/ljEOTBQuz3U8RTaXBCk="
+        }
+      ]
+    },
+    {
+      "Route": "css/onlinepay/style.sjo30402fw.css",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\onlinepay\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5247"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+FAHLEYf9FaiITey5SUGTnp/ljEOTBQuz3U8RTaXBCk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Jul 2025 05:53:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sjo30402fw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/onlinepay/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+FAHLEYf9FaiITey5SUGTnp/ljEOTBQuz3U8RTaXBCk="
+        }
+      ]
+    },
+    {
+      "Route": "css/onlinepay/style.sjo30402fw.css.gz",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\lwabdmqn4b-sjo30402fw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1456"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MY6zuV0A4yTrw+nBWid+yHHdYTt3dTQmXRjk4ZvH28M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Jul 2025 05:53:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sjo30402fw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/onlinepay/style.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MY6zuV0A4yTrw+nBWid+yHHdYTt3dTQmXRjk4ZvH28M="
+        }
+      ]
+    },
+    {
       "Route": "css/policy/policy.9isj0u039q.css",
       "AssetFile": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\1k4dhw95d1-9isj0u039q.gz",
       "Selectors": [
@@ -18837,6 +19219,88 @@
       ]
     },
     {
+      "Route": "images/icon/search.8prjxzlwoa.png",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\search.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8350"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/I8kZthkMmgHeC6HSaXsffybqElCgKf1ZYqZDB5TnJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Jul 2025 05:11:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8prjxzlwoa"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icon/search.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/I8kZthkMmgHeC6HSaXsffybqElCgKf1ZYqZDB5TnJo="
+        }
+      ]
+    },
+    {
+      "Route": "images/icon/search.png",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\search.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8350"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/I8kZthkMmgHeC6HSaXsffybqElCgKf1ZYqZDB5TnJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Jul 2025 05:11:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/I8kZthkMmgHeC6HSaXsffybqElCgKf1ZYqZDB5TnJo="
+        }
+      ]
+    },
+    {
       "Route": "images/icon/seen.c4e7f0o0ys.png",
       "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\seen.png",
       "Selectors": [],
@@ -19623,6 +20087,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-rzWggT0mspgA/Ktjr/AO/mIbQUoqzs6M9ZHvl176w1w="
+        }
+      ]
+    },
+    {
+      "Route": "images/icon/user(2).png",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\user(2).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FvEFKVspfo7rEfX5Qz7dgBe3SJuiVYElAeH179HCmLI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Jul 2025 04:20:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FvEFKVspfo7rEfX5Qz7dgBe3SJuiVYElAeH179HCmLI="
+        }
+      ]
+    },
+    {
+      "Route": "images/icon/user(2).qovunzbetu.png",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\user(2).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FvEFKVspfo7rEfX5Qz7dgBe3SJuiVYElAeH179HCmLI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Jul 2025 04:20:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qovunzbetu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icon/user(2).png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FvEFKVspfo7rEfX5Qz7dgBe3SJuiVYElAeH179HCmLI="
         }
       ]
     },
