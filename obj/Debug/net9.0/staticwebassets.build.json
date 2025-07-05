@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PkE9I5hOjpUfc7iU/0r0aWXm3dnXvsxAp/gA5HV9bZA=",
+  "Hash": "fWxKs2/axUC7MngYXpJGM9TDmXUd20HJOc80/94f2N8=",
   "Source": "yogloansdotnet",
   "BasePath": "_content/yogloansdotnet",
   "Mode": "Default",
@@ -7365,6 +7365,195 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\career\\career_a7bac46c-5672-45fc-bb2e-40f84bf00955.png"
+    },
+    {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d.pdf",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "uploads/career/doc/Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "whcnbmbmli",
+      "Integrity": "BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\career\\doc\\Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d.pdf"
+    },
+    {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe.pdf",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "uploads/career/doc/Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "whcnbmbmli",
+      "Integrity": "BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\career\\doc\\Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe.pdf"
+    },
+    {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b.pdf",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "uploads/career/doc/Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "whcnbmbmli",
+      "Integrity": "BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\career\\doc\\Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b.pdf"
+    },
+    {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b.pdf",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "uploads/career/doc/Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "go45e8k0qf",
+      "Integrity": "8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\career\\doc\\Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b.pdf"
+    },
+    {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece.pdf",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "uploads/career/doc/Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "go45e8k0qf",
+      "Integrity": "8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\career\\doc\\Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece.pdf"
+    },
+    {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83.pdf",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "uploads/career/doc/Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "go45e8k0qf",
+      "Integrity": "8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\career\\doc\\Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83.pdf"
+    },
+    {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37.pdf",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "uploads/career/doc/Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2qwhwr4f3x",
+      "Integrity": "FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\career\\doc\\Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37.pdf"
+    },
+    {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19.pdf",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "uploads/career/doc/Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2qwhwr4f3x",
+      "Integrity": "FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\career\\doc\\Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19.pdf"
+    },
+    {
+      "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.pdf",
+      "SourceId": "yogloansdotnet",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\yogloansdotnet - Copy\\wwwroot\\",
+      "BasePath": "_content/yogloansdotnet",
+      "RelativePath": "uploads/career/doc/Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2qwhwr4f3x",
+      "Integrity": "FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\career\\doc\\Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.pdf"
     },
     {
       "Identity": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\contact\\1_d5b1141b-ebf0-4d48-8fb0-744404d4f3a9.jpg",
@@ -49081,6 +49270,744 @@
         {
           "Name": "integrity",
           "Value": "sha256-+pIT2Lfh4P3XmSPh7uAAFZIRQjaHmlP2l9xKIDpvBQM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1731149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Jul 2025 04:19:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d.whcnbmbmli.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1731149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Jul 2025 04:19:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "whcnbmbmli"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/career/doc/Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1731149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:45:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe.whcnbmbmli.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1731149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:45:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "whcnbmbmli"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/career/doc/Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1731149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Jul 2025 04:20:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b.whcnbmbmli.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1731149"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Jul 2025 04:20:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "whcnbmbmli"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/career/doc/Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BNIQfhF8w9ZKl2mrRNiYf5/fr2G/ZKqqKW755jcR3EA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b.go45e8k0qf.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:46:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "go45e8k0qf"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/career/doc/Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:46:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece.go45e8k0qf.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:41:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "go45e8k0qf"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/career/doc/Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:41:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83.go45e8k0qf.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Jul 2025 06:42:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "go45e8k0qf"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/career/doc/Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Jul 2025 06:42:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8NSSYu2DzOIE9X9YxmujEdvUMWHt+W7+QO+3j73ugMc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37.2qwhwr4f3x.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:39:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2qwhwr4f3x"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/career/doc/Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:39:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19.2qwhwr4f3x.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2qwhwr4f3x"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/career/doc/Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:40:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.2qwhwr4f3x.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:40:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2qwhwr4f3x"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/career/doc/Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/career/doc/Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.pdf",
+      "AssetFile": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2110310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 11:40:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FtRmHgirDHr6xMEhAeak1tDHYp6J0oaowzSdDX5EQCU="
         }
       ]
     },

@@ -25,22 +25,24 @@ namespace yogloansdotnet.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
         
-            public IActionResult Index()
+                public async Task<IActionResult> Index()
         {
-            return View("Views/Admin/Career/Index.cshtml");
+                 var career = await _context.Career.ToListAsync();
+            return View("Views/Admin/Career/Index.cshtml" ,career);
         }
 
          [Route("departments")]
-        
-        public IActionResult departments(){
-            return View("Views/Admin/Career/departments.cshtml");
+        public async Task<IActionResult> departments()
+        {
+             var department = await _context.Departments.ToListAsync();
+            return View("Views/Admin/Career/departments.cshtml",department);
         }
         
-         [Route("designation")]
+       /*   [Route("designation")]
         
         public IActionResult designation(){
             return View("Views/Admin/Career/designation.cshtml");
-        }
+        } */
       [Route("welcome")]
 public IActionResult welcomes() {
     var data = _context.Career.ToList(); // Fetch CareerWelcomeModel entries
@@ -169,4 +171,8 @@ public IActionResult welcomes() {
         }
         
 
-}}
+}
+
+    
+
+}

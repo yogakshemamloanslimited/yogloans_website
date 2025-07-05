@@ -1,5 +1,5 @@
 
-
+@model List<yogloansdotnet.Models.DepartmentModel>
 @{
     ViewData["Title"] = "Admin Dashboard";
     Layout = "~/Views/admin/Shared/_Layout.cshtml";
@@ -19,8 +19,8 @@
                 <div class="card-body">
                     <h4 class="card-title">Departments Management</h4>
                     <div class="col-12" style="display:flex; justify-content: end; gap:20px;">
-                        <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#department-add">Add Departments +</button>
-                        <button type="button" class="btn btn-primary" onclick="window.location.href='/admin/Careeradmin/designation'">Add Designation +</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#department-add">Add Departments +</button>
+<!--                         <button type="button" class="btn btn-primary" onclick="window.location.href='/admin/Careeradmin/designation'">Add Designation +</button> -->
                         <button type="button" class="btn btn-primary" onclick="window.location.href='/admin/Careeradmin'">Add Career +</button>
 <!--                         <button type="button" class="btn btn-primary" onclick="window.location.href='/admin/homeloan/offer'">Add Offer +</button> -->
                     </div>
@@ -36,7 +36,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            
+                             @foreach(var department in Model)
+                                {
+                                    <tr>
+                                        <td></td>
+                                        <td>@department.Name</td>
+                                        <td>
+                                          @department.Discription
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-sm btn-info" onclick="editCsr(@department.Id, '@department.Name','@department.Discription')">Edit</button>
+                                            <button class="btn btn-sm btn-danger" onclick="deleteCsr(@department.Id)">Delete</button>
+                                        </td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -49,7 +62,7 @@
 @* Modal *@
 <div id="department-add" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
-        <form class="modal-content" method="post" action="/admin/Csradmin/add-csr" enctype="multipart/form-data" id="csr">
+        <form class="modal-content" method="post" action="/admin/Department/add-department" enctype="multipart/form-data" id="csr">
         <input type="hidden" id="id" name="id">
             <div class="modal-header">
                 <h5 class="modal-title">Add Department </h5>
@@ -78,10 +91,11 @@
                             <div class="col-12" style="margin-top: 20px;">
                                 <div class="col-12" >
                                    <div class="col-12" style="margin-bottom:15px;">
-                                        <input type="text" name="Title" class="form-control" placeholder="Title" required>
+                                        <input type="text" name="name" class="form-control" placeholder="Name The Department" required>
                                       
                                     </div>
-                                        <input type="file" name="pdf" id="gold-upload-icon" accept="application/pdf" class="form-control" required>
+                                      <input type="text" name="Discription" class="form-control" placeholder="Add Discription" required>
+                                      
       
                                     
                                 </div>
@@ -115,33 +129,33 @@
             });
         });
 
-        function editCsr(id, title) {
+        function editCsr(id, name , description) {
             $('#id').val(id);
-            $('input[name="Title"]').val(title);
-            $('input[name="pdf"]').removeAttr('required');
-            $('.modal-title').text('Edit CSR');
+            $('input[name="name"]').val(name);
+            $('input[name="Discription"]').val(description);
+            $('.modal-title').text('Edit Department');
             $('button[type="submit"]').text('Update');
-            $('#myModal').modal('show');
+            $('#department-add').modal('show');
         }
 
         function deleteCsr(id) {
-            if (confirm('Are you sure you want to delete this CSR?')) {
+            if (confirm('Are you sure you want to delete this Department?')) {
                 $.ajax({
-                    url: '/admin/Csradmin/delete/' + id,
+                    url: '/admin/Department/delete/' + id,
                     type: 'POST',
                     headers: {
                         'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
                     },
                     success: function(result) {
                         if (result.success) {
-                            alert('CSR deleted successfully');
+                            alert('Department deleted successfully');
                             location.reload();
                         } else {
-                            alert('Error deleting CSR: ' + result.message);
+                            alert('Error deleting Department: ' + result.message);
                         }
                     },
                     error: function(xhr, status, error) {
-                        alert('Error deleting CSR: ' + error);
+                        alert('Error deleting Department: ' + error);
                     }
                 });
             }
@@ -155,7 +169,7 @@
                 var isUpdate = $('#id').val() !== '';
                 
                 $.ajax({
-                    url: '/admin/Csradmin/add-csr',
+                    url: '/admin/Department/add-department',
                     type: 'POST',
                     data: formData,
                     processData: false,
@@ -165,7 +179,7 @@
                     },
                     success: function(response) {
                         if (response.success) {
-                            alert(isUpdate ? 'CSR updated successfully' : 'CSR added successfully');
+                            alert(isUpdate ? 'Department updated successfully' : 'Department added successfully');
                             location.reload();
                         } else {
                             alert('Error: ' + response.message);
@@ -178,11 +192,11 @@
             });
 
             // Reset form when modal is closed
-            $('#myModal').on('hidden.bs.modal', function () {
+            $('#department-add').on('hidden.bs.modal', function () {
                 $('#csr')[0].reset();
                 $('#id').val('');
-                $('input[name="pdf"]').attr('required', 'required');
-                $('.modal-title').text('Add CSR');
+                $('input[name="name"]').attr('required', 'required');
+                $('.modal-title').text('Add Department');
                 $('button[type="submit"]').text('Create');
             });
         });
