@@ -372,8 +372,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>i3y4luciwf</Fingerprint>
-      <Integrity>Ys1hgkHO+8yJzZRiadRtFK4Hxp6HCVvkw+Pmn0JB0Uw=</Integrity>
+      <Fingerprint>pp2mlhgb2l</Fingerprint>
+      <Integrity>PZDS9PG0+uEhjAjeT8Za2rOpoUrZTgQbzKYHdW6oFXA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\investor\list.css'))</OriginalItemSpec>
@@ -2502,6 +2502,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\branch\branch.js'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\investor\investors.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>yogloansdotnet</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/yogloansdotnet</BasePath>
+      <RelativePath>js/investor/investors.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>m5tqvotluv</Fingerprint>
+      <Integrity>GgV3STa5/CU5jrnOSf+zEmQTUsmBbV0iAI8K+ZSRyZM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\investor\investors.js'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\jaquery.js'))">
       <SourceType>Package</SourceType>
       <SourceId>yogloansdotnet</SourceId>
@@ -4500,6 +4518,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ae848e36-4a41-4018-a749-25677b79ad35_vehicleloan.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Announcements\Form15G-3_862dcb76-66f1-402c-adde-a588af1f2907.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>yogloansdotnet</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/yogloansdotnet</BasePath>
+      <RelativePath>uploads/Announcements/Form15G-3_862dcb76-66f1-402c-adde-a588af1f2907.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7keqxirq1f</Fingerprint>
+      <Integrity>ybo5NnXW6Oj5BnEc2SoEEtncOkElsVKdvA45g7cIT+4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Announcements\Form15G-3_862dcb76-66f1-402c-adde-a588af1f2907.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Apporder\CSRCommittee_44fd1808-d6cb-47a9-9157-fd1de50bdeb1.pdf'))">
       <SourceType>Package</SourceType>
       <SourceId>yogloansdotnet</SourceId>
@@ -5238,59 +5274,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Formdts\co-lending_c44d72bc-af98-4a23-84b3-8283f180ea50.pdf'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\investor\front-view-arrangement-economy-elements 1(1)_13408648-0d2e-4c67-940e-447c57a20c69.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\investor\1320732_a2630bf4-43bb-45b9-95ee-b95a5c519ca9.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>yogloansdotnet</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/yogloansdotnet</BasePath>
-      <RelativePath>uploads/investor/front-view-arrangement-economy-elements 1(1)_13408648-0d2e-4c67-940e-447c57a20c69.png</RelativePath>
+      <RelativePath>uploads/investor/1320732_a2630bf4-43bb-45b9-95ee-b95a5c519ca9.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>bshbj2isld</Fingerprint>
-      <Integrity>y4nL5uC7XNAhemxb7PGV4muhAOUPoFUcjglpi3jxtts=</Integrity>
+      <Fingerprint>txbyragy9v</Fingerprint>
+      <Integrity>D6yudF+jUhrLKdwtB6w5BjNWGVMQvbFxXoroV36z9oM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\investor\front-view-arrangement-economy-elements 1(1)_13408648-0d2e-4c67-940e-447c57a20c69.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\investor\image_32910ada-fcfd-4490-9bc3-9e4ea763fa3e.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>yogloansdotnet</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/yogloansdotnet</BasePath>
-      <RelativePath>uploads/investor/image_32910ada-fcfd-4490-9bc3-9e4ea763fa3e.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>m7n3e2l0s8</Fingerprint>
-      <Integrity>Qv6GepdQvtx9KKD8Q0aJ2mhA6gQ04N4ysW/L+MqhnJU=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\investor\image_32910ada-fcfd-4490-9bc3-9e4ea763fa3e.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\investor\Straw Hat pirates_17d72596-8db0-4bd8-b6e3-f621b5710d42.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>yogloansdotnet</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/yogloansdotnet</BasePath>
-      <RelativePath>uploads/investor/Straw Hat pirates_17d72596-8db0-4bd8-b6e3-f621b5710d42.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>m2xwuvokto</Fingerprint>
-      <Integrity>klZ6cp4pQHyBfr4ihrkCXALuKW70tSBRNu3fbHnWzsA=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\investor\Straw Hat pirates_17d72596-8db0-4bd8-b6e3-f621b5710d42.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\investor\1320732_a2630bf4-43bb-45b9-95ee-b95a5c519ca9.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\investors\investors_5612fecc-8c85-48f1-8c4f-09871902b78c.png'))">
       <SourceType>Package</SourceType>

@@ -561,6 +561,10 @@
       "PackagePath": "staticwebassets\\js\\branch\\branch.js"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\investor\\investors.js",
+      "PackagePath": "staticwebassets\\js\\investor\\investors.js"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\jaquery.js",
       "PackagePath": "staticwebassets\\js\\jaquery.js"
     },
@@ -977,6 +981,10 @@
       "PackagePath": "staticwebassets\\uploads\\9d45ed2c-2103-404a-8cc4-bdddb09b84de_gold2.png"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Announcements\\Form15G-3_862dcb76-66f1-402c-adde-a588af1f2907.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Announcements\\Form15G-3_862dcb76-66f1-402c-adde-a588af1f2907.pdf"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Apporder\\CSRCommittee_44fd1808-d6cb-47a9-9157-fd1de50bdeb1.pdf",
       "PackagePath": "staticwebassets\\uploads\\Apporder\\CSRCommittee_44fd1808-d6cb-47a9-9157-fd1de50bdeb1.pdf"
     },
@@ -1209,16 +1217,8 @@
       "PackagePath": "staticwebassets\\uploads\\f8a9b0fb-0a63-4106-ba2b-7b93068f2360_cdloan.png"
     },
     {
-      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investor\\Straw Hat pirates_17d72596-8db0-4bd8-b6e3-f621b5710d42.jpg",
-      "PackagePath": "staticwebassets\\uploads\\investor\\Straw Hat pirates_17d72596-8db0-4bd8-b6e3-f621b5710d42.jpg"
-    },
-    {
-      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investor\\front-view-arrangement-economy-elements 1(1)_13408648-0d2e-4c67-940e-447c57a20c69.png",
-      "PackagePath": "staticwebassets\\uploads\\investor\\front-view-arrangement-economy-elements 1(1)_13408648-0d2e-4c67-940e-447c57a20c69.png"
-    },
-    {
-      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investor\\image_32910ada-fcfd-4490-9bc3-9e4ea763fa3e.png",
-      "PackagePath": "staticwebassets\\uploads\\investor\\image_32910ada-fcfd-4490-9bc3-9e4ea763fa3e.png"
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investor\\1320732_a2630bf4-43bb-45b9-95ee-b95a5c519ca9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\investor\\1320732_a2630bf4-43bb-45b9-95ee-b95a5c519ca9.jpg"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investors\\Investors_dbed98a8-fad5-4caf-8637-b90ca0b4704a.png",

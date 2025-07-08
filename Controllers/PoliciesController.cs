@@ -24,6 +24,15 @@ namespace yogloansdotnet.Controllers
             return View(Policy);
         }
 
+
+          [HttpGet]
+[Route("policy")]
+public async Task<IActionResult> Policy()
+{
+    var Policy = await _context.Policy.ToListAsync();
+    return Json(Policy); 
+}
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

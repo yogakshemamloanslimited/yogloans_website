@@ -25,7 +25,14 @@ namespace yogloansdotnet.Controllers
               var csr = await _context.CsrWelcome.ToListAsync();
             return View(csr);
         }
-
+        
+          [HttpGet]
+[Route("csr-detials")]
+public async Task<IActionResult> Csr()
+{
+    var Csr = await _context.Csr.ToListAsync();
+    return Json(Csr); 
+}
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

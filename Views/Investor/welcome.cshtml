@@ -1,7 +1,8 @@
-@model List<yogloansdotnet.Models.InvestorsWelcome>
+@model yogloansdotnet.Models.InvestoreViewModel
+
 
 <section class="welcome-container"
-    style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
+    style="background-image: url(@(Model.InvestorsWelcome.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
         <h1>Investors
         </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
         <div class="button">
@@ -13,7 +14,7 @@
 
     <!-- Mobile Section (Image2) -->
 <section class="welcome-container"
-    style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
+    style="background-image: url(@(Model.InvestorsWelcome.FirstOrDefault()?.Image1 ?? ""))" id="welcome-mobile">
    <h1>Investors
         </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
         <div class="button">

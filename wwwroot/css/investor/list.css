@@ -327,11 +327,13 @@
 }
 .investors-conatct.active 
 {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .investors-conatct-content {
-    width: 70%;
+/*     width: 70%; */
     /* Match the width of the '.other' section */
     display: flex;
     justify-content: center;
@@ -339,7 +341,7 @@
 }
 
 .investors-conatct-content .card {
-    width: 400px;
+    width: 100%;
     /* Set a reasonable width for the card */
     background-color: white;
     border-radius: 8px;

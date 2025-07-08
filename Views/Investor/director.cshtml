@@ -1,4 +1,4 @@
-  
+  @model yogloansdotnet.Models.InvestoreViewModel  
 <link rel="stylesheet" href="~/css/about/director.css" asp-append-version="true">
    <div class="customer-content" style="position: relative; flex-direction: column; background-color: white;  align-items: start; margin-top: 50px;">
         <div class="sec1" style="position: relative; justify-content: start;">
@@ -7,190 +7,27 @@
         </div>
      
         <div id="owl-demo2" class="owl-carousel">
+           @foreach (var director in Model.Directors)
+{
             <div class="allitem">
-                <div class="blog-allof" style="border: none ; background-image: url(images/directors/ramachandran.jpg);" id="director" >
+                <div class="blog-allof" style="border: none ; background-image: url('@director.Profile');" id="director" >
                     <div class="view">
-                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-eye" onclick="director(@director.Id)"></i>
                     </div>
                     <div class="name" >
                         <p>
-                          Ramachandran Ottapathu
+                         @director.Name
                         </p>
                         <p>
-                            Chairman 
+                           @director.Post
                         </p>
                     </div>
                 </div>
-               <!--  <div class="blog-allof">
-                    <div class="name" style="display: flex;">
-                        <p>Sarah</p>
-                        <img src="about-3-1.png" alt="">
-                    </div>
-                    <div class="discretion-blog">
-                        <p id="message">
-                            The loan process was smooth and quick. Very professional service!
-                        </p>
-                    </div>
-                </div> -->
+             
             </div>
-            <div class="allitem">
-                 <div class="blog-allof" style="border: none; background-image: url(images/directors/unnikrishnan.jpg);" id="director" >
-                    <div class="view">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                            Unnikrishnan I
-                        </p>
-                        <p>
-                            Managing Director 
-                        </p>
-                    </div>
-                    </div>
-                <!-- <div class="blog-allof">
-                    <div class="name" style="display: flex;">
-                        <p>Michael</p>
-                        <img src="about-3-1.png" alt="">
-                    </div>
-                    <div class="discretion-blog">
-                        <p id="message">
-                            Excellent customer support and transparent process. Highly recommended!
-                        </p>
-                    </div>
-                </div> -->
-            </div>
-            <div class="allitem">
-                <div class="blog-allof" style="border: none; background-image: url(images/directors/santosh.jpg);" id="director">
-                    <div class="view">
-                        <i class="fas fa-eye" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                            Santosh Kurup
-                        </p>
-                        <p>
-                            Independent Director 
-                        </p>
-                    </div>
-                    </div>
-               <!--  <div class="blog-allof">
-                    <div class="name" style="display: flex;">
-                        <p>Emma</p>
-                        <img src="about-3-1.png" alt="">
-                    </div>
-                    <div class="discretion-blog">
-                        <p id="message">
-                            Got my loan approved within 24 hours. Amazing experience!
-                        </p>
-                    </div>
-                </div> -->
-            </div>
-
-            <div class="allitem">
-                <div class="blog-allof" style="border: none; background-image: url(images/directors/vijayan.jpg);" id="director" >
-                    <div class="view">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                            N D Vijayan
-                        </p>
-                        <p>
-                            Non-Executive Director 
-                        </p>
-                    </div>
-                    </div>
-               <!--  <div class="blog-allof">
-                    <div class="name" style="display: flex;">
-                        <p>David</p>
-                        <img src="about-3-1.png" alt="">
-                    </div>
-                    <div class="discretion-blog">
-                        <p id="message">
-                            The interest rates are very competitive. Will definitely use again!
-                        </p>
-                    </div>
-                </div> -->
-            </div>
-    <div class="allitem">
-                <div class="blog-allof" style="border: none; background-image: url(images/directors/unnirajan.jpg);" id="director" >
-                    <div class="view">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                            P.N.Unnirajan
-                        </p>
-                        <p>
-                            Non-Executive Director 
-                        </p>
-                    </div>
-                    </div>
-               <!--  <div class="blog-allof">
-                    <div class="name" style="display: flex;">
-                        <p>David</p>
-                        <img src="about-3-1.png" alt="">
-                    </div>
-                    <div class="discretion-blog">
-                        <p id="message">
-                            The interest rates are very competitive. Will definitely use again!
-                        </p>
-                    </div>
-                </div> -->
-            </div>
-            <div class="allitem">
-                <div class="blog-allof" style="border: none; background-image: url(images/directors/Mohandas.jpg);" id="director" >
-                    <div class="view">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                            Mohandas Anchery
-                        </p>
-                        <p>
-                            Independent Director 
-                        </p>
-                    </div>
-                    </div>
-               <!--  <div class="blog-allof">
-                    <div class="name" style="display: flex;">
-                        <p>David</p>
-                        <img src="about-3-1.png" alt="">
-                    </div>
-                    <div class="discretion-blog">
-                        <p id="message">
-                            The interest rates are very competitive. Will definitely use again!
-                        </p>
-                    </div>
-                </div> -->
-            </div>
-            <div class="allitem">
-                <div class="blog-allof" style="border: none; background-image: url(images/directors/Silpa.jpg);" id="director" >
-                    <div class="view">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                            Silpa Ramdas
-                        </p>
-                        <p>
-                            Independent Director 
-                        </p>
-                    </div>
-                    </div>
-               <!--  <div class="blog-allof">
-                    <div class="name" style="display: flex;">
-                        <p>David</p>
-                        <img src="about-3-1.png" alt="">
-                    </div>
-                    <div class="discretion-blog">
-                        <p id="message">
-                            The interest rates are very competitive. Will definitely use again!
-                        </p>
-                    </div>
-                </div> -->
-            </div>
-        </div>
+           
+ 
+}
     </div>
 
     <div class="customer-content" style="position: relative; flex-direction: column; background-color: white;  align-items: start; margin-top: 50px;">
@@ -200,87 +37,31 @@
         </div>
      
         <div id="owl-demo3" class="owl-carousel">
+          @foreach (var Leaders in Model.Leaders)
+{
             <div class="allitem">
-                <div class="blog-allof" style="border: none; background-image: url(images/directors/Rajeshkumar.jpg);" id="director">
+                <div class="blog-allof" style="border: none ; background-image: url('@Leaders.Profile');" id="director" >
                     <div class="view">
-                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-eye" onclick="leaders(@Leaders.Id)"></i>
                     </div>
                     <div class="name" >
                         <p>
-                            Rajeshkumar.K
+                         @Leaders.Name
                         </p>
                         <p>
-                            EVP & Company Secretary 
+                           @Leaders.Post
                         </p>
                     </div>
                 </div>
+             
             </div>
-            <div class="allitem">
-                <div class="blog-allof" style="border: none; background-image: url(images/directors/Sreenivas.jpg);" id="director">
-                    <div class="view">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                            K.K.Sreenivas 
-                        </p>
-                        <p>
-                            VP-Credit & Branch Operations 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="allitem">
-                <div class="blog-allof" style="border: none; background-image: url(images/directors/prasad.jpg);" id="director">
-                    <div class="view">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                            Prasad.P
-                        </p>
-                        <p>
-                            Chief Financial Officer 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="allitem">
-                <div class="blog-allof" style="border: none; background-image: url(images/directors/Shaju.jpg);" id="director">
-                    <div class="view">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                            Shaju K Balan
-                        </p>
-                        <p>
-                            Assistant Vice President -
-                            Business Development
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="allitem">
-                <div class="blog-allof" style="border: none; background-image: url(images/directors/rakesh.jpg);" id="director">
-                    <div class="view">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                            Rakesh K Venugopal
-                        </p>
-                        <p>
-                            Assistant Vice President -
-                            Business Head - Two-Wheeler
-                            Loans
-                        </p>
-                    </div>
-                </div>
-            </div>
+           
+ 
+}
+       
         </div>
     </div>
-
+</div>
     <script>
         
     var owl2 = $("#owl-demo2");
@@ -334,6 +115,7 @@
                 }
             }
         });
-        
+                 // Modal functionality for both directors and management
+
 
     </script>
