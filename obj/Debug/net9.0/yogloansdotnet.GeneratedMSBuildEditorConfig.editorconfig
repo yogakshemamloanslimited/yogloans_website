@@ -128,6 +128,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cTG9naW5caW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/yogloansdotnet - Copy/Views/admin/Nearby/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cTmVhcmJ5XHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/yogloansdotnet - Copy/Views/admin/Online/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cT25saW5lXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

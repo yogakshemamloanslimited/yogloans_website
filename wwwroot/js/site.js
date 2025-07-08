@@ -41,16 +41,22 @@ function setBackgroundImage(data, defaultImage) {
 
 // Function to update background image on resize
 function updateBackgroundImage() {
+    console.log("Function called");
+    console.log("gold:", gold, "business:", business, "cd:", cd, "vehicle:", vehicle, "welcome:", welcome);
     if (gold.classList.contains('active')) {
+        console.log("Gold active");
         var data = goldData ? JSON.parse(goldData) : null;
         welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/front-view-arrangement-economy-elements.jpg")})`;
     } else if (business.classList.contains('active')) {
+        console.log("Business active");
         var data = businessData ? JSON.parse(businessData) : null;
         welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/business-background.jpg")})`;
     } else if (cd.classList.contains('active')) {
+        console.log("CD active");
         var data = cdData ? JSON.parse(cdData) : null;
         welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/consumer-durables-background.jpg")})`;
     } else if (vehicle.classList.contains('active')) {
+        console.log("Vehicle active");
         var data = vehicleData ? JSON.parse(vehicleData) : null;
         welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/bike-background.jpg")})`;
     }
@@ -59,24 +65,82 @@ function updateBackgroundImage() {
 // Add resize event listener
 window.addEventListener('resize', updateBackgroundImage);
 
+// --- AUTO-CYCLING LOAN SECTIONS EVERY 5 SECONDS ---
+var loanElements = [gold, business, cd, vehicle];
+var currentIndex = 0;
+var cycleInterval = null;
+var pauseTimeout = null;
+
+function cycleLoan() {
+    loanElements[currentIndex].click();
+    currentIndex = (currentIndex + 1) % loanElements.length;
+}
+
+function startCycle() {
+    if (cycleInterval) clearInterval(cycleInterval);
+    cycleInterval = setInterval(cycleLoan, 5000);
+}
+
+function pauseCycle() {
+    if (cycleInterval) clearInterval(cycleInterval);
+    if (pauseTimeout) clearTimeout(pauseTimeout);
+    pauseTimeout = setTimeout(() => {
+        startCycle();
+    }, 5000);
+}
+
+startCycle();
+
+// Add pauseCycle to all loan button click handlers
+
 gold.onclick = function () {
+    pauseCycle();
     gold.classList.add('active');
     business.classList.remove('active');
     cd.classList.remove('active');
     vehicle.classList.remove('active');
-    
+
     if (goldData) {
-        var data = JSON.parse(goldData);
-        head.textContent = data.header ;
-        sub.textContent = data.subContent;
-        welcome.style.backgroundImage;
-    } 
-    
-    // Only use database data for content and points
+        let allLoans;
+        try {
+            allLoans = JSON.parse(goldData);
+        } catch (e) {
+            console.error("Invalid JSON in goldData:", e);
+            allLoans = null;
+        }
+
+        console.log("allLoans:", allLoans);
+
+        let goldLoan = null;
+
+        if (Array.isArray(allLoans)) {
+            goldLoan = allLoans.find(loan =>
+                loan.LoanType?.toLowerCase() === "gold" ||
+                loan.loanType?.toLowerCase() === "gold" ||
+                loan.LoanType?.toLowerCase() === "gold loan" ||
+                loan.loanType?.toLowerCase() === "gold loan"
+            );
+        } else if (typeof allLoans === "object" && allLoans !== null) {
+            // If it's a single object
+            goldLoan = allLoans;
+        }
+
+        console.log("goldLoan:", goldLoan);
+
+        if (goldLoan) {
+            head.textContent = goldLoan.header || goldLoan.name || '';
+            sub.textContent = goldLoan.subContent || '';
+            welcome.style.backgroundImage = `url(${setBackgroundImage(goldLoan, "images/welcome/front-view-arrangement-economy-elements.jpg")})`;
+        } else {
+            console.warn("Gold loan data not found or not matching!");
+        }
+    }
+
     updateLoanDisplay("Gold Loan");
 }
 
 business.onclick = function () {
+    pauseCycle();
     gold.classList.remove('active');
     business.classList.add('active');
     cd.classList.remove('active');
@@ -86,13 +150,13 @@ business.onclick = function () {
         var data = JSON.parse(businessData);
         head.textContent = data.header ;
         sub.textContent = data.subContent;
-        welcome.style.backgroundImage ;
+        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/business-background.jpg")})`;
     }
-    // Only use database data for content and points
     updateLoanDisplay("Business Loan");
 }
 
 cd.onclick = function () {
+    pauseCycle();
     gold.classList.remove('active');
     business.classList.remove('active');
     cd.classList.add('active');
@@ -102,7 +166,7 @@ cd.onclick = function () {
         var data = JSON.parse(cdData);
         head.textContent = data.header;
         sub.textContent = data.subContent;
-        welcome.style.backgroundImage;
+        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/consumer-durables-background.jpg")})`;
     } 
     
     // Only use database data for content and points
@@ -110,6 +174,7 @@ cd.onclick = function () {
 }
 
 vehicle.onclick = function () {
+    pauseCycle();
     gold.classList.remove('active');
     business.classList.remove('active');
     cd.classList.remove('active');
@@ -119,7 +184,7 @@ vehicle.onclick = function () {
         var data = JSON.parse(vehicleData);
         head.textContent = data.header;
         sub.textContent = data.subContent ;
-        welcome.style.backgroundImage;
+        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/bike-background.jpg")})`;
     } 
     
     // Only use database data for content and points
@@ -283,17 +348,6 @@ function updateLoanDisplay(loanName) {
         document.getElementById('points').innerHTML = '';
     }
 }
-
-// --- AUTO-CYCLING LOAN SECTIONS EVERY 5 SECONDS ---
-(function() {
-    var loanElements = [gold, business, cd, vehicle];
-    var currentIndex = 0;
-    function cycleLoan() {
-        loanElements[currentIndex].click();
-        currentIndex = (currentIndex + 1) % loanElements.length;
-    }
-    setInterval(cycleLoan, 5000);
-})();
 
 // Initialize loan data when page loads
 document.addEventListener('DOMContentLoaded', function() {

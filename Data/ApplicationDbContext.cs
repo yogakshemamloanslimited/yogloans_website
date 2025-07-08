@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using yogloansdotnet.Migrations;
 using yogloansdotnet.Models;
 
+
 namespace yogloansdotnet.Data
 {
     public class ApplicationDbContext : DbContext
@@ -40,6 +41,8 @@ namespace yogloansdotnet.Data
         public DbSet<yogloansdotnet.Models.CareerModel> Career { get; set; }
           public DbSet<yogloansdotnet.Models.DirectorsModel> Directors { get; set; }
            public DbSet<yogloansdotnet.Models.LeadersModel> Leaders { get; set; }
+              public DbSet<yogloansdotnet.Models.NearbyModel> Nearby { get; set; }
+           
           
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

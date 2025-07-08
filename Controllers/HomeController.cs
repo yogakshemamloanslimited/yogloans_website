@@ -21,7 +21,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {   
-         var goldLoans = _context.Homwelcome.Where(x => x.LoanType == "Gold").ToList();
+    var goldLoans = _context.Homwelcome.Where(x => x.LoanType == "Gold").ToList();
     var businessLoans = _context.Homwelcome.Where(x => x.LoanType == "Business").ToList();
     var vehicleLoans = _context.Homwelcome.Where(x => x.LoanType == "Vehicle").ToList();
     var cdLoans = _context.Homwelcome.Where(x => x.LoanType == "CD").ToList();
