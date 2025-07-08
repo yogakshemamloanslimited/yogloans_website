@@ -1,17 +1,32 @@
  .hero-career {
-     background: url('/images/welcome/investors.jpg') center/cover no-repeat;
+
 
             color: #fff;
             padding: 80px 0 60px 0;
-            text-align: center;
-            position: relative;
-            height: 450px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+       /*      text-align: center; */
+       width: 100%;
+    height: 400px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
         }
-        .hero-career::after{
+        .main-content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center  ;
+            padding: 20px;
+        }
+        .button{
+            width: 80%;
+        }
+       /*  .hero-career::after{
             content: "";
             width: 100%;
             height: 100%;
@@ -20,15 +35,15 @@
             position: absolute;
             z-index: 1;
             background-color: rgba(0, 0, 0, 0.316);
-        }
-        .hero-career h1 { font-size: 3rem; margin-bottom: 10px; z-index: 2; position: relative; }
-        .hero-career p { font-size: 1.3rem; margin-bottom: 30px; text-align: center; position: relative; z-index: 2000;}
+        } */
+        .hero-career h1 { font-size: 3rem; margin-bottom: 10px; z-index: 2; position: relative; width: 80%;  }
+        .hero-career p { font-size: 1.3rem; width: 80%; position: relative; z-index: 2000;}
         .cta-btn {
-            background: #0056b3;
-            color: #fff;
-            padding: 15px 40px;
+           /*  background: #0056b3; */
+            
+            padding: 15px ;
             border: none;
-            border-radius: 30px;
+           /*  border-radius: 10px; */
             font-size: 1.1rem;
             cursor: pointer;
             transition: background 0.2s;

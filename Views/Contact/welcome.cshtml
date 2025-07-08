@@ -1,5 +1,6 @@
-    <section class="welcome-container"
-        style="background-image: url(images/welcome/contact.jpg);">
+     @model List<yogloansdotnet.Models.ContactWelcome> 
+  <section class="welcome-container"
+    style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
         <h1 >Contact Us
             </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
     <div class="button">
@@ -16,20 +17,31 @@
 
     <div id="branch-list"></div> -->
 
-        
-    <style>
-        .welcome-container{
-            height: 300px;
-        }
-        a{
-            color: white;
-            text-decoration: none;
-        }
-        @@keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+   
+
+    <section class="welcome-container"
+    style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
+    <h1 >CD Loan
+            </h1>
+    <div class="button">
+             <p><a href="/">Home</a>  <a href=""> - CD Loan</a></p>
+     </div>
+</section>
+<style>
+    .welcome-container{
+        height: 300px;
+    }
+    a{
+        text-decoration:none;
+        color:white;
+    }
+    #welcome-mobile { display: none; }
+    #welcome-desktop { display: flex; }
+    @@media (max-width: 767px) {
+        #welcome-desktop { display: none; }
+        #welcome-mobile { display: flex; }
+    }
+</style>
 <!-- 
     <script>
     $(document).ready(function() {

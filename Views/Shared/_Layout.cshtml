@@ -41,11 +41,11 @@
                     <li onclick="window.location.href='/'">Home</li>
                     <li onclick="window.location.href='/about'">About</li>
                     <li class="services-link">Services</li>
-                    <ul class="service-list">
-                        <li onclick="window.location.href='/gold'">Gold Loan</li>
+                    <ul class="service-list" id="service-items">
+                        <!-- <li onclick="window.location.href='/gold'">Gold Loan</li>
                         <li onclick="window.location.href='/business'">Business Loan</li>
                         <li onclick="window.location.href='/cd'">CD Loan</li>
-                        <li onclick="window.location.href='/vehicle'">Vehicle Loan</li>
+                        <li onclick="window.location.href='/vehicle'">Vehicle Loan</li> -->
                     </ul>
                     <li onclick="window.location.href='/investor'">Investors</li>
                     <li onclick="window.location.href='/Onlineservices'">Online Services</li>
@@ -65,11 +65,11 @@
                     <li onclick="window.location.href='/'">Home</li>
                     <li onclick="window.location.href='/about'">About</li>
                     <li class="services-link2">Services</li>
-                    <ul class="service-list2" >
-                               <li onclick="window.location.href='/gold'">Gold Loan</li>
+                    <ul class="service-list2" id="service-items">
+                       <!--  <li onclick="window.location.href='/gold'">Gold Loan</li>
                         <li onclick="window.location.href='/business'">Business Loan</li>
                         <li onclick="window.location.href='/cd'">CD Loan</li>
-                        <li onclick="window.location.href='/vehicle'">Vehicle Loan</li>
+                        <li onclick="window.location.href='/vehicle'">Vehicle Loan</li> -->
                     </ul>
                     <li onclick="window.location.href='/investor'">Investors</li>
                     <li onclick="window.location.href='/Onlineservices'">Online Services</li>
@@ -217,6 +217,21 @@
 
    
        <script>
+
+      $.ajax({
+    url: "/Loan-forall",
+    method: "GET",
+    success: function (response) {
+        const data = response.data;
+        data.forEach(loan => {
+            $('#service-items').append(`<li onclick="window.location.href='/services/${loan.loanname}/${loan.id}'">${loan.loanname}</li>`);
+        });
+    },
+    error: function () {
+        alert('Failed to fetch loan data.');
+    }
+});
+
            // Mobile services dropdown
 const servicesLinks = document.querySelector('.services-link2');
 const servicesList = document.querySelector('.service-list2');

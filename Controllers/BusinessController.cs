@@ -1,22 +1,26 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using yogloansdotnet.Models;
+using yogloansdotnet.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace yogloansdotnet.Controllers
 {
     public class BusinessController : Controller
     {
-        private readonly ILogger<AboutController> _logger;
+       private readonly ILogger<BusinessController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public BusinessController(ILogger<AboutController> logger)
+        public BusinessController(ILogger<BusinessController> logger, ApplicationDbContext context)
         {
-            _logger = logger;
+         _logger = logger;
+         _context = context;
         }
-
-        public IActionResult Index()
+       public async Task<IActionResult> Index()
         {
             // This will look for Views/About/Index.cshtml
-            return View();
+            var BusinessLoan = _context.Homwelcome.Where(x => x.LoanType == "Business").ToList();
+            return View(BusinessLoan);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

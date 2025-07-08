@@ -1,22 +1,25 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using yogloansdotnet.Models;
+using yogloansdotnet.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace yogloansdotnet.Controllers
 {
     public class GoldController : Controller
     {
-        private readonly ILogger<AboutController> _logger;
+        private readonly ILogger<GoldController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public GoldController(ILogger<AboutController> logger)
+        public GoldController(ILogger<GoldController> logger, ApplicationDbContext context)
         {
-            _logger = logger;
+         _logger = logger;
+         _context = context;
         }
-
-        public IActionResult Index()
+       public async Task<IActionResult> Index()
         {
-          
-            return View();
+            var goldLoans = _context.Homwelcome.Where(x => x.LoanType == "Gold").ToList();
+            return View(goldLoans);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

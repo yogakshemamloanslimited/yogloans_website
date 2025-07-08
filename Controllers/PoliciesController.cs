@@ -1,22 +1,27 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using yogloansdotnet.Models;
+using yogloansdotnet.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace yogloansdotnet.Controllers
 {
     public class PoliciesController : Controller
     {
-        private readonly ILogger<AboutController> _logger;
+       private readonly ILogger<PoliciesController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public PoliciesController(ILogger<AboutController> logger)
+        public PoliciesController(ILogger<PoliciesController> logger, ApplicationDbContext context)
         {
-            _logger = logger;
+         _logger = logger;
+         _context = context;
         }
 
-        public IActionResult Index()
+
+  public async Task<IActionResult> Index()
         {
-          
-            return View();
+           var Policy = await _context.PolicyWelcome.ToListAsync();
+            return View(Policy);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

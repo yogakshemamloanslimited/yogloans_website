@@ -92,6 +92,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ3NyXHdlbGNvbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/yogloansdotnet - Copy/Views/admin/Directors/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cRGlyZWN0b3JzXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/yogloansdotnet - Copy/Views/admin/Homeloan/loansection.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSG9tZWxvYW5cbG9hbnNlY3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -114,6 +118,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/yogloansdotnet - Copy/Views/admin/Investors/welcome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSW52ZXN0b3JzXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Leaders/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cTGVhZGVyc1xpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/yogloansdotnet - Copy/Views/admin/Login/index.cshtml]
@@ -386,6 +394,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/yogloansdotnet - Copy/Views/Policies/welcome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Services/benefit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcYmVuZWZpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Services/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcZm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Services/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Services/map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcbWFwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Services/section.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcc2VjdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Services/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcd2VsY29tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/yogloansdotnet - Copy/Views/Shared/Error.cshtml]

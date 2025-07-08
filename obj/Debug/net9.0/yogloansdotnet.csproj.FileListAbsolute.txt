@@ -271,7 +271,6 @@ D:\yogloansdotnet - Copy\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\scopedcss\bundle\yogloansdotnet.styles.css
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\scopedcss\projectbundle\yogloansdotnet.bundle.scp.css
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\voz9tei4il-d1j2z3n2pv.gz
-D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\rsqgh38mmq-g3a2l4qah2.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\p3fs1amq2a-zpq389zwb1.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\a7hjf7yvaf-7j09wfq3gk.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\4ejy8gtjcv-h6puv8qieg.gz
@@ -279,7 +278,6 @@ D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zitbjho43y-4sesli4jnu.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\mfcj1t9qvc-mbp8agbaol.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\g5vfzt5d9t-vtmuiv8mcw.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\rqynun2trw-3dex4b2yun.gz
-D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\tvkkcrebz3-v0v960hheb.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\inql6onuc8-4m06domx3y.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\72qp9rndbp-fzjtnmfj5c.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\4pg8pwdid3-j5iverje9n.gz
@@ -287,7 +285,6 @@ D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\f25cfgdxkh-lhwukfs3t1.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\vby8an2ra7-ai2dd32lqd.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\u3w50u8azq-xabihs3opq.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\fk7bb3rk17-bgghij0q3y.gz
-D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\0x1km8oxjq-7958n68jxo.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\e66vs2ekmx-3tobktd3ut.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\6o5bm9dtot-yevbtd8c2z.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\2uk72kucmj-i3y4luciwf.gz
@@ -302,7 +299,6 @@ D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\q677rvfh81-xgfky6img6.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\ig32mwjwbs-m9qm4tazc0.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\p1bgzrp416-s96d7z6tke.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\3zatwzz2c5-sp1rxkorw5.gz
-D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\88micy7443-t1zvwxoq65.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\xn842w2ih1-bqjiyaj88i.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\3a1rt0cxze-c2jlpeoesf.gz
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\wzxndgy0kh-erw9l3u2r3.gz
@@ -383,3 +379,7 @@ D:\yogloansdotnet - Copy\bin\Debug\net9.0\yogloansdotnet.pdb
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.genruntimeconfig.cache
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\ref\yogloansdotnet.dll
 D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\lwabdmqn4b-sjo30402fw.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\tvkkcrebz3-at47705viq.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\rsqgh38mmq-qwpejjl5fy.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\88micy7443-g575hrz3yu.gz
+D:\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\0x1km8oxjq-hdgg992bh3.gz

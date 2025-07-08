@@ -25,16 +25,46 @@ public class HomeController : Controller
     var businessLoans = _context.Homwelcome.Where(x => x.LoanType == "Business").ToList();
     var vehicleLoans = _context.Homwelcome.Where(x => x.LoanType == "Vehicle").ToList();
     var cdLoans = _context.Homwelcome.Where(x => x.LoanType == "CD").ToList();
+    var aboutContent = _context.AboutContent.ToList();
 
     var viewModel = new LoanGroupViewModel
     {
         Gold = goldLoans ?? new List<HomwelcomeModel>(),
         Business = businessLoans ?? new List<HomwelcomeModel>(),
         Vehicle = vehicleLoans ?? new List<HomwelcomeModel>(),
-        CD = cdLoans ?? new List<HomwelcomeModel>()
+        CD = cdLoans ?? new List<HomwelcomeModel>(),
+        AboutContent = aboutContent ?? new List<AboutContentModel>()
     };
 
         return View(viewModel);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetLoanData()
+    {
+        try
+        {
+            var loans = await _context.Loans.ToListAsync();
+            var loanPoints = await _context.LoanPoints.ToListAsync();
+            
+            var loanData = loans.Select(loan => new
+            {
+                id = loan.Id,
+                name = loan.Loanname,
+                content = loan.Content,
+                icon = loan.icon,
+                points = loanPoints.Where(p => p.Loan == loan.Id.ToString())
+                                 .Select(p => p.Point)
+                                 .ToArray()
+            }).ToList();
+
+            return Json(new { success = true, data = loanData });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error fetching loan data");
+            return Json(new { success = false, message = "Error fetching loan data" });
+        }
     }
 
     public IActionResult Privacy()
@@ -224,4 +254,45 @@ public class HomeController : Controller
             return RedirectToAction("Index", "Admin", new { area = "Admin" });
         }
     }
+
+
+    
+    [HttpGet]
+[Route("Loan-points/{id}")]
+public async Task<IActionResult> GetLoanPoints(string id)
+{
+    try
+    {
+        var loanPoints = await _context.LoanPoints
+            .Where(lp => lp.Loan == id) // assuming 'Loan' is a string property in your LoanPoints model
+            .ToListAsync();
+
+        return Json(new { success = true, data = loanPoints });
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Error fetching loan data");
+        return Json(new { success = false, message = "Error fetching loan data" });
+    }
+}
+
+
+    
+    
+    [HttpGet]
+[Route("Loan-forall")]
+public async Task<IActionResult> GetLoanPoints()
+{
+    try
+    {
+        var loan = await _context.Loans.ToListAsync();
+
+        return Json(new { success = true, data = loan });
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Error fetching loan data");
+        return Json(new { success = false, message = "Error fetching loan data" });
+    }
+}
 }

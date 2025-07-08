@@ -1,5 +1,6 @@
-   <section class="welcome-container"
-        style="background-image: url(images/welcome/policy.jpg);">
+ @model List<yogloansdotnet.Models.PolicyWelcome>   
+<section class="welcome-container"
+    style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
         <h1 >Policies
             </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
     <div class="button">
@@ -8,8 +9,34 @@
 
     </section>
 
-    <style>
-        .welcome-container{
-            height: 300px;
-        }
-    </style>
+
+     <!-- Mobile Section (Image2) -->
+<section class="welcome-container"
+    style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
+   <h1>Investors
+        </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
+        <div class="button">
+        <p><a href="/">Home</a>  <a href=""> - Investors</a></p>
+     </div>
+
+</section>
+
+
+
+<style>
+    .welcome-container{
+        height: 300px;
+    }
+    a{
+        text-decoration:none;
+        color:white;
+    }
+    #welcome-mobile { display: none; }
+    #welcome-desktop { display: flex; }
+    @@media (max-width: 767px) {
+        #welcome-desktop { display: none; }
+        #welcome-mobile { display: flex; }
+    }
+</style>
+
+   

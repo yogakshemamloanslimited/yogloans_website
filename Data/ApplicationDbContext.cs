@@ -38,6 +38,9 @@ namespace yogloansdotnet.Data
         public DbSet<yogloansdotnet.Models.ContactWelcome> ContactWelcome { get; set; }
         public DbSet<yogloansdotnet.Models.DepartmentModel> Departments { get; set; }
         public DbSet<yogloansdotnet.Models.CareerModel> Career { get; set; }
+          public DbSet<yogloansdotnet.Models.DirectorsModel> Directors { get; set; }
+           public DbSet<yogloansdotnet.Models.LeadersModel> Leaders { get; set; }
+          
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

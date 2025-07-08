@@ -44,8 +44,9 @@ namespace yogloansdotnet.Controllers
             return View("Views/Admin/Career/designation.cshtml");
         } */
       [Route("welcome")]
-public IActionResult welcomes() {
-    var data = _context.Career.ToList(); // Fetch CareerWelcomeModel entries
+
+  public async Task<IActionResult> welcomes() {
+    var data = _context.CareerWelcome.ToList(); // Fetch CareerWelcomeModel entries
     return View("Views/Admin/Career/welcome.cshtml", data);
 }
 

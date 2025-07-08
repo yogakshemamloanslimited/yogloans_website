@@ -113,11 +113,13 @@
                                         <option value="@loan.Id">@loan.Loanname</option>
                                     }
                                 </select>
-                                <div id="points-container">
+                                <div class="point-input-group">
+                                    <input type="text" name="offerheader" class="form-control" placeholder="Enter Your Offer Header" required>
+                                </div>
+                                <div id="contents-container">
                                     <div class="point-input-group">
-                                        <input type="text" name="offerheader[]" class="form-control" placeholder="Enter Your Offer Header" required>
-                                        <input type="text" name="offercontent[]" class="form-control" placeholder="Enter Your Offer Content" required>
-                                        <button type="button" class="remove-point" onclick="removePoint(this)" style="display:none;">×</button>
+                                        <input type="text" name="offercontent" class="form-control" placeholder="Enter Your Offer Content" required>
+                                        <button type="button" class="remove-point" onclick="removeContent(this)" style="display:none;">×</button>
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +129,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="addmore()">Add More Offer</button>
+                <button type="button" class="btn btn-primary" onclick="addMoreContent()">Add More Content</button>
                 <button type="submit" class="btn btn-success">Save Offer</button>
             </div>
         </form>
@@ -138,29 +140,27 @@
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
     <script>
-        function addmore() {
-            var container = document.getElementById('points-container');
-            var pointGroup = document.createElement('div');
-            pointGroup.className = 'point-input-group';
-            pointGroup.innerHTML = `
-                <input type="text" name="Points[]" class="form-control" placeholder="Enter Your Point" required>
-                <button type="button" class="remove-point" onclick="removePoint(this)">×</button>
+        function addMoreContent() {
+            var container = document.getElementById('contents-container');
+            var contentGroup = document.createElement('div');
+            contentGroup.className = 'point-input-group';
+            contentGroup.innerHTML = `
+                <input type="text" name="offercontent" class="form-control" placeholder="Enter Your Offer Content" required>
+                <button type="button" class="remove-point" onclick="removeContent(this)">×</button>
             `;
-            container.appendChild(pointGroup);
-            
-            // Show remove buttons if there's more than one point
-            var removeButtons = document.querySelectorAll('.remove-point');
+            container.appendChild(contentGroup);
+            // Show remove buttons if there's more than one content
+            var removeButtons = document.querySelectorAll('#contents-container .remove-point');
             removeButtons.forEach(button => {
                 button.style.display = removeButtons.length > 1 ? 'block' : 'none';
             });
         }
 
-        function removePoint(button) {
-            var pointGroup = button.parentElement;
-            pointGroup.remove();
-            
-            // Hide remove button if only one point remains
-            var removeButtons = document.querySelectorAll('.remove-point');
+        function removeContent(button) {
+            var contentGroup = button.parentElement;
+            contentGroup.remove();
+            // Hide remove button if only one content remains
+            var removeButtons = document.querySelectorAll('#contents-container .remove-point');
             if (removeButtons.length === 1) {
                 removeButtons[0].style.display = 'none';
             }
@@ -178,11 +178,11 @@
                         if (result.success) {
                             location.reload();
                         } else {
-                            alert('Error deleting point: ' + result.message);
+                            alert('Error deleting offer: ' + result.message);
                         }
                     },
                     error: function(xhr, status, error) {
-                        alert('Error deleting point: ' + error);
+                        alert('Error deleting offer: ' + error);
                     }
                 });
             }

@@ -1,16 +1,37 @@
- <link rel="stylesheet" href="~/css/about/welcome.css" asp-append-version="true">
- <section class="welcome-container"
-    style="background-image: url(images/welcome/colleagues-working-project-discussing-details.jpg)">
-        <h1 id="header">About Us</h1>
+@model List<yogloansdotnet.Models.AboutWelcome>
  
- <div class="button">
-        <p><a href="/">Home</a>  <a href=""> - About Us</a></p>
-     </div>
 
-    </section>
-    
-    <style>
-        .welcome-container{
-            height: 300px;
-        }
-    </style>
+
+<!-- Desktop/Tablet Section (Image1) -->
+<section class="welcome-container"
+    style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
+    <h1 id="header">About Us</h1>
+    <div class="button">
+        <p><a href="/">Home</a>  <a href=""> - About Us</a></p>
+    </div>
+</section>
+
+<!-- Mobile Section (Image2) -->
+<section class="welcome-container"
+    style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
+    <h1 id="header">About Us</h1>
+    <div class="button">
+        <p><a href="/">Home</a>  <a href=""> - About Us</a></p>
+    </div>
+</section>
+
+<style>
+    .welcome-container{
+        height: 300px;
+    }
+    a{
+        text-decoration:none;
+        color:white;
+    }
+    #welcome-mobile { display: none; }
+    #welcome-desktop { display: flex; }
+    @@media (max-width: 767px) {
+        #welcome-desktop { display: none; }
+        #welcome-mobile { display: flex; }
+    }
+</style>

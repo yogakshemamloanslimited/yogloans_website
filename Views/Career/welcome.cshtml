@@ -1,7 +1,32 @@
-<section class="hero-career">
+
+ @model List<yogloansdotnet.Models.CareerWelcomeModel>
+
+<section class="hero-career" style="background: url(@(Model.FirstOrDefault()?.Image1 ?? "")); background-position:center; background-repeat: no-repeat;
+  background-size: cover;" id="welcome-desktop">
+    <div class="main-content">
+        <h1>Join Our Team</h1>
+        <p>Build your career with us. We're looking for passionate, talented people to help us make a difference.</p>
+        <div class="button">
+        <button class="cta-btn" onclick="document.getElementById('application').scrollIntoView({behavior: 'smooth'});">Apply Now</button>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero-career" style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""));" id="welcome-mobile">
     <div class="main-content">
         <h1>Join Our Team</h1>
         <p>Build your career with us. We're looking for passionate, talented people to help us make a difference.</p>
         <button class="cta-btn" onclick="document.getElementById('application').scrollIntoView({behavior: 'smooth'});">Apply Now</button>
     </div>
 </section>
+
+
+<style>
+   #welcome-mobile { display: none; }
+    #welcome-desktop { display: flex; }
+    @@media (max-width: 767px) {
+        #welcome-desktop { display: none; }
+        #welcome-mobile { display: flex; }
+    }
+</style>

@@ -22,6 +22,7 @@ var detail = document.getElementById('detail-para');
 var point1 = document.getElementById('point1');
 var point2 = document.getElementById('point2');
 var point3 = document.getElementById('point3');
+/* var loanId = document.getElementById('loan-id'); */
 var welcome = document.getElementsByClassName('welcome-container')[0];
 
 // Get the data from the model
@@ -66,21 +67,13 @@ gold.onclick = function () {
     
     if (goldData) {
         var data = JSON.parse(goldData);
-        head.textContent = data.header || "Gold Loan";
-        sub.textContent = data.subContent || "Experience Door Step Gold Loan Services";
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/front-view-arrangement-economy-elements.jpg")})`;
-        detail.textContent = data.detail || "A Gold Loan is a convenient and secure way to access instant funds by pledging your gold ornaments as collateral. With minimal documentation and quick processing, it is an ideal solution for urgent financial needs such as business expansion, medical emergencies, or education expenses. The loan amount is determined based on the purity and weight of the gold, offering competitive interest rates and flexible repayment options to suit your needs.";
-    } else {
-        head.textContent = "Gold Loan";
-        sub.textContent = "Experience Door Step Gold Loan Services";
-        welcome.style.backgroundImage = `url(${setBackgroundImage(null, "images/welcome/front-view-arrangement-economy-elements.jpg")})`;
-        detail.textContent = "A Gold Loan is a convenient and secure way to access instant funds by pledging your gold ornaments as collateral. With minimal documentation and quick processing, it is an ideal solution for urgent financial needs such as business expansion, medical emergencies, or education expenses. The loan amount is determined based on the purity and weight of the gold, offering competitive interest rates and flexible repayment options to suit your needs.";
-    }
+        head.textContent = data.header ;
+        sub.textContent = data.subContent;
+        welcome.style.backgroundImage;
+    } 
     
-    point3.style.display = "block";
-    point1.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Quick Processing`;
-    point2.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Minimal Documentation`;
-    point3.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Competitive Rates`;
+    // Only use database data for content and points
+    updateLoanDisplay("Gold Loan");
 }
 
 business.onclick = function () {
@@ -91,21 +84,12 @@ business.onclick = function () {
     
     if (businessData) {
         var data = JSON.parse(businessData);
-        head.textContent = data.header || "Business Loan";
-        sub.textContent = data.subContent || "Loan Provided Minimum 5 Members And Maximum 1 Member";
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/business-background.jpg")})`;
-        detail.textContent = data.detail || "Business Loan is a small value unsecured loan granted to individuals engaged in retail trade for development of their business for augmenting the working capital and/or for meeting capital expenditure.";
-    } else {
-        head.textContent = "Business Loan";
-        sub.textContent = "Loan Provided Minimum 5 Members And Maximum 1 Member";
-        welcome.style.backgroundImage = `url(${setBackgroundImage(null, "images/welcome/business-background.jpg")})`;
-        detail.textContent = "Business Loan is a small value unsecured loan granted to individuals engaged in retail trade for development of their business for augmenting the working capital and/or for meeting capital expenditure.";
+        head.textContent = data.header ;
+        sub.textContent = data.subContent;
+        welcome.style.backgroundImage ;
     }
-    
-    point3.style.display = "block";
-    point1.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Low interest rate`;
-    point2.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Unsecured upto Rs.200000 for eligible customers`;
-    point3.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Daily collection facility`;
+    // Only use database data for content and points
+    updateLoanDisplay("Business Loan");
 }
 
 cd.onclick = function () {
@@ -116,20 +100,13 @@ cd.onclick = function () {
     
     if (cdData) {
         var data = JSON.parse(cdData);
-        head.textContent = data.header || "Consumer Durable Loan";
-        sub.textContent = data.subContent || "The Second Co-Applicant Shall Be A Person From The Same Group";
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/consumer-durables-background.jpg")})`;
-        detail.textContent = data.detail || "";
-    } else {
-        head.textContent = "Consumer Durable Loan";
-        sub.textContent = "The Second Co-Applicant Shall Be A Person From The Same Group";
-        welcome.style.backgroundImage = `url(${setBackgroundImage(null, "images/welcome/consumer-durables-background.jpg")})`;
-        detail.textContent = "";
-    }
+        head.textContent = data.header;
+        sub.textContent = data.subContent;
+        welcome.style.backgroundImage;
+    } 
     
-    point1.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Low interest rate.`;
-    point2.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Unsecured upto Rs.200000 for eligible customers`;
-    point3.style.display = "none";
+    // Only use database data for content and points
+    updateLoanDisplay("CD Loan");
 }
 
 vehicle.onclick = function () {
@@ -140,21 +117,13 @@ vehicle.onclick = function () {
     
     if (vehicleData) {
         var data = JSON.parse(vehicleData);
-        head.textContent = data.header || "Vehicle Loan";
-        sub.textContent = data.subContent || "Finance Facility Upto Onroad Price For Eligible Customers";
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/bike-background.jpg")})`;
-        detail.textContent = data.detail || "A Vehicle Loan is a convenient and secure way to access instant funds by pledging your vehicle as collateral. With minimal documentation and quick processing, it is an ideal solution for urgent financial needs such as business expansion, medical emergencies, or education expenses. The loan amount is determined based on the value of the vehicle, offering competitive interest rates and flexible repayment options to suit your needs.";
-    } else {
-        head.textContent = "Vehicle Loan";
-        sub.textContent = "Finance Facility Upto Onroad Price For Eligible Customers";
-        welcome.style.backgroundImage = `url(${setBackgroundImage(null, "images/welcome/bike-background.jpg")})`;
-        detail.textContent = "A Vehicle Loan is a convenient and secure way to access instant funds by pledging your vehicle as collateral. With minimal documentation and quick processing, it is an ideal solution for urgent financial needs such as business expansion, medical emergencies, or education expenses. The loan amount is determined based on the value of the vehicle, offering competitive interest rates and flexible repayment options to suit your needs.";
-    }
+        head.textContent = data.header;
+        sub.textContent = data.subContent ;
+        welcome.style.backgroundImage;
+    } 
     
-    point3.style.display = "block";
-    point1.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Low interest rate.`;
-    point2.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Loan amount upto Rs.200000.`;
-    point3.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> Maximum duration 48 month.`;
+    // Only use database data for content and points
+    updateLoanDisplay("Vehicle Loan");
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -260,6 +229,61 @@ servicesLinks.onclick = function () {
         updateButtonVisibility();
     });
     
+// --- LOAN DATA MANAGEMENT ---
+var loanDataCache = {};
+
+// Fetch loan data from API
+async function fetchLoanData() {
+    try {
+        const response = await fetch('/Home/GetLoanData');
+        const result = await response.json();
+        
+        if (result.success) {
+            // Cache the loan data
+            result.data.forEach(loan => {
+                loanDataCache[loan.name.toLowerCase()] = loan;
+            });
+            console.log('Loan data loaded successfully:', loanDataCache);
+        } else {
+            console.error('Failed to load loan data:', result.message);
+        }
+    } catch (error) {
+        console.error('Error fetching loan data:', error);
+    }
+}
+
+// Get loan data by name
+function getLoanData(loanName) {
+    return loanDataCache[loanName.toLowerCase()] || null;
+}
+
+// Update loan display with data from database
+function updateLoanDisplay(loanName) {
+    const loan = getLoanData(loanName);
+    
+    if (loan) {
+        /* loanId.value = loan.id */
+        window.GetValue(loan.id);
+        head.textContent = loan.name;
+        detail.textContent = loan.content;
+        // Print all points as <li> elements
+        const pointsContainer = document.getElementById('points');
+        pointsContainer.innerHTML = '';
+        if (loan.points && loan.points.length > 0) {
+            loan.points.forEach(point => {
+                const li = document.createElement('li');
+                li.innerHTML = `<img src="images/icon/checklist.png" alt="" srcset=""> ${point}`;
+                pointsContainer.appendChild(li);
+            });
+        }
+    } else {
+      
+        head.textContent = '';
+        detail.textContent = '';
+        document.getElementById('points').innerHTML = '';
+    }
+}
+
 // --- AUTO-CYCLING LOAN SECTIONS EVERY 5 SECONDS ---
 (function() {
     var loanElements = [gold, business, cd, vehicle];
@@ -270,4 +294,33 @@ servicesLinks.onclick = function () {
     }
     setInterval(cycleLoan, 5000);
 })();
-    
+
+// Initialize loan data when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    fetchLoanData();
+});
+function animateCount(id, target) {
+    $({ countNum: 0 }).animate({ countNum: target }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function () {
+            $('#' + id).text(Math.floor(this.countNum));
+        },
+        complete: function () {
+            $('#' + id).text(this.countNum);
+        }
+    });
+}
+$.ajax({
+    url: 'http://localhost:8085/api/count/get-count',
+    method: "GET",
+    success: function(response) {
+        animateCount('Employee', parseInt(response.employee));
+        animateCount('customer', parseInt(response.customer));
+        animateCount('branch', parseInt(response.branch));
+        $('#asset').text(response.asset); // Skip animation for text
+    },
+    error: function(xhr, status, error) {
+        console.error("Error:", error);
+    }
+});

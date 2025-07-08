@@ -1,21 +1,51 @@
- <link rel="stylesheet" href="~/css/about/about.css" asp-append-version="true">
+<link rel="stylesheet" href="~/css/home/clients.css" asp-append-version="true">
  <div class="client-counts">
         <div class="content">
             <div class="item" style="display: flex; justify-content: center;">
-                <p style="text-align: center;">615 cr</p>
+                <p style="text-align: center;" id="asset"></p>
                 <p>Asset Under Management </p>
             </div>
             <div class="item">
-                <p>65,000 +</p>
+                <p id="customer"></p>
                 <p>Happy Customers </p>
             </div>
             <div class="item">
-                <p>1,000 +</p>
+                <p id="Employee"></p>
                 <p>Employee Strength </p>
             </div>
             <div class="item">
-                <p>168 +</p>
+                <p id="branch"></p>
                 <p>Branches </p>
             </div>
         </div>
     </div>
+
+
+    <script>
+    
+        function animateCount(id, target) {
+    $({ countNum: 0 }).animate({ countNum: target }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function () {
+            $('#' + id).text(Math.floor(this.countNum));
+        },
+        complete: function () {
+            $('#' + id).text(this.countNum);
+        }
+    });
+}
+$.ajax({
+    url: 'http://localhost:8085/api/count/get-count',
+    method: "GET",
+    success: function(response) {
+        animateCount('Employee', parseInt(response.employee));
+        animateCount('customer', parseInt(response.customer));
+        animateCount('branch', parseInt(response.branch));
+        $('#asset').text(response.asset); // Skip animation for text
+    },
+    error: function(xhr, status, error) {
+        console.error("Error:", error);
+    }
+});
+    </script>

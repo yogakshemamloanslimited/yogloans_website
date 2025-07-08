@@ -293,27 +293,43 @@ namespace yogloansdotnet.Controllers
             return View("/Views/admin/Homeloan/offer.cshtml", viewModel);
         }
 
-        [HttpPost]
-        [Route("offer-create")]
-        public async Task<IActionResult> Offercreate(OfferModel model)
+   [HttpPost]
+[Route("offer-create")]
+public async Task<IActionResult> Offercreate(string Loan, string offerheader, List<string> offercontent)
+{
+    try
+    {
+        if (string.IsNullOrWhiteSpace(Loan) || string.IsNullOrWhiteSpace(offerheader) || offercontent == null || offercontent.Count == 0)
         {
-            try
-            {
-                _context.Offer.Add(model);
-                await _context.SaveChangesAsync();
-                TempData["Success"] = "Offer added successfully!";
-                return RedirectToAction("Offer", "Homeloan");
-            }
+            TempData["Error"] = "Invalid offer data.";
+            return RedirectToAction("Offer", "Homeloan");
+        }
 
-            catch (Exception ex)
+        foreach (var content in offercontent)
+        {
+            if (!string.IsNullOrWhiteSpace(content))
             {
-                _logger.LogError(ex, "Error occurred while saving offer");
-                TempData["Error"] = "An error occurred while saving offer. Please try again.";
-                return RedirectToAction("Offer", "Homeloan");
+                var offer = new OfferModel
+                {
+                    Loan = Loan,
+                    OfferHeader = offerheader,
+                    OfferContent = content
+                };
+                _context.Offer.Add(offer);
             }
-        
+        }
 
+        await _context.SaveChangesAsync();
+        TempData["Success"] = "Offers added successfully!";
+        return RedirectToAction("Offer", "Homeloan");
     }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Error occurred while saving offers");
+        TempData["Error"] = "An error occurred while saving offers. Please try again.";
+        return RedirectToAction("Offer", "Homeloan");
+    }
+}
     [Route("delete-offer/{id}")]
     [ValidateAntiForgeryToken]
    public async Task<IActionResult> DeleteOffer(int id)
