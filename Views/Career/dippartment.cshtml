@@ -1,0 +1,534 @@
+<section class="dp">
+    <div class="" id="department-card">
+       <div class="modern-loader2" id="modern-loader2" ></div>
+    </div>
+</section>
+
+
+<style>
+
+.modern-loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solidrgb(44, 83, 239);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+  display: block;
+}
+@@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    .dp{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        padding:10px;
+    }
+    .dp  #department-card{
+        width:100%;
+       /*  max-width:1200px; */
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        justify-content:center;
+        align-items:stretch;
+
+        padding:5px;
+        box-sizing: border-box;
+       /*  background-color:#044697; */
+    }
+    #department-card .card{
+        width:100%;
+        min-width:0;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:5px;
+        padding:15px;
+        height:auto;
+        cursor:pointer;
+        max-width:200px;
+   /*        background-color:#044697; */
+        border-radius: 8px;
+       /*  box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
+       border:none;
+        transition: box-shadow 0.2s;
+        /* min-height: 120px; */
+    }
+    #department-card .card:hover {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+    #department-card .card .department-icon{
+        font-size: 32px;
+        /* color: white; */
+        margin-bottom: 10px;
+        transition: color 0.3s ease, transform 0.2s ease;
+    }
+    #department-card .card:hover .department-icon{
+        color: #333;
+        transform: scale(1.1);
+    }
+    #department-card .card p {
+        margin: 0;
+        font-size: 1rem;
+        text-align: center;
+        word-break: break-word;
+        /* color:white; */
+    }
+    
+    /* Career Card Styling - Credit Card Design */
+    #career-card .card {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0;
+        min-height: 250px;
+        cursor: pointer;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        color: #333;
+        border: 1px solid #f0f0f0;
+    }
+    
+   
+    
+    #career-card .card:hover {
+        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        transform: translateY(-5px);
+        border-color: #007bff;
+    }
+    
+    #career-card .card .department-icon {
+        font-size: 32px;
+        color: #007bff;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        transition: all 0.3s ease;
+        z-index: 2;
+    }
+    
+    #career-card .card:hover .department-icon {
+        color: #0056b3;
+        transform: scale(1.1) rotate(5deg);
+    }
+    
+    #career-card .card h5 {
+        margin: 0 0 8px 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #333;
+        text-align: left;
+        line-height: 1.2;
+        position: relative;
+        z-index: 2;
+    }
+    
+    #career-card .card p {
+        margin: 0;
+        font-size: 0.85rem;
+        text-align: left;
+        word-break: break-word;
+        color: #666;
+        position: relative;
+        z-index: 2;
+    }
+    
+    #career-card .card .card-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 15px;
+    }
+    
+    #career-card .card .card-details {
+        margin: 10px 0;
+        flex-grow: 1;
+        display: flex;
+        justify-content:space-between;
+        gap: 8px;
+    }
+    
+    #career-card .card label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #007bff;
+        margin: 6px 0 2px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    #career-card .card .salary-info,
+    #career-card .card .experience-info {
+        background: #f8f9fa;
+        padding: 8px 12px;
+        border-radius: 8px;
+        margin: 4px 0;
+        border-left: 3px solid #007bff;
+        position: relative;
+        z-index: 2;
+    }
+    
+    #career-card .card .salary-info p,
+    #career-card .card .experience-info p {
+        margin: 0;
+        font-size: 0.8rem;
+        color: #495057;
+        font-weight: 600;
+    }
+    
+    #career-card .card .btn {
+        margin-top: auto;
+        padding: 10px 24px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        /* border-radius: 20px; */
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        border: 2px solid #044697;
+        background: #044697;
+        color: white;
+        position: relative;
+        z-index: 2;
+        align-self: flex-end;
+    }
+    
+    #career-card .card .btn:hover {
+        background: #0056b3;
+        border-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+    }
+    @@media (max-width: 900px) {
+        .dp  #department-card {
+            width:100%;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            padding: 15px;
+        }
+        #department-card .card {
+            padding: 8px;
+        }
+        
+        #career-card .card {
+            height: 180px;
+        }
+        
+        #career-card .card .card-content {
+            padding: 18px;
+        }
+        
+        #career-card .card .department-icon {
+            font-size: 28px;
+            top: 15px;
+            right: 15px;
+        }
+        
+        #career-card .card h5 {
+            font-size: 1rem;
+        }
+    }
+    @@media (max-width: 600px) {
+        .dp  #department-card {
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+        #department-card .card {
+            padding: 6px;
+        }
+        #department-card .card p {
+            font-size: 0.95rem;
+        }
+        
+        #career-card .card {
+            height: 160px;
+        }
+        
+        #career-card .card .card-content {
+            padding: 15px;
+        }
+        
+        #career-card .card .department-icon {
+            font-size: 24px;
+            top: 12px;
+            right: 12px;
+        }
+        
+        #career-card .card h5 {
+            font-size: 0.9rem;
+        }
+        
+        #career-card .card .btn {
+            padding: 6px 16px;
+            font-size: 0.75rem;
+        }
+    }
+    @@media (max-width: 400px) {
+        .dp  #department-card {
+            grid-template-columns: 1fr;
+            gap: 8px;
+            padding: 5px;
+        }
+        #department-card .card {
+            padding: 4px;
+        }
+        #department-card .card p {
+            font-size: 0.9rem;
+        }
+        
+        #career-card .card {
+            height: 140px;
+        }
+        
+        #career-card .card .card-content {
+            padding: 12px;
+        }
+        
+        #career-card .card .department-icon {
+            font-size: 20px;
+            top: 10px;
+            right: 10px;
+        }
+        
+        #career-card .card h5 {
+            font-size: 0.85rem;
+        }
+        
+        #career-card .card .btn {
+            padding: 5px 12px;
+            font-size: 0.7rem;
+        }
+    }
+</style>
+
+
+<script>
+
+let dbDepartments = [];
+
+$.ajax({
+    url: "/departments",
+    method: "GET",
+    success: function(dbResponse) {
+        // Save department names from DB
+      // Build a count map for DepartmentID
+const dbDepartmentCount = {};
+dbResponse.forEach(dep => {
+    const id = dep.department; // or dep.DepartmentID if that's the property
+    dbDepartmentCount[id] = (dbDepartmentCount[id] || 0) + 1;
+});// adjust property name if different
+
+        // Now call second API
+        $.ajax({
+            url: "http://localhost:8085/api/Get-department",
+            method: "GET",
+
+            success: function(apiResponse) {
+                const departments = apiResponse.department;
+                $('#modern-loader2').hide();
+
+departments.forEach(function(dept) {
+   const count = dbDepartmentCount[dept.DepartmentID] || 0;
+if (count > 0) {
+    // Map department names to their corresponding Font Awesome icons
+    const departmentIcons = {
+      'Management': '<i class="fas fa-users-cog"></i>',
+      'IT S/W': '<i class="fas fa-laptop-code"></i>',
+      'IT DEPARTMENT': '<i class="fas fa-desktop"></i>',
+      'B&D DEPARTMENT': '<i class="fas fa-chart-line"></i>',
+      'P & A DEPARTMENT': '<i class="fas fa-file-alt"></i>',
+      'ACCOUNTS': '<i class="fas fa-dollar-sign"></i>',
+      'HR': '<i class="fas fa-user-tie"></i>',
+      'GOLD LOAN': '<i class="fas fa-coins"></i>',
+      'MARKETING': '<i class="fas fa-bullhorn"></i>',
+      'BRANCH OPERATIONS': '<i class="fas fa-building"></i>',
+      'VEHICLE LOAN': '<i class="fas fa-car"></i>',
+      'Legal': '<i class="fas fa-gavel"></i>',
+      'MIS': '<i class="fas fa-database"></i>',
+      'Reception': '<i class="fas fa-phone"></i>',
+      'Training': '<i class="fas fa-graduation-cap"></i>',
+      'Collection': '<i class="fas fa-hand-holding-usd"></i>',
+      'Term Loan': '<i class="fas fa-calendar-alt"></i>',
+      'Business Loan': '<i class="fas fa-briefcase"></i>',
+      'Micro Finance': '<i class="fas fa-piggy-bank"></i>',
+      'VL Cpc': '<i class="fas fa-motorcycle"></i>',
+      'RM': '<i class="fas fa-handshake"></i>',
+      'VL_Two_Wheeler': '<i class="fas fa-motorcycle"></i>',
+      'Compliance': '<i class="fas fa-shield-alt"></i>',
+      'as assistent': '<i class="fas fa-user-plus"></i>',
+      'Vigilance': '<i class="fas fa-eye"></i>',
+      'Vl Two Wheeler Collection': '<i class="fas fa-motorcycle"></i>',
+      'GL Recovery': '<i class="fas fa-coins"></i>',
+      'Inspection': '<i class="fas fa-search"></i>',
+      'Agm Gl Operation': '<i class="fas fa-coins"></i>',
+      'Business Head Microloan': '<i class="fas fa-user-tie"></i>',
+      'VL_Two_Wheeler_TN': '<i class="fas fa-motorcycle"></i>',
+      'Operations-Credit': '<i class="fas fa-credit-card"></i>',
+      'Inspection Other Loans': '<i class="fas fa-search"></i>',
+      'AH': '<i class="fas fa-user-cog"></i>',
+      'CD Loans Dept': '<i class="fas fa-money-bill-wave"></i>'
+    };
+    
+    // Use appropriate fallback based on department type
+    let fallbackIcon = '<i class="fas fa-briefcase"></i>';
+    if (dept.DepartmentName.toLowerCase().includes('loan')) {
+      fallbackIcon = '<i class="fas fa-coins"></i>';
+    } else if (dept.DepartmentName.toLowerCase().includes('vehicle') || dept.DepartmentName.toLowerCase().includes('two')) {
+      fallbackIcon = '<i class="fas fa-motorcycle"></i>';
+    } else if (dept.DepartmentName.toLowerCase().includes('hr') || dept.DepartmentName.toLowerCase().includes('management')) {
+      fallbackIcon = '<i class="fas fa-user-tie"></i>';
+    }
+    
+    const iconHtml = departmentIcons[dept.DepartmentName] || fallbackIcon;
+    
+    $('#department-card').append(`
+        <div class="card" onclick="getid(${dept.DepartmentID})">
+            <div class="department-icon">${iconHtml}</div>
+            <p>${dept.DepartmentName}</p>
+            <p >( ${count} )</p>
+        </div>
+    `);
+}
+});
+            },
+            error: function(err) {
+                console.error("API call failed", err);
+            }
+        });
+
+    },
+    error: function(err) {
+        console.error("DB departments API failed", err);
+    }
+});
+
+function getid(id){
+     $('#career-card').empty();
+      $("#modern-loader").show();
+    $.ajax({
+        url: "/departments",
+        method: "GET",
+      
+          
+        
+        success: function(response) {
+         
+            if (!id) {
+                // If id is not provided or falsy, show all departments
+                console.log("No id provided. Showing all:", response);
+                // You can also update the UI here if needed
+                return;
+            }
+            var filtered = response.filter(function(dep) {
+                return dep.department == id;
+            });
+
+            if (filtered.length > 0) {
+                   $("#modern-loader").hide(); 
+                console.log("Matched Department:", filtered);
+                 const data = filtered; // Use response directly
+            data.forEach(function(item) {
+                // Map department names to their corresponding Font Awesome icons
+                const departmentIcons = {
+                  'Management': '<i class="fas fa-users-cog"></i>',
+                  'IT S/W': '<i class="fas fa-laptop-code"></i>',
+                  'IT DEPARTMENT': '<i class="fas fa-desktop"></i>',
+                  'B&D DEPARTMENT': '<i class="fas fa-chart-line"></i>',
+                  'P & A DEPARTMENT': '<i class="fas fa-file-alt"></i>',
+                  'ACCOUNTS': '<i class="fas fa-dollar-sign"></i>',
+                  'HR': '<i class="fas fa-user-tie"></i>',
+                  'GOLD LOAN': '<i class="fas fa-coins"></i>',
+                  'MARKETING': '<i class="fas fa-bullhorn"></i>',
+                  'BRANCH OPERATIONS': '<i class="fas fa-building"></i>',
+                  'VEHICLE LOAN': '<i class="fas fa-car"></i>',
+                  'Legal': '<i class="fas fa-gavel"></i>',
+                  'MIS': '<i class="fas fa-database"></i>',
+                  'Reception': '<i class="fas fa-phone"></i>',
+                  'Training': '<i class="fas fa-graduation-cap"></i>',
+                  'Collection': '<i class="fas fa-hand-holding-usd"></i>',
+                  'Term Loan': '<i class="fas fa-calendar-alt"></i>',
+                  'Business Loan': '<i class="fas fa-briefcase"></i>',
+                  'Micro Finance': '<i class="fas fa-piggy-bank"></i>',
+                  'VL Cpc': '<i class="fas fa-motorcycle"></i>',
+                  'RM': '<i class="fas fa-handshake"></i>',
+                  'VL_Two_Wheeler': '<i class="fas fa-motorcycle"></i>',
+                  'Compliance': '<i class="fas fa-shield-alt"></i>',
+                  'as assistent': '<i class="fas fa-user-plus"></i>',
+                  'Vigilance': '<i class="fas fa-eye"></i>',
+                  'Vl Two Wheeler Collection': '<i class="fas fa-motorcycle"></i>',
+                  'GL Recovery': '<i class="fas fa-coins"></i>',
+                  'Inspection': '<i class="fas fa-search"></i>',
+                  'Agm Gl Operation': '<i class="fas fa-coins"></i>',
+                  'Business Head Microloan': '<i class="fas fa-user-tie"></i>',
+                  'VL_Two_Wheeler_TN': '<i class="fas fa-motorcycle"></i>',
+                  'Operations-Credit': '<i class="fas fa-credit-card"></i>',
+                  'Inspection Other Loans': '<i class="fas fa-search"></i>',
+                  'AH': '<i class="fas fa-user-cog"></i>',
+                  'CD Loans Dept': '<i class="fas fa-money-bill-wave"></i>'
+                };
+                
+                // Use appropriate fallback based on department type
+                let fallbackIcon = '<i class="fas fa-briefcase"></i>';
+                if (item.de_name && item.de_name.toLowerCase().includes('loan')) {
+                  fallbackIcon = '<i class="fas fa-coins"></i>';
+                } else if (item.de_name && (item.de_name.toLowerCase().includes('vehicle') || item.de_name.toLowerCase().includes('two'))) {
+                  fallbackIcon = '<i class="fas fa-motorcycle"></i>';
+                } else if (item.de_name && (item.de_name.toLowerCase().includes('hr') || item.de_name.toLowerCase().includes('management'))) {
+                  fallbackIcon = '<i class="fas fa-user-tie"></i>';
+                }
+                
+                const iconHtml = item.de_name ? (departmentIcons[item.de_name] || fallbackIcon) : fallbackIcon;
+                
+                $('#career-card').append(`
+                    <div class="card">
+                        <div class="department-icon">${iconHtml}</div>
+                        
+                        <div class="card-content">
+                            <h5>${item.job}</h5>
+                            ${item.de_name ? `<p>${item.de_name}</p>` : ''}
+                            
+                            <div class="card-details">
+                                <div class="salary-info">
+                                    <label><i class="fas fa-money-bill-wave"></i> Salary</label>
+                                    <p>₹${item.salary_range_from} - ₹${item.salary_range_to}</p>
+                                </div>
+                                
+                                <div class="experience-info">
+                                    <label><i class="fas fa-clock"></i> Experience</label>
+                                    <p>${item.experience_from} - ${item.experience_to} years</p>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="applynow('${item.id}' , '${item.de_name}')">
+                                <i class="fas fa-paper-plane"></i> Apply Now
+                            </button>
+                        </div>
+                    </div>
+                `);
+            });
+            } else {
+                $("#modern-loader").hide(); 
+                console.log("No match found. Showing all:", response);
+            }
+        }
+    });
+}
+
+</script>

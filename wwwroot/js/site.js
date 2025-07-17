@@ -341,6 +341,28 @@ function updateLoanDisplay(loanName) {
                 pointsContainer.appendChild(li);
             });
         }
+
+        document.getElementById('redirect').addEventListener('click', function() {
+            var loanType = loan.name;;
+            var loanId = loan.id; // No quotes around this!
+
+            if (loanType && loanId && loanId != 0) {
+                window.location.href = `/services/${loanType}/${loanId}`;
+            } else {
+                alert('Loan information not available.');
+            }
+        });
+
+        document.getElementById('redirect2').addEventListener('click', function() {
+            var loanType = loan.name;;
+            var loanId = loan.id; // No quotes around this!
+
+            if (loanType && loanId && loanId != 0) {
+                window.location.href = `/services/${loanType}/${loanId}`;
+            } else {
+                alert('Loan information not available.');
+            }
+        });
     } else {
       
         head.textContent = '';

@@ -4,9 +4,10 @@
         <h1 id="header">@(Model.Gold?.FirstOrDefault()?.Header ?? "Gold Loan")</h1>
         <p id="sub">@(Model.Gold?.FirstOrDefault()?.SubContent ?? "Experience Door Step Gold Loan Services")</p>
         <div class="button">
-            <button>Apply Now</button>
+            <button id="redirect">Apply Now</button>
         </div>
 </section>
+
 
 @{
     var goldData = Model.Gold?.FirstOrDefault();
@@ -46,3 +47,5 @@
     image2 = vehicleData.Image2,
     detail = vehicleData.SubContent
 }) : null)" />
+
+    

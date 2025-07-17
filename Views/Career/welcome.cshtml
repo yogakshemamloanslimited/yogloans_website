@@ -3,30 +3,177 @@
 
 <section class="hero-career" style="background: url(@(Model.FirstOrDefault()?.Image1 ?? "")); background-position:center; background-repeat: no-repeat;
   background-size: cover;" id="welcome-desktop">
-    <div class="main-content">
-        <h1>Join Our Team</h1>
+    <div class="main-content" style="width:80%;">
+    <h1>Explore our openings and start your journey with us today</h1>
+      <!--   
         <p>Build your career with us. We're looking for passionate, talented people to help us make a difference.</p>
         <div class="button">
-        <button class="cta-btn" onclick="document.getElementById('application').scrollIntoView({behavior: 'smooth'});">Apply Now</button>
+        <button class="cta-btn" onclick="document.getElementById('application').scrollIntoView({behavior: 'smooth'});">Apply Now</button> -->
+        <!-- <div class="stats-cards">
+            <div class="stat-card">
+                <div class="icon-circle openings">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <h4>Total Openings</h4>
+                <h2>12</h2>
+            </div>
+            <div class="stat-card">
+                <div class="icon-circle hired">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <h4>Total Hired</h4>
+                <h2>5</h2>
+            </div>
+            <div class="stat-card">
+                <div class="icon-circle waiting">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <h4>Total Waiting List</h4>
+                <h2>7</h2>
+            </div>
         </div>
-    </div>
+        </div>
+    </div> -->
 </section>
 
 
 <section class="hero-career" style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""));" id="welcome-mobile">
-    <div class="main-content">
-        <h1>Join Our Team</h1>
-        <p>Build your career with us. We're looking for passionate, talented people to help us make a difference.</p>
-        <button class="cta-btn" onclick="document.getElementById('application').scrollIntoView({behavior: 'smooth'});">Apply Now</button>
+    <div class="main-content" style="width:100%;">
+          <h1>Explore our openings and start your journey with us today</h1>
     </div>
 </section>
 
 
 <style>
+
+.hero-career .main-content {
+    width:100%;
+}
+        .hero-career h1 { font-size: 3rem; margin-bottom: 10px; z-index: 2; position: relative; width: 100%;  }
+ .hero-career{
+    height:300px;
+ }
+   .hero-career .main-content{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:70%;
+        flex-direction: row;
+    }
+    .beautiful-card {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+        padding: 32px 40px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        min-width: 260px;
+        max-width: 340px;
+        transition: box-shadow 0.2s;
+    }
+    .beautiful-card:hover {
+        box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 3px 12px rgba(0,0,0,0.08);
+    }
+    .main-content .counts .form-group{
+         display:flex;
+         flex-direction:column;
+         justify-content:center;
+         align-items:center;
+         width:100%;
+         gap: 10px;
+    }
+    .icon-circle {
+        background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(78,84,200,0.15);
+    }
+    .openings-number {
+        font-size: 2.5rem;
+        color: #4e54c8;
+        font-weight: bold;
+        margin: 0;
+    }
+    .hero-career h2 {
+        font-size: 1.3rem;
+     
+        margin-bottom: 0.2em;
+        font-weight: 600;
+        color:white ;
+    }
+    .hero-career p {
+        width:auto;
+        color:white ;
+    }
    #welcome-mobile { display: none; }
     #welcome-desktop { display: flex; }
     @@media (max-width: 767px) {
+        .hero-career h1{
+            font-size:1.5rem;
+        }
         #welcome-desktop { display: none; }
         #welcome-mobile { display: flex; }
+        .beautiful-card { padding: 20px 10px; min-width: 180px; max-width: 100%; }
+        .openings-number { font-size: 2rem; }
     }
+
+.stats-cards {
+    display: flex;
+    
+  justify-content: space-between;
+    align-items: stretch;
+    /* margin: 0 auto; */
+    flex-wrap: wrap;
+    width:100%;
+}
+.stat-card {
+/*     background: #fff; */
+    border-radius: 18px;
+   
+   /*  padding: 28px 32px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ /*    min-width: 180px;
+    max-width: 220px; */
+    transition: box-shadow 0.2s;
+}
+.stat-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+.icon-circle {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    /* color: #fff; */
+}
+
+.stat-card h4 {
+    font-size: 1.1rem;
+    
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+.stat-card h2 {
+    font-size: 2.2rem;
+   
+    font-weight: bold;
+    margin: 0;
+}
+@@media (max-width: 767px) {
+    .stats-cards { flex-direction: column; gap: 18px; }
+    .stat-card { max-width: 100%; min-width: 0; }
+}
+
 </style>

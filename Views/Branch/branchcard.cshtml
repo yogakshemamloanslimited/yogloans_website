@@ -3,18 +3,34 @@
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <link rel="stylesheet" href="~/css/branch/branch.css" asp-append-version="true">
 
-    <div id="spinners" style="text-align:center; margin:40px 0; padding:40px;">
+   <!--  <div id="spinners" style="text-align:center; margin:40px 0; padding:40px;">
         <span style="color:#2c3e50; font-size:1.2rem; font-weight:500; margin-bottom:20px; display:block;">Loading nearby branches...</span>
         <div style="border: 4px solid #f3f3f3; border-top: 4px solid #044697; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; display:inline-block;"></div>
-    </div>
+    </div> -->
     
     <div class="branches">
-        <div class="container">
+        <div class="branch" style="width:100%;">
             <div class="nearby-header">
            <!--      <h3 class="nearby-title">Nearby Branches</h3> -->
                 <!-- <p class="nearby-subtitle">Branches within 10km of your location</p> -->
+                
             </div>
             <div id="branch-list">
+            <div id="dummy-cards">
+          <div class="card" style="background: rgba(11, 11, 11, 0.15);">
+    <div class="preload-here"></div>
+</div>
+                     <div class="card" style="background: rgba(11, 11, 11, 0.15);">
+    <div class="preload-here"></div>
+</div>
+                           <div class="card" style="background: rgba(11, 11, 11, 0.15);">
+    <div class="preload-here"></div>
+</div>
+                           <div class="card" style="background: rgba(11, 11, 11, 0.15);">
+    <div class="preload-here"></div>
+</div>
+
+                           </div>
             </div>
         </div>
     </div>

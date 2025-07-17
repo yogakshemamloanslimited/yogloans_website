@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets\\css\\csr\\reportcard.css"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\departments.css",
+      "PackagePath": "staticwebassets\\css\\departments.css"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\home\\about.css",
       "PackagePath": "staticwebassets\\css\\home\\about.css"
     },
@@ -119,6 +123,10 @@
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\Terms&conditions.pdf",
       "PackagePath": "staticwebassets\\images\\Terms&conditions.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\Tiredman.jpg",
+      "PackagePath": "staticwebassets\\images\\Tiredman.jpg"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\crisil.jpg",
@@ -1065,6 +1073,30 @@
       "PackagePath": "staticwebassets\\uploads\\Policy\\CSRProject2023-24_41893593-fb82-42ce-ad48-cfec4635a023.pdf"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\Form15G-16_006c2a52-6f0f-4129-aa19-6c6915086b9c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\Form15G-16_006c2a52-6f0f-4129-aa19-6c6915086b9c.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\Gold_Loan_Document-8_0ee090c3-807c-4979-a964-3d74bfe30aac.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\Gold_Loan_Document-8_0ee090c3-807c-4979-a964-3d74bfe30aac.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\Gold_Loan_Document-8_38865d81-330b-4f8a-b9f1-7653d1482f70.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\Gold_Loan_Document-8_38865d81-330b-4f8a-b9f1-7653d1482f70.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\Gold_Loan_Document-8_515d3ad6-7d38-486a-93d2-c0fbf06a0448.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\Gold_Loan_Document-8_515d3ad6-7d38-486a-93d2-c0fbf06a0448.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\document_a30d44f0-b7b5-421f-9ceb-0c4c656f7d9e.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\document_a30d44f0-b7b5-421f-9ceb-0c4c656f7d9e.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\document_a982cc3d-ae93-479d-88a3-fb1b5392855c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\document_a982cc3d-ae93-479d-88a3-fb1b5392855c.pdf"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\policies_5b58e366-6ee1-4f7a-8501-3dbad9c4a6a8.png",
       "PackagePath": "staticwebassets\\uploads\\Policy\\policies_5b58e366-6ee1-4f7a-8501-3dbad9c4a6a8.png"
     },
@@ -1169,6 +1201,34 @@
       "PackagePath": "staticwebassets\\uploads\\career\\doc\\Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.pdf"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Gold_Loan_Document-5_b41c1eb3-0800-4312-8c33-e6e0d9c3aae5.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Gold_Loan_Document-5_b41c1eb3-0800-4312-8c33-e6e0d9c3aae5.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Gold_Loan_Document-5_d702513c-a471-4874-b832-3cab4e36981d.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Gold_Loan_Document-5_d702513c-a471-4874-b832-3cab4e36981d.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Gold_Loan_Document-6_375a2636-cb5d-4554-ba45-159b70dbd9df.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Gold_Loan_Document-6_375a2636-cb5d-4554-ba45-159b70dbd9df.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Gold_Loan_Document-7_222f750a-a568-4eea-8d43-b3124e597719.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Gold_Loan_Document-7_222f750a-a568-4eea-8d43-b3124e597719.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Gold_Loan_Document-8_994bd05d-87e2-4a8e-a4a8-77e55ec4390e.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Gold_Loan_Document-8_994bd05d-87e2-4a8e-a4a8-77e55ec4390e.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Loan Cum Hypothecation Agreement_b25e805a-2fea-4315-903b-0c3dac94cac5.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Loan Cum Hypothecation Agreement_b25e805a-2fea-4315-903b-0c3dac94cac5.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\document_2fd53835-8cd1-474c-82c5-5d2b52850215.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\document_2fd53835-8cd1-474c-82c5-5d2b52850215.pdf"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\contact\\contact_338ec5a1-f897-456b-ac32-b452bb725219.png",
       "PackagePath": "staticwebassets\\uploads\\contact\\contact_338ec5a1-f897-456b-ac32-b452bb725219.png"
     },
@@ -1227,6 +1287,14 @@
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investors\\investors_5612fecc-8c85-48f1-8c4f-09871902b78c.png",
       "PackagePath": "staticwebassets\\uploads\\investors\\investors_5612fecc-8c85-48f1-8c4f-09871902b78c.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\nearby\\Nearby_77960c49-595b-4841-ac38-4366d666b35e.png",
+      "PackagePath": "staticwebassets\\uploads\\nearby\\Nearby_77960c49-595b-4841-ac38-4366d666b35e.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\nearby\\nearby_783e76ba-6d92-4c94-a799-564f9bdc4d49.png",
+      "PackagePath": "staticwebassets\\uploads\\nearby\\nearby_783e76ba-6d92-4c94-a799-564f9bdc4d49.png"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\online\\online_4e5b925f-8ffd-443b-b726-e5e5ffbc4e8d.png",

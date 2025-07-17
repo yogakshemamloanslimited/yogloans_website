@@ -20,11 +20,14 @@ namespace yogloansdotnet.Migrations
                     File = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Department = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Salary_range_to = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Salary_range_from = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Salary_range_to = table.Column<string>(type: "int(max)", nullable: true),
+                    Salary_range_from = table.Column<string>(type: "int(max)", nullable: true),
+                     Experience_to = table.Column<string>(type: "int(max)", nullable: true),
+                    Experience_from = table.Column<string>(type: "int(max)", nullable: true),
                     Shift = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     de_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Discription = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Discription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

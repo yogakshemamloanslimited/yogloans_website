@@ -1,51 +1,40 @@
 
 .report-cards {
     width: 100%;
-    max-width: 1000px;
+    
     margin: 40px auto;
     padding: 0 20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    justify-content:center;
+    align-items:stretch;
+    gap: 25px;
 }
-
 .section {
-    margin-bottom: 40px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
 }
 
-.section:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
+.section-item {
+    padding: 25px;
 }
 
 .section-item h3 {
     color: #333;
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 20px;
-}
-
-.section-item h3::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 8px;
-    background-color: #044697;
-    border-radius: 50%;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
 }
 
 .section-item p {
     color: #666;
-    font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.6;
     margin-bottom: 20px;
-    padding-left: 20px;
 }
-
 .pdfs {
     margin-top: 15px;
     padding-left: 20px;

@@ -66,7 +66,7 @@ public class DepartmentController : Controller
             }
 
             if (careerModel.Id == 0) // New record
-            {
+            {   careerModel.Status = "1"; 
                 _context.Career.Add(careerModel);
                 await _context.SaveChangesAsync();
 
@@ -91,6 +91,9 @@ public class DepartmentController : Controller
                 existingCareer.Shift = careerModel.Shift;
                 existingCareer.Discription = careerModel.Discription;
                 existingCareer.de_name = careerModel.de_name;
+                existingCareer.Experience_from = careerModel.Experience_from ;
+                existingCareer.Experience_to = careerModel.Experience_to ;
+                existingCareer.Status = "1";
 
                 if (!string.IsNullOrEmpty(savedFilePath))
                 {
@@ -122,7 +125,26 @@ public class DepartmentController : Controller
             return Json(new { success = false, message = ex.ToString() }); // For debugging only!
         }
     }
+    [Route("status-change")]
+    [HttpPost]
+    public async Task<IActionResult> ChangeStatus(int id)
+    {
+        var career = await _context.Career.FindAsync(id);
+        if (career == null)
+            return Json(new { success = false, message = "Career not found" });
 
+        // Toggle status
+        career.Status = (career.Status == "1") ? "0" : "1";
+        _context.Career.Update(career);
+        await _context.SaveChangesAsync();
+
+        return Json(new
+        {
+            success = true,
+            message = "Status updated successfully",
+            newStatus = career.Status
+        });
+    }
     private async Task<string> SavePdfAsync(IFormFile file)
     {
         var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);

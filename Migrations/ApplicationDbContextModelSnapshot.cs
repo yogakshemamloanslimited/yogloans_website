@@ -183,6 +183,12 @@ namespace yogloansdotnet.Migrations
                     b.Property<string>("Discription")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Experience_from")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Experience_to")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("File")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
@@ -203,6 +209,9 @@ namespace yogloansdotnet.Migrations
 
                     b.Property<string>("Shift")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("de_name")

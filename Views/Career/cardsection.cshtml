@@ -1,30 +1,742 @@
+<section class="dp2">
 
-<link rel="stylesheet" href="~/css/career/card.css" asp-append-version="true">
-<section class="job-section">
-    <div class="main-content">
-        <h2>Open Positions</h2>
-        <div class="jobs-grid">
-            <div class="job-card">
-                <h3>Senior Software Engineer</h3>
-                <p><b>Location:</b> Kerala</p>
-                <p><b>Experience:</b> 3-5 Years</p>
-                <p><b>Type:</b> Full Time</p>
-                <button class="apply-btn" onclick="document.getElementById('application').scrollIntoView({behavior: 'smooth'});">Apply</button>
-            </div>
-            <div class="job-card">
-                <h3>Financial Analyst</h3>
-                <p><b>Location:</b> Tamil Nadu</p>
-                <p><b>Experience:</b> 1-3 Years</p>
-                <p><b>Type:</b> Full Time</p>
-                <button class="apply-btn" onclick="document.getElementById('application').scrollIntoView({behavior: 'smooth'});">Apply</button>
-            </div>
-            <div class="job-card">
-                <h3>Office Staff</h3>
-                <p><b>Location:</b> Karnataka</p>
-                <p><b>Experience:</b> 5+ Years</p>
-                <p><b>Type:</b> Full Time</p>
-                <button class="apply-btn" onclick="document.getElementById('application').scrollIntoView({behavior: 'smooth'});">Apply</button>
-            </div>
-        </div>
+<h3 id="head-career">Opening positions</h3>
+    <div class="" id="career-card" style="min-height:350px;">
+      <div class="modern-loader" id="modern-loader" ></div>
     </div>
 </section>
+
+
+<!-- form fill -->
+
+
+
+
+<div class="modal fade" id="candidateModal" tabindex="-1" aria-labelledby="candidateModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <form enctype="multipart/form-data">
+
+        <div class="modal-header border-0 bg-white">
+          <h5 class="modal-title w-100 text-center" id="candidateModalLabel" style="font-weight:700; letter-spacing:1px;">Add Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body row g-3 justify-content-center">
+          <div class="profile-pic-section text-center mb-4">
+            <div class="profile-pic-wrapper">
+              <img id="profilePreview" src="https://ui-avatars.com/api/?name=Profile&background=eee&color=888&rounded=true" class="profile-pic-img" alt="Profile Preview">
+              <label for="profileInput" class="profile-pic-upload">
+                <i class="fas fa-camera"></i>
+                <input type="file" id="profileInput" name="Profile" accept="image/*" style="display:none;">
+              </label>
+            </div>
+            <div class="profile-pic-caption">Change Photo</div>
+          </div>
+          <div class="col-md-10 mx-auto">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" name="Name" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label for="Genter" class="form-label">Gender</label>
+                <select name="Genter" class="form-select" required>
+                  <option value="">Select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="DOB" class="form-label">DOB</label>
+                <input type="date" name="DOB" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label for="Mobile_no" class="form-label">Mobile No</label>
+                <input type="text" name="Mobile_no" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" name="Email" class="form-control">
+              </div>
+              
+              <div class="col-md-6">
+                <label for="qualification_id" class="form-label">Qualification </label>
+                <select name="qualification_id" class="form-control" id="qf"></select>
+              </div>
+              <div class="col-md-6">
+                <label for="Experience" class="form-label">Experience</label>
+                <input type="text" name="Experience" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label for="House" class="form-label">House</label>
+                <input type="text" name="House" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label for="pin" class="form-label">PIN</label>
+                <input type="text" name="pin" class="form-control" id="pin">
+              </div>
+              <div class="col-md-6">
+                <label for="Post_id" class="form-label">Post</label>
+                <select name="location_id" class="form-control" id="postSelect"></select>
+              </div>
+              <div class="col-md-6">
+                <label for="state" class="form-label">State</label>
+                <input type="text" name="state" class="form-control" id="state" readonly>
+              </div>
+              <div class="col-md-6">
+                <label for="district" class="form-label">District</label>
+                <input type="text" name="district" class="form-control" id="district" readonly>
+              </div>
+              <div class="col-md-6">
+                <label for="Resume" class="form-label">Resume</label>
+                <input type="file" name="Resume" class="form-control">
+              </div>
+              <!-- Add hidden fields for missing backend fields if needed -->
+             <input type="hidden" name="Post_id" value="4739" id="post-id">
+<input type="hidden" name="status" value="1">
+<input type="hidden" name="dipartment" value="IT S/W" id="department">
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-0 bg-white">
+          <button type="submit" class="btn btn-success">Save</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="color:black;">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+#career-card{
+  position:relative;
+ 
+}
+.modern-loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #f03355;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+  display: block;
+}
+@@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    .dp2{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+    .dp2 h3{
+      padding:15px;
+      margin-top:15px;
+      margin-bottom:15px;
+    }
+        .dp2  #career-card{
+        width:100%;
+       /*  max-width:1200px; */
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+        justify-content:center;
+        align-items:stretch;
+        gap:20px;
+        padding:20px;
+        box-sizing: border-box;
+        box-shadow:0px 0px 0px 0px black;
+    }
+                        #career-card .card{
+        width:100%;
+        min-width:0;
+        display: flex;
+    /*     flex-direction: column; */
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0;
+        min-height: 250px;
+        cursor: pointer;
+        background: #ffffff;
+        border-radius: 16px;
+        /* box-shadow: 0 4px 20px rgba(0,0,0,0.08); */
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        color: #333;
+       /*  border: 1px solid #f0f0f0; */
+       box-shadow:0px 0px 1px 0px gray;
+    }
+    
+    #career-card .card {
+      max-width:350px;
+    }
+    #career-card .card:hover {
+        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        transform: translateY(-5px);
+        border-color: #007bff;
+    }
+    #career-card img{
+      width:400px;
+      height:350px;
+      opacity:0.5;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+
+    }
+    #career-card .card .department-icon{
+        font-size: 32px;
+        color: #007bff;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        transition: all 0.3s ease;
+        z-index: 2;
+    }
+    #career-card .card:hover .department-icon{
+        color: #0056b3;
+        transform: scale(1.1) rotate(5deg);
+    }
+    #career-card .card h5 {
+        margin: 0 0 8px 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #333;
+        text-align: left;
+        line-height: 1.2;
+        position: relative;
+        z-index: 2;
+    }
+    
+    #career-card .card p {
+        margin: 0;
+        font-size: 0.85rem;
+        text-align: left;
+        word-break: break-word;
+        color: #666;
+        position: relative;
+        z-index: 2;
+    }
+    #career-card .card .card-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 15px;
+    }
+    
+    #career-card .card .card-details {
+        margin: 10px 0;
+        flex-grow: 1;
+        display: flex;
+        justify-content:space-between;
+        gap: 8px;
+    }
+    #career-card .card label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #007bff;
+        margin: 6px 0 2px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    #career-card .card .salary-info,
+    #career-card .card .experience-info {
+        background: #f8f9fa;
+        padding: 8px 12px;
+        border-radius: 8px;
+        margin: 4px 0;
+        border-left: 3px solid #007bff;
+        position: relative;
+        z-index: 2;
+    }
+    
+    #career-card .card .salary-info p,
+    #career-card .card .experience-info p {
+        margin: 0;
+        font-size: 0.8rem;
+        color: #495057;
+        font-weight: 600;
+    }
+    
+    #career-card .card .btn {
+        margin-top: auto;
+        padding: 10px 24px;
+        font-size: 0.85rem;
+        font-weight: 700;
+     /*    border-radius: 20px; */
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        border: 2px solid #044697;
+        background: #044697;
+        color: white;
+        position: relative;
+        z-index: 2;
+        align-self: flex-end;
+    }
+    
+    #career-card .card .btn:hover {
+        background: #0056b3;
+        border-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+    }
+
+    @@media (max-width: 900px) {
+        .dp2  #career-card {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        #career-card .card {
+            min-height: 220px;
+        }
+        
+        #career-card .card .card-content {
+            padding: 18px;
+            gap: 12px;
+        }
+    }
+    @@media (max-width: 600px) {
+        .dp2  #career-card {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        
+        #career-card .card {
+            min-height: 200px;
+        }
+        
+        #career-card .card .card-content {
+            padding: 15px;
+            gap: 5px;
+        }
+        
+        #career-card .card p {
+            font-size: 0.9rem;
+        }
+    }
+    @@media (max-width: 400px) {
+        .dp2  #career-card {
+            gap: 10px;
+            padding: 10px;
+        }
+        
+        #career-card .card {
+            min-height: 180px;
+        }
+        
+        #career-card .card .card-content {
+            padding: 12px;
+            gap: 8px;
+        }
+        
+        #career-card .card p {
+            font-size: 0.85rem;
+        }
+    }
+/* Instagram-style profile modal */
+#candidateModal .modal-content {
+/*   border-radius: 24px; */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border: none;
+  font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+  background: #fff;
+  overflow: hidden;
+}
+.profile-pic-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.profile-pic-wrapper {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+}
+.profile-pic-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  background: #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.profile-pic-upload {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 50%;
+
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(193,53,132,0.10);
+
+  font-size: 1.2rem;
+  transition: background 0.2s, color 0.2s;
+}
+.profile-pic-upload:hover {
+
+  color: #fff;
+}
+.profile-pic-caption {
+  font-size: 0.95rem;
+
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+#candidateModal .form-label {
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+#candidateModal .form-control, #candidateModal .form-select {
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(252,174,62,0.06);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+#candidateModal .form-control:focus, #candidateModal .form-select:focus {
+
+  box-shadow: 0 0 0 2px #fd5f3f33;
+}
+#candidateModal input[type="file"] {
+  background: #f8f8fa;
+  border: none;
+  padding: 0.5rem 0.75rem;
+}
+#candidateModal .modal-footer {
+  background: #fff;
+  border-top: none;
+  padding: 1.5rem 2rem 2rem 2rem;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+#candidateModal .btn-success {
+
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 0.6rem 2.2rem;
+  box-shadow: 0 2px 8px rgba(253,95,63,0.12);
+  letter-spacing: 1px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+#candidateModal .btn-success:hover {
+
+  box-shadow: 0 4px 16px rgba(193,53,132,0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+#candidateModal .btn-secondary {
+  background: #f8f8fa;
+ 
+ 
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+#candidateModal .btn-secondary:hover {
+ 
+  color: #fff;
+}
+#candidateModal input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: hue-rotate(320deg) brightness(1.2);
+}
+#candidateModal .form-control[readonly] {
+  background: #f8f8fa;
+  color: #888;
+}
+#candidateModal .modal-body .col-md-6 {
+  margin-bottom: 1.1rem;
+}
+@@media (max-width: 600px) {
+  #candidateModal .modal-dialog {
+    max-width: 98vw;
+    margin: 0.5rem auto;
+  }
+  #candidateModal .modal-body, #candidateModal .modal-footer {
+    padding: 1rem;
+  }
+  .profile-pic-wrapper, .profile-pic-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+</style>
+<script>
+  $("#modern-loader").show();
+  $.ajax({
+        url: "/departments",
+        method: "GET",
+       
+        success: function(response) {
+            $("#modern-loader").hide(); // Hide loader
+            /* console.log("response:", response, Array.isArray(response)); */
+            const data = response; // Use response directly
+            $('#career-card').empty();
+            if (data.length === 0) {
+              $('#career-card').append('<img src="images/Tiredman.jpg">');
+              $('#head-career').hide();
+            } else {
+              data.forEach(function(item) {
+                // Map department names to their corresponding Font Awesome icons
+                const departmentIcons = {
+                  'Management': '<i class="fas fa-users-cog"></i>',
+                  'IT S/W': '<i class="fas fa-laptop-code"></i>',
+                  'IT DEPARTMENT': '<i class="fas fa-desktop"></i>',
+                  'B&D DEPARTMENT': '<i class="fas fa-chart-line"></i>',
+                  'P & A DEPARTMENT': '<i class="fas fa-file-alt"></i>',
+                  'ACCOUNTS': '<i class="fas fa-dollar-sign"></i>',
+                  'HR': '<i class="fas fa-user-tie"></i>',
+                  'GOLD LOAN': '<i class="fas fa-coins"></i>',
+                  'MARKETING': '<i class="fas fa-bullhorn"></i>',
+                  'BRANCH OPERATIONS': '<i class="fas fa-building"></i>',
+                  'VEHICLE LOAN': '<i class="fas fa-car"></i>',
+                  'Legal': '<i class="fas fa-gavel"></i>',
+                  'MIS': '<i class="fas fa-database"></i>',
+                  'Reception': '<i class="fas fa-phone"></i>',
+                  'Training': '<i class="fas fa-graduation-cap"></i>',
+                  'Collection': '<i class="fas fa-hand-holding-usd"></i>',
+                  'Term Loan': '<i class="fas fa-calendar-alt"></i>',
+                  'Business Loan': '<i class="fas fa-briefcase"></i>',
+                  'Micro Finance': '<i class="fas fa-piggy-bank"></i>',
+                  'VL Cpc': '<i class="fas fa-motorcycle"></i>',
+                  'RM': '<i class="fas fa-handshake"></i>',
+                  'VL_Two_Wheeler': '<i class="fas fa-motorcycle"></i>',
+                  'Compliance': '<i class="fas fa-shield-alt"></i>',
+                  'as assistent': '<i class="fas fa-user-plus"></i>',
+                  'Vigilance': '<i class="fas fa-eye"></i>',
+                  'Vl Two Wheeler Collection': '<i class="fas fa-motorcycle"></i>',
+                  'GL Recovery': '<i class="fas fa-coins"></i>',
+                  'Inspection': '<i class="fas fa-search"></i>',
+                  'Agm Gl Operation': '<i class="fas fa-coins"></i>',
+                  'Business Head Microloan': '<i class="fas fa-user-tie"></i>',
+                  'VL_Two_Wheeler_TN': '<i class="fas fa-motorcycle"></i>',
+                  'Operations-Credit': '<i class="fas fa-credit-card"></i>',
+                  'Inspection Other Loans': '<i class="fas fa-search"></i>',
+                  'AH': '<i class="fas fa-user-cog"></i>',
+                  'CD Loans Dept': '<i class="fas fa-money-bill-wave"></i>'
+                };
+                
+                // Use appropriate fallback based on department type
+                let fallbackIcon = '<i class="fas fa-briefcase"></i>';
+                if (item.de_name.toLowerCase().includes('loan')) {
+                  fallbackIcon = '<i class="fas fa-coins"></i>';
+                } else if (item.de_name.toLowerCase().includes('vehicle') || item.de_name.toLowerCase().includes('two')) {
+                  fallbackIcon = '<i class="fas fa-motorcycle"></i>';
+                } else if (item.de_name.toLowerCase().includes('hr') || item.de_name.toLowerCase().includes('management')) {
+                  fallbackIcon = '<i class="fas fa-user-tie"></i>';
+                }
+                
+                const iconHtml = departmentIcons[item.de_name] || fallbackIcon;
+                
+                $('#career-card').append(`
+                    <div class="card">
+                        <div class="department-icon">${iconHtml}</div>
+                        
+                        <div class="card-content">
+                            <h5>${item.job}</h5>
+                            ${item.de_name ? `<p>${item.de_name}</p>` : ''}
+                            
+                            <div class="card-details">
+                                <div class="salary-info">
+                                    <label><i class="fas fa-money-bill-wave"></i> Salary</label>
+                                    <p>₹${item.salary_range_from} - ₹${item.salary_range_to}</p>
+                                </div>
+                                
+                                <div class="experience-info">
+                                    <label><i class="fas fa-clock"></i> Experience</label>
+                                    <p>${item.experience_from} - ${item.experience_to} years</p>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="applynow('${item.id}', '${item.de_name}')">
+                                <i class="fas fa-paper-plane"></i> Apply Now
+                            </button>
+                        </div>
+                    </div>
+                `);
+              });
+            }
+
+        }});
+
+function applynow(id, de) {
+    $('#candidateModal').modal('show');
+    $('#post-id').val(id);         // This is for Post_id (hidden)
+    $('#department').val(de);      // This is for dipartment (hidden)
+    // Optionally, set the dropdown to the correct value if you know it
+    // $('#postSelect').val(id);   // Only if the value matches
+}
+
+$.ajax({
+    url : "http://localhost:8085/api/career/qualification",
+    method : "GET",
+    success : function (response){
+        const data = response ;
+
+        console.log(response);
+        data.forEach(function(item) {
+       $('#qf').append(`
+        
+        <option value="${item.Qualification_id}">${item.Qualification_name}</option>
+
+       `);});
+    }
+});
+
+    $('input[name="pin"]').on('keyup', function() {
+        $('#postSelect').empty(); 
+    var pin = $(this).val(); // get the current value
+    $.ajax({
+        url : "http://localhost:8085/api/career/get-application-data/" + pin,
+        method : "GET",
+        success : function (response){
+            const data =response;
+            console.log(response);
+            if (Array.isArray(data)) {
+                data.forEach(function(item){
+                   
+                    $('#postSelect').append(`
+                
+                    <option value="${item.post_id}" data-id="${item.post_id}">${item.post_name}</option>
+
+                    `);
+                });
+            } else {
+                console.error("API did not return an array for post data.");
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error("AJAX Error for post data:", status, error);
+        }
+    });
+});
+
+$('#postSelect').on('change', function(){
+    var Id = $(this).find(':selected').data('id');
+    $('#post-id').val(Id); // <-- Add this line to keep Post_id in sync
+    $.ajax({
+      url : "http://localhost:8085/api/career/other-address-details/"+Id,
+      method : "GET",
+      success : function(response){
+        console.log(response);
+        const data = response.data;
+        if (Array.isArray(data) && data.length > 0) {
+             console.log(data[0].post_name);
+    $('#state').val(data[0].state_name);
+    $('#district').val(data[0].district_name);
+        } else {
+          
+            console.log("No data found");
+        }
+      }
+
+} );
+});
+
+// Profile image preview logic
+$(document).on('change', '#profileInput', function(e) {
+  const [file] = this.files;
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      $('#profilePreview').attr('src', evt.target.result);
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+$('form').on('submit', function (e) {
+    e.preventDefault();
+
+    var formData = new FormData(this);
+
+    console.log('--- Form Data Entries ---');
+    for (var pair of formData.entries()) {
+        console.log(pair[0] + ':', pair[1]);
+    }
+
+    $.ajax({
+        url: "http://localhost:8085/api/career/apply",  // Your correct API URL
+        type: 'POST',
+        data: formData,
+        enctype: 'multipart/form-data', // Optional but clear for file uploads
+        processData: false, // Important for FormData
+        contentType: false, // Important for FormData
+        cache: false, // Recommended for file uploads
+        success: function (response) {
+            console.log(response);
+            if (typeof Swal !== 'undefined') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Candidate Profile Saved Successfully!'
+                }).then(() => {
+                    $('#candidateModal').modal('hide');
+                    $('form')[0].reset();
+                });
+            } else {
+                alert('Candidate Profile Saved Successfully!');
+                $('#candidateModal').modal('hide');
+                $('form')[0].reset();
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error('Full Error:', xhr.responseText);
+            let errorMsg = 'Something went wrong.';
+            try {
+                var response = JSON.parse(xhr.responseText);
+                errorMsg = response.ExceptionMessage || response.Message || errorMsg;
+            } catch (e) {
+                console.log('JSON parse error:', e);
+            }
+            if (typeof Swal !== 'undefined') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: errorMsg
+                });
+            } else {
+                alert(errorMsg);
+            }
+        }
+    });
+});
+
+// Ensure SweetAlert2 is included
+if (typeof Swal === 'undefined') {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11';
+    script.onload = function() { console.log('SweetAlert2 loaded'); };
+    document.head.appendChild(script);
+}
+
+</script>

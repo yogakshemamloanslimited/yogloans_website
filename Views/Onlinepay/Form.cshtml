@@ -26,9 +26,9 @@
 </section>
 
 <!-- added payments -->
- <div class="form-group" style="width:50%; padding:25px;" id="tables">
+ <form class="form-group" style="width:50%; padding:25px;" id="tables" >
     <table id="table-fill" class="bill-table" style="width:100%;">
-     
+     <input type="hidden" name="cus_id" value="@ViewBag.CustomerId">
      <tr>
         <th>
             Loan No
@@ -48,7 +48,7 @@
      </tr>
 
     </table>
-    <div class="form-group" id="total-amount-card">
+    <div class="form-group" id="total-amount-card" style="display:none;">
         <div class="total-card">
             <p class="total-label">Total Payment</p>
             <p id="totalpay" class="total-value"></p>
@@ -56,7 +56,7 @@
         </div>
        
     </div>
-    </div>
+    </form>
     </section>
 <input type="hidden" id="customerId" value="@ViewBag.CustomerId">
 <input type="hidden" id="mobile" value="@ViewBag.MobileNo">
@@ -261,6 +261,7 @@
         }
 
         $('#table-fill').show();
+        $('#total-amount-card').show();
         var amount = $('#amount').val();
         $('#table-fill').append(
             `
@@ -269,6 +270,8 @@
                 <td>${product}</td>
                 <td>${due_amount}</td>
                 <td class="amount-pay">${amount}</td>
+                <input value="${no}" name="loan_no" type="hidden">
+                <input value="${amount}" name="pay_amount" type="hidden" id="pay_amount"> 
                 <td><button class="btn btn-danger btn-sm remove-row">Remove</button></td>
             </tr>
             `
@@ -302,4 +305,46 @@
         });
         $('#totalpay').text(total.toFixed(2));
     }
+
+ $('#tables').on('submit', function (e) {
+    e.preventDefault();
+
+    var requestData = {
+    CustomerId: $('#customerId').val(),
+    CustomerName: $('#customerName').val(),
+    CustomerMobile: $('#mobile').val(), // Assuming mobile is the customer's mobile number
+    Amount: parseFloat($('#amount').val()), // This is the total amount for all payments
+    GridRows: []
+};
+
+// Suppose you loop through table rows to collect loan/payment info:
+$('#table-fill tr').each(function() {
+    var loanNo = $(this).find('td:first').text(); // Assuming loan number is in the first column
+    var payAmount = $(this).find('.amount-pay').text(); // Assuming payment amount is in the last column
+    if (loanNo && payAmount) {
+        requestData.GridRows.push({
+            LoanNo: parseInt(loanNo),
+            PayAmount: parseFloat(payAmount)
+        });
+    }
+});
+
+   
+    $.ajax({
+        url: "http://localhost:8085/api/career/payment",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(requestData),
+        success: function (response) {
+            console.log(response);
+            alert("Order No: " + response.orderNo + "\nPayment URL Data: " + response.paymentData);
+        },
+        error: function (xhr, status, error) {
+            console.error(xhr.responseText);
+            alert("Failed: " + xhr.responseText);
+        }
+    });
+});
+
+
 </script>

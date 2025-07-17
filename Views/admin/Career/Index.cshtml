@@ -35,10 +35,11 @@
                                     <th> PDF</th>
                                     <th>Role</th>
                                     <th>Department</th>
-                                    <th>Timing To</th>
-                                    <th>Timing From</th>
+                                    <th>salaryTo</th>
+                                    <th>salaryFrom</th>
                                     <th>Shift</th>
                                     <th>Description</th>
+                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -66,6 +67,16 @@
         <td>@career.Shift</td>
         <td>@career.Discription</td>
         <td>
+            @if (career.Status != null && (career.Status.ToString() == "1" || career.Status.ToString().ToLower() == "active"))
+            {
+                <i class="fa fa-check-circle statuschange" style="color:green;" title="Active" data-career-id="@career.Id"></i>
+            }
+            else
+            {
+                <i class="fa fa-times-circle statuschange" style="color:red;" title="Not Active" data-career-id="@career.Id"></i>
+            }
+        </td>
+        <td>
             <button class="btn btn-sm btn-info"  data-bs-toggle="modal" data-bs-target="#addcareer"
                     onclick="editCsr(
                         @career.Id, 
@@ -78,9 +89,9 @@
                         '@career.Shift',
                         '@career.Discription',
                         '@career.Department'
-                    )">Edit</button>
+                    )"><i class="fa fa-pen"></i></button>
 
-            <button class="btn btn-sm btn-danger" onclick="deleteCsr(@career.Id)">Delete</button>
+            <button class="btn btn-sm btn-danger" onclick="deleteCsr(@career.Id)"><i class="fa fa-trash"></i></button>
         </td>
     </tr>
 }   <tbody>
@@ -158,6 +169,19 @@
                     <div class="col-md-6">
                         <label for="salaryTo" class="form-label">Salary Range To</label>
                         <input type="number" id="salaryTo" name="careerModel.Salary_range_to" class="form-control" placeholder="Salary Range To">
+                    </div>
+                </div>
+
+
+                 <!-- Experience Range -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="salaryFrom" class="form-label">Experience From</label>
+                        <input type="number" id="salaryFrom" name="careerModel.Experience_from" class="form-control" placeholder="Salary Range From" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="salaryTo" class="form-label">Experience To</label>
+                        <input type="number" id="salaryTo" name="careerModel.Experience_to" class="form-control" placeholder="Salary Range To">
                     </div>
                 </div>
 
@@ -277,7 +301,7 @@
     method: "GET",
     success: function(response) {
         
-        const departments = response.customer_data;
+        const departments = response.department;
 
         for (let i = 0; i < departments.length; i++) {
             const department = departments[i];
@@ -326,5 +350,39 @@ $('#addcareer').on('hidden.bs.modal', function () {
         $('.modal-title').text('Edit Career');
         
     } 
+
+    $('.statuschange').click(function() {
+    var $icon = $(this);
+    var careerId = $icon.data('career-id');
+
+    $.ajax({
+        url: '/admin/Department/status-change',
+        type: 'POST',
+        data: { id: careerId },
+        success: function(response) {
+            if (response.success) {
+                // Update the icon based on newStatus
+                if (response.newStatus === "1") {
+                    $icon
+                        .removeClass('fa-times-circle')
+                        .addClass('fa-check-circle')
+                        .css('color', 'green')
+                        .attr('title', 'Active');
+                } else {
+                    $icon
+                        .removeClass('fa-check-circle')
+                        .addClass('fa-times-circle')
+                        .css('color', 'red')
+                        .attr('title', 'Not Active');
+                }
+            } else {
+                alert("Error: " + response.message);
+            }
+        },
+        error: function(xhr, status, error) {
+            alert("AJAX error: " + error);
+        }
+    });
+});
     </script>
 }

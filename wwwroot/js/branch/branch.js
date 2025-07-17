@@ -8,7 +8,7 @@ $(document).ready(function() {
             url: "http://localhost:8085/api/braches",
             method: "GET",
             success: function(response) {
-                $('#spinners').hide();
+                $('#dummy-cards').hide();
                 console.log("API response:", response); // Debug: log the response
                 let branches = [];
                 if (Array.isArray(response)) {

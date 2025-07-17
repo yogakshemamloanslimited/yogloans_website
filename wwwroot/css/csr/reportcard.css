@@ -1,11 +1,17 @@
 /* CSR Page Styling */
 
+
 .report-cards {
-    max-width: 1200px;
+    width: 100%;
+    
     margin: 40px auto;
     padding: 0 20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    justify-content:center;
+    align-items:stretch;
+    gap: 25px;
 }
-
 .section {
     background: #fff;
     border-radius: 8px;

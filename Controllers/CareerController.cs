@@ -23,6 +23,14 @@ namespace yogloansdotnet.Controllers
           var career = await _context.CareerWelcome.ToListAsync();
             return View(career);
         }
+      [HttpGet]
+[Route("departments")]
+public async Task<IActionResult> Departments()
+{
+    var department = await _context.Career.Where(x => x.Status == "1").ToListAsync();
+    return Json(department);
+}
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

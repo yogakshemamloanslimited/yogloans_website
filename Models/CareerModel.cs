@@ -31,6 +31,12 @@ namespace yogloansdotnet.Models
         [MaxWords(10)]
         public string? Salary_range_from { get; set; }
 
+         [MaxWords(10)]
+        public string? Experience_from { get; set; }
+
+        [MaxWords(10)]
+        public string? Experience_to { get; set; }
+
         [Required]
         [MaxWords(10)]
         public string Shift { get; set; } = string.Empty;
@@ -41,5 +47,8 @@ namespace yogloansdotnet.Models
 
         [MaxWords(200)]
         public string? Discription { get; set; }
+
+        [MaxWords(10)]
+        public string? Status { get; set; }
     }
 }
