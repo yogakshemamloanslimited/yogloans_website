@@ -5,29 +5,25 @@
     margin: 40px auto;
     padding: 0 20px;
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content:center;
     align-items:stretch;
     gap: 25px;
 }
-.section {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    overflow: hidden;
+.card{
+    max-width: 365px;
 }
 
-.section-item {
-    padding: 25px;
-}
 
-.section-item h3 {
+.section-item h5 {
     color: #333;
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px ;
 }
 
 .section-item p {
@@ -37,22 +33,25 @@
 }
 .pdfs {
     margin-top: 15px;
-    padding-left: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .pdfs a {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 15px;
+
+  
     background-color: #044697;
     color: white;
     text-decoration: none;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
     font-size: 0.9rem;
     transition: all 0.3s ease;
-}
-
-.pdfs a:hover {
-    background-color: #002FEB;
+    text-align: center;
 }
 

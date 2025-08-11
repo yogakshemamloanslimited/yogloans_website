@@ -4,7 +4,7 @@
         <h1 >CSR
             </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
     <div class="button">
-             <p><a href="/">Home</a>  <a href=""> - CSR</a></p>
+             <p><a href="javascript:history.back()" id="return-link">Home</a>- CSR</p>
      </div>
 
     </section>
@@ -14,10 +14,10 @@
 
     <section class="welcome-container"
     style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
-    <h1 >CD Loan
+    <h1 >CSR
             </h1>
     <div class="button">
-             <p><a href="/">Home</a>  <a href=""> - CD Loan</a></p>
+             <p><a href="javascript:history.back()" id="return-link">Home</a> - CSR</p>
      </div>
 </section>
 <style>
@@ -35,3 +35,23 @@
         #welcome-mobile { display: flex; }
     }
 </style>
+
+
+<script>
+    const link = document.getElementById('return-link');
+    const ref = document.referrer;
+
+    if (ref) {
+        // Create a temporary anchor to parse the URL
+        const url = new URL(ref);
+
+        // Get the last part of the path (e.g., 'investors' from '/investors')
+        let pageName = url.pathname.split('/').filter(Boolean).pop() || 'Home';
+
+        // Make it user-friendly
+        pageName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+
+        link.textContent = pageName;
+        link.href = ref;
+    }
+</script>

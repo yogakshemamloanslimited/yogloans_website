@@ -1,12 +1,29 @@
 @model yogloansdotnet.Models.LoanGroupViewModel
-<section class="welcome-container"
-        style="background-image: url(@(Model.Gold?.FirstOrDefault()?.Image1 ?? "images/welcome/Artboard.png"));">
-        <h1 id="header">@(Model.Gold?.FirstOrDefault()?.Header ?? "Gold Loan")</h1>
-        <p id="sub">@(Model.Gold?.FirstOrDefault()?.SubContent ?? "Experience Door Step Gold Loan Services")</p>
-        <div class="button">
-            <button id="redirect">Apply Now</button>
-        </div>
+<section class="welcome-container">
+    <h1 id="header">@(Model.Gold?.FirstOrDefault()?.Header ?? "Gold Loan")</h1>
+    <p id="sub">@(Model.Gold?.FirstOrDefault()?.SubContent ?? "Experience Door Step Gold Loan Services")</p>
+    <div class="button">
+        <button id="redirect">Apply Now</button>
+    </div>
 </section>
+
+<style>
+    .welcome-container {
+        background-size: cover;
+        background-position: center;
+        min-height: 400px;
+    }
+    .welcome-container{
+          background-image: url('@(Model.Gold?.FirstOrDefault()?.Image1 ?? "images/welcome/Artboard-mobile.png")');
+    }
+    /* Mobile background */
+    @@media (max-width: 768px) {
+        .welcome-container {
+            background-image: url('@(Model.Gold?.FirstOrDefault()?.Image2 ?? "images/welcome/Artboard-mobile.png")');
+        }
+    }
+</style>
+
 
 
 @{

@@ -110,7 +110,7 @@
         align-items: start;
     }
     .loan-items .item-container {
-        width: 90%;
+        width: 100%;
     }
     .point {
         width: 100%;
@@ -120,5 +120,14 @@
         align-items: start;
    
     }
-
+    .loan-items .item-container {
+        height: 90px;
+    }
+    .loan-items .item-container .item {
+        padding: 10px   ;
+    }
+    .loan-items .item-container .item img {
+        width: 35px;
+        height: 35px;
+    }
 }

@@ -456,6 +456,7 @@ menu .menu-container{
      }
      .menu-container ul li {
       font-size: 12px;
+  
      }
      .menu-container img {
       width: 15%;
@@ -538,15 +539,15 @@ padding: 10px;
 #res-menu{
   display: flex;
   height:100%;
+z-index: 400000;
   overflow: hidden;
 flex-direction: column !important;
 transition: 0.5s;
-
-
 width: 0%;
 right: 0%;
 justify-content: center;
 align-items: end;
+
 }
 #res-menu .menu-container{
     height: 100%;
@@ -568,6 +569,7 @@ height: 100%;
 .menu-container ul li {
   text-align: start;
   font-size: 15px;
+  background-color: #fff !important;
 }
 .welcome-container h1 {
   font-size: 1.8rem;
@@ -671,23 +673,25 @@ height: 100%;
     
     padding: 10px;
 }
+
 .menu-container .contact .icons .items img{
     width: 35px;
     height: 35px;
 }
 #res-menu .service-list2 {
-  overflow: hidden;
+
   height: 0;
   opacity: 0;
-  transform: translateY(-10px);
+
   transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   display: none;
   flex-direction: column;
   gap: 30px;
 }
 #res-menu .service-list2.active {
+/*   height: 200px; */
   opacity: 1;
-  transform: translateY(0);
+  
   display: flex;
 }
 

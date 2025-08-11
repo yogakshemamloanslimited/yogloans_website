@@ -297,6 +297,10 @@
       "PackagePath": "staticwebassets\\images\\icon\\user.png"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\viewpng.png",
+      "PackagePath": "staticwebassets\\images\\icon\\viewpng.png"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\chat-icon.png",
       "PackagePath": "staticwebassets\\images\\logo\\chat-icon.png"
     },

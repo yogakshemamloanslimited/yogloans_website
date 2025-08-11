@@ -2,8 +2,14 @@
 
 <link rel="stylesheet" href="~/css/contact/contact.css" asp-append-version="true">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<section class="contact">
+<section class="contact"  style="flex-direction: column; justify-content: center; align-items: center; gap:10px position:relative; ">
+     <div style="width:100%;  margin-bottom:10px; position:fixed; top:45%;  left:0%;  z-index:100000;  height:300px;">
+                    <div class="redirect" style="width:200px; rotate: -90deg; left:0%; height:80px; display:flex; justify-content:center;align-items:center; cursor:pointer; box-shadow:0px 0px 1px 0px gray; background-color:#044697; color:white;" onclick="window.location.href='/branch'">
+                        View Nearby Branches
+                    </div>
+                </div>
         <div class="contact-container">
+            
             <div class="address">
                 <div class="item">
                     <div class="image">
@@ -30,11 +36,7 @@
             </div>
                  <form id="enquiryForm">
                 <h2>Get In Touch</h2>
-                 <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:10px; ">
-                    <div class="redirect" style="width:300px; height:100px; display:flex; justify-content:center;align-items:center; cursor:pointer; box-shadow:0px 0px 1px 0px gray;" onclick="window.location.href='/branch'">
-                        View Nearby Branches
-                    </div>
-                </div>
+                
                 <label for="enquiry_name">Full Name</label>
                 <input type="text" id="enquiry_name" name="enquiry_name" required>
                 <label for="email_id">Email Address</label>

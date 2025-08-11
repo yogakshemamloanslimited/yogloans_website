@@ -45,10 +45,7 @@
                     <li onclick="window.location.href='/about'">About</li>
                     <li class="services-link">Services</li>
                     <ul class="service-list" id="service-items">
-                        <!-- <li onclick="window.location.href='/gold'">Gold Loan</li>
-                        <li onclick="window.location.href='/business'">Business Loan</li>
-                        <li onclick="window.location.href='/cd'">CD Loan</li>
-                        <li onclick="window.location.href='/vehicle'">Vehicle Loan</li> -->
+
                     </ul>
                     <li onclick="window.location.href='/investor'">Investors</li>
                     <li onclick="window.location.href='/Onlineservices'">Online Services</li>
@@ -59,43 +56,43 @@
                 </ul>
             </div>
         </menu>
-        <menu id="res-menu">
-            <div class="menu-container">
-                <ul>
-                    <div class="toggle">
-                        <img src="/images/icon/arrow(1).png" alt="" srcset="" id="close">
-                    </div>
-                    <li onclick="window.location.href='/'">Home</li>
-                    <li onclick="window.location.href='/about'">About</li>
-                    <li class="services-link2">Services</li>
-                    <ul class="service-list2" id="service-items2">
-                       <!--  <li onclick="window.location.href='/gold'">Gold Loan</li>
-                        <li onclick="window.location.href='/business'">Business Loan</li>
-                        <li onclick="window.location.href='/cd'">CD Loan</li>
-                        <li onclick="window.location.href='/vehicle'">Vehicle Loan</li> -->
-                    </ul>
-                    <li onclick="window.location.href='/investor'">Investors</li>
-                    <li onclick="window.location.href='/Onlineservices'">Online Services</li>
-                    <li onclick="window.location.href='/policies'">Policies</li>
-                    <li onclick="window.location.href='/career'">Career</li>
-                    <li onclick="window.location.href='/csr'">CSR</li>
-                    <li onclick="window.location.href='/contact'">Contact Us</li>
-                </ul>
-                <div class="contact">
-                    <div class="icons">
-                        <div class="item">
-                            <img src="/images/icon/facebook.png" alt="" srcset="">
-                        </div>
-                        <div class="item">
-                            <img src="/images/icon/social-media.png" alt="" srcset="">
-                        </div>
-                        <div class="item">
-                            <img src="/images/icon/linkedin-logo.png" alt="" srcset="">
-                        </div>
-                    </div>
-                </div>
+       <menu id="res-menu" style="z-index: 400000;">
+    <div class="menu-container">
+        <ul>
+            <div class="toggle">
+                <img src="/images/icon/arrow(1).png" alt="" id="close">
             </div>
-        </menu>
+            <li onclick="window.location.href='/'"><i class="fas fa-home" style="margin-right: 40px;"></i> Home</li>
+            <li onclick="window.location.href='/about'"><i class="fas fa-info-circle" style="margin-right: 40px;"></i> About</li>
+            <li class="services-link2"><i class="fas fa-cogs" style="margin-right: 40px;"></i> Services</li>
+            <ul class="service-list2" id="service-items2" style="overflow:visible;">
+                <!-- Service items will be dynamically added here -->
+            </ul>
+            <li onclick="window.location.href='/investor'"><i class="fas fa-hand-holding-usd" style="margin-right: 40px;"></i> Investors</li>
+            <li onclick="window.location.href='/Onlineservices'"><i class="fas fa-globe" style="margin-right: 40px;"></i> Online Services</li>
+            <li onclick="window.location.href='/policies'"><i class="fas fa-file-alt" style="margin-right: 40px;"></i> Policies</li>
+            <li onclick="window.location.href='/career'"><i class="fas fa-briefcase" style="margin-right: 40px;"></i> Career</li>
+            <li onclick="window.location.href='/csr'"><i class="fas fa-leaf" style="margin-right: 40px;"></i> CSR</li>
+            <li onclick="window.location.href='/contact'"><i class="fas fa-envelope" style="margin-right: 40px;"></i> Contact Us</li>
+        </ul>
+  <div class="contact">
+    <div class="icons" style="width: 100%; display: flex; justify-content:space-between; ">
+        <div class="item">
+            <a href="https://www.facebook.com/share/18qcUVv3fJ/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f" style="color: black; font-size:15px;"></i></a>
+        </div>
+        <div class="item">
+            <a href="https://www.instagram.com/yogloansfinance?igsh=djhqZGI0dG92bGI0" target="_blank"><i class="fab fa-instagram" style="color: black; font-size:15px;"></i></a>
+        </div>
+        <div class="item">
+            <a href="https://www.linkedin.com/company/yogloans" target="_blank"><i class="fab fa-linkedin-in" style="color: black; font-size:15px;"></i></a>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</menu>
+
     </header>
     <partial name="_ChatBot" />
             @RenderBody()
@@ -133,13 +130,13 @@
                         </div>
                     </div>
                 </div> -->
-            <div class="footer-content pt-5 pb-5">
+            <div class="footer-content">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget" style="padding: 20px;">
-                            <div class="footer-logo">
+                          @*   <div class="footer-logo">
                                 <a href="index.html"><img src="/images/logo/logo.png" class="img-fluid" alt="logo"></a>
-                            </div>
+                            </div> *@
                             <div class="footer-text">
                                 <p>To emerge as the most trusted financial solution provider in India, with special
                                     focus on emerging segments of society, through a nationwide, efficient and service
@@ -162,7 +159,7 @@
                             <div class="footer-widget-heading">
                                 <h3>Useful Links</h3>
                             </div>
-                            <ul>
+                            <ul style="padding-left: 0px !important;">
                                 <li><a href="/">Home</a></li>
                                 <li> <a href="/about">About Us</a></li>
 
@@ -181,7 +178,7 @@
             <h3>Subscribe</h3>
         </div>
         <div class="footer-text mb-25">
-            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+            <p>Don't miss to subscribe to our new feeds</p>
         </div>
          <div id="subscribe-success" style="display: none; color: green; margin-top: 10px;">
                 🎉 Thank you for subscribing!
