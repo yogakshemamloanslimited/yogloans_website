@@ -99,7 +99,13 @@
 }
 
 @media (max-width:780px ){
-    
+.redirect{
+    /* display: none; */
+    height: auto !important;
+    width: auto !important;
+    padding: 10px;
+    top:60% !important;
+}
 
 .contact .contact-container form button {
     width: auto;

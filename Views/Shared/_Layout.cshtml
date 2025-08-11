@@ -364,15 +364,33 @@ close.onclick = function() {
 });
        </script>
        <script>
+    $(document).ready(function() {
+        // Initialize AOS (Animate On Scroll)
+      
 document.getElementById("subscribe-form").addEventListener("submit", function(e) {
+
     e.preventDefault(); // Prevent actual form submission
-    const emailInput = document.getElementById("email-input").value;
+    var email = document.getElementById("email-input").value;
+    alert(email);
+   $.ajax({
+    url: 'http://localhost:8085/api/NewsLetter/post?email=' + encodeURIComponent(email),
+    method: 'POST',
+    success: function(response) {
+        document.getElementById("subscribe-success").style.display = "block";
+        document.getElementById("email-input").value = "";
+    },
+    error: function(xhr, status, error) {
+        alert('Subscription failed. Please try again.');
+    }
+    });
+    @* const emailInput = document.getElementById("email-input").value;
 
     if (emailInput.trim() !== "") {
         document.getElementById("subscribe-success").style.display = "block";
         // Optionally clear the input
         document.getElementById("email-input").value = "";
-    }
+    } *@
+});
 });
 </script>
 

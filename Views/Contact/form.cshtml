@@ -2,12 +2,31 @@
 
 <link rel="stylesheet" href="~/css/contact/contact.css" asp-append-version="true">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<section class="contact"  style="flex-direction: column; justify-content: center; align-items: center; gap:10px position:relative; ">
-     <div style="width:100%;  margin-bottom:10px; position:fixed; top:45%;  left:0%;  z-index:100000;  height:300px;">
-                    <div class="redirect" style="width:200px; rotate: -90deg; left:0%; height:80px; display:flex; justify-content:center;align-items:center; cursor:pointer; box-shadow:0px 0px 1px 0px gray; background-color:#044697; color:white;" onclick="window.location.href='/branch'">
-                        View Nearby Branches
-                    </div>
-                </div>
+<section class="contact"  style="flex-direction: column; justify-content: start; align-items: center; gap:10px position:relative; border:1px solid;">
+    
+                   <div class="redirect"
+     style="
+        width:200px;
+        height:70px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        cursor:pointer;
+        box-shadow:0px 0px 1px 0px gray;
+        background-color:#044697;
+        color:white;
+        position:fixed;
+        top:75%;
+        left:0;
+        transform:translateY(-50%) rotate(-90deg);
+        transform-origin: left top;
+        z-index:1000;
+     "
+     onclick="window.location.href='/branch'">
+    View Nearby Branches
+</div>
+
+            
         <div class="contact-container">
             
             <div class="address">
