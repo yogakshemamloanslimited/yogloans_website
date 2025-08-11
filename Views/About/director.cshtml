@@ -1,121 +1,116 @@
   @model yogloansdotnet.Models.AboutViewModel  
 <link rel="stylesheet" href="~/css/about/director.css" asp-append-version="true">
-   <div class="customer-content" style="position: relative; flex-direction: column; background-color: white;  align-items: start; margin-top: 50px;">
-        <div class="sec1" style="position: relative; justify-content: start;">
-            <p style="color: #044697;">Board Of Directors <span></span></p>
-            <h2>Meet Our Directors</h2>
-        </div>
-     
-        <div id="owl-demo2" class="owl-carousel">
-           @foreach (var director in Model.Directors)
-{
+<link rel="stylesheet" href="~/lib/owlcarousel/owl.carousel.min.css" />
+<link rel="stylesheet" href="~/lib/owlcarousel/owl.theme.default.min.css" />
+
+<!-- Board of Directors Section -->
+<div class="customer-content" style="position: relative; flex-direction: column; background-color: white; align-items: start; margin-top: 50px; width: 100%;">
+    <div class="sec1" style="position: relative; justify-content: start;">
+        <p style="color: #044697;">Board Of Directors <span></span></p>
+        <h2>Meet Our Directors</h2>
+    </div>
+
+    <div id="owl-demo2" class="owl-carousel owl-theme">
+        @foreach (var director in Model.Directors)
+        {
             <div class="allitem">
-                <div class="blog-allof" style="border: none ; background-image: url('@director.Profile');" id="director" >
+                <div class="blog-allof" style="border: none; background-image: url('@director.Profile'); background-size: cover; background-position: center;">
                     <div class="view">
                         <i class="fas fa-eye" onclick="director(@director.Id)"></i>
                     </div>
-                    <div class="name" >
-                        <p>
-                         @director.Name
-                        </p>
-                        <p>
-                           @director.Post
-                        </p>
+                    <div class="name">
+                        <p>@director.Name</p>
+                        <p>@director.Post</p>
                     </div>
                 </div>
-             
             </div>
-           
- 
-}
-    </div>
-
-    <div class="customer-content" style="position: relative; flex-direction: column; background-color: white;  align-items: start; margin-top: 50px;">
-        <div class="sec1" style="position: relative; justify-content: start;">
-            <p style="color: #044697;">Senior Management Team <span></span></p>
-            <h2>Meet Our Leadership</h2>
-        </div>
-     
-        <div id="owl-demo3" class="owl-carousel">
-          @foreach (var Leaders in Model.Leaders)
-{
-            <div class="allitem">
-                <div class="blog-allof" style="border: none ; background-image: url('@Leaders.Profile');" id="director" >
-                    <div class="view">
-                        <i class="fas fa-eye" onclick="leaders(@Leaders.Id)"></i>
-                    </div>
-                    <div class="name" >
-                        <p>
-                         @Leaders.Name
-                        </p>
-                        <p>
-                           @Leaders.Post
-                        </p>
-                    </div>
-                </div>
-             
-            </div>
-           
- 
-}
-       
-        </div>
+        }
     </div>
 </div>
+
+<!-- Senior Management Team Section -->
+<div class="customer-content" style="position: relative; flex-direction: column; background-color: white; align-items: start; margin-top: 50px; width: 100%;">
+    <div class="sec1" style="position: relative; justify-content: start;">
+        <p style="color: #044697;">Senior Management Team <span></span></p>
+        <h2>Meet Our Leadership</h2>
+    </div>
+
+    <div id="owl-demo3" class="owl-carousel owl-theme">
+        @foreach (var leader in Model.Leaders)
+        {
+            <div class="allitem">
+                <div class="blog-allof" style="border: none; background-image: url('@leader.Profile'); background-size: cover; background-position: center;">
+                    <div class="view">
+                        <i class="fas fa-eye" onclick="leaders(@leader.Id)"></i>
+                    </div>
+                    <div class="name">
+                        <p>@leader.Name</p>
+                        <p>@leader.Post</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+
     <script>
-        
-    var owl2 = $("#owl-demo2");
-        owl2.owlCarousel({
-            loop: true,
-            margin: 20,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: true,
-            smartSpeed: 800,
-            responsive: {
-                0: {
-                    items: 1,
-                    margin: 15
-                },
-                600: {
-                    items: 2,
-                    margin: 20
-                },
-                1000: {
-                    items: 3,
-                    margin: 20
+        $(document).ready(function () {
+            console.log("Initializing Owl Carousels...");
+
+            // First Carousel
+            $("#owl-demo2").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                smartSpeed: 800,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
                 }
+            });
+
+            // Second Carousel (Leaders)
+            const owl3 = $("#owl-demo3");
+            if (owl3.length > 0) {
+                owl3.owlCarousel({
+                    loop: true,
+                    margin: 20,
+                    nav: true,
+                    dots: true,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    autoplayHoverPause: true,
+                    smartSpeed: 800,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 2
+                        },
+                        1000: {
+                            items: 3
+                        }
+                    }
+                });
+            } else {
+                console.warn("❌ #owl-demo3 not found in DOM.");
             }
         });
-
-        var owl3 = $("#owl-demo3");
-        owl3.owlCarousel({
-            loop: true,
-            margin: 20,
-            nav: true,
-            dots: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: true,
-            smartSpeed: 800,
-            responsive: {
-                0: {
-                    items: 1,
-                    margin: 15
-                },
-                600: {
-                    items: 2,
-                    margin: 20
-                },
-                1000: {
-                    items: 3,
-                    margin: 20
-                }
-            }
-        });
-                 // Modal functionality for both directors and management
-
-
     </script>
+}

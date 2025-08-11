@@ -25,6 +25,8 @@
 </head>
 
 <body>
+
+
     <div class="loader-mask">
             <div class="loader">
                 <div></div>
@@ -66,7 +68,7 @@
                     <li onclick="window.location.href='/'">Home</li>
                     <li onclick="window.location.href='/about'">About</li>
                     <li class="services-link2">Services</li>
-                    <ul class="service-list2" id="service-items">
+                    <ul class="service-list2" id="service-items2">
                        <!--  <li onclick="window.location.href='/gold'">Gold Loan</li>
                         <li onclick="window.location.href='/business'">Business Loan</li>
                         <li onclick="window.location.href='/cd'">CD Loan</li>
@@ -95,7 +97,7 @@
             </div>
         </menu>
     </header>
-  
+    <partial name="_ChatBot" />
             @RenderBody()
       
      <footer class="footer-section">
@@ -174,21 +176,26 @@
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Subscribe</h3>
-                            </div>
-                            <div class="footer-text mb-25">
-                                <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
-                            </div>
-                            <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Email Address">
-                                    <button><img src="/images/icon/send.png" alt="" srcset=""></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+    <div class="footer-widget">
+        <div class="footer-widget-heading">
+            <h3>Subscribe</h3>
+        </div>
+        <div class="footer-text mb-25">
+            <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+        </div>
+         <div id="subscribe-success" style="display: none; color: green; margin-top: 10px;">
+                🎉 Thank you for subscribing!
+            </div>
+        <div class="subscribe-form">
+            <form id="subscribe-form">
+                <input type="email" id="email-input" placeholder="Email Address" required>
+                <button type="submit"><img src="/images/icon/send.png" alt=""></button>
+            </form>
+           
+        </div>
+    </div>
+</div>
+
                 </div>
             </div>
         </div>
@@ -222,6 +229,8 @@
     success: function (response) {
         const data = response.data;
         data.forEach(loan => {
+   
+             $('#service-items2').append(`<li onclick="window.location.href='/services/${loan.loanname}/${loan.id}'">${loan.loanname}</li>`);
             $('#service-items').append(`<li onclick="window.location.href='/services/${loan.loanname}/${loan.id}'">${loan.loanname}</li>`);
              $('#footer-menu').append(`<li onclick="window.location.href='/services/${loan.loanname}/${loan.id}'" style="color:white; cursor:pointer;">${loan.loanname}</li>`);
            
@@ -357,7 +366,20 @@ close.onclick = function() {
     $('.loader-mask').delay(350).fadeOut('slow');
 });
        </script>
-           <script type="text/javascript">
+       <script>
+document.getElementById("subscribe-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent actual form submission
+    const emailInput = document.getElementById("email-input").value;
+
+    if (emailInput.trim() !== "") {
+        document.getElementById("subscribe-success").style.display = "block";
+        // Optionally clear the input
+        document.getElementById("email-input").value = "";
+    }
+});
+</script>
+
+          @*  <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -367,7 +389,7 @@ close.onclick = function() {
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
-    </script>
+    </script> *@
         <script src="~/js/site.js" asp-append-version="true"></script> 
        <script  src="~/js/jaquery.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

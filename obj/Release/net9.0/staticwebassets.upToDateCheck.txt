@@ -1,0 +1,440 @@
+D:\yogloansdotnet - Copy\wwwroot\images\icon\style.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+D:\yogloansdotnet - Copy\wwwroot\css\home\loanitem.css
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery\dist\jquery.min.js
+D:\yogloansdotnet - Copy\wwwroot\css\policy\policy.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+D:\yogloansdotnet - Copy\wwwroot\css\investor\list.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+D:\yogloansdotnet - Copy\wwwroot\js\online15\script.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+D:\yogloansdotnet - Copy\wwwroot\css\about\welcome.css
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+D:\yogloansdotnet - Copy\wwwroot\css\Gold\benefit.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+D:\yogloansdotnet - Copy\wwwroot\css\site.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+D:\yogloansdotnet - Copy\wwwroot\css\investor\creditrate.css
+D:\yogloansdotnet - Copy\wwwroot\css\csr\reportcard.css
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery-validation\dist\additional-methods.js
+D:\yogloansdotnet - Copy\wwwroot\css\online15g\form.css
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery\dist\jquery.js
+D:\yogloansdotnet - Copy\wwwroot\js\site.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery\dist\jquery.min.map
+D:\yogloansdotnet - Copy\wwwroot\css\about\reviews.css
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+D:\yogloansdotnet - Copy\wwwroot\css\online\services.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery\LICENSE.txt
+D:\yogloansdotnet - Copy\wwwroot\css\home\welcome.css
+D:\yogloansdotnet - Copy\wwwroot\css\Gold\section.css
+D:\yogloansdotnet - Copy\wwwroot\css\home\contact.css
+D:\yogloansdotnet - Copy\wwwroot\js\chat\knowledge.json
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+D:\yogloansdotnet - Copy\wwwroot\css\career\faq.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+D:\yogloansdotnet - Copy\wwwroot\favicon.ico
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+D:\yogloansdotnet - Copy\wwwroot\js\jaquery.js
+D:\yogloansdotnet - Copy\wwwroot\css\contact\contact.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+D:\yogloansdotnet - Copy\wwwroot\css\chat\chat.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+D:\yogloansdotnet - Copy\wwwroot\css\onlinepay\style.css
+D:\yogloansdotnet - Copy\wwwroot\css\career\card.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery\dist\jquery.slim.js
+D:\yogloansdotnet - Copy\wwwroot\js\nach\script.js
+D:\yogloansdotnet - Copy\wwwroot\css\about\director.css
+D:\yogloansdotnet - Copy\wwwroot\js\branch\branch.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+D:\yogloansdotnet - Copy\wwwroot\js\chat\chat.js
+D:\yogloansdotnet - Copy\wwwroot\css\career\form.css
+D:\yogloansdotnet - Copy\wwwroot\css\about\aboutcontainer.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+D:\yogloansdotnet - Copy\wwwroot\css\departments.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+D:\yogloansdotnet - Copy\wwwroot\css\career\welcome.css
+D:\yogloansdotnet - Copy\wwwroot\css\home\clients.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery-validation\LICENSE.md
+D:\yogloansdotnet - Copy\wwwroot\css\home\about.css
+D:\yogloansdotnet - Copy\wwwroot\css\about\about.css
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery\dist\jquery.slim.min.map
+D:\yogloansdotnet - Copy\wwwroot\js\investor\investors.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+D:\yogloansdotnet - Copy\wwwroot\lib\jquery\dist\jquery.slim.min.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+D:\yogloansdotnet - Copy\wwwroot\css\layout.css
+D:\yogloansdotnet - Copy\wwwroot\css\branch\branch.css
+D:\yogloansdotnet - Copy\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\css\about\about.css
+wwwroot\css\about\aboutcontainer.css
+wwwroot\css\about\director.css
+wwwroot\css\about\reviews.css
+wwwroot\css\about\welcome.css
+wwwroot\css\branch\branch.css
+wwwroot\css\career\card.css
+wwwroot\css\career\faq.css
+wwwroot\css\career\form.css
+wwwroot\css\career\welcome.css
+wwwroot\css\chat\chat.css
+wwwroot\css\contact\contact.css
+wwwroot\css\csr\reportcard.css
+wwwroot\css\departments.css
+wwwroot\css\Gold\benefit.css
+wwwroot\css\Gold\section.css
+wwwroot\css\home\about.css
+wwwroot\css\home\clients.css
+wwwroot\css\home\contact.css
+wwwroot\css\home\loanitem.css
+wwwroot\css\home\welcome.css
+wwwroot\css\investor\creditrate.css
+wwwroot\css\investor\list.css
+wwwroot\css\layout.css
+wwwroot\css\online\services.css
+wwwroot\css\online15g\form.css
+wwwroot\css\onlinepay\style.css
+wwwroot\css\policy\policy.css
+wwwroot\css\site.css
+wwwroot\favicon.ico
+wwwroot\images\crisil.jpg
+wwwroot\images\directors\Mohandas.jpg
+wwwroot\images\directors\prasad.jpg
+wwwroot\images\directors\rajesh.jpg
+wwwroot\images\directors\Rajeshkumar.jpg
+wwwroot\images\directors\rakesh.jpg
+wwwroot\images\directors\ramachandran.jpg
+wwwroot\images\directors\Sandy_Ppl-09_Single-01.jpg
+wwwroot\images\directors\santosh.jpg
+wwwroot\images\directors\Shaju.jpg
+wwwroot\images\directors\silpa.jpg
+wwwroot\images\directors\Sreenivas.jpg
+wwwroot\images\directors\unnikrishnan.jpg
+wwwroot\images\directors\unnirajan.jpg
+wwwroot\images\directors\vijayan.jpg
+wwwroot\images\icon\arrow(1).png
+wwwroot\images\icon\bike.png
+wwwroot\images\icon\checklist.png
+wwwroot\images\icon\cooperation.png
+wwwroot\images\icon\download-pdf.png
+wwwroot\images\icon\electric-appliances.png
+wwwroot\images\icon\facebook.png
+wwwroot\images\icon\gold.png
+wwwroot\images\icon\image.png
+wwwroot\images\icon\linkedin-logo.png
+wwwroot\images\icon\location.png
+wwwroot\images\icon\mail.png
+wwwroot\images\icon\maps-and-flags.png
+wwwroot\images\icon\note.png
+wwwroot\images\icon\open-menu.png
+wwwroot\images\icon\pdf.png
+wwwroot\images\icon\printer.png
+wwwroot\images\icon\search.png
+wwwroot\images\icon\seen.png
+wwwroot\images\icon\send.png
+wwwroot\images\icon\show.png
+wwwroot\images\icon\social-media.png
+wwwroot\images\icon\style.css
+wwwroot\images\icon\telephone.png
+wwwroot\images\icon\user(2).png
+wwwroot\images\icon\user.png
+wwwroot\images\logo\chat-icon.png
+wwwroot\images\logo\close.png
+wwwroot\images\logo\logo.png
+wwwroot\images\online\cancel.jpg
+wwwroot\images\online\gold.png
+wwwroot\images\online\onlinepayment.png
+wwwroot\images\online\tax.jpg
+wwwroot\images\pdf\csr\approvedCSRPolicy.pdf
+wwwroot\images\pdf\csr\CSRCommittee.pdf
+wwwroot\images\pdf\csr\CSRProject2020-21.pdf
+wwwroot\images\pdf\csr\CSRProject2021-22.pdf
+wwwroot\images\pdf\csr\CSRProject2022-23.pdf
+wwwroot\images\pdf\csr\CSRProject2023-24.pdf
+wwwroot\images\pdf\csr\CSRProject2024-25.pdf
+wwwroot\images\pdf\investor\announcement\AnnualReport-2014-15.pdf
+wwwroot\images\pdf\investor\announcement\AnnualReport2015-16.pdf
+wwwroot\images\pdf\investor\announcement\AnnualReport2016-17.pdf
+wwwroot\images\pdf\investor\announcement\AnnualReport-2020-21.pdf
+wwwroot\images\pdf\investor\announcement\AnnualReport-2021-22.pdf
+wwwroot\images\pdf\investor\announcement\AnnualReport2022-21.pdf
+wwwroot\images\pdf\investor\announcement\AnnualReport2023-24.pdf
+wwwroot\images\pdf\investor\announcement\Yogloans-AnnualReport2017-2018.pdf
+wwwroot\images\pdf\investor\annual\31stAGMNotice2021-2022.pdf
+wwwroot\images\pdf\investor\annual\32ndAGMNotice.pdf
+wwwroot\images\pdf\investor\annual\32ndScrutinizerReport.pdf
+wwwroot\images\pdf\investor\annual\33rdAGMNotice.pdf
+wwwroot\images\pdf\investor\annual\33rdScrutinizerReport.pdf
+wwwroot\images\pdf\investor\annual\egm.pdf
+wwwroot\images\pdf\investor\annual\ScrutinizerReportSummary2023.pdf
+wwwroot\images\pdf\investor\appoi\anoopg.pdf
+wwwroot\images\pdf\investor\appoi\Pushpangadan.pdf
+wwwroot\images\pdf\investor\appoi\SantoshKurup.pdf
+wwwroot\images\pdf\investor\forms\DeclarationUnderRule37BC.pdf
+wwwroot\images\pdf\investor\forms\FORM10F.pdf
+wwwroot\images\pdf\investor\forms\FORM15G.pdf
+wwwroot\images\pdf\investor\forms\FORM15H.pdf
+wwwroot\images\pdf\investor\forms\JointShareholdersDeclaration.pdf
+wwwroot\images\pdf\investor\forms\Non-ResidentTaxDeclaration.pdf
+wwwroot\images\pdf\investor\forms\ResidentTaxDeclaration.pdf
+wwwroot\images\pdf\investor\forms\SelfDeclarationforavailmentofTreatyBenefit.pdf
+wwwroot\images\pdf\investor\forms\tds.pdf
+wwwroot\images\pdf\investor\publicdis\LiquidityRiskasonjune302021.pdf
+wwwroot\images\pdf\policiesitems\auction.pdf
+wwwroot\images\pdf\policiesitems\co-lending.pdf
+wwwroot\images\pdf\policiesitems\compromise.pdf
+wwwroot\images\pdf\policiesitems\dividend.pdf
+wwwroot\images\pdf\policiesitems\income.pdf
+wwwroot\images\pdf\policiesitems\interest.pdf
+wwwroot\images\pdf\policiesitems\KYCpolicy.pdf
+wwwroot\images\pdf\policiesitems\loan.pdf
+wwwroot\images\rbi.jpg
+wwwroot\images\Terms&conditions.pdf
+wwwroot\images\Tiredman.jpg
+wwwroot\images\welcome\Artboard.png
+wwwroot\images\welcome\bike-background.png
+wwwroot\images\welcome\business-background.png
+wwwroot\images\welcome\business-background2.png
+wwwroot\images\welcome\career.png
+wwwroot\images\welcome\cd2.png
+wwwroot\images\welcome\cdn.jpg
+wwwroot\images\welcome\colleagues-working-project-discussing-details.jpg
+wwwroot\images\welcome\consumer-durables-background.png
+wwwroot\images\welcome\contact.jpg
+wwwroot\images\welcome\front-view-arrangement-economy-elements.jpg
+wwwroot\images\welcome\gold2.png
+wwwroot\images\welcome\goldloan.jpg
+wwwroot\images\welcome\hands-holding-earth-csr-business-campaign.jpg
+wwwroot\images\welcome\investors.jpg
+wwwroot\images\welcome\medium-shot-woman-with-white-house.jpg
+wwwroot\images\welcome\policy.jpg
+wwwroot\images\welcome\vehicle2.jpg
+wwwroot\images\welcome\vehicle2.png
+wwwroot\js\branch\branch.js
+wwwroot\js\chat\chat.js
+wwwroot\js\chat\knowledge.json
+wwwroot\js\investor\investors.js
+wwwroot\js\jaquery.js
+wwwroot\js\nach\script.js
+wwwroot\js\online15\script.js
+wwwroot\js\site.js
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\dist\jquery.slim.js
+wwwroot\lib\jquery\dist\jquery.slim.min.js
+wwwroot\lib\jquery\dist\jquery.slim.min.map
+wwwroot\lib\jquery\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\uploads\06ccaca6-130f-4718-b024-85549ddd4fcc_Screenshot 2025-05-15 135932.png
+wwwroot\uploads\0bd1feb7-6815-46af-8623-c14fc22c2d81_vehicle2.png
+wwwroot\uploads\10ff1659-6476-4733-8c80-77bfd7f89bb8_cd2.png
+wwwroot\uploads\183a048f-28ea-4d4a-abf3-d81067351972_Businessloan.png
+wwwroot\uploads\1ec8387e-67f0-4d11-bb58-a8beb5edb26e_front-view-arrangement-economy-elements.jpg
+wwwroot\uploads\22636b32-6071-49ad-abe4-bb122d9540a4_Screenshot 2025-05-15 134712.png
+wwwroot\uploads\23fc40ab-84f2-4441-9b06-0cf06d8f95f5_Screenshot 2025-05-15 142924.png
+wwwroot\uploads\2d159650-1a77-4cbb-8895-7f410c501f5a_cd.png
+wwwroot\uploads\2df5b683-e9f8-4931-84d3-a61d895de7c1_Screenshot 2025-05-15 142909.png
+wwwroot\uploads\3b74a599-79de-4181-abc4-b970d5c25181_cdloan.png
+wwwroot\uploads\3e5ebcb8-1030-406f-84f3-89e7d14a9bd1_Screenshot 2025-05-15 142909.png
+wwwroot\uploads\4253a567-2c52-438b-8b36-94c11a690037_gold.png
+wwwroot\uploads\470b248b-4004-49e5-a535-688e9dec667b_Screenshot 2025-05-15 142924.png
+wwwroot\uploads\4969f354-198b-4baa-b011-1ade02d48082_gold.png
+wwwroot\uploads\4e1807e5-c758-47bf-9d3d-4ab86bd925ef_business-background2.png
+wwwroot\uploads\4f050631-2009-4a72-a5a9-5d97e0718be1_bike-background.png
+wwwroot\uploads\5f8fabbc-1309-4cd8-97c0-a1de30648c86_Screenshot 2025-05-15 142924.png
+wwwroot\uploads\629a10b0-07b6-405f-81ab-a49731cf395e_gold.png
+wwwroot\uploads\637a6888-a9be-4834-83c5-155b76363427_Screenshot 2025-05-15 142924.png
+wwwroot\uploads\65a224df-67d3-49ad-8406-872e63811805_Screenshot 2025-05-15 142909.png
+wwwroot\uploads\6840749d-772e-49bc-bc14-4df3e308202c_Screenshot 2025-05-15 142924.png
+wwwroot\uploads\6a33a3d3-a2f9-4079-8742-02c55ad15829_Screenshot 2025-05-15 095357.png
+wwwroot\uploads\6e044559-cce7-4bf0-8cca-b6dfd2a83136_Screenshot 2025-05-15 142924.png
+wwwroot\uploads\70295a38-faf9-4316-b51b-aaed5b43afea_Screenshot 2025-05-15 142924.png
+wwwroot\uploads\70a4db80-daa4-4cb4-b771-3a8af6a2e6e1_Screenshot 2025-05-15 142909.png
+wwwroot\uploads\71119de5-4e43-4598-a78d-516d57b63997_Screenshot 2025-05-15 142909.png
+wwwroot\uploads\733b35d3-c1dd-4e46-8f52-4dc4368ebfdf_vehicle2.png
+wwwroot\uploads\7581884b-c8f3-476a-9ed6-7df514ade946_Screenshot 2025-05-15 142924.png
+wwwroot\uploads\7e2a37a7-8a0d-446b-a9ad-b9eabe404b98_gold.png
+wwwroot\uploads\8169f491-9a41-434c-90a7-a10e1d2ec60f_Mohandas.jpg
+wwwroot\uploads\84907cda-b0c4-4fa6-875b-57ca7c11a49b_mail.png
+wwwroot\uploads\8a79511b-14f4-4c5e-94e6-e9d371b73991_gold.png
+wwwroot\uploads\8d191c63-4c35-4ddb-9e30-609bd95429f0_Screenshot 2025-05-15 142924.png
+wwwroot\uploads\8d873d9f-385a-4930-a4a2-ac3212e671b0_Screenshot 2025-05-15 142909.png
+wwwroot\uploads\902db853-6683-4d74-9509-f71d57b8c154_bike-background.png
+wwwroot\uploads\921e5a57-bf88-44e3-bae5-86a2378118a4_vehicleloan.png
+wwwroot\uploads\96515ee1-9709-4efa-8fbf-808a6314e749_Screenshot 2025-05-15 135932.png
+wwwroot\uploads\96d203a2-254c-4eb6-bfac-7b177738c157_Screenshot 2025-05-15 135932.png
+wwwroot\uploads\9b769c86-6ed1-4461-a5b7-eb2dfa55de94_gold.png
+wwwroot\uploads\9d45ed2c-2103-404a-8cc4-bdddb09b84de_gold2.png
+wwwroot\uploads\a1690b05-a105-47cb-8dfd-57d97dc68c68_Businessloan.png
+wwwroot\uploads\a8008ff2-8bf6-4059-9898-fe9888bbad43_cdloan.png
+wwwroot\uploads\a8ab0e2a-e141-49a6-aaaa-f027daeea281_consumer-durables-background.png
+wwwroot\uploads\aa512fae-bbd1-45e7-8fb5-de39e804a6b3_Screenshot 2025-05-15 142909.png
+wwwroot\uploads\about\about_01b1644c-dcf5-47e0-89d3-c122d81f935a.png
+wwwroot\uploads\about\about_a66d28b5-6a4a-42ad-9c63-d55e838374d8.png
+wwwroot\uploads\ae848e36-4a41-4018-a749-25677b79ad35_vehicleloan.png
+wwwroot\uploads\Announcements\Form15G-3_862dcb76-66f1-402c-adde-a588af1f2907.pdf
+wwwroot\uploads\Apporder\CSRCommittee_44fd1808-d6cb-47a9-9157-fd1de50bdeb1.pdf
+wwwroot\uploads\c5db4e28-44c1-46c2-a43f-7264add301b2_business.png
+wwwroot\uploads\c8d5c50b-8be0-4b00-929f-04aae5948622_Screenshot 2025-05-15 142924.png
+wwwroot\uploads\career\career_10694319-2a4d-4138-83bb-f8b99417423a.png
+wwwroot\uploads\career\career_185e2837-5c3f-4869-8382-b62662fa6da7.png
+wwwroot\uploads\career\career_1c35ade3-dcc8-4850-8e35-a1968c7dfd1d.png
+wwwroot\uploads\career\career_fed98605-493d-40dc-a0b2-2494e35006dc.png
+wwwroot\uploads\career\doc\document_2fd53835-8cd1-474c-82c5-5d2b52850215.pdf
+wwwroot\uploads\career\doc\Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d.pdf
+wwwroot\uploads\career\doc\Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe.pdf
+wwwroot\uploads\career\doc\Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b.pdf
+wwwroot\uploads\career\doc\Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b.pdf
+wwwroot\uploads\career\doc\Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece.pdf
+wwwroot\uploads\career\doc\Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83.pdf
+wwwroot\uploads\career\doc\Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37.pdf
+wwwroot\uploads\career\doc\Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19.pdf
+wwwroot\uploads\career\doc\Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.pdf
+wwwroot\uploads\career\doc\Gold_Loan_Document-5_b41c1eb3-0800-4312-8c33-e6e0d9c3aae5.pdf
+wwwroot\uploads\career\doc\Gold_Loan_Document-5_d702513c-a471-4874-b832-3cab4e36981d.pdf
+wwwroot\uploads\career\doc\Gold_Loan_Document-6_375a2636-cb5d-4554-ba45-159b70dbd9df.pdf
+wwwroot\uploads\career\doc\Gold_Loan_Document-7_222f750a-a568-4eea-8d43-b3124e597719.pdf
+wwwroot\uploads\career\doc\Gold_Loan_Document-8_994bd05d-87e2-4a8e-a4a8-77e55ec4390e.pdf
+wwwroot\uploads\career\doc\Loan Cum Hypothecation Agreement_b25e805a-2fea-4315-903b-0c3dac94cac5.pdf
+wwwroot\uploads\contact\contact_338ec5a1-f897-456b-ac32-b452bb725219.png
+wwwroot\uploads\contact\contact_5cf4cf6e-f9ff-4a51-a402-bbb53893a83c.png
+wwwroot\uploads\Csr\csr_6110e623-d609-459a-bcea-737eaa78d87b.png
+wwwroot\uploads\Csr\csr_69ca07b3-c061-4d53-8747-9f8e664c4fd3.png
+wwwroot\uploads\Csr\CSRProject2020-21_619f310a-20cc-42ae-a25b-9f310d25f1c0.pdf
+wwwroot\uploads\Csr\CSRProject2023-24_c4a135ae-371c-44c3-9fd2-317a23b76205.pdf
+wwwroot\uploads\Csr\KYCpolicy_ab595566-d6ae-4aa4-b4c1-5d5307d01b7e.pdf
+wwwroot\uploads\d64c2a59-efad-4c83-b3c2-41b3419fa497_cdloan.png
+wwwroot\uploads\Directors\Mohandas_97013420-ba7a-4d53-b2fd-9896eb799b1a.jpg
+wwwroot\uploads\Directors\ramachandran_212f5b58-e0e2-49e8-aead-bf20acc9bca7.jpg
+wwwroot\uploads\Directors\santosh_765fc703-c2ac-4697-9500-57f20e119019.jpg
+wwwroot\uploads\Directors\silpa_30324122-c8b9-47e3-b593-cda9c5220e75.jpg
+wwwroot\uploads\Directors\unnikrishnan_01cf5c5f-f741-4d52-92b4-8fac4968c9fd.jpg
+wwwroot\uploads\Directors\unnirajan_c2453655-8b1f-4899-ba3f-9697f7ed3233.jpg
+wwwroot\uploads\Directors\vijayan_aea2c979-dcdf-48a5-ba3a-d337bf892229.jpg
+wwwroot\uploads\disclosure\compromise_fc67bba1-0502-4d94-96b1-dd05a30e067d.pdf
+wwwroot\uploads\disclosure\CSRProject2021-22_46f215a5-2481-462f-a78d-247f18ddf368.pdf
+wwwroot\uploads\disclosure\income_043a3abe-fa13-4bb4-acf2-e5e4e69ccee9.pdf
+wwwroot\uploads\e1a9a5c2-e164-4854-8726-a4fe578e3cd6_gold.png
+wwwroot\uploads\e66aa5ac-ee99-470a-8005-806a27a45e6b_business-background.png
+wwwroot\uploads\ece06f2f-c10c-4dca-b2a9-ec6ba518c073_gold.png
+wwwroot\uploads\ee44e083-2b21-4dbe-9e1b-04d74e91c303_Screenshot 2025-05-15 142909.png
+wwwroot\uploads\f1e48cb1-dff7-4959-97f1-0fff6c28add3_Screenshot 2025-05-15 142909.png
+wwwroot\uploads\f8a9b0fb-0a63-4106-ba2b-7b93068f2360_cdloan.png
+wwwroot\uploads\Formdts\co-lending_c44d72bc-af98-4a23-84b3-8283f180ea50.pdf
+wwwroot\uploads\investor\1320732_a2630bf4-43bb-45b9-95ee-b95a5c519ca9.jpg
+wwwroot\uploads\investors\investors_5612fecc-8c85-48f1-8c4f-09871902b78c.png
+wwwroot\uploads\investors\Investors_dbed98a8-fad5-4caf-8637-b90ca0b4704a.png
+wwwroot\uploads\Leaders\prasad_a596a77b-9932-47d3-8edb-9ea82658c21c.jpg
+wwwroot\uploads\Leaders\Rajeshkumar_20d127cd-d21d-4d19-bd81-393c19c846ed.jpg
+wwwroot\uploads\Leaders\rakesh_0235e088-78a9-4cfb-8a51-b2c06c1617ef.jpg
+wwwroot\uploads\Leaders\Shaju_2d9b297a-6355-4e1d-9852-a214d844cac8.jpg
+wwwroot\uploads\Leaders\Sreenivas_959580a5-1511-4312-a4f0-26c1b037f632.jpg
+wwwroot\uploads\nearby\Nearby_77960c49-595b-4841-ac38-4366d666b35e.png
+wwwroot\uploads\nearby\nearby_783e76ba-6d92-4c94-a799-564f9bdc4d49.png
+wwwroot\uploads\online\online_4e5b925f-8ffd-443b-b726-e5e5ffbc4e8d.png
+wwwroot\uploads\online\online_f37b2f4e-8250-4384-836e-e7f488ff5d30.png
+wwwroot\uploads\Policy\CSRProject2023-24_41893593-fb82-42ce-ad48-cfec4635a023.pdf
+wwwroot\uploads\Policy\document_a30d44f0-b7b5-421f-9ceb-0c4c656f7d9e.pdf
+wwwroot\uploads\Policy\document_a982cc3d-ae93-479d-88a3-fb1b5392855c.pdf
+wwwroot\uploads\Policy\Form15G-16_006c2a52-6f0f-4129-aa19-6c6915086b9c.pdf
+wwwroot\uploads\Policy\Gold_Loan_Document-8_0ee090c3-807c-4979-a964-3d74bfe30aac.pdf
+wwwroot\uploads\Policy\Gold_Loan_Document-8_38865d81-330b-4f8a-b9f1-7653d1482f70.pdf
+wwwroot\uploads\Policy\Gold_Loan_Document-8_515d3ad6-7d38-486a-93d2-c0fbf06a0448.pdf
+wwwroot\uploads\Policy\policies_5b58e366-6ee1-4f7a-8501-3dbad9c4a6a8.png
+wwwroot\uploads\Policy\policies_d8cf149b-b462-45b3-99ba-7e1f3e33a39b.png
+wwwroot\uploads\reports\anoopg_998e969f-4b06-446a-b160-089f6dc299bf.pdf
+wwwroot\uploads\reports\co-lending_a3abc6bb-8aee-4e66-9a95-31c0b43060ca.pdf
+wwwroot\uploads\reports\CSRProject2022-23_63070d3b-ebef-401d-b9ae-5e4729a2b398.pdf
+wwwroot\uploads\reports\CSRProject2023-24_62f93ab4-2377-4479-97f2-fd03caacdd81.pdf
+wwwroot\uploads\reports\dividend_8b9c4e11-5ad7-4255-8ab1-f75ff3b8b8db.pdf
+wwwroot\uploads\reports\dividend_bc5958fd-d70e-41a1-aa65-46850764dd3d.pdf
+wwwroot\uploads\reports\income_58537516-7d16-45b2-a204-ea29654f190c.pdf
+wwwroot\uploads\reports\interest_2ca1eb9e-4a89-4df2-9c15-5faeeaa20a90.pdf
+wwwroot\uploads\reports\interest_3da59389-b3e7-4440-bda1-ce8954db0e6c.pdf
+wwwroot\uploads\reports\KYCpolicy_5d752647-7fec-4b91-aa65-f20d04a799a2.pdf
+wwwroot\uploads\reports\SantoshKurup_d68cc527-efb4-4f14-a541-501e45be7123.pdf
+wwwroot\uploads\reports\SelfDeclarationforavailmentofTreatyBenefit.html_27015576-6245-4d22-be1e-0e667c9835f6.pdf
+wwwroot\uploads\Services\locate 1_cbe0398d-1631-4010-a95e-581fc879db2b.png
+wwwroot\uploads\Unpaid\income_4b20eae1-2362-4001-9c75-b29dd57b13ab.pdf

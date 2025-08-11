@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="~/css/chat/chat.css" asp-append-version="true">
+<style>
+ #popup-tex{
+      transition: 0.5s;
+ }
+ 
+@@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+
+}
+</style>
+<script src="../js/chat/chat.js"></script>
+<div class="chat">
+    <div id="popup-tex" style="display: none;">May I Help You</div>
+    <img src="../images/logo/chat-icon.png" alt="Chat Icon" class="chat-icon" id="chat-icon-image">
+@*      <img src="../images/logo/close.png" alt="Chat Icon" class="chat-icon" id="other-image" style="display: none;"> *@
+</div>
+<div id="chatbox">
+  <div class="chat-header">
+    <div class="header-content">
+   <h2>I'm Here to Help You</h2>
+    <p>Ask me anything or start a conversation.</p>
+   
+    </div>
+    <div class="status-indicator"></div>
+
+  </div>
+  <img src="../images/logo/logo.png">
+  <div id="messages">
+    
+  </div>
+  
+  <div class="input-container">
+    <input type="text" id="userInput" placeholder="Ask me about loans..." />
+    <button id="sendBtn" onclick="handleUserMessage()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22,2 15,22 11,13 2,9"></polygon>
+      </svg>
+    </button>
+  </div>
+</div>
+<script>
+  
+  $(document).ready(function () {
+  // Hover animation + popup
+  $('#chat-icon-image').hover(
+    function () {
+      $('#popup-tex').show();
+      $(this).css('animation', 'none');
+    },
+    function () {
+      $('#popup-tex').hide();
+      $(this).css('animation', 'pulse 1s ease-in-out infinite alternate');
+    }
+  );
+
+  // Open chat
+
+
+});
+let isChatOpen = false;
+
+$('#chat-icon-image').click(function () {
+  $('.chat').toggleClass('active');
+  isChatOpen = !isChatOpen;
+  $('#popup-tex').text(isChatOpen ? "Close chat" : "May I Help You");
+
+  $(this).attr('src', isChatOpen ? '../images/logo/close.png' : '../images/logo/chat-icon.png');
+ $(this).toggleClass('expanded');
+  setTimeout(() => {
+    $('#chatbox').toggleClass('active');
+  }, 200); // Delay in milliseconds
+});
+</script>

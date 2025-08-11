@@ -1,0 +1,1397 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\obj\\Release\\net9.0\\scopedcss\\projectbundle\\yogloansdotnet.bundle.scp.css",
+      "PackagePath": "staticwebassets\\yogloansdotnet.p5bg5q3fvz.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\Gold\\benefit.css",
+      "PackagePath": "staticwebassets\\css\\Gold\\benefit.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\Gold\\section.css",
+      "PackagePath": "staticwebassets\\css\\Gold\\section.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\about\\about.css",
+      "PackagePath": "staticwebassets\\css\\about\\about.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\about\\aboutcontainer.css",
+      "PackagePath": "staticwebassets\\css\\about\\aboutcontainer.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\about\\director.css",
+      "PackagePath": "staticwebassets\\css\\about\\director.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\about\\reviews.css",
+      "PackagePath": "staticwebassets\\css\\about\\reviews.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\about\\welcome.css",
+      "PackagePath": "staticwebassets\\css\\about\\welcome.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\branch\\branch.css",
+      "PackagePath": "staticwebassets\\css\\branch\\branch.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\career\\card.css",
+      "PackagePath": "staticwebassets\\css\\career\\card.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\career\\faq.css",
+      "PackagePath": "staticwebassets\\css\\career\\faq.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\career\\form.css",
+      "PackagePath": "staticwebassets\\css\\career\\form.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\career\\welcome.css",
+      "PackagePath": "staticwebassets\\css\\career\\welcome.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\chat\\chat.css",
+      "PackagePath": "staticwebassets\\css\\chat\\chat.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\contact\\contact.css",
+      "PackagePath": "staticwebassets\\css\\contact\\contact.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\csr\\reportcard.css",
+      "PackagePath": "staticwebassets\\css\\csr\\reportcard.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\departments.css",
+      "PackagePath": "staticwebassets\\css\\departments.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\home\\about.css",
+      "PackagePath": "staticwebassets\\css\\home\\about.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\home\\clients.css",
+      "PackagePath": "staticwebassets\\css\\home\\clients.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\home\\contact.css",
+      "PackagePath": "staticwebassets\\css\\home\\contact.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\home\\loanitem.css",
+      "PackagePath": "staticwebassets\\css\\home\\loanitem.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\home\\welcome.css",
+      "PackagePath": "staticwebassets\\css\\home\\welcome.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\investor\\creditrate.css",
+      "PackagePath": "staticwebassets\\css\\investor\\creditrate.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\investor\\list.css",
+      "PackagePath": "staticwebassets\\css\\investor\\list.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\layout.css",
+      "PackagePath": "staticwebassets\\css\\layout.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\online15g\\form.css",
+      "PackagePath": "staticwebassets\\css\\online15g\\form.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\online\\services.css",
+      "PackagePath": "staticwebassets\\css\\online\\services.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\onlinepay\\style.css",
+      "PackagePath": "staticwebassets\\css\\onlinepay\\style.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\policy\\policy.css",
+      "PackagePath": "staticwebassets\\css\\policy\\policy.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\Terms&conditions.pdf",
+      "PackagePath": "staticwebassets\\images\\Terms&conditions.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\Tiredman.jpg",
+      "PackagePath": "staticwebassets\\images\\Tiredman.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\crisil.jpg",
+      "PackagePath": "staticwebassets\\images\\crisil.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\Mohandas.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\Mohandas.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\Rajeshkumar.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\Rajeshkumar.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\Sandy_Ppl-09_Single-01.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\Sandy_Ppl-09_Single-01.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\Shaju.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\Shaju.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\Sreenivas.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\Sreenivas.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\prasad.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\prasad.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\rajesh.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\rajesh.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\rakesh.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\rakesh.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\ramachandran.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\ramachandran.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\santosh.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\santosh.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\silpa.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\silpa.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\unnikrishnan.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\unnikrishnan.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\unnirajan.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\unnirajan.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\vijayan.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\vijayan.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\arrow(1).png",
+      "PackagePath": "staticwebassets\\images\\icon\\arrow(1).png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\bike.png",
+      "PackagePath": "staticwebassets\\images\\icon\\bike.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\checklist.png",
+      "PackagePath": "staticwebassets\\images\\icon\\checklist.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\cooperation.png",
+      "PackagePath": "staticwebassets\\images\\icon\\cooperation.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\download-pdf.png",
+      "PackagePath": "staticwebassets\\images\\icon\\download-pdf.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\electric-appliances.png",
+      "PackagePath": "staticwebassets\\images\\icon\\electric-appliances.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\facebook.png",
+      "PackagePath": "staticwebassets\\images\\icon\\facebook.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\gold.png",
+      "PackagePath": "staticwebassets\\images\\icon\\gold.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\image.png",
+      "PackagePath": "staticwebassets\\images\\icon\\image.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\linkedin-logo.png",
+      "PackagePath": "staticwebassets\\images\\icon\\linkedin-logo.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\location.png",
+      "PackagePath": "staticwebassets\\images\\icon\\location.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\mail.png",
+      "PackagePath": "staticwebassets\\images\\icon\\mail.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\maps-and-flags.png",
+      "PackagePath": "staticwebassets\\images\\icon\\maps-and-flags.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\note.png",
+      "PackagePath": "staticwebassets\\images\\icon\\note.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\open-menu.png",
+      "PackagePath": "staticwebassets\\images\\icon\\open-menu.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\pdf.png",
+      "PackagePath": "staticwebassets\\images\\icon\\pdf.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\printer.png",
+      "PackagePath": "staticwebassets\\images\\icon\\printer.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\search.png",
+      "PackagePath": "staticwebassets\\images\\icon\\search.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\seen.png",
+      "PackagePath": "staticwebassets\\images\\icon\\seen.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\send.png",
+      "PackagePath": "staticwebassets\\images\\icon\\send.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\show.png",
+      "PackagePath": "staticwebassets\\images\\icon\\show.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\social-media.png",
+      "PackagePath": "staticwebassets\\images\\icon\\social-media.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\style.css",
+      "PackagePath": "staticwebassets\\images\\icon\\style.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\telephone.png",
+      "PackagePath": "staticwebassets\\images\\icon\\telephone.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\user(2).png",
+      "PackagePath": "staticwebassets\\images\\icon\\user(2).png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\user.png",
+      "PackagePath": "staticwebassets\\images\\icon\\user.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\chat-icon.png",
+      "PackagePath": "staticwebassets\\images\\logo\\chat-icon.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\close.png",
+      "PackagePath": "staticwebassets\\images\\logo\\close.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo\\logo.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\online\\cancel.jpg",
+      "PackagePath": "staticwebassets\\images\\online\\cancel.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\online\\gold.png",
+      "PackagePath": "staticwebassets\\images\\online\\gold.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\online\\onlinepayment.png",
+      "PackagePath": "staticwebassets\\images\\online\\onlinepayment.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\online\\tax.jpg",
+      "PackagePath": "staticwebassets\\images\\online\\tax.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRCommittee.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRCommittee.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRProject2020-21.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRProject2020-21.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRProject2021-22.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRProject2021-22.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRProject2022-23.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRProject2022-23.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRProject2023-24.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRProject2023-24.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRProject2024-25.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRProject2024-25.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\approvedCSRPolicy.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\approvedCSRPolicy.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport-2014-15.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport-2014-15.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport-2020-21.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport-2020-21.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport-2021-22.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport-2021-22.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport2015-16.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport2015-16.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport2016-17.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport2016-17.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport2022-21.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport2022-21.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport2023-24.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport2023-24.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\Yogloans-AnnualReport2017-2018.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\Yogloans-AnnualReport2017-2018.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\31stAGMNotice2021-2022.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\31stAGMNotice2021-2022.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\32ndAGMNotice.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\32ndAGMNotice.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\32ndScrutinizerReport.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\32ndScrutinizerReport.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\33rdAGMNotice.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\33rdAGMNotice.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\33rdScrutinizerReport.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\33rdScrutinizerReport.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\ScrutinizerReportSummary2023.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\ScrutinizerReportSummary2023.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\egm.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\egm.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\appoi\\Pushpangadan.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\appoi\\Pushpangadan.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\appoi\\SantoshKurup.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\appoi\\SantoshKurup.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\appoi\\anoopg.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\appoi\\anoopg.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\DeclarationUnderRule37BC.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\DeclarationUnderRule37BC.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\FORM10F.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\FORM10F.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\FORM15G.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\FORM15G.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\FORM15H.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\FORM15H.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\JointShareholdersDeclaration.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\JointShareholdersDeclaration.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\Non-ResidentTaxDeclaration.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\Non-ResidentTaxDeclaration.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\ResidentTaxDeclaration.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\ResidentTaxDeclaration.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\SelfDeclarationforavailmentofTreatyBenefit.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\SelfDeclarationforavailmentofTreatyBenefit.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\tds.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\tds.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\publicdis\\LiquidityRiskasonjune302021.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\publicdis\\LiquidityRiskasonjune302021.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\KYCpolicy.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\KYCpolicy.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\auction.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\auction.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\co-lending.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\co-lending.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\compromise.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\compromise.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\dividend.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\dividend.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\income.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\income.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\interest.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\interest.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\loan.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\loan.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\rbi.jpg",
+      "PackagePath": "staticwebassets\\images\\rbi.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\Artboard.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\Artboard.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\bike-background.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\bike-background.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\business-background.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\business-background.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\business-background2.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\business-background2.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\career.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\career.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\cd2.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\cd2.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\cdn.jpg",
+      "PackagePath": "staticwebassets\\images\\welcome\\cdn.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\colleagues-working-project-discussing-details.jpg",
+      "PackagePath": "staticwebassets\\images\\welcome\\colleagues-working-project-discussing-details.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\consumer-durables-background.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\consumer-durables-background.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\contact.jpg",
+      "PackagePath": "staticwebassets\\images\\welcome\\contact.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\front-view-arrangement-economy-elements.jpg",
+      "PackagePath": "staticwebassets\\images\\welcome\\front-view-arrangement-economy-elements.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\gold2.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\gold2.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\goldloan.jpg",
+      "PackagePath": "staticwebassets\\images\\welcome\\goldloan.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\hands-holding-earth-csr-business-campaign.jpg",
+      "PackagePath": "staticwebassets\\images\\welcome\\hands-holding-earth-csr-business-campaign.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\investors.jpg",
+      "PackagePath": "staticwebassets\\images\\welcome\\investors.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\medium-shot-woman-with-white-house.jpg",
+      "PackagePath": "staticwebassets\\images\\welcome\\medium-shot-woman-with-white-house.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\policy.jpg",
+      "PackagePath": "staticwebassets\\images\\welcome\\policy.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\vehicle2.jpg",
+      "PackagePath": "staticwebassets\\images\\welcome\\vehicle2.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\vehicle2.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\vehicle2.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\branch\\branch.js",
+      "PackagePath": "staticwebassets\\js\\branch\\branch.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\chat\\chat.js",
+      "PackagePath": "staticwebassets\\js\\chat\\chat.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\chat\\knowledge.json",
+      "PackagePath": "staticwebassets\\js\\chat\\knowledge.json"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\investor\\investors.js",
+      "PackagePath": "staticwebassets\\js\\investor\\investors.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\jaquery.js",
+      "PackagePath": "staticwebassets\\js\\jaquery.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\nach\\script.js",
+      "PackagePath": "staticwebassets\\js\\nach\\script.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\online15\\script.js",
+      "PackagePath": "staticwebassets\\js\\online15\\script.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\06ccaca6-130f-4718-b024-85549ddd4fcc_Screenshot 2025-05-15 135932.png",
+      "PackagePath": "staticwebassets\\uploads\\06ccaca6-130f-4718-b024-85549ddd4fcc_Screenshot 2025-05-15 135932.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\0bd1feb7-6815-46af-8623-c14fc22c2d81_vehicle2.png",
+      "PackagePath": "staticwebassets\\uploads\\0bd1feb7-6815-46af-8623-c14fc22c2d81_vehicle2.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\10ff1659-6476-4733-8c80-77bfd7f89bb8_cd2.png",
+      "PackagePath": "staticwebassets\\uploads\\10ff1659-6476-4733-8c80-77bfd7f89bb8_cd2.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\183a048f-28ea-4d4a-abf3-d81067351972_Businessloan.png",
+      "PackagePath": "staticwebassets\\uploads\\183a048f-28ea-4d4a-abf3-d81067351972_Businessloan.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\1ec8387e-67f0-4d11-bb58-a8beb5edb26e_front-view-arrangement-economy-elements.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1ec8387e-67f0-4d11-bb58-a8beb5edb26e_front-view-arrangement-economy-elements.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\22636b32-6071-49ad-abe4-bb122d9540a4_Screenshot 2025-05-15 134712.png",
+      "PackagePath": "staticwebassets\\uploads\\22636b32-6071-49ad-abe4-bb122d9540a4_Screenshot 2025-05-15 134712.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\23fc40ab-84f2-4441-9b06-0cf06d8f95f5_Screenshot 2025-05-15 142924.png",
+      "PackagePath": "staticwebassets\\uploads\\23fc40ab-84f2-4441-9b06-0cf06d8f95f5_Screenshot 2025-05-15 142924.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\2d159650-1a77-4cbb-8895-7f410c501f5a_cd.png",
+      "PackagePath": "staticwebassets\\uploads\\2d159650-1a77-4cbb-8895-7f410c501f5a_cd.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\2df5b683-e9f8-4931-84d3-a61d895de7c1_Screenshot 2025-05-15 142909.png",
+      "PackagePath": "staticwebassets\\uploads\\2df5b683-e9f8-4931-84d3-a61d895de7c1_Screenshot 2025-05-15 142909.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\3b74a599-79de-4181-abc4-b970d5c25181_cdloan.png",
+      "PackagePath": "staticwebassets\\uploads\\3b74a599-79de-4181-abc4-b970d5c25181_cdloan.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\3e5ebcb8-1030-406f-84f3-89e7d14a9bd1_Screenshot 2025-05-15 142909.png",
+      "PackagePath": "staticwebassets\\uploads\\3e5ebcb8-1030-406f-84f3-89e7d14a9bd1_Screenshot 2025-05-15 142909.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\4253a567-2c52-438b-8b36-94c11a690037_gold.png",
+      "PackagePath": "staticwebassets\\uploads\\4253a567-2c52-438b-8b36-94c11a690037_gold.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\470b248b-4004-49e5-a535-688e9dec667b_Screenshot 2025-05-15 142924.png",
+      "PackagePath": "staticwebassets\\uploads\\470b248b-4004-49e5-a535-688e9dec667b_Screenshot 2025-05-15 142924.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\4969f354-198b-4baa-b011-1ade02d48082_gold.png",
+      "PackagePath": "staticwebassets\\uploads\\4969f354-198b-4baa-b011-1ade02d48082_gold.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\4e1807e5-c758-47bf-9d3d-4ab86bd925ef_business-background2.png",
+      "PackagePath": "staticwebassets\\uploads\\4e1807e5-c758-47bf-9d3d-4ab86bd925ef_business-background2.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\4f050631-2009-4a72-a5a9-5d97e0718be1_bike-background.png",
+      "PackagePath": "staticwebassets\\uploads\\4f050631-2009-4a72-a5a9-5d97e0718be1_bike-background.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\5f8fabbc-1309-4cd8-97c0-a1de30648c86_Screenshot 2025-05-15 142924.png",
+      "PackagePath": "staticwebassets\\uploads\\5f8fabbc-1309-4cd8-97c0-a1de30648c86_Screenshot 2025-05-15 142924.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\629a10b0-07b6-405f-81ab-a49731cf395e_gold.png",
+      "PackagePath": "staticwebassets\\uploads\\629a10b0-07b6-405f-81ab-a49731cf395e_gold.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\637a6888-a9be-4834-83c5-155b76363427_Screenshot 2025-05-15 142924.png",
+      "PackagePath": "staticwebassets\\uploads\\637a6888-a9be-4834-83c5-155b76363427_Screenshot 2025-05-15 142924.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\65a224df-67d3-49ad-8406-872e63811805_Screenshot 2025-05-15 142909.png",
+      "PackagePath": "staticwebassets\\uploads\\65a224df-67d3-49ad-8406-872e63811805_Screenshot 2025-05-15 142909.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\6840749d-772e-49bc-bc14-4df3e308202c_Screenshot 2025-05-15 142924.png",
+      "PackagePath": "staticwebassets\\uploads\\6840749d-772e-49bc-bc14-4df3e308202c_Screenshot 2025-05-15 142924.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\6a33a3d3-a2f9-4079-8742-02c55ad15829_Screenshot 2025-05-15 095357.png",
+      "PackagePath": "staticwebassets\\uploads\\6a33a3d3-a2f9-4079-8742-02c55ad15829_Screenshot 2025-05-15 095357.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\6e044559-cce7-4bf0-8cca-b6dfd2a83136_Screenshot 2025-05-15 142924.png",
+      "PackagePath": "staticwebassets\\uploads\\6e044559-cce7-4bf0-8cca-b6dfd2a83136_Screenshot 2025-05-15 142924.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\70295a38-faf9-4316-b51b-aaed5b43afea_Screenshot 2025-05-15 142924.png",
+      "PackagePath": "staticwebassets\\uploads\\70295a38-faf9-4316-b51b-aaed5b43afea_Screenshot 2025-05-15 142924.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\70a4db80-daa4-4cb4-b771-3a8af6a2e6e1_Screenshot 2025-05-15 142909.png",
+      "PackagePath": "staticwebassets\\uploads\\70a4db80-daa4-4cb4-b771-3a8af6a2e6e1_Screenshot 2025-05-15 142909.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\71119de5-4e43-4598-a78d-516d57b63997_Screenshot 2025-05-15 142909.png",
+      "PackagePath": "staticwebassets\\uploads\\71119de5-4e43-4598-a78d-516d57b63997_Screenshot 2025-05-15 142909.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\733b35d3-c1dd-4e46-8f52-4dc4368ebfdf_vehicle2.png",
+      "PackagePath": "staticwebassets\\uploads\\733b35d3-c1dd-4e46-8f52-4dc4368ebfdf_vehicle2.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\7581884b-c8f3-476a-9ed6-7df514ade946_Screenshot 2025-05-15 142924.png",
+      "PackagePath": "staticwebassets\\uploads\\7581884b-c8f3-476a-9ed6-7df514ade946_Screenshot 2025-05-15 142924.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\7e2a37a7-8a0d-446b-a9ad-b9eabe404b98_gold.png",
+      "PackagePath": "staticwebassets\\uploads\\7e2a37a7-8a0d-446b-a9ad-b9eabe404b98_gold.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\8169f491-9a41-434c-90a7-a10e1d2ec60f_Mohandas.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8169f491-9a41-434c-90a7-a10e1d2ec60f_Mohandas.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\84907cda-b0c4-4fa6-875b-57ca7c11a49b_mail.png",
+      "PackagePath": "staticwebassets\\uploads\\84907cda-b0c4-4fa6-875b-57ca7c11a49b_mail.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\8a79511b-14f4-4c5e-94e6-e9d371b73991_gold.png",
+      "PackagePath": "staticwebassets\\uploads\\8a79511b-14f4-4c5e-94e6-e9d371b73991_gold.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\8d191c63-4c35-4ddb-9e30-609bd95429f0_Screenshot 2025-05-15 142924.png",
+      "PackagePath": "staticwebassets\\uploads\\8d191c63-4c35-4ddb-9e30-609bd95429f0_Screenshot 2025-05-15 142924.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\8d873d9f-385a-4930-a4a2-ac3212e671b0_Screenshot 2025-05-15 142909.png",
+      "PackagePath": "staticwebassets\\uploads\\8d873d9f-385a-4930-a4a2-ac3212e671b0_Screenshot 2025-05-15 142909.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\902db853-6683-4d74-9509-f71d57b8c154_bike-background.png",
+      "PackagePath": "staticwebassets\\uploads\\902db853-6683-4d74-9509-f71d57b8c154_bike-background.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\921e5a57-bf88-44e3-bae5-86a2378118a4_vehicleloan.png",
+      "PackagePath": "staticwebassets\\uploads\\921e5a57-bf88-44e3-bae5-86a2378118a4_vehicleloan.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\96515ee1-9709-4efa-8fbf-808a6314e749_Screenshot 2025-05-15 135932.png",
+      "PackagePath": "staticwebassets\\uploads\\96515ee1-9709-4efa-8fbf-808a6314e749_Screenshot 2025-05-15 135932.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\96d203a2-254c-4eb6-bfac-7b177738c157_Screenshot 2025-05-15 135932.png",
+      "PackagePath": "staticwebassets\\uploads\\96d203a2-254c-4eb6-bfac-7b177738c157_Screenshot 2025-05-15 135932.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\9b769c86-6ed1-4461-a5b7-eb2dfa55de94_gold.png",
+      "PackagePath": "staticwebassets\\uploads\\9b769c86-6ed1-4461-a5b7-eb2dfa55de94_gold.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\9d45ed2c-2103-404a-8cc4-bdddb09b84de_gold2.png",
+      "PackagePath": "staticwebassets\\uploads\\9d45ed2c-2103-404a-8cc4-bdddb09b84de_gold2.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Announcements\\Form15G-3_862dcb76-66f1-402c-adde-a588af1f2907.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Announcements\\Form15G-3_862dcb76-66f1-402c-adde-a588af1f2907.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Apporder\\CSRCommittee_44fd1808-d6cb-47a9-9157-fd1de50bdeb1.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Apporder\\CSRCommittee_44fd1808-d6cb-47a9-9157-fd1de50bdeb1.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\CSRProject2020-21_619f310a-20cc-42ae-a25b-9f310d25f1c0.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Csr\\CSRProject2020-21_619f310a-20cc-42ae-a25b-9f310d25f1c0.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\CSRProject2023-24_c4a135ae-371c-44c3-9fd2-317a23b76205.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Csr\\CSRProject2023-24_c4a135ae-371c-44c3-9fd2-317a23b76205.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\KYCpolicy_ab595566-d6ae-4aa4-b4c1-5d5307d01b7e.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Csr\\KYCpolicy_ab595566-d6ae-4aa4-b4c1-5d5307d01b7e.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\csr_6110e623-d609-459a-bcea-737eaa78d87b.png",
+      "PackagePath": "staticwebassets\\uploads\\Csr\\csr_6110e623-d609-459a-bcea-737eaa78d87b.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\csr_69ca07b3-c061-4d53-8747-9f8e664c4fd3.png",
+      "PackagePath": "staticwebassets\\uploads\\Csr\\csr_69ca07b3-c061-4d53-8747-9f8e664c4fd3.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Directors\\Mohandas_97013420-ba7a-4d53-b2fd-9896eb799b1a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Directors\\Mohandas_97013420-ba7a-4d53-b2fd-9896eb799b1a.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Directors\\ramachandran_212f5b58-e0e2-49e8-aead-bf20acc9bca7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Directors\\ramachandran_212f5b58-e0e2-49e8-aead-bf20acc9bca7.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Directors\\santosh_765fc703-c2ac-4697-9500-57f20e119019.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Directors\\santosh_765fc703-c2ac-4697-9500-57f20e119019.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Directors\\silpa_30324122-c8b9-47e3-b593-cda9c5220e75.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Directors\\silpa_30324122-c8b9-47e3-b593-cda9c5220e75.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Directors\\unnikrishnan_01cf5c5f-f741-4d52-92b4-8fac4968c9fd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Directors\\unnikrishnan_01cf5c5f-f741-4d52-92b4-8fac4968c9fd.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Directors\\unnirajan_c2453655-8b1f-4899-ba3f-9697f7ed3233.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Directors\\unnirajan_c2453655-8b1f-4899-ba3f-9697f7ed3233.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Directors\\vijayan_aea2c979-dcdf-48a5-ba3a-d337bf892229.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Directors\\vijayan_aea2c979-dcdf-48a5-ba3a-d337bf892229.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Formdts\\co-lending_c44d72bc-af98-4a23-84b3-8283f180ea50.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Formdts\\co-lending_c44d72bc-af98-4a23-84b3-8283f180ea50.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Leaders\\Rajeshkumar_20d127cd-d21d-4d19-bd81-393c19c846ed.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Leaders\\Rajeshkumar_20d127cd-d21d-4d19-bd81-393c19c846ed.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Leaders\\Shaju_2d9b297a-6355-4e1d-9852-a214d844cac8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Leaders\\Shaju_2d9b297a-6355-4e1d-9852-a214d844cac8.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Leaders\\Sreenivas_959580a5-1511-4312-a4f0-26c1b037f632.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Leaders\\Sreenivas_959580a5-1511-4312-a4f0-26c1b037f632.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Leaders\\prasad_a596a77b-9932-47d3-8edb-9ea82658c21c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Leaders\\prasad_a596a77b-9932-47d3-8edb-9ea82658c21c.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Leaders\\rakesh_0235e088-78a9-4cfb-8a51-b2c06c1617ef.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Leaders\\rakesh_0235e088-78a9-4cfb-8a51-b2c06c1617ef.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\CSRProject2023-24_41893593-fb82-42ce-ad48-cfec4635a023.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\CSRProject2023-24_41893593-fb82-42ce-ad48-cfec4635a023.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\Form15G-16_006c2a52-6f0f-4129-aa19-6c6915086b9c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\Form15G-16_006c2a52-6f0f-4129-aa19-6c6915086b9c.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\Gold_Loan_Document-8_0ee090c3-807c-4979-a964-3d74bfe30aac.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\Gold_Loan_Document-8_0ee090c3-807c-4979-a964-3d74bfe30aac.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\Gold_Loan_Document-8_38865d81-330b-4f8a-b9f1-7653d1482f70.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\Gold_Loan_Document-8_38865d81-330b-4f8a-b9f1-7653d1482f70.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\Gold_Loan_Document-8_515d3ad6-7d38-486a-93d2-c0fbf06a0448.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\Gold_Loan_Document-8_515d3ad6-7d38-486a-93d2-c0fbf06a0448.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\document_a30d44f0-b7b5-421f-9ceb-0c4c656f7d9e.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\document_a30d44f0-b7b5-421f-9ceb-0c4c656f7d9e.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\document_a982cc3d-ae93-479d-88a3-fb1b5392855c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\document_a982cc3d-ae93-479d-88a3-fb1b5392855c.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\policies_5b58e366-6ee1-4f7a-8501-3dbad9c4a6a8.png",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\policies_5b58e366-6ee1-4f7a-8501-3dbad9c4a6a8.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Policy\\policies_d8cf149b-b462-45b3-99ba-7e1f3e33a39b.png",
+      "PackagePath": "staticwebassets\\uploads\\Policy\\policies_d8cf149b-b462-45b3-99ba-7e1f3e33a39b.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Services\\locate 1_cbe0398d-1631-4010-a95e-581fc879db2b.png",
+      "PackagePath": "staticwebassets\\uploads\\Services\\locate 1_cbe0398d-1631-4010-a95e-581fc879db2b.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\Unpaid\\income_4b20eae1-2362-4001-9c75-b29dd57b13ab.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Unpaid\\income_4b20eae1-2362-4001-9c75-b29dd57b13ab.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\a1690b05-a105-47cb-8dfd-57d97dc68c68_Businessloan.png",
+      "PackagePath": "staticwebassets\\uploads\\a1690b05-a105-47cb-8dfd-57d97dc68c68_Businessloan.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\a8008ff2-8bf6-4059-9898-fe9888bbad43_cdloan.png",
+      "PackagePath": "staticwebassets\\uploads\\a8008ff2-8bf6-4059-9898-fe9888bbad43_cdloan.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\a8ab0e2a-e141-49a6-aaaa-f027daeea281_consumer-durables-background.png",
+      "PackagePath": "staticwebassets\\uploads\\a8ab0e2a-e141-49a6-aaaa-f027daeea281_consumer-durables-background.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\aa512fae-bbd1-45e7-8fb5-de39e804a6b3_Screenshot 2025-05-15 142909.png",
+      "PackagePath": "staticwebassets\\uploads\\aa512fae-bbd1-45e7-8fb5-de39e804a6b3_Screenshot 2025-05-15 142909.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a.png",
+      "PackagePath": "staticwebassets\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\about\\about_a66d28b5-6a4a-42ad-9c63-d55e838374d8.png",
+      "PackagePath": "staticwebassets\\uploads\\about\\about_a66d28b5-6a4a-42ad-9c63-d55e838374d8.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\ae848e36-4a41-4018-a749-25677b79ad35_vehicleloan.png",
+      "PackagePath": "staticwebassets\\uploads\\ae848e36-4a41-4018-a749-25677b79ad35_vehicleloan.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\c5db4e28-44c1-46c2-a43f-7264add301b2_business.png",
+      "PackagePath": "staticwebassets\\uploads\\c5db4e28-44c1-46c2-a43f-7264add301b2_business.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\c8d5c50b-8be0-4b00-929f-04aae5948622_Screenshot 2025-05-15 142924.png",
+      "PackagePath": "staticwebassets\\uploads\\c8d5c50b-8be0-4b00-929f-04aae5948622_Screenshot 2025-05-15 142924.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\career_10694319-2a4d-4138-83bb-f8b99417423a.png",
+      "PackagePath": "staticwebassets\\uploads\\career\\career_10694319-2a4d-4138-83bb-f8b99417423a.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\career_185e2837-5c3f-4869-8382-b62662fa6da7.png",
+      "PackagePath": "staticwebassets\\uploads\\career\\career_185e2837-5c3f-4869-8382-b62662fa6da7.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\career_1c35ade3-dcc8-4850-8e35-a1968c7dfd1d.png",
+      "PackagePath": "staticwebassets\\uploads\\career\\career_1c35ade3-dcc8-4850-8e35-a1968c7dfd1d.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\career_fed98605-493d-40dc-a0b2-2494e35006dc.png",
+      "PackagePath": "staticwebassets\\uploads\\career\\career_fed98605-493d-40dc-a0b2-2494e35006dc.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Form15G-10_54d9f43e-9cd3-422e-8dfc-c82342710a7d.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Form15G-10_c8460a85-fce3-498c-83b9-5cbf90de7ebe.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Form15G-10_e5c398e1-e553-43a0-abbf-7d4ffff7db6b.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Form15G-11_4ad2e995-09b5-4f83-b2f0-7730a342375b.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Form15G-11_74f73dd3-63b5-4cba-aab2-ad52eefcaece.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Form15G-11_ff5889b6-5621-4ef5-9449-236ed676da83.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Form15G-12_3d86d4b9-f6f0-4262-a9d5-1650ae576e37.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Form15G-12_458182cf-bd8c-4a04-b71b-ef9147f62e19.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Form15G-12_b1c0be2e-69aa-4d88-b174-b3bcb548d1f5.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Gold_Loan_Document-5_b41c1eb3-0800-4312-8c33-e6e0d9c3aae5.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Gold_Loan_Document-5_b41c1eb3-0800-4312-8c33-e6e0d9c3aae5.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Gold_Loan_Document-5_d702513c-a471-4874-b832-3cab4e36981d.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Gold_Loan_Document-5_d702513c-a471-4874-b832-3cab4e36981d.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Gold_Loan_Document-6_375a2636-cb5d-4554-ba45-159b70dbd9df.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Gold_Loan_Document-6_375a2636-cb5d-4554-ba45-159b70dbd9df.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Gold_Loan_Document-7_222f750a-a568-4eea-8d43-b3124e597719.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Gold_Loan_Document-7_222f750a-a568-4eea-8d43-b3124e597719.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Gold_Loan_Document-8_994bd05d-87e2-4a8e-a4a8-77e55ec4390e.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Gold_Loan_Document-8_994bd05d-87e2-4a8e-a4a8-77e55ec4390e.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\Loan Cum Hypothecation Agreement_b25e805a-2fea-4315-903b-0c3dac94cac5.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\Loan Cum Hypothecation Agreement_b25e805a-2fea-4315-903b-0c3dac94cac5.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\doc\\document_2fd53835-8cd1-474c-82c5-5d2b52850215.pdf",
+      "PackagePath": "staticwebassets\\uploads\\career\\doc\\document_2fd53835-8cd1-474c-82c5-5d2b52850215.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\contact\\contact_338ec5a1-f897-456b-ac32-b452bb725219.png",
+      "PackagePath": "staticwebassets\\uploads\\contact\\contact_338ec5a1-f897-456b-ac32-b452bb725219.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\contact\\contact_5cf4cf6e-f9ff-4a51-a402-bbb53893a83c.png",
+      "PackagePath": "staticwebassets\\uploads\\contact\\contact_5cf4cf6e-f9ff-4a51-a402-bbb53893a83c.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\d64c2a59-efad-4c83-b3c2-41b3419fa497_cdloan.png",
+      "PackagePath": "staticwebassets\\uploads\\d64c2a59-efad-4c83-b3c2-41b3419fa497_cdloan.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\disclosure\\CSRProject2021-22_46f215a5-2481-462f-a78d-247f18ddf368.pdf",
+      "PackagePath": "staticwebassets\\uploads\\disclosure\\CSRProject2021-22_46f215a5-2481-462f-a78d-247f18ddf368.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\disclosure\\compromise_fc67bba1-0502-4d94-96b1-dd05a30e067d.pdf",
+      "PackagePath": "staticwebassets\\uploads\\disclosure\\compromise_fc67bba1-0502-4d94-96b1-dd05a30e067d.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\disclosure\\income_043a3abe-fa13-4bb4-acf2-e5e4e69ccee9.pdf",
+      "PackagePath": "staticwebassets\\uploads\\disclosure\\income_043a3abe-fa13-4bb4-acf2-e5e4e69ccee9.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\e1a9a5c2-e164-4854-8726-a4fe578e3cd6_gold.png",
+      "PackagePath": "staticwebassets\\uploads\\e1a9a5c2-e164-4854-8726-a4fe578e3cd6_gold.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\e66aa5ac-ee99-470a-8005-806a27a45e6b_business-background.png",
+      "PackagePath": "staticwebassets\\uploads\\e66aa5ac-ee99-470a-8005-806a27a45e6b_business-background.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\ece06f2f-c10c-4dca-b2a9-ec6ba518c073_gold.png",
+      "PackagePath": "staticwebassets\\uploads\\ece06f2f-c10c-4dca-b2a9-ec6ba518c073_gold.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\ee44e083-2b21-4dbe-9e1b-04d74e91c303_Screenshot 2025-05-15 142909.png",
+      "PackagePath": "staticwebassets\\uploads\\ee44e083-2b21-4dbe-9e1b-04d74e91c303_Screenshot 2025-05-15 142909.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\f1e48cb1-dff7-4959-97f1-0fff6c28add3_Screenshot 2025-05-15 142909.png",
+      "PackagePath": "staticwebassets\\uploads\\f1e48cb1-dff7-4959-97f1-0fff6c28add3_Screenshot 2025-05-15 142909.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\f8a9b0fb-0a63-4106-ba2b-7b93068f2360_cdloan.png",
+      "PackagePath": "staticwebassets\\uploads\\f8a9b0fb-0a63-4106-ba2b-7b93068f2360_cdloan.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investor\\1320732_a2630bf4-43bb-45b9-95ee-b95a5c519ca9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\investor\\1320732_a2630bf4-43bb-45b9-95ee-b95a5c519ca9.jpg"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investors\\Investors_dbed98a8-fad5-4caf-8637-b90ca0b4704a.png",
+      "PackagePath": "staticwebassets\\uploads\\investors\\Investors_dbed98a8-fad5-4caf-8637-b90ca0b4704a.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\investors\\investors_5612fecc-8c85-48f1-8c4f-09871902b78c.png",
+      "PackagePath": "staticwebassets\\uploads\\investors\\investors_5612fecc-8c85-48f1-8c4f-09871902b78c.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\nearby\\Nearby_77960c49-595b-4841-ac38-4366d666b35e.png",
+      "PackagePath": "staticwebassets\\uploads\\nearby\\Nearby_77960c49-595b-4841-ac38-4366d666b35e.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\nearby\\nearby_783e76ba-6d92-4c94-a799-564f9bdc4d49.png",
+      "PackagePath": "staticwebassets\\uploads\\nearby\\nearby_783e76ba-6d92-4c94-a799-564f9bdc4d49.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\online\\online_4e5b925f-8ffd-443b-b726-e5e5ffbc4e8d.png",
+      "PackagePath": "staticwebassets\\uploads\\online\\online_4e5b925f-8ffd-443b-b726-e5e5ffbc4e8d.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\online\\online_f37b2f4e-8250-4384-836e-e7f488ff5d30.png",
+      "PackagePath": "staticwebassets\\uploads\\online\\online_f37b2f4e-8250-4384-836e-e7f488ff5d30.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\CSRProject2022-23_63070d3b-ebef-401d-b9ae-5e4729a2b398.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\CSRProject2022-23_63070d3b-ebef-401d-b9ae-5e4729a2b398.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\CSRProject2023-24_62f93ab4-2377-4479-97f2-fd03caacdd81.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\CSRProject2023-24_62f93ab4-2377-4479-97f2-fd03caacdd81.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\KYCpolicy_5d752647-7fec-4b91-aa65-f20d04a799a2.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\KYCpolicy_5d752647-7fec-4b91-aa65-f20d04a799a2.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\SantoshKurup_d68cc527-efb4-4f14-a541-501e45be7123.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\SantoshKurup_d68cc527-efb4-4f14-a541-501e45be7123.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\SelfDeclarationforavailmentofTreatyBenefit.html_27015576-6245-4d22-be1e-0e667c9835f6.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\SelfDeclarationforavailmentofTreatyBenefit.html_27015576-6245-4d22-be1e-0e667c9835f6.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\anoopg_998e969f-4b06-446a-b160-089f6dc299bf.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\anoopg_998e969f-4b06-446a-b160-089f6dc299bf.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\co-lending_a3abc6bb-8aee-4e66-9a95-31c0b43060ca.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\co-lending_a3abc6bb-8aee-4e66-9a95-31c0b43060ca.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\dividend_8b9c4e11-5ad7-4255-8ab1-f75ff3b8b8db.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\dividend_8b9c4e11-5ad7-4255-8ab1-f75ff3b8b8db.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\dividend_bc5958fd-d70e-41a1-aa65-46850764dd3d.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\dividend_bc5958fd-d70e-41a1-aa65-46850764dd3d.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\income_58537516-7d16-45b2-a204-ea29654f190c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\income_58537516-7d16-45b2-a204-ea29654f190c.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\interest_2ca1eb9e-4a89-4df2-9c15-5faeeaa20a90.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\interest_2ca1eb9e-4a89-4df2-9c15-5faeeaa20a90.pdf"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\uploads\\reports\\interest_3da59389-b3e7-4440-bda1-ce8954db0e6c.pdf",
+      "PackagePath": "staticwebassets\\uploads\\reports\\interest_3da59389-b3e7-4440-bda1-ce8954db0e6c.pdf"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.build.yogloansdotnet.props",
+      "PackagePath": "build\\yogloansdotnet.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.yogloansdotnet.props",
+      "PackagePath": "buildMultiTargeting\\yogloansdotnet.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.buildTransitive.yogloansdotnet.props",
+      "PackagePath": "buildTransitive\\yogloansdotnet.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.yogloansdotnet.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.yogloansdotnet.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

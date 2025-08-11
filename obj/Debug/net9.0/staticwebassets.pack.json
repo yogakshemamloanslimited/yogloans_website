@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "D:\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\yogloansdotnet.bundle.scp.css",
-      "PackagePath": "staticwebassets\\yogloansdotnet.z33nz24z9p.bundle.scp.css"
+      "PackagePath": "staticwebassets\\yogloansdotnet.p5bg5q3fvz.bundle.scp.css"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\Gold\\benefit.css",
@@ -51,6 +51,10 @@
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\career\\welcome.css",
       "PackagePath": "staticwebassets\\css\\career\\welcome.css"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\chat\\chat.css",
+      "PackagePath": "staticwebassets\\css\\chat\\chat.css"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\contact\\contact.css",
@@ -291,6 +295,14 @@
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\user.png",
       "PackagePath": "staticwebassets\\images\\icon\\user.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\chat-icon.png",
+      "PackagePath": "staticwebassets\\images\\logo\\chat-icon.png"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\close.png",
+      "PackagePath": "staticwebassets\\images\\logo\\close.png"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\logo.png",
@@ -567,6 +579,14 @@
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\branch\\branch.js",
       "PackagePath": "staticwebassets\\js\\branch\\branch.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\chat\\chat.js",
+      "PackagePath": "staticwebassets\\js\\chat\\chat.js"
+    },
+    {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\chat\\knowledge.json",
+      "PackagePath": "staticwebassets\\js\\chat\\knowledge.json"
     },
     {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\investor\\investors.js",

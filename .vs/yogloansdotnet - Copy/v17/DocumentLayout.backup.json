@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\yogloansdotnet - Copy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|d:\\yogloansdotnet - copy\\wwwroot\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:wwwroot\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "layout.css",
+              "DocumentMoniker": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\layout.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\layout.css",
+              "ToolTip": "D:\\yogloansdotnet - Copy\\wwwroot\\css\\layout.css",
+              "RelativeToolTip": "wwwroot\\css\\layout.css",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-01T04:26:44.317Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

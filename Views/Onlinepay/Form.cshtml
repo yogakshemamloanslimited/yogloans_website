@@ -85,7 +85,7 @@
         // Get Customer Info
         $('#load').show(); // Show spinner before AJAX
         $.ajax({
-            url: 'http://localhost:8085/api/payonline/get-customer/' + encodeURIComponent(customerId) + '/' + encodeURIComponent(mobile),
+            url: 'http://pfl.yogloans.com:8580/api/payonline/get-customer/' + encodeURIComponent(customerId) + '/' + encodeURIComponent(mobile),
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -149,7 +149,7 @@
     $('#result').empty(); // Clear previous result
 
     $.ajax({
-        url: 'http://localhost:8085/api/payonline/get-loan/' + encodeURIComponent(customerId) + '/' + encodeURIComponent(loanno),
+        url: 'http://pfl.yogloans.com:8580/api/payonline/get-loan/' + encodeURIComponent(customerId) + '/' + encodeURIComponent(loanno),
         method: 'GET',
         success: function (response) {
             $('#load').hide();
@@ -331,7 +331,7 @@ $('#table-fill tr').each(function() {
 
    
     $.ajax({
-        url: "http://localhost:8085/api/career/payment",
+        url: "http://pfl.yogloans.com:8580/api/career/payment",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify(requestData),

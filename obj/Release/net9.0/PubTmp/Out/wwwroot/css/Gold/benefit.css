@@ -1,0 +1,78 @@
+ .benefit {
+        padding: 60px 20px;
+        background-color: #f8f9fa;
+    }
+
+    .benefit .right {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .benefit .card-item {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .benefit .card-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .benefit .card-content {
+        padding: 25px;
+    }
+
+    .benefit h3 {
+        color: #044697;
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .benefit p {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: #555;
+        line-height: 1.6;
+        position: relative;
+        padding-left: 25px;
+    }
+
+    .benefit i {
+        color: #044697;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        font-size: 1.1rem;
+    }
+
+    .benefit span {
+        flex: 1;
+        font-size: 0.95rem;
+    }
+
+    .benefit .card-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    .benefit .card-content p:not(:last-child) {
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 12px;
+    }
+
+    .benefit .card-content p:not(:first-child) {
+        padding-top: 12px;
+    }
+
+    @media (max-width: 768px) {
+        .benefit .right {
+            grid-template-columns: 1fr;
+        }
+    }

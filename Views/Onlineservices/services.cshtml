@@ -200,7 +200,7 @@
             const mobileNo = $('#mobileNo').val();
             $('#taxFormMsg').text('');
             $.ajax({
-                url: 'http://localhost:8085/api/proc15/verify-details',
+                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-details',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
@@ -230,7 +230,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://localhost:8085/api/proc15/verify-otp',
+                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-otp',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
@@ -261,7 +261,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://localhost:8085/api/proc15/resend-otp',
+                url: 'http://pfl.yogloans.com:8580/api/proc15/resend-otp',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
@@ -306,7 +306,7 @@
             const mobileNo = $('#mobileNo2').val();
             $('#taxFormMsg2').text('');
             $.ajax({
-                url: 'http://localhost:8085/api/proc15/verify-details',
+                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-details',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
@@ -336,7 +336,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://localhost:8085/api/proc15/verify-otp',
+                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-otp',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
@@ -368,7 +368,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://localhost:8085/api/proc15/resend-otp',
+                url: 'http://pfl.yogloans.com:8580/api/proc15/resend-otp',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
@@ -403,7 +403,7 @@
             const mobileNo = $('#mobileNo3').val();
             $('#taxFormMsg3').text('');
             $.ajax({
-                url: 'http://localhost:8085/api/proc15/verify-details',
+                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-details',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
@@ -433,7 +433,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://localhost:8085/api/proc15/verify-otp',
+                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-otp',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
@@ -465,7 +465,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://localhost:8085/api/proc15/resend-otp',
+                url: 'http://pfl.yogloans.com:8580/api/proc15/resend-otp',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
