@@ -61,7 +61,7 @@
 
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
-   <form class="modal-content" method="post" action="/admin/Directors/add-director" enctype="multipart/form-data">
+   <form class="modal-content" method="post" action="/admin/Directors/add-director" enctype="multipart/form-data" id="directorForm">
    <input name="id" type="hidden" id="id1">
             <div class="modal-header">
                 <h5 class="modal-title">Add Directors</h5>
@@ -97,7 +97,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <!-- <button type="button" class="btn btn-primary" onclick="addmore()">Add More Points</button> -->
-                <button type="submit" class="btn btn-success">Save</button>
+                <button type="submit" class="btn btn-success" onclick="directorform()">Save</button>
             </div>
         </form>
     </div>
@@ -105,7 +105,7 @@
 
 <div id="aboutmodel" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
-   <form class="modal-content" method="post" action="" enctype="multipart/form-data">
+   <form class="modal-content" method="post" action="" enctype="multipart/form-data" >
    <input name="id" type="hidden" id="id1">
             <div class="modal-header">
                 <!-- <h5 class="modal-title">Add Directors</h5> -->
@@ -261,6 +261,29 @@
   });
 }
 
+$('#directorForm').on('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
 
+    var formData = new FormData(this); // Create FormData object
+
+    $.ajax({
+        url: $(this).attr('action'), // Use the form's action attribute
+        type: 'POST',
+        data: formData,
+        contentType: false, // Important for file uploads
+        processData: false, // Important for file uploads
+        success: function(response) {
+            if (response.success) {
+                alert('Director saved successfully!');
+                window.location.reload(); // Reload the page to see changes
+            } else {
+                alert('Error saving director: ' + response.message);
+            }
+        },
+        error: function(xhr, status, error) {
+            alert('Error saving director: ' + error);
+        }
+    });
+});
     
 </script>

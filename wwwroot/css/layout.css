@@ -459,7 +459,7 @@ menu .menu-container{
   
      }
      .menu-container img {
-      width: 15%;
+       width: 20% !important;
      }
 
      .contact .contact-container {

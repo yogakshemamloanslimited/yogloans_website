@@ -29,8 +29,218 @@
                     </div> -->
                 </div>
                 <div class="apply-button">
-                    <button onclick="window.location.href='apply.html'">Apply Now →</button>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal">Apply Now →</button>
                 </div>
             </div>
         </div>
     </section>
+    
+    
+    <!-- Enquiry Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content shadow-lg rounded-4 border-0">
+
+      <!-- Modal Header -->
+      <div class="modal-header  rounded-top-4">
+        <h5 class="modal-title" id="exampleModalLabel">Enquiry Form</h5>
+        <button type="button" class="btn-close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Form -->
+      <form id="enquiryForm" class="p-4">
+        
+        <!-- Row 1: Name & Email -->
+        <div class="row mb-3 g-5">
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="text" class="form-control " id="name" name="name" placeholder="Full Name" required>
+              <label for="name">Full Name *</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="email" class="form-control " id="customer_email" name="customer_email" placeholder="Email" required>
+              <label for="customer_email">Email *</label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row mb-3 g-5">
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="text" class="form-control " id="phone" name="phone" placeholder="Phone" required>
+              <label for="phone">Phone *</label>
+            </div>
+          </div>
+            <div class="col-md-6">
+            <div class="form-floating">
+              <select class="form-select " id="gender" name="gender">
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+              <label for="gender">Gender</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Gender & Occupation -->
+        <div class="row mb-3 g-5">
+        
+          <div class="col-md-6">
+            <div class="form-floating">
+                     <select class="form-select " id="occupation" name="occupation" required>
+                        <option value="">select occupation</option>
+                     </select>
+           
+              <label for="occupation">Occupation</label>
+              
+            </div>
+          </div>
+            <div class="col-md-6">
+            <div class="form-floating">
+              <input type="text" class="form-control " id="product" name="product" 
+                value="@Model.Homwelcome.FirstOrDefault()?.Header" placeholder="Product" readonly style="background-color: #f8f9fa; cursor: default; pointer-events: none; user-select: none;">
+              <label for="product">Product</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: Product & Branch -->
+        <div class="row mb-3 g-5">
+        
+          <div class="col-md-6">
+        
+            <div class="form-floating">
+              <input type="text" class="form-control " id="pin" name="pin" placeholder="Pincode">
+              <label for="pin">Pincode</label>
+            </div>
+          </div>
+           <div class="col-md-6">
+            <div class="form-floating">
+              <input type="text" class="form-control " id="post" name="post" placeholder="Post">
+              <label for="post">Post</label>
+            </div>
+          </div>
+      
+        </div>
+
+        <!-- Row 5: Post & Address -->
+        <div class="row mb-3 ">
+         
+          
+            <div class="form-floating">
+              <textarea class="form-control " id="address" name="address" placeholder="Address" style="height: 100px;"></textarea>
+              <label for="address">Address</label>
+            </div>
+         
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="d-flex justify-content-end mt-4">
+          <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary shadow-sm">Submit Enquiry</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Optional: Add small custom style for nicer input focus -->
+<style>
+  .form-control:focus, .form-select:focus, textarea:focus {
+    box-shadow: 0 0 8px rgba(0,123,255,.25);
+
+  }
+  input{
+   
+  }
+  .form-floating > .form-control{
+ border-top: none;
+ border-left: none;
+ border-right: none;
+  }
+  .form-floating > label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.375rem 0.75rem;
+    pointer-events: none;
+    transition: all 0.1s ease-in-out;
+    color: #6c757d;
+  }
+  .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label {
+    top: -1rem;
+ 
+  
+ border-radius: 0px !important;
+  }
+  .form-floating > .form-select {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+   .form-floating > .form-select:focus ~ label, .form-floating > .form-select:not(:placeholder-shown) ~ label {
+    top: -1rem;
+ 
+  
+ border-radius: 0px !important;
+  }
+</style>
+<script>
+    $("#enquiryForm").on("submit", function(e) {
+    e.preventDefault();
+
+    $.ajax({
+        url: "http://localhost:8085/api/enquery",
+        type: "POST",
+        data: $(this).serialize(),
+       success: function(response) {
+    Swal.fire({
+        title: "Success",
+        text: "Your enquiry has been submitted successfully!",
+        icon: "success",
+        confirmButtonText: "OK"
+    }).then(() => {
+        $("#exampleModal").modal("hide");
+        $("#enquiryForm")[0].reset();
+    });
+},
+
+        error: function(xhr) {
+            alert("Something went wrong: " + xhr.responseText);
+        }
+    });
+});
+ 
+  
+$.ajax({
+    url: "http://pfl.yogloans.com:8580/api/Enquery/Occupations",
+    type: "GET",
+    success: function(response) {
+        console.log(response.Data);
+
+        let occupationSelect = document.getElementById("occupation");
+        
+
+        response.Data.forEach(item => {
+            console.log(item.Sub_id + " " + item.General_name);
+
+            let option = document.createElement("option");
+
+            option.value = item.Sub_id;
+            option.textContent = item.General_name;
+
+            occupationSelect.appendChild(option);
+        });
+    },
+    error: function(xhr, status, error) {
+        console.error("Error:", error);
+    }
+});
+
+
+</script>

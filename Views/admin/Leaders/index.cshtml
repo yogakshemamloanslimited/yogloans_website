@@ -61,7 +61,7 @@
 
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
-   <form class="modal-content" method="post" action="/admin/Leaders/add-Leaders" enctype="multipart/form-data">
+   <form class="modal-content" method="post" action="/admin/Leaders/add-Leaders" enctype="multipart/form-data" id="leaderForm">
    <input name="id" type="hidden" id="id1">
             <div class="modal-header">
                 <h5 class="modal-title">Add Directors</h5>
@@ -262,6 +262,23 @@
   });
 }
 
+$('#leaderForm').on('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
 
+    $.ajax({
+        url: $(this).attr('action'),
+        type: 'POST',
+        data: new FormData(this),
+        contentType: false,
+        processData: false,
+        success: function(response) {
+            alert("Leaders Added Successfully");
+            window.location.reload();
+        },
+        error: function(xhr) {
+           alert("Something went wrong: " + xhr.responseText);
+        }
+    });
+});
     
 </script>
