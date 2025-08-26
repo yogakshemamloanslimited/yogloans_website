@@ -96,6 +96,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cRGlyZWN0b3JzXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/yogloansdotnet - Copy/Views/admin/Galleryadmin/gallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cR2FsbGVyeWFkbWluXGdhbGxlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/admin/Galleryadmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cR2FsbGVyeWFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/yogloansdotnet - Copy/Views/admin/Homeloan/loansection.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSG9tZWxvYW5cbG9hbnNlY3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -218,6 +226,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/yogloansdotnet - Copy/Views/Csr/Welcome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3NyXFdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Gallery/gallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbGVyeVxnYWxsZXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Gallery/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbGVyeVxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/yogloansdotnet - Copy/Views/Gallery/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbGVyeVx3ZWxjb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/yogloansdotnet - Copy/Views/Home/about.cshtml]

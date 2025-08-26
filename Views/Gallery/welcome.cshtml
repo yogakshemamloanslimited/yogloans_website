@@ -1,0 +1,65 @@
+@model yogloansdotnet.Models.GalleryViewModel
+
+<div class="welcome-container">
+ 
+
+  @foreach (var item in Model.WelcomeGallery)
+        {
+<div class="slide ">
+            <img src="@item.FilePath" alt="@item.ImageTitle" >
+            <span class="slide-content">
+                <h1>@item.Title</h1>
+                <p>@item.Description</p>
+            </span>
+            </div>
+        }
+        <div class="side-viewer">
+        @foreach (var item in Model.WelcomeGallery)
+        {
+
+    <div class="small-image-slide " style="background-image: url('@item.FilePath');" >
+         <p>
+         @item.ImageTitle
+         </p>
+    </div>
+
+    }
+        </div>
+</div>
+
+
+<script>
+    $(document).ready(function() {
+        $('#logo').src="";
+        $('#logo').attr('src', '/images/logo/logo2.jpg');
+        $('#logo').attr('alt', 'Logo');
+    });
+  
+  const images = document.querySelectorAll(".welcome-container .slide");
+  let current = 0;
+
+  if (images.length > 0) {
+    images[0].classList.add("active"); // first active
+  }
+
+  setInterval(() => {
+    images[current].classList.remove("active"); 
+    current = (current + 1) % images.length;    
+    images[current].classList.add("active");    
+  }, 3000);
+
+  // Side slider
+  const slides = document.querySelectorAll(".side-viewer .small-image-slide");
+  let slide_current = 0;
+
+  if (slides.length > 0) {
+    slides[0].classList.add("active"); // first active
+  }
+
+  setInterval(() => {
+    slides[slide_current].classList.remove("active");
+    slide_current = (slide_current + 1) % slides.length;
+    slides[slide_current].classList.add("active");
+    slides[slide_current].focus();
+  }, 3000);
+</script>

@@ -4,13 +4,239 @@
 <section class="application-section" id="application">
     <div class="main-content">
         <h2>Connect For Future</h2>
-        <form class="application-form">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="text" placeholder="Position Applying For" required>
-            <input type="file" accept=".pdf,.doc,.docx" required>
-            <textarea rows="4" placeholder="Cover Letter / Message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+   <form class="application-form container">
+    <div class="row" style="width: 100%;">
+        <div class="col-md-6">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" name="Name" class="form-control" required placeholder="Full Name" />
+        </div>
+        <div class="col-md-6">
+            <label for="gender" class="form-label">Gender</label>
+            <select id="gender" name="Genter" class="form-select" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row" style="width: 100%;">
+        <div class="col-md-6">
+            <label for="dob" class="form-label">Date of Birth</label>
+            <input type="date" id="dob" name="DOB" class="form-control" required />
+        </div>
+        <div class="col-md-6">
+            <label for="mobile" class="form-label">Mobile No</label>
+            <input type="text" id="mobile" name="Mobile_no" class="form-control" required placeholder="Mobile No" />
+        </div>
+    </div>
+
+    <div class="row" style="width: 100%;">
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="Email" class="form-control" required placeholder="Email" />
+        </div>
+        <div class="col-md-6">
+            <label for="qf" class="form-label">Qualification</label>
+            <select name="qualification_id" id="qf" class="form-control"></select>
+        </div>
+    </div>
+
+    <div class="row" style="width: 100%;">
+        <div class="col-md-6">
+            <label for="experience" class="form-label">Experience</label>
+            <input type="text" id="experience" name="Experience" class="form-control" placeholder="Experience" />
+        </div>
+        <div class="col-md-6">
+            <label for="house" class="form-label">House No</label>
+            <input type="text" id="house" name="House" class="form-control" placeholder="House No" />
+        </div>
+    </div>
+
+    <div class="row" style="width: 100%;">
+        <div class="col-md-6">
+            <label for="pin" class="form-label">Pin Code</label>
+            <input type="text" id="pin" name="pin" class="form-control" placeholder="Pin Code" />
+        </div>
+        <div class="col-md-6">
+            <label for="postSelect" class="form-label">Location</label>
+            <select id="postSelect" name="location_id" class="form-control"></select>
+        </div>
+    </div>
+
+    <div class="row" style="width: 100%;">
+        <div class="col-md-6">
+            <label for="state" class="form-label">State</label>
+            <input type="text" id="state" name="state" class="form-control" readonly placeholder="State" />
+        </div>
+        <div class="col-md-6">
+            <label for="district" class="form-label">District</label>
+            <input type="text" id="district" name="district" class="form-control" readonly placeholder="District" />
+        </div>
+    </div>
+
+    <div class="row" style="width: 100%;">
+        <div class="col-md-12">
+            <label for="resume" class="form-label">Upload Resume</label>
+            <input type="file" id="resume" name="Resume" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row" style="width: 100%;">
+        <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary px-4">Submit</button>
+        </div>
+    </div>
+</form>
+
+
     </div>
 </section>
+
+<script>
+    
+
+ 
+$.ajax({
+    url : "http://pfl.yogloans.com:8580/api/career/qualification",
+    method : "GET",
+    success : function (response){
+        const data = response ;
+
+        console.log("response",response);
+        data.forEach(function(item) {
+       $('#qf').append(` <option value="${item.Qualification_id}">${item.Qualification_name}</option> `);});
+    }
+});
+
+    $('input[name="pin"]').on('keyup', function() {
+        $('#postSelect').empty(); 
+    var pin = $(this).val(); // get the current value
+    $.ajax({
+        url : "http://pfl.yogloans.com:8580/api/career/get-application-data/" + pin,
+        method : "GET",
+        success : function (response){
+            const data =response;
+            console.log(response);
+            if (Array.isArray(data)) {
+                data.forEach(function(item){
+                   
+                    $('#postSelect').append(`
+                
+                    <option value="${item.post_id}" data-id="${item.post_id}">${item.post_name}</option>
+
+                    `);
+                });
+            } else {
+                console.error("API did not return an array for post data.");
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error("AJAX Error for post data:", status, error);
+        }
+    });
+});
+
+$('#postSelect').on('change', function(){
+    var Id = $(this).find(':selected').data('id');
+    $('#post-id').val(Id); // <-- Add this line to keep Post_id in sync
+    $.ajax({
+      url : "http://pfl.yogloans.com:8580/api/career/other-address-details/"+Id,
+      method : "GET",
+      success : function(response){
+        console.log(response);
+        const data = response.data;
+        if (Array.isArray(data) && data.length > 0) {
+             console.log(data[0].post_name);
+    $('#state').val(data[0].state_name);
+    $('#district').val(data[0].district_name);
+        } else {
+          
+            console.log("No data found");
+        }
+      }
+
+} );
+});
+
+// Profile image preview logic
+$(document).on('change', '#profileInput', function(e) {
+  const [file] = this.files;
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      $('#profilePreview').attr('src', evt.target.result);
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+$('form').on('submit', function (e) {
+    e.preventDefault();
+
+    var formData = new FormData(this);
+
+    console.log('--- Form Data Entries ---');
+    for (var pair of formData.entries()) {
+        console.log(pair[0] + ':', pair[1]);
+    }
+
+    $.ajax({
+        url: "http://pfl.yogloans.com:8580/api/career/apply",  // Your correct API URL
+        type: 'POST',
+        data: formData,
+        enctype: 'multipart/form-data', // Optional but clear for file uploads
+        processData: false, // Important for FormData
+        contentType: false, // Important for FormData
+        cache: false, // Recommended for file uploads
+        success: function (response) {
+            console.log(response);
+            if (typeof Swal !== 'undefined') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Candidate Profile Saved Successfully!'
+                }).then(() => {
+                    $('#candidateModal').modal('hide');
+                    $('form')[0].reset();
+                });
+            } else {
+                alert('Candidate Profile Saved Successfully!');
+                $('#candidateModal').modal('hide');
+                $('form')[0].reset();
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error('Full Error:', xhr.responseText);
+            let errorMsg = 'Something went wrong.';
+            try {
+                var response = JSON.parse(xhr.responseText);
+                errorMsg = response.ExceptionMessage || response.Message || errorMsg;
+            } catch (e) {
+                console.log('JSON parse error:', e);
+            }
+            if (typeof Swal !== 'undefined') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: errorMsg
+                });
+            } else {
+                alert(errorMsg);
+            }
+        }
+    });
+});
+
+// Ensure SweetAlert2 is included
+if (typeof Swal === 'undefined') {
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11';
+    script.onload = function() { console.log('SweetAlert2 loaded'); };
+    document.head.appendChild(script);
+}
+
+</script>
+
+

@@ -42,7 +42,8 @@ namespace yogloansdotnet.Data
           public DbSet<yogloansdotnet.Models.DirectorsModel> Directors { get; set; }
            public DbSet<yogloansdotnet.Models.LeadersModel> Leaders { get; set; }
               public DbSet<yogloansdotnet.Models.NearbyModel> Nearby { get; set; }
-           
+           public DbSet<yogloansdotnet.Models.Gallery> Gallery { get; set; }
+                public DbSet<yogloansdotnet.Models.GalleryImagesModel> GalleryImages { get; set; }
           
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -1,0 +1,181 @@
+
+@model IEnumerable<yogloansdotnet.Models.GalleryImagesModel>
+@{
+    ViewData["Title"] = "Gallery Welcome";
+    Layout = "~/Views/admin/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="form-control">
+        
+<div class="card">
+<div class="card-header d-flex justify-content-between">
+
+    <h6>Gallery Welcome</h6>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addEditModal" onclick="openAddModal()">Add New Entry</button>
+  </div>
+
+  <div class="card-body">
+    
+
+<table class="table table-bordered" id="galleryTable">
+    <thead>
+        <tr>
+            
+            <th>Image Title</th>
+            <th>File</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+             
+                <td>@item.ImageTitle</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.FilePath))
+                    {
+                        <a href="@item.FilePath" target="_blank">View File</a>
+                    }
+                    else
+                    {
+                        <span>No File</span>
+                    }
+                </td>
+                <td>
+                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#addEditModal" onclick="openEditModal(@item.Id,'@item.FilePath','@item.ImageTitle')">Edit</button>
+                    <button class="btn btn-sm btn-danger" onclick="deleteEntry(@item.Id)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+    </div>
+</div>
+
+<!-- Add/Edit Modal -->
+<div class="modal fade" id="addEditModal" tabindex="-1" aria-labelledby="addEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addEditModalLabel">Add/Edit Entry</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addEditForm"  enctype="multipart/form-data">
+                     @Html.AntiForgeryToken()
+                    <input type="text" id="entryId" name="Ids" />
+                   
+
+                    
+                    <div class="mb-3">
+                        <label for="file" class="form-label">Image</label>
+                        <input type="file" class="form-control" id="file" name="image"  accept=".png,.jpg,.jpeg" required/>
+                        <img id="image" src="" alt="Image Preview" style="max-width: 100px; margin-top: 10px; display:none;" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="imageTitle" class="form-label">Image Title</label>
+                        <input type="text" class="form-control" id="imageTitle" name="ImageTitle" required />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="submitForm()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+ $(document).ready(function () {
+            $('#galleryTable').DataTable();
+        });
+ function openAddModal() {
+    document.getElementById('addEditModalLabel').innerText = 'Add New Entry';
+    document.getElementById('entryId').value = '';
+    document.getElementById('imageTitle').value = '';
+
+    // Reset file input correctly
+    document.getElementById('file').value = '';
+
+    // Hide preview
+    document.getElementById('image').style.display = 'none';
+    document.getElementById('image').src = '';
+}
+
+function openEditModal(id, filePath, imageTitle) {
+    alert(id);
+    document.getElementById('entryId').value = id;
+    document.getElementById('imageTitle').value = imageTitle;
+    document.getElementById('addEditModalLabel').innerText = 'Edit Entry';
+
+    // Reset file input (optional)
+    document.getElementById('file').value = '';
+
+    // Show preview if filePath exists
+    if (filePath) {
+        document.getElementById('image').style.display = 'block';
+        document.getElementById('image').src = filePath;
+    } else {
+        document.getElementById('image').style.display = 'none';
+        document.getElementById('image').src = '';
+    }
+}
+
+
+
+async function submitForm() {
+    var form = $('#addEditForm')[0];
+    var formData = new FormData(form);
+ 
+    $.ajax({
+        url: '/admin/Galleryadmin/add-images',
+        type: 'POST',
+        data: formData,
+        contentType: false,   // ✅ needed for FormData
+        processData: false,   // ✅ needed for FormData
+        success: function (response) {
+            if (response.success) {
+                location.reload();
+            } else {
+                alert('Error: ' + response.message);
+            }
+        },
+        error: function () {
+            alert('Error saving entry');
+        }
+    });
+}
+
+
+
+
+
+async function deleteEntry(id) {
+  
+    if (confirm('Are you sure you want to delete this Director?')) {
+      $.ajax({
+        url: '/admin/Galleryadmin/delete2/' + id,
+        type: 'POST',
+        headers: {
+          'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+        },
+        success: function(result) {
+          if (result.success) {
+            alert("Deleted Successfully");
+             window.location.reload();
+          
+          } else {
+            alert('Error deleting report: ' + result.message);
+          }
+        },
+        error: function(xhr, status, error) {
+          alert('Error deleting report: ' + error);
+        }
+      });
+    }
+}
+
+</script>
+

@@ -1,0 +1,12 @@
+@model yogloansdotnet.Models.GalleryViewModel
+<div class="other-section">
+    
+    
+    @foreach (var item in Model.OtherGallery)
+            {
+            
+                    <img src="@item.FilePath" alt="@item.ImageTitle" />
+                 
+
+            }
+</div>
