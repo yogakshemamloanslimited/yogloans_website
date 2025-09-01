@@ -597,7 +597,7 @@ function applynow(id, de) {
 }
 
 $.ajax({
-    url : "http://pfl.yogloans.com:8580/api/career/qualification",
+    url : API.allapi.CareerQualification,
     method : "GET",
     success : function (response){
         const data = response ;
@@ -616,7 +616,7 @@ $.ajax({
         $('#postSelect').empty(); 
     var pin = $(this).val(); // get the current value
     $.ajax({
-        url : "http://pfl.yogloans.com:8580/api/career/get-application-data/" + pin,
+        url : API.allapi.getapplicationData + pin,
         method : "GET",
         success : function (response){
             const data =response;
@@ -644,7 +644,7 @@ $('#postSelect').on('change', function(){
     var Id = $(this).find(':selected').data('id');
     $('#post-id').val(Id); // <-- Add this line to keep Post_id in sync
     $.ajax({
-      url : "http://pfl.yogloans.com:8580/api/career/other-address-details/"+Id,
+      url : API.allapi.otheraddressdetails +Id,
       method : "GET",
       success : function(response){
         console.log(response);
@@ -685,7 +685,7 @@ $('form').on('submit', function (e) {
     }
 
     $.ajax({
-        url: "http://pfl.yogloans.com:8580/api/career/apply",  // Your correct API URL
+        url: API.allapi.CareerApply,  // Your correct API URL
         type: 'POST',
         data: formData,
         enctype: 'multipart/form-data', // Optional but clear for file uploads

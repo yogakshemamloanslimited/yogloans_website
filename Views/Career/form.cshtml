@@ -39,7 +39,9 @@
         </div>
         <div class="col-md-6">
             <label for="qf" class="form-label">Qualification</label>
-            <select name="qualification_id" id="qf" class="form-control"></select>
+            <select name="qualification_id" id="qfs" class="form-control">
+                <option value="">Select Qualification</option>
+            </select>
         </div>
     </div>
 
@@ -59,25 +61,20 @@
             <label for="pin" class="form-label">Pin Code</label>
             <input type="text" id="pin" name="pin" class="form-control" placeholder="Pin Code" />
         </div>
-        <div class="col-md-6">
-            <label for="postSelect" class="form-label">Location</label>
-            <select id="postSelect" name="location_id" class="form-control"></select>
-        </div>
-    </div>
-
-    <div class="row" style="width: 100%;">
+       
         <div class="col-md-6">
             <label for="state" class="form-label">State</label>
-            <input type="text" id="state" name="state" class="form-control" readonly placeholder="State" />
-        </div>
-        <div class="col-md-6">
-            <label for="district" class="form-label">District</label>
-            <input type="text" id="district" name="district" class="form-control" readonly placeholder="District" />
+            <input type="text" id="state2" name="state" class="form-control"  placeholder="State" />
         </div>
     </div>
 
     <div class="row" style="width: 100%;">
-        <div class="col-md-12">
+        
+        <div class="col-md-6">
+            <label for="district" class="form-label">District</label>
+            <input type="text" id="district2" name="district" class="form-control"  placeholder="District" />
+        </div>
+        <div class="col-md-6">
             <label for="resume" class="form-label">Upload Resume</label>
             <input type="file" id="resume" name="Resume" class="form-control" />
         </div>
@@ -88,6 +85,7 @@
             <button type="submit" class="btn btn-primary px-4">Submit</button>
         </div>
     </div>
+                
 </form>
 
 
@@ -99,78 +97,21 @@
 
  
 $.ajax({
-    url : "http://pfl.yogloans.com:8580/api/career/qualification",
+    url : API.allapi.CareerQualification,
     method : "GET",
     success : function (response){
         const data = response ;
 
         console.log("response",response);
         data.forEach(function(item) {
-       $('#qf').append(` <option value="${item.Qualification_id}">${item.Qualification_name}</option> `);});
+         
+       $('#qfs').append(` <option value="${item.Qualification_id}">${item.Qualification_name}</option> `);});
     }
 });
 
-    $('input[name="pin"]').on('keyup', function() {
-        $('#postSelect').empty(); 
-    var pin = $(this).val(); // get the current value
-    $.ajax({
-        url : "http://pfl.yogloans.com:8580/api/career/get-application-data/" + pin,
-        method : "GET",
-        success : function (response){
-            const data =response;
-            console.log(response);
-            if (Array.isArray(data)) {
-                data.forEach(function(item){
-                   
-                    $('#postSelect').append(`
-                
-                    <option value="${item.post_id}" data-id="${item.post_id}">${item.post_name}</option>
+  
 
-                    `);
-                });
-            } else {
-                console.error("API did not return an array for post data.");
-            }
-        },
-        error: function(xhr, status, error) {
-            console.error("AJAX Error for post data:", status, error);
-        }
-    });
-});
 
-$('#postSelect').on('change', function(){
-    var Id = $(this).find(':selected').data('id');
-    $('#post-id').val(Id); // <-- Add this line to keep Post_id in sync
-    $.ajax({
-      url : "http://pfl.yogloans.com:8580/api/career/other-address-details/"+Id,
-      method : "GET",
-      success : function(response){
-        console.log(response);
-        const data = response.data;
-        if (Array.isArray(data) && data.length > 0) {
-             console.log(data[0].post_name);
-    $('#state').val(data[0].state_name);
-    $('#district').val(data[0].district_name);
-        } else {
-          
-            console.log("No data found");
-        }
-      }
-
-} );
-});
-
-// Profile image preview logic
-$(document).on('change', '#profileInput', function(e) {
-  const [file] = this.files;
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function(evt) {
-      $('#profilePreview').attr('src', evt.target.result);
-    };
-    reader.readAsDataURL(file);
-  }
-});
 
 $('form').on('submit', function (e) {
     e.preventDefault();
@@ -183,7 +124,7 @@ $('form').on('submit', function (e) {
     }
 
     $.ajax({
-        url: "http://pfl.yogloans.com:8580/api/career/apply",  // Your correct API URL
+        url: API.allapi.CareerApply,  // Your correct API URL
         type: 'POST',
         data: formData,
         enctype: 'multipart/form-data', // Optional but clear for file uploads
@@ -198,8 +139,7 @@ $('form').on('submit', function (e) {
                     title: 'Success',
                     text: 'Candidate Profile Saved Successfully!'
                 }).then(() => {
-                    $('#candidateModal').modal('hide');
-                    $('form')[0].reset();
+                    window.location.reload();
                 });
             } else {
                 alert('Candidate Profile Saved Successfully!');

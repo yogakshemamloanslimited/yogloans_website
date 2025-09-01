@@ -200,7 +200,7 @@
             const mobileNo = $('#mobileNo').val();
             $('#taxFormMsg').text('');
             $.ajax({
-                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-details',
+                url: API.allapi.verifyDetails,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
@@ -230,7 +230,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-otp',
+                url: API.allapi.verifyOtp,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
@@ -239,7 +239,7 @@
              if (res.success) {
     $('#taxFormMsg').text(res.message).css('color', 'green');
 
-    window.location.href = 'http://localhost:5132/Online15g?CustomerId=' + customerId;
+    window.location.href = '${mainurlweb}Online15g?CustomerId=' + customerId;
     // Optionally close modal or reset form
 }
  else {
@@ -261,7 +261,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://pfl.yogloans.com:8580/api/proc15/resend-otp',
+                url: API.allapi.resendOtp,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
@@ -306,7 +306,7 @@
             const mobileNo = $('#mobileNo2').val();
             $('#taxFormMsg2').text('');
             $.ajax({
-                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-details',
+                url: API.allapi.verifyDetails,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
@@ -336,7 +336,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-otp',
+                url: API.allapi.verifyotp,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
@@ -347,7 +347,7 @@
                     }
                     if (res.success) {
                         $('#taxFormMsg2').text(res.message).css('color', 'green');
-                        window.location.href = `http://localhost:5132/nach?CustomerId=${customerId}&mobile=${mobileNo}`;
+                        window.location.href = `${mainurlweb}nach?CustomerId=${customerId}&mobile=${mobileNo}`;
                         // Optionally close modal or reset form
                     } else {
                         $('#taxFormMsg2').text('OTP verification failed').css('color', 'red');
@@ -368,7 +368,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://pfl.yogloans.com:8580/api/proc15/resend-otp',
+                url: API.allapi.resendOtp,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
@@ -403,7 +403,7 @@
             const mobileNo = $('#mobileNo3').val();
             $('#taxFormMsg3').text('');
             $.ajax({
-                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-details',
+                url: API.allapi.verifyDetails,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
@@ -433,7 +433,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://pfl.yogloans.com:8580/api/proc15/verify-otp',
+                url: API.allapi.verifyotp,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
@@ -441,8 +441,9 @@
                     
              if (res.success) {
     $('#taxFormMsg3').text(res.message).css('color', 'green');
+    
+window.location.href = `${mainurlweb}Onlinepay?CustomerId=${customerId}&mobile=${mobileNo}`;
 
-    window.location.href = 'http://localhost:5132/Onlinepay?CustomerId=' + customerId + '&mobile=' + mobileNo;
 
     // Optionally close modal or reset form
 }
@@ -465,7 +466,7 @@
                 return;
             }
             $.ajax({
-                url: 'http://pfl.yogloans.com:8580/api/proc15/resend-otp',
+                url: API.allapi.resendOtp,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),

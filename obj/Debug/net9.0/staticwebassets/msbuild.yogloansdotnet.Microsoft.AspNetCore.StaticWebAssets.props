@@ -1362,8 +1362,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4ox5258xsc</Fingerprint>
-      <Integrity>tG8HBx0ebKkLUPJRtYURrXvwtz6KqkxArVzi0SxHfGI=</Integrity>
+      <Fingerprint>pum4v41v7s</Fingerprint>
+      <Integrity>sSt4O8Rhq+5SyQBZ9OcPPwYIcQu+sdsGxE5SwqzrZIA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\logo\logo.png'))</OriginalItemSpec>
@@ -2628,6 +2628,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\welcome\vehicle2.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\api.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>yogloansdotnet</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/yogloansdotnet</BasePath>
+      <RelativePath>js/api.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7msyhpukv1</Fingerprint>
+      <Integrity>oaW1WiKr8BPK9J9hcBvbq2/r3uxz5DMJGJEaAKkRzoU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\api.js'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\branch\branch.js'))">
       <SourceType>Package</SourceType>
       <SourceId>yogloansdotnet</SourceId>
@@ -2640,8 +2658,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fcv6q6jveh</Fingerprint>
-      <Integrity>0fkGUFt7rAO7eWAYWW1CNl12++EpLY0MApz2yzTjgsQ=</Integrity>
+      <Fingerprint>bmvqfclhic</Fingerprint>
+      <Integrity>k9HT80s9bgxlb8LYxBO+xNlf7bGj99kvRTXHWQoyqy4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\branch\branch.js'))</OriginalItemSpec>
@@ -2766,8 +2784,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dpsldfvu4p</Fingerprint>
-      <Integrity>b0JtZ4Ct4w7UkHzWjQlCatGBwG4uWFA5YYZYhlYIKuU=</Integrity>
+      <Fingerprint>wyujpeq9vk</Fingerprint>
+      <Integrity>eEuloyS813+wwxejqOezWgMVawO0X39eqtPNQJArEqM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</OriginalItemSpec>

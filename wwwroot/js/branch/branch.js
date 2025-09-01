@@ -5,7 +5,7 @@ $(document).ready(function() {
         const userLng = position.coords.longitude;
 
         $.ajax({
-            url: "http://pfl.yogloans.com:8580/api/braches",
+            url: API.allapi.branches,
             method: "GET",
             success: function(response) {
                  $('#dummylist-list').hide();
@@ -145,7 +145,7 @@ align-items:center;'>
     }
 
    $.ajax({
-       url: "http://pfl.yogloans.com:8580/api/states",
+       url: API.allapi.states,
             method: "GET",
             success: function(response) {
                 // Try to get the array of states from the response
@@ -160,7 +160,7 @@ align-items:center;'>
                     console.warn("Unexpected response format", response);
                 }
 
-                $('#states').empty(); // Use the correct selector
+               
 
                 function capitalizeWords(str) {
                     return str.replace(/\b\w/g, c => c.toUpperCase());
@@ -181,7 +181,7 @@ align-items:center;'>
                         return;
                     }
                     $.ajax({
-                        url: "http://pfl.yogloans.com:8580/api/selected?state_id=" + stateId,
+                        url:  API.allapi.selectedByState + stateId,
                         method: "GET",
                         success: function(response) {
                             let branches = [];

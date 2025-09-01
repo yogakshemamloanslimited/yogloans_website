@@ -328,7 +328,7 @@ dbResponse.forEach(dep => {
 
         // Now call second API
         $.ajax({
-            url: "http://pfl.yogloans.com:8580/api/Get-department",
+            url: API.allapi.GetDepartment,
             method: "GET",
 
             success: function(apiResponse) {

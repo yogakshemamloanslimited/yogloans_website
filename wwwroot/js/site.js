@@ -1,4 +1,5 @@
-﻿var menu = document.getElementById('menu');
+﻿
+var menu = document.getElementById('menu');
 var close = document.getElementById('close');
 var res = document.getElementById('res-menu');
 
@@ -388,15 +389,16 @@ function animateCount(id, target) {
     });
 }
 $.ajax({
-    url: 'http://pfl.yogloans.com:8580/api/count/get-count',
+    url: API.allapi.counts,  // 👈 endpoint from your API bundle
     method: "GET",
-    success: function(response) {
+    success: function (response) {
+    
         animateCount('Employee', parseInt(response.employee));
         animateCount('customer', parseInt(response.customer));
         animateCount('branch', parseInt(response.branch));
-        $('#asset').text(response.asset); // Skip animation for text
+        $('#asset').text(response.asset);
     },
-    error: function(xhr, status, error) {
+    error: function (xhr, status, error) {
         console.error("Error:", error);
     }
 });

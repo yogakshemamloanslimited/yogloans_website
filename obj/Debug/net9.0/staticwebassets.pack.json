@@ -589,6 +589,10 @@
       "PackagePath": "staticwebassets\\images\\welcome\\vehicle2.png"
     },
     {
+      "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\api.js",
+      "PackagePath": "staticwebassets\\js\\api.js"
+    },
+    {
       "Id": "D:\\yogloansdotnet - Copy\\wwwroot\\js\\branch\\branch.js",
       "PackagePath": "staticwebassets\\js\\branch\\branch.js"
     },
