@@ -450,6 +450,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\layout.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\main.d810cf0ae7f39f28f336.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>yogloansdotnet</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/yogloansdotnet</BasePath>
+      <RelativePath>css/main.d810cf0ae7f39f28f336.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lbwn7nyeb2</Fingerprint>
+      <Integrity>nzncOcf4DTzLKm3Ot0D0VwM3fbcXFdGjIzxqr5XPdVs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\main.d810cf0ae7f39f28f336.css'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\online\services.css'))">
       <SourceType>Package</SourceType>
       <SourceId>yogloansdotnet</SourceId>
@@ -2640,8 +2658,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7msyhpukv1</Fingerprint>
-      <Integrity>oaW1WiKr8BPK9J9hcBvbq2/r3uxz5DMJGJEaAKkRzoU=</Integrity>
+      <Fingerprint>08q3guzrbf</Fingerprint>
+      <Integrity>gCAdHf0UUCKnjrOgUQcV7rNOUv7ADuUtrofzhD5dKA4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\api.js'))</OriginalItemSpec>
@@ -2736,6 +2754,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\jaquery.js'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\main.d810cf0ae7f39f28f336.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>yogloansdotnet</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/yogloansdotnet</BasePath>
+      <RelativePath>js/main.d810cf0ae7f39f28f336.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vlh5cksrm2</Fingerprint>
+      <Integrity>Y8RQtar+1b1ZEschmET4erjfw/zQCdz3FCWftCVz0hI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\main.d810cf0ae7f39f28f336.js'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\nach\script.js'))">
       <SourceType>Package</SourceType>
       <SourceId>yogloansdotnet</SourceId>
@@ -2748,8 +2784,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>b4xmki2984</Fingerprint>
-      <Integrity>K802GlP/sWQELYUzv/tkdfNmNNmn+CvlK3TCj/67uAw=</Integrity>
+      <Fingerprint>vw9w33js4p</Fingerprint>
+      <Integrity>0QZnhHHL+dWkBtptVAoD2QhMNB5kKFurVVELgQF7COQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\nach\script.js'))</OriginalItemSpec>
@@ -2766,8 +2802,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>cj6k2rky45</Fingerprint>
-      <Integrity>GKzq5RF1pOFIqBWUi2gAr+QOluIa0NCYLEEWGJiDxmE=</Integrity>
+      <Fingerprint>p1t7kk300w</Fingerprint>
+      <Integrity>zSII7Lca5+A893GwKWAOuFtADPhdD220Bq37FjRFT5U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\online15\script.js'))</OriginalItemSpec>

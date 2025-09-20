@@ -242,7 +242,7 @@ var pan = document.getElementById('pan').value;
 
 
 $.ajax({
-    url: "http://pfl.yogloans.com:8580/api/15g/get-data",
+    url: API.allapi.Getdata15g,
     method: "GET",
     data: {
         pantrack: pantrack,
@@ -415,7 +415,7 @@ $.ajax({
             $('#printSection').html(formHtml);
 
             $.ajax({
-                url: "http://pfl.yogloans.com:8580/api/15g/get15g/" + customer_id,
+                url: API.allapi.Get15g2 + customer_id,
                 method: "GET",
                 success: function (response) {
                     console.log("Succes15gs:", response);

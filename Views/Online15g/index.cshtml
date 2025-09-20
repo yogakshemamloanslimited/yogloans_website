@@ -71,7 +71,7 @@
     var pan = document.getElementById('pan').value;
 $(document).ready(function () {
     $.ajax({
-         url: "http://pfl.yogloans.com:8580/api/15g/get-pdf-data/" + customer_id,
+         url: API.allapi.Get15g + customer_id,
         method: "GET",
         success: function(response) {
             $('#pantrack').val(response.pan_track_id);
@@ -95,7 +95,7 @@ function redirectpdf_page2(){
     console.log("pan:", pan);
     console.log("j:", j);
 
-    var url = "http://localhost:5132/online15g/pdf?customer_id="+customer_id+"&pantrack="+pan_track_id+"&pan="+pan+"&j="+j;
+    var url = "/online15g/pdf?customer_id="+customer_id+"&pantrack="+pan_track_id+"&pan="+pan+"&j="+j;
     console.log("Redirect URL:", url);
 
     window.location.href = url;

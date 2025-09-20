@@ -35,8 +35,9 @@
         }
     });
 }
+
 $.ajax({
-        url: 'http://pfl.yogloans.com:8580/api/count/get-count',
+       url: API.allapi.counts,
     method: "GET",
     success: function(response) {
         animateCount('Employee', parseInt(response.employee));

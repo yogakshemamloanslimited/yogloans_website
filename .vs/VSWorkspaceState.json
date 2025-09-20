@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Controllers"
+    "\\wwwroot\\css",
+    "\\wwwroot\\lib",
+    "\\wwwroot\\lib\\bootstrap",
+    "\\wwwroot\\lib\\bootstrap\\dist",
+    "\\wwwroot\\lib\\bootstrap\\dist\\js"
   ],
+  "SelectedNode": "\\yogloansdotnet - Copy.sln",
   "PreviewInSolutionExplorer": false
 }

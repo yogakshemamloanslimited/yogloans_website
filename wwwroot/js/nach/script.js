@@ -10,7 +10,7 @@ $(document).ready(function () {
     $('#form').html("<div class='loader'><div class='loader-spinner'></div></div>");
 
     $.ajax({
-        url: "http://pfl.yogloans.com:8580/api/enach/get-loans/" + customer_id,
+        url: API.allapi.EnachGet + customer_id,
         method: "GET",
         success: function (response) {
             if (!response || response.length === 0) {
@@ -147,7 +147,7 @@ function confirmStop() {
     }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({
-                url: "http://pfl.yogloans.com:8580/api/enach/stop",
+                url: API.allapi.EnachStop,
                 type: "POST",
                 contentType: "application/json",
                 data: JSON.stringify({
@@ -194,7 +194,7 @@ function cancel(){
     }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({
-                url: "http://pfl.yogloans.com:8580/api/enach/cancel",
+                url: API.allapi.EnachCancle,
                 type: "POST",
                 contentType: "application/json",
                 data: JSON.stringify({

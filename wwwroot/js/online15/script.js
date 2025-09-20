@@ -2,7 +2,7 @@ $(document).ready(function () {
     var customer_id = document.getElementById('customer_id').value;
 
 
-    fetch(`http://pfl.yogloans.com:8580/api/15g/find/${customer_id}`)
+    fetch(`${API.allapi.gfind}${customer_id}`)
     .then(response => {
         if (!response.ok) {
             throw new Error("Unexpected error occurred");
@@ -24,7 +24,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        url: "http://pfl.yogloans.com:8580/api/15g/get-application-data/" + customer_id,
+        url: API.allapi.getapplicationdata + customer_id,
         method: "GET",
         success: function (response) {
             console.log("Success:", response);
@@ -191,7 +191,7 @@ $(document).ready(function () {
                 }
 
                 $.ajax({
-                    url: "http://pfl.yogloans.com:8580/api/15g/submit-application",
+                    url: API.allapi.gsubmitapplication,
                     method: "POST",
                     contentType: "application/json",
                     data: JSON.stringify(data),
@@ -237,7 +237,7 @@ function redirectvalues() {
     var customer_id = document.getElementById('customer_id').value;
   
     $.ajax({
-        url: "http://pfl.yogloans.com:8580/api/15g/get-pdf-data/" + customer_id, // ✅ route param
+        url: API.allapi.ggetpdfdata + customer_id, // ✅ route param
         method: "GET", // ✅ correct method
         contentType: "application/json",
         success: function(response) {
@@ -284,7 +284,7 @@ function redirectpdf(){
     var j = "G"; // assuming "G" is the required value
 
     $.ajax({
-        url: "http://pfl.yogloans.com:8580/api/15g/get-data",
+        url: API.allapi.Getdata15g,
         method: "GET",
         data: {
             pantrack: pan_track_id,
