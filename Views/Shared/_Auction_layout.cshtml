@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auction</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="icon" type="image/png" href="~/images/logo/logo.png" />
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #auction_list.active-page{
+        background-color: #044697;
+        color: white;
+        height: 30px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+     #bidder_Select.active-page{
+        background-color: #044697;
+        color: white;
+         height: 30px;
+        border-radius: 10px;
+           display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+     #biller_form.active-page{
+        background-color: #044697;
+        color: white;
+         height: 30px;
+        border-radius: 10px;
+           display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-to-web" >
+    <!-- Toggler -->
+   
+      <div class="topbar card" style="padding: 10px; width:100%; display:flex;flex-direction: row; border-radius:0px; justify-content:start; align-items:center; ">
+      <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" style="border:1px solid;  width: 40px; height: 40px;
+">
+      <i class="fas fa-bars"></i>
+    </button>
+      <img src="/images/logo/logo.png" alt="" srcset="" id="logo" style="width: 50px; height:50px; border-radius:50% ; margin-left:30px;">
+
+     </div>
+     
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" style="width:250px;">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled">
+          <li><a class="nav-link" href="#"><i class="far fa-smile me-2"></i> Link 1</a></li>
+          <li>
+            <a class="nav-link" data-bs-toggle="collapse" href="#cat1" role="button">
+              <i class="fas fa-grin me-2"></i> Category 1
+            </a>
+            <ul class="collapse ps-3" id="cat1">
+              <li><a class="nav-link" href="#">Link 2</a></li>
+              <li><a class="nav-link" href="#">Link 3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav-link" data-bs-toggle="collapse" href="#cat2" role="button">
+              <i class="fas fa-grin-wink me-2"></i> Category 2
+            </a>
+            <ul class="collapse ps-3" id="cat2">
+              <li><a class="nav-link" href="#">Link 4</a></li>
+              <li><a class="nav-link" href="#">Link 5</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+@*     <div class="second-nav" style="width:100%; display:flex; margin-top:10px;">
+        <div class="nav" style="width:100%; display:flex; justify-content:center;">
+            <ul class="nav " style="width:40%; display:flex; flex-direction:row; justify-content: center; gap:50px; padding:10px;">
+                <li style="width:auto;  padding:10px;  cursor:pointer;" class="active-page" id="auction_list">
+                    Auction List
+                </li>
+                <li style="width:auto;  padding:10px;  cursor:pointer;" id="bidder_Select">
+                    Bidder Select Form
+                </li>
+                <li style="width:auto;  padding:10px;  cursor:pointer;" id="biller_form">
+                    Bidder Form
+                </li>
+            </ul>
+        </div>
+    </div> *@
+  </div>
+
+
+
+  @RenderBody()
+  <script>
+  $('#auction_list').click(function(){
+        $('#auction_list').addClass('active-page');
+        $('#bidder_Select').removeClass('active-page');
+        $('#biller_form').removeClass('active-page');
+  });
+    
+     $('#bidder_Select').click(function(){
+        $('#auction_list').removeClass('active-page');
+        $('#bidder_Select').addClass('active-page');
+        $('#biller_form').removeClass('active-page');
+  });
+      
+     $('#biller_form').click(function(){
+        $('#auction_list').removeClass('active-page');
+        $('#bidder_Select').removeClass('active-page');
+        $('#biller_form').addClass('active-page');
+  });
+
+  </script>
+</body>
+</html>

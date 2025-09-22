@@ -444,8 +444,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>thi3nbudrz</Fingerprint>
-      <Integrity>n9xWNgijmIbigB19GIg9lpm5mJbgHclrgjEGWksJ4KY=</Integrity>
+      <Fingerprint>wymhs1iiao</Fingerprint>
+      <Integrity>iG5efRg0j353s+tWw13QSXZSGWiKVX2PfxdvItbXfuY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\layout.css'))</OriginalItemSpec>
@@ -4787,6 +4787,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Apporder\CSRCommittee_44fd1808-d6cb-47a9-9157-fd1de50bdeb1.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\bbef747f-3afd-4c2e-8ed7-a24da2ce2c64_Artboard_2[1].png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>yogloansdotnet</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/yogloansdotnet</BasePath>
+      <RelativePath>uploads/bbef747f-3afd-4c2e-8ed7-a24da2ce2c64_Artboard_2[1].png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vuj19z3mo9</Fingerprint>
+      <Integrity>x9/+joMIjNsvAHdqHWrbj5IUXO0nrbwH5o57SqrUuC4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\bbef747f-3afd-4c2e-8ed7-a24da2ce2c64_Artboard_2[1].png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c5db4e28-44c1-46c2-a43f-7264add301b2_business.png'))">
       <SourceType>Package</SourceType>

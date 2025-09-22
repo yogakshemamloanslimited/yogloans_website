@@ -1,0 +1,67 @@
+@{
+    Layout = null;
+}
+@model yogloansdotnet.Models.LoanGroupViewModel
+
+<style>
+    .welcome-container {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: start;
+       
+      
+           position: relative;
+           background-color: white;
+           height: 600px;
+    }
+    .items {
+        width: 85%;
+      
+      @*   border-radius: 20%; *@
+    }
+.msg {
+   
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: start;
+    
+    text-transform: uppercase;
+    position: fixed;
+    left: -8%;
+    bottom: 10%;
+   height: 500px;
+   
+}
+
+.msg h1 {
+    transform: rotate(-90deg); /* ✅ Corrected */
+position: relative;
+    left: 0%;
+   
+}
+
+.msg h1 p {
+    transform: rotate(360deg); /* ✅ Corrected */
+
+    font-size: 15px;
+    
+    
+}
+
+</style>
+
+<div class="welcome-container">
+<div class="msg">
+    <h1>Join our Exclusive Auction  <p>and discover the finest masterpieces awaiting you.</p></h1>
+    
+   
+</div>
+
+    <div class="items" style="display:flex; justify-contnet:center;">
+        
+        <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image1 ?? "~/images/welcome/Artboard-mobile.png"))" style="width:100%;  border-left-top-radius:"/>
+       @*  <img src="@(Url.Content(Model.Vehicle?.FirstOrDefault()?.Image2 ?? "~/images/welcome/Artboard-mobile.png"))" style="width:50%; "/> *@
+    </div>
+</div>

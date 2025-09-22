@@ -568,7 +568,6 @@ C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\com
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\e66vs2ekmx-lp822dko3f.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\6o5bm9dtot-yevbtd8c2z.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\2uk72kucmj-x4m34lsa9e.gz
-C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zhjbtipgg6-thi3nbudrz.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\7t9vvlxr1e-f8iekp3gzv.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\lwabdmqn4b-j9ty8lpbpg.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\dcdjonoais-g9n574gdci.gz
@@ -663,4 +662,4 @@ C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\com
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\a96bw495oj-08q3guzrbf.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\ffcq8db722-lbwn7nyeb2.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\80uzl2utn8-vlh5cksrm2.gz
-C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zhjbtipgg6-wymhs1iiao.gz

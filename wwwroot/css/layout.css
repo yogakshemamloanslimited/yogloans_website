@@ -533,7 +533,7 @@ justify-content: end;
 padding: 10px;
 }
 .toggle img{
-  width: 35px;
+  width: 35px !important;
   height: 35px;
 }
 #res-menu{
