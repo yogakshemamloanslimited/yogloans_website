@@ -5238,24 +5238,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\contact\contact_5cf4cf6e-f9ff-4a51-a402-bbb53893a83c.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Csr\CSRProject2020-21_619f310a-20cc-42ae-a25b-9f310d25f1c0.pdf'))">
-      <SourceType>Package</SourceType>
-      <SourceId>yogloansdotnet</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/yogloansdotnet</BasePath>
-      <RelativePath>uploads/Csr/CSRProject2020-21_619f310a-20cc-42ae-a25b-9f310d25f1c0.pdf</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yz0o3q6kh9</Fingerprint>
-      <Integrity>DgY/V3soNJJhmLMp76W43FayeTk98U1HDToELcMrRF0=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Csr\CSRProject2020-21_619f310a-20cc-42ae-a25b-9f310d25f1c0.pdf'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Csr\CSRProject2023-24_c4a135ae-371c-44c3-9fd2-317a23b76205.pdf'))">
       <SourceType>Package</SourceType>
       <SourceId>yogloansdotnet</SourceId>
@@ -5310,24 +5292,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Csr\csr_69ca07b3-c061-4d53-8747-9f8e664c4fd3.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Csr\KYCpolicy_ab595566-d6ae-4aa4-b4c1-5d5307d01b7e.pdf'))">
-      <SourceType>Package</SourceType>
-      <SourceId>yogloansdotnet</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/yogloansdotnet</BasePath>
-      <RelativePath>uploads/Csr/KYCpolicy_ab595566-d6ae-4aa4-b4c1-5d5307d01b7e.pdf</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>i14409beiw</Fingerprint>
-      <Integrity>duFRybBhlM1LzuR8H6DnMyU/4Su8a8lfnprDCuo9d/0=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Csr\KYCpolicy_ab595566-d6ae-4aa4-b4c1-5d5307d01b7e.pdf'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\d64c2a59-efad-4c83-b3c2-41b3419fa497_cdloan.png'))">
       <SourceType>Package</SourceType>
       <SourceId>yogloansdotnet</SourceId>
@@ -5345,6 +5309,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\d64c2a59-efad-4c83-b3c2-41b3419fa497_cdloan.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Directors\rajesh_98f025c9-9f9b-4804-b642-bd6a940f012b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>yogloansdotnet</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/yogloansdotnet</BasePath>
+      <RelativePath>uploads/Directors/rajesh_98f025c9-9f9b-4804-b642-bd6a940f012b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>iwa1c2jvey</Fingerprint>
+      <Integrity>jk5YgjJQ8BDsq0plRSQ5zRVuEpOl07uE5zluXw3U+kk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\Directors\rajesh_98f025c9-9f9b-4804-b642-bd6a940f012b.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\disclosure\compromise_fc67bba1-0502-4d94-96b1-dd05a30e067d.pdf'))">
       <SourceType>Package</SourceType>

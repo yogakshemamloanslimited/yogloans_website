@@ -30,8 +30,9 @@ public async Task<IActionResult> Index()
 }
 
 
-      [Route("add-director")]
-[HttpPost]
+  [HttpPost]
+[ValidateAntiForgeryToken]
+[Route("add-director")]
 public async Task<IActionResult> addcsr(
     [FromForm] string Name,
     [FromForm] string Post,
@@ -92,11 +93,15 @@ public async Task<IActionResult> addcsr(
             return Json(new { success = true, message = "Director updated successfully" });
         }
     }
-    catch (Exception ex)
-    {
-        _logger.LogError(ex, "Error saving director");
-        return Json(new { success = false, message = "An error occurred while saving the director. Please try again." });
-    }
+   catch (Exception ex)
+{
+    _logger.LogError(ex, "Error saving director");
+    return Json(new {
+        success = false,
+        message = ex.InnerException?.Message ?? ex.Message
+    });
+}
+
 }
 
         private async Task<string> SavePdfAsync(IFormFile file)

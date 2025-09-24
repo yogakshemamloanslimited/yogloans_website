@@ -1041,16 +1041,8 @@
       "PackagePath": "staticwebassets\\uploads\\Apporder\\CSRCommittee_44fd1808-d6cb-47a9-9157-fd1de50bdeb1.pdf"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\CSRProject2020-21_619f310a-20cc-42ae-a25b-9f310d25f1c0.pdf",
-      "PackagePath": "staticwebassets\\uploads\\Csr\\CSRProject2020-21_619f310a-20cc-42ae-a25b-9f310d25f1c0.pdf"
-    },
-    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\CSRProject2023-24_c4a135ae-371c-44c3-9fd2-317a23b76205.pdf",
       "PackagePath": "staticwebassets\\uploads\\Csr\\CSRProject2023-24_c4a135ae-371c-44c3-9fd2-317a23b76205.pdf"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\KYCpolicy_ab595566-d6ae-4aa4-b4c1-5d5307d01b7e.pdf",
-      "PackagePath": "staticwebassets\\uploads\\Csr\\KYCpolicy_ab595566-d6ae-4aa4-b4c1-5d5307d01b7e.pdf"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\csr_6110e623-d609-459a-bcea-737eaa78d87b.png",
@@ -1059,6 +1051,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\Csr\\csr_69ca07b3-c061-4d53-8747-9f8e664c4fd3.png",
       "PackagePath": "staticwebassets\\uploads\\Csr\\csr_69ca07b3-c061-4d53-8747-9f8e664c4fd3.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\Directors\\rajesh_98f025c9-9f9b-4804-b642-bd6a940f012b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Directors\\rajesh_98f025c9-9f9b-4804-b642-bd6a940f012b.jpg"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\Formdts\\co-lending_c44d72bc-af98-4a23-84b3-8283f180ea50.pdf",

@@ -7,61 +7,268 @@
     .welcome-container {
         width: 100%;
         display: flex;
-        justify-content: end;
-        align-items: start;
-       
-      
-           position: relative;
-           background-color: white;
-           height: 600px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+
+
+        position: relative;
+        background-color: white;
+
     }
+
     .items {
         width: 85%;
-      
-      @*   border-radius: 20%; *@
+        height: 400px;
+        transition: 0.5s ease-in-out;
+        position: relative;
+        @*   border-radius: 20%; *@
     }
-.msg {
-   
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: start;
-    
-    text-transform: uppercase;
-    position: fixed;
-    left: -8%;
-    bottom: 10%;
-   height: 500px;
-   
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        width: 85%;
+        margin-top: 10px;
+    }
+
+    .cards .card {
+        background: #ffffff;
+        height: 200px;
+        /* fixed height for all cards */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    .msg {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        text-transform: uppercase;
+        position: fixed;
+        left: -8%;
+        bottom: 10%;
+        height: 500px;
+
+    }
+
+    .msg h1 {
+        transform: rotate(-90deg);
+        /* ✅ Corrected */
+        position: relative;
+        left: 0%;
+
+    }
+
+    .msg h1 p {
+        transform: rotate(360deg);
+        /* ✅ Corrected */
+
+        font-size: 15px;
+
+
+    }
+
+    #image1 {
+        display: block;
+    }
+
+    #image2 {
+        display: none;
+    }
+
+    .lable-bill {
+        width: auto;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background-color: #044697;
+        height: 60px;
+        width: auto;
+        left: 0%;
+        top: 0%;
+        position: absolute;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+        font-size: 15px;
+    }
+
+    #form-auction {
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    .items.active {
+        height: 700px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 10px;
+     width: 100%;
+    }
+
+    #form-auction.active {
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #form-auction table {
+    min-width: 700px; /* force scroll if smaller screen */
+    border-collapse: collapse;
 }
 
-.msg h1 {
-    transform: rotate(-90deg); /* ✅ Corrected */
-position: relative;
-    left: 0%;
-   
+#form-auction table th {
+    background-color: #044697;
+    color: white;
+    text-align: center;
 }
 
-.msg h1 p {
-    transform: rotate(360deg); /* ✅ Corrected */
-
-    font-size: 15px;
-    
-    
+#form-auction table td {
+    text-align: center;
 }
+    #form-auction.active table th{
+        background-color: #044697;
+        color: white;
+        text-align: center;
+    }
+      #form-auction.active table td{
+        text-align: center;
+      }
+    @@media(max-width:900px) {
+        .msg {
+            display: none;
+        }
 
+        .items {
+            width: 100%;
+        }
+
+        #image1 {
+            display: none;
+        }
+
+        #image2 {
+            display: block;
+        }
+    }
 </style>
 
 <div class="welcome-container">
-<div class="msg">
-    <h1>Join our Exclusive Auction  <p>and discover the finest masterpieces awaiting you.</p></h1>
-    
-   
-</div>
+    <div class="msg">
+        <h1>Join our Exclusive Auction <p>and discover the finest masterpieces awaiting you.</p>
+        </h1>
+
+
+    </div>
 
     <div class="items" style="display:flex; justify-contnet:center;">
-        
-        <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image1 ?? "~/images/welcome/Artboard-mobile.png"))" style="width:100%;  border-left-top-radius:"/>
-       @*  <img src="@(Url.Content(Model.Vehicle?.FirstOrDefault()?.Image2 ?? "~/images/welcome/Artboard-mobile.png"))" style="width:50%; "/> *@
+        <div style="position:fixed; width:100%; background-color:white;" id="form-auction">
+
+        <table class="table table-bordered" style="width:85%;">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Branch</th>
+                    <th>Loan Number</th>
+                    <th>Net weight</th>
+                    <th>Net wt/purity</th>
+                    <th>Minimum Bid Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>View</td>
+                    <td>Thrissur</td>
+                    <td>2100244520</td>
+                    <td>0.2422</td>
+                    <td>02.25455</td>
+                    <td>2042552</td>
+                </tr>
+            </tbody>
+        </table>
+    <div class="details"> <div class="form-group"> <input type="text" class="form-controll" /> <input type="text" class="form-controll" /> <input type="text" class="form-controll" /> <input type="text" class="form-controll" /> <input type="text" class="form-controll" /> </div> </div>
+</div>
+
+        <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image1 ?? "~/images/welcome/Artboard-mobile.png"))"
+            style="width:100%;  border-left-top-radius:" id="image1" />
+        <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image2 ?? "~/images/welcome/Artboard-mobile.png"))"
+            style="width:100%; " id="image2" />
+    </div>
+    <div class="cards">
+        <div class="card">
+            <label class="lable-bill">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                35,68,22.00
+            </label>
+            <div class="weight">
+                <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
+                <p class="weight-count" style="font-size: 20px; font-weight:bold;">
+                    390.060
+                </p>
+            </div>
+            <button class="btn" style="border:1px solid;" onclick="view()">View Pack</button>
+        </div>
+        <div class="card">
+            <label class="lable-bill">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                35,68,22.00
+            </label>
+            <div class="weight">
+                <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
+                <p class="weight-count" style="font-size: 20px; font-weight:bold;">
+                    390.060
+                </p>
+            </div>
+            <button class="btn" style="border:1px solid;" onclick="view()">View Pack</button>
+        </div>
+        <div class="card">
+            <label class="lable-bill">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                35,68,22.00
+            </label>
+            <div class="weight">
+                <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
+                <p class="weight-count" style="font-size: 20px; font-weight:bold;">
+                    390.060
+                </p>
+            </div>
+            <button class="btn" style="border:1px solid;" onclick="view()">View Pack</button>
+        </div>
+        <div class="card">
+            <label class="lable-bill">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                35,68,22.00
+            </label>
+            <div class="weight">
+                <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
+                <p class="weight-count" style="font-size: 20px; font-weight:bold;">
+                    390.060
+                </p>
+            </div>
+            <button class="btn" style="border:1px solid;" onclick="view()">View Pack</button>
+        </div>
+
     </div>
 </div>
+<script>
+    function view() {
+        $('#form-auction').addClass('active');
+        $('.items').addClass('active');
+
+    }
+</script>

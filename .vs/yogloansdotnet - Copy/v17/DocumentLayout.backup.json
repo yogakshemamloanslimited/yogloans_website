@@ -3,31 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\views\\auction\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:views\\auction\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\wwwroot\\js\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:wwwroot\\js\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\js\\jaquery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\js\\jaquery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\views\\auction\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:views\\auction\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\views\\auction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:views\\auction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\wwwroot\\js\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:wwwroot\\js\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\wwwroot\\js\\nach\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:wwwroot\\js\\nach\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\views\\admin\\career\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:views\\admin\\career\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -42,6 +42,14 @@
       "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:wwwroot\\js\\online15\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\wwwroot\\js\\nach\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:wwwroot\\js\\nach\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\views\\admin\\career\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:views\\admin\\career\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\views\\onlinepay\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:views\\onlinepay\\form.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -50,20 +58,12 @@
       "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:wwwroot\\js\\jaquery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\js\\jaquery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\js\\jaquery.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\views\\about\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:views\\about\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\wwwroot\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -77,7 +77,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 287,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,20 +89,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "login.cshtml",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Views\\Auction\\login.cshtml",
               "RelativeDocumentMoniker": "Views\\Auction\\login.cshtml",
               "ToolTip": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Views\\Auction\\login.cshtml",
               "RelativeToolTip": "Views\\Auction\\login.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAACAAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T11:50:28.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T11:50:28.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Views\\Auction\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Auction\\Index.cshtml",
@@ -110,12 +109,11 @@
               "RelativeToolTip": "Views\\Auction\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-19T11:46:22.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T11:46:22.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "AuctionController.cs",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Controllers\\AuctionController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuctionController.cs",
@@ -123,8 +121,7 @@
               "RelativeToolTip": "Controllers\\AuctionController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T11:45:43.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T11:45:43.849Z"
             },
             {
               "$type": "Document",
@@ -164,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "script.js",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\nach\\script.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\nach\\script.js",
@@ -176,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Views\\admin\\Career\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\admin\\Career\\Index.cshtml",
@@ -188,32 +185,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Form.cshtml",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Views\\Onlinepay\\Form.cshtml",
               "RelativeDocumentMoniker": "Views\\Onlinepay\\Form.cshtml",
               "ToolTip": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Views\\Onlinepay\\Form.cshtml",
               "RelativeToolTip": "Views\\Onlinepay\\Form.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAUwFcAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAUwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-19T09:50:26.625Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "api.js",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\api.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\api.js",
               "ToolTip": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\api.js",
               "RelativeToolTip": "wwwroot\\js\\api.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-09-19T09:50:16.847Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "jaquery.js",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\jaquery.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\jaquery.js",
@@ -225,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "about.cshtml",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Views\\About\\about.cshtml",
               "RelativeDocumentMoniker": "Views\\About\\about.cshtml",
@@ -237,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 3,
               "Title": "jaquery.js",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\js\\jaquery.js",
               "RelativeDocumentMoniker": "obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\js\\jaquery.js",
@@ -249,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "bootstrap.esm.min.js.map",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
               "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
@@ -261,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
               "Title": "bootstrap.esm.min.js.map",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
               "RelativeDocumentMoniker": "obj\\Release\\net9.0\\PubTmp\\Out\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
@@ -287,16 +284,8 @@
         },
         {
           "DockedWidth": 9,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -305,10 +294,18 @@
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAOcUAAAAAAAAAAAawPAUAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAADgZAAAAAAAAAEBlwEEZAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-09-19T11:18:01.407Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
