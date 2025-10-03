@@ -85,8 +85,7 @@
         // Get Customer Info
         $('#load').show(); // Show spinner before AJAX
     
-$.get(`http://pfl.yogloans.com:8580/api/proc15/online?customerId=${customerId}&mobileNo=${mobileNo}`, function(response) {
-@* $.get(`${API.allapi.online}?customerId=${customerId}&mobileNo=${mobileNo}`, function(response) { *@
+$.get(`http://localhost:8085/api/proc15/online?customerId=${customerId}&mobileNo=${mobileNo}`, function(response) {
     $('#load').hide(); // hide loader
     
     if (!response || !response.customer_data || response.customer_data.length === 0) {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f1iN/Jslv8yiTssgVqrnMLGq8mXiWDCqQd8biEJDxY0=",
+  "Hash": "4wX6paE71eJHs7x25P6DlGTUORiGJ3XlIGFzGWgtH94=",
   "Source": "yogloansdotnet",
   "BasePath": "_content/yogloansdotnet",
   "Mode": "Default",
@@ -815,12 +815,12 @@
       "OriginalItemSpec": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\about\\reviews.css"
     },
     {
-      "Identity": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\a96bw495oj-a3stzz5wwx.gz",
+      "Identity": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\a96bw495oj-cu83we3zyw.gz",
       "SourceId": "yogloansdotnet",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/yogloansdotnet",
-      "RelativePath": "js/api#[.{fingerprint=a3stzz5wwx}]?.js.gz",
+      "RelativePath": "js/api#[.{fingerprint=cu83we3zyw}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -829,8 +829,8 @@
       "RelatedAsset": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\api.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "vo1256711z",
-      "Integrity": "DyKWeGBYAK0quuZV06YpB0/nah0/jRvdBre6Y6ywOuI=",
+      "Fingerprint": "8pl4rql0u1",
+      "Integrity": "JMbF4SkDThnDbLIY/J0WtiG8ndU7s6TGI/BCfiWnFms=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\api.js"
@@ -5344,8 +5344,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "a3stzz5wwx",
-      "Integrity": "dvKByEgDP6RFWiKqOgOeYLlbxU8LoJ9J31ddREMM+CM=",
+      "Fingerprint": "cu83we3zyw",
+      "Integrity": "fKjixGY+FR7akZAcWFfReMaiJ4SYuQcD2p++zrC2SVI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\api.js"
@@ -28840,13 +28840,13 @@
       ]
     },
     {
-      "Route": "js/api.a3stzz5wwx.js",
-      "AssetFile": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\a96bw495oj-a3stzz5wwx.gz",
+      "Route": "js/api.cu83we3zyw.js",
+      "AssetFile": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\a96bw495oj-cu83we3zyw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001533742331"
+          "Quality": "0.001526717557"
         }
       ],
       "ResponseHeaders": [
@@ -28856,15 +28856,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "651"
+          "Value": "654"
         },
         {
           "Name": "ETag",
-          "Value": "\"DyKWeGBYAK0quuZV06YpB0/nah0/jRvdBre6Y6ywOuI=\""
+          "Value": "\"JMbF4SkDThnDbLIY/J0WtiG8ndU7s6TGI/BCfiWnFms=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Oct 2025 10:16:22 GMT"
+          "Value": "Fri, 03 Oct 2025 10:36:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -28884,13 +28884,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"dvKByEgDP6RFWiKqOgOeYLlbxU8LoJ9J31ddREMM+CM=\""
+          "Value": "W/\"fKjixGY+FR7akZAcWFfReMaiJ4SYuQcD2p++zrC2SVI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "a3stzz5wwx"
+          "Value": "cu83we3zyw"
         },
         {
           "Name": "label",
@@ -28898,12 +28898,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dvKByEgDP6RFWiKqOgOeYLlbxU8LoJ9J31ddREMM+CM="
+          "Value": "sha256-fKjixGY+FR7akZAcWFfReMaiJ4SYuQcD2p++zrC2SVI="
         }
       ]
     },
     {
-      "Route": "js/api.a3stzz5wwx.js",
+      "Route": "js/api.cu83we3zyw.js",
       "AssetFile": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\api.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -28913,7 +28913,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1866"
+          "Value": "1864"
         },
         {
           "Name": "Content-Type",
@@ -28921,11 +28921,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dvKByEgDP6RFWiKqOgOeYLlbxU8LoJ9J31ddREMM+CM=\""
+          "Value": "\"fKjixGY+FR7akZAcWFfReMaiJ4SYuQcD2p++zrC2SVI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Oct 2025 10:16:22 GMT"
+          "Value": "Fri, 03 Oct 2025 10:36:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -28935,7 +28935,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "a3stzz5wwx"
+          "Value": "cu83we3zyw"
         },
         {
           "Name": "label",
@@ -28943,13 +28943,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dvKByEgDP6RFWiKqOgOeYLlbxU8LoJ9J31ddREMM+CM="
+          "Value": "sha256-fKjixGY+FR7akZAcWFfReMaiJ4SYuQcD2p++zrC2SVI="
         }
       ]
     },
     {
-      "Route": "js/api.a3stzz5wwx.js.gz",
-      "AssetFile": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\a96bw495oj-a3stzz5wwx.gz",
+      "Route": "js/api.cu83we3zyw.js.gz",
+      "AssetFile": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\a96bw495oj-cu83we3zyw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -28958,7 +28958,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "651"
+          "Value": "654"
         },
         {
           "Name": "Content-Type",
@@ -28966,11 +28966,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DyKWeGBYAK0quuZV06YpB0/nah0/jRvdBre6Y6ywOuI=\""
+          "Value": "\"JMbF4SkDThnDbLIY/J0WtiG8ndU7s6TGI/BCfiWnFms=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Oct 2025 10:16:22 GMT"
+          "Value": "Fri, 03 Oct 2025 10:36:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -28988,7 +28988,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "a3stzz5wwx"
+          "Value": "cu83we3zyw"
         },
         {
           "Name": "label",
@@ -28996,18 +28996,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-DyKWeGBYAK0quuZV06YpB0/nah0/jRvdBre6Y6ywOuI="
+          "Value": "sha256-JMbF4SkDThnDbLIY/J0WtiG8ndU7s6TGI/BCfiWnFms="
         }
       ]
     },
     {
       "Route": "js/api.js",
-      "AssetFile": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\a96bw495oj-a3stzz5wwx.gz",
+      "AssetFile": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\a96bw495oj-cu83we3zyw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001533742331"
+          "Quality": "0.001526717557"
         }
       ],
       "ResponseHeaders": [
@@ -29017,15 +29017,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "651"
+          "Value": "654"
         },
         {
           "Name": "ETag",
-          "Value": "\"DyKWeGBYAK0quuZV06YpB0/nah0/jRvdBre6Y6ywOuI=\""
+          "Value": "\"JMbF4SkDThnDbLIY/J0WtiG8ndU7s6TGI/BCfiWnFms=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Oct 2025 10:16:22 GMT"
+          "Value": "Fri, 03 Oct 2025 10:36:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -29045,13 +29045,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"dvKByEgDP6RFWiKqOgOeYLlbxU8LoJ9J31ddREMM+CM=\""
+          "Value": "W/\"fKjixGY+FR7akZAcWFfReMaiJ4SYuQcD2p++zrC2SVI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dvKByEgDP6RFWiKqOgOeYLlbxU8LoJ9J31ddREMM+CM="
+          "Value": "sha256-fKjixGY+FR7akZAcWFfReMaiJ4SYuQcD2p++zrC2SVI="
         }
       ]
     },
@@ -29066,7 +29066,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1866"
+          "Value": "1864"
         },
         {
           "Name": "Content-Type",
@@ -29074,11 +29074,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dvKByEgDP6RFWiKqOgOeYLlbxU8LoJ9J31ddREMM+CM=\""
+          "Value": "\"fKjixGY+FR7akZAcWFfReMaiJ4SYuQcD2p++zrC2SVI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Oct 2025 10:16:22 GMT"
+          "Value": "Fri, 03 Oct 2025 10:36:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -29088,13 +29088,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dvKByEgDP6RFWiKqOgOeYLlbxU8LoJ9J31ddREMM+CM="
+          "Value": "sha256-fKjixGY+FR7akZAcWFfReMaiJ4SYuQcD2p++zrC2SVI="
         }
       ]
     },
     {
       "Route": "js/api.js.gz",
-      "AssetFile": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\a96bw495oj-a3stzz5wwx.gz",
+      "AssetFile": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\compressed\\a96bw495oj-cu83we3zyw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -29103,7 +29103,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "651"
+          "Value": "654"
         },
         {
           "Name": "Content-Type",
@@ -29111,11 +29111,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DyKWeGBYAK0quuZV06YpB0/nah0/jRvdBre6Y6ywOuI=\""
+          "Value": "\"JMbF4SkDThnDbLIY/J0WtiG8ndU7s6TGI/BCfiWnFms=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 03 Oct 2025 10:16:22 GMT"
+          "Value": "Fri, 03 Oct 2025 10:36:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -29133,7 +29133,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DyKWeGBYAK0quuZV06YpB0/nah0/jRvdBre6Y6ywOuI="
+          "Value": "sha256-JMbF4SkDThnDbLIY/J0WtiG8ndU7s6TGI/BCfiWnFms="
         }
       ]
     },

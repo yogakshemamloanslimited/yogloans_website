@@ -32,8 +32,8 @@ window.API = {
         gsubmitapplication: `${API_BASE}15g/submit-application`,
         ggetpdfdata: `${API_BASE}15g/get-pdf-data/`,
         EnqueryOccupations: `${API_BASE}Enquery/Occupations`, 
-        webonline:`${API_BASE}proc15/online`,
-      
+        webonline:`${API_BASE}api/proc15/online`,
+
         // add other endpoints here
     }
 };

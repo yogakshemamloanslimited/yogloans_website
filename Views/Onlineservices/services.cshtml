@@ -440,14 +440,13 @@
                 success: function(res) {
                     
     if (res.success) {
-    $.get(`http://pfl.yogloans.com:8580/api/proc15/online?customerId=${customerId}&mobileNo=${mobileNo}`, 
-@* $.get(`${API.allapi.webonline}?customerId=${customerId}&mobileNo=${mobileNo}`, *@
+    $.get(`http://localhost:8085/api/proc15/online?customerId=${customerId}&mobileNo=${mobileNo}`, 
         function(apiRes) {
             console.log("API Response:", apiRes);
 
             // Check the message property
             if (apiRes.message != "S") {
-                alert("Please try again later.");
+                alert("You recently attempted a transaction, kindly wait for some more time and try again later...!");
                 return;
             }
 
