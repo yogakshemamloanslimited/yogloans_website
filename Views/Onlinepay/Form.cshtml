@@ -69,7 +69,7 @@
         // Hide spinner by default
         $('#load').hide();
         var customerId = $('#customerId').val();
-        var mobile = $('#mobile').val();
+        var mobileNo = $('#mobile').val();
         var loanno = $('#loaninput').val();
 
         // Validate input before making the AJAX call
@@ -84,44 +84,66 @@
 
         // Get Customer Info
         $('#load').show(); // Show spinner before AJAX
-        $.ajax({
-       
-            url: API.allapi.Onlinepay + encodeURIComponent(customerId) + '/' + encodeURIComponent(mobile),
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            success: function (response) {
-                $('#load').hide(); // Hide spinner after AJAX
-                if (!response || !response.customer_data || response.customer_data.length === 0) {
-                    Swal.fire({
-                        icon: 'info',
-                        title: 'No Data',
-                        text: 'No data found.'
-                    });
-                    return;
-                }
-
-                // Populate fields with response
-                const customer = response.customer_data[0]; // assuming only one relevant record
-                $('#customerName').text(customer.customer_name || '');
-                $('#customer_name').text(customer.customer_name || '');
-                $('#address').text(
-                    [customer.address, customer.city, customer.district_name]
-                        .filter(Boolean)
-                        .join(', ')
-                );
-            },
-            error: function (xhr, status, error) {
-                $('#load').hide(); // Hide spinner after AJAX
-                console.error('Error:', error);
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: 'Failed to fetch customer data. Please check the API.'
-                });
-            }
+    
+$.get(`http://pfl.yogloans.com:8580/api/proc15/online?customerId=${customerId}&mobileNo=${mobileNo}`, function(response) {
+@* $.get(`${API.allapi.online}?customerId=${customerId}&mobileNo=${mobileNo}`, function(response) { *@
+    $('#load').hide(); // hide loader
+    
+    if (!response || !response.customer_data || response.customer_data.length === 0) {
+        Swal.fire({
+            icon: 'info',
+            title: 'No Data',
+            text: 'No data found.'
         });
+        return;
+    }
+
+    // Get the first customer record
+    const customer = response.customer_data[0]; 
+
+    // Split the email_id string by '$'
+    const parts = customer.email_id.split('$');
+    
+    // Now parts is an array:
+    // parts[0] => Name
+    // parts[1] => Address
+    // parts[2] => City
+    // parts[3] => State
+    // parts[4] => Country
+    // parts[5] => Pincode
+    // parts[6] => MobileNo
+    // parts[7] => Email
+
+    // Example: populate fields
+    $('#customer_name').text('Hello: ' + (parts[0] || ''));
+    $('#customerName').text(parts[0] || '');
+   @*  $('#customer_name').text(part[0] || ''); *@
+    $('#address').text(
+    (parts[1] || '') + ', ' +
+    (parts[2] || '') + ', ' +
+    (parts[3] || '') + ', ' +
+    (parts[4] || '') + ' - ' +
+    (parts[5] || '')
+);
+
+  @* 
+    $('#city').text(parts[2] || '');
+    $('#state').text(parts[3] || '');
+    $('#country').text(parts[4] || '');
+    $('#pincode').text(parts[5] || '');
+    $('#mobileNo').text(parts[6] || '');
+    $('#email').text(parts[7] || ''); *@
+
+}).fail(function(err) {
+    $('#load').hide(); // hide loader on error
+    console.error('Error:', err);
+    Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Failed to fetch customer data. Please check the API.'
+    });
+});
+
 
         // Loan Search
        $('#search-loan').click(function () {

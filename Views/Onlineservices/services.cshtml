@@ -239,7 +239,7 @@
              if (res.success) {
     $('#taxFormMsg').text(res.message).css('color', 'green');
 
-    window.location.href = '${mainurlweb}Online15g?CustomerId=' + customerId;
+    window.location.href = `${mainurlweb}Online15g?CustomerId=` + customerId;
     // Optionally close modal or reset form
 }
  else {
@@ -439,16 +439,27 @@
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
                 success: function(res) {
                     
-             if (res.success) {
-    $('#taxFormMsg3').text(res.message).css('color', 'green');
+    if (res.success) {
+    $.get(`http://pfl.yogloans.com:8580/api/proc15/online?customerId=${customerId}&mobileNo=${mobileNo}`, 
+@* $.get(`${API.allapi.webonline}?customerId=${customerId}&mobileNo=${mobileNo}`, *@
+        function(apiRes) {
+            console.log("API Response:", apiRes);
 
-onlineweb(customerId);
-    // Then redirect after a short delay
-    setTimeout(() => {
-        window.location.href = `/Onlinepay?CustomerId=${customerId}&mobile=${mobileNo}`;
-    }, 300);
-    // Optionally close modal or reset form
+            // Check the message property
+            if (apiRes.message != "S") {
+                alert("Please try again later.");
+                return;
+            }
+
+            // redirect on success
+            window.location.href = `/Onlinepay?CustomerId=${customerId}&mobile=${mobileNo}`;
+        }
+    ).fail(function(err) {
+        console.error("API call failed:", err);
+        alert("Something went wrong while calling API.");
+    });
 }
+
  else {
                         $('#taxFormMsg3').text( 'OTP verification failed').css('color', 'red');
                     }
@@ -489,7 +500,7 @@ onlineweb(customerId);
     window.onlineweb=function(customerId) {
        
     $.ajax({
-        url: @* `${API.allapi.webonline}/${customerId}` *@ "https://localhost:44316/api/proc15/online/"+customerId, // use backticks
+        url:"http://localhost:8085/api/proc15/online/"+customerId, // use backticks
         method: "GET",
         success: function(response) {
             console.log("Response:", response);
