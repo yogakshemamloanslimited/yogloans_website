@@ -26,7 +26,46 @@
     <link rel="icon" type="image/png" href="~/images/logo/logo.png" />
 
 </head>
+<style>
+    #au-redirection::before{
+        content: "";
+        width: 105%;
+        height: 105%;
+        border-radius: 50%;
+   
+       position: absolute;
+       z-index: -1;
+        animation: rotate 5s linear infinite; 
+        transition: 0.5s;
+        border-top: 1px solid #044697;
+  border-bottom: 1px solid;
+       @*  border-bottom:2px solid #044697;  *@
+    }
+      #au-redirection::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    background-color: white;
+       position: absolute;
+       z-index: 1;
+       @*  border-bottom:2px solid #044697;  *@
+    }
+ @@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
+     #au-redirection i{
+        
+        z-index: 2;
+        color: #044697;
+     }
+</style>
 <body>
 
 
@@ -100,7 +139,11 @@
     </header>
     @* <partial name="_ChatBot" /> *@
             @RenderBody()
-      
+    
+    <a href="/Auction" id="au-redirection" style="position: fixed; bottom:2%; right:2%; width:80px; height:80px; border-radius:50%; display:flex; justify-content:center; z-index:400; align-items:center; font-size:28px;  padding:10px; text-align:center;">
+      <i class="fas fa-gavel"></i>
+    </a>
+    
      <footer class="footer-section">
         <div class="container">
             <!-- <div class="footer-cta pt-5 pb-5">
@@ -137,7 +180,7 @@
             <div class="footer-content">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 mb-50">
-                        <div class="footer-widget" style="padding: 20px;">
+                        <div class="footer-widget" style="text-align:justify;">
                           @*   <div class="footer-logo">
                                 <a href="index.html"><img src="/images/logo/logo.png" class="img-fluid" alt="logo"></a>
                             </div> *@
@@ -397,6 +440,8 @@ document.getElementById("subscribe-form").addEventListener("submit", function(e)
     } *@
 });
 });
+
+
 </script>
 
           @*  <script type="text/javascript">

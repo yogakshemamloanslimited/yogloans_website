@@ -65,6 +65,12 @@
   </style>
 </head>
 <body>
+@* <p>@Context.Session.GetInt32("code")</p>
+<p>@Context.Session.GetInt32("mobile")</p>
+<p>@Context.Session.GetInt32("otp")</p> 
+<p>@Context.Session.GetInt32("auctionId")</p> 
+<p>@Context.Session.GetInt32("state_id")</p>  *@
+
   <div class="nav-to-web" >
     <!-- Toggler -->
    
@@ -148,5 +154,26 @@
   });
 
   </script>
+  <script>
+            let timer;
+            let logoutTime = 5 * 60 * 1000; // 2 minutes in milliseconds
+
+            function resetTimer() {
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+
+                    window.location.href = "/Auction/Logout"; // Laravel logout route
+                }, logoutTime);
+            }
+
+            // Track activity
+            window.onload = resetTimer;
+            document.onmousemove = resetTimer;
+            document.onkeypress = resetTimer;
+            document.onclick = resetTimer;
+            document.onscroll = resetTimer;
+
+            
+        </script>
 </body>
 </html>

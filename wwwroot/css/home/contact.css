@@ -99,7 +99,7 @@
 
 @media (max-width:780px){
     .contact .contact-container{
-        width: 95%;
+        width: 100% !important;
     }
     .contact .contact-container form button {
         width: auto;

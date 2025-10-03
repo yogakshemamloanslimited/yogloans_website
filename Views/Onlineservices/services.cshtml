@@ -441,10 +441,12 @@
                     
              if (res.success) {
     $('#taxFormMsg3').text(res.message).css('color', 'green');
-    
-window.location.href = `${mainurlweb}Onlinepay?CustomerId=${customerId}&mobile=${mobileNo}`;
 
-
+onlineweb(customerId);
+    // Then redirect after a short delay
+    setTimeout(() => {
+        window.location.href = `/Onlinepay?CustomerId=${customerId}&mobile=${mobileNo}`;
+    }, 300);
     // Optionally close modal or reset form
 }
  else {
@@ -483,4 +485,19 @@ window.location.href = `${mainurlweb}Onlinepay?CustomerId=${customerId}&mobile=$
             });
         });
     });
+
+    window.onlineweb=function(customerId) {
+       
+    $.ajax({
+        url: @* `${API.allapi.webonline}/${customerId}` *@ "https://localhost:44316/api/proc15/online/"+customerId, // use backticks
+        method: "GET",
+        success: function(response) {
+            console.log("Response:", response);
+        },
+        error: function(xhr, status, error) {
+            console.error("Error:", status, error);
+        }
+    });
+}
+
 </script>

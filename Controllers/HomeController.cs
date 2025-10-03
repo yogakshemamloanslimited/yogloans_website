@@ -20,21 +20,21 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
-    {   
-    var goldLoans = _context.Homwelcome.Where(x => x.LoanType == "Gold").ToList();
-    var businessLoans = _context.Homwelcome.Where(x => x.LoanType == "Business").ToList();
-    var vehicleLoans = _context.Homwelcome.Where(x => x.LoanType == "Vehicle").ToList();
-    var cdLoans = _context.Homwelcome.Where(x => x.LoanType == "CD").ToList();
-    var aboutContent = _context.AboutContent.ToList();
-
-    var viewModel = new LoanGroupViewModel
     {
-        Gold = goldLoans ?? new List<HomwelcomeModel>(),
-        Business = businessLoans ?? new List<HomwelcomeModel>(),
-        Vehicle = vehicleLoans ?? new List<HomwelcomeModel>(),
-        CD = cdLoans ?? new List<HomwelcomeModel>(),
-        AboutContent = aboutContent ?? new List<AboutContentModel>()
-    };
+        var goldLoans = _context.Homwelcome.Where(x => x.LoanType == "Gold").ToList();
+        var businessLoans = _context.Homwelcome.Where(x => x.LoanType == "Business").ToList();
+        var vehicleLoans = _context.Homwelcome.Where(x => x.LoanType == "Vehicle").ToList();
+        var cdLoans = _context.Homwelcome.Where(x => x.LoanType == "CD").ToList();
+        var aboutContent = _context.AboutContent.ToList();
+
+        var viewModel = new LoanGroupViewModel
+        {
+            Gold = goldLoans ?? new List<HomwelcomeModel>(),
+            Business = businessLoans ?? new List<HomwelcomeModel>(),
+            Vehicle = vehicleLoans ?? new List<HomwelcomeModel>(),
+            CD = cdLoans ?? new List<HomwelcomeModel>(),
+            AboutContent = aboutContent ?? new List<AboutContentModel>()
+        };
 
         return View(viewModel);
     }
@@ -46,7 +46,7 @@ public class HomeController : Controller
         {
             var loans = await _context.Loans.ToListAsync();
             var loanPoints = await _context.LoanPoints.ToListAsync();
-            
+
             var loanData = loans.Select(loan => new
             {
                 id = loan.Id,
@@ -85,7 +85,7 @@ public class HomeController : Controller
         try
         {
             _logger.LogInformation($"Received form submission. LoanType: {model.LoanType}, Header: {model.Header}");
-            
+
             // Get existing image paths from form
             var existingImage1 = Request.Form["ExistingImage1"].ToString();
             var existingImage2 = Request.Form["ExistingImage2"].ToString();
@@ -256,43 +256,120 @@ public class HomeController : Controller
     }
 
 
-    
-    [HttpGet]
-[Route("Loan-points/{id}")]
-public async Task<IActionResult> GetLoanPoints(string id)
-{
-    try
-    {
-        var loanPoints = await _context.LoanPoints
-            .Where(lp => lp.Loan == id) // assuming 'Loan' is a string property in your LoanPoints model
-            .ToListAsync();
 
-        return Json(new { success = true, data = loanPoints });
-    }
-    catch (Exception ex)
+    [HttpGet]
+    [Route("Loan-points/{id}")]
+    public async Task<IActionResult> GetLoanPoints(string id)
     {
-        _logger.LogError(ex, "Error fetching loan data");
-        return Json(new { success = false, message = "Error fetching loan data" });
+        try
+        {
+            var loanPoints = await _context.LoanPoints
+                .Where(lp => lp.Loan == id) // assuming 'Loan' is a string property in your LoanPoints model
+                .ToListAsync();
+
+            return Json(new { success = true, data = loanPoints });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error fetching loan data");
+            return Json(new { success = false, message = "Error fetching loan data" });
+        }
+    }
+
+
+
+
+    [HttpGet]
+    [Route("Loan-forall")]
+    public async Task<IActionResult> GetLoanPoints()
+    {
+        try
+        {
+            var loan = await _context.Loans.ToListAsync();
+
+            return Json(new { success = true, data = loan });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error fetching loan data");
+            return Json(new { success = false, message = "Error fetching loan data" });
+        }
+    }
+
+
+[HttpPost]
+public JsonResult SetModuleId(string code, string otp, string mobile) 
+{
+    if (int.TryParse(code, out int codeValue))
+    {
+        HttpContext.Session.SetInt32("code", codeValue);
+
+        // If mobile is numeric
+        if (int.TryParse(mobile, out int mobileValue))
+        {
+            HttpContext.Session.SetInt32("mobile", mobileValue);
+        }
+        else
+        {
+            HttpContext.Session.SetString("mobile", mobile); // fallback
+        }
+
+        // If otp is numeric
+        if (int.TryParse(otp, out int otpValue))
+        {
+            HttpContext.Session.SetInt32("otp", otpValue);
+        }
+        else
+        {
+            HttpContext.Session.SetString("otp", otp);
+        }
+
+        return Json(new { success = true });
+    }
+    else
+    {
+        return Json(new { success = false, message = "Invalid code" });
     }
 }
 
 
-    
-    
-    [HttpGet]
-[Route("Loan-forall")]
-public async Task<IActionResult> GetLoanPoints()
+[HttpPost]
+public JsonResult auctiondetails(string auctionId, string state_id) 
 {
-    try
-    {
-        var loan = await _context.Loans.ToListAsync();
+    
+       
+        if (int.TryParse(auctionId, out int auctionIdValue))
+        {
+            HttpContext.Session.SetInt32("auctionId", auctionIdValue);
+        }
+        else
+        {
+            HttpContext.Session.SetString("auctionId", auctionId); // fallback
+        }
 
-        return Json(new { success = true, data = loan });
-    }
-    catch (Exception ex)
-    {
-        _logger.LogError(ex, "Error fetching loan data");
-        return Json(new { success = false, message = "Error fetching loan data" });
-    }
+        // If otp is numeric
+        if (int.TryParse(state_id, out int state_idValue))
+        {
+            HttpContext.Session.SetInt32("state_id", state_idValue);
+        }
+        else
+        {
+            HttpContext.Session.SetString("state_id", state_id);
+        }
+
+        return Json(new { success = true });
+    
+    
 }
+
+[HttpPost]
+public JsonResult customerdetail()
+{
+    // Store a simple string in session
+    HttpContext.Session.SetString("customerdetail", "SomeValue");
+
+    return Json(new { success = true });
+}
+
+
 }

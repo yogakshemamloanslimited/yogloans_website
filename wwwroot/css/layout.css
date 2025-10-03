@@ -461,7 +461,10 @@ menu .menu-container{
      .menu-container img {
        width: 20% !important;
      }
-
+      .footer-widget{
+        padding: 0px !important;
+        text-align: justify;
+      }
      .contact .contact-container {
       width: 95% !important;
      }

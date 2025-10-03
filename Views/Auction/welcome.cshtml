@@ -24,6 +24,12 @@
         position: relative;
         @*   border-radius: 20%; *@
     }
+#image-pro {
+    transition: all 0.3s ease-in-out; /* smooth transition for size & position */
+    position: relative; /* initial position */
+    height: 100px;
+    width: 100px;
+}
 
     .cards {
         display: grid;
@@ -112,43 +118,14 @@
         transition: 0.5s ease-in-out;
     }
 
-    .items.active {
-        height: 700px;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        padding: 10px;
-     width: 100%;
+ 
+
+    tr{
+        text-align: end !important;
     }
 
-    #form-auction.active {
-        height: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #form-auction table {
-    min-width: 700px; /* force scroll if smaller screen */
-    border-collapse: collapse;
-}
 
-#form-auction table th {
-    background-color: #044697;
-    color: white;
-    text-align: center;
-}
 
-#form-auction table td {
-    text-align: center;
-}
-    #form-auction.active table th{
-        background-color: #044697;
-        color: white;
-        text-align: center;
-    }
-      #form-auction.active table td{
-        text-align: center;
-      }
     @@media(max-width:900px) {
         .msg {
             display: none;
@@ -177,98 +154,265 @@
     </div>
 
     <div class="items" style="display:flex; justify-contnet:center;">
-        <div style="position:fixed; width:100%; background-color:white;" id="form-auction">
-
-        <table class="table table-bordered" style="width:85%;">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Branch</th>
-                    <th>Loan Number</th>
-                    <th>Net weight</th>
-                    <th>Net wt/purity</th>
-                    <th>Minimum Bid Amount</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>View</td>
-                    <td>Thrissur</td>
-                    <td>2100244520</td>
-                    <td>0.2422</td>
-                    <td>02.25455</td>
-                    <td>2042552</td>
-                </tr>
-            </tbody>
-        </table>
-    <div class="details"> <div class="form-group"> <input type="text" class="form-controll" /> <input type="text" class="form-controll" /> <input type="text" class="form-controll" /> <input type="text" class="form-controll" /> <input type="text" class="form-controll" /> </div> </div>
-</div>
-
+        <div class="details" style="position:absolute; z-index:400; color:white; display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 15px;" id="top-details">
+            
+        </div>
         <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image1 ?? "~/images/welcome/Artboard-mobile.png"))"
             style="width:100%;  border-left-top-radius:" id="image1" />
         <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image2 ?? "~/images/welcome/Artboard-mobile.png"))"
             style="width:100%; " id="image2" />
     </div>
-    <div class="cards">
-        <div class="card">
-            <label class="lable-bill">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-                35,68,22.00
-            </label>
-            <div class="weight">
-                <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
-                <p class="weight-count" style="font-size: 20px; font-weight:bold;">
-                    390.060
-                </p>
-            </div>
-            <button class="btn" style="border:1px solid;" onclick="view()">View Pack</button>
-        </div>
-        <div class="card">
-            <label class="lable-bill">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-                35,68,22.00
-            </label>
-            <div class="weight">
-                <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
-                <p class="weight-count" style="font-size: 20px; font-weight:bold;">
-                    390.060
-                </p>
-            </div>
-            <button class="btn" style="border:1px solid;" onclick="view()">View Pack</button>
-        </div>
-        <div class="card">
-            <label class="lable-bill">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-                35,68,22.00
-            </label>
-            <div class="weight">
-                <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
-                <p class="weight-count" style="font-size: 20px; font-weight:bold;">
-                    390.060
-                </p>
-            </div>
-            <button class="btn" style="border:1px solid;" onclick="view()">View Pack</button>
-        </div>
-        <div class="card">
-            <label class="lable-bill">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-                35,68,22.00
-            </label>
-            <div class="weight">
-                <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
-                <p class="weight-count" style="font-size: 20px; font-weight:bold;">
-                    390.060
-                </p>
-            </div>
-            <button class="btn" style="border:1px solid;" onclick="view()">View Pack</button>
-        </div>
+    
+   <!-- Modal -->
+<div class="modal fade" id="product_deatiled" tabindex="-1" 
+     aria-labelledby="product_deatiled" aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Product Details</h5>
+      </div>
+      <div class="modal-body">
+      <div class="" style="display: flex;">
+        <div id="product_image" style="cursor: pointer;"></div>
+        <table id="first-details" style="width: 100%;"></table>
+      </div>
+       <table id="second-details" style="width: 100%;">
+       </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+    <div class="cards">
+      
+       
     </div>
 </div>
 <script>
-    function view() {
-        $('#form-auction').addClass('active');
-        $('.items').addClass('active');
+   $(document).ready(function(){
+    var sessionCode = '@Context.Session.GetInt32("code")';
+    var sessionMobile = '@Context.Session.GetInt32("mobile")';
+    var sessionOtp = '@Context.Session.GetInt32("otp")';
 
+    $.ajax({
+        url: "http://localhost:8085/api/auction/print1/" + sessionMobile + "/" + sessionOtp,
+        method: "GET",
+       success: function(response) {
+    if (response.Table && response.Table.length > 0) {
+        let row = response.Table[0];
+        let dateOnly = row.auc_dt.split("T")[0];
+
+        // Clear old content
+        $('#top-details').html("");
+
+      
+        $('#top-details').append(`
+            <p><strong>Auction ID :</strong> ${row.auction_id}</p>
+            <p><strong>Date :</strong> ${dateOnly}</p>
+            <p><strong>Bidder Name :</strong> ${row.bidder_name}</p>
+            <p><strong>State :</strong> ${row.state}</p>
+        `);
+
+       
+        $.ajax({
+            url: '@Url.Action("auctiondetails", "Home")',
+            method: 'POST',
+            data: { auctionId: row.auction_id, state_id: row.state_id },
+            success: function(res) {
+                
+
+               
+                let auctionId = row.auction_id;
+                let stateId = row.state_id;
+
+              
+
+             
+                cardsadd(auctionId, stateId);
+            },
+            error: function() {
+                alert('Failed to set session.');
+            }
+        });
     }
-</script>
+}
+
+    });
+    function cardsadd(auctionId, stateId) {
+    alert(auctionId);
+    alert(stateId);
+
+    $.ajax({
+        url: "http://localhost:8085/api/auction/print2/" + auctionId + "/" + stateId,
+        method: "GET",
+        success: function(response) {
+            console.log(response);
+
+            if (response.Table && response.Table.length > 0) {
+                $('.cards').html(""); // clear existing cards
+
+                response.Table.forEach(function(row) {
+                    console.log(row);
+
+                    $('.cards').append(`
+                        <div class="card">
+                            <label class="lable-bill">
+                           
+                                ${row.bench_mark_value ?? '0.00'}
+                            </label>
+                            <div class="weight">
+                                <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
+                                <p class="weight-count" style="font-size: 20px; font-weight:bold;">
+                                    ${row.net_wt ?? '0.000'}
+                                </p>
+                            </div>
+                            <button class="btn" style="border:1px solid;"
+    onclick="view(
+        '${row.bench_mark_value}',
+        '${row.net_wt}',
+        '${row.loan_no}',
+        '${row.netwt_purity}',
+        '${row.branch_name}'
+    )">
+    View Pack
+</button>
+
+                        </div>
+                    `);
+                });
+            }
+        }
+    });
+}
+
+});
+function view(benchmark, net_wt, loan_no, netwt_purity, branch_name) {
+    alert("Benchmark: " + benchmark);
+    alert("Net Weight: " + net_wt);
+    alert("Loan No: " + loan_no);
+    alert("Purity: " + netwt_purity);
+    alert("Branch: " + branch_name);
+
+    $.ajax({
+        url: "http://localhost:8085/api/auction/print_popup/" + loan_no,
+        method: "GET",
+        success: function (response) {
+               $("#product_deatiled").modal('show');
+            console.log(response);
+            let imgHtml =""
+            let firstde = ""
+           let secondde = ""
+            $('.modal-title').text("Bench Mark : " + benchmark);
+            firstde +=`
+            <tr>
+             <td>
+                Loan No :
+            </td>
+             <td>
+                 ${loan_no}
+           </td>
+            </tr>
+             <tr>
+             <td>
+                Net Weight :
+               </td>
+            <td>
+                 ${net_wt}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Purity : 
+            </td>
+            <td>
+                ${netwt_purity}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Branch :
+            </td>
+            <td>
+             ${branch_name}
+            </td>
+           </tr>
+            `;
+          if (response.Images && response.Images.length > 0) {
+            
+    response.Images.forEach(function (img) {
+        // prepend the base64 header
+        imgHtml += `<img src="data:image/jpeg;base64,${img.image_orna}" 
+                        style="width:100px;height:100px;margin:5px;" id="image-pro">`;
+    });
+} else {
+    imgHtml = "<p>No images found</p>";
+}
+     if (response.LoanDetails && response.LoanDetails.Table.length > 0) {
+    response.LoanDetails.Table.forEach(function(details){
+        secondde += `
+        <tr>
+            <td>Ornament :</td>
+            <td>${details.Ornament}</td>
+        </tr>
+        <tr>
+        <td>CreateDt :</td>
+        </tr>
+        <tr>
+            <td>Count :</td>
+            <td>${details.Count}</td>
+        </tr>
+        <tr>
+            <td>Purity :</td>
+            <td>${details.Purity}</td>
+        </tr>
+        <tr>
+            <td>Branch :</td>
+            <td>${branch_name}</td>
+        </tr>
+        `;
+    });
+}
+
+
+            $("#product_image").html(imgHtml);
+            $("#first-details").html(firstde);
+              $("#second-details").html(secondde);
+            
+          
+        },
+        error: function (xhr, status, error) {
+            console.error("Error fetching images:", error);
+        }
+    });
+}
+$(document).on("mouseenter", "#product_image img", function () {
+    $("#image-pro").css({
+        height: "500px",
+        width: "500px",
+        position: "absolute",
+        top: "-50%",
+        left: "-50%",
+        zIndex: 9999
+    });
+});
+
+$(document).on("mouseleave", "#product_image img", function () {
+    $("#image-pro").css({
+        height: "100px",
+        width: "100px",
+      
+      top: "0%",
+        left: "0%",
+        zIndex: "auto"
+    });
+});
+
+
+</script>  

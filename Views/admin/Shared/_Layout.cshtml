@@ -602,7 +602,27 @@ a{
     <main class="main-content">
         @RenderBody()
     </main>
+   <script>
+            let timer;
+            let logoutTime = 5 * 60 * 1000; // 2 minutes in milliseconds
 
+            function resetTimer() {
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+
+                    window.location.href = "/Admin/Logout"; // Laravel logout route
+                }, logoutTime);
+            }
+
+            // Track activity
+            window.onload = resetTimer;
+            document.onmousemove = resetTimer;
+            document.onkeypress = resetTimer;
+            document.onclick = resetTimer;
+            document.onscroll = resetTimer;
+
+            
+        </script>
     <script>
         $(window).on('load', function() {
             // Preloader

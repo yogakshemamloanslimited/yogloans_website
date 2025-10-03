@@ -18,15 +18,18 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Add distributed memory cache (required for Session)
+builder.Services.AddDistributedMemoryCache();
+
 // Add session services
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Set a suitable timeout
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
 
-// Add DbContext
+// ✅ DbContext (only once — if you want 2 DBs, define 2 DbContext classes instead)
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -37,6 +40,12 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LoginPath = "/admin/Login";
         options.LogoutPath = "/admin/Logout";
         options.AccessDeniedPath = "/admin/AccessDenied";
+    })
+    .AddCookie("AuctionCookie", options =>
+    {
+        options.LoginPath = "/Auction/Login"; // redirect for auction pages
+        options.LogoutPath = "/Auction/Logout";
+        options.AccessDeniedPath = "/Auction/Login";
     });
 
 var app = builder.Build();
@@ -45,7 +54,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -56,11 +64,14 @@ app.UseRouting();
 // Use CORS middleware
 app.UseCors("AllowAll");
 
-app.UseSession(); // Add session middleware
+// Enable session middleware
+app.UseSession();
 
+// Enable authentication & authorization
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Routing
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");

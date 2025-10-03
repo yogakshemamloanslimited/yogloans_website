@@ -105,6 +105,7 @@
                 // Populate fields with response
                 const customer = response.customer_data[0]; // assuming only one relevant record
                 $('#customerName').text(customer.customer_name || '');
+                $('#customer_name').text(customer.customer_name || '');
                 $('#address').text(
                     [customer.address, customer.city, customer.district_name]
                         .filter(Boolean)

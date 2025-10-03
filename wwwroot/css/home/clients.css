@@ -50,4 +50,7 @@
     .client-counts .content .item {
         width: 100%;
     }
+    .client-counts .content .item p:nth-child(1){
+        font-size: 15px;
+    }
 }

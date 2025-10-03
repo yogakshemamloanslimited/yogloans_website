@@ -226,6 +226,7 @@ h2{
 .owl-carousel .owl-dots {
     margin-top: 40px;
     text-align: center;
+    display: none;
 }
 
 .owl-carousel .owl-dots .owl-dot {
@@ -515,4 +516,14 @@ all 0.5s ease;
 }
 .customer-content{
     padding: 20px;
+}
+
+@media(max-width:850px){
+    .owl-carousel .owl-nav {
+        display: none;
+    }
+    .sec1 {
+        width: 100%;
+    }
+   
 }
