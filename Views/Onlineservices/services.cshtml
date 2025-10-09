@@ -1,5 +1,10 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="~/css/online/services.css" asp-append-version="true">
+  <style>
+  .fa-spin {
+  animation: fa-spin 2s infinite linear;
+}
+  </style>
   <section class="online-services">
         <div class="online-container">
             <div class="card" data-bs-toggle="modal" data-bs-target="#payOnlineModal">
@@ -47,9 +52,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Pay Online</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="close-btn3"></button>
                 </div>
                <div class="modal-body">
+               <span id="taxFormMsg3" class="mt-2"></span>
                     <form id="taxForm3">
                         <div class="mb-3">
                             <label class="form-label">Customer ID</label>
@@ -62,15 +68,22 @@
                         <div class="form-text mb-3">
                             By clicking send OTP button, you agree to the Terms and Conditions
                         </div>
-                        <button type="button" class="btn btn-primary w-100" id="sendOtpBtn3">Send OTP</button>
+                        <button type="button" class="btn btn-primary w-100" id="sendOtpBtn3">
+                    
+                        Send OTP     <i class="fa fa-cog fa-w-16 fa-spin" id="spin-load1" style="display:none"></i></button>
                         
                         <div id="otpSection3" style="display:none;">
                             <div class="mb-3 mt-3">
                                 <label class="form-label">Enter OTP</label>
                                 <input type="text" class="form-control" id="otpInput3">
                             </div>
-                            <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn3">Verify OTP</button>
-                            <button type="button" class="btn btn-link w-100" id="resendOtpBtn3">Resend OTP</button>
+                            <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn3">Verify OTP
+                             <i class="fa fa-cog fa-w-16 fa-spin" id="spin-very-load1" style="display:none"></i>
+                            
+                            </button>
+                            <button type="button" class="btn btn-link w-100" id="resendOtpBtn3">Resend OTP
+                             
+                            </button>
                         </div>
                         <div id="terms" class="mt-2 d-flex justify-content-center align-items-center" style="width:100%;">
                             <p style="color:black; text-align:center;">
@@ -192,6 +205,14 @@
     </div>
 <script>
     $(document).ready(function() {
+        $('#close-btn3').on('click', function() {
+            // Reset the form and hide OTP section when modal is closed
+            $('#taxForm3')[0].reset();
+            $('#otpSection3').hide();
+            $('#sendOtpBtn3').show();
+            $('#taxFormMsg3').text('');
+        });
+    
         let slNo = null;
 
         $('#sendOtpBtn').on('click', function(e) {
@@ -400,7 +421,9 @@
         $('#sendOtpBtn3').on('click', function(e) {
             e.preventDefault();
             const customerId = $('#customerId3').val();
+
             const mobileNo = $('#mobileNo3').val();
+            $('#spin-load1').show();
             $('#taxFormMsg3').text('');
             $.ajax({
                 url: API.allapi.verifyDetails,
@@ -412,22 +435,27 @@
                         slNo = res.slNo;
                         $('#otpSection3').show();
                         $('#sendOtpBtn3').hide();
+                        $('#spin-load1').hide();
                         $('#taxFormMsg3').text(res.message).css('color', 'green');
                     } else {
                         $('#taxFormMsg3').text(res.message || 'Failed to send OTP').css('color', 'red');
+                        $('#spin-load1').hide();
                     }
                 },
                 error: function(xhr) {
                     $('#taxFormMsg3').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#spin-load1').hide();
                 }
             });
         });
 
         $('#verifyOtpBtn3').on('click', function(e) {
             e.preventDefault();
+           
             const customerId = $('#customerId3').val();
             const mobileNo = $('#mobileNo3').val();
             const otp = $('#otpInput3').val();
+            $('#spin-very-load1').show();
             if (!slNo) {
                 $('#taxFormMsg3').text('Session expired. Please try again.').css('color', 'red');
                 return;
@@ -438,41 +466,88 @@
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
                 success: function(res) {
-                    
+                     $('#spin-very-load1').hide();
+                     var url = API.allapi.onlineCustomer;
+                     alert(url);
     if (res.success) {
-    $.get(`http://localhost:8085/api/proc15/online?customerId=${customerId}&mobileNo=${mobileNo}`, 
+ $.get(`${url}${encodeURIComponent(customerId)}&mobileNo=${encodeURIComponent(mobileNo)}`, 
         function(apiRes) {
             console.log("API Response:", apiRes);
-
-            // Check the message property
-            if (apiRes.message != "S") {
-                alert("You recently attempted a transaction, kindly wait for some more time and try again later...!");
-                return;
-            }
-
-            // redirect on success
-            window.location.href = `/Onlinepay?CustomerId=${customerId}&mobile=${mobileNo}`;
+               var customerAddress = "";
+        if (apiRes.customer_data && apiRes.customer_data.length > 0) {
+            customerAddress = apiRes.customer_data[0].email_id;
+            console.log("Customer Address:", customerAddress);
         }
-    ).fail(function(err) {
-        console.error("API call failed:", err);
-        alert("Something went wrong while calling API.");
+            
+           // Check the message property
+if (apiRes.message != "S") {
+    Swal.fire({
+        title: '<span style="color:orange;">⏰ Wait!</span>', // emoji
+        html: 'You recently attempted a transaction, kindly wait for some more time and try again later...!.',
+        showConfirmButton: true
+    }).then((result) => {
+      
+        if (result.isConfirmed || result.isDismissed) {
+    
+            $('#payOnlineModal').modal("hide");
+            $('#taxForm3')[0].reset();
+            $('#otpSection3').hide();
+            $('#sendOtpBtn3').show();
+            $('#taxFormMsg3').text('');
+         
+            return;
+        }
     });
+
+    return;
 }
 
- else {
+            
+$.ajax({
+   url: '@Url.Action("Customeraddress", "Home")',
+   type: "POST",
+   xhrFields: { withCredentials: true },
+   data: {
+       address: customerAddress,
+       CustomerId: customerId
+   },
+   success: function (res) {
+       console.log("Session set response:", res);
+       if (res.success) {
+           // Delay slightly to ensure session cookie is persisted
+           setTimeout(() => {
+               window.location.href = `/Onlinepay`;
+           }, 300);
+       }
+   },
+   error: function (err) {
+       console.error("Session set failed:", err);
+   }
+});
+        }
+    );
+    // Optionally close modal or reset form
+}
+
+                else {
                         $('#taxFormMsg3').text( 'OTP verification failed').css('color', 'red');
+                          $('#spin-very-load1').hide();
                     }
                 },
                 error: function(xhr) {
                     $('#taxFormMsg3').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                      $('#spin-very-load1').hide();
                 }
             });
         });
 
         $('#resendOtpBtn3').on('click', function(e) {
             e.preventDefault();
+            
             const customerId = $('#customerId3').val();
             const mobileNo = $('#mobileNo3').val();
+
+            $('#spin-load1').show();
             if (!slNo) {
                 $('#taxFormMsg3').text('Session expired. Please try again.').css('color', 'red');
                 return;
@@ -484,19 +559,22 @@
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
                 success: function(res) {
                     if (res.success) {
+                        $('#spin-load1').hide();
                         $('#taxFormMsg3').text(res.message).css('color', 'green');
                     } else {
+                        $('#spin-load1').hide();
                         $('#taxFormMsg3').text(res.message || 'Failed to resend OTP').css('color', 'red');
                     }
                 },
                 error: function(xhr) {
+                    $('#spin-load1').hide();
                     $('#taxFormMsg3').text(xhr.responseText || 'Error occurred').css('color', 'red');
                 }
             });
         });
     });
 
-    window.onlineweb=function(customerId) {
+  @*   window.onlineweb=function(customerId) {
        
     $.ajax({
         url:"http://localhost:8085/api/proc15/online/"+customerId, // use backticks
@@ -508,6 +586,6 @@
             console.error("Error:", status, error);
         }
     });
-}
+} *@
 
 </script>

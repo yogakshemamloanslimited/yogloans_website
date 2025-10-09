@@ -1,4 +1,4 @@
-﻿const API_BASE = "http://pfl.yogloans.com:8580/api/";
+﻿const API_BASE = "http://localhost:8085/api/";
 const mainurlweb = "https://test.yogloans.com/";
 
 window.API = {
@@ -33,7 +33,9 @@ window.API = {
         ggetpdfdata: `${API_BASE}15g/get-pdf-data/`,
         EnqueryOccupations: `${API_BASE}Enquery/Occupations`, 
         webonline:`${API_BASE}api/proc15/online`,
-
+        onlineCustomer: `${API_BASE}proc15/online?customerId=`,  // ❌ likely typo: should it be "onlineCustomer"
+        sbifailure :`${API_BASE}sbi-failure`,
+        paynow1 : `${API_BASE}payonline/Paynow/step1`,
         // add other endpoints here
     }
 };

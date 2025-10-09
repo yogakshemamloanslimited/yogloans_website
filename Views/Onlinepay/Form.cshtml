@@ -4,14 +4,17 @@
         <div class="card-body">
             <div class="form-group-text">
                 <p id="customerName"></p>
-                <p id="address"></p>
+
+             <p id="address"></p>
+                <p id="mobilesss"></p>
             </div>
 
-            <div class="form-group d-flex" >
+            <div class="form-group d-flex" style="flex-direction:column; ">
                 <input type="text" id="loaninput" class="form-control" placeholder="Find Your Loan Here ">
-                <button class="btn btn-success" id="search-loan">  <i class="fa fa-search" id="fa"></i> <div id="load" class="spinner-border text-primary" role="status" style="display:none; width: 1.5rem; height: 1.5rem;">
+                <span id="field_error" style="width: 100%;"></span>
+              @*   <button class="btn btn-success" id="search-loan">  <i class="fa fa-search" id="fa"></i> <div id="load" class="spinner-border text-primary" role="status" style="display:none; width: 1.5rem; height: 1.5rem;">
                   <span class="visually-hidden">Loading...</span>
-                </div></button>
+                </div></button> *@
             </div>
         </div>
     </div>
@@ -25,8 +28,11 @@
 
 </section>
 
+<input type="hidden" id="encdata" value="">
+<input type="hidden" id="encdata1" value="">
+<input type="hidden" id="orderid" value="">
 <!-- added payments -->
- <form class="form-group" style="width:50%; padding:25px;" id="tables" >
+ <form class="form-group" style="width:50%; padding:25px;" id="payForm" >
     <table id="table-fill" class="bill-table" style="width:100%;">
      <input type="hidden" name="cus_id" value="@ViewBag.CustomerId">
      <tr>
@@ -48,207 +54,155 @@
      </tr>
 
     </table>
-    <div class="form-group" id="total-amount-card" style="display:none;">
-        <div class="total-card">
+   <div class="form-group" id="total-amount-card" style="display:none; margin-top: 10px;">
+    <div class="total-card" style="width:100%; display:flex; flex-direction:column; justify-content:space-between; align-items:center; padding:10px 20px; box-shadow:0 0 10px rgba(0,0,0,0.1); border-radius:8px; background-color:#f8f9fa;">
+        
+        <!-- Total Payment Display -->
+        <div style="width:70%; display:flex; justify-content:space-between; align-items:center;">
             <p class="total-label">Total Payment</p>
             <p id="totalpay" class="total-value"></p>
-             <button class="btn btn-success">Pay Now</button>
         </div>
-       
+
+        <!-- Checkbox and Button -->
+        <div style="width:100%; display:flex; flex-direction:column; align-items:end; gap:10px;">
+            <div class="custom-checkbox custom-control custom-control-inline">
+                <input type="checkbox" id="exampleCustomInline" class="custom-control-input">
+                <label class="custom-control-label" for="exampleCustomInline">I agree to proceed with the payment</label>
+            </div>
+
+            <button class="btn btn-success" style="display:none;" id="payButton" onclick="paynow()" type="button">Pay Now</button>
+        </div>
+
     </div>
+</div>
+
     </form>
     </section>
-<input type="hidden" id="customerId" value="@ViewBag.CustomerId">
-<input type="hidden" id="mobile" value="@ViewBag.MobileNo">
+    <input type="hidden" id="customerId" value="">
+
+<input type="hidden" id="mobile" value="">
 <link rel="stylesheet" href="~/css/onlinepay/style.css" asp-append-version="true">
 <!-- SweetAlert2 CDN -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-    $(document).ready(function () {
-        // Hide spinner by default
-        $('#load').hide();
-        var customerId = $('#customerId').val();
-        var mobileNo = $('#mobile').val();
-        var loanno = $('#loaninput').val();
+@* $(document).ready(function() {
+    $('#exampleCustomInline').change(function() {
 
-        // Validate input before making the AJAX call
-        if (!customerId || !mobile) {
-            Swal.fire({
-                icon: 'warning',
-                title: 'Missing Info',
-                text: 'Customer ID and Mobile are required.'
-            });
+        $.ajax({
+            url: 'https://localhost:8085/api/payonline/Paynow/checkdata?orderno=1025&amount=10&customerId=105297',
+            method: 'GET',
+            success: function(data) {
+               $('#payButton').show();
+            },
+            error: function() {
+                 $('#payButton').hide(); 
+                console.error('Failed to fetch IP address');
+            }
+        });
+       
+    });
+}); *@
+ $(document).ready(function () {
+    $('#loaninput').on('input', function () {
+        let loanno = $(this).val().trim();
+
+        // Only allow digits
+        loanno = loanno.replace(/\D/g, '');
+        $(this).val(loanno);
+
+        const customerId = $('#customerId').val(); // get customerId
+
+        // Clear previous result
+        $('#result').empty();
+        $('#field_error').text('');
+
+        // Check for empty input
+        if (!loanno) {
+            $('#field_error').text('Loan number is required.').css('color', 'red');
             return;
         }
 
-        // Get Customer Info
-        $('#load').show(); // Show spinner before AJAX
-    
-$.get(`http://localhost:8085/api/proc15/online?customerId=${customerId}&mobileNo=${mobileNo}`, function(response) {
-    $('#load').hide(); // hide loader
-    
-    if (!response || !response.customer_data || response.customer_data.length === 0) {
-        Swal.fire({
-            icon: 'info',
-            title: 'No Data',
-            text: 'No data found.'
-        });
-        return;
-    }
-
-    // Get the first customer record
-    const customer = response.customer_data[0]; 
-
-    // Split the email_id string by '$'
-    const parts = customer.email_id.split('$');
-    
-    // Now parts is an array:
-    // parts[0] => Name
-    // parts[1] => Address
-    // parts[2] => City
-    // parts[3] => State
-    // parts[4] => Country
-    // parts[5] => Pincode
-    // parts[6] => MobileNo
-    // parts[7] => Email
-
-    // Example: populate fields
-    $('#customer_name').text('Hello: ' + (parts[0] || ''));
-    $('#customerName').text(parts[0] || '');
-   @*  $('#customer_name').text(part[0] || ''); *@
-    $('#address').text(
-    (parts[1] || '') + ', ' +
-    (parts[2] || '') + ', ' +
-    (parts[3] || '') + ', ' +
-    (parts[4] || '') + ' - ' +
-    (parts[5] || '')
-);
-
-  @* 
-    $('#city').text(parts[2] || '');
-    $('#state').text(parts[3] || '');
-    $('#country').text(parts[4] || '');
-    $('#pincode').text(parts[5] || '');
-    $('#mobileNo').text(parts[6] || '');
-    $('#email').text(parts[7] || ''); *@
-
-}).fail(function(err) {
-    $('#load').hide(); // hide loader on error
-    console.error('Error:', err);
-    Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Failed to fetch customer data. Please check the API.'
-    });
-});
-
-
-        // Loan Search
-       $('#search-loan').click(function () {
-    const loanno = $('#loaninput').val().trim(); // Trim whitespace
-    const customerId = $('#customerId').val(); // Assuming you're getting it from an input or variable
-
-    if (!loanno) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Missing Info',
-            text: 'Loan number is required.'
-        });
-        return;
-    }
-
-    /* if (!customerId) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Missing Info',
-            text: 'Customer ID is required.'
-        });
-        return;
-    }
- */
-    $('#load').show(); 
-    $('#fa').hide();
-    $('#result').empty(); // Clear previous result
-
-    $.ajax({
-        url: API.allapi.Payonline + encodeURIComponent(customerId) + '/' + encodeURIComponent(loanno),
-        method: 'GET',
-        success: function (response) {
-            $('#load').hide();
-            $('#fa').show();
-            $('#result').show();
-            $('#result').empty();
-            if (response && response.customer_data && response.customer_data.length > 0) {
-                const customer = response.customer_data[0];
-                let productDisplay = customer.product;
-                if (customer.product === 'VL') {
-                    productDisplay = "Vehicle Loan";
-                }
-                else if (customer.product === 'BL') {
-                    productDisplay = "Business Loan";
-                }
-                 else if (customer.product === 'TL') {
-                    productDisplay = "Term Loan";
-                }
-                else if (customer.product === 'CD') {
-                    productDisplay = "CD Loan";
-                }
-                 else if (customer.product === 'GL') {
-                    productDisplay = "Gold Loan";
-                }
-                $('#result').append(`
-  <div class="card credit-card-style mb-3">
-    <div class="card-body">
-      
-      <div class="cc-number" style="color:black">${customer.loan_no.replace(/(.{4})/g, '$1 ')}</div>
-      <div class="cc-row">
-        <div>
-          <div class="cc-label">Product</div>
-          <div class="cc-value"  style="color:black" id="product">${productDisplay}</div>
-        </div>
-        <div>
-          <div class="cc-label">Due Amount</div>
-          <div class="cc-value"  style="color:black">₹${customer.due_amount}</div>
-        </div>
-      </div>
-      <div class="cc-row">
-        <div>
-          <div class="cc-label">Other Charges</div>
-          <div class="cc-value"  style="color:black">₹${customer.other_charges}</div>
-        </div>
-        <div>
-          <div class="cc-label">Date</div>
-          <div class="cc-value"  style="color:black">${new Date(customer.trans_date).toLocaleDateString()}</div>
-        </div>
-      </div>
-      <div class="form-group" style="display:flex; gap:10px; margin-top:15px;">
-      <input type="text" class="form-control" style="height:50px;" id="amount">
-      <button class="btn btn-success pay-btn" data-loan="${customer.loan_no}" onclick="addpay('${customer.loan_no}', '${productDisplay}', ${customer.due_amount})" style="height:50px;">Add</button>
-      </div>
-    </div>
-  </div>
-`);
-            } else {
-                Swal.fire({
-                    icon: 'info',
-                    title: 'Not Found',
-                    text: 'No loan data found.'
-                });
-            }
-        },
-        error: function (xhr, status, error) {
-            $('#load').hide();
-            $('#fa').show();
-            console.error('Loan fetch error:', error);
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'No Data Found Try Again'
-            });
+        // Optional: minimum length for validation (e.g., 6 digits)
+        if (loanno.length < 10) {
+            $('#field_error').text('Loan number must be at least 10 digits.').css('color', 'red');
+            return;
         }
+
+        if (!customerId) {
+            $('#field_error').text('Customer ID is missing.').css('color', 'red');
+            return;
+        }
+
+        // Show loader
+        $('#load').show();
+        $('#fa').hide();
+
+        // AJAX to validate loan number
+        $.ajax({
+            url: API.allapi.Payonline + encodeURIComponent(customerId) + '/' + encodeURIComponent(loanno),
+            method: 'GET',
+            success: function (response) {
+                $('#load').hide();
+                $('#fa').show();
+                $('#result').empty();
+                    $('#result').show();
+                if (response && response.customer_data && response.customer_data.length > 0) {
+                    const customer = response.customer_data[0];
+                    $('#field_error').text(''); // clear error if valid
+
+                    let productDisplay = customer.product;
+                    switch (customer.product) {
+                        case 'VL': productDisplay = "Vehicle Loan"; break;
+                        case 'BL': productDisplay = "Business Loan"; break;
+                        case 'TL': productDisplay = "Term Loan"; break;
+                        case 'CD': productDisplay = "CD Loan"; break;
+                        case 'GL': productDisplay = "Gold Loan"; break;
+                    }
+ $('#result').append(`
+<div class="card credit-card-style mb-3">
+    <div class="card-body">
+        <div class="cc-number" style="color:black">${customer.loan_no.replace(/(.{4})/g, '$1 ')}</div>
+        <div class="cc-row">
+            <div>
+                <div class="cc-label">Product</div>
+                <div class="cc-value" style="color:black" id="product">${productDisplay}</div>
+            </div>
+            <div>
+                <div class="cc-label">Due Amount</div>
+                <div class="cc-value" style="color:black">₹${customer.due_amount}</div>
+            </div>
+        </div>
+        <div class="cc-row">
+            <div>
+                <div class="cc-label">Other Charges</div>
+                <div class="cc-value" style="color:black">₹${customer.other_charges}</div>
+            </div>
+            <div>
+                <div class="cc-label">Date</div>
+                <div class="cc-value" style="color:black">${new Date(customer.trans_date).toLocaleDateString()}</div>
+            </div>
+        </div>
+        <div class="form-group" style="display:flex; gap:10px; margin-top:15px;">
+            <input type="text" class="form-control" style="height:50px;" id="amount" placeholder="Enter Amount" value="${customer.due_amount}">
+            <button class="btn btn-success pay-btn" data-loan="${customer.loan_no}" onclick="addpay('${customer.loan_no}', '${productDisplay}', ${customer.due_amount})" style="height:50px;">Add</button>
+        </div>
+    </div>
+</div>
+`);
+                } else {
+                    $('#field_error').text('Loan number not found.').css('color', 'red');
+                }
+            },
+            error: function () {
+                $('#load').hide();
+                $('#fa').show();
+                $('#field_error').text('Loan number not found.').css('color', 'red');
+            }
+        });
     });
-});
+
+
 
 /* $('#result').on('click', '.pay-btn', function() {
     const loanNo = $(this).data('loan');
@@ -275,11 +229,10 @@ $.get(`http://localhost:8085/api/proc15/online?customerId=${customerId}&mobileNo
         });
 
         if (exists) {
-            Swal.fire({
-                icon: 'warning',
-                title: 'Duplicate Entry',
-                text: 'This loan number is already added.'
-            });
+           
+            $('#result').empty();
+              $('#result').hide();
+            $('#field_error').text('This loan number is already added.').css('color', 'red');
             return;
         }
 
@@ -293,13 +246,16 @@ $.get(`http://localhost:8085/api/proc15/online?customerId=${customerId}&mobileNo
                 <td>${product}</td>
                 <td>${due_amount}</td>
                 <td class="amount-pay">${amount}</td>
-                <input value="${no}" name="loan_no" type="hidden">
+                <input value="${no}" name="loan_no" type="hidden" id="loanNo">
                 <input value="${amount}" name="pay_amount" type="hidden" id="pay_amount"> 
                 <td><button class="btn btn-danger btn-sm remove-row">Remove</button></td>
             </tr>
             `
         );
         updateTotalPay();
+        $('#result').empty();
+         $('#result').hide();
+        $('#loaninput').val('');
     }
 
     // Remove row on button click
@@ -309,6 +265,15 @@ $.get(`http://localhost:8085/api/proc15/online?customerId=${customerId}&mobileNo
             $('#table-fill').hide();
         }
         updateTotalPay();
+        var totalvalue = $('#totalpay').text(); // ✅ removed extra parenthesis
+totalvalue = parseFloat(totalvalue); // convert to number if needed
+
+if (totalvalue > 0) {
+    $('#total-amount-card').show();
+} else {
+    $('#total-amount-card').hide();
+}
+
     });
 
 
@@ -329,7 +294,7 @@ $.get(`http://localhost:8085/api/proc15/online?customerId=${customerId}&mobileNo
         $('#totalpay').text(total.toFixed(2));
     }
 
- $('#tables').on('submit', function (e) {
+ $('#loanTable').on('submit', function (e) {
     e.preventDefault();
 
     var requestData = {
@@ -369,5 +334,173 @@ $('#table-fill tr').each(function() {
     });
 });
 
+ $(document).ready(function () {
+    // Get session string from Razor
+    var sessionaddress = '@Context.Session.GetString("Customeraddress")';
+    var sessionaCustomerId = '@Context.Session.GetString("CustomerId")';
+
+
+    document.getElementById('customerId').value = sessionaCustomerId;
+
+    if (sessionaddress && sessionaddress !== "null" && sessionaddress.trim() !== "") {
+        // Split into parts by '$'
+        var part = sessionaddress.split('$').map(p => p.trim());
+
+        // Debug log
+        console.log("Address Parts:", part);
+
+        // Fill main display (summary)
+        $('#address').html(`${part[1]}, ${part[2]}, ${part[3]} - ${part[5]} ${part[4]}`);
+        $('#customerName').text(part[0] || '');
+        $('#customer_name').text('Hello: ' + (part[0] || ''));
+        $('#mobile').text(part[6] || '');
+        // Fill separate fields if they exist in HTML
+    @*     $('#name').val(part[0] || '');
+        $('#house').val(part[1] || '');
+        $('#city').val(part[2] || '');
+        $('#state').val(part[3] || '');
+        $('#country').val(part[4] || '');
+        $('#pincode').val(part[5] || '');
+        $('#phone').val(part[6] || '');
+        $('#email').val(part[7] || ''); *@
+    } else {
+        $('#address').text("No address found in session.");
+    }
+    
+});
+
+$(document).ready(function () {
+     $('#exampleCustomInline').change(function() {
+@*     e.preventDefault(); *@
+    alert('called');
+
+    let loanItems = [];
+    $('#table-fill tr').each(function () {
+        let loanNo = $(this).find('#loanNo').val();
+        let payAmount = parseFloat($(this).find('#pay_amount').val());
+        if (loanNo && payAmount) {
+            loanItems.push({ LoanNo: loanNo, PayAmount: payAmount });
+        }
+    });
+
+    let data = {
+        CustomerId: $('#customerId').val(),
+        Name: $('#customerName').text(),      // <-- use text
+        TotalAmt: $('#totalpay').text(),      // <-- use text
+        MobileNo: $('#mobile').val(),
+        LoanItems: loanItems
+    };
+
+    alert(JSON.stringify(data));
+
+    $.ajax({
+        url: API.allapi.paynow1,
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        success: function (res) {
+            @* alert(res.EncryptedParam);
+            alert(res.EncryptedParam1);
+             alert(res.orderId); *@
+              $('#payButton').show();
+        
+                $('#encdata').val(res.EncryptedParam);
+                $('#encdata1').val(res.EncryptedParam1);
+                $('#orderid').val(res.MID);
+
+                //paynow(res.EncryptedParam, res.EncryptedParam1, res.orderId);
+              //window.location.href = "https://www.sbiepay.sbi/secure/AggregatorHostedListener?" + res.paymentData;
+           @*  let fullResponse = "";
+            for (const key in res) {
+                if (res.hasOwnProperty(key)) {
+                    fullResponse += key + ": " + JSON.stringify(res[key]) + "\n";
+                }
+            }
+
+            alert(fullResponse); *@
+            $('#result').html('<div class="alert alert-success">Payment request submitted successfully.</div>');
+        },
+        error: function (err) {
+            $('#result').html('<div class="alert alert-danger">Error submitting payment.</div>');
+        }
+    });
+});
+
+}); // ✅ closes document.ready
+@* function paynowss(encdata, encdata1, orderId) {
+    $.ajax({
+        url: '@Url.Action("SaveSbiSession", "Home")', // ✅ fixed controller name & order
+        type: 'POST',
+        data: {
+            encdata: encdata,
+            encdata1: encdata1,
+            orderId: orderId
+        },
+        success: function (response) {
+            console.log('Redirecting to SBI ePay...');
+            alert("encdata: " + encdata + " | encdata1: " + encdata1 + " | orderId: " + orderId);
+        },
+        error: function (xhr, status, error) {
+            console.error('Error redirecting to SBI ePay:', error);
+        }
+    }); // ✅ close ajax
+} 
+ *@
+function paynow() {
+    var encdata = $('#encdata').val();        
+    var encdata1 = $('#encdata1').val();      
+    var merchantId = $('#orderid').val();   
+    alert(merchantId);  
+
+    if (!encdata || !encdata1 || !merchantId) {
+        alert("Missing required parameters!");
+        return;
+    }
+
+    $.ajax({
+        url: '/Home/PrepareSbiPayment', // your server endpoint
+        method: 'POST',
+        data: {
+            EncryptTrans: encdata,
+            MultiAccountInstructionDtls: encdata1,
+            merchIdVal: merchantId
+        },
+        success: function(response) {
+            // You can log or store the response here
+            console.log('Server prepared SBI payment', response);
+
+            // Redirect user to SBI
+            window.location.href = 'https://www.sbiepay.sbi/secure/AggregatorHostedListener';
+        },
+        error: function(err) {
+            console.error('Error preparing SBI payment', err);
+        }
+    });
+}
+function handleSbiFailure() {
+    var encData = $('#encdata').val();
+    alert('cominggggg')
+    if (!encData) {
+        alert("Missing encData!");
+        return;
+    }
+
+    $.ajax({
+        url: API.allapi.sbifailure,
+        method: 'POST',
+        data: { encData: encData },
+        success: function(res) {
+            if (res.success) {
+                alert("Payment Status: " + res.status + "\nRef: " + res.sbiepayreferenceid);
+            } else {
+                alert("Error: " + res.message);
+            }
+        },
+        error: function(err) {
+            console.error(err);
+            alert("Something went wrong while processing payment.");
+        }
+    });
+}
 
 </script>

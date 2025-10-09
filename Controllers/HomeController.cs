@@ -297,47 +297,47 @@ public class HomeController : Controller
     }
 
 
-[HttpPost]
-public JsonResult SetModuleId(string code, string otp, string mobile) 
-{
-    if (int.TryParse(code, out int codeValue))
+    [HttpPost]
+    public JsonResult SetModuleId(string code, string otp, string mobile)
     {
-        HttpContext.Session.SetInt32("code", codeValue);
-
-        // If mobile is numeric
-        if (int.TryParse(mobile, out int mobileValue))
+        if (int.TryParse(code, out int codeValue))
         {
-            HttpContext.Session.SetInt32("mobile", mobileValue);
+            HttpContext.Session.SetInt32("code", codeValue);
+
+            // If mobile is numeric
+            if (int.TryParse(mobile, out int mobileValue))
+            {
+                HttpContext.Session.SetInt32("mobile", mobileValue);
+            }
+            else
+            {
+                HttpContext.Session.SetString("mobile", mobile); // fallback
+            }
+
+            // If otp is numeric
+            if (int.TryParse(otp, out int otpValue))
+            {
+                HttpContext.Session.SetInt32("otp", otpValue);
+            }
+            else
+            {
+                HttpContext.Session.SetString("otp", otp);
+            }
+
+            return Json(new { success = true });
         }
         else
         {
-            HttpContext.Session.SetString("mobile", mobile); // fallback
+            return Json(new { success = false, message = "Invalid code" });
         }
-
-        // If otp is numeric
-        if (int.TryParse(otp, out int otpValue))
-        {
-            HttpContext.Session.SetInt32("otp", otpValue);
-        }
-        else
-        {
-            HttpContext.Session.SetString("otp", otp);
-        }
-
-        return Json(new { success = true });
     }
-    else
+
+
+    [HttpPost]
+    public JsonResult auctiondetails(string auctionId, string state_id)
     {
-        return Json(new { success = false, message = "Invalid code" });
-    }
-}
 
 
-[HttpPost]
-public JsonResult auctiondetails(string auctionId, string state_id) 
-{
-    
-       
         if (int.TryParse(auctionId, out int auctionIdValue))
         {
             HttpContext.Session.SetInt32("auctionId", auctionIdValue);
@@ -358,17 +358,91 @@ public JsonResult auctiondetails(string auctionId, string state_id)
         }
 
         return Json(new { success = true });
-    
-    
-}
+
+
+    }
+
+    [HttpPost]
+    public JsonResult customerdetail()
+    {
+        // Store a simple string in session
+        HttpContext.Session.SetString("customerdetail", "SomeValue");
+
+        return Json(new { success = true });
+    }
+
+    [HttpPost]
+    public ActionResult Customeraddress(string address, string CustomerId)
+    {
+        HttpContext.Session.SetString("Customeraddress", address);
+        HttpContext.Session.SetString("CustomerId", CustomerId);
+
+        return Json(new
+        {
+            success = true,
+            message = "Session stored successfully",
+            CustomerId = CustomerId,
+            CustomerAddress = address
+        });
+    }
+
+    [HttpGet]
+    public IActionResult CheckSession()
+    {
+        var val = HttpContext.Session.GetString("Customeraddress") ?? "empty";
+        return Content($"Customeraddress = {val}");
+    }
+    /* [HttpPost]
+    public IActionResult SaveSbiSession(string encdata, string encdata1, string orderId)
+    {
+        HttpContext.Session.SetString("EncryptedParam", encdata);
+        HttpContext.Session.SetString("EncryptedParam1", encdata1);
+        HttpContext.Session.SetString("orderId", orderId);
+
+        return Json(new {
+            sucess = true,
+            encdata = encdata,
+            encdata1 = encdata1,
+            message = "Session values saved successfully." });
+    }
+
+     */
+    [HttpPost]
+    public IActionResult PrepareSbiPayment(string EncryptTrans, string MultiAccountInstructionDtls, string merchIdVal)
+    {
+        // Save to DB or session
+        HttpContext.Session.SetString("EncryptTrans", EncryptTrans);
+        HttpContext.Session.SetString("MultiAccountInstructionDtls", MultiAccountInstructionDtls);
+        HttpContext.Session.SetString("merchIdVal", merchIdVal);
+
+  
+
+        return Json(new { success = true });
+    }
 
 [HttpPost]
-public JsonResult customerdetail()
+public IActionResult SbiCallback(string status, string orderId, string txnId)
 {
-    // Store a simple string in session
-    HttpContext.Session.SetString("customerdetail", "SomeValue");
+    // Save payment status to DB or session
+    HttpContext.Session.SetString("PaymentStatus", status ?? "UNKNOWN");
+    HttpContext.Session.SetString("OrderId", orderId ?? "");
+    HttpContext.Session.SetString("TxnId", txnId ?? "");
 
-    return Json(new { success = true });
+  
+    Console.WriteLine($"SBI Callback received: OrderId={orderId}, TxnId={txnId}, Status={status}");
+
+
+    if (status == "SUCCESS")
+    {
+       return View("~/Views/payment/success.cshtml");
+    }
+    else if (status == "FAILURE")
+    {
+       return View("~/Views/payment/failed.cshtml");
+    }
+
+    
+    return Content("OK");
 }
 
 

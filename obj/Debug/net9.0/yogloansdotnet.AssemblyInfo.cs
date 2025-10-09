@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("yogloansdotnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bbda6b27c1a6048022085080f6dc51db5a25d63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62ec1de17ff1c8f8f5d3b3964be65c3c9bb3b66e")]
 [assembly: System.Reflection.AssemblyProductAttribute("yogloansdotnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("yogloansdotnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
