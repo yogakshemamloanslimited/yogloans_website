@@ -1,103 +1,117 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <link rel="stylesheet" href="~/css/online/services.css" asp-append-version="true">
-  <style>
-  .fa-spin {
-  animation: fa-spin 2s infinite linear;
-}
-  </style>
-  <section class="online-services">
-        <div class="online-container">
-            <div class="card" data-bs-toggle="modal" data-bs-target="#payOnlineModal">
-                <div class="card-content">
-                    <div class="image">
-                        <img src="images/online/onlinepayment.png" alt="Pay Online" loading="eager|lazy">
-                    </div>
-                    <h3>Pay Online</h3>
-                    <div class="description">Secure online payments for loans and services</div>
+<link rel="stylesheet" href="~/css/online/services.css" asp-append-version="true">
+<style>
+    .fa-spin {
+        animation: fa-spin 2s infinite linear;
+    }
+</style>
+<section class="online-services">
+    <div class="online-container">
+        <div class="card" data-bs-toggle="modal" data-bs-target="#payOnlineModal">
+            <div class="card-content">
+                <div class="image">
+                    <img src="images/online/onlinepayment.png" alt="Pay Online" loading="eager|lazy">
                 </div>
-            </div>
-           <!--  <div class="card" data-bs-toggle="modal" data-bs-target="#goldOverdraftModal">
-                <div class="card-content">
-                    <div class="image">
-                        <img src="images/online/gold.png" alt="Gold Over Draft" loading="eager|lazy">
-                    </div>
-                    <h3>Gold Over Draft</h3>
-                    <div class="description">Instant funds against gold assets</div>
-                </div>
-            </div> -->
-            <div class="card" data-bs-toggle="modal" data-bs-target="#taxFormModal">
-                <div class="card-content">
-                    <div class="image">
-                        <img src="images/online/tax.jpg" alt="Submit 15G/H" loading="eager|lazy">
-                    </div>
-                    <h3>Submit 15G/H</h3>
-                    <div class="description">Online tax declaration forms</div>
-                </div>
-            </div>
-            <div class="card" data-bs-toggle="modal" data-bs-target="#nachModal">
-                <div class="card-content">
-                    <div class="image">
-                        <img src="images/online/cancel.jpg" alt="NACH Cancelation" loading="eager|lazy">
-                    </div>
-                    <h3>NACH Cancellation</h3>
-                    <div class="description">Manage NACH mandates</div>
-                </div>
+                <h3>Pay Online</h3>
+                <div class="description">Secure online payments for loans and services</div>
             </div>
         </div>
-    </section>
+        @* div class="card" data-bs-toggle="modal" data-bs-target="#qrCodeModal">
+            <div class="card-content">
+                <div class="image">
+                    <img src="images/online/qrcode.png" alt="QR Code Payment" loading="lazy" class="img-fluid"
+                        style="max-height: 120px;">
+                </div>
+                <h3>QR Code Payment</h3>
+                <div class="description">Generate and scan QR codes for quick payments</div>
+            </div>
+        </div> *@
 
-      <!-- Pay Online Modal -->
-    <div class="modal fade" id="payOnlineModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Pay Online</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="close-btn3"></button>
+         <div class="card" data-bs-toggle="modal" data-bs-target="#qrCodeModal">
+            <div class="card-content">
+                <div class="image">
+                    <img src="images/online/qrcode.png" alt="QR Code Payment" loading="eager|lazy">
                 </div>
-               <div class="modal-body">
-               <span id="taxFormMsg3" class="mt-2"></span>
-                    <form id="taxForm3">
-                        <div class="mb-3">
-                            <label class="form-label">Customer ID</label>
-                            <input type="text" class="form-control" id="customerId3" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Registered Mobile Number</label>
-                            <input type="tel" class="form-control" id="mobileNo3" required>
-                        </div>
-                        <div class="form-text mb-3">
-                            By clicking send OTP button, you agree to the Terms and Conditions
-                        </div>
-                        <button type="button" class="btn btn-primary w-100" id="sendOtpBtn3">
-                    
-                        Send OTP     <i class="fa fa-cog fa-w-16 fa-spin" id="spin-load1" style="display:none"></i></button>
-                        
-                        <div id="otpSection3" style="display:none;">
-                            <div class="mb-3 mt-3">
-                                <label class="form-label">Enter OTP</label>
-                                <input type="text" class="form-control" id="otpInput3">
-                            </div>
-                            <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn3">Verify OTP
-                             <i class="fa fa-cog fa-w-16 fa-spin" id="spin-very-load1" style="display:none"></i>
-                            
-                            </button>
-                            <button type="button" class="btn btn-link w-100" id="resendOtpBtn3">Resend OTP
-                             
-                            </button>
-                        </div>
-                        <div id="terms" class="mt-2 d-flex justify-content-center align-items-center" style="width:100%;">
-                            <p style="color:black; text-align:center;">
-                        By clicking send OTP button, you agree to the <a href="images/Terms&conditions.pdf" target="_blank" style="color: #007bff; text-decoration: underline;">Terms and Conditions</a> </p>
-                        </div>
-                        <div id="taxFormMsg" class="mt-2"></div>
-                    </form>
+                  <h3>QR Code Payment</h3>
+                <div class="description">Generate and scan QR codes for quick payments</div>
+            </div>
+        </div>
+
+        <div class="card" data-bs-toggle="modal" data-bs-target="#taxFormModal">
+            <div class="card-content">
+                <div class="image">
+                    <img src="images/online/tax.jpg" alt="Submit 15G/H" loading="eager|lazy">
                 </div>
+                <h3>Submit 15G/H</h3>
+                <div class="description">Online tax declaration forms</div>
+            </div>
+        </div>
+        <div class="card" data-bs-toggle="modal" data-bs-target="#nachModal">
+            <div class="card-content">
+                <div class="image">
+                    <img src="images/online/cancel.jpg" alt="NACH Cancelation" loading="eager|lazy">
+                </div>
+                <h3>NACH Cancellation</h3>
+                <div class="description">Manage NACH mandates</div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Gold Overdraft Modal -->
-    <!-- <div class="modal fade" id="goldOverdraftModal" tabindex="-1">
+<!-- Pay Online Modal -->
+<div class="modal fade" id="payOnlineModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Pay Online</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" id="close-btn3"></button>
+            </div>
+            <div class="modal-body">
+                <span id="taxFormMsg3" class="mt-2"></span>
+                <form id="taxForm3">
+                    <div class="mb-3">
+                        <label class="form-label">Customer ID</label>
+                        <input type="text" class="form-control" id="customerId3" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Registered Mobile Number</label>
+                        <input type="tel" class="form-control" id="mobileNo3" required>
+                    </div>
+                    <div class="form-text mb-3">
+                        By clicking send OTP button, you agree to the Terms and Conditions
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="sendOtpBtn3">
+
+                        Send OTP <i class="fa fa-cog fa-w-16 fa-spin" id="spin-load1" style="display:none"></i></button>
+
+                    <div id="otpSection3" style="display:none;">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Enter OTP</label>
+                            <input type="text" class="form-control" id="otpInput3">
+                        </div>
+                        <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn3">Verify OTP
+                            <i class="fa fa-cog fa-w-16 fa-spin" id="spin-very-load1" style="display:none"></i>
+
+                        </button>
+                        <button type="button" class="btn btn-link w-100" id="resendOtpBtn3">Resend OTP
+
+                        </button>
+                    </div>
+                    <div id="terms" class="mt-2 d-flex justify-content-center align-items-center" style="width:100%;">
+                        <p style="color:black; text-align:center;">
+                            By clicking send OTP button, you agree to the <a href="images/Terms&conditions.pdf"
+                                target="_blank" style="color: #007bff; text-decoration: underline;">Terms and
+                                Conditions</a> </p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Gold Overdraft Modal -->
+<!-- <div class="modal fade" id="qrCodeModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -124,156 +138,238 @@
         </div>
     </div> -->
 
-    <!-- Tax Form Modal -->
-    <div class="modal fade" id="taxFormModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Submit 15G/H</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="taxForm">
-                        <div class="mb-3">
-                            <label class="form-label">Customer ID</label>
-                            <input type="text" class="form-control" id="customerId" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Registered Mobile Number</label>
-                            <input type="tel" class="form-control" id="mobileNo" required>
-                        </div>
-                        <div class="form-text mb-3">
-                            By clicking send OTP button, you agree to the Terms and Conditions
-                        </div>
-                        <button type="button" class="btn btn-primary w-100" id="sendOtpBtn">Send OTP</button>
-                        
-                        <div id="otpSection" style="display:none;">
-                            <div class="mb-3 mt-3">
-                                <label class="form-label">Enter OTP</label>
-                                <input type="text" class="form-control" id="otpInput">
-                            </div>
-                            <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn">Verify OTP</button>
-                            <button type="button" class="btn btn-link w-100" id="resendOtpBtn">Resend OTP</button>
-                        </div>
-                        <div id="taxFormMsg" class="mt-2"></div>
-                    </form>
-                </div>
+<!-- Tax Form Modal -->
+<div class="modal fade" id="taxFormModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Submit 15G/H</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-        </div>
-    </div>
+            <div class="modal-body">
+                <span id="taxFormMsg" class="mt-2"></span>
+                <form id="taxForm">
 
-    <!-- NACH Modal -->
-    <div class="modal fade" id="nachModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">NACH Cancelation</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                 <div class="modal-body">
-                    <form id="taxForm2">
-                        <div class="mb-3">
-                            <label class="form-label">Customer ID</label>
-                            <input type="text" class="form-control" id="customerId2" required>
+                    <div class="mb-3">
+                        <label class="form-label">Customer ID</label>
+                        <input type="text" class="form-control" id="customerId" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Registered Mobile Number</label>
+                        <input type="tel" class="form-control" id="mobileNo" required>
+                    </div>
+                    <div class="form-text mb-3">
+                        By clicking send OTP button, you agree to the Terms and Conditions
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="sendOtpBtn">Send OTP <i
+                            class="fa fa-cog fa-w-16 fa-spin" id="spin-load2" style="display:none"></i></button>
+
+                    <div id="otpSection" style="display:none;">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Enter OTP</label>
+                            <input type="text" class="form-control" id="otpInput">
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Registered Mobile Number</label>
-                            <input type="tel" class="form-control" id="mobileNo2" required>
-                        </div>
-                        <div class="form-text mb-3">
-                            By clicking send OTP button, you agree to the Terms and Conditions
-                        </div>
-                        <button type="button" class="btn btn-primary w-100" id="sendOtpBtn2">Send OTP</button>
-                        
-                        <div id="otpSection2" style="display:none;">
-                            <div class="mb-3 mt-3">
-                                <label class="form-label">Enter OTP</label>
-                                <input type="text" class="form-control" id="otpInput2">
-                            </div>
-                            <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn2">Verify OTP</button>
-                            <button type="button" class="btn btn-link w-100" id="resendOtpBtn2">Resend OTP</button>
-                        </div>
-                        <div id="terms" class="mt-2 d-flex justify-content-center align-items-center" style="width:100%;">
-                            <p style="color:black; text-align:center;">
-                        By clicking send OTP button, you agree to the <a href="images/Terms&conditions.pdf" target="_blank" style="color: #007bff; text-decoration: underline;">Terms and Conditions</a> </p>
-                        </div>
-                        <div id="taxFormMsg2" class="mt-2"></div>
-                    </form>
-                </div>
+                        <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn">Verify OTP
+                            <i class="fa fa-cog fa-w-16 fa-spin" id="spin-very-load2" style="display:none"></i>
+                        </button>
+                        <button type="button" class="btn btn-link w-100" id="resendOtpBtn">Resend OTP</button>
+                    </div>
+                    <div id="terms" class="mt-2 d-flex justify-content-center align-items-center" style="width:100%;">
+                        <p style="color:black; text-align:center;">
+                            By clicking send OTP button, you agree to the <a href="images/Terms&conditions.pdf"
+                                target="_blank" style="color: #007bff; text-decoration: underline;">Terms and
+                                Conditions</a> </p>
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>
+</div>
+
+<!-- NACH Modal -->
+<div class="modal fade" id="nachModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">NACH Cancelation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <span id="taxFormMsg2" class="mt-2"></span>
+                <form id="taxForm2">
+
+                    <div class="mb-3">
+                        <label class="form-label">Customer ID</label>
+                        <input type="text" class="form-control" id="customerId2" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Registered Mobile Number</label>
+                        <input type="tel" class="form-control" id="mobileNo2" required>
+                    </div>
+                    <div class="form-text mb-3">
+                        By clicking send OTP button, you agree to the Terms and Conditions
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="sendOtpBtn2">Send OTP <i
+                            class="fa fa-cog fa-w-16 fa-spin" id="spin-load3" style="display:none"></i></button>
+
+                    <div id="otpSection2" style="display:none;">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Enter OTP</label>
+                            <input type="text" class="form-control" id="otpInput2">
+                        </div>
+                        <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn2">Verify OTP
+                            <i class="fa fa-cog fa-w-16 fa-spin" id="spin-very-load3" style="display:none"></i>
+                        </button>
+                        <button type="button" class="btn btn-link w-100" id="resendOtpBtn2">Resend OTP</button>
+                    </div>
+                    <div id="terms" class="mt-2 d-flex justify-content-center align-items-center" style="width:100%;">
+                        <p style="color:black; text-align:center;">
+                            By clicking send OTP button, you agree to the <a href="images/Terms&conditions.pdf"
+                                target="_blank" style="color: #007bff; text-decoration: underline;">Terms and
+                                Conditions</a> </p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="qrCodeModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Generate QRCode</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <span id="taxFormMsg4" class="mt-2"></span>
+                <form id="taxForm4">
+
+                    <div class="mb-3">
+                        <label class="form-label">Customer ID</label>
+                        <input type="text" class="form-control" id="customerId4" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Registered Mobile Number</label>
+                        <input type="tel" class="form-control" id="mobileNo4" required>
+                    </div>
+                    <div class="form-text mb-3">
+                        By clicking send OTP button, you agree to the Terms and Conditions
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="sendOtpBtn4">Send OTP <i
+                            class="fa fa-cog fa-w-16 fa-spin" id="spin-load4" style="display:none"></i></button>
+
+                    <div id="otpSection4" style="display:none;">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Enter OTP</label>
+                            <input type="text" class="form-control" id="otpInput4">
+                        </div>
+                        <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn4">Verify OTP
+                            <i class="fa fa-cog fa-w-16 fa-spin" id="spin-very-load4" style="display:none"></i>
+                        </button>
+                        <button type="button" class="btn btn-link w-100" id="resendOtpBtn4">Resend OTP</button>
+                    </div>
+                    <div id="terms" class="mt-2 d-flex justify-content-center align-items-center" style="width:100%;">
+                        <p style="color:black; text-align:center;">
+                            By clicking send OTP button, you agree to the <a href="images/Terms&conditions.pdf"
+                                target="_blank" style="color: #007bff; text-decoration: underline;">Terms and
+                                Conditions</a> </p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
-    $(document).ready(function() {
-        $('#close-btn3').on('click', function() {
+    $(document).ready(function () {
+        $('#close-btn3').on('click', function () {
             // Reset the form and hide OTP section when modal is closed
             $('#taxForm3')[0].reset();
             $('#otpSection3').hide();
             $('#sendOtpBtn3').show();
             $('#taxFormMsg3').text('');
         });
-    
+
         let slNo = null;
 
-        $('#sendOtpBtn').on('click', function(e) {
+        $('#sendOtpBtn').on('click', function (e) {
             e.preventDefault();
             const customerId = $('#customerId').val();
             const mobileNo = $('#mobileNo').val();
             $('#taxFormMsg').text('');
+            $('#spin-load2').show();
             $.ajax({
                 url: API.allapi.verifyDetails,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
-                success: function(res) {
+                success: function (res) {
                     if (res.success) {
                         slNo = res.slNo;
                         $('#otpSection').show();
                         $('#sendOtpBtn').hide();
                         $('#taxFormMsg').text(res.message).css('color', 'green');
+                        $('#spin-load2').hide();
                     } else {
                         $('#taxFormMsg').text(res.message || 'Failed to send OTP').css('color', 'red');
+                        $('#spin-load2').hide();
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     $('#taxFormMsg').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#spin-load2').hide();
                 }
             });
         });
 
-        $('#verifyOtpBtn').on('click', function(e) {
+
+        $('#verifyOtpBtn').on('click', function (e) {
+
             e.preventDefault();
             const customerId = $('#customerId').val();
             const mobileNo = $('#mobileNo').val();
             const otp = $('#otpInput').val();
+            $('#spin-very-load2').show();
             if (!slNo) {
                 $('#taxFormMsg').text('Session expired. Please try again.').css('color', 'red');
+                $('#spin-very-load2').hide();
                 return;
+
             }
+
             $.ajax({
-                url: API.allapi.verifyOtp,
+                url: API.allapi.verifyotp,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
-                success: function(res) {
-                    
-             if (res.success) {
-    $('#taxFormMsg').text(res.message).css('color', 'green');
+                success: function (res) {
 
-    window.location.href = `${mainurlweb}Online15g?CustomerId=` + customerId;
-    // Optionally close modal or reset form
-}
- else {
-                        $('#taxFormMsg').text( 'OTP verification failed').css('color', 'red');
+                    if (!res) {
+                        $('#taxFormMsg').text('No data returned from server.').css('color', 'red');
+                        $('#spin-very-load2').hide();
+                        return;
+                    }
+                    if (res.success) {
+                        $('#taxFormMsg').text(res.message).css('color', 'green');
+                        window.location.href = `${mainurlweb}nach?CustomerId=${customerId}&mobile=${mobileNo}`;
+                        $('#spin-very-load2').hide();
+                        // Optionally close modal or reset form
+                    } else {
+                        $('#taxFormMsg').text('OTP verification failed').css('color', 'red');
+                        $('#spin-very-load2').hide();
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     $('#taxFormMsg').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#spin-very-load2').hide();
                 }
             });
         });
 
-        $('#resendOtpBtn').on('click', function(e) {
+
+        $('#resendOtpBtn').on('click', function (e) {
             e.preventDefault();
             const customerId = $('#customerId').val();
             const mobileNo = $('#mobileNo').val();
@@ -286,14 +382,14 @@
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
-                success: function(res) {
+                success: function (res) {
                     if (res.success) {
                         $('#taxFormMsg').text(res.message).css('color', 'green');
                     } else {
                         $('#taxFormMsg').text(res.message || 'Failed to resend OTP').css('color', 'red');
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     $('#taxFormMsg').text(xhr.responseText || 'Error occurred').css('color', 'red');
                 }
             });
@@ -318,69 +414,82 @@
     });
 
 
-      $(document).ready(function() {
+    $(document).ready(function () {
         let slNo = null;
 
-        $('#sendOtpBtn2').on('click', function(e) {
+        $('#sendOtpBtn2').on('click', function (e) {
             e.preventDefault();
             const customerId = $('#customerId2').val();
             const mobileNo = $('#mobileNo2').val();
             $('#taxFormMsg2').text('');
+            $('#spin-load3').show();
             $.ajax({
                 url: API.allapi.verifyDetails,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
-                success: function(res) {
+                success: function (res) {
                     if (res.success) {
                         slNo = res.slNo;
                         $('#otpSection2').show();
                         $('#sendOtpBtn2').hide();
                         $('#taxFormMsg2').text(res.message).css('color', 'green');
+                        $('#spin-load3').hide();
                     } else {
                         $('#taxFormMsg2').text(res.message || 'Failed to send OTP').css('color', 'red');
+                        $('#spin-load3').hide();
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     $('#taxFormMsg2').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#spin-load3').hide();
                 }
             });
         });
 
-        $('#verifyOtpBtn2').on('click', function(e) {
+        $('#verifyOtpBtn2').on('click', function (e) {
+
             e.preventDefault();
             const customerId = $('#customerId2').val();
             const mobileNo = $('#mobileNo2').val();
             const otp = $('#otpInput2').val();
+            $('#spin-very-load3').show();
             if (!slNo) {
                 $('#taxFormMsg2').text('Session expired. Please try again.').css('color', 'red');
+                $('#spin-very-load3').hide();
                 return;
             }
+
             $.ajax({
                 url: API.allapi.verifyotp,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
-                success: function(res) {
+                success: function (res) {
+
                     if (!res) {
                         $('#taxFormMsg2').text('No data returned from server.').css('color', 'red');
+                        $('#spin-very-load3').hide();
                         return;
                     }
                     if (res.success) {
                         $('#taxFormMsg2').text(res.message).css('color', 'green');
                         window.location.href = `${mainurlweb}nach?CustomerId=${customerId}&mobile=${mobileNo}`;
+                        $('#spin-very-load3').hide();
                         // Optionally close modal or reset form
                     } else {
                         $('#taxFormMsg2').text('OTP verification failed').css('color', 'red');
+                        $('#spin-very-load3').hide();
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     $('#taxFormMsg2').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#spin-very-load3').hide();
                 }
             });
         });
 
-        $('#resendOtpBtn2').on('click', function(e) {
+        $('#resendOtpBtn2').on('click', function (e) {
             e.preventDefault();
             const customerId = $('#customerId2').val();
             const mobileNo = $('#mobileNo2').val();
@@ -393,14 +502,14 @@
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
-                success: function(res) {
+                success: function (res) {
                     if (res.success) {
                         $('#taxFormMsg2').text(res.message).css('color', 'green');
                     } else {
                         $('#taxFormMsg2').text(res.message || 'Failed to resend OTP').css('color', 'red');
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     $('#taxFormMsg2').text(xhr.responseText || 'Error occurred').css('color', 'red');
                 }
             });
@@ -415,10 +524,10 @@
 
 
 
-      $(document).ready(function() {
+    $(document).ready(function () {
         let slNo = null;
 
-        $('#sendOtpBtn3').on('click', function(e) {
+        $('#sendOtpBtn3').on('click', function (e) {
             e.preventDefault();
             const customerId = $('#customerId3').val();
 
@@ -430,7 +539,7 @@
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
-                success: function(res) {
+                success: function (res) {
                     if (res.success) {
                         slNo = res.slNo;
                         $('#otpSection3').show();
@@ -442,16 +551,16 @@
                         $('#spin-load1').hide();
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     $('#taxFormMsg3').text(xhr.responseText || 'Error occurred').css('color', 'red');
                     $('#spin-load1').hide();
                 }
             });
         });
 
-        $('#verifyOtpBtn3').on('click', function(e) {
+        $('#verifyOtpBtn3').on('click', function (e) {
             e.preventDefault();
-           
+
             const customerId = $('#customerId3').val();
             const mobileNo = $('#mobileNo3').val();
             const otp = $('#otpInput3').val();
@@ -465,85 +574,87 @@
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
-                success: function(res) {
-                     $('#spin-very-load1').hide();
-                     var url = API.allapi.onlineCustomer;
-                     alert(url);
-    if (res.success) {
- $.get(`${url}${encodeURIComponent(customerId)}&mobileNo=${encodeURIComponent(mobileNo)}`, 
-        function(apiRes) {
-            console.log("API Response:", apiRes);
-               var customerAddress = "";
-        if (apiRes.customer_data && apiRes.customer_data.length > 0) {
-            customerAddress = apiRes.customer_data[0].email_id;
-            console.log("Customer Address:", customerAddress);
-        }
-            
-           // Check the message property
-if (apiRes.message != "S") {
-    Swal.fire({
-        title: '<span style="color:orange;">⏰ Wait!</span>', // emoji
-        html: 'You recently attempted a transaction, kindly wait for some more time and try again later...!.',
-        showConfirmButton: true
-    }).then((result) => {
-      
-        if (result.isConfirmed || result.isDismissed) {
-    
-            $('#payOnlineModal').modal("hide");
-            $('#taxForm3')[0].reset();
-            $('#otpSection3').hide();
-            $('#sendOtpBtn3').show();
-            $('#taxFormMsg3').text('');
-         
-            return;
-        }
-    });
+                success: function (res) {
+                    $('#spin-very-load1').hide();
+                    var url = API.allapi.onlineCustomer;
+                    alert(url);
+                    if (res.success) {
+                        $.get(`${url}${encodeURIComponent(customerId)}&mobileNo=${encodeURIComponent(mobileNo)}`,
+                            function (apiRes) {
+                                console.log("API Response:", apiRes);
+                                var customerAddress = "";
+                                if (apiRes.customer_data && apiRes.customer_data.length > 0) {
+                                    customerAddress = apiRes.customer_data[0].email_id;
+                                    console.log("Customer Address:", customerAddress);
+                                }
 
-    return;
-}
+                            const flag = apiRes.message.slice(0, 2); // '$a'
+                            const userMessage = apiRes.message.slice(3); // Remove flag + space
 
-            
-$.ajax({
-   url: '@Url.Action("Customeraddress", "Home")',
-   type: "POST",
-   xhrFields: { withCredentials: true },
-   data: {
-       address: customerAddress,
-       CustomerId: customerId
-   },
-   success: function (res) {
-       console.log("Session set response:", res);
-       if (res.success) {
-           // Delay slightly to ensure session cookie is persisted
-           setTimeout(() => {
-               window.location.href = `/Onlinepay`;
-           }, 300);
-       }
-   },
-   error: function (err) {
-       console.error("Session set failed:", err);
-   }
-});
-        }
-    );
-    // Optionally close modal or reset form
-}
+                            if (flag === "$b") {
+                                Swal.fire({
+                                    title: '<span style="color:orange;">⏰ Wait!</span>',
+                                    html: userMessage,
+                                    showConfirmButton: true
+                                }).then((result) => {
+           
+                                        if (result.isConfirmed || result.isDismissed) {
 
-                else {
-                        $('#taxFormMsg3').text( 'OTP verification failed').css('color', 'red');
-                          $('#spin-very-load1').hide();
+                                            $('#payOnlineModal').modal("hide");
+                                            $('#taxForm3')[0].reset();
+                                            $('#otpSection3').hide();
+                                            $('#sendOtpBtn3').show();
+                                            $('#taxFormMsg3').text('');
+
+                                            return;
+                                        }
+                                    });
+
+                                    return;
+                                }
+
+
+                                $.ajax({
+                                    url: '@Url.Action("Customeraddress", "Home")',
+                                    type: "POST",
+                                    xhrFields: { withCredentials: true },
+                                    data: {
+                                        address: customerAddress,
+                                        CustomerId: customerId
+                                    },
+                                    success: function (res) {
+                                        console.log("Session set response:", res);
+                                        if (res.success) {
+                                            // Delay slightly to ensure session cookie is persisted
+                                            setTimeout(() => {
+                                                window.location.href = `/Onlinepay`;
+                                            }, 300);
+                                        }
+                                    },
+                                    error: function (err) {
+                                        console.error("Session set failed:", err);
+                                    }
+                                });
+                            }
+                        );
+                        // Optionally close modal or reset form
+                    }
+
+                    else {
+                        $('#taxFormMsg3').text('OTP verification failed').css('color', 'red');
+                        $('#spin-very-load1').hide();
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     $('#taxFormMsg3').text(xhr.responseText || 'Error occurred').css('color', 'red');
-                      $('#spin-very-load1').hide();
+                    $('#spin-very-load1').hide();
                 }
             });
         });
 
-        $('#resendOtpBtn3').on('click', function(e) {
+        $('#resendOtpBtn3').on('click', function (e) {
             e.preventDefault();
-            
+
             const customerId = $('#customerId3').val();
             const mobileNo = $('#mobileNo3').val();
 
@@ -557,7 +668,7 @@ $.ajax({
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
-                success: function(res) {
+                success: function (res) {
                     if (res.success) {
                         $('#spin-load1').hide();
                         $('#taxFormMsg3').text(res.message).css('color', 'green');
@@ -566,26 +677,179 @@ $.ajax({
                         $('#taxFormMsg3').text(res.message || 'Failed to resend OTP').css('color', 'red');
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     $('#spin-load1').hide();
                     $('#taxFormMsg3').text(xhr.responseText || 'Error occurred').css('color', 'red');
                 }
             });
         });
     });
+@* Qr code Pay *@
 
-  @*   window.onlineweb=function(customerId) {
-       
-    $.ajax({
-        url:"http://localhost:8085/api/proc15/online/"+customerId, // use backticks
-        method: "GET",
-        success: function(response) {
-            console.log("Response:", response);
-        },
-        error: function(xhr, status, error) {
-            console.error("Error:", status, error);
-        }
+
+
+    $(document).ready(function () {
+        let slNo = null;
+
+        $('#sendOtpBtn4').on('click', function (e) {
+            e.preventDefault();
+            const customerId = $('#customerId4').val();
+
+            const mobileNo = $('#mobileNo4').val();
+            $('#spin-load4').show();
+            $('#taxFormMsg4').text('');
+            $.ajax({
+                url: API.allapi.verifyDetails,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
+                success: function (res) {
+                    if (res.success) {
+                        slNo = res.slNo;
+                        $('#otpSection4').show();
+                        $('#sendOtpBtn4').hide();
+                        $('#spin-load4').hide();
+                        $('#taxFormMsg4').text(res.message).css('color', 'green');
+                    } else {
+                        $('#taxFormMsg4').text(res.message || 'Failed to send OTP').css('color', 'red');
+                        $('#spin-load4').hide();
+                    }
+                },
+                error: function (xhr) {
+                    $('#taxFormMsg4').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#spin-load4').hide();
+                }
+            });
+        });
+
+        $('#verifyOtpBtn4').on('click', function (e) {
+            e.preventDefault();
+
+            const customerId = $('#customerId4').val();
+            const mobileNo = $('#mobileNo4').val();
+            const otp = $('#otpInput4').val();
+            $('#spin-very-load4').show();
+            if (!slNo) {
+                $('#taxFormMsg4').text('Session expired. Please try again.').css('color', 'red');
+                return;
+            }
+            $.ajax({
+                url: API.allapi.verifyotp,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
+                success: function (res) {
+                    $('#spin-very-load4').hide();
+                    var url = API.allapi.onlineCustomer;
+                    alert(url);
+                    if (res.success) {
+                        $.get(`${url}${encodeURIComponent(customerId)}&mobileNo=${encodeURIComponent(mobileNo)}`,
+                            function (apiRes) {
+                                console.log("API Response:", apiRes);
+                                var customerAddress = "";
+                                if (apiRes.customer_data && apiRes.customer_data.length > 0) {
+                                    customerAddress = apiRes.customer_data[0].email_id;
+                                    console.log("Customer Address:", customerAddress);
+                                }
+
+
+                                const flag = apiRes.message.slice(0, 2); // '$a'
+                                const userMessage = apiRes.message.slice(3); // Remove flag + space
+
+                                if (flag === "$b") {
+                                    Swal.fire({
+                                        title: '<span style="color:orange;">⏰ Wait!</span>',
+                                        html: userMessage,
+                                        showConfirmButton: true
+                                    }).then((result) => {
+
+                                            if (result.isConfirmed || result.isDismissed) {
+
+                                            $('#qrCodeModal').modal("hide");
+                                            $('#taxForm4')[0].reset();
+                                            $('#otpSection4').hide();
+                                            $('#sendOtpBtn4').show();
+                                            $('#taxFormMsg4').text('');
+
+                                            return;
+                                        }
+                                    });
+
+                                    return;
+                                }
+
+                                
+
+                                $.ajax({
+                                    url: '@Url.Action("Customeraddress", "Home")',
+                                    type: "POST",
+                                    xhrFields: { withCredentials: true },
+                                    data: {
+                                        address: customerAddress,
+                                        CustomerId: customerId
+                                    },
+                                    success: function (res) {
+                                        console.log("Session set response:", res);
+                                        if (res.success) {
+                                            // Delay slightly to ensure session cookie is persisted
+                                            setTimeout(() => {
+                                                window.location.href = `/Generateqrcode`;
+                                            }, 300);
+                                        }
+                                    },
+                                    error: function (err) {
+                                        console.error("Session set failed:", err);
+                                    }
+                                });
+                            }
+                        );
+                        // Optionally close modal or reset form
+                    }
+
+                    else {
+                        $('#taxFormMsg4').text('OTP verification failed').css('color', 'red');
+                        $('#spin-very-load4').hide();
+                    }
+                },
+                error: function (xhr) {
+                    $('#taxFormMsg4').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#spin-very-load4').hide();
+                }
+            });
+        });
+
+        $('#resendOtpBtn4').on('click', function (e) {
+            e.preventDefault();
+
+            const customerId = $('#customerId4').val();
+            const mobileNo = $('#mobileNo4').val();
+
+            $('#spin-load4').show();
+            if (!slNo) {
+                $('#taxFormMsg4').text('Session expired. Please try again.').css('color', 'red');
+                return;
+            }
+            $.ajax({
+                url: API.allapi.resendOtp,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
+                success: function (res) {
+                    if (res.success) {
+                        $('#spin-load4').hide();
+                        $('#taxFormMsg4').text(res.message).css('color', 'green');
+                    } else {
+                        $('#spin-load4').hide();
+                        $('#taxFormMsg4').text(res.message || 'Failed to resend OTP').css('color', 'red');
+                    }
+                },
+                error: function (xhr) {
+                    $('#spin-load4').hide();
+                    $('#taxFormMsg4').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                }
+            });
+        });
     });
-} *@
+
 
 </script>

@@ -1,0 +1,307 @@
+
+
+<!-- result -->
+
+
+<style>
+    .modal-footer {
+        flex-wrap: inherit !important;
+    
+    }
+</style>
+
+<section class="form-container" id="result" style="width:100%;">
+
+</section>
+
+
+<!-- Display QR Code -->
+<div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <canvas id="qrCanvas" width="150"  height="150" style="width:100%;"></canvas>
+            </div>
+            @* <div class="modal-body text-center">
+                <!-- QR Code Canvas -->
+               
+              
+
+                <!-- Transaction Input Field -->
+                @* <form class="mt-3" >
+                    <label for="transactionId" class="form-label">Enter Transaction ID:</label>
+                    <input type="text" id="transactionId" class="form-control" placeholder="Transaction ID">
+
+                </form> 
+            </div> *@
+            <div class="modal-footer">
+                <p class="text-warning">Will disappear in <span id="qrTimer">02:00</span> minutes</p>
+               <button onclick="window.location.reload()" class="btn btn-dark">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* <canvas id="qr"></canvas>
+<script>
+    const text = "Hello, world!";
+    document.getElementById("qrcode").src = `/Generateqrcode/GenerateQRCode?loanno=105297&cutomername=anas}`;
+</script> *@
+
+<style>
+  .result {
+    width: 100%;
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Auto lets columns expand to fit content */
+}
+
+th, td {
+    text-align: left;
+    vertical-align: middle;
+    padding: 8px 12px;
+    white-space: normal; /* Allow text to wrap naturally */
+}
+
+th {
+    background-color: #002b5b;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #f1f5f9;
+    transition: background 0.2s ease-in-out;
+}
+
+</style>
+
+
+<link rel="stylesheet" href="~/css/onlinepay/style.css" asp-append-version="true">
+<!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+
+ $(document).ready(function () {
+    
+       let loanno = null;
+const customerId = '@Context.Session.GetString("CustomerId")';
+
+const url = API.allapi.Payonline + encodeURIComponent(customerId) +'/' + 
+              encodeURIComponent(loanno);
+
+$.ajax({
+    url: url,
+    method: 'GET',
+    dataType: 'json',
+    success: function (response) {
+        const loans = response.customer_data || [];
+
+        if (loans.length === 0) {
+            $('#result').html('<div class="alert alert-warning mt-3">No loan records found.</div>');
+            return;
+        }
+
+        let tableHTML = `
+        <div class="table-responsive" style="width:100%;">
+            <table class="table table-bordered align-middle">
+                <thead>
+                    <tr>
+                        <th>Loan No</th>
+                        <th>Product</th>
+                        <th>Due Amount (₹)</th>
+                        <th>Other Charges (₹)</th>
+                        <th>Transaction Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+        `;
+
+        loans.forEach(item => {
+            tableHTML += `
+                <tr>
+                    <td>${item.loan_no}</td>
+                    <td>${item.product}</td>
+                    <td>${item.due_amount.toLocaleString('en-IN')}</td>
+                    <td>${item.other_charges.toLocaleString('en-IN')}</td>
+                    <td>${new Date(item.trans_date).toLocaleDateString('en-IN')}</td>
+                    <td>
+                            <button class="btn btn-sm btn-primary"
+                            onclick="generateQRCode('${item.loan_no}')">
+                           Generate QR Code <i class="fa fa-qrcode" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                </tr>
+            `;
+        });
+
+        tableHTML += `
+                </tbody>
+            </table>
+        </div>`;
+
+        $('#result').html(tableHTML);
+    },
+    error: function (xhr, status, error) {
+        console.error('Error fetching loan details:', error);
+        $('#field_error')
+            .text('Error fetching loan details. Please try again later.')
+            .css('color', 'red');
+    }
+});
+
+  
+    });
+
+   
+ $(document).ready(function () {
+    // Get session string from Razor
+    var sessionaddress = '@Context.Session.GetString("Customeraddress")';
+    var sessionaCustomerId = '@Context.Session.GetString("CustomerId")';
+
+
+@*     document.getElementById('customerId').value = sessionaCustomerId; *@
+
+    if (sessionaddress && sessionaddress !== "null" && sessionaddress.trim() !== "") {
+        // Split into parts by '$'
+        var part = sessionaddress.split('$').map(p => p.trim());
+
+        // Debug log
+        console.log("Address Parts:", part);
+
+        // Fill main display (summary)
+        $('#address').html(`${part[1]}, ${part[2]}, ${part[3]} - ${part[5]} ${part[4]}`);
+        $('#customerName').text(part[0] || '');
+        $('#customer_name').text('Hello: ' + (part[0] || ''));
+        $('#mobile').text(part[6] || '');
+        // Fill separate fields if they exist in HTML
+    @*     $('#name').val(part[0] || '');
+        $('#house').val(part[1] || '');
+        $('#city').val(part[2] || '');
+        $('#state').val(part[3] || '');
+        $('#country').val(part[4] || '');
+        $('#pincode').val(part[5] || '');
+        $('#phone').val(part[6] || '');
+        $('#email').val(part[7] || ''); *@
+    } else {
+        $('#address').text("No address found in session.");
+    }
+    
+});
+
+
+    
+</script>
+<script>
+          let currentTransactionId = null;
+    let paymentTimeoutTimer = null;
+    let qrCountdownTimer = null;
+
+    // Draw QR image
+    function drawQRCode(base64Image) {
+        const canvas = document.getElementById("qrCanvas");
+        const ctx = canvas.getContext("2d");
+        const img = new Image();
+        img.onload = () => {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+        img.src = base64Image;
+    }
+
+    // Reset QR and transaction
+    function resetQRCode() {
+        const canvas = document.getElementById("qrCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        currentTransactionId = null;
+
+        // Stop countdown
+        if (qrCountdownTimer) clearInterval(qrCountdownTimer);
+        document.getElementById("qrTimer").textContent = "00:00";
+
+        // Close modal
+        const qrModalEl = document.getElementById('qrModal');
+        const qrModal = bootstrap.Modal.getInstance(qrModalEl);
+        if (qrModal) qrModal.hide();
+
+        console.log("QR Code and transaction reset after 2 minutes.");
+    }
+
+    // Start countdown timer
+    function startQrTimer(durationSeconds) {
+        let remaining = durationSeconds;
+        const timerEl = document.getElementById("qrTimer");
+
+        // Clear previous interval if exists
+        if (qrCountdownTimer) clearInterval(qrCountdownTimer);
+
+        qrCountdownTimer = setInterval(() => {
+            const minutes = String(Math.floor(remaining / 60)).padStart(2, "0");
+            const seconds = String(remaining % 60).padStart(2, "0");
+            timerEl.textContent = `${minutes}:${seconds}`;
+
+            remaining--;
+
+            if (remaining < 0) {
+                clearInterval(qrCountdownTimer);
+            }
+        }, 1000);
+    }
+
+    // Generate QR code and show modal
+    async function generateQRCode(loanno) {
+        const sessionaddress = '@Context.Session.GetString("Customeraddress")';
+        const part = sessionaddress.split('$').map(p => p.trim());
+        const customername = part[0] || "Unknown";
+
+        Swal.fire({ title: "Generating QR Code...", didOpen: () => Swal.showLoading() });
+
+        try {
+            const res = await fetch(`/Generateqrcode/GenerateQRCode?loanno=${encodeURIComponent(loanno)}&customername=${encodeURIComponent(customername)}`);
+            const data = await res.json();
+
+            Swal.close();
+
+            drawQRCode(data.qrImage);
+
+            // Show modal
+            const qrModal = new bootstrap.Modal(document.getElementById('qrModal'), {
+                backdrop: 'static',  // Prevent clicking outside
+                keyboard: false      // Prevent Esc key
+            });
+            qrModal.show();
+
+            // Save current transaction
+            currentTransactionId = data.transactionId;
+
+            // Start countdown timer (2 minutes = 120 seconds)
+            startQrTimer(120);
+
+            // Reset QR after 2 minutes
+            if (paymentTimeoutTimer) clearTimeout(paymentTimeoutTimer);
+            paymentTimeoutTimer = setTimeout(resetQRCode, 120000);
+
+        } catch (err) {
+            Swal.fire({ icon: 'error', title: 'Error', text: 'Failed to generate QR code.' });
+            console.error(err);
+        }
+    }
+
+</script>
+

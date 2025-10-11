@@ -662,4 +662,11 @@ C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\com
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\u3w50u8azq-xpu8oid3re.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\fk7bb3rk17-2h1aeii322.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zhjbtipgg6-8ggvcxwgy5.gz
-C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\a96bw495oj-e0zypxanda.gz
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\a96bw495oj-u00brjsz7z.gz
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\kesa6y15va-8h8s8jic5s.gz
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\bin\Debug\net9.0\QRCoder.dll
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\bin\Debug\net9.0\BoDi.dll
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\bin\Debug\net9.0\Gherkin.dll
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\bin\Debug\net9.0\TechTalk.SpecFlow.dll
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\bin\Debug\net9.0\SpecFlow.Internal.Json.dll

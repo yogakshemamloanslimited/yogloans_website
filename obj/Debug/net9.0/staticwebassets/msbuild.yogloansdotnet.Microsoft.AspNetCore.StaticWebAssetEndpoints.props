@@ -972,6 +972,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-IUCTX7lW3pXztfdi6Al6YSSjLIi5ZulrALZp\u002ByEkwdM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1511945"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022IUCTX7lW3pXztfdi6Al6YSSjLIi5ZulrALZp\u002ByEkwdM=\u0022"},{"Name":"Last-Modified","Value":"Fri, 20 Jun 2025 08:34:04 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/yogloansdotnet/images/online/qrcode.jpeqjm10oj.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\online\qrcode.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jpeqjm10oj"},{"Name":"integrity","Value":"sha256-9\u002Bf2zyKdevpkGI938PBjlpRK9yjfe9jTNdcK0todUw4="},{"Name":"label","Value":"_content/yogloansdotnet/images/online/qrcode.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1415937"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00229\u002Bf2zyKdevpkGI938PBjlpRK9yjfe9jTNdcK0todUw4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Oct 2025 09:51:36 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/yogloansdotnet/images/online/qrcode.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\online\qrcode.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-9\u002Bf2zyKdevpkGI938PBjlpRK9yjfe9jTNdcK0todUw4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1415937"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00229\u002Bf2zyKdevpkGI938PBjlpRK9yjfe9jTNdcK0todUw4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Oct 2025 09:51:36 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/yogloansdotnet/images/online/tax.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\online\tax.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -1764,17 +1776,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vuj19z3mo9"},{"Name":"integrity","Value":"sha256-x9/\u002BjoMIjNsvAHdqHWrbj5IUXO0nrbwH5o57SqrUuC4="},{"Name":"label","Value":"_content/yogloansdotnet/images/welcome/vehicle2.png"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"692830"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022x9/\u002BjoMIjNsvAHdqHWrbj5IUXO0nrbwH5o57SqrUuC4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 26 May 2025 06:21:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/api.e0zypxanda.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\api.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"e0zypxanda"},{"Name":"integrity","Value":"sha256-viL8BupFW\u002Bw2X1oOvF\u002BLfQeReydrJbp1GJaTTpOThAA="},{"Name":"label","Value":"_content/yogloansdotnet/js/api.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2074"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022viL8BupFW\u002Bw2X1oOvF\u002BLfQeReydrJbp1GJaTTpOThAA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Oct 2025 07:55:41 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/api.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\api.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-viL8BupFW\u002Bw2X1oOvF\u002BLfQeReydrJbp1GJaTTpOThAA="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2074"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022viL8BupFW\u002Bw2X1oOvF\u002BLfQeReydrJbp1GJaTTpOThAA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Oct 2025 07:55:41 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-3ntBWNTyujp/RkVuWOeYlmt3MohHS3FwJbWhZKikMcU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2070"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00223ntBWNTyujp/RkVuWOeYlmt3MohHS3FwJbWhZKikMcU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Oct 2025 08:07:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/api.u00brjsz7z.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\api.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u00brjsz7z"},{"Name":"integrity","Value":"sha256-3ntBWNTyujp/RkVuWOeYlmt3MohHS3FwJbWhZKikMcU="},{"Name":"label","Value":"_content/yogloansdotnet/js/api.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2070"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00223ntBWNTyujp/RkVuWOeYlmt3MohHS3FwJbWhZKikMcU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 09 Oct 2025 08:07:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/branch/branch.bmvqfclhic.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\branch\branch.js'))</AssetFile>
@@ -1871,6 +1883,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"p1t7kk300w"},{"Name":"integrity","Value":"sha256-zSII7Lca5\u002BA893GwKWAOuFtADPhdD220Bq37FjRFT5U="},{"Name":"label","Value":"_content/yogloansdotnet/js/online15/script.js"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12164"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022zSII7Lca5\u002BA893GwKWAOuFtADPhdD220Bq37FjRFT5U=\u0022"},{"Name":"Last-Modified","Value":"Fri, 19 Sep 2025 10:08:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/qrious.min.8h8s8jic5s.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\qrious.min.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8h8s8jic5s"},{"Name":"integrity","Value":"sha256-7G26Qp0eWMlj21WQgKVEArF853jVTuZ9Qe0YdRxOna4="},{"Name":"label","Value":"_content/yogloansdotnet/js/qrious.min.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"22407"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00227G26Qp0eWMlj21WQgKVEArF853jVTuZ9Qe0YdRxOna4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 10 Oct 2025 06:07:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/qrious.min.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\qrious.min.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-7G26Qp0eWMlj21WQgKVEArF853jVTuZ9Qe0YdRxOna4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"22407"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00227G26Qp0eWMlj21WQgKVEArF853jVTuZ9Qe0YdRxOna4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 10 Oct 2025 06:07:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/yogloansdotnet/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>

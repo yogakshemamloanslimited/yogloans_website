@@ -337,6 +337,10 @@
       "PackagePath": "staticwebassets\\images\\online\\onlinepayment.png"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\online\\qrcode.png",
+      "PackagePath": "staticwebassets\\images\\online\\qrcode.png"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\online\\tax.jpg",
       "PackagePath": "staticwebassets\\images\\online\\tax.jpg"
     },
@@ -627,6 +631,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\online15\\script.js",
       "PackagePath": "staticwebassets\\js\\online15\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\qrious.min.js",
+      "PackagePath": "staticwebassets\\js\\qrious.min.js"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\site.js",

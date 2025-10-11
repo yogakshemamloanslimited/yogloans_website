@@ -1,5 +1,5 @@
 ﻿const API_BASE = "http://localhost:8085/api/";
-const mainurlweb = "https://test.yogloans.com/";
+const mainurlweb = "http://localhost:5132/";
 
 window.API = {
     base: API_BASE,
