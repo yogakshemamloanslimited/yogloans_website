@@ -20,6 +20,7 @@
     </div>
 </section>
 
+
 <!-- result -->
 
 <section class="form-container" style="padding:30px; align-items:start;">
@@ -30,7 +31,7 @@
 
 <input type="hidden" id="encdata" value="">
 <input type="hidden" id="encdata1" value="">
-<input type="hidden" id="orderid" value="">
+    <input type="hidden" id="orderid" value="">
 <!-- added payments -->
  <form class="form-group" style="width:50%; padding:25px;" id="payForm" >
     <table id="table-fill" class="bill-table" style="width:100%;">
@@ -86,23 +87,10 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-@* $(document).ready(function() {
-    $('#exampleCustomInline').change(function() {
+  
 
-        $.ajax({
-            url: 'https://localhost:8085/api/payonline/Paynow/checkdata?orderno=1025&amount=10&customerId=105297',
-            method: 'GET',
-            success: function(data) {
-               $('#payButton').show();
-            },
-            error: function() {
-                 $('#payButton').hide(); 
-                console.error('Failed to fetch IP address');
-            }
-        });
-       
-    });
-}); *@
+
+
  $(document).ready(function () {
     $('#loaninput').on('input', function () {
         let loanno = $(this).val().trim();
@@ -325,7 +313,7 @@ $('#table-fill tr').each(function() {
         data: JSON.stringify(requestData),
         success: function (response) {
             console.log(response);
-            alert("Order No: " + response.orderNo + "\nPayment URL Data: " + response.paymentData);
+            //alert("Order No: " + response.orderNo + "\nPayment URL Data: " + response.paymentData);
         },
         error: function (xhr, status, error) {
             console.error(xhr.responseText);
@@ -370,10 +358,11 @@ $('#table-fill tr').each(function() {
 });
 
 $(document).ready(function () {
-     $('#exampleCustomInline').change(function() {
-@*     e.preventDefault(); *@
-    alert('called');
+            $('#exampleCustomInline').prop('checked', false);
 
+     $('#exampleCustomInline').change(function() {
+
+        if ($(this).is(':checked')) {
     let loanItems = [];
     $('#table-fill tr').each(function () {
         let loanNo = $(this).find('#loanNo').val();
@@ -391,39 +380,54 @@ $(document).ready(function () {
         LoanItems: loanItems
     };
 
-    alert(JSON.stringify(data));
-
+  
     $.ajax({
         url: API.allapi.paynow1,
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(data),
         success: function (res) {
-            @* alert(res.EncryptedParam);
-            alert(res.EncryptedParam1);
-             alert(res.orderId); *@
+          
               $('#payButton').show();
-        
-                $('#encdata').val(res.EncryptedParam);
-                $('#encdata1').val(res.EncryptedParam1);
-                $('#orderid').val(res.MID);
+                      var amount =   $('#totalpay').text();
+                              var Order = res.OrderId;
+                                      var customerId = $('#customerId').val();
 
-                //paynow(res.EncryptedParam, res.EncryptedParam1, res.orderId);
-              //window.location.href = "https://www.sbiepay.sbi/secure/AggregatorHostedListener?" + res.paymentData;
-           @*  let fullResponse = "";
-            for (const key in res) {
-                if (res.hasOwnProperty(key)) {
-                    fullResponse += key + ": " + JSON.stringify(res[key]) + "\n";
-                }
+                    $.ajax({
+        url: '@Url.Action("EncriptData", "Home")',
+        method: 'POST',
+        data: {
+            amount: amount,
+            Order: Order,
+            customerId: customerId
+        },
+        success: function (response) {
+                   if (response.success) {
+                // Set the values into your input fields
+                $('#encdata').val(response.encryptedParam);
+                $('#encdata1').val(response.encryptedParam1);
+
+                $('#orderid').val(1001314);
             }
+        },
+        error: function (xhr, status, error) {
+            console.error("Encryption error", error);
+        }
+    });
 
-            alert(fullResponse); *@
+
+
+
             $('#result').html('<div class="alert alert-success">Payment request submitted successfully.</div>');
         },
         error: function (err) {
             $('#result').html('<div class="alert alert-danger">Error submitting payment.</div>');
         }
     });
+    }
+    else{
+                  $('#payButton').hide();
+    }
 });
 
 }); // ✅ closes document.ready
@@ -446,40 +450,41 @@ $(document).ready(function () {
     }); // ✅ close ajax
 } 
  *@
-function paynow() {
-    var encdata = $('#encdata').val();        
-    var encdata1 = $('#encdata1').val();      
-    var merchantId = $('#orderid').val();   
-    alert(merchantId);  
+ function paynow() {
+        var encdata = $('#encdata').val();
+        var encdata1 = $('#encdata1').val();
+        var merchantId = $('#orderid').val()
+       
 
-    if (!encdata || !encdata1 || !merchantId) {
-        alert("Missing required parameters!");
-        return;
+        if (!encdata || !encdata1 || !merchantId) {
+            alert("Missing required parameters!");
+            return;
+        }
+
+        $.ajax({
+            url: '/Home/PrepareSbiPayment',
+            method: 'POST',
+            data: {
+                EncryptTrans: encdata,
+                MultiAccountInstructionDtls: encdata1,
+                merchIdVal: merchantId
+            },
+            success: function(response) {
+                // Redirect to the new action that renders the form
+                window.location.href = '/Home/SbiRedirectForm';
+            },
+            error: function(err) {
+                alert('Payment initialization failed.');
+                console.error(err);
+            }
+        });
     }
 
-    $.ajax({
-        url: '/Home/PrepareSbiPayment', // your server endpoint
-        method: 'POST',
-        data: {
-            EncryptTrans: encdata,
-            MultiAccountInstructionDtls: encdata1,
-            merchIdVal: merchantId
-        },
-        success: function(response) {
-            // You can log or store the response here
-            console.log('Server prepared SBI payment', response);
 
-            // Redirect user to SBI
-            window.location.href = 'https://www.sbiepay.sbi/secure/AggregatorHostedListener';
-        },
-        error: function(err) {
-            console.error('Error preparing SBI payment', err);
-        }
-    });
-}
+
 function handleSbiFailure() {
     var encData = $('#encdata').val();
-    alert('cominggggg')
+   // alert('cominggggg')
     if (!encData) {
         alert("Missing encData!");
         return;

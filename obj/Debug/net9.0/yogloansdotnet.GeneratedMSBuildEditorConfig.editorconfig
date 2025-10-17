@@ -284,6 +284,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2FuaXRlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Home/SbiRedirectForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYmlSZWRpcmVjdEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Home/welcome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx3ZWxjb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -364,14 +368,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lc2VydmljZXNcV2VsY29tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/payment/failed.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5bWVudFxmYWlsZWQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/payment/success.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGF5bWVudFxzdWNjZXNzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Policies/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -382,6 +378,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Policies/welcome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/sbionlinepaymentfailure/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2Jpb25saW5lcGF5bWVudGZhaWx1cmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/sbionlinepaymentsuccess/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2Jpb25saW5lcGF5bWVudHN1Y2Nlc3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Services/benefit.cshtml]

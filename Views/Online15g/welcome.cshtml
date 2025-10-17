@@ -1,9 +1,5 @@
- <section class="welcome-container"
-        style="background-image: url(images/welcome/investors.jpg);">
-        <h1 >
-
-   Customer :  @ViewBag.CustomerId
-            </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
+ <section class="welcome-container">
+   
     <div class="button">
         <p><a href="javascript:history.back()" id="return-link">Home</a> - Online Services</a></p>
      </div>
@@ -22,6 +18,12 @@
 
     
 <script>
+     var url = '@Context.Session.GetString("background_online")';
+    var sections = document.getElementsByClassName('welcome-container'); // no dot
+    if (sections.length > 0) {
+        sections[0].style.backgroundImage = `url('${url}')`;
+    }
+
     const link = document.getElementById('return-link');
     const ref = document.referrer;
 

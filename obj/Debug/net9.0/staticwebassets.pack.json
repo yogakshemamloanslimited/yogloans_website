@@ -133,6 +133,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\Payment verify loader.gif",
+      "PackagePath": "staticwebassets\\images\\Payment verify loader.gif"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\Terms&conditions.pdf",
       "PackagePath": "staticwebassets\\images\\Terms&conditions.pdf"
     },
@@ -343,6 +347,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\online\\tax.jpg",
       "PackagePath": "staticwebassets\\images\\online\\tax.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\payment\\failed-to-make-payment-by-credit-card-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-vector.jpg",
+      "PackagePath": "staticwebassets\\images\\payment\\failed-to-make-payment-by-credit-card-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-vector.jpg"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRCommittee.pdf",

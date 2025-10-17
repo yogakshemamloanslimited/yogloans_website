@@ -99,8 +99,7 @@ tr:hover {
        let loanno = null;
 const customerId = '@Context.Session.GetString("CustomerId")';
 
-const url = API.allapi.Payonline + encodeURIComponent(customerId) +'/' + 
-              encodeURIComponent(loanno);
+    const url = API.allapi.QrData + encodeURIComponent(customerId);
 
 $.ajax({
     url: url,
@@ -140,7 +139,7 @@ $.ajax({
                     <td>${new Date(item.trans_date).toLocaleDateString('en-IN')}</td>
                     <td>
                             <button class="btn btn-sm btn-primary"
-                            onclick="generateQRCode('${item.loan_no}')">
+                            onclick="generateQRCode(this)" id="buttonloan" data-loan="${item.loan_no}">
                            Generate QR Code <i class="fa fa-qrcode" aria-hidden="true"></i>
                         </button>
                     </td>
@@ -265,12 +264,22 @@ $.ajax({
     }
 
     // Generate QR code and show modal
-    async function generateQRCode(loanno) {
+    async function generateQRCode(button) {
+       // Get button element using jQuery
+       var btn = $(button);
+
+       // Get loan number from data attribute
+       const loanno = btn.data('loanno');
+
+       // Clear button and show spinner
+       btn.empty();
+       btn.html('Generating QR Code <i class="fa fa-spinner fa-spin"></i>');
+       btn.prop('disabled', true);
         const sessionaddress = '@Context.Session.GetString("Customeraddress")';
         const part = sessionaddress.split('$').map(p => p.trim());
         const customername = part[0] || "Unknown";
 
-        Swal.fire({ title: "Generating QR Code...", didOpen: () => Swal.showLoading() });
+        //Swal.fire({ title: "Generating QR Code...", didOpen: () => Swal.showLoading() });
 
         try {
             const res = await fetch(`/Generateqrcode/GenerateQRCode?loanno=${encodeURIComponent(loanno)}&customername=${encodeURIComponent(customername)}`);
@@ -292,7 +301,9 @@ $.ajax({
 
             // Start countdown timer (2 minutes = 120 seconds)
             startQrTimer(120);
-
+            btn.empty();
+       btn.html('Generate QR Code  <i class="fa fa-qrcode" aria-hidden="true"></i>');
+       btn.prop('disabled', false);
             // Reset QR after 2 minutes
             if (paymentTimeoutTimer) clearTimeout(paymentTimeoutTimer);
             paymentTimeoutTimer = setTimeout(resetQRCode, 120000);

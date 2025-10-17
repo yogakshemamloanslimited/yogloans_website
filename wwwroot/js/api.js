@@ -12,7 +12,7 @@ window.API = {
         CareerQualification: `${API_BASE}career/qualification`,
         CareerApply: `${API_BASE}career/apply`,
         GetDepartment: `${API_BASE}Get-department`,
-        getapplicationData: `${API_BASE}career/get-application-data/`,
+        getapplicationData2: `${API_BASE}career/get-application-data/`,
         otheraddressdetails: `${API_BASE}career/other-address-details/`,
         branches: `${API_BASE}braches`,   // ❌ likely typo: should it be "branches"?
         states: `${API_BASE}states`,
@@ -35,7 +35,8 @@ window.API = {
         webonline:`${API_BASE}api/proc15/online`,
         onlineCustomer: `${API_BASE}proc15/online?customerId=`,  // ❌ likely typo: should it be "onlineCustomer"
         sbifailure :`${API_BASE}sbi-failure`,
-        paynow1 : `${API_BASE}payonline/Paynow/step1`,
+        paynow1: `${API_BASE}payonline/Paynow/step1`,
+        QrData: `${API_BASE}Qrcode/customer/`
         // add other endpoints here
     }
 };

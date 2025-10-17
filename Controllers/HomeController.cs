@@ -1,8 +1,10 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using yogloansdotnet.Models;
 using yogloansdotnet.Data;
 using Microsoft.EntityFrameworkCore;
+using Azure.Core;
+using TechTalk.SpecFlow.CommonModels;
 
 namespace yogloansdotnet.Controllers;
 
@@ -11,6 +13,12 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
     private readonly ApplicationDbContext _context;
     private readonly IWebHostEnvironment _webHostEnvironment;
+    string Suc_URL;
+    string Fail_URL;
+    private object merchantId;
+    private string requestparams;
+
+    public string MultiAccountInstructionDtls { get; private set; }
 
     public HomeController(ILogger<HomeController> logger, ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
     {
@@ -372,18 +380,48 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public ActionResult Customeraddress(string address, string CustomerId)
+    public IActionResult Customeraddress(string address, string CustomerId)
     {
-        HttpContext.Session.SetString("Customeraddress", address);
-        HttpContext.Session.SetString("CustomerId", CustomerId);
-
-        return Json(new
+        try
         {
-            success = true,
-            message = "Session stored successfully",
-            CustomerId = CustomerId,
-            CustomerAddress = address
-        });
+            if (string.IsNullOrEmpty(CustomerId))
+                return Json(new { success = false, message = "CustomerId is missing." });
+
+            // ✅ Make sure no nulls are passed to SetString
+            address = address ?? string.Empty;
+
+            HttpContext.Session.SetString("CustomerId", CustomerId);
+            HttpContext.Session.SetString("Customeraddress", address);
+
+            return Json(new { success = true, message = "Session data set successfully." });
+        }
+        catch (Exception ex)
+        {
+            return Json(new { success = false, message = ex.Message });
+        }
+    }
+
+
+    [HttpPost]
+    public IActionResult Pantracks(string pan_track_id, string pan)
+            {
+        try
+        {
+            if (string.IsNullOrEmpty(pan_track_id))
+                return Json(new { success = false, message = "pantrack is missing." });
+
+            // ✅ Make sure no nulls are passed to SetString
+            pan_track_id = pan_track_id ?? string.Empty;
+
+            HttpContext.Session.SetString("pantrack", pan_track_id);
+            HttpContext.Session.SetString("pan", pan);
+
+            return Json(new { success = true, message = "Session data set successfully." });
+        }
+        catch (Exception ex)
+        {
+            return Json(new { success = false, message = ex.Message });
+        }
     }
 
     [HttpGet]
@@ -410,40 +448,140 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult PrepareSbiPayment(string EncryptTrans, string MultiAccountInstructionDtls, string merchIdVal)
     {
-        // Save to DB or session
+        // Save to session or DB
         HttpContext.Session.SetString("EncryptTrans", EncryptTrans);
         HttpContext.Session.SetString("MultiAccountInstructionDtls", MultiAccountInstructionDtls);
         HttpContext.Session.SetString("merchIdVal", merchIdVal);
 
-  
-
-        return Json(new { success = true });
+        // Redirect to a new action that renders the form
+        return RedirectToAction("SbiRedirectForm");
     }
-
-[HttpPost]
-public IActionResult SbiCallback(string status, string orderId, string txnId)
-{
-    // Save payment status to DB or session
-    HttpContext.Session.SetString("PaymentStatus", status ?? "UNKNOWN");
-    HttpContext.Session.SetString("OrderId", orderId ?? "");
-    HttpContext.Session.SetString("TxnId", txnId ?? "");
-
-  
-    Console.WriteLine($"SBI Callback received: OrderId={orderId}, TxnId={txnId}, Status={status}");
-
-
-    if (status == "SUCCESS")
+    public IActionResult SbiRedirectForm()
     {
-       return View("~/Views/payment/success.cshtml");
+        // Retrieve the values from session
+        var encryptTrans = HttpContext.Session.GetString("EncryptTrans");
+        var multiAccountInstructionDtls = HttpContext.Session.GetString("MultiAccountInstructionDtls");
+        var merchIdVal = HttpContext.Session.GetString("merchIdVal");
+
+        // Pass the values to the view
+        ViewBag.EncryptTrans = encryptTrans;
+        ViewBag.MultiAccountInstructionDtls = multiAccountInstructionDtls;
+        ViewBag.MID = merchIdVal;
+
+        return View();
     }
-    else if (status == "FAILURE")
+
+
+
+    [HttpGet]
+    public IActionResult Payfail(string status, string orderId, string txnId)
     {
        return View("~/Views/payment/failed.cshtml");
     }
+    [HttpGet]
+    public IActionResult Paysuccess(string status, string orderId, string txnId)
+    {
+        return View("~/Views/payment/success.cshtml");
+    }
 
-    
-    return Content("OK");
-}
+    public IActionResult BackgroundOnline(string url)
+    {
+        try
+        {
+            if (string.IsNullOrEmpty(url))
+                return Json(new { success = false, message = "pantrack is missing." });
+
+            // ✅ Make sure no nulls are passed to SetString
+            url = url ?? string.Empty;
+
+            HttpContext.Session.SetString("background_online", url);
 
 
+            return Json(new { success = true, message = "Session data set successfully." });
+        }
+        catch (Exception ex)
+        {
+            return Json(new { success = false, message = ex.Message });
+        }
+
+    }
+
+
+    [HttpPost]
+    public IActionResult EncriptData(string amount, string Order, string customerId)
+    {
+        try
+        {
+            var request = HttpContext.Request;
+            string fullDomain = $"{request.Scheme}://{request.Host}";
+
+            string Suc_URL;
+            string Fail_URL;
+
+            if (fullDomain.Contains("www."))
+            {
+                Suc_URL = $"{fullDomain}/sbionlinepaymentsuccess";
+                Fail_URL = $"{fullDomain}/sbionlinepaymentfailure";
+            }
+            else
+            {
+                Suc_URL = $"{fullDomain}/sbionlinepaymentsuccess";
+                Fail_URL = $"{fullDomain}/sbionlinepaymentfailure";
+            }
+
+
+            string MID = "1001314";
+            string Collaborator_Id = "SBIEPAY";
+            string Operating_Mode = "DOM";
+            string Country = "IN";
+            string Currency = "INR";
+            string Amount = amount;
+            string Order_Number = Order;
+            string Other_Details = "Other";
+            string cust_id = customerId;
+            string pay_mode = "NB";
+            string accessmedium = "ONLINE";
+            string trancesource = "ONLINE";
+
+            AES256 aes = new AES256();
+            string key_Array = "AHGR4Mx0R4WMwuBELDlQ0cXgbOfrxriYen7Ayl2JXmU=";
+
+            string Requestparameter = string.Join("|", new[]
+            {
+            MID, Operating_Mode, Country, Currency, Amount, Other_Details,
+            Suc_URL, Fail_URL, Collaborator_Id, Order_Number,
+            cust_id, pay_mode, accessmedium, trancesource
+        });
+
+            string EncryptedParam = aes.Encrypt(Requestparameter, key_Array);
+
+            string Request = $"{Amount}|{Currency}|NEFT";
+            string EncryptedParam1 = aes.Encrypt(Request, key_Array);
+
+            // Store encrypted data in session
+            HttpContext.Session.SetString("EncryptedParam", EncryptedParam);
+            HttpContext.Session.SetString("EncryptedParam1", EncryptedParam1);
+
+            // Return JSON directly
+            return Json(new
+            {
+                success = true,
+                message = "Encryption successful",
+                encryptedParam = EncryptedParam,
+                encryptedParam1 = EncryptedParam1
+            });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Encryption error");
+            return Json(new { success = false, message = ex.Message });
+        }
+    }
+
+   
+
+    private void OK(object value)
+    {
+        throw new NotImplementedException();
+    }
 }

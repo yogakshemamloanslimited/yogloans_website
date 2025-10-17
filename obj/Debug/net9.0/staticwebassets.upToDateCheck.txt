@@ -184,6 +184,8 @@ wwwroot\images\online\gold.png
 wwwroot\images\online\onlinepayment.png
 wwwroot\images\online\qrcode.png
 wwwroot\images\online\tax.jpg
+wwwroot\images\Payment verify loader.gif
+wwwroot\images\payment\failed-to-make-payment-by-credit-card-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-vector.jpg
 wwwroot\images\pdf\csr\approvedCSRPolicy.pdf
 wwwroot\images\pdf\csr\CSRCommittee.pdf
 wwwroot\images\pdf\csr\CSRProject2020-21.pdf

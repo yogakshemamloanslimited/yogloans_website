@@ -1,0 +1,62 @@
+﻿ @model List<yogloansdotnet.Models.OnlineWelcome>
+
+@{
+    ViewData["Title"] = "Payment Failed";
+}
+
+<link rel="stylesheet" href="~/css/home/welcome.css" asp-append-version="true">
+<section class="welcome-container"
+         style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
+    <h1>
+       Payment Failed
+    </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
+    <div class="button">
+        <p><a href="javascript:history.back()" id="return-link">Home</a>-  Payment Failed</p>
+    </div>
+
+</section>
+
+<section>
+    <div class="details">
+        <div class="header">
+            <h2 style="text-align: center;">Oops, Something Went Wrong</h2>
+            <p style="text-align: center; font-weight: bold; color: #d9534f; width: 100%;
+}">Payment Returned</p>
+            <img src="~/images/Tiredman.jpg" alt="Tired person illustration" style="display: block; margin: 0 auto; max-width: 200px;" />
+            <p style="text-align: center;">Unfortunately, your payment could not be processed. Please try again or contact our <a href="/support">support team</a> for assistance.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="/Onlinepay" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px;">Try Again</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .welcome-container {
+        height: 300px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #welcome-mobile {
+        display: none;
+    }
+
+    #welcome-desktop {
+        display: flex;
+    }
+
+    @@media (max-width: 767px) {
+        #welcome-desktop {
+            display: none;
+        }
+
+        #welcome-mobile {
+            display: flex;
+        }
+    }
+</style>

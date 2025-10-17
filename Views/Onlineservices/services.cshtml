@@ -283,7 +283,12 @@
     </div>
 </div>
 <script>
+              var bgImage = $('#welcome-desktop').css('background-image');
+        var imageUrl = bgImage.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+        console.log("Extracted image URL:", imageUrl);
+
     $(document).ready(function () {
+
         $('#close-btn3').on('click', function () {
             // Reset the form and hide OTP section when modal is closed
             $('#taxForm3')[0].reset();
@@ -338,25 +343,71 @@
                 return;
 
             }
-
+        
             $.ajax({
                 url: API.allapi.verifyotp,
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
                 success: function (res) {
-
+                        
                     if (!res) {
                         $('#taxFormMsg').text('No data returned from server.').css('color', 'red');
                         $('#spin-very-load2').hide();
                         return;
                     }
-                    if (res.success) {
-                        $('#taxFormMsg').text(res.message).css('color', 'green');
-                        window.location.href = `${mainurlweb}nach?CustomerId=${customerId}&mobile=${mobileNo}`;
-                        $('#spin-very-load2').hide();
-                        // Optionally close modal or reset form
+                        if (res.success) {
+                           
+        $.ajax({
+            url: '@Url.Action("Customeraddress", "Home")',
+            type: "POST",
+            data: {
+                address: null, // not string "Null"
+                CustomerId: customerId
+            },
+            success: function (response) {
+                console.log("Session set response:", response);
+
+                if (response.success) {
+                      $.ajax({
+                    url: '@Url.Action("BackgroundOnline", "Home")',
+                type: "POST",
+                   data: { url: imageUrl },
+                success: function (response) {
+                    console.log("Session set response:", response);
+
+                    if (response.success) {
+
+                        setTimeout(() => {
+                            // Redirect to your next page
+                                window.location.href = `Online15g`;
+                        }, 300);
                     } else {
+                        console.warn("Session not set:", response.message);
+                    }
+                },
+                error: function (err) {
+                    console.error("Session set failed:", err);
+                }
+            });
+                    setTimeout(() => {
+                        // Redirect to your next page
+                            window.location.href = `Online15g`;
+                    }, 300);
+                } else {
+                    console.warn("Session not set:", response.message);
+                }
+            },
+            error: function (err) {
+                console.error("Session set failed:", err);
+            }
+        });
+
+        // Optional UI feedback
+        $('#taxFormMsg').text(res.message).css('color', 'green');
+        $('#spin-very-load2').hide();
+    }
+     else {
                         $('#taxFormMsg').text('OTP verification failed').css('color', 'red');
                         $('#spin-very-load2').hide();
                     }
@@ -403,13 +454,19 @@
 
     $(document).ready(function () {
         const urlParams = new URLSearchParams(window.location.search);
+
+      
         const loanStatus = urlParams.get('loan');
         if (loanStatus === 'notfound') {
             Swal.fire({
                 icon: 'error',
                 title: 'No Loan Found',
                 text: 'No loan found for the provided details.'
-            });
+                }).then(() => {
+
+            location.reload();
+                window.location.href = "/Onlineservices"
+        });;
         }
     });
 
@@ -473,10 +530,53 @@
                         return;
                     }
                     if (res.success) {
+                    
+
+            $.ajax({
+                url: '@Url.Action("Customeraddress", "Home")',
+                type: "POST",
+                data: {
+                    address: null, // not string "Null"
+                    CustomerId: customerId
+                },
+                success: function (response) {
+                    console.log("Session set response:", response);
+
+                    if (response.success) {
+                         $.ajax({
+                        url: '@Url.Action("BackgroundOnline", "Home")',
+                    type: "POST",
+                       data: { url: imageUrl },
+                    success: function (response) {
+                        console.log("Session set response:", response);
+
+                        if (response.success) {
+
+                           
+                        } else {
+                            console.warn("Session not set:", response.message);
+                        }
+                    },
+                    error: function (err) {
+                        console.error("Session set failed:", err);
+                    }
+                });
+                        setTimeout(() => {
+                            // Redirect to your next page
+                                    window.location.href = `nach`;
+                        }, 300);
+                    } else {
+                        console.warn("Session not set:", response.message);
+                    }
+                },
+                error: function (err) {
+                    console.error("Session set failed:", err);
+                }
+            });
                         $('#taxFormMsg2').text(res.message).css('color', 'green');
-                        window.location.href = `${mainurlweb}nach?CustomerId=${customerId}&mobile=${mobileNo}`;
+                        
                         $('#spin-very-load3').hide();
-                        // Optionally close modal or reset form
+                       
                     } else {
                         $('#taxFormMsg2').text('OTP verification failed').css('color', 'red');
                         $('#spin-very-load3').hide();
@@ -577,8 +677,9 @@
                 success: function (res) {
                     $('#spin-very-load1').hide();
                     var url = API.allapi.onlineCustomer;
-                    alert(url);
+                    //alert(url);
                     if (res.success) {
+
                         $.get(`${url}${encodeURIComponent(customerId)}&mobileNo=${encodeURIComponent(mobileNo)}`,
                             function (apiRes) {
                                 console.log("API Response:", apiRes);
@@ -623,10 +724,28 @@
                                         CustomerId: customerId
                                     },
                                     success: function (res) {
-                                        console.log("Session set response:", res);
+                                    
                                         if (res.success) {
-                                            // Delay slightly to ensure session cookie is persisted
-                                            setTimeout(() => {
+                                                   $.ajax({
+                            url: '@Url.Action("BackgroundOnline", "Home")',
+                        type: "POST",
+                           data: { url: imageUrl },
+                        success: function (response) {
+                            console.log("Session set response:", response);
+
+                            if (response.success) {
+
+
+                            } else {
+                                console.warn("Session not set:", response.message);
+                            }
+                        },
+                        error: function (err) {
+                            console.error("Session set failed:", err);
+                        }
+                    });
+
+                                                setTimeout(() => {
                                                 window.location.href = `/Onlinepay`;
                                             }, 300);
                                         }
@@ -740,10 +859,11 @@
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
                 success: function (res) {
                     $('#spin-very-load4').hide();
-                    var url = API.allapi.onlineCustomer;
-                    alert(url);
+                       var url = API.allapi.QrData;
+                   // alert(url);
                     if (res.success) {
-                        $.get(`${url}${encodeURIComponent(customerId)}&mobileNo=${encodeURIComponent(mobileNo)}`,
+                        
+                        $.get(`${url}${encodeURIComponent(customerId)}`,
                             function (apiRes) {
                                 console.log("API Response:", apiRes);
                                 var customerAddress = "";
@@ -753,31 +873,7 @@
                                 }
 
 
-                                const flag = apiRes.message.slice(0, 2); // '$a'
-                                const userMessage = apiRes.message.slice(3); // Remove flag + space
-
-                                if (flag === "$b") {
-                                    Swal.fire({
-                                        title: '<span style="color:orange;">⏰ Wait!</span>',
-                                        html: userMessage,
-                                        showConfirmButton: true
-                                    }).then((result) => {
-
-                                            if (result.isConfirmed || result.isDismissed) {
-
-                                            $('#qrCodeModal').modal("hide");
-                                            $('#taxForm4')[0].reset();
-                                            $('#otpSection4').hide();
-                                            $('#sendOtpBtn4').show();
-                                            $('#taxFormMsg4').text('');
-
-                                            return;
-                                        }
-                                    });
-
-                                    return;
-                                }
-
+                             
                                 
 
                                 $.ajax({
@@ -791,7 +887,26 @@
                                     success: function (res) {
                                         console.log("Session set response:", res);
                                         if (res.success) {
-                                            // Delay slightly to ensure session cookie is persisted
+                                                    $.ajax({
+                            url: '@Url.Action("BackgroundOnline", "Home")',
+                        type: "POST",
+                           data: { url: imageUrl },
+                        success: function (response) {
+                            console.log("Session set response:", response);
+
+                            if (response.success) {
+
+
+                            } else {
+                                console.warn("Session not set:", response.message);
+                            }
+                        },
+                        error: function (err) {
+                            console.error("Session set failed:", err);
+                        }
+                    });
+
+                                                // Delay slightly to ensure session cookie is persisted
                                             setTimeout(() => {
                                                 window.location.href = `/Generateqrcode`;
                                             }, 300);
