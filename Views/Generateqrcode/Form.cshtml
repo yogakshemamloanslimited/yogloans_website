@@ -131,19 +131,22 @@ $.ajax({
 
         loans.forEach(item => {
             tableHTML += `
-                <tr>
-                    <td>${item.loan_no}</td>
-                    <td>${item.product}</td>
-                    <td>${item.due_amount.toLocaleString('en-IN')}</td>
-                    <td>${item.other_charges.toLocaleString('en-IN')}</td>
-                    <td>${new Date(item.trans_date).toLocaleDateString('en-IN')}</td>
-                    <td>
-                            <button class="btn btn-sm btn-primary"
-                            onclick="generateQRCode(this)" id="buttonloan" data-loan="${item.loan_no}">
-                           Generate QR Code <i class="fa fa-qrcode" aria-hidden="true"></i>
-                        </button>
-                    </td>
-                </tr>
+                    <tr>
+      <td>${item.loan_no}</td>
+      <td>${item.product}</td>
+      <td>${item.due_amount.toLocaleString('en-IN')}</td>
+      <td>${item.other_charges.toLocaleString('en-IN')}</td>
+      <td>${new Date(item.trans_date).toLocaleDateString('en-IN')}</td>
+      <td>
+        <button class="btn btn-sm btn-primary"
+                onclick="generateQRCode(this)"
+                id="buttonloan"
+                data-loan="${item.loan_no}">
+          Generate QR Code <i class="fa fa-qrcode" aria-hidden="true"></i>
+        </button>
+      </td>
+    </tr>
+
             `;
         });
 
@@ -265,12 +268,9 @@ $.ajax({
 
     // Generate QR code and show modal
     async function generateQRCode(button) {
-       // Get button element using jQuery
-       var btn = $(button);
-
-       // Get loan number from data attribute
-       const loanno = btn.data('loanno');
-
+    const btn = $(button);
+    const loanno = btn.data('loan'); // ✅ matches data-loan
+   
        // Clear button and show spinner
        btn.empty();
        btn.html('Generating QR Code <i class="fa fa-spinner fa-spin"></i>');

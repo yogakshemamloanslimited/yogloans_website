@@ -275,49 +275,83 @@
            function viewproduct() {
         var auctionId = $('#auctionId').val();
         var stateId = $('#stateId').val();
+    $.ajax({
+        url: `http://localhost:8085/api/auction/print2/${auctionId}/${stateId}`,
+        method: "GET",
+        success: function (packResponse) {
 
-        $.ajax({
-            url: `http://localhost:8085/api/auction/print2/${auctionId}/${stateId}`,
-            method: "GET",
-            success: function (packResponse) {
-                let table0 = packResponse.Table;
+            // ✅ Log / Alert full response
+            console.log("Full API Response:", packResponse);
 
-                if (!table0 || table0.length === 0) {
-                    $('#product .modal-body').html("<p>No packs found.</p>");
-                    $('#product').modal('show');
-                    return;
-                }
+            let table0 = packResponse.Table;
+                 let table2 = packResponse.Table2;   // get 3rd row (0-based index)
 
-                // Get table headers dynamically from the first object
-                let headers = Object.keys(table0[0]);
+        // ✅ Alert readable data
+            alert(JSON.stringify(table2, null, 2));
 
-                // Build table HTML
-                let tableHtml = `
-                    <div style="overflow-x:auto;">
-                        <table class="table table-bordered text-center">
-                            <thead>
-                                <tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr>
-                            </thead>
-                            <tbody>
-                                ${table0.map(row => `
-                                    <tr>${headers.map(h => `<td>${row[h] ?? ''}</td>`).join('')}</tr>
-                                `).join('')}
-                            </tbody>
-                        </table>
-                    </div>
-                `;
-
-                // Insert table into modal body
-                $('#product .modal-body').html(tableHtml);
-
-                // Show modal
+            if (!table0 || table0.length === 0) {
+                $('#product .modal-body').html("<p>No packs found.</p>");
                 $('#product').modal('show');
-            },
-            error: function () {
-                $('#product .modal-body').html("<p>Failed to fetch data.</p>");
-                $('#product').modal('show');
+                return;
             }
-        });
+
+            // ✅ Calculate totals
+            let totalCount = table0.length;
+            let totalNetWt = table0.reduce((sum, row) => sum + (parseFloat(row.net_wt) || 0), 0);
+            let totalNetWtPurity = table0.reduce((sum, row) => sum + (parseFloat(row.netwt_purity) || 0), 0);
+                let benchvalue = table2[0].benchmark_gram;
+
+                
+
+            // ✅ Alert totals
+            alert(
+                "Total Rows: " + totalCount +
+                "\nTotal Net Wt: " + totalNetWt.toFixed(2) +
+                "\nTotal NetWt Purity: " + totalNetWtPurity.toFixed(2)+
+                        "benchvalue" + benchvalue
+            );
+
+            // Get table headers dynamically
+            let headers = Object.keys(table0[0]);
+
+            // Build table HTML
+            let tableHtml = `
+                <div style="overflow-x:auto;">
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr>
+                        </thead>
+                        <tbody>
+                            ${table0.map(row => `
+                                <tr>${headers.map(h => `<td>${row[h] ?? ''}</td>`).join('')}</tr>
+                            `).join('')}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2">Totals</th>
+                                <th>${totalNetWt.toFixed(2)}</th>
+                                <th>${totalNetWtPurity.toFixed(2)}</th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <p class="text-end"><strong>Total Rows: ${totalCount}</strong></p>
+            `;
+
+            // Insert into modal body
+            $('#product .modal-body').html(tableHtml);
+
+            // Show modal
+            $('#product').modal('show');
+        },
+        error: function (xhr, status, error) {
+            alert("Error fetching data:\n" + error);
+            $('#product .modal-body').html("<p>Failed to fetch data.</p>");
+            $('#product').modal('show');
+        }
+    });
+
     }
 
              $(document).ready(function () {

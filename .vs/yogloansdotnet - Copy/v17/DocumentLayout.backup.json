@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:views\\auction\\welcome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\yogakshemam_website\\yogakshemam_website\\auction_form.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:controllers\\auctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|c:\\users\\anas\\onedrive\\desktop\\latest\\yogloansdotnet - copy\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{833EF0BC-D330-752A-A86F-8FFA59B337D1}|yogloansdotnet.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|\\\\10.3.0.230\\e\\PUBLISH\\Work\\Anas\\Website\\web\\10-15-2025\\controller\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -232,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "auction_form.aspx.cs",
               "DocumentMoniker": "D:\\yogakshemam_website\\yogakshemam_website\\auction_form.aspx.cs",
               "ToolTip": "D:\\yogakshemam_website\\yogakshemam_website\\auction_form.aspx.cs",
@@ -252,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuctionController.cs",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Controllers\\AuctionController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuctionController.cs",
@@ -270,7 +270,7 @@
               "RelativeDocumentMoniker": "Views\\Auction\\welcome.cshtml",
               "ToolTip": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Views\\Auction\\welcome.cshtml",
               "RelativeToolTip": "Views\\Auction\\welcome.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIBAAAAAAAAAAAuwCIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-15T10:28:54.004Z",
               "EditorCaption": ""
@@ -664,15 +664,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAACMBAAAAAAAAAAAswDQBAABFAAAAAAAAAA==",
+              "ViewState": "AgIAABICAAAAAAAAAAAQwCcCAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T10:41:12.987Z"
+              "WhenOpened": "2025-10-11T10:41:12.987Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
