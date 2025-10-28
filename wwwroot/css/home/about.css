@@ -26,14 +26,14 @@
     text-align: justify;
     color: black;
 }
-.about-container .content button{
-    width: 160px;
-    padding: 10px;
-    background-color: #044697;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
+    .about-container .content button {
+        width: 160px;
+        padding: 10px;
+        background-color: #B4181E;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
 
 
 @media(max-width:780px){

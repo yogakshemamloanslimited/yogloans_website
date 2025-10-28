@@ -71,9 +71,21 @@
               "target": "Package",
               "version": "[1.7.0, )"
             },
+            "Rotativa.AspNetCore": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
             "SpecFlow": {
               "target": "Package",
               "version": "[3.9.74, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
+            "itext7.pdfhtml": {
+              "target": "Package",
+              "version": "[6.2.1, )"
             }
           },
           "imports": [

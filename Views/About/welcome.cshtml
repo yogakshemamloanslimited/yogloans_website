@@ -5,9 +5,10 @@
 <!-- Desktop/Tablet Section (Image1) -->
 <section class="welcome-container"
     style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
-    <h1 id="header">About Us</h1>
+    <h1 id="header" style="visibility:hidden;">About Us</h1>
     <div class="button">
-        <p><a href="javascript:history.back()" id="return-link">Home</a> - About Us</p>
+        <h1 id="header">About Us</h1>
+        @* <p><a href="javascript:history.back()" id="return-link">Home</a> - About Us</p> *@
     </div>
 </section>
 

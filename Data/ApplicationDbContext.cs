@@ -18,7 +18,7 @@ namespace yogloansdotnet.Data
         public DbSet<LoanPointModel> LoanPoints { get; set; }
         public DbSet<AboutContentModel> AboutContent { get; set; }
         public DbSet<CountsModel> Counts { get; set; }
-
+  
         public DbSet<OfferModel> Offer { get; set; }
         public DbSet<AnnualReportEntity> AnnualReports { get; set; }
         public DbSet<AnnouncementsModel> Announcements { get; set; }

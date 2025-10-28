@@ -164,6 +164,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Auctineer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVjdGluZWVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Auctineer/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVjdGluZWVyXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Auction/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVjdGlvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -262,6 +270,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Generateqrcode/Welcome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhdGVxcmNvZGVcV2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Grievance/attachments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JpZXZhbmNlXGF0dGFjaG1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Grievance/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JpZXZhbmNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Grievance/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JpZXZhbmNlXGxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Grievance/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JpZXZhbmNlXHdlbGNvbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/Home/about.cshtml]
@@ -435,6 +459,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/wwwroot/uploads/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFx1cGxvYWRzXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4dhz7tzpot
 
 [C:/Users/Anas/OneDrive/Desktop/latest/yogloansdotnet - Copy/Views/admin/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU2hhcmVkXF9MYXlvdXQuY3NodG1s

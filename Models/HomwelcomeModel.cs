@@ -10,9 +10,6 @@ namespace yogloansdotnet.Models
         public int Id { get; set; }
 
         [Required]
-        public string LoanType { get; set; } = string.Empty;
-
-        [Required]
         public string Header { get; set; } = string.Empty;
 
         [Required]
@@ -23,5 +20,8 @@ namespace yogloansdotnet.Models
 
         [StringLength(255)]
         public string? Image2 { get; set; }
+
+        [Required]
+        public int loan_id { get; set; }
     }
 }

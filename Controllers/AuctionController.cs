@@ -27,14 +27,8 @@ namespace yogloansdotnet.Controllers
 
             if (codeValue.HasValue && codeValue.Value == 1)
             {
-                var vm = new LoanGroupViewModel
-                {
-                    Gold = _context.Homwelcome.Where(x => x.LoanType == "Gold").ToList(),
-                    Business = _context.Homwelcome.Where(x => x.LoanType == "Business").ToList(),
-                    Vehicle = _context.Homwelcome.Where(x => x.LoanType == "Vehicle").ToList(),
-                    CD = _context.Homwelcome.Where(x => x.LoanType == "CD").ToList(),
-                    AboutContent = _context.AboutContent.ToList()
-                };
+                var vm = new LoanGroupViewModel();
+               
 
                 return View(vm);
             }

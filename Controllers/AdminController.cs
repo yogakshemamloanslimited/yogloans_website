@@ -4,6 +4,7 @@ using yogloansdotnet.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace yogloansdotnet.Controllers
 {
@@ -79,26 +80,22 @@ namespace yogloansdotnet.Controllers
 
         public IActionResult Index()
         {
-            if (User.Identity?.IsAuthenticated != true)
-            {
-                return RedirectToAction("Login");
-            }
+            
 
-            var goldLoans = _context.Homwelcome.Where(x => x.LoanType == "Gold").ToList();
-            var businessLoans = _context.Homwelcome.Where(x => x.LoanType == "Business").ToList();
-            var vehicleLoans = _context.Homwelcome.Where(x => x.LoanType == "Vehicle").ToList();
-            var cdLoans = _context.Homwelcome.Where(x => x.LoanType == "CD").ToList();
-
-            var viewModel = new LoanGroupViewModel
-            {
-                Gold = goldLoans ?? new List<HomwelcomeModel>(),
-                Business = businessLoans ?? new List<HomwelcomeModel>(),
-                Vehicle = vehicleLoans ?? new List<HomwelcomeModel>(),
-                CD = cdLoans ?? new List<HomwelcomeModel>()
-            };
-
-            return View(viewModel);
+            return View();
         }
+        [HttpGet]
+        public async Task<IActionResult> welcomeget(int id) // use int instead of string
+        {
+            // Fetch records that match the loan_id
+            var homwelcomeData = await _context.Homwelcome
+                                               .Where(h => h.loan_id == id)
+                                               .ToListAsync();
+
+            // Return as JSON
+            return Json(homwelcomeData);
+        }
+ 
 
         public async Task<IActionResult> Logout()
         {

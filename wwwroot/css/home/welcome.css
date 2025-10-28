@@ -40,20 +40,31 @@
     z-index: 2;
     margin-top: 20px;
 }
-.welcome-container .button button{
-    padding: 10px;
-    width: 200px;
-    cursor: pointer;
-    border: none;
-}
-@media(max-width:780px  ){
-    .welcome-container h1 {
-        font-size: 30px;
-    }
-    .welcome-container p {
-        font-size: 15px;
-    }
     .welcome-container .button button {
-        width: 120px;
+        padding: 10px;
+        width: 200px;
+        cursor: pointer;
+
+        background: none;
+        color: white;
+        border: 1px solid;
     }
-}
+        .welcome-container .button button:hover {
+            color:black; 
+            background:white;
+        }
+        @media(max-width:780px ) {
+            .welcome-container h1 {
+                font-size: 30px;
+            }
+            .welcome-container {
+                height:280px;
+            }
+                .welcome-container p {
+                font-size: 15px;
+            }
+
+            .welcome-container .button button {
+                width: 120px;
+            }
+        }

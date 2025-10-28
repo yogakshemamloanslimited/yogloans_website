@@ -186,23 +186,23 @@
 
 
         .pdf-export table td, .pdf-export table th {
-            font-size: 12px;
+            font-size: 10px;
         }
 
         .pdf-export div {
-            font-size: 12px;
+            font-size: 10px;
         }
 
         .pdf-export p {
-            font-size: 12px;
+            font-size: 10px;
         }
 
         .pdf-export h2 {
-            font-size: 15px;
+            font-size: 13px;
         }
 
         .pdf-export .dec {
-            padding: 10px 5px;
+            padding: 5px 2.5px;
         }
     </style>
 </head>
@@ -218,9 +218,9 @@
     <section id="printSection">
     </section>
     <div class="buttons">
-        <div id="printButton">
+       @*  <div id="printButton">
             <img src="/images/icon/printer.png">
-        </div>
+        </div> *@
         <div id="downloadPdfButton">
             <img src="/images/icon/download-pdf.png">
         </div>
@@ -229,18 +229,18 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
-            function printDiv(divId) {
-                var printContents = document.getElementById(divId).innerHTML;
-                var originalContents = document.body.innerHTML;
+            // function printDiv(divId) {
+            //     var printContents = document.getElementById(divId).innerHTML;
+            //     var originalContents = document.body.innerHTML;
 
-                document.body.innerHTML = printContents;
-                window.print();
-                document.body.innerHTML = originalContents;
-            }
+            //     document.body.innerHTML = printContents;
+            //     window.print();
+            //     document.body.innerHTML = originalContents;
+            // }
 
-            $('#printButton').click(function () {
-                printDiv('printSection');
-            });
+            // $('#printButton').click(function () {
+            //     printDiv('printSection');
+            // });
            $('#downloadPdfButton').click(function () {
             var element = document.getElementById('printSection');
             element.classList.add('pdf-export');
@@ -258,9 +258,12 @@
             });
         });
         var customer_id = '@Context.Session.GetString("CustomerId")';
+        //alert(customer_id);
         //var pantrack = document.getElementById('pantrack').value;
 		var pantrack = '@Context.Session.GetString("pantrack")';
+        //alert(pantrack);
 		var pan  = '@Context.Session.GetString("pan")';
+        //alert(pan);
         //var pan = document.getElementById('pan').value;
 		//alert(pantrack);
 		//alert(pan);
@@ -277,10 +280,16 @@
                 console.log("Success:", response);
 
                 // Extract the actual data from response.data
-                const data = response.data || response;
-                console.log("Extracted data:", data);
-                console.log("Available columns:", response.availableColumns);
+              const data = response.data || response;
+        const details = response.details;
 
+        console.log("Extracted data:", data);
+        console.log("Available columns:", response.availableColumns);
+        console.log("a1", details);
+        
+
+        // Now the table exists
+       
                     const formHtml = `
 
 
@@ -333,6 +342,15 @@
                         <td colspan="4"><b>Details of income for which declaration is filed:</b> </td>
                     </tr>
                 </table>
+                      <table id="details">
+            <tr>
+                <th>SL NO</th>
+                <th>Identification number of relevant investment/account, etc</th>
+                <th>Nature of Income</th>
+                <th>Section under which tax is deductible</th>
+                <th>Amount of Income</th>
+            </tr>
+        </table>
 
                 <div class="dec">
                     <div class="head">
@@ -437,6 +455,32 @@
                     `;
 
                     $('#printSection').html(formHtml);
+                           const table = document.getElementById("details");
+
+        if (details && details.length > 0) {
+            // Populate rows
+            details.forEach((item, index) => {
+                const row = table.insertRow();
+
+                const cell1 = row.insertCell(0);
+                const cell2 = row.insertCell(1);
+                const cell3 = row.insertCell(2);
+                const cell4 = row.insertCell(3);
+                const cell5 = row.insertCell(4);
+
+                cell1.textContent = index + 1;
+                cell2.textContent = item.a1;
+                cell3.textContent = item.a2;
+                cell4.textContent = item.a3;
+                cell5.textContent = item.a4;
+            });
+
+            table.style.display = "table"; // Ensure table is visible
+        } else {
+            // Hide the table if no details
+            table.style.display = "none";
+        }
+
 
                     $.ajax({
                         url: API.allapi.Get15g2 + customer_id,

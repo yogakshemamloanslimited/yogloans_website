@@ -1,0 +1,446 @@
+@{
+    Layout = null;
+}
+@model yogloansdotnet.Models.LoanGroupViewModel
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+    .welcome-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: end;
+
+
+        position: relative;
+        background-color: white;
+
+    }
+
+    #total-table {
+        width: 80%;
+        background: none;
+        background: #7f3f3f00;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #total-table tbody {
+        text-align: center;
+        padding: 5px;
+    }
+
+
+    .items {
+        width: 85%;
+        height: 400px;
+        transition: 0.5s ease-in-out;
+        position: relative;
+        @*   border-radius: 20%; *@
+    }
+
+    #error_span{
+        color:red;
+    }
+
+    #error_span2 {
+        color: red;
+    }
+
+    #proceed_span{
+        color:green;
+    }
+
+    #image-pro {
+        transition: all 0.3s ease-in-out;
+        /* smooth transition for size & position */
+        position: relative;
+        /* initial position */
+        height: 250px;
+        width: 100px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+     overflow-x:auto; 
+     gap: 20px;
+        width: 85%;
+        margin-top: 10px;
+    }
+   
+
+    .cards .card {
+        background: #ffffff;
+        height: 200px;
+        /* fixed height for all cards */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    .msg {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        text-transform: uppercase;
+        position: fixed;
+        left: -8%;
+        bottom: 10%;
+        height: 500px;
+
+    }
+
+    .msg h1 {
+        transform: rotate(-90deg);
+        /* ✅ Corrected */
+        position: relative;
+        left: 0%;
+
+    }
+
+    .msg h1 p {
+        transform: rotate(360deg);
+        /* ✅ Corrected */
+
+        font-size: 15px;
+
+
+    }
+
+    #image1 {
+        display: block;
+    }
+
+    #image2 {
+        display: none;
+    }
+
+    .lable-bill {
+        width: auto;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background-color: #044697;
+        height: 60px;
+        width: auto;
+        left: 0%;
+        top: 0%;
+        position: absolute;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+        font-size: 15px;
+    }
+
+    #form-auction {
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+
+
+    tr {
+        text-align: start !important;
+    }
+
+
+    #total-table tbody tr {
+        text-align: center !important;
+    }
+    #nodata{
+        width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    }
+    #nodata img{
+        width:150px;
+        height:150px;
+    }
+
+    @@media(max-width:900px) {
+        .msg {
+            display: none;
+        }
+
+        .items {
+            width: 100%;
+        }
+
+        #image1 {
+            display: none;
+        }
+
+        #image2 {
+            display: block;
+        }
+
+        .cards {
+            width: 100%;
+        }
+    }
+</style>
+
+<input type="hidden" id="auctionId" />
+<input type="hidden" id="stateId" />
+
+<div class="welcome-container">
+    <div class="msg">
+        <h1>Auctioneer Dashboard <p>Monitor bids, manage items, and conduct auctions seamlessly.</p></h1>
+
+
+
+    </div>
+
+    <div class="items" style="display:flex; justify-contnet:center;">
+        <div class="details" style="position:absolute; z-index:400; color:white; display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 15px;" id="top-details">
+
+        </div>
+        @* <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image1 ?? "~/images/welcome/Artboard-mobile.png"))"
+            style="width:100%;  border-left-top-radius:" id="image1" />
+        <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image2 ?? "~/images/welcome/Artboard-mobile.png"))"
+            style="width:100%; " id="image2" /> *@
+        <div class="bottom-buttons" style="position:absolute; display: flex;
+  justify-content: space-between; flex-direction: row-reverse;
+  align-items: center; padding:20px; bottom:0%; right:0%; width:100%;">
+            
+           
+        </div>
+    </div>
+    <div class="cards">
+        <div id="nodata" style="display:none;">
+          
+
+        </div>
+    </div>
+</div>
+
+    <!-- Modal -->
+
+<script>
+    $(document).ready(function () {
+           
+        var sessionMobile = '@(Context.Session.GetInt32("mobile")?.ToString() ?? "")';
+        var sessionOtp = '@(Context.Session.GetInt32("otp")?.ToString() ?? "")';
+
+
+        $.ajax({
+            url: `http://localhost:8085/api/auction/auctineer-data/${sessionMobile}/${sessionOtp}`,
+            method: "GET",
+            success: function (response) {
+                console.log("API Response:", response);
+
+                // Always extract auction info first
+                   var auction = response.auctioneerData;
+
+    // Show auction info (top details)
+    if (auction) {
+        $('#top-details').html(`
+            <input type="hidden" id="auction_id" value="${auction.AuctionId}">
+            <input type="hidden" id="auction_dt" value="${auction.AuctionDate}">
+            <input type="hidden" id="state_id" value="${auction.StateId}">
+            <p><strong>Auction ID :</strong> ${auction.AuctionId}</p>
+            <p><strong>Date :</strong> ${new Date(auction.AuctionDate).toLocaleDateString()}</p>
+            <p><strong>Auctioneer Name :</strong> ${auction.AuctioneerName}</p>
+            <p><strong>State :</strong> ${auction.State}</p>
+            <input type="hidden" value="${auction.AuctioneerId}" id="auctioneer_id">
+        `);
+    }
+
+                // ✅ Handle "no data" or "no bids yet"
+                if (!response.biddingData || response.biddingData.length === 0) {
+                    // $('.cards').html(`
+                    //     <div style="text-align:center;">
+                    //         <p style="color:red; font-weight:600;">${response.message}</p>
+                    //     </div>
+                    // `);
+                  $('#view_product').hide();
+                   
+                   $('#nodata').html(` <p style="color:red; font-weight:600;">${response.message}<p>`);
+                   $('#nodata').show();
+
+                    return;
+                }
+
+                // ✅ If data exists, show bidder details
+                var bidder = response.biddingData[0];
+                console.log(bidder);
+
+                $('.cards').html(`
+                  
+                  <table class="table table-bordered table-sm text-center"
+       style=" table-layout:auto; white-space:nowrap; margin:auto;">
+                    <thead>
+                     <tr>
+                         <td>Bidder</td>
+                         <td>Loan Count</td>
+                         <td>Net WT In Gram </td>
+                          <td>Net WT Purity In Gram </td>
+                           <td>Unit Price In Rs </td>
+                           <td>Bid Amount In Rs </td>
+                           <td>Test Delivary Center</td>
+                          </tr>
+                    </thead>
+                    <tbody id="bidder_details">
+                      <tr style="" id="selected">
+                                <td>${bidder.Bidder}</td>
+                                <input type="hidden" id="bidder_id" value="${bidder.bidder_id}">
+                                <input type="hidden" id="bidder_name" value="${bidder.Bidder}">
+                                 <td>${bidder["Loan Count"]}</td>
+                                 <input type="hidden" id="loan_count" value="${bidder["Loan Count"]}">
+                                <td> ${bidder["Net Wt"]}</td>
+                                <td>${bidder["Net Wt with Purity"]}</td>
+
+                                <td>${bidder["Bid Amt per gram"]}</td>
+                                <td>₹${bidder["Bid Amount"]}</td>
+                                 <td>${bidder["Test/Delivery Center"]}</td>
+                          </tr>
+                    </tbody>
+
+                      <tfoot>
+      <tr>
+        <td colspan="7" class="text-center">
+          <button class="btn btn-primary" onclick="viewproduct()" id="view_product">View More List</button>
+          
+          <button class="btn btn-primary" style="display:none;" onclick="closeproduct()" id="close_product">Close List</button>
+          <button class="btn btn-success" onclick="finalize()" id="finalize">Finalize</button>
+        </td>
+      </tr>
+    </tfoot>
+                      </table>
+                     
+                `);
+
+                // ✅ Optionally show buttons
+                  viewproductsfirst();
+            },
+            error: function (err) {
+                console.error("Error:", err);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Failed to load auction data!',
+                });
+            }
+        });
+    });
+           function viewproduct() {
+        var auctionId = $('#auction_id').val();
+        var stateId = $('#state_id').val();
+        var auction_dt = $('#auction_dt').val();
+     
+        var biddername = $('#bidder_name').val()?.trim();
+        var loan_count = $('#loan_count').val();
+
+        // Remove time part if date looks like 2025-10-22T00:00:00
+        if (auction_dt.includes('T')) {
+            auction_dt = auction_dt.split('T')[0];
+        }
+
+        $.ajax({
+            url: `http://localhost:8085/api/auction/FillAllbid/${auction_dt}/${auctionId}/${stateId}`,
+            method: "GET",
+            success: function (response) {
+                console.log("All Bid Data:", response.Data);
+                var data = response.Data;
+
+                // Clear the table before adding rows
+               
+
+                data.forEach(function (item) {
+                    // ✅ Skip current bidder only
+                    if (item.Bidder && item.Bidder.trim() === biddername) {
+                         $('#view_product').hide();
+                        return; // skip this row
+                    }
+
+                    // ✅ Show all others
+                    $("#bidder_details").append(`
+                        <tr id="bidder_added">
+                            <td>${item.Bidder}</td>
+                             <td>${loan_count}</td>
+                        <td>${item["Net Wt"]}</td>
+                        <td>${item["Net Wt with Purity"]}</td>
+                        <td>${item["Bid Amt per gram"]}</td>
+                        <td>₹${item["Bid Amount"]}</td>
+                        <td>${item["Test/Delivery Center"]}</td>
+                        </tr>
+                   `);
+                   $('#view_product').hide();
+                   $('#close_product').show();
+                  $('#selected').css('border-left', '8px solid red');
+                 $('#selected td').css('background', '#b9cadd');
+
+               
+                });
+            },
+            error: function (xhr) {
+                console.error("Error:", xhr.responseText);
+            }
+        });
+       
+    }
+
+    function closeproduct(){
+        window.location.reload();
+    }
+    function finalize(){
+        var auctionId = $('#auction_id').val();
+        var auctioneerId = $('#auctioneer_id').val();
+        var auction_dt = $('#auction_dt').val();
+        var bidder_id = $('#bidder_id').val();
+        $.ajax({
+           url: `http://localhost:8085/api/auction/finalizeauction/${auction_dt}/${auctionId}/${bidder_id}/${auctioneerId}`,
+           method: "POST",
+           success: function(response){
+                alert(response.message);
+           }
+        });
+    }
+    function viewproductsfirst() {
+        var auctionId = $('#auction_id').val();
+        var stateId = $('#state_id').val();
+        var auction_dt = $('#auction_dt').val();
+
+        var biddername = $('#bidder_name').val()?.trim();
+        var loan_count = $('#loan_count').val();
+        
+        // Remove time part if date looks like 2025-10-22T00:00:00
+        if (auction_dt.includes('T')) {
+            auction_dt = auction_dt.split('T')[0];
+        }
+
+        $.ajax({
+            url: `http://localhost:8085/api/auction/FillAllbid/${auction_dt}/${auctionId}/${stateId}`,
+            method: "GET",
+            success: function (response) {
+                  var data = response.Data;
+             
+                   if (data.length === 1) {
+                $('#view_product').hide();
+                return;
+            }
+            }
+            });
+    }
+</script>

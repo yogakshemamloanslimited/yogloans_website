@@ -36,7 +36,14 @@ window.API = {
         onlineCustomer: `${API_BASE}proc15/online?customerId=`,  // ❌ likely typo: should it be "onlineCustomer"
         sbifailure :`${API_BASE}sbi-failure`,
         paynow1: `${API_BASE}payonline/Paynow/step1`,
-        QrData: `${API_BASE}Qrcode/customer/`
+        QrData: `${API_BASE}Qrcode/customer/`,
+        //Grievants
+        Sendotp: `${API_BASE}grievence/send-otp/`,
+        Grievantstypes: `${API_BASE}grievence/grievants-typs/`,
+        GetCustomer: `${API_BASE}grievence/grievants-customer/`,
+        loandetails: `${API_BASE}grievence/loandetails/`,
+        submitgrie: `${API_BASE}grievence/submit_grievance/`,
+        checkexistence: `${API_BASE}grievence/checkexist/`
         // add other endpoints here
     }
 };

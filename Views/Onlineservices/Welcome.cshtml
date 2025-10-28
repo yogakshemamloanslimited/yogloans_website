@@ -3,10 +3,13 @@
 
   <section class="welcome-container"
     style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
-        <h1 >Online Services
+        <h1 style="visibility:hidden;">Online Services
             </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
     <div class="button">
-        <p><a href="javascript:history.back()" id="return-link">Home</a>- Online Services</p>
+        <h1 >
+            Online Services
+        </h1>
+        @* <p><a href="javascript:history.back()" id="return-link">Home</a>- Online Services</p> *@
      </div>
 
     </section>
@@ -15,10 +18,13 @@
 
  <section class="welcome-container"
     style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
-     <h1 >Online Services
+     <h1 style="visibility:hidden;">Online Services
             </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
     <div class="button">
-        <p><a href="javascript:history.back()" id="return-link">Home</a> - Online Services</p>
+        <h1>
+            Online Services
+        </h1>
+       @*  <p><a href="javascript:history.back()" id="return-link">Home</a> - Online Services</p> *@
      </div>
 </section>
  <style>

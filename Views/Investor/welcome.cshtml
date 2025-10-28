@@ -3,10 +3,13 @@
 
 <section class="welcome-container"
     style="background-image: url(@(Model.InvestorsWelcome.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
-        <h1>Investors
+        <h1 style="visibility:hidden;">Investors
         </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
         <div class="button">
-        <p><a href="javascript:history.back()" id="return-link">Home</a> - Investors</p>
+       @*  <p><a href="javascript:history.back()" id="return-link">Home</a> - Investors</p> *@
+        <h1 >
+            Investors
+        </h1>
      </div>
 
     </section>
@@ -15,10 +18,13 @@
     <!-- Mobile Section (Image2) -->
 <section class="welcome-container"
     style="background-image: url(@(Model.InvestorsWelcome.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
-   <h1>Investors
+   <h1 style="visibility:hidden;">Investors
         </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
         <div class="button">
-        <p><a href="javascript:history.back()" id="return-link">Home</a> - Investors</p>
+        <h1>
+            Investors
+        </h1>
+    @*     <p><a href="javascript:history.back()" id="return-link">Home</a> - Investors</p> *@
      </div>
 
 </section>

@@ -1,10 +1,12 @@
  @model List<yogloansdotnet.Models.CsrWelcome> 
   <section class="welcome-container"
     style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
-        <h1 >CSR
+        <h1 style="visibility:hidden;">CSR
             </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
     <div class="button">
-             <p><a href="javascript:history.back()" id="return-link">Home</a>- CSR</p>
+        <h1 >CSR
+            </h1>
+            @*  <p><a href="javascript:history.back()" id="return-link">Home</a>- CSR</p> *@
      </div>
 
     </section>
@@ -14,10 +16,13 @@
 
     <section class="welcome-container"
     style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
-    <h1 >CSR
+    <h1 style="visibility:hidden;">CSR
             </h1>
     <div class="button">
-             <p><a href="javascript:history.back()" id="return-link">Home</a> - CSR</p>
+        <h1>
+            CSR
+        </h1>
+             @* <p><a href="javascript:history.back()" id="return-link">Home</a> - CSR</p> *@
      </div>
 </section>
 <style>

@@ -5,6 +5,7 @@
         animation: fa-spin 2s infinite linear;
     }
 </style>
+<input type="hidden" id="customer_id_getting" />
 <section class="online-services">
     <div class="online-container">
         <div class="card" data-bs-toggle="modal" data-bs-target="#payOnlineModal">
@@ -70,7 +71,7 @@
                 <span id="taxFormMsg3" class="mt-2"></span>
                 <form id="taxForm3">
                     <div class="mb-3">
-                        <label class="form-label">Customer ID</label>
+                        <label class="form-label">Customer ID or PAN</label>
                         <input type="text" class="form-control" id="customerId3" required>
                     </div>
                     <div class="mb-3">
@@ -121,7 +122,7 @@
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <label class="form-label">Customer ID</label>
+                            <label class="form-label">Customer ID or PAN</label>
                             <input type="text" class="form-control" required>
                         </div>
                         <div class="mb-3">
@@ -151,7 +152,7 @@
                 <form id="taxForm">
 
                     <div class="mb-3">
-                        <label class="form-label">Customer ID</label>
+                        <label class="form-label">Customer ID or PAN</label>
                         <input type="text" class="form-control" id="customerId" required>
                     </div>
                     <div class="mb-3">
@@ -200,7 +201,7 @@
                 <form id="taxForm2">
 
                     <div class="mb-3">
-                        <label class="form-label">Customer ID</label>
+                        <label class="form-label">Customer ID or PAN</label>
                         <input type="text" class="form-control" id="customerId2" required>
                     </div>
                     <div class="mb-3">
@@ -247,7 +248,7 @@
                 <form id="taxForm4">
 
                     <div class="mb-3">
-                        <label class="form-label">Customer ID</label>
+                        <label class="form-label">Customer ID or PAN</label>
                         <input type="text" class="form-control" id="customerId4" required>
                     </div>
                     <div class="mb-3">
@@ -301,18 +302,23 @@
 
         $('#sendOtpBtn').on('click', function (e) {
             e.preventDefault();
-            const customerId = $('#customerId').val();
-            const mobileNo = $('#mobileNo').val();
+                const input = $('#customerId').val();
+                const MobileNo = $('#mobileNo').val();
             $('#taxFormMsg').text('');
             $('#spin-load2').show();
             $.ajax({
                 url: API.allapi.verifyDetails,
                 type: 'POST',
                 contentType: 'application/json',
-                data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
+                       data: JSON.stringify({ Input: input, MobileNo: MobileNo }),
+                    // data: JSON.stringify({ Input: customerId, MobileNo: mobileNo }),
                 success: function (res) {
                     if (res.success) {
                         slNo = res.slNo;
+                             $('#customer_id_getting').val('');
+
+                                    customerId = res.customerId;
+                                        $('#customer_id_getting').val(customerId);
                         $('#otpSection').show();
                         $('#sendOtpBtn').hide();
                         $('#taxFormMsg').text(res.message).css('color', 'green');
@@ -333,7 +339,7 @@
         $('#verifyOtpBtn').on('click', function (e) {
 
             e.preventDefault();
-            const customerId = $('#customerId').val();
+                const customerId = $('#customer_id_getting').val();
             const mobileNo = $('#mobileNo').val();
             const otp = $('#otpInput').val();
             $('#spin-very-load2').show();
@@ -476,18 +482,23 @@
 
         $('#sendOtpBtn2').on('click', function (e) {
             e.preventDefault();
-            const customerId = $('#customerId2').val();
-            const mobileNo = $('#mobileNo2').val();
+                const input = $('#customerId2').val();
+                const MobileNo = $('#mobileNo2').val();
             $('#taxFormMsg2').text('');
             $('#spin-load3').show();
             $.ajax({
                 url: API.allapi.verifyDetails,
                 type: 'POST',
                 contentType: 'application/json',
-                data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
+                     data: JSON.stringify({ Input: input, MobileNo: MobileNo }),
+                //data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
                 success: function (res) {
                     if (res.success) {
                         slNo = res.slNo;
+                               $('#customer_id_getting').val('');
+
+                                customerId = res.customerId;
+                                    $('#customer_id_getting').val(customerId);
                         $('#otpSection2').show();
                         $('#sendOtpBtn2').hide();
                         $('#taxFormMsg2').text(res.message).css('color', 'green');
@@ -507,7 +518,7 @@
         $('#verifyOtpBtn2').on('click', function (e) {
 
             e.preventDefault();
-            const customerId = $('#customerId2').val();
+                const customerId = $('#customer_id_getting').val();
             const mobileNo = $('#mobileNo2').val();
             const otp = $('#otpInput2').val();
             $('#spin-very-load3').show();
@@ -629,19 +640,24 @@
 
         $('#sendOtpBtn3').on('click', function (e) {
             e.preventDefault();
-            const customerId = $('#customerId3').val();
+                const input = $('#customerId3').val();
 
-            const mobileNo = $('#mobileNo3').val();
+                const MobileNo = $('#mobileNo3').val();
             $('#spin-load1').show();
             $('#taxFormMsg3').text('');
             $.ajax({
                 url: API.allapi.verifyDetails,
                 type: 'POST',
                 contentType: 'application/json',
-                data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
+                     data: JSON.stringify({ Input: input, MobileNo: MobileNo }),
+                //data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
                 success: function (res) {
                     if (res.success) {
                         slNo = res.slNo;
+                               $('#customer_id_getting').val('');
+                            
+                            customerId = res.customerId;
+                                $('#customer_id_getting').val(customerId);
                         $('#otpSection3').show();
                         $('#sendOtpBtn3').hide();
                         $('#spin-load1').hide();
@@ -661,7 +677,7 @@
         $('#verifyOtpBtn3').on('click', function (e) {
             e.preventDefault();
 
-            const customerId = $('#customerId3').val();
+                const customerId = $('#customer_id_getting').val();
             const mobileNo = $('#mobileNo3').val();
             const otp = $('#otpInput3').val();
             $('#spin-very-load1').show();
@@ -675,7 +691,7 @@
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
                 success: function (res) {
-                    $('#spin-very-load1').hide();
+                
                     var url = API.allapi.onlineCustomer;
                     //alert(url);
                     if (res.success) {
@@ -748,6 +764,7 @@
                                                 setTimeout(() => {
                                                 window.location.href = `/Onlinepay`;
                                             }, 300);
+                                                    $('#spin-very-load1').hide();
                                         }
                                     },
                                     error: function (err) {
@@ -812,19 +829,24 @@
 
         $('#sendOtpBtn4').on('click', function (e) {
             e.preventDefault();
-            const customerId = $('#customerId4').val();
+                const input = $('#customerId4').val();
 
-            const mobileNo = $('#mobileNo4').val();
+                const MobileNo = $('#mobileNo4').val();
             $('#spin-load4').show();
             $('#taxFormMsg4').text('');
             $.ajax({
                 url: API.allapi.verifyDetails,
                 type: 'POST',
                 contentType: 'application/json',
-                data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
+                     data: JSON.stringify({ Input: input, MobileNo: MobileNo }),
+               // data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo }),
                 success: function (res) {
                     if (res.success) {
+                            $('#customer_id_getting').val('');
                         slNo = res.slNo;
+                        customerId = res.customerId;
+                            $('#customer_id_getting').val(customerId);
+                          
                         $('#otpSection4').show();
                         $('#sendOtpBtn4').hide();
                         $('#spin-load4').hide();
@@ -844,7 +866,7 @@
         $('#verifyOtpBtn4').on('click', function (e) {
             e.preventDefault();
 
-            const customerId = $('#customerId4').val();
+                const customerId = $('#customer_id_getting').val();
             const mobileNo = $('#mobileNo4').val();
             const otp = $('#otpInput4').val();
             $('#spin-very-load4').show();
@@ -858,7 +880,7 @@
                 contentType: 'application/json',
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
                 success: function (res) {
-                    $('#spin-very-load4').hide();
+                    
                        var url = API.allapi.QrData;
                    // alert(url);
                     if (res.success) {
@@ -910,6 +932,7 @@
                                             setTimeout(() => {
                                                 window.location.href = `/Generateqrcode`;
                                             }, 300);
+                                                $('#spin-very-load4').hide();
                                         }
                                     },
                                     error: function (err) {

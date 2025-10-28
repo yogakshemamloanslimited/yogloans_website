@@ -352,5 +352,6 @@ public async Task<IActionResult> Offercreate(string Loan, string offerheader, Li
     }
    }
 }
+
     
 }

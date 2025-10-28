@@ -6,26 +6,27 @@
     height: 120px;
 }
 .loan-items .item-container{
-    width: 80%;
+    width: 100%;
     background-color: whitesmoke;
     height: 120px;
-    margin-top: -50px;
-    position: absolute;
+    /*margin-top: -50px;*/
+    /*position: absolute;*/
     z-index: 2;
     display: flex;
     padding: 10px;
 }
-.loan-items .item-container .item{
-    width: 25%;
-    height: 100%;
-    border-right: 1px solid rgb(212, 209, 209);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   /*  gap: 15px   ; */
-    cursor: pointer;
-}
+    .loan-items .item-container .item {
+        width: 25%;
+        height: 100%;
+        border-right: 1px solid rgb(212, 209, 209);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /*  gap: 15px   ; */
+        cursor: pointer;
+        opacity: 0.2;
+    }
 .point{
     width: 30%;
     height: 100%;
@@ -43,9 +44,10 @@
     width: 100%;
     text-align: center;
 }
-.loan-items .item-container .item.active{
-    background-color: #044697;
+.loan-items .item-container .item.active {
+    background-color: #B4181E;
     color: white;
+    opacity: 1;
 }
 .loan-items .item-container .item.active p{ 
     color: white;
@@ -58,22 +60,24 @@
     display: flex;
     justify-content: center;
 }
-.loan-item-details .detail{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    gap: 20px   ;
-    height: auto;
-    min-height: 150px;
-    box-shadow: 0px 0px 5px 0px rgb(203, 203, 203);
-}
-.loan-item-details .detail p{
-    color: black;
-    width: 70%;
-    background-color: whitesmoke;
-    padding: 20px;
-
-}
+    .loan-item-details .detail {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        height: auto;
+        /*min-height: 150px;*/
+        /*box-shadow: 0px 0px 5px 0px rgb(203, 203, 203);*/
+    }
+        .loan-item-details .detail p {
+            color: black;
+            width: 70%;
+            /*background-color: whitesmoke;*/
+            padding: 20px;
+            font-size: 17px;
+            text-align: justify;
+            line-height: 2;
+        }
 #points{
     width: 100%;
 }
@@ -91,12 +95,12 @@
     width: 15px;
     height: 15px;
 }
-.point button{
+.point button {
     width: 50%;
     padding: 5px;
-    background-color: #044697;
+    background-color: #B4181E;
     color: white;
-    border:none;
+    border: none;
     cursor: pointer;
 }
 @media (max-width:780px){

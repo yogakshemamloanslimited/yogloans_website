@@ -29,22 +29,19 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var goldLoans = _context.Homwelcome.Where(x => x.LoanType == "Gold").ToList();
-        var businessLoans = _context.Homwelcome.Where(x => x.LoanType == "Business").ToList();
-        var vehicleLoans = _context.Homwelcome.Where(x => x.LoanType == "Vehicle").ToList();
-        var cdLoans = _context.Homwelcome.Where(x => x.LoanType == "CD").ToList();
-        var aboutContent = _context.AboutContent.ToList();
-
-        var viewModel = new LoanGroupViewModel
-        {
-            Gold = goldLoans ?? new List<HomwelcomeModel>(),
-            Business = businessLoans ?? new List<HomwelcomeModel>(),
-            Vehicle = vehicleLoans ?? new List<HomwelcomeModel>(),
-            CD = cdLoans ?? new List<HomwelcomeModel>(),
-            AboutContent = aboutContent ?? new List<AboutContentModel>()
-        };
-
+        var viewModel = new LoanGroupViewModel();
         return View(viewModel);
+    }
+    [HttpGet]
+    public async Task<IActionResult> welcomeget(int id) // use int instead of string
+    {
+        // Fetch records that match the loan_id
+        var homwelcomeData = await _context.Homwelcome
+                                           .Where(h => h.loan_id == id)
+                                           .ToListAsync();
+
+        // Return as JSON
+        return Json(homwelcomeData);
     }
 
     [HttpGet]
@@ -79,6 +76,7 @@ public class HomeController : Controller
     {
         return View();
     }
+    
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
@@ -92,13 +90,13 @@ public class HomeController : Controller
     {
         try
         {
-            _logger.LogInformation($"Received form submission. LoanType: {model.LoanType}, Header: {model.Header}");
+            _logger.LogInformation($"Received form submission. Header: {model.Header}");
 
-            // Get existing image paths from form
+            // Get existing image paths (if editing existing record)
             var existingImage1 = Request.Form["ExistingImage1"].ToString();
             var existingImage2 = Request.Form["ExistingImage2"].ToString();
 
-            // Validate required fields
+            // ✅ Validate required fields
             if (string.IsNullOrWhiteSpace(model.Header))
             {
                 TempData["Error"] = "Header is required";
@@ -111,7 +109,13 @@ public class HomeController : Controller
                 return RedirectToAction("Index", "Admin", new { area = "Admin" });
             }
 
-            // Verify database connection
+            if (model.loan_id == 0)
+            {
+                TempData["Error"] = "Please select a valid Loan ID.";
+                return RedirectToAction("Index", "Admin", new { area = "Admin" });
+            }
+
+            // ✅ Verify database connection
             try
             {
                 await _context.Database.OpenConnectionAsync();
@@ -125,27 +129,26 @@ public class HomeController : Controller
                 throw;
             }
 
-            // Check if a record with this loan type already exists
-            var existingRecord = await _context.Homwelcome.FirstOrDefaultAsync(h => h.LoanType == model.LoanType);
+            // ✅ Check if record exists for this loan_id
+            var existingRecord = await _context.Homwelcome.FirstOrDefaultAsync(h => h.loan_id == model.loan_id);
             _logger.LogInformation($"Existing record found: {existingRecord != null}");
+
+            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
 
             if (existingRecord != null)
             {
-                _logger.LogInformation("Updating existing record");
-                // Update existing record
+                // ✅ Update existing record
                 existingRecord.Header = model.Header;
                 existingRecord.SubContent = model.SubContent;
+                existingRecord.loan_id = model.loan_id;
 
-                // Handle image uploads
+                // ✅ Handle Image1
                 if (Image1 != null)
                 {
-                    _logger.LogInformation("Processing Image1 upload");
-                    string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                    if (!Directory.Exists(uploadsFolder))
-                    {
-                        Directory.CreateDirectory(uploadsFolder);
-                    }
-
                     string uniqueFileName1 = Guid.NewGuid().ToString() + "_" + Image1.FileName;
                     string filePath1 = Path.Combine(uploadsFolder, uniqueFileName1);
                     using (var fileStream = new FileStream(filePath1, FileMode.Create))
@@ -156,19 +159,12 @@ public class HomeController : Controller
                 }
                 else if (!string.IsNullOrEmpty(existingImage1))
                 {
-                    // Keep existing image if no new image is uploaded
                     existingRecord.Image1 = existingImage1;
                 }
 
+                // ✅ Handle Image2
                 if (Image2 != null)
                 {
-                    _logger.LogInformation("Processing Image2 upload");
-                    string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                    if (!Directory.Exists(uploadsFolder))
-                    {
-                        Directory.CreateDirectory(uploadsFolder);
-                    }
-
                     string uniqueFileName2 = Guid.NewGuid().ToString() + "_" + Image2.FileName;
                     string filePath2 = Path.Combine(uploadsFolder, uniqueFileName2);
                     using (var fileStream = new FileStream(filePath2, FileMode.Create))
@@ -179,27 +175,17 @@ public class HomeController : Controller
                 }
                 else if (!string.IsNullOrEmpty(existingImage2))
                 {
-                    // Keep existing image if no new image is uploaded
                     existingRecord.Image2 = existingImage2;
                 }
 
                 _context.Homwelcome.Update(existingRecord);
-                _logger.LogInformation("Updated record in context");
-                TempData["Success"] = $"{model.LoanType} loan details updated successfully!";
+                TempData["Success"] = "Loan details updated successfully!";
             }
             else
             {
-                _logger.LogInformation("Creating new record");
-                // Handle image uploads for new record
+                // ✅ Create new record
                 if (Image1 != null)
                 {
-                    _logger.LogInformation("Processing Image1 upload for new record");
-                    string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                    if (!Directory.Exists(uploadsFolder))
-                    {
-                        Directory.CreateDirectory(uploadsFolder);
-                    }
-
                     string uniqueFileName1 = Guid.NewGuid().ToString() + "_" + Image1.FileName;
                     string filePath1 = Path.Combine(uploadsFolder, uniqueFileName1);
                     using (var fileStream = new FileStream(filePath1, FileMode.Create))
@@ -215,13 +201,6 @@ public class HomeController : Controller
 
                 if (Image2 != null)
                 {
-                    _logger.LogInformation("Processing Image2 upload for new record");
-                    string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                    if (!Directory.Exists(uploadsFolder))
-                    {
-                        Directory.CreateDirectory(uploadsFolder);
-                    }
-
                     string uniqueFileName2 = Guid.NewGuid().ToString() + "_" + Image2.FileName;
                     string filePath2 = Path.Combine(uploadsFolder, uniqueFileName2);
                     using (var fileStream = new FileStream(filePath2, FileMode.Create))
@@ -236,22 +215,12 @@ public class HomeController : Controller
                 }
 
                 _context.Homwelcome.Add(model);
-                _logger.LogInformation("Added new record to context");
-                TempData["Success"] = $"{model.LoanType} loan details added successfully!";
+                TempData["Success"] = "Loan details added successfully!";
             }
 
-            try
-            {
-                var result = await _context.SaveChangesAsync();
-                _logger.LogInformation($"Database save completed. Affected rows: {result}");
-            }
-            catch (DbUpdateException ex)
-            {
-                _logger.LogError(ex, "Database update failed");
-                _logger.LogError($"Inner exception: {ex.InnerException?.Message}");
-                TempData["Error"] = "Failed to save changes. Please try again.";
-                throw;
-            }
+            // ✅ Save changes
+            var result = await _context.SaveChangesAsync();
+            _logger.LogInformation($"Database save completed. Rows affected: {result}");
 
             return RedirectToAction("Index", "Admin", new { area = "Admin" });
         }
@@ -285,6 +254,16 @@ public class HomeController : Controller
     }
 
 
+    [HttpGet]
+    [Route("loans")]
+    public async Task<IActionResult> GetLoans()
+    {
+        // Fetch all loans from the database
+        var loans = await _context.Loans.ToListAsync();
+
+        // Return them as JSON
+        return Ok(loans);
+    }
 
 
     [HttpGet]

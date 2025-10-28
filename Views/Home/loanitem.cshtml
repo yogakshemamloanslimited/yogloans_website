@@ -1,81 +1,175 @@
-<link rel="stylesheet" href="~/css/home/loanitem.css" asp-append-version="true">
- <section class="loan-items">
-        <div class="item-container">
-            <div class="item active" id="gold">
-                <img src="images/icon/gold.png" alt="" srcset="">
-                <p>Gold Loan</p>
-            </div>
-            <div class="item" id="business">
-                <img src="images/icon/cooperation.png" alt="" srcset="">
-                <p>Business Loan</p>
-            </div>
-            <div class="item" id="cd">
-                <img src="images/icon/electric-appliances.png" alt="" srcset="">
-                <p>CD Loan</p>
-            </div>
-            <div class="item" style="border:none;" id="vehicle">
-                <img src="images/icon/bike.png" alt="" srcset="">
-                <p>Vehicle Loan</p>
-            </div>
-        </div>
-    </section>
+﻿<link rel="stylesheet" href="~/css/home/loanitem.css" asp-append-version="true">
 
-       <section class="loan-item-details">
-        <div class="detail">
-            <p id="detail-para"></p>
-          
+<!-- LOAN ITEMS SECTION -->
+<section class="loan-items">
+    <div class="item-container"></div>
+</section>
+
+<!-- DETAILS SECTION -->
+<section class="loan-item-details">
+    <div class="detail">
+        <p id="detail-para"></p>
         <div class="point">
             <ul id="points"></ul>
             <button id="redirect2">Apply Now</button>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
+
 <script>
-/* 
-  document.getElementById('loan-id').addEventListener('change', function () {
-        alert('New value: ' + this.value);
-    }); */
-    // Helper function to set loan-id value and call loan()
- 
-    // Wait for the DOM and loan data to be ready
-    document.addEventListener('DOMContentLoaded', function () {
-        // Poll for loanDataCache to be filled by fetchLoanData
-        function showGoldLoanWhenReady() {
-            if (typeof loanDataCache !== 'undefined' && loanDataCache['gold loan']) {
-                // Set Gold Loan as active
-                document.getElementById('gold').classList.add('active');
-                document.getElementById('business').classList.remove('active');
-                document.getElementById('cd').classList.remove('active');
-                document.getElementById('vehicle').classList.remove('active');
-                // Show Gold Loan details
-                if (typeof updateLoanDisplay === 'function') {
-                    updateLoanDisplay('Gold Loan');
+    // ✅ Prevent layout loader from hiding too early
+    window.__keepLoader__ = true;
+
+    $(document).ready(function () {
+        const container = $('.loan-items .item-container');
+        let autoRotateInterval = null;
+
+        // === Load loan items ===
+        $.ajax({
+            url: "/loans",
+            method: "GET",
+            success: function (response) {
+                container.empty();
+
+                response.forEach(function (item) {
+                    const id = item.loanname.replace(/\s+/g, '-').toLowerCase();
+                    container.append(`
+                        <div class="item" id="${id}" data-content="${item.content}" data-id="${item.id}">
+                            <img src="${item.icon}" alt="">
+                            <p>${item.loanname}</p>
+                        </div>
+                    `);
+                });
+
+                // === Update content for active item ===
+                function updateActiveContent() {
+                    const activeItem = $('.item.active');
+                    if (activeItem.length) {
+                        const content = activeItem.data('content');
+                        $('#detail-para').text(content);
+                        GetValue(activeItem.data('id'));
+                    }
                 }
-            } else {
-                // Try again in 100ms
-                setTimeout(showGoldLoanWhenReady, 100);
+
+                // === Manual click change ===
+                container.on('click', '.item', function () {
+                    $('.item').removeClass('active');
+                    $(this).addClass('active');
+                    updateActiveContent();
+                    resetAutoRotate();
+                });
+
+                // === Initially activate first item ===
+                const firstItem = container.find('.item').first();
+                if (firstItem.length) {
+                    firstItem.addClass('active');
+                    updateActiveContent();
+                }
+
+                // === Auto rotation logic ===
+                function autoRotate() {
+                    const items = $('.item');
+                    const activeItem = $('.item.active');
+                    let nextItem = activeItem.next('.item');
+                    if (!nextItem.length) nextItem = items.first();
+
+                    $('.item').removeClass('active');
+                    nextItem.addClass('active');
+                    updateActiveContent();
+                }
+
+                function startAutoRotate() {
+                    // ✅ Prevent multiple intervals
+                    if (autoRotateInterval) clearInterval(autoRotateInterval);
+                    autoRotateInterval = setInterval(autoRotate, 4000);
+                }
+
+                function stopAutoRotate() {
+                    if (autoRotateInterval) {
+                        clearInterval(autoRotateInterval);
+                        autoRotateInterval = null;
+                    }
+                }
+
+                function resetAutoRotate() {
+                    stopAutoRotate();
+                    startAutoRotate();
+                }
+
+                // ✅ Pause rotation on hover
+                $('.loan-items')
+                    .on('mouseenter', stopAutoRotate)
+                    .on('mouseleave', startAutoRotate);
+
+                // ✅ Start rotation once everything is ready
+                startAutoRotate();
             }
-        }
-        showGoldLoanWhenReady();
-    });
+        });
 
+        // === Fetch points + background image ===
+        function GetValue(loanId) {
+            // Load points list
+            $.ajax({
+                url: "/Loan-points/" + encodeURIComponent(loanId),
+                method: "GET",
+                success: function (response) {
+                    const data = response.data;
+                    $('#points').empty();
+                    data.forEach(function (point) {
+                        $('#points').append(`<li><img src="images/icon/checklist.png" alt=""> ${point.point}</li>`);
+                    });
+                }
+            });
 
-window.GetValue = function(loan) {
-    $.ajax({
-        url : "/Loan-points/" + loan,
-        method : "GET", 
-        success : function(response){
-            console.log(response);
-            const data = response.data;
+            // === Load background content ===
+            $.ajax({
+                url: "home/welcomeget",
+                method: "GET",
+                data: { id: loanId },
+                success: function (response) {
+                    if (Array.isArray(response) && response.length > 0) {
+                        const data = response[0];
+                        $('#header').text(data.header);
+                        $('#sub').text(data.subContent);
 
-            
-            $('#points').empty();
+                        const container = $('.welcome-container');
+                        const imageUrl = window.innerWidth <= 768 ? data.image2 : data.image1;
 
-            data.forEach(function(point) {
-                $('#points').append(`<li><img src="images/icon/checklist.png" alt="" srcset=""> ${point.point}</li>`);
+                        // === Preload background image ===
+                        const img = new Image();
+                        img.onload = function () {
+                            container.css({
+                                'background-image': `url('${imageUrl}')`,
+                                'background-size': 'cover',
+                                'background-position': 'center'
+                            });
+
+                            // ✅ Hide loader only after background is ready
+                            $('.loader').fadeOut();
+                            $('.loader-mask').delay(450).fadeOut('slow');
+                            window.__keepLoader__ = false;
+                        };
+                        img.onerror = function () {
+                            // Hide loader even if image fails
+                            $('.loader').fadeOut();
+                            $('.loader-mask').delay(450).fadeOut('slow');
+                            window.__keepLoader__ = false;
+                        };
+                        img.src = imageUrl;
+                    } else {
+                        $('#header').text('');
+                        $('#sub').text('');
+                        $('.loader').fadeOut();
+                        $('.loader-mask').delay(450).fadeOut('slow');
+                        window.__keepLoader__ = false;
+                    }
+                },
+                error: function () {
+                    $('.loader').fadeOut();
+                    $('.loader-mask').delay(450).fadeOut('slow');
+                    window.__keepLoader__ = false;
+                }
             });
         }
     });
-}
-
 </script>

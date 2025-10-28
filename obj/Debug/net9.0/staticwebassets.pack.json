@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\yogloansdotnet.bundle.scp.css",
-      "PackagePath": "staticwebassets\\yogloansdotnet.p5bg5q3fvz.bundle.scp.css"
+      "PackagePath": "staticwebassets\\yogloansdotnet.i8dc9jxmu0.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\Gallery\\style.css",
@@ -289,6 +289,10 @@
       "PackagePath": "staticwebassets\\images\\icon\\show.png"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\sign-up.png",
+      "PackagePath": "staticwebassets\\images\\icon\\sign-up.png"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\social-media.png",
       "PackagePath": "staticwebassets\\images\\icon\\social-media.png"
     },
@@ -311,6 +315,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\viewpng.png",
       "PackagePath": "staticwebassets\\images\\icon\\viewpng.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\Logo2.png",
+      "PackagePath": "staticwebassets\\images\\logo\\Logo2.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\chat-icon.png",
@@ -889,164 +897,180 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\06ccaca6-130f-4718-b024-85549ddd4fcc_Screenshot 2025-05-15 135932.png",
-      "PackagePath": "staticwebassets\\uploads\\06ccaca6-130f-4718-b024-85549ddd4fcc_Screenshot 2025-05-15 135932.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\00196dd0-bf99-4718-b6fe-8227d74d3374_cd loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\00196dd0-bf99-4718-b6fe-8227d74d3374_cd loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\0bd1feb7-6815-46af-8623-c14fc22c2d81_vehicle2.png",
-      "PackagePath": "staticwebassets\\uploads\\0bd1feb7-6815-46af-8623-c14fc22c2d81_vehicle2.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\023d989f-1077-498b-9354-f4e9cefc749d_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\023d989f-1077-498b-9354-f4e9cefc749d_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\10ff1659-6476-4733-8c80-77bfd7f89bb8_cd2.png",
-      "PackagePath": "staticwebassets\\uploads\\10ff1659-6476-4733-8c80-77bfd7f89bb8_cd2.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\0dd9c632-9e5b-4217-aa8d-b8712b19e56a_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\0dd9c632-9e5b-4217-aa8d-b8712b19e56a_Business loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\183a048f-28ea-4d4a-abf3-d81067351972_Businessloan.png",
-      "PackagePath": "staticwebassets\\uploads\\183a048f-28ea-4d4a-abf3-d81067351972_Businessloan.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\0f6842d5-d4f2-41ff-96d7-e220b371465c_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\0f6842d5-d4f2-41ff-96d7-e220b371465c_Business loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\1ec8387e-67f0-4d11-bb58-a8beb5edb26e_front-view-arrangement-economy-elements.jpg",
-      "PackagePath": "staticwebassets\\uploads\\1ec8387e-67f0-4d11-bb58-a8beb5edb26e_front-view-arrangement-economy-elements.jpg"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\12ca388e-dd4e-4632-b7a9-635ca4467c76_vehicle loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\12ca388e-dd4e-4632-b7a9-635ca4467c76_vehicle loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\22636b32-6071-49ad-abe4-bb122d9540a4_Screenshot 2025-05-15 134712.png",
-      "PackagePath": "staticwebassets\\uploads\\22636b32-6071-49ad-abe4-bb122d9540a4_Screenshot 2025-05-15 134712.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\1633cf85-f926-45af-8392-c63bd8787278_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\1633cf85-f926-45af-8392-c63bd8787278_Business loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\23fc40ab-84f2-4441-9b06-0cf06d8f95f5_Screenshot 2025-05-15 142924.png",
-      "PackagePath": "staticwebassets\\uploads\\23fc40ab-84f2-4441-9b06-0cf06d8f95f5_Screenshot 2025-05-15 142924.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\180c9150-a402-4718-afff-c307ef67f5df_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\180c9150-a402-4718-afff-c307ef67f5df_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\2d159650-1a77-4cbb-8895-7f410c501f5a_cd.png",
-      "PackagePath": "staticwebassets\\uploads\\2d159650-1a77-4cbb-8895-7f410c501f5a_cd.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\18d6efdb-d07a-46e6-96c9-27840502b469_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\18d6efdb-d07a-46e6-96c9-27840502b469_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\2df5b683-e9f8-4931-84d3-a61d895de7c1_Screenshot 2025-05-15 142909.png",
-      "PackagePath": "staticwebassets\\uploads\\2df5b683-e9f8-4931-84d3-a61d895de7c1_Screenshot 2025-05-15 142909.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\19809c1f-ecc0-443b-81df-16afea056668_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\19809c1f-ecc0-443b-81df-16afea056668_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\3b74a599-79de-4181-abc4-b970d5c25181_cdloan.png",
-      "PackagePath": "staticwebassets\\uploads\\3b74a599-79de-4181-abc4-b970d5c25181_cdloan.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\1e9706b5-0932-408d-898b-f87306a93485_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\1e9706b5-0932-408d-898b-f87306a93485_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\3e5ebcb8-1030-406f-84f3-89e7d14a9bd1_Screenshot 2025-05-15 142909.png",
-      "PackagePath": "staticwebassets\\uploads\\3e5ebcb8-1030-406f-84f3-89e7d14a9bd1_Screenshot 2025-05-15 142909.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\1ec37ae2-8f53-4f4f-91e0-56e48eb7c8f9_cooperation.png",
+      "PackagePath": "staticwebassets\\uploads\\1ec37ae2-8f53-4f4f-91e0-56e48eb7c8f9_cooperation.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\4253a567-2c52-438b-8b36-94c11a690037_gold.png",
-      "PackagePath": "staticwebassets\\uploads\\4253a567-2c52-438b-8b36-94c11a690037_gold.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\22dbe009-2af6-4009-81a7-9a2ab292539d_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\22dbe009-2af6-4009-81a7-9a2ab292539d_gold Loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\470b248b-4004-49e5-a535-688e9dec667b_Screenshot 2025-05-15 142924.png",
-      "PackagePath": "staticwebassets\\uploads\\470b248b-4004-49e5-a535-688e9dec667b_Screenshot 2025-05-15 142924.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\25bc3d87-86a4-4126-b70a-4233a3883635_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\25bc3d87-86a4-4126-b70a-4233a3883635_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\4969f354-198b-4baa-b011-1ade02d48082_gold.png",
-      "PackagePath": "staticwebassets\\uploads\\4969f354-198b-4baa-b011-1ade02d48082_gold.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\2b242c18-ca08-472b-bffa-78b2f57d5843_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\2b242c18-ca08-472b-bffa-78b2f57d5843_gold Loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\4e1807e5-c758-47bf-9d3d-4ab86bd925ef_business-background2.png",
-      "PackagePath": "staticwebassets\\uploads\\4e1807e5-c758-47bf-9d3d-4ab86bd925ef_business-background2.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\2c4e0828-1401-4c5c-acb9-d646f22270fe_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\2c4e0828-1401-4c5c-acb9-d646f22270fe_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\4f050631-2009-4a72-a5a9-5d97e0718be1_bike-background.png",
-      "PackagePath": "staticwebassets\\uploads\\4f050631-2009-4a72-a5a9-5d97e0718be1_bike-background.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\2cf7432b-eedf-4fc0-92ba-d660580741b3_electric-appliances.png",
+      "PackagePath": "staticwebassets\\uploads\\2cf7432b-eedf-4fc0-92ba-d660580741b3_electric-appliances.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\5f8fabbc-1309-4cd8-97c0-a1de30648c86_Screenshot 2025-05-15 142924.png",
-      "PackagePath": "staticwebassets\\uploads\\5f8fabbc-1309-4cd8-97c0-a1de30648c86_Screenshot 2025-05-15 142924.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\2d895f75-2f5e-4c7d-80b2-e1905a181de9_vehicle loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\2d895f75-2f5e-4c7d-80b2-e1905a181de9_vehicle loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\629a10b0-07b6-405f-81ab-a49731cf395e_gold.png",
-      "PackagePath": "staticwebassets\\uploads\\629a10b0-07b6-405f-81ab-a49731cf395e_gold.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\30826128-f29f-4117-b89f-b33548661139_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\30826128-f29f-4117-b89f-b33548661139_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\637a6888-a9be-4834-83c5-155b76363427_Screenshot 2025-05-15 142924.png",
-      "PackagePath": "staticwebassets\\uploads\\637a6888-a9be-4834-83c5-155b76363427_Screenshot 2025-05-15 142924.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\31d0359a-1f32-415a-80d0-705c1d9bdb37_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\31d0359a-1f32-415a-80d0-705c1d9bdb37_gold Loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\65a224df-67d3-49ad-8406-872e63811805_Screenshot 2025-05-15 142909.png",
-      "PackagePath": "staticwebassets\\uploads\\65a224df-67d3-49ad-8406-872e63811805_Screenshot 2025-05-15 142909.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\33bb9211-0308-4f3d-b6c8-2aaf9644dead_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\33bb9211-0308-4f3d-b6c8-2aaf9644dead_gold Loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\6840749d-772e-49bc-bc14-4df3e308202c_Screenshot 2025-05-15 142924.png",
-      "PackagePath": "staticwebassets\\uploads\\6840749d-772e-49bc-bc14-4df3e308202c_Screenshot 2025-05-15 142924.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\371c08c0-d82b-4441-9fde-581becbf96af_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\371c08c0-d82b-4441-9fde-581becbf96af_gold Loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\6a33a3d3-a2f9-4079-8742-02c55ad15829_Screenshot 2025-05-15 095357.png",
-      "PackagePath": "staticwebassets\\uploads\\6a33a3d3-a2f9-4079-8742-02c55ad15829_Screenshot 2025-05-15 095357.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\38a7b527-da70-4af3-bb88-733c6f0575d3_cd loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\38a7b527-da70-4af3-bb88-733c6f0575d3_cd loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\6e044559-cce7-4bf0-8cca-b6dfd2a83136_Screenshot 2025-05-15 142924.png",
-      "PackagePath": "staticwebassets\\uploads\\6e044559-cce7-4bf0-8cca-b6dfd2a83136_Screenshot 2025-05-15 142924.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\39243cd5-792e-4978-bec0-026cbfef9593_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\39243cd5-792e-4978-bec0-026cbfef9593_Business loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\70295a38-faf9-4316-b51b-aaed5b43afea_Screenshot 2025-05-15 142924.png",
-      "PackagePath": "staticwebassets\\uploads\\70295a38-faf9-4316-b51b-aaed5b43afea_Screenshot 2025-05-15 142924.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\3a36ab4d-b2bb-4464-8ef0-6b32d9f36f34_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\3a36ab4d-b2bb-4464-8ef0-6b32d9f36f34_gold Loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\70a4db80-daa4-4cb4-b771-3a8af6a2e6e1_Screenshot 2025-05-15 142909.png",
-      "PackagePath": "staticwebassets\\uploads\\70a4db80-daa4-4cb4-b771-3a8af6a2e6e1_Screenshot 2025-05-15 142909.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\3c612b8b-dc77-40bc-869f-cb22b7e08624_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\3c612b8b-dc77-40bc-869f-cb22b7e08624_gold Loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\71119de5-4e43-4598-a78d-516d57b63997_Screenshot 2025-05-15 142909.png",
-      "PackagePath": "staticwebassets\\uploads\\71119de5-4e43-4598-a78d-516d57b63997_Screenshot 2025-05-15 142909.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\4140572f-dfb1-4f46-8a8c-22ddf32f4737_cd loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\4140572f-dfb1-4f46-8a8c-22ddf32f4737_cd loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\733b35d3-c1dd-4e46-8f52-4dc4368ebfdf_vehicle2.png",
-      "PackagePath": "staticwebassets\\uploads\\733b35d3-c1dd-4e46-8f52-4dc4368ebfdf_vehicle2.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\4319e028-d9b4-4ed1-a42e-8aa60bd6d904_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\4319e028-d9b4-4ed1-a42e-8aa60bd6d904_Business loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\7581884b-c8f3-476a-9ed6-7df514ade946_Screenshot 2025-05-15 142924.png",
-      "PackagePath": "staticwebassets\\uploads\\7581884b-c8f3-476a-9ed6-7df514ade946_Screenshot 2025-05-15 142924.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\46e52b97-bf7f-41fb-8e95-d36416a04f4f_vehicle loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\46e52b97-bf7f-41fb-8e95-d36416a04f4f_vehicle loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\7e2a37a7-8a0d-446b-a9ad-b9eabe404b98_gold.png",
-      "PackagePath": "staticwebassets\\uploads\\7e2a37a7-8a0d-446b-a9ad-b9eabe404b98_gold.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\4abbe5b8-eed2-4e84-9d48-acb4d122f12d_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\4abbe5b8-eed2-4e84-9d48-acb4d122f12d_Business loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\8169f491-9a41-434c-90a7-a10e1d2ec60f_Mohandas.jpg",
-      "PackagePath": "staticwebassets\\uploads\\8169f491-9a41-434c-90a7-a10e1d2ec60f_Mohandas.jpg"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\4b1fc8de-c9fc-44d9-8c56-142d18075af1_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\4b1fc8de-c9fc-44d9-8c56-142d18075af1_Business loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\84907cda-b0c4-4fa6-875b-57ca7c11a49b_mail.png",
-      "PackagePath": "staticwebassets\\uploads\\84907cda-b0c4-4fa6-875b-57ca7c11a49b_mail.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\4ec86d1f-67ac-4c2b-be54-7f5196b740d7_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\4ec86d1f-67ac-4c2b-be54-7f5196b740d7_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\8a79511b-14f4-4c5e-94e6-e9d371b73991_gold.png",
-      "PackagePath": "staticwebassets\\uploads\\8a79511b-14f4-4c5e-94e6-e9d371b73991_gold.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\53a3e1b3-796f-451f-b607-1698a0f03f5a_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\53a3e1b3-796f-451f-b607-1698a0f03f5a_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\8d191c63-4c35-4ddb-9e30-609bd95429f0_Screenshot 2025-05-15 142924.png",
-      "PackagePath": "staticwebassets\\uploads\\8d191c63-4c35-4ddb-9e30-609bd95429f0_Screenshot 2025-05-15 142924.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\53e11551-1a1d-4eca-bf2a-6eebe415aa52_gold.png",
+      "PackagePath": "staticwebassets\\uploads\\53e11551-1a1d-4eca-bf2a-6eebe415aa52_gold.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\8d873d9f-385a-4930-a4a2-ac3212e671b0_Screenshot 2025-05-15 142909.png",
-      "PackagePath": "staticwebassets\\uploads\\8d873d9f-385a-4930-a4a2-ac3212e671b0_Screenshot 2025-05-15 142909.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\58302ca5-89d6-4b0f-a4c1-ca61ffbcdf6c_vehicle loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\58302ca5-89d6-4b0f-a4c1-ca61ffbcdf6c_vehicle loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\902db853-6683-4d74-9509-f71d57b8c154_bike-background.png",
-      "PackagePath": "staticwebassets\\uploads\\902db853-6683-4d74-9509-f71d57b8c154_bike-background.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\5beeabe4-8ea5-4a69-b854-762f295ca1b2_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\5beeabe4-8ea5-4a69-b854-762f295ca1b2_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\921e5a57-bf88-44e3-bae5-86a2378118a4_vehicleloan.png",
-      "PackagePath": "staticwebassets\\uploads\\921e5a57-bf88-44e3-bae5-86a2378118a4_vehicleloan.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\658cec7a-7763-4da7-9ac8-abb9c7594f51_ChatGPT Image Oct 23, 2025, 02_38_25 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\658cec7a-7763-4da7-9ac8-abb9c7594f51_ChatGPT Image Oct 23, 2025, 02_38_25 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\96515ee1-9709-4efa-8fbf-808a6314e749_Screenshot 2025-05-15 135932.png",
-      "PackagePath": "staticwebassets\\uploads\\96515ee1-9709-4efa-8fbf-808a6314e749_Screenshot 2025-05-15 135932.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\65d07dad-518a-4aa6-94a3-b5f810517cfa_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\65d07dad-518a-4aa6-94a3-b5f810517cfa_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\96d203a2-254c-4eb6-bfac-7b177738c157_Screenshot 2025-05-15 135932.png",
-      "PackagePath": "staticwebassets\\uploads\\96d203a2-254c-4eb6-bfac-7b177738c157_Screenshot 2025-05-15 135932.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\6762a586-f236-47fd-945d-209b8b3f9d1b_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\6762a586-f236-47fd-945d-209b8b3f9d1b_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\9b769c86-6ed1-4461-a5b7-eb2dfa55de94_gold.png",
-      "PackagePath": "staticwebassets\\uploads\\9b769c86-6ed1-4461-a5b7-eb2dfa55de94_gold.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\6ea3fb9e-ff75-4664-baab-9ae472e776a8_intellectual-property.png",
+      "PackagePath": "staticwebassets\\uploads\\6ea3fb9e-ff75-4664-baab-9ae472e776a8_intellectual-property.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\9d45ed2c-2103-404a-8cc4-bdddb09b84de_gold2.png",
-      "PackagePath": "staticwebassets\\uploads\\9d45ed2c-2103-404a-8cc4-bdddb09b84de_gold2.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\73c6a03e-b088-4bda-a4ef-6d3b227289d8_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\73c6a03e-b088-4bda-a4ef-6d3b227289d8_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\795aea56-5948-4b0a-b4b3-10a4571a6222_cd loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\795aea56-5948-4b0a-b4b3-10a4571a6222_cd loan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\7f1ce411-92f1-41a6-8cee-1f25d21da6bf_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\7f1ce411-92f1-41a6-8cee-1f25d21da6bf_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\8c90b1a3-4b01-4fe3-a656-46fb9b18a19d_vehicle loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\8c90b1a3-4b01-4fe3-a656-46fb9b18a19d_vehicle loan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\90dd30a7-4c74-4376-91b4-27b97332f2f2_cooperation.png",
+      "PackagePath": "staticwebassets\\uploads\\90dd30a7-4c74-4376-91b4-27b97332f2f2_cooperation.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\Announcements\\Form15G-3_862dcb76-66f1-402c-adde-a588af1f2907.pdf",
@@ -1189,44 +1213,116 @@
       "PackagePath": "staticwebassets\\uploads\\Unpaid\\income_4b20eae1-2362-4001-9c75-b29dd57b13ab.pdf"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\a1690b05-a105-47cb-8dfd-57d97dc68c68_Businessloan.png",
-      "PackagePath": "staticwebassets\\uploads\\a1690b05-a105-47cb-8dfd-57d97dc68c68_Businessloan.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\_Layout.cshtml.css",
+      "PackagePath": "staticwebassets\\uploads\\_Layout.cshtml.css"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\a8008ff2-8bf6-4059-9898-fe9888bbad43_cdloan.png",
-      "PackagePath": "staticwebassets\\uploads\\a8008ff2-8bf6-4059-9898-fe9888bbad43_cdloan.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\a7706229-1eac-4151-b413-5f1d424e0436_cd loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\a7706229-1eac-4151-b413-5f1d424e0436_cd loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\a8ab0e2a-e141-49a6-aaaa-f027daeea281_consumer-durables-background.png",
-      "PackagePath": "staticwebassets\\uploads\\a8ab0e2a-e141-49a6-aaaa-f027daeea281_consumer-durables-background.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\a99f92f2-c8be-4606-b237-9a0f810dba4c_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\a99f92f2-c8be-4606-b237-9a0f810dba4c_gold Loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\aa512fae-bbd1-45e7-8fb5-de39e804a6b3_Screenshot 2025-05-15 142909.png",
-      "PackagePath": "staticwebassets\\uploads\\aa512fae-bbd1-45e7-8fb5-de39e804a6b3_Screenshot 2025-05-15 142909.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\aa561646-ba15-4508-9e22-8bca2c6053a3_vehicle loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\aa561646-ba15-4508-9e22-8bca2c6053a3_vehicle loan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\aa978589-82da-4fa3-acbe-9983f557e794_vehicle loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\aa978589-82da-4fa3-acbe-9983f557e794_vehicle loan@3x.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a.png",
       "PackagePath": "staticwebassets\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a.png"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a_3cc0d700-1cce-4bcb-988a-43b9870098dd.png",
+      "PackagePath": "staticwebassets\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a_3cc0d700-1cce-4bcb-988a-43b9870098dd.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a_92eaa83a-e003-4b28-ac49-c3a97321fe22.png",
+      "PackagePath": "staticwebassets\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a_92eaa83a-e003-4b28-ac49-c3a97321fe22.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a_c2f453ff-627c-4152-8ea1-319b7cdb5939.png",
+      "PackagePath": "staticwebassets\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a_c2f453ff-627c-4152-8ea1-319b7cdb5939.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a_e5e8d435-c0a4-4b26-94c4-796cddaebf35.png",
+      "PackagePath": "staticwebassets\\uploads\\about\\about_01b1644c-dcf5-47e0-89d3-c122d81f935a_e5e8d435-c0a4-4b26-94c4-796cddaebf35.png"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\about\\about_a66d28b5-6a4a-42ad-9c63-d55e838374d8.png",
       "PackagePath": "staticwebassets\\uploads\\about\\about_a66d28b5-6a4a-42ad-9c63-d55e838374d8.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\ae848e36-4a41-4018-a749-25677b79ad35_vehicleloan.png",
-      "PackagePath": "staticwebassets\\uploads\\ae848e36-4a41-4018-a749-25677b79ad35_vehicleloan.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\b03a5bd8-71de-427a-969f-45f2e301dd0e_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\b03a5bd8-71de-427a-969f-45f2e301dd0e_Business loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\bbef747f-3afd-4c2e-8ed7-a24da2ce2c64_Artboard_2[1].png",
-      "PackagePath": "staticwebassets\\uploads\\bbef747f-3afd-4c2e-8ed7-a24da2ce2c64_Artboard_2[1].png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\b18ddb94-e508-4765-8771-949358fb2317_bike.png",
+      "PackagePath": "staticwebassets\\uploads\\b18ddb94-e508-4765-8771-949358fb2317_bike.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\c5db4e28-44c1-46c2-a43f-7264add301b2_business.png",
-      "PackagePath": "staticwebassets\\uploads\\c5db4e28-44c1-46c2-a43f-7264add301b2_business.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\b1b829bc-632f-4ec0-9398-810124948537_cd loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\b1b829bc-632f-4ec0-9398-810124948537_cd loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\c8d5c50b-8be0-4b00-929f-04aae5948622_Screenshot 2025-05-15 142924.png",
-      "PackagePath": "staticwebassets\\uploads\\c8d5c50b-8be0-4b00-929f-04aae5948622_Screenshot 2025-05-15 142924.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\b4c0c6f5-91cc-4fc3-8bcc-1dbb5085cac2_vehicle loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\b4c0c6f5-91cc-4fc3-8bcc-1dbb5085cac2_vehicle loan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\b7b3857d-2367-4503-9953-2c64b2c0db8b_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\b7b3857d-2367-4503-9953-2c64b2c0db8b_Business loan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\b8a375c6-1e08-44d3-97e5-1b6ed0ab1cc4_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\b8a375c6-1e08-44d3-97e5-1b6ed0ab1cc4_gold Loan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\b9963393-36fc-4851-b4cd-ab97cca2ffd4_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\b9963393-36fc-4851-b4cd-ab97cca2ffd4_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\ba839cca-b083-45c9-b563-cc3d8b28fd51_gold.png",
+      "PackagePath": "staticwebassets\\uploads\\ba839cca-b083-45c9-b563-cc3d8b28fd51_gold.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\bd5b985e-508f-45d8-a16d-e6ee744724a6_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\bd5b985e-508f-45d8-a16d-e6ee744724a6_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\c0492605-eda1-40cf-90d9-747c75d4214b_intellectual-property.png",
+      "PackagePath": "staticwebassets\\uploads\\c0492605-eda1-40cf-90d9-747c75d4214b_intellectual-property.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\c1956566-845f-49e9-8a58-7ed652454a38_electric-appliances.png",
+      "PackagePath": "staticwebassets\\uploads\\c1956566-845f-49e9-8a58-7ed652454a38_electric-appliances.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\c6b34a51-fa3f-480b-a486-a3a5feece2d7_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\c6b34a51-fa3f-480b-a486-a3a5feece2d7_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\c7001f1f-10fb-4962-b099-ad4509006083_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\c7001f1f-10fb-4962-b099-ad4509006083_Business loan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\c8141575-a627-43ab-854a-d3b49c58a306_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\c8141575-a627-43ab-854a-d3b49c58a306_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\c8a5acb9-fae6-40e6-adbf-f8786e5ec802_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\c8a5acb9-fae6-40e6-adbf-f8786e5ec802_gold Loan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\c94be1bc-a587-4a7c-8a83-ee794bec1c54_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\c94be1bc-a587-4a7c-8a83-ee794bec1c54_Business loan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\cad12dec-535f-448a-8489-ac708faaa11d_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\cad12dec-535f-448a-8489-ac708faaa11d_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\career\\career_10694319-2a4d-4138-83bb-f8b99417423a.png",
@@ -1309,6 +1405,10 @@
       "PackagePath": "staticwebassets\\uploads\\career\\doc\\document_2fd53835-8cd1-474c-82c5-5d2b52850215.pdf"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\cde09805-0072-4235-a30c-160433d035e2_bike.png",
+      "PackagePath": "staticwebassets\\uploads\\cde09805-0072-4235-a30c-160433d035e2_bike.png"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\contact\\contact_338ec5a1-f897-456b-ac32-b452bb725219.png",
       "PackagePath": "staticwebassets\\uploads\\contact\\contact_338ec5a1-f897-456b-ac32-b452bb725219.png"
     },
@@ -1317,8 +1417,16 @@
       "PackagePath": "staticwebassets\\uploads\\contact\\contact_5cf4cf6e-f9ff-4a51-a402-bbb53893a83c.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\d64c2a59-efad-4c83-b3c2-41b3419fa497_cdloan.png",
-      "PackagePath": "staticwebassets\\uploads\\d64c2a59-efad-4c83-b3c2-41b3419fa497_cdloan.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\d090ec8c-80c6-4de3-bb1f-cdd8a19af1c3_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\d090ec8c-80c6-4de3-bb1f-cdd8a19af1c3_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\d57b2cc7-27b3-443d-bd7c-3667b9eaef51_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\d57b2cc7-27b3-443d-bd7c-3667b9eaef51_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\dd2d0ae0-d330-4a25-bba9-a3ee054e4da6_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\dd2d0ae0-d330-4a25-bba9-a3ee054e4da6_gold Loan@3x.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\disclosure\\CSRProject2021-22_46f215a5-2481-462f-a78d-247f18ddf368.pdf",
@@ -1333,28 +1441,40 @@
       "PackagePath": "staticwebassets\\uploads\\disclosure\\income_043a3abe-fa13-4bb4-acf2-e5e4e69ccee9.pdf"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\e1a9a5c2-e164-4854-8726-a4fe578e3cd6_gold.png",
-      "PackagePath": "staticwebassets\\uploads\\e1a9a5c2-e164-4854-8726-a4fe578e3cd6_gold.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\e904d037-a2b2-4970-a3cf-ba7e1621a8bd_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\e904d037-a2b2-4970-a3cf-ba7e1621a8bd_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\e66aa5ac-ee99-470a-8005-806a27a45e6b_business-background.png",
-      "PackagePath": "staticwebassets\\uploads\\e66aa5ac-ee99-470a-8005-806a27a45e6b_business-background.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\edae1374-94ed-4490-be24-07cd313988ca_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\edae1374-94ed-4490-be24-07cd313988ca_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\ece06f2f-c10c-4dca-b2a9-ec6ba518c073_gold.png",
-      "PackagePath": "staticwebassets\\uploads\\ece06f2f-c10c-4dca-b2a9-ec6ba518c073_gold.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\ef16f504-36aa-4672-9f03-efa4e8bec787_gold Loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\ef16f504-36aa-4672-9f03-efa4e8bec787_gold Loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\ee44e083-2b21-4dbe-9e1b-04d74e91c303_Screenshot 2025-05-15 142909.png",
-      "PackagePath": "staticwebassets\\uploads\\ee44e083-2b21-4dbe-9e1b-04d74e91c303_Screenshot 2025-05-15 142909.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\f2983f07-3b7b-4c13-89bb-d941105efb4c_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\f2983f07-3b7b-4c13-89bb-d941105efb4c_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\f1e48cb1-dff7-4959-97f1-0fff6c28add3_Screenshot 2025-05-15 142909.png",
-      "PackagePath": "staticwebassets\\uploads\\f1e48cb1-dff7-4959-97f1-0fff6c28add3_Screenshot 2025-05-15 142909.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\f6a02354-71cc-43c0-935e-69486d17556a_Business loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\f6a02354-71cc-43c0-935e-69486d17556a_Business loan@3x.png"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\f8a9b0fb-0a63-4106-ba2b-7b93068f2360_cdloan.png",
-      "PackagePath": "staticwebassets\\uploads\\f8a9b0fb-0a63-4106-ba2b-7b93068f2360_cdloan.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\fbd7c45e-3643-45ee-902a-f159401658d8_Group 1(6).png",
+      "PackagePath": "staticwebassets\\uploads\\fbd7c45e-3643-45ee-902a-f159401658d8_Group 1(6).png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\fd4bb217-3966-495c-9c13-073ce38f5e1b_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\fd4bb217-3966-495c-9c13-073ce38f5e1b_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\ff138f7a-0277-4425-b084-e587e3c74688_cd loan@3x.png",
+      "PackagePath": "staticwebassets\\uploads\\ff138f7a-0277-4425-b084-e587e3c74688_cd loan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\ff8c1779-d5ab-4239-87fe-943988351bb0_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png",
+      "PackagePath": "staticwebassets\\uploads\\ff8c1779-d5ab-4239-87fe-943988351bb0_ChatGPT Image Oct 23, 2025, 02_41_18 PM.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\uploads\\investor\\1320732_a2630bf4-43bb-45b9-95ee-b95a5c519ca9.jpg",

@@ -2,7 +2,7 @@
     Layout = null;
 }
 @model yogloansdotnet.Models.LoanGroupViewModel
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <style>
     .welcome-container {
@@ -17,6 +17,24 @@
         background-color: white;
 
     }
+    .cards .card{
+        max-width:252.317px;
+    }
+
+    #total-table {
+        width: 80%;
+        background: none;
+        background: #7f3f3f00;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #total-table tbody {
+        text-align: center;
+        padding: 5px;
+    }
+
 
     .items {
         width: 85%;
@@ -25,12 +43,27 @@
         position: relative;
         @*   border-radius: 20%; *@
     }
-#image-pro {
-    transition: all 0.3s ease-in-out; /* smooth transition for size & position */
-    position: relative; /* initial position */
-    height: 250px;
-    width: 100px;
-}
+
+    #error_span{
+        color:red;
+    }
+
+    #error_span2 {
+        color: red;
+    }
+
+    #proceed_span{
+        color:green;
+    }
+
+    #image-pro {
+        transition: all 0.3s ease-in-out;
+        /* smooth transition for size & position */
+        position: relative;
+        /* initial position */
+        height: 250px;
+        width: 100px;
+    }
 
     .cards {
         display: grid;
@@ -40,6 +73,7 @@
         margin-top: 10px;
     }
 
+ 
     .cards .card {
         background: #ffffff;
         height: 200px;
@@ -119,13 +153,16 @@
         transition: 0.5s ease-in-out;
     }
 
- 
 
-    tr{
+
+    tr {
         text-align: start !important;
     }
 
 
+    #total-table tbody tr {
+        text-align: center !important;
+    }
 
     @@media(max-width:900px) {
         .msg {
@@ -144,8 +181,59 @@
             display: block;
         }
 
-        .cards{
+        .cards {
+            width: 100%;
+            display:flex; justify-content:center; align-items:center;
+            flex-direction:column;
+            margin-top:0px;
+            padding:0px;
+        }
+        *{
+            font-size:12px !important;
+        }
+        .cards .card{
+            max-width:80%;
+            width:80%;
+        }
+        #top-details{
+            flex-direction:column;
+            font-size: 12px !important;
+            width:100% !important;
+        }
+
+        .bottom-buttons{
+            flex-direction: column-reverse !important;
+            font-size: 12px;
+            padding:0px !important;
+        }
+
+            .bottom-buttons .buttons{
+                width:100%; display:flex; ;justify-content:center;
+                gap:30px;
+                margin-bottom:10px;
+            }
+        .bottom-buttons button{
+                font-size: 12px !important;
+        }
+
+        #total-table{
             width:100%;
+            font-size: 12px;
+        }
+
+        #total-table td{
+            padding:2px;
+        }
+
+        #loan_no_select{
+            width:50% !important;
+        }
+
+        #site-search{
+            width: 50% !important;
+        }
+        .cards .card i {
+            font-size: 28px !important;
         }
     }
 </style>
@@ -153,8 +241,8 @@
 <input type="hidden" id="auctionId" />
 <input type="hidden" id="stateId" />
 <div id="nodata">
-        <img src="~/images/Tiredman.jpg" />
-        <p>NO ACTIVE BID FOUND</p>
+    <img src="~/images/Tiredman.jpg" />
+    <p>NO ACTIVE BID FOUND</p>
 </div>
 <div class="welcome-container">
     <div class="msg">
@@ -169,32 +257,35 @@
   justify-content: space-between;
   width: 90%;
   padding: 15px;" id="top-details">
-            
+
         </div>
-        <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image1 ?? "~/images/welcome/Artboard-mobile.png"))"
+       @*  <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image1 ?? "~/images/welcome/Artboard-mobile.png"))"
             style="width:100%;  border-left-top-radius:" id="image1" />
-        <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image2 ?? "~/images/welcome/Artboard-mobile.png"))"
+        <img src="@(Url.Content(Model.Gold?.FirstOrDefault()?.Image2 ?? "~/images/welcome/Artboard-mobile.png"))" *@
             style="width:100%; " id="image2" />
-            <div class="bottom-buttons" style="position:absolute; padding:20px; bottom:0%; right:0%;">
-                <button class="btn btn-primary" onclick="viewproduct()" id="view_product"> View Products </button>
-                 
+        <div class="bottom-buttons" style="position:absolute; display: flex;
+  justify-content: space-between; flex-direction: row-reverse;
+  align-items: center; padding:20px; bottom:0%; right:0%; width:100%;">
+        <div class="buttons">
+            <button class="btn btn-primary" onclick="viewproduct()" id="view_product"> View Products </button>
+            <button class="btn btn-primary" onclick="biddnow()" id="Biddnow"> Bidd Now </button>
             </div>
+        </div>
     </div>
-    
-   <!-- Modal -->
-<div class="modal fade" id="product_deatiled" tabindex="-1" 
-     aria-labelledby="product_deatiled" aria-hidden="true"
-     data-bs-backdrop="static" data-bs-keyboard="false">
+
+    <!-- Modal -->
+    <div class="modal fade" id="product_deatiled" tabindex="-1" aria-labelledby="product_deatiled" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Product Details</h5>
-      </div>
-      <div class="modal-body">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Product Details</h5>
+                </div>
+                <div class="modal-body">
                     <div id="product_image" style="cursor: pointer; width: 100%;
   display: flex;
   justify-content: center; height:150px;"></div>
-      <div class="" style="display: flex;">
+                    <div class="" style="display: flex;">
 
                         <table style="width: 100%; margin-top: 20px;
   margin-bottom: 20px;
@@ -202,10 +293,10 @@
                             <thead>
                                 <tr style="text-align:center !important;">
                                     <td style="width:25%; text-align:center">
-                                        Loan No 
+                                        Loan No
                                     </td>
                                     <td style="width:25%; text-align:center">
-                                        Net Weight 
+                                        Net Weight
                                     </td>
                                     <td style="width:25%; text-align:center">
                                         Purity
@@ -216,42 +307,53 @@
                                 </tr>
                             </thead>
                             <tbody id="first-details">
-                                </tbody>
-        </table>
-      </div>
+                            </tbody>
+                        </table>
+                    </div>
                     <table style="width: 100%;" class="table table-bordered">
-           <thead>
+                        <thead>
                             <tr>
                                 <td style="">Ornament</td>
                                 <td style="">Count </td>
-                                <td >Purity </td>
+                                <td>Purity </td>
 
                             </tr>
-           </thead>
+                        </thead>
                         <tbody id="second-details">
 
-           </tbody>
-                      
-       </table>
-      </div>
-      <div class="modal-footer">
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="modal-footer">
                     <button onclick="exportModalToExcelWithImage()" class="btn btn-success">Export to Excel</button>
 
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
+    <div class="search" style="width: 100%;
+  display: flex;
+  justify-content: end;
+ gap:10px;
+padding: 10px;
+  margin-top: 20px; ">
+        <select id="loan_no_select" class="form-control" style="width:20%;">
+
+            <option value="0">-Select Loan-</option>
+        </select>
+        <input type="search" id="site-search" class="form-control" style="width:20%;" placeholder="Search With Loan No" />
+    </div>
     <div class="cards">
-  
+
     </div>
 </div>
 
 
-<div class="modal fade" id="product" tabindex="-1"
-     aria-labelledby="product_deatiled" aria-hidden="true"
-     data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade" id="product" tabindex="-1" aria-labelledby="product_deatiled" aria-hidden="true"
+    data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -266,58 +368,306 @@
 
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
-            </div>
-            </div>
+        </div>
+    </div>
 </div>
+
+
+
+@* Bidding Model *@
+
+<div class="modal fade" id="bidding" tabindex="-1" aria-labelledby="bidding" aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog" role="document" style="width:350px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Bidding Form</h5>
+            </div>
+            <div class="modal-body">
+               
+            </div>
+            <div class="modal-footer">
+                <button onclick="proceed()" class="btn btn-success">Proceed  <i class="fa fa-cog fa-w-16 fa-spin" id="spin-load1" style="display:none"></i></button>
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="bidding-details" tabindex="-1" aria-labelledby="bidding-details" aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <!-- initially modal-lg -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Bidding Details</h5>
+                <button type="button" class="btn btn-outline-secondary" id="fullscreen-btn" onclick="toggleFullscreen()">
+                    <i id="fullscreen-icon" class="fa fa-expand"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button onclick="savebid()" class="btn btn-success">
+                    Save
+                    <i class="fa fa-cog fa-w-16 fa-spin" id="spin-load1" style="display:none"></i>
+                </button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-           var sessionMobile = '@Context.Session.GetInt32("mobile")';
-        var sessionOtp = '@Context.Session.GetInt32("otp")';
-           function viewproduct() {
-        var auctionId = $('#auctionId').val();
-        var stateId = $('#stateId').val();
-    $.ajax({
-        url: `http://localhost:8085/api/auction/print2/${auctionId}/${stateId}`,
-        method: "GET",
-        success: function (packResponse) {
+    $(document).ready(function(){
+        $('.search').hide();
+    });
+           function savebid() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+        var auctionDate = yyyy + '-' + mm + '-' + dd;
 
-            // ✅ Log / Alert full response
-            console.log("Full API Response:", packResponse);
+        var loancount = parseInt($('#total-table tr').eq(1).find('td').eq(0).text(), 10);
+        var bidderId = $('#bidder_id').val();
+        var bidAmount = parseFloat($('#bidamount').val());
+        var testCenter = $('#branches').val();
 
-            let table0 = packResponse.Table;
-                 let table2 = packResponse.Table2;   // get 3rd row (0-based index)
+        var ajaxCalls = [];
 
-        // ✅ Alert readable data
-            alert(JSON.stringify(table2, null, 2));
+        $('#bidding-details .bid-row').each(function () {
+            var rowInput = $(this);
 
-            if (!table0 || table0.length === 0) {
-                $('#product .modal-body').html("<p>No packs found.</p>");
-                $('#product').modal('show');
+            var data = {
+                date: auctionDate,
+                bidder_id: bidderId,
+                loancount: loancount,
+                total_netwt: parseFloat(rowInput.data('total-netwt')),
+                bid_amount: parseFloat(rowInput.data('total-amt')),
+                test_center: testCenter,
+                auction_id: rowInput.data('auction-id'),
+                tot_netwt_purity: parseFloat(rowInput.data('total-netwt')),
+                unit_amt: parseFloat(rowInput.data('unit-price')),
+                value_amt: parseFloat(rowInput.data('value-amt')),
+                cgst_rt: parseFloat(rowInput.data('cgst-rt')),
+                cgst_amt: parseFloat(rowInput.data('cgst-amt')),
+                sgst_rt: parseFloat(rowInput.data('sgst-rt')),
+                sgst_amt: parseFloat(rowInput.data('sgst-amt')),
+                igst_rt: parseFloat(rowInput.data('igst-rt')),
+                igst_amt: parseFloat(rowInput.data('igst-amt')),
+                tcs_rt: parseFloat(rowInput.data('tcs-rt')),
+                tcs_amt: parseFloat(rowInput.data('tcs-amt'))
+            };
+
+            // Push AJAX promise to array
+            ajaxCalls.push(
+                $.ajax({
+                    url: 'http://localhost:8085/api/auction/submitbid',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data)
+                })
+            );
+        });
+
+        // Wait for all AJAX calls to finish
+        Promise.all(ajaxCalls)
+            .then((responses) => {
+                console.log("All bids submitted:", responses);
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'All bids submitted successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                    }).then(() => {
+        // This function runs after the user clicks OK
+        location.reload();
+    });
+                
+            })
+            .catch((err) => {
+                console.error("Error submitting bids:", err);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Some bids failed to submit. Check console.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                    }).then(() => {
+        // This function runs after the user clicks OK
+        location.reload();
+    });
+            });
+    }
+
+
+
+
+    function proceed() {
+        // Show spinner first
+        $('#spin-load1').show();
+
+        // Delay execution so spinner actually appears
+        setTimeout(function() {
+            var auction_id = $('#auctionId').val();
+            var branch_id = $('#branches').val();
+            var unitamt = $('#bidamount').val();
+            var bidder_id = $('#bidder_id').val();
+            var benchvalue = $('#benchvalue').text();
+
+            // 🔹 Basic validation
+            if (!unitamt || !benchvalue) {
+                $('#error_span').show()
+                    .html("<p>Amount or bench value cannot be empty.</p>");
+                $('#spin-load1').hide();
                 return;
             }
 
-            // ✅ Calculate totals
-            let totalCount = table0.length;
-            let totalNetWt = table0.reduce((sum, row) => sum + (parseFloat(row.net_wt) || 0), 0);
-            let totalNetWtPurity = table0.reduce((sum, row) => sum + (parseFloat(row.netwt_purity) || 0), 0);
-                let benchvalue = table2[0].benchmark_gram;
+            if (branch_id == "-1") {
+                $('#error_span2').show()
+                    .html("<p>Select A Testing Place</p>");
+                $('#spin-load1').hide();
+                return;
+            }
 
-                
+            // 🔹 Check numbers
+            if (isNaN(unitamt) || isNaN(benchvalue)) {
+                $('#error_span').show()
+                    .html("<p>Invalid amount or bench value.</p>");
+                $('#spin-load1').hide();
+                return;
+            }
 
-            // ✅ Alert totals
-            alert(
-                "Total Rows: " + totalCount +
-                "\nTotal Net Wt: " + totalNetWt.toFixed(2) +
-                "\nTotal NetWt Purity: " + totalNetWtPurity.toFixed(2)+
-                        "benchvalue" + benchvalue
-            );
+            unitamt = parseFloat(unitamt);
+            benchvalue = parseFloat(benchvalue);
 
-            // Get table headers dynamically
-            let headers = Object.keys(table0[0]);
+            // 🔹 Compare
+            if (unitamt < benchvalue) {
+                $('#error_span').show()
+                    .html(`<p>❌ Bid amount must be ≥ bench value (₹${benchvalue}).</p>`);
+                $('#spin-load1').hide();
+                return;
+            }
+
+            $('#error_span').hide();
+            $('#error_span2').hide();
+
+            // 🔹 Build API URL
+            var apiUrl = `http://localhost:8085/api/auction/proceedbidd/${branch_id}/${unitamt}/${bidder_id}/${auction_id}`;
+            console.log("Calling API:", apiUrl);
+
+            $.ajax({
+                url: apiUrl,
+                method: "GET",
+                contentType: "application/json",
+                  success: function (response) {
+        console.log("Response:", response);
+
+        $('#proceed_span').show()
+            .html(`<p>${response.message}</p>`);
+
+        // Check if data exists
+        if (!response.data || response.data.length === 0) {
+            $('#product .modal-body').html("<p>No data available.</p>");
+        } else {
+            let tableData = response.data;
+            let headers = Object.keys(tableData[0]); // get keys from first row
 
             // Build table HTML
-            let tableHtml = `
+            // Build table HTML
+    let tableHtml = `
+    <div style="overflow-x:auto;">
+          <table class="table table-bordered table-sm text-center"
+           style=" table-layout:auto; white-space:nowrap; margin:auto;">
+      <thead>
+          <tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr>
+      </thead>
+      <tbody>
+          ${tableData.map((row, index) => `
+              <tr>
+                  ${headers.map(h => `<td>${row[h] ?? ''}</td>`).join('')}
+                  <td>
+                      <input type="hidden" class="bid-row"
+                          data-auction-id="${row['Auction ID']}"
+                          data-unit-price="${row['Unit Price']}"
+                          data-total-netwt="${row['Net Wt / Purity']}"
+                          data-cgst-amt="${row['CGST Amount']}"
+                          data-cgst-rt="${row['CGST Rate %']}"
+                          data-sgst-amt="${row['SGST Amount']}"
+                          data-sgst-rt="${row['SGST Rate %']}"
+                          data-igst-amt="${row['IGST Amount']}"
+                          data-igst-rt="${row['IGST Rate %']}"
+                          data-tcs-amt="${row['TCS Amount']}"
+                          data-tcs-rt="${row['TCS Rate %']}"
+                          data-value-amt="${row['Value in Rs']}"
+                          data-total-amt="${row['Total Amount']}"
+                      />
+                  </td>
+              </tr>
+          `).join('')}
+      </tbody>
+    </table>
+    </div>
+    `;
+
+            $('#bidding-details .modal-body').html(tableHtml);
+        }
+
+        $('#spin-load1').hide();
+        //$('#bidding').modal('hide');
+        $('#bidding-details').modal('show');
+    }
+    ,
+                error: function (xhr) {
+                    console.error("Error:", xhr);
+                    $('#proceed_error').show()
+                        .html(`<p>Something went wrong. Check console.</p>`);
+                    $('#spin-load1').hide();
+                }
+            });
+
+        }, 0); // Delay ensures spinner renders before validation/API
+    }
+
+    var sessionMobile = '@Context.Session.GetInt32("mobile")';
+    var sessionOtp = '@Context.Session.GetInt32("otp")';
+    function viewproduct() {
+        var auctionId = $('#auctionId').val();
+        var stateId = $('#stateId').val();
+        $.ajax({
+            url: `http://localhost:8085/api/auction/print2/${auctionId}/${stateId}`,
+            method: "GET",
+            success: function (packResponse) {
+
+                // ✅ Log / Alert full response
+                console.log("Full API Response:", packResponse);
+
+                let table0 = packResponse.Table;
+                // get 3rd row (0-based index)
+
+                // ✅ Alert readable data
+                //alert(JSON.stringify(table2, null, 2));
+
+
+
+
+                // ✅ Alert totals
+                // alert(
+                //     "Total Rows: " + totalCount +
+                //     "\nTotal Net Wt: " + totalNetWt.toFixed(2) +
+                //     "\nTotal NetWt Purity: " + totalNetWtPurity.toFixed(2)+
+                //   "benchvalue" + benchvalue
+                // );
+
+
+                let headers = Object.keys(table0[0]);
+
+                // Build table HTML
+                let tableHtml = `
                 <div style="overflow-x:auto;">
-                    <table class="table table-bordered text-center">
+                   <table class="table table-bordered table-sm text-center"
+           style=" table-layout:auto; white-space:nowrap; margin:auto;">
                         <thead>
                             <tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr>
                         </thead>
@@ -326,41 +676,83 @@
                                 <tr>${headers.map(h => `<td>${row[h] ?? ''}</td>`).join('')}</tr>
                             `).join('')}
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th colspan="2">Totals</th>
-                                <th>${totalNetWt.toFixed(2)}</th>
-                                <th>${totalNetWtPurity.toFixed(2)}</th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
+
                     </table>
                 </div>
-                <p class="text-end"><strong>Total Rows: ${totalCount}</strong></p>
+                
             `;
 
-            // Insert into modal body
-            $('#product .modal-body').html(tableHtml);
+                // Insert into modal body
+                $('#product .modal-body').html(tableHtml);
 
-            // Show modal
-            $('#product').modal('show');
-        },
-        error: function (xhr, status, error) {
-            alert("Error fetching data:\n" + error);
-            $('#product .modal-body').html("<p>Failed to fetch data.</p>");
-            $('#product').modal('show');
-        }
-    });
+                // Show modal
+                $('#product').modal('show');
+            },
+            error: function (xhr, status, error) {
+                alert("Error fetching data:\n" + error);
+                $('#product .modal-body').html("<p>Failed to fetch data.</p>");
+                $('#product').modal('show');
+            }
+        });
 
     }
+    //productbidding
+          function biddnow() {
+        var auctionId = $('#auctionId').val();
+        var stateId = $('#stateId').val();
 
-             $(document).ready(function () {
+        $.ajax({
+            url: `http://localhost:8085/api/auction/print2/${auctionId}/${stateId}`,
+            method: "GET",
+            success: function (packResponse) {
+                console.log("Full API Response:", packResponse);
+
+                let table0 = packResponse.Table1;
+                if (!table0 || table0.length === 0) {
+                    $('#bidding .modal-body').html("<p>No branches found.</p>");
+                    $('#bidding').modal('show');
+                    return;
+                }
+
+                // ✅ Build dropdown options dynamically
+                let options = table0.map(row =>
+                    `<option value="${row.branch_id}">${row.branch_name}</option>`
+                ).join('');
+
+                // ✅ Create select HTML
+                let tableHtml = `
+                    <label for="branches">Testing & Delivery</label>
+                    <select id="branches" class="form-control">
+                        ${options}
+                    </select>
+                      <span id="error_span2" style="display:none;"></span>
+                     <label for="bidamount" style="margin-top:15px;">Enter Bidd Amount</label>
+                    <input type="text" id="bidamount" class="form-control" />
+                    <span id="error_span" style="display:none;"></span>
+
+                    <span id="proceed_span" style="display:none;"></span>
+                     <span id="proceed_error" style="display:none;"></span>
+                `;
+
+                // ✅ Insert into modal and show
+                $('#bidding .modal-body').html(tableHtml);
+                $('#bidding').modal('show');
+            },
+            error: function (xhr, status, error) {
+                alert("Error fetching data:\n" + error);
+                $('#bidding .modal-body').html("<p>Failed to fetch data.</p>");
+                $('#bidding').modal('show');
+            }
+        });
+    }
+
+    $(document).ready(function () {
         var sessionMobile = '@(Context.Session.GetInt32("mobile")?.ToString() ?? "")';
         var sessionOtp = '@(Context.Session.GetInt32("otp")?.ToString() ?? "")';
 
         $('#view_product').hide();
         $('#nodata').hide();
-
+        $('#Biddnow').hide();
         $.ajax({
             url: `http://localhost:8085/api/auction/print1/${sessionMobile}/${sessionOtp}`,
             method: "GET",
@@ -383,6 +775,7 @@
                     <p><strong>Date :</strong> ${main.auc_date}</p>
                     <p><strong>Bidder Name :</strong> ${main.bidder_name}</p>
                     <p><strong>State :</strong> ${main.state}</p>
+                    <input type="hidden" value="${main.bidder_id}" id="bidder_id">
                 `);
 
                 // === CASE 1: Active Bidding Found1 (print1 has packs) ===
@@ -394,12 +787,14 @@
                         $('#nodata').show();
                         return;
                     }
+                   
 
                     let headers = Object.keys(packs[0]);
                     let tableHtml = `
                         <div class="form-group" style="width:100%; display:flex; flex-direction:column; margin-top:20px; overflow-x:auto;">
                             <h4 style="width:100%; text-align:center;">Bidding Details</h4>
-                            <table class="table table-bordered text-center">
+                            <table class="table table-bordered table-sm text-center"
+       style=" table-layout:auto; white-space:nowrap; margin:auto;">
                                 <thead style="background:#f2f2f2;">
                                     <tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr>
                                 </thead>
@@ -414,49 +809,114 @@
 
                     $('.cards').html(tableHtml);
                 }
-                            
+
 
                 // === CASE 2: Active Bidding Found (print1 empty, check print2) ===
                 else if (response.Message === "Active Bidding Found") {
-                               $('#auctionId').val(auctionId);
-    $('#stateId').val(stateId);
+                    $('#auctionId').val(auctionId);
+                    $('#stateId').val(stateId);
 
                     $.ajax({
                         url: `http://localhost:8085/api/auction/print2/${auctionId}/${stateId}`,
                         method: "GET",
                         success: function (packResponse) {
-    //                                         let table0 = packResponse.Table;
-    // alert(JSON.stringify(table0, null, 2)); // pretty prints the array of objects
 
-                                if (packResponse.Table && packResponse.Table.length > 0) {
-                                $('#view_product').show();
+                            let table0 = packResponse.Table;
+                            let table2 = packResponse.Table2;
+
+                            if (!table0 || table0.length === 0) {
+                                $('#product .modal-body').html("<p>No packs found.</p>");
+                                $('#product').modal('show');
+                                return;
+                            }
+
+                            // ✅ Calculate totals
+                            let totalCount = table0.length;
+                            let totalNetWt = table0.reduce((sum, row) => sum + (parseFloat(row.net_wt) || 0), 0);
+                            let totalNetWtPurity = table0.reduce((sum, row) => sum + (parseFloat(row.netwt_purity) || 0), 0);
+                            let benchvalue = table2[0].benchmark_gram;
+
+
+
+
+
+                            $('.bottom-buttons').append(`
                                 
+                                 <table class=""
+           style=" table-layout:auto; white-space:nowrap; margin:auto;" id="total-table">
+                                 <tr>
+                                 <td>
+                                        Total Loans
+                                    </td>
+                                     <td>
 
+                                        Total Net Wt
+                                        </td>
+
+                                     <td>
+                                          Total NetWt Purity
+                                     
+                                         </td>
+                                   <td>
+
+                                                 Bench Mark Value
+                                                  </td>
+                                     </tr>
+                                        <tr>
+                                            <td>
+                                                ${totalCount}
+                                               </td>
+                                                   <td>
+                                                        ${totalNetWt.toFixed(2)}
+                                                   </td>
+                                                       <td>
+                                                        ${totalNetWtPurity.toFixed(2)}
+                                                   </td>
+                                                       <td id="benchvalue">
+                                                        ${benchvalue}
+                                                   </td>
+                                        </tr>
+                                     </<table>
+
+                    `);
+
+                            //                                         let table0 = packResponse.Table;
+                            // alert(JSON.stringify(table0, null, 2)); // pretty prints the array of objects
+
+                            if (packResponse.Table && packResponse.Table.length > 0) {
+                                $('#view_product').show();
+                                   $('#Biddnow').show();
+                                  $('.search').show();
                                 packResponse.Table.forEach(function (row) {
-                                    $('.cards').append(`
-                                        <div class="card" style="margin:10px; border:1px solid #ccc; padding:15px; border-radius:8px; text-align:center;">
-                                            <label class="label-bill" style="font-weight:bold;">
-                                                ${row.bench_mark_value ?? '0.00'}
-                                            </label>
-                                            <div class="weight">
-                                                <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
-                                                <p class="weight-count" style="font-size:20px; font-weight:bold;">
-                                                    ${row.net_wt ?? '0.000'}
-                                                </p>
-                                            </div>
-                                            <button class="btn btn-outline-dark"
-                                                onclick="view(
-                                                    '${row.bench_mark_value}',
-                                                    '${row.net_wt}',
-                                                    '${row.loan_no}',
-                                                    '${row.netwt_purity}',
-                                                    '${row.branch_name}'
-                                                )">
-                                                View Pack
-                                            </button>
-                                        </div>
-                                    `);
-                                });
+                                    $('#loan_no_select').append(`
+                                    
+                                    <option value="${row.loan_no}"><i class="fa-solid fa-landmark"></i> ${row.loan_no}</option>`);
+                                       // When creating cards
+                            $('.cards').append(`
+                                <div class="card" data-loan="${row.loan_no}" style="margin:10px; border:1px solid #ccc; padding:15px; border-radius:8px; text-align:center;">
+                                    <label class="label-bill" style="font-weight:bold;">
+                                        ${row.loan_no ?? '0.00'}
+                                    </label>
+                                    <div class="weight">
+                                        <i class="fa-solid fa-weight-hanging" style="font-size:60px; color:gold;"></i>
+                                        <p class="weight-count" style="font-size:20px; font-weight:bold;">
+                                            ${row.net_wt ?? '0.000'}
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-outline-dark"
+                                        onclick="view(
+                                            '${row.loan_no}',
+                                            '${row.net_wt}',
+                                            '${row.loan_no}',
+                                            '${row.netwt_purity}',
+                                            '${row.branch_name}'
+                                        )">
+                                        View Pack
+                                    </button>
+                                </div>
+                            `);
+
+                                    });
                             } else {
                                 $('.welcome-container').hide();
                                 $('.cards').html("<p>No packs found for this auction.</p>");
@@ -471,32 +931,36 @@
 
                 // === CASE 3: Bidding Finalised ===
                 else if (response.Message === "Sorry Bidding Finalised. Better Luck Next Time") {
-                    $('.welcome-container').hide();
+                    //$('.welcome-container').hide();
                     let extra = response.ExtraData || [];
                     if (!extra || extra.length === 0) {
                         $('.cards').html(`<p>${response.Message || "No data available."}</p>`);
                         $('#nodata').show();
                         return;
                     }
+                    alert(response.message);
 
-                    let extraHeaders = Object.keys(extra[0]);
-                    let extraTable = `
-                        <div class="form-group" style="width:100%; display:flex; flex-direction:column; margin-top:20px; overflow-x:auto;">
-                            <h4 style="text-align:center;">Finalised Bidding Summary</h4>
-                            <div style="width:100%; overflow-x:auto;">
-                                <table class="table table-bordered text-center" style="width:100%; max-width:100%; table-layout:auto; white-space:nowrap;">
-                                    <thead class="table-light">
-                                        <tr>${extraHeaders.map(h => `<th>${h}</th>`).join('')}</tr>
-                                    </thead>
-                                    <tbody>
-                                        ${extra.map(row => `
-                                            <tr>${extraHeaders.map(h => `<td>${row[h] ?? ''}</td>`).join('')}</tr>
-                                        `).join('')}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    `;
+                       // Choose only the columns you want to display
+    let selectedColumns = ["tot_netwt", "bid_unit_amt", "bid_amount"];
+
+    let extraTable = `
+        <div class="form-group" style="width:100%; display:flex; flex-direction:column; margin-top:20px; overflow-x:auto;">
+            <h4 style="text-align:center;">Finalised Bidding Summary</h4>
+            <div style="width:100%; overflow-x:auto;">
+                <table class="table table-bordered text-center" style="width:100%; max-width:100%; table-layout:auto; white-space:nowrap;">
+                    <thead class="table-light">
+                        <tr>${selectedColumns.map(h => `<th>${h}</th>`).join('')}</tr>
+                    </thead>
+                    <tbody>
+                        ${extra.map(row => `
+                            <tr>${selectedColumns.map(h => `<td>${row[h] ?? ''}</td>`).join('')}</tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    `;
+
                     $('.cards').html(extraTable);
                 }
 
@@ -516,25 +980,23 @@
 
 
 
-function view(benchmark, net_wt, loan_no, netwt_purity, branch_name) {
-   
+    function view(benchmark, net_wt, loan_no, netwt_purity, branch_name) {
 
-    $.ajax({
-        url: "http://localhost:8085/api/auction/print_popup/" + loan_no,
-        method: "GET",
-        success: function (response) {
-               $("#product_deatiled").modal('show');
-            console.log(response);
-            let imgHtml =""
-            let firstde = ""
-           let secondde = ""
-            $('.modal-title').text("Bench Mark : " + benchmark);
-            firstde +=`
+
+        $.ajax({
+            url: "http://localhost:8085/api/auction/print_popup/" + loan_no,
+            method: "GET",
+            success: function (response) {
+                $("#product_deatiled").modal('show');
+                console.log(response);
+                let imgHtml = ""
+                let firstde = ""
+                let secondde = ""
+              
+                firstde += `
                 <tr style="text-align:center !important;">
             
-             <td style="width:25%; text-align:center">
-                 ${loan_no}
-           </td>
+            
            
             <td style="width:25%; text-align:center">
                  ${net_wt}
@@ -553,19 +1015,19 @@ function view(benchmark, net_wt, loan_no, netwt_purity, branch_name) {
             </td>
            </tr>
             `;
-          if (response.Images && response.Images.length > 0) {
-            
-    response.Images.forEach(function (img) {
-        // prepend the base64 header
-        imgHtml += `<img src="data:image/jpeg;base64,${img.image_orna}" 
+                if (response.Images && response.Images.length > 0) {
+
+                    response.Images.forEach(function (img) {
+                        // prepend the base64 header
+                        imgHtml += `<img src="data:image/jpeg;base64,${img.image_orna}" 
                         style="width:250px;height:100px;margin:5px;" id="image-pro">`;
-    });
-} else {
-    imgHtml = "<p>No images found</p>";
-}
-     if (response.LoanDetails && response.LoanDetails.Table.length > 0) {
-    response.LoanDetails.Table.forEach(function(details){
-        secondde += `
+                    });
+                } else {
+                    imgHtml = "<p>No images found</p>";
+                }
+                if (response.LoanDetails && response.LoanDetails.Table.length > 0) {
+                    response.LoanDetails.Table.forEach(function (details) {
+                        secondde += `
        
         <tr>
            <td >${details.Ornament}</td>
@@ -574,45 +1036,45 @@ function view(benchmark, net_wt, loan_no, netwt_purity, branch_name) {
         </tr>
        
         `;
-    });
-}
+                    });
+                }
 
 
-            $("#product_image").html(imgHtml);
-            $("#first-details").html(firstde);
-              $("#second-details").html(secondde);
-            
-          
-        },
-        error: function (xhr, status, error) {
-            console.error("Error fetching images:", error);
-        }
-    });
-}
-$(document).on("mouseenter", "#product_image img", function () {
-    $("#image-pro").css({
-        height: "500px",
-        width: "500px",
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50% , -50%)",
-        zIndex: 9999
-    });
-});
+                $("#product_image").html(imgHtml);
+                $("#first-details").html(firstde);
+                $("#second-details").html(secondde);
 
-$(document).on("click", "#product_image img", function () {
-    $("#image-pro").css({
-        position: "relative",
-        height: "100px",
+
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching images:", error);
+            }
+        });
+    }
+    $(document).on("mouseenter", "#product_image img", function () {
+        $("#image-pro").css({
+            height: "500px",
+            width: "500px",
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50% , -50%)",
+            zIndex: 9999
+        });
+    });
+
+    $(document).on("click", "#product_image img", function () {
+        $("#image-pro").css({
+            position: "relative",
+            height: "100px",
             width: "250px",
-      
-      top: "0%",
-        left: "0%",
-               transform: "translate(-0% , -0%)",
-        zIndex: "auto"
+
+            top: "0%",
+            left: "0%",
+            transform: "translate(-0% , -0%)",
+            zIndex: "auto"
+        });
     });
-});
 
 
 </script>
@@ -664,7 +1126,7 @@ $(document).on("click", "#product_image img", function () {
         link.download = "Product_Details_With_Image.xlsx";
         link.click();
     }
-        function exportModalToExcel() {
+    function exportModalToExcel() {
         // Get the table inside modal
         var table = document.querySelector('#product .modal-body table');
 
@@ -679,6 +1141,60 @@ $(document).on("click", "#product_image img", function () {
         // Download Excel file
         XLSX.writeFile(wb, "Product_Details.xlsx");
     }
+             function toggleFullscreen() {
+            let modalDialog = document.querySelector('#bidding-details .modal-dialog');
+            let icon = document.querySelector('#fullscreen-icon');
+
+            if (modalDialog.classList.contains('modal-fullscreen')) {
+                // Revert to original size
+                modalDialog.classList.remove('modal-fullscreen');
+                modalDialog.classList.add('modal-lg');
+
+                // Change icon
+                icon.classList.remove('fa-compress');
+                icon.classList.add('fa-expand');
+            } else {
+                // Make fullscreen
+                modalDialog.classList.add('modal-fullscreen');
+                modalDialog.classList.remove('modal-lg');
+
+                // Change icon
+                icon.classList.remove('fa-expand');
+                icon.classList.add('fa-compress');
+            }
+        }
+            // After populating cards and select
+         $('#loan_no_select').on('change', function () {
+        const selectedLoan = $(this).val();
+
+        if (!selectedLoan || selectedLoan === "0") {
+            $('.cards .card').show();
+            return;
+        }
+
+        $('.cards .card').hide(); // hide all first
+        $(`.cards .card[data-loan="${selectedLoan}"]`).show(); // show only the matching one
+    });
+
+           $('#site-search').on('input', function () {
+        const query = $(this).val().trim();
+
+        if (!query) {
+            // Show all cards if input is empty
+            $('.cards .card').show();
+            return;
+        }
+
+        // Filter cards that contain the query in their loan number
+        $('.cards .card').each(function () {
+            const loanNo = $(this).data('loan'); // using data-loan attribute
+            if (loanNo.toString().includes(query)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+
 
 </script>
-

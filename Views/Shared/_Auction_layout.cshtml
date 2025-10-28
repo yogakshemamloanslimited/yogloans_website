@@ -62,6 +62,9 @@
         align-items: center;
         text-align: center;
     }
+    ul li{
+        list-style:none;
+    }
   </style>
 </head>
 <body>
@@ -71,45 +74,43 @@
 <p>@Context.Session.GetInt32("auctionId")</p> 
 <p>@Context.Session.GetInt32("state_id")</p>  *@
 
-  <div class="nav-to-web" >
+  <div class="nav-to-web" style="position:relative; height:70px; z-index:400;">
     <!-- Toggler -->
    
-      <div class="topbar card" style="padding: 10px; width:100%; display:flex;flex-direction: row; border-radius:0px; justify-content:start; align-items:center; ">
+      <div class="topbar card" style="padding: 10px; position:fixed; width:100%; display:flex;flex-direction: row; border-radius:0px; justify-content:start; align-items:center; ">
       <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" style="border:1px solid;  width: 40px; height: 40px;
 ">
       <i class="fas fa-bars"></i>
     </button>
-      <img src="/images/logo/logo.png" alt="" srcset="" id="logo" style="width: 50px; height:50px; border-radius:50% ; margin-left:30px;">
+      <img src="/images/logo/logo2.png" alt="" srcset="" id="logo" style=" height:50px;  margin-left:30px;">
 
      </div>
      
     <!-- Offcanvas Menu -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" style="width:250px;">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title">Menu</h5>
+        
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="list-unstyled">
-          <li><a class="nav-link" href="#"><i class="far fa-smile me-2"></i> Link 1</a></li>
-          <li>
-            <a class="nav-link" data-bs-toggle="collapse" href="#cat1" role="button">
-              <i class="fas fa-grin me-2"></i> Category 1
+                <ul class="list-unstyled" style="height: 100%; width: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: start;">
+          <li onclick="window.location.href='/'"><i class="fas fa-home" style="margin-right: 40px;"></i> Home</li>
+          <li onclick="window.location.href='/about'"><i class="fas fa-info-circle" style="margin-right: 40px;"></i> About</li>
+         
+                    <li >
+            <a class="nav-link" data-bs-toggle="collapse" href="#services" role="button">
+                            <i class="fas fa-cogs" style="margin-right: 40px !important;"></i> Services
             </a>
-            <ul class="collapse ps-3" id="cat1">
-              <li><a class="nav-link" href="#">Link 2</a></li>
-              <li><a class="nav-link" href="#">Link 3</a></li>
+            <ul class="collapse" id="services">
+            
             </ul>
           </li>
-          <li>
-            <a class="nav-link" data-bs-toggle="collapse" href="#cat2" role="button">
-              <i class="fas fa-grin-wink me-2"></i> Category 2
-            </a>
-            <ul class="collapse ps-3" id="cat2">
-              <li><a class="nav-link" href="#">Link 4</a></li>
-              <li><a class="nav-link" href="#">Link 5</a></li>
-            </ul>
-          </li>
+                    <li onclick="window.location.href='/investor'"><i class="fas fa-hand-holding-usd" style="margin-right: 40px;"></i> Investors</li>
+                    <li onclick="window.location.href='/Onlineservices'"><i class="fas fa-globe" style="margin-right: 40px;"></i> Online Services</li>
+                    <li onclick="window.location.href='/policies'"><i class="fas fa-file-alt" style="margin-right: 40px;"></i> Policies</li>
+                    <li onclick="window.location.href='/career'"><i class="fas fa-briefcase" style="margin-right: 40px;"></i> Career</li>
+                    <li onclick="window.location.href='/csr'"><i class="fas fa-leaf" style="margin-right: 40px;"></i> CSR</li>
+                    <li onclick="window.location.href='/contact'"><i class="fas fa-envelope" style="margin-right: 40px;"></i> Contact Us</li>
         </ul>
       </div>
     </div>
@@ -135,6 +136,22 @@
 
   @RenderBody()
   <script>
+               $.ajax({
+            url: "/Loan-forall",
+            method: "GET",
+            success: function (response) {
+                const data = response.data;
+                data.forEach(loan => {
+
+                   $('#services').append(`<li onclick="window.location.href='/services/${loan.loanname}/${loan.id}'" style="margin-top: 10px;">${loan.loanname}</li>`);
+                  
+
+                });
+            },
+            error: function () {
+                alert('Failed to fetch loan data.');
+            }
+        });
   $('#auction_list').click(function(){
         $('#auction_list').addClass('active-page');
         $('#bidder_Select').removeClass('active-page');
@@ -154,26 +171,6 @@
   });
 
   </script>
-  <script>
-            let timer;
-            let logoutTime = 5 * 60 * 1000; // 2 minutes in milliseconds
 
-            function resetTimer() {
-                clearTimeout(timer);
-                timer = setTimeout(() => {
-
-                    window.location.href = "/Auction/Logout"; // Laravel logout route
-                }, logoutTime);
-            }
-
-            // Track activity
-            window.onload = resetTimer;
-            document.onmousemove = resetTimer;
-            document.onkeypress = resetTimer;
-            document.onclick = resetTimer;
-            document.onscroll = resetTimer;
-
-            
-        </script>
 </body>
 </html>

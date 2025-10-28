@@ -1,0 +1,559 @@
+﻿<!-- Optional: Animate.css for popup animations -->
+<!-- ✅ SweetAlert2 -->
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Optional: animate.css for animation effects -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<section style="width:100%; display:flex; justify-content:center; align-items:center;">
+    <!-- Modal Structure -->
+    @* <div class="modal fade" id="viewmodel" tabindex="-1" aria-labelledby="viewmodelLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewmodelLabel">View Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body model-body">
+                    <!-- Dynamic content will be injected here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div> *@
+
+    <form class="card p-4" style="margin-top:20px;" id="card-form">
+        <div class="card-header mb-3" >
+            <h3>We are here to assist you!</h3>
+            <p>Please complete the form.</p>
+        </div>
+
+        @* 
+    <div class="mb-3 d-flex align-items-center">
+        <label class="form-label mb-0 me-2 fw-semibold">Customer Name:</label>
+        <p class="form-control-plaintext mb-0">Daniel</p>
+    </div> *@
+        <div accesskey="" style="display: flex;
+  width: 100%;
+  justify-content: space-between;" class="mb-3">
+            <div class="form-group">
+                <label class="form-label mb-0  fw-semibold" style="text-align:center;">Customer Name</label>
+                <p class="form-control-plaintext mb-0" id="customer_name" style="text-align:center;"> </p>
+            </div>
+            <div class="form-group">
+                <label class="form-label mb-0  fw-semibold" style="text-align:center;">Customer Email</label>
+                <p class="form-control-plaintext mb-0" id="customer_email" style="text-align:center;"> </p>
+            </div>
+            <div class="form-group">
+                <label class="form-label mb-0  fw-semibold" style="text-align:center;">Customer Mobile</label>
+                <p class="form-control-plaintext mb-0" id="customer_mobile" style="text-align:center;"> </p>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label mb-3  fw-semibold">Message Type</label>
+            <br />
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="messageType" id="enquiry" value="2" onchange="cheking1()">
+                <label class="form-check-label  fw-semibold" for="enquiry">Request</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="messageType" id="complain" value="1" onchange="cheking2()">
+                <label class="form-check-label  fw-semibold" for="complain">Greevants</label>
+            </div>
+        </div>
+
+        <div class="exists" style="display:none">
+
+            <table class="mb-3 border w-100 table table-bordered" >
+                <thead >
+                    <tr class="bg-light fw-semibold" id="exist-head">
+                        @* <td>View Other Data</td> *@
+                        <td>Ticket</td>
+                        <td>Request Type</td>
+                        <td>Loan Number</td>
+                        <td>Customer ID</td>
+                       
+                    </tr>
+                </thead>
+                <tbody id="exist_table">
+                </tbody>
+            </table>
+        <p id="text-msg" style="width:100%; display:flex; justify-content:space-between; "></p>
+        </div>
+
+        <!-- Hidden textarea, shown only if "Complain" is selected -->
+
+        <div class="mb-3 " id="complainBox" style="display:none;">
+            <label id="typehead" class="form-label mb-3  fw-semibold"></label>
+            <select id="type" class="form-control mb-3">
+                <option>
+                    -Select Type-
+                </option>
+            </select>
+
+            <table id="loanTableContainer" class="table table-bordered table-sm mb-3 "
+                   style=" table-layout:auto; white-space:nowrap; margin:auto; ">
+            </table>
+            <div class="form-group mb-3" id="loan_no_sec" style="display:none;">
+               
+            </div>
+            <partial name="attachments" />
+            <label for="complainText" class="form-label mb-3  fw-semibold">Message</label>
+            <textarea class="form-control" id="complainText" rows="4" placeholder="Describe your complaint..."></textarea>
+        </div>
+
+        <button class="btn btn-primary w-100">Submit</button>
+    </form>
+</section>
+
+
+<style>
+    .card {
+        width: 50%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 0px;
+    }
+</style>
+
+<script>
+	$(document).ready(function () {
+    var customerId = '@Context.Session.GetString("CustomerId")';
+            $.ajax({
+        url: API.allapi.GetCustomer,
+        method: "GET",
+        data: { customerId: customerId },
+        success: function (response) {
+            console.log(response);          // Full response
+            const table = response.dt?.Table; // Use optional chaining for safety
+
+            if (table && table.length > 0) {
+                const customer = table[0]; // First row
+              
+                console.log("Customer Name:", customer.customer_name);
+                console.log("Mobile:", customer.mobile_no);
+                $('#customer_name').text(customer.customer_name);
+                $('#customer_email').text(customer.email_id);
+                  $('#customer_email').text(customer.email_id);
+                  $('#customer_mobile').text(customer.mobile_no);
+            } else {
+                alert("No customer data found");
+            }
+        },
+        error: function (xhr) {
+            let msg = 'Error occurred';
+            try {
+                const json = JSON.parse(xhr.responseText);
+                msg = json.Message || json.message || msg;
+            } catch (e) {
+                msg = xhr.responseText || msg;
+            }
+        
+        }
+    });
+  
+        
+	});
+
+        function cheking1() {
+             $('#loanTableContainer').empty();
+               $('.exists').hide();
+            var customerId = '@Context.Session.GetString("CustomerId")';
+        const type = $('input[name="messageType"]:checked').val(); // get selected radio
+              $.ajax({
+        url: API.allapi.checkexistence,
+        method: "GET",
+        data: { cust_id: customerId, selected_type: type },
+        success: function (res) {
+
+            // Clear old data before adding new rows
+            $('#exist_table').empty();
+
+            if (res.dt && Array.isArray(res.dt.Table) && res.dt.Table.length > 0) {
+    //alert(JSON.stringify(res.dt.Table, null, 2));
+                res.dt.Table.forEach(function (item) {
+                    const hasData =
+                        (item.ticket && item.ticket !== "") ||
+                        (item.type_name && item.type_name !== "") ||
+                        (item.loan_no && item.loan_no !== "") ||
+                        (item.customer_id && item.customer_id !== "");
+
+                    // ✅ Append only rows that have at least one valid data cell
+                    if (hasData) {
+    //                     const comment = item.comments ? item.comments.replace(/'/g, "\\'") : '';  // Escape single quotes in comments
+    // const attachment = item.attachments ? `'${item.attachments}'` : 'null';  // Wrap attachment in quotes or pass null
+
+    $('#exist_table').append(`
+        <tr>
+
+            <td>T${item.ticket ? item.ticket : '-'}</td>
+            <td>${item.type_name ? item.type_name : '-'}</td>
+            <td>${item.loan_no ? item.loan_no : '-'}</td>
+            <td>${item.customer_id ? item.customer_id : '-'}</td>
+        </tr>
+    `);
+
+
+                        $('#text-msg').text('You Still Have Pending Grievance You Still Want to Proceed ?');
+                         $('#text-msg').append(`<button id="yes" type="button" class="btn btn-success">YES</button><button type="button" id="no" class="btn btn-danger">NO</button>`);
+                    }
+                });
+
+                // ✅ If tbody has no rows after filtering → hide table & show complain box
+                if ($('#exist_table').is(':empty')) {
+                    $('.exists').hide();        // hide the table container
+                    $('#complainBox').show();   // show fallback UI
+                } else {
+                    $('.exists').show();
+                    $('#complainBox').hide();
+                }
+
+            } else {
+                // ✅ No valid table data
+                $('.exists').hide();
+                $('#complainBox').show();
+            }
+        },
+        error: function () {
+            $('.exists').hide();
+            $('#complainBox').show();
+        }
+    });
+
+
+         
+
+        $.ajax({
+            url: API.allapi.Grievantstypes,
+            method: "GET",
+            data: { type: type },
+            success: function (response) {
+                $('#complainBox').show();
+                console.log("Response:", response);
+
+                if (response.success && response.grievanceTypes && response.grievanceTypes.length > 0) {
+                    const select = $('#type');
+                    select.empty(); // clear existing options
+                    select.append('<option value="">- Select Type -</option>'); // default option
+                     $('#typehead').text("Request Type");
+                    
+                    // loop through grievanceTypes array
+                    response.grievanceTypes.forEach(item => {
+                        select.append(`<option value="${item.type_id}" data-loan_type="${item.loan}">${item.type_name}</option>`);
+                    });
+                } else {
+                         //$('#complainBox').show();
+                    $('#type').html('<option value="">No types available</option>');
+                }
+            },
+            error: function (xhr) {
+                let msg = 'Error occurred';
+                try {
+                    const json = JSON.parse(xhr.responseText);
+                    msg = json.Message || json.message || msg;
+                } catch (e) {
+                    msg = xhr.responseText || msg;
+                }
+                console.error(msg);
+                $('#type').html('<option value="">Error loading types</option>');
+            }
+        });
+    }
+
+        function cheking2() {
+     $('#loanTableContainer').empty();
+                $('.exists').hide();
+            var customerId = '@Context.Session.GetString("CustomerId")';
+        const type = $('input[name="messageType"]:checked').val(); // get selected radio
+        console.log("Selected type:", type);
+           $.ajax({
+        url: API.allapi.checkexistence,
+        method: "GET",
+        data: { cust_id: customerId, selected_type: type },
+        success: function (res) {
+
+            // Clear old data before adding new rows
+            $('#exist_table').empty();
+
+            if (res.dt && Array.isArray(res.dt.Table) && res.dt.Table.length > 0) {
+
+                res.dt.Table.forEach(function (item) {
+                    const hasData =
+                        (item.ticket && item.ticket !== "") ||
+                        (item.type_name && item.type_name !== "") ||
+                        (item.loan_no && item.loan_no !== "") ||
+                        (item.customer_id && item.customer_id !== "");
+
+                    // ✅ Append only rows that have at least one valid data cell
+                    if (hasData) {
+    //                             const comment = item.comments ? item.comments.replace(/'/g, "\\'") : '';  // Escape single quotes in comments
+    // const attachment = item.attachments ? `'${item.attachments}'` : 'null';  // Wrap attachment in quotes or pass null
+
+    $('#exist_table').append(`
+        <tr>
+            
+            <td>T${item.ticket ? item.ticket : '-'}</td>
+            <td>${item.type_name ? item.type_name : '-'}</td>
+            <td>${item.loan_no ? item.loan_no : '-'}</td>
+            <td>${item.customer_id ? item.customer_id : '-'}</td>
+        </tr>
+    `);
+
+                         $('#text-msg').text('You Still Have Pending Grievance You Still Want to Proceed ?');
+                         $('#text-msg').append(`<button id="yes" type="button" class="btn btn-success">YES</button><button id="no" type="button" class="btn btn-danger">NO</button>`);
+                    }
+                });
+
+                // ✅ If tbody has no rows after filtering → hide table & show complain box
+                if ($('#exist_table').is(':empty')) {
+                    $('.exists').hide();        // hide the table container
+                    $('#complainBox').show();   // show fallback UI
+                } else {
+                    $('.exists').show();
+                    $('#complainBox').hide();
+                }
+
+            } else {
+                // ✅ No valid table data
+                $('.exists').hide();
+                $('#complainBox').show();
+            }
+        },
+        error: function () {
+            $('.exists').hide();
+            $('#complainBox').show();
+        }
+    });
+
+        $.ajax({
+            url: API.allapi.Grievantstypes,
+            method: "GET",
+            data: { type: type },
+            success: function (response) {
+                     //$('#complainBox').show();
+                console.log("Response:", response);
+
+                if (response.success && response.grievanceTypes && response.grievanceTypes.length > 0) {
+                    const select = $('#type');
+                    select.empty(); // clear existing options
+                    select.append('<option value="">- Select Type -</option>'); // default option
+                   $('#typehead').text("Grievance Type");
+                    // loop through grievanceTypes array
+                    response.grievanceTypes.forEach(item => {
+                         select.append(`<option value="${item.type_id}" data-loan_type="${item.loan}">${item.type_name}</option>`);
+                    });
+                } else {
+                         $('#complainBox').show();
+                    $('#type').html('<option value="">No types available</option>');
+                }
+            },
+            error: function (xhr) {
+                let msg = 'Error occurred';
+                try {
+                    const json = JSON.parse(xhr.responseText);
+                    msg = json.Message || json.message || msg;
+                } catch (e) {
+                    msg = xhr.responseText || msg;
+                }
+                console.error(msg);
+                $('#type').html('<option value="">Error loading types</option>');
+            }
+        });
+    }
+	$('#type').on("change", function() {
+        
+    const selectedLoanType = $(this).find(':selected').data('loan_type');
+      
+        $('#loanTableContainer').empty();
+     $('#loan_no_sec').hide();
+    const customer_id = '@Context.Session.GetString("CustomerId")';
+
+		$.ajax({
+              url: API.allapi.loandetails,
+			  method: "GET",
+              data: { customer_id : customer_id , loan_type: selectedLoanType },
+			  success: function (res) {
+                  
+            $('#loanTableContainer').show();
+
+            
+                   const data = res.dt?.Table || [];
+           const table = $('<table>').addClass('table table-striped text-center table-bordered ');
+    const thead = $('<thead>').append('<tr><th>Select Loan</th><th>Loan</th><th>Loan No</th><th>Loan Date</th></tr>');
+    const tbody = $('<tbody>');
+
+    $.each(data, function (_, item) {
+        const tr = $('<tr>');
+
+        // ✅ Create a select button
+        const selectBtn = $('<button>')
+            .addClass('btn btn-sm btn-primary')
+            .text('Select')
+            .on('click', function() {
+                $('#loanTableContainer').hide();
+                $('#loanTableContainer').empty();
+                $('#loan_no_sec').show();
+                $('#loan_no_sec').empty();
+                $('#loan_no_sec').append(` <label for="loan_no" class="form-label mb-3  fw-semibold">Selected Loan Number</label>
+                   <input
+      type="text"
+      readonly
+      id="loan_no"
+      class="form-control"
+      value="${item.Loan_No}"
+      style="border: none; outline: none; box-shadow: none; background-color: transparent; pointer-events: none;"
+    />
+    `);
+           
+            });
+
+        // ✅ Build each cell
+        $('<td>').append(selectBtn).appendTo(tr);
+        $('<td>').text(item.Loan).appendTo(tr);
+        $('<td>').text(item.Loan_No).appendTo(tr);
+        $('<td>').text(new Date(item.Loan_Date).toLocaleDateString()).appendTo(tr);
+
+        tbody.append(tr);
+    });
+
+    table.append(thead).append(tbody);
+    $('#loanTableContainer').empty().append(table);
+
+				  // Handle the response as needed
+			  },
+			  error: function (xhr) {
+				  let msg = 'Error occurred';
+				  try {
+					  const json = JSON.parse(xhr.responseText);
+					  msg = json.Message || json.message || msg;
+				  } catch (e) {
+					  msg = xhr.responseText || msg;
+				  }
+				  console.error(msg);
+			  }
+        });
+	});
+       $(document).ready(function() {
+        $('input[name="messageType"]').prop('checked', false);
+    });
+
+        $("#card-form").on("submit", function (e) {
+        e.preventDefault();
+
+        var customer_id = '@Context.Session.GetString("CustomerId")';
+        var loan_type = $('#type').val();
+     var loan_no = $('#loan_no').val() ? $('#loan_no').val() : 0;
+
+        var comment = $('#complainText').val();
+        var fileInput = $('#fileInput')[0].files[0]; // ✅ Get actual file object
+
+        // ✅ Build FormData object
+        var formData = new FormData();
+        formData.append("customer_id", customer_id);
+        formData.append("loan_type", loan_type);
+        formData.append("loan_no", loan_no);
+        formData.append("comment", comment);
+
+        if (fileInput) {
+            formData.append("postedFile", fileInput); // ✅ attach file
+        }
+  
+        $.ajax({
+            url: API.allapi.submitgrie,
+            type: "POST",
+            data: formData,
+            processData: false, // ✅ prevent jQuery from processing data
+            contentType: false, // ✅ prevent jQuery from setting content type
+            beforeSend: function () {
+                $("#responseMsg").html("<span class='text-info'>Submitting grievance...</span>");
+            },
+            success: function (res) {
+                if (res.success) {
+                 
+                    $("#responseMsg").html("<span class='text-success fw-bold'>" + res.message + "</span>");
+                    $("#card-form")[0].reset(); 
+                    $("#filePreviews").empty();
+                $('#uploadStats').hide();
+                 
+                      $('#complainBox').hide();
+                    $('#loan_no_sec').empty();
+                        Swal.fire({
+                    title: 'Submitted!',
+                    text: res.message,
+                    imageUrl: '/images/icon/sign-up.png',   // 🔹 your custom image path
+                    imageWidth: 100,                        // optional
+                    imageHeight: 100,                       // optional
+                    imageAlt: 'Success icon',               // optional alt text
+                    confirmButtonColor: '#4c6fff',          // match your theme
+                    confirmButtonText: 'OK'
+                    });
+
+                } else {
+                    $("#responseMsg").html("<span class='text-danger'>Failed: " + (res.message || "Error") + "</span>");
+                }
+            },
+            error: function (err) {
+                console.error(err);
+                $("#responseMsg").html("<span class='text-danger'>Error submitting grievance.</span>");
+            }
+        });
+        
+
+    });
+     // Use delegated event binding
+    $(document).on('click', '#yes', function () {
+        $('#complainBox').show();
+        $('.exists').hide();
+    });
+
+    // Optional: handle NO button too
+       $(document).on('click', '#no', function () {
+        window.location.reload();
+    });
+
+    //     function view(comment, attachment) {
+    //     // Show the modal
+    //     $('#viewmodel').modal('show');
+
+    //     // Clear previous content
+    //     $('.model-body').empty();
+
+    //     // Add the comment to the modal body
+    //     $('.model-body').append(`<p><strong>Comment:</strong> ${comment}</p>`);
+
+    //     // Debugging: Log the attachment to inspect it
+    //     console.log("Attachment:", attachment);
+
+    //     // Ensure attachment is not null or undefined
+    //     if (!attachment || attachment === 'null') {
+    //         $('.model-body').append('<p><strong>No attachment available</strong></p>');
+    //         return;
+    //     }
+
+    //     // Check if the attachment is a valid Base64 image
+    //     if (attachment.startsWith("data:image")) {
+    //         console.log("Base64 image detected");
+    //         $('.model-body').append(`
+    //             <img src="${attachment}" alt="Attachment" style="width:100%; max-height: 400px; object-fit: contain;" />
+    //         `);
+    //     }
+    //     // Check if the attachment is a PDF file URL (ends with .pdf)
+    //     else if (attachment.endsWith(".pdf")) {
+    //         console.log("PDF detected");
+    //         $('.model-body').append(`
+    //             <iframe src="${attachment}" style="width:100%; height:400px;" frameborder="0"></iframe>
+    //         `);
+    //     }
+    //     // Check for other types (e.g., .docx, .xlsx, etc.)
+    //     else {
+    //         console.log("Unsupported file type detected:", attachment);
+    //         $('.model-body').append('<p><strong>Unsupported file type</strong></p>');
+    //     }
+    // }
+
+
+
+</script>

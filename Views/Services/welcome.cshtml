@@ -2,18 +2,20 @@
 
 <section class="welcome-container"
     style="background-image: url(@(Model.Homwelcome.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
-    <h1>@Model.Homwelcome.FirstOrDefault()?.Header</h1>
+    <h1 style="visibility:hidden;">@Model.Homwelcome.FirstOrDefault()?.Header</h1>
     <div class="button">
-        <p><a href="javascript:history.back()" id="return-link">Home</a>- @Model.Homwelcome.FirstOrDefault()?.Header</a></p>
+       @*  <p><a href="javascript:history.back()" id="return-link">Home</a>- @Model.Homwelcome.FirstOrDefault()?.Header</a></p> *@
+        <h1 >@Model.Homwelcome.FirstOrDefault()?.Header</h1>
     </div>
 </section>
 
 <!-- Mobile Section (Image2) -->
 <section class="welcome-container"
     style="background-image: url(@(Model.Homwelcome.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
-   <h1>@Model.Homwelcome.FirstOrDefault()?.Header</h1>
+    <h1 style="visibility:hidden;">@Model.Homwelcome.FirstOrDefault()?.Header</h1>
     <div class="button">
-        <p><a href="javascript:history.back()" id="return-link">Home</a>- @Model.Homwelcome.FirstOrDefault()?.Header</p>
+      @*   <p><a href="javascript:history.back()" id="return-link">Home</a>- @Model.Homwelcome.FirstOrDefault()?.Header</p *@>
+        <h1 >@Model.Homwelcome.FirstOrDefault()?.Header</h1>
     </div>
 </section>
 

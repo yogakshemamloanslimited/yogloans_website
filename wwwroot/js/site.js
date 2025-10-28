@@ -13,184 +13,184 @@ close.onclick = function() {
    
 }
 
-var gold = document.getElementById('gold');
-var business = document.getElementById('business');
-var cd = document.getElementById('cd');
-var vehicle = document.getElementById('vehicle');
-var head = document.getElementById('header');
-var sub = document.getElementById('sub');
-var detail = document.getElementById('detail-para');
-var point1 = document.getElementById('point1');
-var point2 = document.getElementById('point2');
-var point3 = document.getElementById('point3');
-/* var loanId = document.getElementById('loan-id'); */
-var welcome = document.getElementsByClassName('welcome-container')[0];
+//var gold = document.getElementById('gold');
+//var business = document.getElementById('business');
+//var cd = document.getElementById('cd');
+//var vehicle = document.getElementById('vehicle');
+//var head = document.getElementById('header');
+//var sub = document.getElementById('sub');
+//var detail = document.getElementById('detail-para');
+//var point1 = document.getElementById('point1');
+//var point2 = document.getElementById('point2');
+//var point3 = document.getElementById('point3');
+///* var loanId = document.getElementById('loan-id'); */
+//var welcome = document.getElementsByClassName('welcome-container')[0];
 
-// Get the data from the model
-var goldData = document.querySelector('input[name="GoldData"]')?.value;
-var businessData = document.querySelector('input[name="BusinessData"]')?.value;
-var cdData = document.querySelector('input[name="CDData"]')?.value;
-var vehicleData = document.querySelector('input[name="VehicleData"]')?.value;
+//// Get the data from the model
+//var goldData = document.querySelector('input[name="GoldData"]')?.value;
+//var businessData = document.querySelector('input[name="BusinessData"]')?.value;
+//var cdData = document.querySelector('input[name="CDData"]')?.value;
+//var vehicleData = document.querySelector('input[name="VehicleData"]')?.value;
 
-// Function to set background image based on screen width
-function setBackgroundImage(data, defaultImage) {
-    if (window.innerWidth <= 780) {
-        return data?.image2 || defaultImage;
-    }
-    return data?.image1 || defaultImage;
-}
+//// Function to set background image based on screen width
+//function setBackgroundImage(data, defaultImage) {
+//    if (window.innerWidth <= 780) {
+//        return data?.image2 || defaultImage;
+//    }
+//    return data?.image1 || defaultImage;
+//}
 
-// Function to update background image on resize
-function updateBackgroundImage() {
-    console.log("Function called");
-    console.log("gold:", gold, "business:", business, "cd:", cd, "vehicle:", vehicle, "welcome:", welcome);
-    if (gold.classList.contains('active')) {
-        console.log("Gold active");
-        var data = goldData ? JSON.parse(goldData) : null;
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/front-view-arrangement-economy-elements.jpg")})`;
-    } else if (business.classList.contains('active')) {
-        console.log("Business active");
-        var data = businessData ? JSON.parse(businessData) : null;
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/business-background.jpg")})`;
-    } else if (cd.classList.contains('active')) {
-        console.log("CD active");
-        var data = cdData ? JSON.parse(cdData) : null;
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/consumer-durables-background.jpg")})`;
-    } else if (vehicle.classList.contains('active')) {
-        console.log("Vehicle active");
-        var data = vehicleData ? JSON.parse(vehicleData) : null;
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/bike-background.jpg")})`;
-    }
-}
+//// Function to update background image on resize
+//function updateBackgroundImage() {
+//    console.log("Function called");
+//    console.log("gold:", gold, "business:", business, "cd:", cd, "vehicle:", vehicle, "welcome:", welcome);
+//    if (gold.classList.contains('active')) {
+//        console.log("Gold active");
+//        var data = goldData ? JSON.parse(goldData) : null;
+//        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/front-view-arrangement-economy-elements.jpg")})`;
+//    } else if (business.classList.contains('active')) {
+//        console.log("Business active");
+//        var data = businessData ? JSON.parse(businessData) : null;
+//        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/business-background.jpg")})`;
+//    } else if (cd.classList.contains('active')) {
+//        console.log("CD active");
+//        var data = cdData ? JSON.parse(cdData) : null;
+//        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/consumer-durables-background.jpg")})`;
+//    } else if (vehicle.classList.contains('active')) {
+//        console.log("Vehicle active");
+//        var data = vehicleData ? JSON.parse(vehicleData) : null;
+//        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/bike-background.jpg")})`;
+//    }
+//}
 
-// Add resize event listener
-window.addEventListener('resize', updateBackgroundImage);
+//// Add resize event listener
+//window.addEventListener('resize', updateBackgroundImage);
 
-// --- AUTO-CYCLING LOAN SECTIONS EVERY 5 SECONDS ---
-var loanElements = [gold, business, cd, vehicle];
-var currentIndex = 0;
-var cycleInterval = null;
-var pauseTimeout = null;
+//// --- AUTO-CYCLING LOAN SECTIONS EVERY 5 SECONDS ---
+//var loanElements = [gold, business, cd, vehicle];
+//var currentIndex = 0;
+//var cycleInterval = null;
+//var pauseTimeout = null;
 
-function cycleLoan() {
-    loanElements[currentIndex].click();
-    currentIndex = (currentIndex + 1) % loanElements.length;
-}
+//function cycleLoan() {
+//    loanElements[currentIndex].click();
+//    currentIndex = (currentIndex + 1) % loanElements.length;
+//}
 
-function startCycle() {
-    if (cycleInterval) clearInterval(cycleInterval);
-    cycleInterval = setInterval(cycleLoan, 5000);
-}
+//function startCycle() {
+//    if (cycleInterval) clearInterval(cycleInterval);
+//    cycleInterval = setInterval(cycleLoan, 5000);
+//}
 
-function pauseCycle() {
-    if (cycleInterval) clearInterval(cycleInterval);
-    if (pauseTimeout) clearTimeout(pauseTimeout);
-    pauseTimeout = setTimeout(() => {
-        startCycle();
-    }, 5000);
-}
+//function pauseCycle() {
+//    if (cycleInterval) clearInterval(cycleInterval);
+//    if (pauseTimeout) clearTimeout(pauseTimeout);
+//    pauseTimeout = setTimeout(() => {
+//        startCycle();
+//    }, 5000);
+//}
 
-startCycle();
+//startCycle();
 
-// Add pauseCycle to all loan button click handlers
+//// Add pauseCycle to all loan button click handlers
 
-gold.onclick = function () {
-    pauseCycle();
-    gold.classList.add('active');
-    business.classList.remove('active');
-    cd.classList.remove('active');
-    vehicle.classList.remove('active');
+//gold.onclick = function () {
+//    pauseCycle();
+//    gold.classList.add('active');
+//    business.classList.remove('active');
+//    cd.classList.remove('active');
+//    vehicle.classList.remove('active');
 
-    if (goldData) {
-        let allLoans;
-        try {
-            allLoans = JSON.parse(goldData);
-        } catch (e) {
-            console.error("Invalid JSON in goldData:", e);
-            allLoans = null;
-        }
+//    if (goldData) {
+//        let allLoans;
+//        try {
+//            allLoans = JSON.parse(goldData);
+//        } catch (e) {
+//            console.error("Invalid JSON in goldData:", e);
+//            allLoans = null;
+//        }
 
-        console.log("allLoans:", allLoans);
+//        console.log("allLoans:", allLoans);
 
-        let goldLoan = null;
+//        let goldLoan = null;
 
-        if (Array.isArray(allLoans)) {
-            goldLoan = allLoans.find(loan =>
-                loan.LoanType?.toLowerCase() === "gold" ||
-                loan.loanType?.toLowerCase() === "gold" ||
-                loan.LoanType?.toLowerCase() === "gold loan" ||
-                loan.loanType?.toLowerCase() === "gold loan"
-            );
-        } else if (typeof allLoans === "object" && allLoans !== null) {
-            // If it's a single object
-            goldLoan = allLoans;
-        }
+//        if (Array.isArray(allLoans)) {
+//            goldLoan = allLoans.find(loan =>
+//                loan.LoanType?.toLowerCase() === "gold" ||
+//                loan.loanType?.toLowerCase() === "gold" ||
+//                loan.LoanType?.toLowerCase() === "gold loan" ||
+//                loan.loanType?.toLowerCase() === "gold loan"
+//            );
+//        } else if (typeof allLoans === "object" && allLoans !== null) {
+//            // If it's a single object
+//            goldLoan = allLoans;
+//        }
 
-        console.log("goldLoan:", goldLoan);
+//        console.log("goldLoan:", goldLoan);
 
-        if (goldLoan) {
-            head.textContent = goldLoan.header || goldLoan.name || '';
-            sub.textContent = goldLoan.subContent || '';
-            welcome.style.backgroundImage = `url(${setBackgroundImage(goldLoan, "images/welcome/front-view-arrangement-economy-elements.jpg")})`;
-        } else {
-            console.warn("Gold loan data not found or not matching!");
-        }
-    }
+//        if (goldLoan) {
+//            head.textContent = goldLoan.header || goldLoan.name || '';
+//            sub.textContent = goldLoan.subContent || '';
+//            welcome.style.backgroundImage = `url(${setBackgroundImage(goldLoan, "images/welcome/front-view-arrangement-economy-elements.jpg")})`;
+//        } else {
+//            console.warn("Gold loan data not found or not matching!");
+//        }
+//    }
 
-    updateLoanDisplay("Gold Loan");
-}
+//    updateLoanDisplay("Gold Loan");
+//}
 
-business.onclick = function () {
-    pauseCycle();
-    gold.classList.remove('active');
-    business.classList.add('active');
-    cd.classList.remove('active');
-    vehicle.classList.remove('active');
+//business.onclick = function () {
+//    pauseCycle();
+//    gold.classList.remove('active');
+//    business.classList.add('active');
+//    cd.classList.remove('active');
+//    vehicle.classList.remove('active');
     
-    if (businessData) {
-        var data = JSON.parse(businessData);
-        head.textContent = data.header ;
-        sub.textContent = data.subContent;
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/business-background.jpg")})`;
-    }
-    updateLoanDisplay("Business Loan");
-}
+//    if (businessData) {
+//        var data = JSON.parse(businessData);
+//        head.textContent = data.header ;
+//        sub.textContent = data.subContent;
+//        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/business-background.jpg")})`;
+//    }
+//    updateLoanDisplay("Business Loan");
+//}
 
-cd.onclick = function () {
-    pauseCycle();
-    gold.classList.remove('active');
-    business.classList.remove('active');
-    cd.classList.add('active');
-    vehicle.classList.remove('active');
+//cd.onclick = function () {
+//    pauseCycle();
+//    gold.classList.remove('active');
+//    business.classList.remove('active');
+//    cd.classList.add('active');
+//    vehicle.classList.remove('active');
     
-    if (cdData) {
-        var data = JSON.parse(cdData);
-        head.textContent = data.header;
-        sub.textContent = data.subContent;
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/consumer-durables-background.jpg")})`;
-    } 
+//    if (cdData) {
+//        var data = JSON.parse(cdData);
+//        head.textContent = data.header;
+//        sub.textContent = data.subContent;
+//        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/consumer-durables-background.jpg")})`;
+//    } 
     
-    // Only use database data for content and points
-    updateLoanDisplay("CD Loan");
-}
+//    // Only use database data for content and points
+//    updateLoanDisplay("CD Loan");
+//}
 
-vehicle.onclick = function () {
-    pauseCycle();
-    gold.classList.remove('active');
-    business.classList.remove('active');
-    cd.classList.remove('active');
-    vehicle.classList.add('active');
+//vehicle.onclick = function () {
+//    pauseCycle();
+//    gold.classList.remove('active');
+//    business.classList.remove('active');
+//    cd.classList.remove('active');
+//    vehicle.classList.add('active');
     
-    if (vehicleData) {
-        var data = JSON.parse(vehicleData);
-        head.textContent = data.header;
-        sub.textContent = data.subContent ;
-        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/bike-background.jpg")})`;
-    } 
+//    if (vehicleData) {
+//        var data = JSON.parse(vehicleData);
+//        head.textContent = data.header;
+//        sub.textContent = data.subContent ;
+//        welcome.style.backgroundImage = `url(${setBackgroundImage(data, "images/welcome/bike-background.jpg")})`;
+//    } 
     
-    // Only use database data for content and points
-    updateLoanDisplay("Vehicle Loan");
-}
+//    // Only use database data for content and points
+//    updateLoanDisplay("Vehicle Loan");
+//}
 
 document.addEventListener('DOMContentLoaded', function() {
     const servicesLink = document.querySelector('.services-link');
