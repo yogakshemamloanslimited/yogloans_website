@@ -43,7 +43,15 @@ window.API = {
         GetCustomer: `${API_BASE}grievence/grievants-customer/`,
         loandetails: `${API_BASE}grievence/loandetails/`,
         submitgrie: `${API_BASE}grievence/submit_grievance/`,
-        checkexistence: `${API_BASE}grievence/checkexist/`
+        checkexistence: `${API_BASE}grievence/checkexist/`,
+
+        /*Auction*/
+        Auctionprint1: `${API_BASE}auction/print1/`,
+        Auctionprint2: `${API_BASE}auction/print2/`,
+        Printpoup: `${API_BASE}auction/print_popup/`,
+        Proceedbid: `${API_BASE}auction/proceedbidd/`,
+        Submitbid: `${API_BASE}auction/submitbid`
+      
         // add other endpoints here
     }
 };

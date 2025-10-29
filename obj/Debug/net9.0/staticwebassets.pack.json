@@ -209,6 +209,10 @@
       "PackagePath": "staticwebassets\\images\\icon\\arrow(1).png"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\auction.png",
+      "PackagePath": "staticwebassets\\images\\icon\\auction.png"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\bike.png",
       "PackagePath": "staticwebassets\\images\\icon\\bike.png"
     },
@@ -247,6 +251,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\image.png",
       "PackagePath": "staticwebassets\\images\\icon\\image.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\judge.png",
+      "PackagePath": "staticwebassets\\images\\icon\\judge.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\linkedin-logo.png",

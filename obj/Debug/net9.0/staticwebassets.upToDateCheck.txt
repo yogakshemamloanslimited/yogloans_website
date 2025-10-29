@@ -150,6 +150,7 @@ wwwroot\images\directors\unnikrishnan.jpg
 wwwroot\images\directors\unnirajan.jpg
 wwwroot\images\directors\vijayan.jpg
 wwwroot\images\icon\arrow(1).png
+wwwroot\images\icon\auction.png
 wwwroot\images\icon\bike.png
 wwwroot\images\icon\checklist.png
 wwwroot\images\icon\cooperation.png
@@ -160,6 +161,7 @@ wwwroot\images\icon\email.png
 wwwroot\images\icon\facebook.png
 wwwroot\images\icon\gold.png
 wwwroot\images\icon\image.png
+wwwroot\images\icon\judge.png
 wwwroot\images\icon\linkedin-logo.png
 wwwroot\images\icon\location.png
 wwwroot\images\icon\mail.png
