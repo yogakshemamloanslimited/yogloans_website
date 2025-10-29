@@ -26,7 +26,8 @@
 
         // === Load loan items ===
         $.ajax({
-            url: "/loans",
+            // url: "/loans",
+               url: '@Url.Action("GetLoans", "Home")',
             method: "GET",
             success: function (response) {
                 container.empty();
@@ -123,7 +124,7 @@
 
             // === Load background content ===
             $.ajax({
-                url: "home/welcomeget",
+                 url: '@Url.Action("WelcomeGet", "Home")',
                 method: "GET",
                 data: { id: loanId },
                 success: function (response) {

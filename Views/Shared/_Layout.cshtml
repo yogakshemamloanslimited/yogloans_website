@@ -127,10 +127,129 @@
         .list-doc ul li, .card {
             cursor: pointer;
         }
+        @@media(max-width:780px){
+            .au-redirection i {
+                font-size:18px;
+            }
+        }
     </style>
 </head>
 
 <body>
+
+    @* gievance login model *@
+    <input type="hidden" id="customer_id_getting" />
+    <div class="modal fade" id="grievancemodel" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h5>Grievance Customer Login</h5>
+                   
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="close-btn3"></button>
+                </div>
+                <div class="modal-body">
+                    <span id="taxFormMsg3" class="mt-2"></span>
+                    <form class="login">
+                        <p id="taxFormMsg" style="color:black;">We’re Here to Help</p>
+
+                        <!-- Mobile Number Input -->
+                        <div class="form-group" style="display: flex; align-items: center; justify-content: center;  margin-bottom: 10px;">
+                            <img src="~/images/icon/dialpad.png" style="width:20px; height:20px; margin-right: 10px;" />
+                            <input class="form-control" placeholder="Enter Registered Mobile Number" id="mobileNo" style="border-radius: 0px !important; " />
+                            <span class="text-danger"></span>
+                        </div>
+
+                        <!-- OTP Section (Initially Hidden) -->
+                        <div class="otp-group" style="display:none;" id="otpSection">
+                            <div class="form-group" style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <img src="~/images/icon/password.png" style="width:20px; height:20px; margin-right: 10px;" />
+                                <input class="form-control" placeholder="Enter Otp" id="otpInput" style="border-radius: 0px !important;" />
+                                <span class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin-top: 10px;">
+                                <button class="btn btn-primary" id="verifyOtpBtn">
+                                    Verify Otp <i class="fa fa-cog fa-w-16 fa-spin" id="spin-very-load" style="display:none;"></i>
+                                </button>
+                                <a style="cursor: pointer; font-size: 15px; margin-top: 10px;" id="resendOtpBtn">Resend Otp</a>
+                            </div>
+                        </div>
+
+                        <!-- Send OTP Button -->
+                        <div class="form-group" style="display: flex; align-items: center; justify-content: center; margin-top: 10px;">
+                            <button class="btn btn-primary" id="sendOtpBtn">
+                                
+                                Send Otp
+                                <img src="~/images/icon/email.png" style="width: 20px; height: 20px; filter: invert(1); margin-right: 10px;" id="send-img" />
+                                <i class="fa fa-cog fa-w-16 fa-spin" id="spin-load" style="display:none;"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* gievance login model end *@
+
+    @* Auction login model start *@
+    <div class="modal fade" id="auctionmodel" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Welcome, Bidder!</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="close-btn3"></button>
+                </div>
+                <div class="modal-body">
+                    <span id="taxFormMsg3" class="mt-2"></span>
+                    <form class="login">
+
+                     
+                        <p style="color:black;">Please log in</p>
+
+                        <div class="form-group" style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="~/images/icon/dialpad.png" style="width:20px; height:20px; margin-right: 10px;" />
+
+                            <input class="form-control" placeholder="Register Mobile Number" id="mobile" />
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="~/images/icon/password.png" style="width:20px; height:20px; margin-right: 10px;" />
+
+                            <input class="form-control" placeholder="Enter Secret Code " id="otp" />
+                            <span class="text-danger"></span>
+                        </div>
+
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                        <div class="form-group" style="display: flex; align-items: center; justify-content:center; width:100%; margin-bottom: 10px;">
+                        <button type="button" class="btn btn-primary" id="logme">Log In</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-danger">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="errorModalLabel">Oops</h5>
+                    @*    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button> *@
+                </div>
+                <div class="modal-body">
+                    <p id="errorMessage" style="color:black;"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* Auction login model end *@
     <!-- LOADER -->
     <div class="loader-mask">
         <div class="loader">
@@ -163,7 +282,7 @@
         </menu>
 
         <menu id="res-menu" style="z-index: 400000;">
-            <div class="menu-container">
+            <div class="menu-container" style="width: 70% !important;">
                 <ul>
                     <div class="toggle">
                         <img src="/images/icon/arrow(1).png" alt="" id="close">
@@ -195,14 +314,14 @@
 
     <!-- Floating Hover Buttons -->
     <div class="activity">
-        <a href="/Auction" class="au-redirection">
+        <span  class="au-redirection" style="cursor:pointer;" id="auction-model-show">
             <i class="fas fa-gavel"></i>
             <p>Auction</p>
-        </a>
-        <a href="/Grievance" class="au-redirection">
+        </span>
+        <span  class="au-redirection" id="gievancepopup-form" style="cursor:pointer;">
             <i class="fas fa-user"></i>
             <p>Grievances</p>
-        </a>
+        </span>
     </div>
 
     <!-- FOOTER -->
@@ -336,6 +455,235 @@
 
     </script>
 
+    @* grievance login script start *@
+    <script>
+        $(document).ready(function () {
+
+			$('#gievancepopup-form').on('click', function () {
+				$('#grievancemodel').modal('show');
+			
+				$('#otpSection').hide();
+				$('#sendOtpBtn').show();
+				$('#mobileNo').val('');
+				$('#otpInput').val('');
+			});
+
+            function extractErrorMessage(xhr) {
+                let msg = 'Error occurred';
+                try {
+                    const json = JSON.parse(xhr.responseText);
+                    msg = json.Message || json.message || msg;
+                } catch (e) {
+                    msg = xhr.responseText || msg;
+                }
+                return msg.replace(/[{}"]/g, '').trim(); // remove {} and quotes if any remain
+            }
+
+            // ====================== SEND OTP ======================
+            $('#sendOtpBtn').on('click', function (e) {
+                e.preventDefault();
+
+                const mobile = $('#mobileNo').val();
+                $('#taxFormMsg').text('');
+                $('#send-img').hide();
+                $('#spin-load').show();
+
+                $.ajax({
+                    url: API.allapi.Sendotp + '?mobile=' + encodeURIComponent(mobile),
+                    type: 'GET',
+                    success: function (res) {
+
+                        if (res.success) {
+                            slNo = res.slNo;
+                            $('#customer_id_getting').val(res.customerId || '');
+                            $('#otpSection').show();
+                            $('#sendOtpBtn').hide();
+                            $('#taxFormMsg').text(res.message).css('color', 'green');
+                        } else {
+                            $('#taxFormMsg').text(res.message || 'Failed to send OTP').css('color', 'red');
+                        }
+                        $('#spin-load').hide();
+                    },
+                    error: function (xhr) {
+                        const msg = extractErrorMessage(xhr);
+                        $('#taxFormMsg').text(msg).css('color', 'red');
+                        $('#spin-load').hide();
+                    }
+                });
+            });
+
+            // ====================== VERIFY OTP ======================
+            $('#verifyOtpBtn').on('click', function (e) {
+                e.preventDefault();
+
+                const customerId = $('#customer_id_getting').val();
+                const mobileNo = $('#mobileNo').val();
+                const otp = $('#otpInput').val();
+
+                $('#spin-very-load').show();
+
+                if (!slNo) {
+                    $('#taxFormMsg').text('Session expired. Please try again.').css('color', 'red');
+                    $('#spin-very-load').hide();
+                    return;
+                }
+
+                $.ajax({
+                    url: API.allapi.verifyotp,
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, Otp: otp, SlNo: slNo }),
+                    success: function (res) {
+                        if (!res) {
+                            $('#taxFormMsg').text('No data returned from server.').css('color', 'red');
+                            $('#spin-very-load').hide();
+                            return;
+                        }
+
+                        if (res.success) {
+                            $.ajax({
+                                url: '@Url.Action("Customeraddress", "Home")',
+                                type: 'POST',
+                                data: {
+                                    address: null,
+                                    CustomerId: customerId
+                                },
+                                success: function (response) {
+                                    console.log("Session set response:", response);
+
+                                    if (response.success) {
+                                        setTimeout(() => {
+                                            window.location.href = `/Grievance`;
+                                        }, 300);
+                                    } else {
+                                        console.warn("Session not set:", response.message);
+                                    }
+                                },
+                                error: function (xhr) {
+                                    const msg = extractErrorMessage(xhr);
+                                    console.error("Session set failed:", msg);
+                                }
+                            });
+
+                            $('#taxFormMsg').text(res.message).css('color', 'green');
+                        } else {
+                            $('#taxFormMsg').text('OTP verification failed').css('color', 'red');
+                        }
+
+                        $('#spin-very-load').hide();
+                    },
+                    error: function (xhr) {
+                        const msg = extractErrorMessage(xhr);
+                        $('#taxFormMsg').text(msg).css('color', 'red');
+                        $('#spin-very-load').hide();
+                    }
+                });
+            });
+
+            // ====================== RESEND OTP ======================
+            $('#resendOtpBtn').on('click', function (e) {
+                e.preventDefault();
+
+                const customerId = $('#customer_id_getting').val();
+                const mobileNo = $('#mobileNo').val();
+
+                if (!slNo) {
+                    $('#taxFormMsg').text('Session expired. Please try again.').css('color', 'red');
+                    return;
+                }
+
+                $.ajax({
+                    url: API.allapi.resendOtp,
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
+                    success: function (res) {
+                        if (res.success) {
+                            $('#taxFormMsg').text(res.message).css('color', 'green');
+                        } else {
+                            $('#taxFormMsg').text(res.message || 'Failed to resend OTP').css('color', 'red');
+                        }
+                    },
+                    error: function (xhr) {
+                        const msg = extractErrorMessage(xhr);
+                        $('#taxFormMsg').text(msg).css('color', 'red');
+                    }
+                });
+            });
+
+        });
+    </script>
+    @* grievance login script end *@
+
+    @* Auction login script *@
+
+    <script>
+        $(document).ready(function () {
+                   $('#auction-model-show').on('click', function() {
+            $('#auctionmodel').modal('show');
+        });
+
+                  
+            $('#logme').click(function() {
+                var mobile = $('#mobile').val();
+                var otp = $('#otp').val();
+
+                $.ajax({
+                    url: "http://localhost:8085/api/auction/login?mobile=" + mobile + "&otp=" + otp,
+                    method: "GET",
+                    success: function (response) {
+                        let codeValue = 0; // default
+
+                        if (response.outputMessage === "1") {
+                            codeValue = 1;
+                        }
+                        else if (response.outputMessage === "2") {
+                            codeValue = 2;
+                        }
+                        else {
+                            codeValue = 0;
+                        }
+
+                        // Set the session via POST
+                        $.ajax({
+                            url: '@Url.Action("SetModuleId", "Home")',
+                            method: 'POST',
+                           data: { code: codeValue, mobile: mobile, otp: otp },
+
+                            success: function () {
+                                // After setting session, take action based on outputMessage
+                                if (response.outputMessage === "1") {
+                                    window.location.href = '/Auction';
+                                }
+                                else if (response.outputMessage === "2") {
+                                                     window.location.href = '/Auctineer';
+                                }
+                                else {
+                                    $('#errorMessage').text(response.outputMessage);
+
+                                    var errorModal = new bootstrap.Modal(document.getElementById('errorModal'), {
+                                        backdrop: 'static',
+                                        keyboard: false
+                                    });
+                                    errorModal.show();
+                                }
+                            },
+                            error: function () {
+                                alert('Failed to set session.');
+                            }
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(error);
+                        alert("An error occurred: " + error);
+                    }
+                });
+            });
+        });
+
+
+    </script>
+    @* Auction login script end *@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/jaquery.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

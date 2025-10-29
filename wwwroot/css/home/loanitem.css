@@ -106,8 +106,16 @@
 @media (max-width:780px){
     .loan-item-details .detail p {
         width: 100%;
+        font-size:12px;
     }
-    .loan-item-details .detail ul {
+    .loan-item-details .detail {
+        gap:0px;
+        padding:5px;
+    }
+        .loan-items {
+           height:250px;
+    }
+        .loan-item-details .detail ul {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -125,10 +133,18 @@
    
     }
     .loan-items .item-container {
-        height: 90px;
+        height: 250px;
+        display: grid !important;
+       
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+       
     }
+        .loan-items .item-container > :last-child {
+            grid-column: 1 / -1; /* make last item span full width */
+        }
     .loan-items .item-container .item {
         padding: 10px   ;
+        width:100%;
     }
     .loan-items .item-container .item img {
         width: 35px;

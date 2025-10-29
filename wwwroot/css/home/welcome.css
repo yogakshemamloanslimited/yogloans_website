@@ -57,14 +57,26 @@
             .welcome-container h1 {
                 font-size: 30px;
             }
+
             .welcome-container {
-                height:280px;
+                min-height: 280px !important;
+                height: 280px;
+                justify-content: end;
+             
+                padding: 20px;
             }
-                .welcome-container p {
+                .welcome-container h1, p {
+                    width:95%;
+                }
+                    .welcome-container p {
                 font-size: 15px;
             }
 
             .welcome-container .button button {
                 width: 120px;
+
             }
-        }
+                .welcome-container .button {
+                    width:95%;
+                }
+                }

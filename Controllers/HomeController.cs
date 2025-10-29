@@ -5,6 +5,7 @@ using yogloansdotnet.Data;
 using Microsoft.EntityFrameworkCore;
 using Azure.Core;
 using TechTalk.SpecFlow.CommonModels;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace yogloansdotnet.Controllers;
 
@@ -17,32 +18,48 @@ public class HomeController : Controller
     string Fail_URL;
     private object merchantId;
     private string requestparams;
+    private IMemoryCache? cache;
 
     public string MultiAccountInstructionDtls { get; private set; }
-
-    public HomeController(ILogger<HomeController> logger, ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
+    private readonly IMemoryCache _cache;
+    public HomeController(
+      ILogger<HomeController> logger,
+      ApplicationDbContext context,
+      IWebHostEnvironment webHostEnvironment,
+      IMemoryCache cache)
     {
         _logger = logger;
         _context = context;
         _webHostEnvironment = webHostEnvironment;
+        _cache = cache; // ✅ properly injected instance
     }
 
-    public IActionResult Index()
+
+    public async Task<IActionResult> Index()
     {
-        var viewModel = new LoanGroupViewModel();
+        var viewModel = new LoanGroupViewModel
+        {
+            AboutContent = await _context.AboutContent
+                .AsNoTracking()
+                .ToListAsync()
+        };
+
         return View(viewModel);
     }
+
     [HttpGet]
-    public async Task<IActionResult> welcomeget(int id) // use int instead of string
+    public async Task<IActionResult> WelcomeGet(int id)
     {
-        // Fetch records that match the loan_id
-        var homwelcomeData = await _context.Homwelcome
-                                           .Where(h => h.loan_id == id)
-                                           .ToListAsync();
+        // Use AsNoTracking() to avoid EF change tracking (faster for read-only queries)
+        var data = await _context.Homwelcome
+                                 .AsNoTracking()
+                                 .Where(h => h.loan_id == id)
+                                 .ToListAsync();
 
         // Return as JSON
-        return Json(homwelcomeData);
+        return Json(data);
     }
+
 
     [HttpGet]
     public async Task<IActionResult> GetLoanData()
@@ -253,17 +270,25 @@ public class HomeController : Controller
         }
     }
 
+ 
 
-    [HttpGet]
-    [Route("loans")]
+    
+    [HttpGet("loans")]
     public async Task<IActionResult> GetLoans()
     {
-        // Fetch all loans from the database
-        var loans = await _context.Loans.ToListAsync();
+        if (!_cache.TryGetValue("all_loans", out object loans))
+        {
+            loans = await _context.Loans
+                                  .AsNoTracking()
+                                  .Select(l => new { l.Id, l.Loanname, l.Content , l.icon })
+                                  .ToArrayAsync();
 
-        // Return them as JSON
+            _cache.Set("all_loans", loans, TimeSpan.FromMinutes(5));
+        }
+
         return Ok(loans);
     }
+
 
 
     [HttpGet]

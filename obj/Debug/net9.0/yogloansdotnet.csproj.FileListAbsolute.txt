@@ -567,11 +567,9 @@ C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\sco
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\scopedcss\bundle\yogloansdotnet.styles.css
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\scopedcss\projectbundle\yogloansdotnet.bundle.scp.css
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\voz9tei4il-jrb5gwgyh2.gz
-C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\rsqgh38mmq-difkck64fe.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\p3fs1amq2a-qfr51cx3bl.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\a7hjf7yvaf-qsr5pszndi.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\4ejy8gtjcv-h6puv8qieg.gz
-C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zitbjho43y-0yccxxby6k.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\mfcj1t9qvc-5a4u9zsz5b.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\g5vfzt5d9t-75fbhb7xv2.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\rqynun2trw-wdqujzk4x3.gz
@@ -586,11 +584,8 @@ C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\com
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\vby8an2ra7-2ntgbf4qa1.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\u3w50u8azq-xpu8oid3re.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\fk7bb3rk17-3gmyncutka.gz
-C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\0x1km8oxjq-91pdjs4dny.gz
-C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\e66vs2ekmx-9h9bkc9gdw.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\6o5bm9dtot-yevbtd8c2z.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\2uk72kucmj-x4m34lsa9e.gz
-C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zhjbtipgg6-a7bxwy4f7n.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\ffcq8db722-lbwn7nyeb2.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\7t9vvlxr1e-f8iekp3gzv.gz
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\lwabdmqn4b-j9ty8lpbpg.gz
@@ -688,3 +683,8 @@ C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\ref
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.pdb
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\yogloansdotnet.genruntimeconfig.cache
 C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\ref\yogloansdotnet.dll
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\e66vs2ekmx-y4r60mii5t.gz
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\0x1km8oxjq-3vkmquwu6g.gz
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\rsqgh38mmq-g0fwizhre4.gz
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zitbjho43y-5y7edx46ey.gz
+C:\Users\Anas\OneDrive\Desktop\latest\yogloansdotnet - Copy\obj\Debug\net9.0\compressed\zhjbtipgg6-r0yk1bli1w.gz

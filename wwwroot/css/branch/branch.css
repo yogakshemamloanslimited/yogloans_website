@@ -434,7 +434,8 @@
        }
        #branch-list .card a {
         padding: 0px;
-        border-radius: 0px;
+        border-radius: 5px;
+        text-align:center;
        }
        #branch-list .card img {
         width: 20px;
@@ -450,13 +451,15 @@
        }
    }
    
-   @media (max-width: 480px) {
+   @media (max-width: 780px) {
        .branch-locator-section {
            padding: 40px 0;
            height: 1100px;
        }
-       
-       .section-title {
+    #branch-list .card {
+        padding:15px;
+    }
+        .section-title {
            font-size: 1.8rem;
        }
        

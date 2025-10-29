@@ -36,3 +36,9 @@
     border: none;
     cursor: pointer;
 }
+
+@media(max-width:780px) {
+    .about-container .content {
+        width: 100%;
+    }
+}

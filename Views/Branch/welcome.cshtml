@@ -1,6 +1,6 @@
  @model List<yogloansdotnet.Models.NearbyModel>
  <section class="welcome-container"
-      style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
+      style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? "")); justify-content:center;" id="welcome-desktop">
         <h1 >Nearby Branches
         
             </h1>
@@ -44,7 +44,7 @@
     #welcome-desktop { display: flex; }
     @@media (max-width: 767px) {
         #welcome-desktop { display: none; }
-        #welcome-mobile { display: flex; }
+        #welcome-mobile { display: flex; justify-content:center; }
     }
 </style>
 

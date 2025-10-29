@@ -161,6 +161,7 @@
         function cheking1() {
              $('#loanTableContainer').empty();
                $('.exists').hide();
+
             var customerId = '@Context.Session.GetString("CustomerId")';
         const type = $('input[name="messageType"]:checked').val(); // get selected radio
               $.ajax({
@@ -198,7 +199,10 @@
 
 
                         $('#text-msg').text('You Still Have Pending Grievance You Still Want to Proceed ?');
-                         $('#text-msg').append(`<button id="yes" type="button" class="btn btn-success">YES</button><button type="button" id="no" class="btn btn-danger">NO</button>`);
+                                    $('#text-msg').append(`<div class="form-group" style="display:flex; gap:10px;">
+        <button id="yes" type="button" class="btn btn-success">YES</button>
+        <button type="button" id="no" class="btn btn-danger">NO</button>
+    </div>`);
                     }
                 });
 
@@ -214,12 +218,12 @@
             } else {
                 // ✅ No valid table data
                 $('.exists').hide();
-                $('#complainBox').show();
+                $('#complainBox').hide();
             }
         },
         error: function () {
             $('.exists').hide();
-            $('#complainBox').show();
+            $('#complainBox').hide();
         }
     });
 
@@ -303,7 +307,10 @@
     `);
 
                          $('#text-msg').text('You Still Have Pending Grievance You Still Want to Proceed ?');
-                         $('#text-msg').append(`<button id="yes" type="button" class="btn btn-success">YES</button><button id="no" type="button" class="btn btn-danger">NO</button>`);
+                           $('#text-msg').append(`<div class="form-group" style="display:flex; gap:10px;">
+        <button id="yes" type="button" class="btn btn-success">YES</button>
+        <button type="button" id="no" class="btn btn-danger">NO</button>
+    </div>`);
                     }
                 });
 

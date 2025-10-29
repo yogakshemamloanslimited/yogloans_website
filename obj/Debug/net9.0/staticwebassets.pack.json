@@ -221,12 +221,20 @@
       "PackagePath": "staticwebassets\\images\\icon\\cooperation.png"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\dialpad.png",
+      "PackagePath": "staticwebassets\\images\\icon\\dialpad.png"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\download-pdf.png",
       "PackagePath": "staticwebassets\\images\\icon\\download-pdf.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\electric-appliances.png",
       "PackagePath": "staticwebassets\\images\\icon\\electric-appliances.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\email.png",
+      "PackagePath": "staticwebassets\\images\\icon\\email.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\facebook.png",
@@ -263,6 +271,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\open-menu.png",
       "PackagePath": "staticwebassets\\images\\icon\\open-menu.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\password.png",
+      "PackagePath": "staticwebassets\\images\\icon\\password.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\pdf.png",
@@ -537,80 +549,8 @@
       "PackagePath": "staticwebassets\\images\\rbi.jpg"
     },
     {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\Artboard.png",
-      "PackagePath": "staticwebassets\\images\\welcome\\Artboard.png"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\bike-background.png",
-      "PackagePath": "staticwebassets\\images\\welcome\\bike-background.png"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\business-background.png",
-      "PackagePath": "staticwebassets\\images\\welcome\\business-background.png"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\business-background2.png",
-      "PackagePath": "staticwebassets\\images\\welcome\\business-background2.png"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\career.png",
-      "PackagePath": "staticwebassets\\images\\welcome\\career.png"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\cd2.png",
-      "PackagePath": "staticwebassets\\images\\welcome\\cd2.png"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\cdn.jpg",
-      "PackagePath": "staticwebassets\\images\\welcome\\cdn.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\colleagues-working-project-discussing-details.jpg",
-      "PackagePath": "staticwebassets\\images\\welcome\\colleagues-working-project-discussing-details.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\consumer-durables-background.png",
-      "PackagePath": "staticwebassets\\images\\welcome\\consumer-durables-background.png"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\contact.jpg",
-      "PackagePath": "staticwebassets\\images\\welcome\\contact.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\front-view-arrangement-economy-elements.jpg",
-      "PackagePath": "staticwebassets\\images\\welcome\\front-view-arrangement-economy-elements.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\gold2.png",
-      "PackagePath": "staticwebassets\\images\\welcome\\gold2.png"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\goldloan.jpg",
-      "PackagePath": "staticwebassets\\images\\welcome\\goldloan.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\hands-holding-earth-csr-business-campaign.jpg",
-      "PackagePath": "staticwebassets\\images\\welcome\\hands-holding-earth-csr-business-campaign.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\investors.jpg",
-      "PackagePath": "staticwebassets\\images\\welcome\\investors.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\medium-shot-woman-with-white-house.jpg",
-      "PackagePath": "staticwebassets\\images\\welcome\\medium-shot-woman-with-white-house.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\policy.jpg",
-      "PackagePath": "staticwebassets\\images\\welcome\\policy.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\vehicle2.jpg",
-      "PackagePath": "staticwebassets\\images\\welcome\\vehicle2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\vehicle2.png",
-      "PackagePath": "staticwebassets\\images\\welcome\\vehicle2.png"
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\goldLoan@3x.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\goldLoan@3x.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\api.js",
