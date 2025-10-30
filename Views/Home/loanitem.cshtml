@@ -147,13 +147,13 @@
 
                             // ✅ Hide loader only after background is ready
                             $('.loader').fadeOut();
-                            $('.loader-mask').delay(450).fadeOut('slow');
+                            $('.loader-mask').delay(350).fadeOut('slow');
                             window.__keepLoader__ = false;
                         };
                         img.onerror = function () {
                             // Hide loader even if image fails
                             $('.loader').fadeOut();
-                            $('.loader-mask').delay(450).fadeOut('slow');
+                            $('.loader-mask').delay(350).fadeOut('slow');
                             window.__keepLoader__ = false;
                         };
                         img.src = imageUrl;
@@ -161,13 +161,13 @@
                         $('#header').text('');
                         $('#sub').text('');
                         $('.loader').fadeOut();
-                        $('.loader-mask').delay(450).fadeOut('slow');
+                        $('.loader-mask').delay(350).fadeOut('slow');
                         window.__keepLoader__ = false;
                     }
                 },
                 error: function () {
                     $('.loader').fadeOut();
-                    $('.loader-mask').delay(450).fadeOut('slow');
+                    $('.loader-mask').delay(350).fadeOut('slow');
                     window.__keepLoader__ = false;
                 }
             });
