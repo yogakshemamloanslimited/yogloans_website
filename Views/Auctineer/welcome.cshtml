@@ -3,7 +3,7 @@
 }
 @model yogloansdotnet.Models.LoanGroupViewModel
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<script src="~/js/api.js"></script>
 <style>
     .welcome-container {
         width: 100%;
@@ -227,7 +227,7 @@
         const sessionOtp = '@(Context.Session.GetInt32("otp")?.ToString() ?? "")';
 
         $.ajax({
-            url: `http://localhost:8085/api/auction/auctineer-data/${sessionMobile}/${sessionOtp}`,
+            url: `${API.allapi.Auctineerdata}${sessionMobile}/${sessionOtp}`,
             method: "GET",
             success: function (response) {
                 console.log("API Response:", response);
@@ -369,7 +369,7 @@
         if (auction_dt.includes('T')) auction_dt = auction_dt.split('T')[0];
 
         $.ajax({
-            url: `http://localhost:8085/api/auction/FillAllbid/${auction_dt}/${auctionId}/${stateId}`,
+            url: `${API.allapi.Fillauctineerdata}${auction_dt}/${auctionId}/${stateId}`,
             method: "GET",
             success: function (response) {
                 const data = response.Data || [];
@@ -411,7 +411,7 @@
         if (auction_dt.includes('T')) auction_dt = auction_dt.split('T')[0];
 
         $.ajax({
-            url: `http://localhost:8085/api/auction/finalizeauction/${auction_dt}/${auctionId}/${bidder_id}/${auctioneerId}`,
+            url: `${API.allapi.Finalizeauction}${auction_dt}/${auctionId}/${bidder_id}/${auctioneerId}`,
             method: "POST",
             success: function () {
              
@@ -443,7 +443,7 @@
         if (auction_dt.includes('T')) auction_dt = auction_dt.split('T')[0];
 
         $.ajax({
-            url: `http://localhost:8085/api/auction/FillAllbid/${auction_dt}/${auctionId}/${stateId}`,
+            url: `${API.allapi.Fillauctineerdata}${auction_dt}/${auctionId}/${stateId}`,
             method: "GET",
             success: function (response) {
                 const data = response.Data || [];

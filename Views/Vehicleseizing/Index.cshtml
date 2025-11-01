@@ -1,0 +1,187 @@
+﻿@{
+    Layout = "~/Views/Shared/_Auction_layout.cshtml";
+    ViewData["Title"] = "Seizing";
+}
+<style>
+    .welcome-container{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:30px;
+        height: 250px;
+        width:80%;
+    }
+
+    .cards {
+
+        width: 100%;
+        padding:20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px; /* optional spacing between cards */
+    }
+
+        .cards .card {
+        width:100%;
+            margin-top: 50px;
+        height:300px;
+        background:white;
+        cursor:pointer;
+    }
+    .cards .card img{
+        height:200px;
+        width:100%;
+    }
+
+    .fc-button-group {
+        display: block;
+    }
+    @@media(max-width:780px){
+        .welcome-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            height: 250px;
+            width: 100%;
+        }
+
+        .welcome-container .form-group{
+            width:100%;
+        }
+
+        #welcome-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition:;
+            transform: translate(-50%,-50%);
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+        }
+
+            #welcome-image img {
+            position: absolute;
+            width: 200px;
+            opacity: 0.5;
+            top: 15%;
+        }
+
+        .fc-button-group{
+            display:none;
+        }
+
+        .fc-button-group2 {
+            display: block;
+        }
+    }
+        </style>
+<div style="width:100%; display:flex; justify-content:center;">
+
+
+    <section class="welcome-container">
+        <div class="form-group" >
+
+            <p>Bikes</p>
+            <h1>Not just bikes. A collection of pure passion on wheels.</h1>
+            <p>
+                Discover bikes crafted for elegance, performance, and power.
+            </p>
+        </div>
+        <div class="form-group" id="welcome-image">
+
+            <img src="~/images/bike-back.png" />
+        </div>
+    </section>
+</div>
+<section style="width:100%; background: #f7f7f7; min-height:350px; display:flex;">
+    <div class="filter" style="width:30%;">
+
+    </div>
+    <div class="cards">
+        <div class="card">
+            <div class="top" style="position:relative">
+                <p style="position:absolute; left:0%; top:0%; background:black; color:white; width: auto;
+  padding: 5px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;">
+                    ₹ 4000000
+                </p>
+                <img src="https://lirp.cdn-website.com/072a18a0/dms3rep/multi/opt/ducati-scrambler-dark-1920w.jpeg" alt="Sport Bike">
+            </div>
+            <div class="bottom-details" style="height:100px;">
+                <p style="padding: 20px;">
+                    Ducati Scrambler Dark 1920w
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="top" style="position:relative">
+                <p style="position:absolute; left:0%; top:0%; background:black; color:white; width: auto;
+  padding: 5px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;">
+                    ₹ 40000000000
+                </p>
+                <img src="https://lirp.cdn-website.com/072a18a0/dms3rep/multi/opt/bmw-1948-r24-800x600-1920w.jpeg" alt="Classic Bike">
+            </div>
+            <div class="bottom-details" style="height:100px;">
+                <p style="padding: 20px;">
+                    1948 BMW R24
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="top" style="position:relative">
+                <p style="position:absolute; left:0%; top:0%; background:black; color:white; width: auto;
+  padding: 5px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;">
+                    ₹ 40000000000
+                </p>
+                <img src="https://lirp.cdn-website.com/072a18a0/dms3rep/multi/opt/1960-fb-mondial-88-sport-1920w.jpg" alt="Adventure Bike">
+            </div>
+            <div class="bottom-details" style="height:100px;">
+                <p style="padding: 20px;">
+                    960 fb-MONDIAL-88-SPORT
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="top" style="position:relative">
+                <p style="position:absolute; left:0%; top:0%; background:black; color:white; width: auto;
+  padding: 5px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;">
+                    ₹ 40000000000
+                </p>
+                <img src="https://lirp.cdn-website.com/072a18a0/dms3rep/multi/opt/bmw-1935-r17-800x600-1920w.jpeg" alt="Classic Bike">
+            </div>
+            <div class="bottom-details" style="height:100px;">
+                <p style="padding: 20px;">
+                    BMW 1935 R17
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="top" style="position:relative">
+                <p style="position:absolute; left:0%; top:0%; background:black; color:white; width: auto;
+  padding: 5px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;">
+                    ₹ 40000000000
+                </p>
+                <img src="https://lirp.cdn-website.com/072a18a0/dms3rep/multi/opt/ktm-r-100-1953-1920w.jpg" alt="Adventure Bike">
+            </div>
+            <div class="bottom-details" style="height:100px;">
+                <p style="padding: 20px;">
+                    KTM R 100-1953-1920w
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>

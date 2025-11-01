@@ -1,22 +1,6 @@
-@model yogloansdotnet.Models.ServicesLoanModel
-
-<section class="welcome-container"
-    style="background-image: url(@(Model.Homwelcome.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
-    <h1 style="visibility:hidden;">@Model.Homwelcome.FirstOrDefault()?.Header</h1>
-    <div class="button">
-       @*  <p><a href="javascript:history.back()" id="return-link">Home</a>- @Model.Homwelcome.FirstOrDefault()?.Header</a></p> *@
-        <h1 >@Model.Homwelcome.FirstOrDefault()?.Header</h1>
-    </div>
-</section>
-
-<!-- Mobile Section (Image2) -->
-<section class="welcome-container"
-    style="background-image: url(@(Model.Homwelcome.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
-    <h1 style="visibility:hidden;">@Model.Homwelcome.FirstOrDefault()?.Header</h1>
-    <div class="button">
-      @*   <p><a href="javascript:history.back()" id="return-link">Home</a>- @Model.Homwelcome.FirstOrDefault()?.Header</p *@>
-        <h1 >@Model.Homwelcome.FirstOrDefault()?.Header</h1>
-    </div>
+﻿<section class="welcome-container" id="welcome-desktop">
+    <h1 id="header"></h1>
+    <p id="sub"></p>
 </section>
 
 <style>
@@ -36,33 +20,104 @@
     #welcome-desktop {
         display: flex;
     }
-
-    @@media (max-width: 767px) {
-        #welcome-desktop {
-            display: none;
-        }
-
-        #welcome-mobile {
-            display: flex;
-        }
-    }
 </style>
 
 <script>
-    const link = document.getElementById('return-link');
-    const ref = document.referrer;
+    const loanId = '@(Context.Session.GetString("loan") ?? "")';
+    const loanname = '@(Context.Session.GetString("loanname") ?? "")';
 
-    if (ref) {
-        // Create a temporary anchor to parse the URL
-        const url = new URL(ref);
+    $.ajax({
+        url: '@Url.Action("WelcomeGet", "Home")',
+        method: "GET",
+        data: { id: loanId },
+        success: function (response) {
+     
+                const data = response[0];
+                $('#header').text(data.header);
+                $('#sub').text(data.subContent);
 
-        // Get the last part of the path (e.g., 'investors' from '/investors')
-        let pageName = url.pathname.split('/').filter(Boolean).pop() || 'Home';
+                const container = $('.welcome-container');
+                const imageUrl = window.innerWidth <= 768 ? data.image2 : data.image1;
 
-        // Make it user-friendly
-        pageName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                // === Preload background image ===
+                const img = new Image();
+                img.onload = function () {
+                    container.css({
+                        'background-image': `url('${imageUrl}')`,
+                        'background-size': 'cover',
+                        'background-position': 'center'
+                    });
 
-        link.textContent = pageName;
-        link.href = ref;
-    }
+                    // ✅ Optionally: hide loader or fade in content
+                    // $('.loader').fadeOut();
+                };
+                img.src = imageUrl; // <-- Missing line fixed
+            }
+        
+    });
+
+     
+          $.ajax({
+                url: "/Loan-points/" + loanId,
+                method: "GET",
+                success: function (response) {
+                    console.log(response);
+                       $('.gold-features').empty();
+                    const data = response.data;
+                    data.forEach(function(item){
+                     $('.gold-features').append(` <div class="feature">
+        <img src="/images/icon/checklist.png" alt="">
+        <span>${item.point}</span>
+    </div>`);
+                    });
+                  
+                }
+            });
+            
+            $.ajax({
+                url: '@Url.Action("GetLoancontent", "Home")',
+                method : "GET",
+                data:{Id:loanId},
+                success:function(response){
+                       var content = response[0].content;
+                   $('#item-para').text(content);
+                }
+            });
+                  $.ajax({
+        url: '@Url.Action("Offers", "Home")',
+        method: "GET",
+        data: { Id: loanId },
+        success: function (response) {
+            console.log("Offers:", response);
+
+            if (response && response.length > 0) {
+                response.forEach(function(item) {
+                    // Example: add to your .gold-features div
+                    $(".right").append(`
+                   <div class="card-item">
+                <div class="card-content">
+                <h3>${item.offerHeader} </h3>
+
+                   <p>
+                        <i class="fas fa-check-circle"></i>
+                        <span>   ${item.offerContent}</span>
+                    </p>
+               </div>
+        </div>
+
+
+                    `);
+                });
+            } else {
+                console.warn("No offers found.");
+            }
+        },
+        error: function (xhr) {
+            console.error("Error fetching offers:", xhr.responseText);
+        }
+    });
+
+           
+    
+            
 </script>

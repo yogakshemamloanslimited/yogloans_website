@@ -1,0 +1,212 @@
+﻿
+@model string;
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		list-style: none;
+	}
+	body{
+		/* display: flex;
+		justify-content: center; */
+
+		/* min-height: 100vh; */
+		padding:20px;
+		background: #f0f0f0;
+		font-family: 'Poppins', sans-serif;
+	}
+
+	.card {
+		height: auto;
+		width: 40%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transition: trans;
+		transform: translate(-50%,-50%);
+	}
+
+	.card-header {
+		background-position: center;
+		background-position:fixed;
+		height: 200px;
+		background-size: cover; /* optional if you want the image to fully cover the area */
+	}
+	.card-footer img{
+		cursor:pointer;
+	}
+	@@media(max-width:780px){
+		.card {
+			width: 95%;
+		}
+		p , td{
+			font-size:12px !important;
+		}
+
+		.card-footer img {
+			width: 30px !important;
+		}
+
+		.card-header img{
+			width:50% !important;
+
+		}
+	}
+
+	.loader-mask {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #fff;
+		z-index: 99999;
+	}
+
+	.loader {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform:translate(-50%, -50%);
+	}
+
+</style>
+<body>
+
+	<div class="loader-mask">
+		<div class="loader">
+			<img src="~/images/Payment Processing.gif" style="width:160px;" />
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-header" style="background-image:url('images/upipay.png'); padding: 20px; position:relative;">
+			<img src="~/images/logo/logo2.png" style="width: 30%;" />
+			<p style="color:white; position:absolute; bottom:0%; padding: 20px; font-weight:600; font-size:20px; right:0%;" id="proccess-head">Quick & Secure UPI Transfers</p>
+		</div>
+		<div class="card-body">
+			<form class="form-group" id="details" asp-action="googlepay" method="post">
+				<input type="hidden" value="@Model" id="transid" name="transId" />
+				<input type="hidden" value="" id="loan_no" name="loan_no" />
+				<input type="hidden" value="" id="amount" name="amount" />
+			</form>
+			<form class="form-group" id="phonepeform" asp-action="phonepay" method="post">
+				<input type="hidden" value="@Model" id="" name="transId" />
+				<input type="hidden" value="" id="loan_no2" name="loan_no" />
+				<input type="hidden" value="200" id="amount2" name="amount" />
+			</form>
+			<form class="form-group" id="paytmform" asp-action="paytm" method="post">
+				<input type="hidden" value="@Model" id="" name="transId" />
+				<input type="hidden" value="" id="loan_no3" name="loan_no" />
+				<input type="hidden" value="200" id="amount3" name="amount" />
+			</form>
+
+		</div>
+		<div class="card-footer" style="display: flex;
+  justify-content: center;
+  gap: 40px;">
+			<img src="~/images/icon/googlepay.png" id="google_pay"/>
+			<img src="~/images/icon/phone-pe.png" id="phonepe" />
+			<img src="~/images/icon/paytm.png" id="paytm" />
+		</div>
+	</div>
+
+
+	<script src="~/js/api.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+@* 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> *@
+	<script src="~/js/jaquery.js" asp-append-version="true"></script>
+	<script>
+		var transID =  $('#transid').val();
+				$.ajax({
+			url: API.allapi.Getapidata,
+			method: "GET",
+			data: { transID: transID },
+			success: function (a) {
+				var data = a.data;
+
+				data.forEach(function (item) {
+					const expiryDate = new Date(item.Link_valid_dt);
+					const now = new Date();
+
+					// ✅ Check if not expired
+					if (expiryDate > now) {
+						$('#loan_no').val(item.loan_no);
+						$('#amount').val(item.msged_emi_amt);
+						$('#loan_no2').val(item.loan_no);
+						$('#loan_no3').val(item.loan_no);
+
+						$('#details').append(`
+							<table class="table">
+								<tr>
+									<td>Loan Number</td>
+									<td>${item.loan_no}</td>
+								</tr>
+								<tr>
+									<td>Unique Id</td>
+									<td>${item.customer_id}</td>
+								</tr>
+								<tr>
+									<td>Name</td>
+									<td>${item.customer_name}</td>
+								</tr>
+								<tr>
+									<td>Amount</td>
+									<td>${item.msged_emi_amt}</td>
+								</tr>
+								<tr>
+									<td>Link Validity</td>
+									<td>${expiryDate.toLocaleString()}</td>
+								</tr>
+							</table>
+						`);
+					} else {
+						$('#details').empty();
+						$('#proccess-head').empty();
+						$('#proccess-head').text("Payment Link Expired");
+							$('#details').append(`
+							
+								<div class="" style="width:100%; display:flex; justify-content:center;">
+								
+								<img src="images/cardbreak.png" style="width:300px; opacity:0.5;"/>
+									
+								</div>							
+							`);
+							$('.card-footer').hide();
+					}
+				});
+			}
+		});
+
+			$('#google_pay').on("click", function() {
+			$('#details').submit();
+		});
+				$('#phonepe').on("click", function() {
+			$('#phonepeform').submit();
+		});
+			$('#paytm').on("click", function() {
+			$('#paytmform').submit();
+		});
+		   $(window).on('load', function() {
+
+			$('.loader').fadeOut();
+			$('.loader-mask').delay(450).fadeOut('slow');
+		});
+	</script>
+</body>
+</html>

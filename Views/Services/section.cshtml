@@ -1,32 +1,13 @@
-  @model yogloansdotnet.Models.ServicesLoanModel
+
   <link rel="stylesheet" href="~/css/Gold/section.css" asp-append-version="true">
   <section class="gold-info-section">
         <div class="gold-info-container">
             <div class="gold-description">
-                <p>@Model.Loan.FirstOrDefault()?.Content</p>
+                <p id="item-para"></p>
             </div>
             <div class="gold-features-and-button">
                 <div class="gold-features">
-               @foreach (var point in Model.Loanpoint)
-{
-    <div class="feature">
-        <img src="/images/icon/checklist.png" alt="">
-        <span>@point.Point</span>
-    </div>
-}
-
-                   <!--  <div class="feature">
-                        <img src="images/icon/checklist.png" alt="Quick Processing">
-                        <span>Quick Processing</span>
-                    </div>
-                    <div class="feature">
-                        <img src="images/icon/checklist.png" alt="Minimal Documentation">
-                        <span>Minimal Documentation</span>
-                    </div>
-                    <div class="feature">
-                        <img src="images/icon/checklist.png" alt="Competitive Rates">
-                        <span>Competitive Rates</span>
-                    </div> -->
+         
                 </div>
                 <div class="apply-button">
                     <button data-bs-toggle="modal" data-bs-target="#exampleModal">Apply Now →</button>
@@ -101,8 +82,8 @@
           </div>
             <div class="col-md-6">
             <div class="form-floating">
-              <input type="text" class="form-control " id="product" name="product" 
-                value="@Model.Homwelcome.FirstOrDefault()?.Header" placeholder="Product" readonly style="background-color: #f8f9fa; cursor: default; pointer-events: none; user-select: none;">
+              <input type="text" class="form-control " id="product" name="product"
+                                   value="'@(Context.Session.GetString("loanname") ?? "")'" placeholder="Product" readonly style="background-color: #f8f9fa; cursor: default; pointer-events: none; user-select: none;">
               <label for="product">Product</label>
             </div>
           </div>
@@ -191,11 +172,14 @@
   }
 </style>
 <script>
+
+   
+
     $("#enquiryForm").on("submit", function(e) {
     e.preventDefault();
 
     $.ajax({
-        url: "http://localhost:8085/api/enquery",
+                url: API.allapi.Loanenquery,
         type: "POST",
         data: $(this).serialize(),
        success: function(response) {
@@ -221,7 +205,7 @@ $.ajax({
         url: API.allapi.EnqueryOccupations,
     type: "GET",
     success: function(response) {
-        console.log(response.Data);
+        console.log("occupation", response.Data);
 
         let occupationSelect = document.getElementById("occupation");
         

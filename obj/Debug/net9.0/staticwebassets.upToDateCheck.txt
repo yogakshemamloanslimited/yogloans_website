@@ -134,6 +134,8 @@ wwwroot\css\onlinepay\style.css
 wwwroot\css\policy\policy.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\bike-back.png
+wwwroot\images\cardbreak.png
 wwwroot\images\crisil.jpg
 wwwroot\images\directors\Mohandas.jpg
 wwwroot\images\directors\prasad.jpg
@@ -160,6 +162,7 @@ wwwroot\images\icon\electric-appliances.png
 wwwroot\images\icon\email.png
 wwwroot\images\icon\facebook.png
 wwwroot\images\icon\gold.png
+wwwroot\images\icon\googlepay.png
 wwwroot\images\icon\image.png
 wwwroot\images\icon\judge.png
 wwwroot\images\icon\linkedin-logo.png
@@ -169,11 +172,14 @@ wwwroot\images\icon\maps-and-flags.png
 wwwroot\images\icon\note.png
 wwwroot\images\icon\open-menu.png
 wwwroot\images\icon\password.png
+wwwroot\images\icon\paytm.png
 wwwroot\images\icon\pdf.png
+wwwroot\images\icon\phone-pe.png
 wwwroot\images\icon\printer.png
 wwwroot\images\icon\search.png
 wwwroot\images\icon\seen.png
 wwwroot\images\icon\send.png
+wwwroot\images\icon\send-data.png
 wwwroot\images\icon\show.png
 wwwroot\images\icon\sign-up.png
 wwwroot\images\icon\social-media.png
@@ -192,6 +198,7 @@ wwwroot\images\online\gold.png
 wwwroot\images\online\onlinepayment.png
 wwwroot\images\online\qrcode.png
 wwwroot\images\online\tax.jpg
+wwwroot\images\Payment Processing.gif
 wwwroot\images\Payment verify loader.gif
 wwwroot\images\payment\failed-to-make-payment-by-credit-card-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-vector.jpg
 wwwroot\images\pdf\csr\approvedCSRPolicy.pdf
@@ -238,8 +245,10 @@ wwwroot\images\pdf\policiesitems\interest.pdf
 wwwroot\images\pdf\policiesitems\KYCpolicy.pdf
 wwwroot\images\pdf\policiesitems\loan.pdf
 wwwroot\images\rbi.jpg
+wwwroot\images\seizingauth.png
 wwwroot\images\Terms&conditions.pdf
 wwwroot\images\Tiredman.jpg
+wwwroot\images\upipay.png
 wwwroot\images\welcome\goldLoan@3x.png
 wwwroot\js\api.js
 wwwroot\js\branch\branch.js

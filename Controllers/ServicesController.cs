@@ -17,31 +17,12 @@ namespace yogloansdotnet.Controllers
          _context = context;
         }
 [HttpGet]
-[Route("services/{loanname}/{id}")]
-public async Task<IActionResult> Index(string loanname , string id)
+[Route("services")]
+public async Task<IActionResult> Index()
 {
-    var viewModel = new ServicesLoanModel();
+  
 
-    // Filter all models by loanname
-    viewModel.AboutContent = await _context.AboutContent.ToListAsync();
-
-    viewModel.Homwelcome = await _context.Homwelcome
-        .Where(x => x.Header == loanname)
-        .ToListAsync();
-
-    viewModel.Loanpoint = await _context.LoanPoints
-        .Where(lp => lp.Loan == id)
-        .ToListAsync();
-
-    viewModel.Loan = await _context.Loans
-        .Where(l => l.Loanname == loanname)
-        .ToListAsync();
-
-        viewModel.Offer = await _context.Offer
-        .Where(o => o.Loan == id)
-        .ToListAsync();
-
-    return View(viewModel);
+    return View();
 }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

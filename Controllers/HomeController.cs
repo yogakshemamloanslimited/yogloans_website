@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Azure.Core;
 using TechTalk.SpecFlow.CommonModels;
 using Microsoft.Extensions.Caching.Memory;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
 namespace yogloansdotnet.Controllers;
 
@@ -270,9 +271,41 @@ public class HomeController : Controller
         }
     }
 
- 
+
+    [HttpGet("LoanContent")]
+    public async Task<IActionResult> GetLoancontent(int Id)
+
+    {
+
+        var loancontent = await _context.Loans
+                                   .AsNoTracking()
+                                  .Where(l => l.Id == Id)
+                                  .Select(l => new { l.Content })
+                                  .ToArrayAsync();
+
+           
+
+        return Ok(loancontent);
+    }
+
+    [HttpGet("Offers")]
+    public async Task<IActionResult> Offers(string Id)
+
+    {
+
+        var offercontent = await _context.Offer
+                                   .AsNoTracking()
+                                  .Where(l => l.Loan == Id)
+                                  .Select(l => new { l.OfferHeader , l.OfferContent})
+                                  .ToArrayAsync();
+
+
+
+        return Ok(offercontent);
+    }
 
     
+
     [HttpGet("loans")]
     public async Task<IActionResult> GetLoans()
     {
@@ -419,6 +452,27 @@ public class HomeController : Controller
 
             HttpContext.Session.SetString("pantrack", pan_track_id);
             HttpContext.Session.SetString("pan", pan);
+
+            return Json(new { success = true, message = "Session data set successfully." });
+        }
+        catch (Exception ex)
+        {
+            return Json(new { success = false, message = ex.Message });
+        }
+    }
+    [HttpPost]
+    public IActionResult loandetails(string loan, string loanname)
+    {
+        try
+        {
+            if (string.IsNullOrEmpty(loan))
+                return Json(new { success = false, message = "loan is missing." });
+
+            // ✅ Make sure no nulls are passed to SetString
+            loan = loan ?? string.Empty;
+
+            HttpContext.Session.SetString("loan", loan);
+            HttpContext.Session.SetString("loanname", loanname);
 
             return Json(new { success = true, message = "Session data set successfully." });
         }

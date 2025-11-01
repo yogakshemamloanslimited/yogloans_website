@@ -9,11 +9,74 @@
     
     }
 </style>
+<!-- Excel Export -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.19.3/xlsx.full.min.js"></script>
+
+<!-- PDF Export -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+<!-- SheetJS (Excel Export) -->
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js"></script>
 
 <section class="form-container" id="result" style="width:100%;">
 
 </section>
+<section class="form-container table-responsive" style="width:100%; min-height:350px; position:relative;  flex-direction:column;" id="statements-area">
+    <div class="content" id="content-loader" style="display:none; position:absolute;">
+        <div class="bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
 
+    <div class="card-header d-flex " style="justify-content:space-between; flex-direction: column; width: 50%; padding:10px;">
+        <h5>Statements</h5>
+        <div class="filter-dow" style="display:flex; gap:30px; width:100%; justify-content:end; align-items: end;">
+            <div class="filter-section">
+
+                <lable for="filterRange">Date Filter</lable>
+                <select id="filterRange" class="form-control" style="width: 200px;">
+                    <option value="all">All</option>
+                    <option value="1d">Last 1 Day</option>
+                    <option value="1w">Last 1 Week</option>
+                    <option value="1m">Last 1 Month</option>
+                    <option value="1y">Last 1 Year</option>
+                </select>
+
+            </div>
+          
+@* 
+            <button id="downloadExcel" class="btn btn-success">
+                <i class="fa fa-file-excel"></i> @* Excel 
+            </button> *@
+
+            <button id="downloadPDF" class="btn btn-danger">
+                <i class="fa fa-file-pdf"></i> @* PDF *@
+            </button>
+        </div>
+      
+    </div>
+<div class="table-responsive" style="width:100%; overflow:scroll;">
+        <table id="transactionTable" class="table table-bordered"
+               style=" table-layout:auto; white-space:nowrap; width:50%;">
+        </table>
+</div>
+
+</section>
 
 <!-- Display QR Code -->
 <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true"
@@ -66,12 +129,12 @@ th, td {
     text-align: left;
     vertical-align: middle;
     padding: 8px 12px;
+    text-align:center;
     white-space: normal; /* Allow text to wrap naturally */
 }
 
 th {
-    background-color: #002b5b;
-    color: #fff;
+    
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -85,6 +148,163 @@ tr:hover {
     transition: background 0.2s ease-in-out;
 }
 
+    #statements-area{
+        min-height:auto !important;
+    }
+
+    :root {
+        --b: #262626;
+        --w: #dcdcd2;
+        --s: 2s; /* change speed */
+    }
+
+    .content {
+        width: 50vmin;
+        height: 50vmin;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        perspective: 1000vmin;
+    }
+
+    .bars {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        padding: 6.5vmin 3vmin;
+        animation: mirror1 calc(var(--s) * 2) ease 0s infinite;
+    }
+
+        .bars + .bars {
+            transform: rotate(90deg) rotateX(180deg);
+            animation: mirror2 calc(var(--s) * 2) ease calc(var(--s) / 2) infinite;
+        }
+
+    .bar {
+        width: 44vmin;
+        height: 3vmin;
+        margin: 2vmin 0vmin;
+        background: linear-gradient(90deg, #fff0 33%, var(--w) 33% 67%, #fff0 67% 100%);
+        animation: grow var(--s) ease-in-out 0s infinite alternate;
+        background-size: 300%;
+        background-position-x: -203%;
+    }
+
+    @@keyframes mirror1 {
+        0%, 47%, 99.99%, 100%
+
+    {
+        transform: rotate(180deg) rotateX(0deg);
+    }
+
+    47.01%, 99.98% {
+        transform: rotate(180deg) rotateX(180deg);
+    }
+
+    }
+
+    @@keyframes mirror2 {
+        0%, 47%, 99.99%, 100%
+
+    {
+        transform: rotate(90deg) rotateX(180deg);
+    }
+
+    47.01%, 99.98% {
+        transform: rotate(90deg) rotateX(0deg);
+    }
+
+    }
+
+    @@keyframes grow {
+        0%, 25%
+
+    {
+        background-position-x: -297%;
+    }
+
+    45%, 55% {
+        background-position-x: -250%;
+    }
+
+    75%, 100% {
+        background-position-x: -203%;
+    }
+
+    }
+
+    .bar:nth-child(2) {
+        animation-delay: calc(var(--s) * -0.02);
+    }
+
+    .bar:nth-child(3) {
+        animation-delay: calc(var(--s) * -0.04);
+    }
+
+    .bar:nth-child(4) {
+        animation-delay: calc(var(--s) * -0.06);
+    }
+
+    .bar:nth-child(5) {
+        animation-delay: calc(var(--s) * -0.08);
+    }
+
+    .bar:nth-child(6) {
+        animation-delay: calc(var(--s) * -0.1);
+    }
+
+    .bar:nth-child(7) {
+        animation-delay: calc(var(--s) * -0.12);
+    }
+
+    .bars:nth-child(2) .bar:nth-child(1) {
+        animation-delay: calc(calc(var(--s) * -0.001) - calc(var(--s) / 2));
+    }
+
+    .bars:nth-child(2) .bar:nth-child(2) {
+        animation-delay: calc(calc(var(--s) * -0.02) - calc(var(--s) / 2));
+    }
+
+    .bars:nth-child(2) .bar:nth-child(3) {
+        animation-delay: calc(calc(var(--s) * -0.04) - calc(var(--s) / 2));
+    }
+
+    .bars:nth-child(2) .bar:nth-child(4) {
+        animation-delay: calc(calc(var(--s) * -0.06) - calc(var(--s) / 2));
+    }
+
+    .bars:nth-child(2) .bar:nth-child(5) {
+        animation-delay: calc(calc(var(--s) * -0.08) - calc(var(--s) / 2));
+    }
+
+    .bars:nth-child(2) .bar:nth-child(6) {
+        animation-delay: calc(calc(var(--s) * -0.1) - calc(var(--s) / 2));
+    }
+
+    .bars:nth-child(2) .bar:nth-child(7) {
+        animation-delay: calc(calc(var(--s) * -0.12) - calc(var(--s) / 2));
+    }
+
+    .table-responsive {
+        justify-content: center;
+        display:flex;
+    }
+
+    @@media (max-width: 780px) {
+        .card-header {
+            width: 100% !important;
+        }
+
+        #result {
+            padding: 0px !important;
+        }
+        .table-responsive{
+            justify-content: start;
+        }
+    }
+
 </style>
 
 
@@ -95,7 +315,7 @@ tr:hover {
 <script>
 
  $(document).ready(function () {
-    
+        $('#statements-area').hide();
        let loanno = null;
 const customerId = '@Context.Session.GetString("CustomerId")';
 
@@ -115,7 +335,8 @@ $.ajax({
 
         let tableHTML = `
         <div class="table-responsive" style="width:100%;">
-            <table class="table table-bordered align-middle">
+                  <table class="table table-bordered"
+               style=" table-layout:auto; white-space:nowrap; " id="">
                 <thead>
                     <tr>
                         <th>Loan No</th>
@@ -137,14 +358,23 @@ $.ajax({
       <td>${item.due_amount.toLocaleString('en-IN')}</td>
       <td>${item.other_charges.toLocaleString('en-IN')}</td>
       <td>${new Date(item.trans_date).toLocaleDateString('en-IN')}</td>
-      <td>
+      <td style="display:flex; gap:10px; justify-content:center;">
         <button class="btn btn-sm btn-primary"
                 onclick="generateQRCode(this)"
                 id="buttonloan"
                 data-loan="${item.loan_no}">
-          Generate QR Code <i class="fa fa-qrcode" aria-hidden="true"></i>
+          <i class="fa fa-qrcode" aria-hidden="true"></i>
         </button>
+             <button class="btn btn-sm btn-primary"
+                        onclick="viewtransaction(this)"
+                        id="buttontrans"
+                            data-loan="${item.loan_no}" data-loancat="${item.product}">
+                       <i class="fa fa-file-text" aria-hidden="true"></i>
+                </button>
       </td>
+           
+           
+          
     </tr>
 
             `;
@@ -273,7 +503,7 @@ $.ajax({
    
        // Clear button and show spinner
        btn.empty();
-       btn.html('Generating QR Code <i class="fa fa-spinner fa-spin"></i>');
+       btn.html(' <i class="fa fa-spinner fa-spin"></i>');
        btn.prop('disabled', true);
         const sessionaddress = '@Context.Session.GetString("Customeraddress")';
         const part = sessionaddress.split('$').map(p => p.trim());
@@ -302,7 +532,7 @@ $.ajax({
             // Start countdown timer (2 minutes = 120 seconds)
             startQrTimer(120);
             btn.empty();
-       btn.html('Generate QR Code  <i class="fa fa-qrcode" aria-hidden="true"></i>');
+       btn.html('<i class="fa fa-qrcode" aria-hidden="true"></i>');
        btn.prop('disabled', false);
             // Reset QR after 2 minutes
             if (paymentTimeoutTimer) clearTimeout(paymentTimeoutTimer);
@@ -313,6 +543,141 @@ $.ajax({
             console.error(err);
         }
     }
+            // transaction
+     function viewtransaction(button) {
+            $('#content-loader').show();
+                   const area = $('#statements-area')[0];
+
+    area.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Delay focus slightly
+    setTimeout(() => {
+      $('#statements-area').focus();
+    }, 500);
+
+          const btn = $(button);
+        const loanno = btn.data('loan');
+        const loancat = btn.data('loancat');
+        const table = $('#transactionTable');
+        const filterSelect = $('#filterRange');
+
+        btn.html('<i class="fa fa-spinner fa-spin"></i>');
+        btn.prop('disabled', true);
+
+        $.ajax({
+            url: API.allapi.Gettrans,
+            method: "GET",
+            data: { loan_no: loanno, loan_cat: loancat },
+            success: function(res) {
+               $('#content-loader').hide();
+                let allData = res.data || [];
+                let filteredData = [...allData]; // keep latest filtered dataset
+                 $('#statements-area').show();
+                // ✅ Render Table
+                function renderTable(data) {
+                    table.empty();
+                    table.append(`
+                        <tr>
+                            <th>SNo</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Debit</th>
+                            <th>Credit</th>
+                            <th>Balance</th>
+                        </tr>
+                    `);
+
+                    if (data.length === 0) {
+                        table.append(`<tr><td colspan="6" class="text-center text-muted">No records found</td></tr>`);
+                    } else {
+                       
+                        data.forEach(item => {
+                            table.append(`
+                                <tr>
+                                    <td>${item.SNo}</td>
+                                    <td>${item.Date}</td>
+                                    <td>${item.Description}</td>
+                                    <td>${item.Debit}</td>
+                                    <td>${item.Credit}</td>
+                                    <td>${item.Balance}</td>
+                                </tr>
+                            `);
+                        });
+                    }
+                }
+
+                // ✅ Filter Function
+                function filterData(range) {
+                    const now = new Date();
+                    let fromDate;
+
+                    switch (range) {
+                        case '1d': fromDate = new Date(); fromDate.setDate(now.getDate() - 1); break;
+                        case '1w': fromDate = new Date(); fromDate.setDate(now.getDate() - 7); break;
+                        case '1m': fromDate = new Date(); fromDate.setMonth(now.getMonth() - 1); break;
+                        case '1y': fromDate = new Date(); fromDate.setFullYear(now.getFullYear() - 1); break;
+                        default: return allData;
+                    }
+
+                    return allData.filter(item => {
+                        const d = new Date(item.Date);
+                        return d >= fromDate && d <= now;
+                    });
+                }
+
+                // Initial render
+                renderTable(allData);
+
+                // Filter change event
+                filterSelect.off('change').on('change', function() {
+                    const range = $(this).val();
+                    filteredData = filterData(range);
+                    renderTable(filteredData);
+                });
+
+                // ✅ Download Excel
+    //                  $('#downloadExcel').off('click').on('click', function() {
+    //     if (typeof XLSX === 'undefined') {
+    //         alert("Excel export library not loaded yet!");
+    //         return;
+    //     }
+    //     if (filteredData.length === 0) return alert("No data to export!");
+    //     const ws = XLSX.utils.json_to_sheet(filteredData);
+    //     const wb = XLSX.utils.book_new();
+    //     XLSX.utils.book_append_sheet(wb, ws, "Transactions");
+    //     XLSX.writeFile(wb, "Transaction_Report.xlsx");
+    // });
+
+                // ✅ Download PDF
+                $('#downloadPDF').off('click').on('click', function() {
+                    if (filteredData.length === 0) return alert("No data to export!");
+                    const { jsPDF } = window.jspdf;
+                    const doc = new jsPDF();
+
+                    doc.text("Transaction Report", 14, 15);
+                    doc.autoTable({
+                        head: [['SNo', 'Date', 'Description', 'Debit', 'Credit', 'Balance']],
+                        body: filteredData.map(item => [
+                            item.SNo, item.Date, item.Description, item.Debit, item.Credit, item.Balance
+                        ]),
+                        startY: 20,
+                        styles: { fontSize: 9 }
+                    });
+
+                    doc.save("Transaction_Report.pdf");
+                });
+
+                btn.html('<i class="fa fa-file-text" aria-hidden="true"></i>');
+                btn.prop('disabled', false);
+            },
+            error: function() {
+                alert("Error loading transactions!");
+                btn.html('<i class="fa fa-file-text" aria-hidden="true"></i>');
+                btn.prop('disabled', false);
+            }
+        });
+    }
+
 
 </script>
 

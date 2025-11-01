@@ -133,6 +133,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\Payment Processing.gif",
+      "PackagePath": "staticwebassets\\images\\Payment Processing.gif"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\Payment verify loader.gif",
       "PackagePath": "staticwebassets\\images\\Payment verify loader.gif"
     },
@@ -143,6 +147,14 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\Tiredman.jpg",
       "PackagePath": "staticwebassets\\images\\Tiredman.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\bike-back.png",
+      "PackagePath": "staticwebassets\\images\\bike-back.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\cardbreak.png",
+      "PackagePath": "staticwebassets\\images\\cardbreak.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\crisil.jpg",
@@ -249,6 +261,10 @@
       "PackagePath": "staticwebassets\\images\\icon\\gold.png"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\googlepay.png",
+      "PackagePath": "staticwebassets\\images\\icon\\googlepay.png"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\image.png",
       "PackagePath": "staticwebassets\\images\\icon\\image.png"
     },
@@ -285,8 +301,16 @@
       "PackagePath": "staticwebassets\\images\\icon\\password.png"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\paytm.png",
+      "PackagePath": "staticwebassets\\images\\icon\\paytm.png"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\pdf.png",
       "PackagePath": "staticwebassets\\images\\icon\\pdf.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\phone-pe.png",
+      "PackagePath": "staticwebassets\\images\\icon\\phone-pe.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\printer.png",
@@ -299,6 +323,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\seen.png",
       "PackagePath": "staticwebassets\\images\\icon\\seen.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\send-data.png",
+      "PackagePath": "staticwebassets\\images\\icon\\send-data.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\send.png",
@@ -555,6 +583,14 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\rbi.jpg",
       "PackagePath": "staticwebassets\\images\\rbi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\seizingauth.png",
+      "PackagePath": "staticwebassets\\images\\seizingauth.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\upipay.png",
+      "PackagePath": "staticwebassets\\images\\upipay.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\goldLoan@3x.png",

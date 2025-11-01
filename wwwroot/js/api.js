@@ -50,8 +50,14 @@ window.API = {
         Auctionprint2: `${API_BASE}auction/print2/`,
         Printpoup: `${API_BASE}auction/print_popup/`,
         Proceedbid: `${API_BASE}auction/proceedbidd/`,
-        Submitbid: `${API_BASE}auction/submitbid`
-      
+        Submitbid: `${API_BASE}auction/submitbid`,
+        Auctineerdata: `${API_BASE}auction/auctineer-data/`,
+        Fillauctineerdata: `${API_BASE}auction/FillAllbid/`,
+        Finalizeauction: `${API_BASE}auction/finalizeauction/`,
+
+        Loanenquery: `${API_BASE}enquery`,
+        Getapidata: `${API_BASE}Getapidata`,
+        Gettrans: `${API_BASE}Qrcode/transaction`
         // add other endpoints here
     }
 };

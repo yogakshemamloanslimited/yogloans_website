@@ -12,7 +12,8 @@
     <script src="~/js/api.js"></script>
 
     <!-- External libs -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/jaquery.js" asp-append-version="true"></script>
+@*     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> *@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -31,14 +32,14 @@
         .activity {
             position: fixed;
             right: 0%;
-            bottom: 2%;
+            bottom: 10%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: end;
             width: auto;
             gap: 13px;
-            z-index: 1000;
+            z-index: 300;
         }
 
         #service-items{
@@ -314,14 +315,18 @@
 
     <!-- Floating Hover Buttons -->
     <div class="activity">
-        <span  class="au-redirection" style="cursor:pointer;" id="auction-model-show">
+        <span class="au-redirection" id="auction-model-show" style="cursor:pointer;">
             <i class="fas fa-gavel"></i>
             <p>Auction</p>
         </span>
-        <span  class="au-redirection" id="gievancepopup-form" style="cursor:pointer;">
+        <span class="au-redirection" id="gievancepopup-form" style="cursor:pointer;">
             <i class="fas fa-user"></i>
             <p>Grievances</p>
         </span>
+        <a href="/vehicleseizing/Register" class="au-redirection" id="vehicle-seizing" style="cursor:pointer;">
+            <i class="fas fa-bicycle"></i>
+            <p>Seizing</p>
+        </a>
     </div>
 
     <!-- FOOTER -->
@@ -403,8 +408,8 @@
             success: function (response) {
                 const data = response.data;
                 data.forEach(loan => {
-                    $('#service-items2').append(`<li onclick="window.location.href='/services/${loan.loanname}/${loan.id}'" style="display:flex; justify-content:space-between;"><img src="${loan.icon}" style="width:17px; height:18px;"/>${loan.loanname}</li>`);
-                    $('#service-items').append(`<li onclick="window.location.href='/services/${loan.loanname}/${loan.id}'" style="display:flex; justify-content:space-between; color:black;"><img src="${loan.icon}" style="width:17px; height:18px;"/>${loan.loanname}</li>`);
+                    $('#service-items2').append(`<li onclick="locationservice(this)" style="display:flex; justify-content:space-between;" data-loan="${loan.id}" data-loanname="${loan.loanname}"><img src="${loan.icon}" style="width:17px; height:18px;"/>${loan.loanname}</li>`);
+                    $('#service-items').append(`<li onclick="locationservice(this)" style="display:flex; justify-content:space-between; color:black;" data-loan="${loan.id}" data-loanname="${loan.loanname}"><img src="${loan.icon}" style="width:17px; height:18px;"/>${loan.loanname}</li>`);
                     $('#footer-menu').append(`<li onclick="window.location.href='/services/${loan.loanname}/${loan.id}'" style="color:white; cursor:pointer;"><img src="${loan.icon}" style="width:20px; height:20px; filter:invert(1);"/> ${loan.loanname}</li>`);
                 });
             },
@@ -682,12 +687,26 @@
                 });
             });
         });
+     
+        // sessionStorage adding and redirecting service
+               function locationservice(el) {
+            var loan_id = $(el).data("loan");
+     
+            var loanname = $(el).data("loanname");
 
-
+            $.ajax({
+                url: '@Url.Action("loandetails", "Home")',
+                method: "POST",
+                data: { loan: loan_id, loanname: loanname },
+                success: function (res) {
+                    window.location.href = "/services";
+                }
+            });
+        }
     </script>
     @* Auction login script end *@
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/jaquery.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

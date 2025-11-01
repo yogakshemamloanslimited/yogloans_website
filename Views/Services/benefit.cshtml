@@ -1,34 +1,9 @@
-@model yogloansdotnet.Models.ServicesLoanModel
-
-@{
-    var groupedOffers = Model.Offer
-        .GroupBy(o => new { o.Loan, o.OfferHeader })
-        .ToList();
-}
 
 
 <link rel="stylesheet" href="~/css/Gold/benefit.css" asp-append-version="true">
 <div class="benefit">
         <div class="right">
-        @foreach (var group in groupedOffers){
-             var loan = Model.Offer.FirstOrDefault(l => l.Id.ToString() == group.Key.Loan);
-            <div class="card-item">
-                <div class="card-content">
-                <h3>@group.Key.OfferHeader </h3>
-                 @foreach (var offer in group)
-                {
-                      <p>
-                    <i class="fas fa-check-circle"></i>
-                    <span>   @offer.OfferContent</span>
-                </p>
-                 
-                }
-              
-               
-                
-                </div>
-            </div>
-        }
+        
             
             
 <!--             <div class="card-item">

@@ -46,21 +46,23 @@ width: 100%;
 display: flex;
 justify-content: end;
     }
-    .apply-button button{
-        width: 180px;
-        padding: 15px;
-        background-color:#044697 ;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
+        .apply-button button {
+            width: 180px;
+            padding: 15px;
+            background-color: rgb(180, 24, 30);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
     .gold-description{
-        width: 50%;
+        width: 70%;
     }
     .gold-description p{
         color: black;
         padding: 15px;
         line-height: 2.5;
+        width:100%;
+        text-align:justify;
     }
 @media(max-width:780px  ){
     .gold-info-container {
