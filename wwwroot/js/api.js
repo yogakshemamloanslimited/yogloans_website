@@ -54,10 +54,13 @@ window.API = {
         Auctineerdata: `${API_BASE}auction/auctineer-data/`,
         Fillauctineerdata: `${API_BASE}auction/FillAllbid/`,
         Finalizeauction: `${API_BASE}auction/finalizeauction/`,
+        Auctonlogin: `${API_BASE}auction/login`,
 
         Loanenquery: `${API_BASE}enquery`,
         Getapidata: `${API_BASE}Getapidata`,
-        Gettrans: `${API_BASE}Qrcode/transaction`
+        Gettrans: `${API_BASE}Qrcode/transaction`,
+        SeizingRegister: `${API_BASE}Vehicleseizing`
         // add other endpoints here
     }
 };
+ 

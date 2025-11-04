@@ -187,8 +187,10 @@ $(document).ready(function () {
         var otp = $('#otp').val();
 
         $.ajax({
-            url: "http://localhost:8085/api/auction/login?mobile=" + mobile + "&otp=" + otp,
+            // url: "http://localhost:8085/api/auction/login?mobile=" + mobile + "&otp=" + otp,
+            url:API.allapi.Auctonlogin,
             method: "GET",
+             data:{mobile : mobile, otp:otp},
             success: function (response) {
                 let codeValue = 0; // default
 

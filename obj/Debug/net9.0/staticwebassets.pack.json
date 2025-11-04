@@ -217,6 +217,10 @@
       "PackagePath": "staticwebassets\\images\\directors\\vijayan.jpg"
     },
     {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\approve.png",
+      "PackagePath": "staticwebassets\\images\\icon\\approve.png"
+    },
+    {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\arrow(1).png",
       "PackagePath": "staticwebassets\\images\\icon\\arrow(1).png"
     },
@@ -227,6 +231,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\bike.png",
       "PackagePath": "staticwebassets\\images\\icon\\bike.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\board.png",
+      "PackagePath": "staticwebassets\\images\\icon\\board.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\checklist.png",
@@ -243,6 +251,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\download-pdf.png",
       "PackagePath": "staticwebassets\\images\\icon\\download-pdf.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\driving.png",
+      "PackagePath": "staticwebassets\\images\\icon\\driving.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\electric-appliances.png",
@@ -263,6 +275,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\googlepay.png",
       "PackagePath": "staticwebassets\\images\\icon\\googlepay.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\id-card.png",
+      "PackagePath": "staticwebassets\\images\\icon\\id-card.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\image.png",
@@ -311,6 +327,10 @@
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\phone-pe.png",
       "PackagePath": "staticwebassets\\images\\icon\\phone-pe.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\pin.png",
+      "PackagePath": "staticwebassets\\images\\icon\\pin.png"
     },
     {
       "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\printer.png",
