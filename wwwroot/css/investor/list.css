@@ -27,10 +27,10 @@
         padding: 10px;
     }
 
-    .list-doc ul li.active {
-        background-color: #044697;
-        color: white;
-    }
+        .list-doc ul li.active {
+            background-color: #B4181E;
+            color: white;
+        }
 
         .list-doc .other {
             width: 70%;

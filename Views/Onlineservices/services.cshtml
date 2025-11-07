@@ -8,7 +8,7 @@
 <input type="hidden" id="customer_id_getting" />
 <section class="online-services">
     <div class="online-container">
-        <div class="card" data-bs-toggle="modal" data-bs-target="#payOnlineModal">
+       @*  <div class="card" data-bs-toggle="modal" data-bs-target="#payOnlineModal">
             <div class="card-content">
                 <div class="image">
                     <img src="images/online/onlinepayment.png" alt="Pay Online" loading="eager|lazy">
@@ -16,7 +16,7 @@
                 <h3>Pay Online</h3>
                 <div class="description">Secure online payments for loans and services</div>
             </div>
-        </div>
+        </div> *@
         @* div class="card" data-bs-toggle="modal" data-bs-target="#qrCodeModal">
             <div class="card-content">
                 <div class="image">
@@ -60,7 +60,7 @@
 </section>
 
 <!-- Pay Online Modal -->
-<div class="modal fade" id="payOnlineModal" tabindex="-1">
+<div class="modal fade" id="payOnlineModal" tabindex="-1"  data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -140,7 +140,7 @@
     </div> -->
 
 <!-- Tax Form Modal -->
-<div class="modal fade" id="taxFormModal" tabindex="-1">
+<div class="modal fade" id="taxFormModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -148,8 +148,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <span id="taxFormMsg" class="mt-2"></span>
-                <form id="taxForm">
+                <span id="taxFormMsg-submit" class="mt-2"></span>
+                <form id="taxForm-submit">
 
                     <div class="mb-3">
                         <label class="form-label">Customer ID or PAN</label>
@@ -157,23 +157,23 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Registered Mobile Number</label>
-                        <input type="tel" class="form-control" id="mobileNo" required>
+                        <input type="tel" class="form-control" id="mobileNo-15g" required>
                     </div>
                     <div class="form-text mb-3">
                         By clicking send OTP button, you agree to the Terms and Conditions
                     </div>
-                    <button type="button" class="btn btn-primary w-100" id="sendOtpBtn">Send OTP <i
-                            class="fa fa-cog fa-w-16 fa-spin" id="spin-load2" style="display:none"></i></button>
+                    <button type="button" class="btn btn-primary w-100" id="sendOtpBtn-15g">
+                        Send OTP <i class="fa fa-cog fa-w-16 fa-spin" id="spin-load2" style="display:none"></i></button>
 
-                    <div id="otpSection" style="display:none;">
+                    <div id="otpSection-submit" style="display:none;">
                         <div class="mb-3 mt-3">
                             <label class="form-label">Enter OTP</label>
-                            <input type="text" class="form-control" id="otpInput">
+                            <input type="text" class="form-control" id="otpInput-15g">
                         </div>
-                        <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn">Verify OTP
+                        <button type="button" class="btn btn-success w-100 mb-2" id="verifyOtpBtn-15g">Verify OTP
                             <i class="fa fa-cog fa-w-16 fa-spin" id="spin-very-load2" style="display:none"></i>
                         </button>
-                        <button type="button" class="btn btn-link w-100" id="resendOtpBtn">Resend OTP</button>
+                        <button type="button" class="btn btn-link w-100" id="resendOtpBtn-15g">Resend OTP</button>
                     </div>
                     <div id="terms" class="mt-2 d-flex justify-content-center align-items-center" style="width:100%;">
                         <p style="color:black; text-align:center;">
@@ -189,7 +189,7 @@
 </div>
 
 <!-- NACH Modal -->
-<div class="modal fade" id="nachModal" tabindex="-1">
+<div class="modal fade" id="nachModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -236,7 +236,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="qrCodeModal" tabindex="-1">
+<div class="modal fade" id="qrCodeModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -300,17 +300,20 @@
 
         let slNo = null;
 
-        $('#sendOtpBtn').on('click', function (e) {
+        // $('#sendOtpBtn').on('click', function (e) {
+         $(document).on('click', '#sendOtpBtn-15g', function (e) {
             e.preventDefault();
                 const input = $('#customerId').val();
-                const MobileNo = $('#mobileNo').val();
-            $('#taxFormMsg').text('');
+               
+                        const MobileNo = $('#mobileNo-15g').val();
+                        
+            $('#taxFormMsg-submit').text('');
             $('#spin-load2').show();
             $.ajax({
-                url: API.allapi.verifyDetails,
-                type: 'POST',
-                contentType: 'application/json',
-                       data: JSON.stringify({ Input: input, MobileNo: MobileNo }),
+                   url: API.allapi.verifyDetails,
+                    type: 'POST',
+                    contentType: 'application/json',
+                         data: JSON.stringify({ Input: input, MobileNo: MobileNo }),
                     // data: JSON.stringify({ Input: customerId, MobileNo: mobileNo }),
                 success: function (res) {
                     if (res.success) {
@@ -319,32 +322,35 @@
 
                                     customerId = res.customerId;
                                         $('#customer_id_getting').val(customerId);
-                        $('#otpSection').show();
-                        $('#sendOtpBtn').hide();
-                        $('#taxFormMsg').text(res.message).css('color', 'green');
+                        $('#otpSection-submit').show();
+                            $('#sendOtpBtn-15g').hide();
+                            $('#taxFormMsg-submit').text(res.message).css('color', 'green');
                         $('#spin-load2').hide();
                     } else {
-                        $('#taxFormMsg').text(res.message || 'Failed to send OTP').css('color', 'red');
+                            $('#taxFormMsg-submit').text(res.message || 'Failed to send OTP').css('color', 'red');
                         $('#spin-load2').hide();
                     }
                 },
                 error: function (xhr) {
-                    $('#taxFormMsg').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                        $('#taxFormMsg-submit').text( 'Error occurred').css('color', 'red');
                     $('#spin-load2').hide();
                 }
             });
         });
 
 
-        $('#verifyOtpBtn').on('click', function (e) {
+           $(document).on('click',  '#verifyOtpBtn-15g', function (e) {
 
             e.preventDefault();
                 const customerId = $('#customer_id_getting').val();
-            const mobileNo = $('#mobileNo').val();
-            const otp = $('#otpInput').val();
+                const mobileNo = $('#mobileNo-15g').val();
+                // alert(mobileNo);
+                // alert(customerId);
+            const otp = $('#otpInput-15g').val();
+                  // alert(customerId);
             $('#spin-very-load2').show();
             if (!slNo) {
-                $('#taxFormMsg').text('Session expired. Please try again.').css('color', 'red');
+                    $('#taxFormMsg-submit').text('Session expired. Please try again.').css('color', 'red');
                 $('#spin-very-load2').hide();
                 return;
 
@@ -358,7 +364,7 @@
                 success: function (res) {
                         
                     if (!res) {
-                        $('#taxFormMsg').text('No data returned from server.').css('color', 'red');
+                            $('#taxFormMsg-submit').text('No data returned from server.').css('color', 'red');
                         $('#spin-very-load2').hide();
                         return;
                     }
@@ -414,24 +420,26 @@
         $('#spin-very-load2').hide();
     }
      else {
-                        $('#taxFormMsg').text('OTP verification failed').css('color', 'red');
+                            $('#taxFormMsg-submit').text('OTP verification failed').css('color', 'red');
                         $('#spin-very-load2').hide();
                     }
                 },
                 error: function (xhr) {
-                    $('#taxFormMsg').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                        $('#taxFormMsg-submit').text( 'Error occurred').css('color', 'red');
                     $('#spin-very-load2').hide();
                 }
             });
         });
 
 
-        $('#resendOtpBtn').on('click', function (e) {
+                      $(document).on('click','#resendOtpBtn-15g', function (e) {
             e.preventDefault();
-            const customerId = $('#customerId').val();
-            const mobileNo = $('#mobileNo').val();
+                const customerId = $('#customer_id_getting').val();
+            const mobileNo = $('#mobileNo-15g').val();
+            // alert(mobileNo);
+            // alert(customerId);
             if (!slNo) {
-                $('#taxFormMsg').text('Session expired. Please try again.').css('color', 'red');
+                    $('#taxFormMsg-submit').text('Session expired. Please try again.').css('color', 'red');
                 return;
             }
             $.ajax({
@@ -441,13 +449,13 @@
                 data: JSON.stringify({ CustomerId: customerId, MobileNo: mobileNo, SlNo: slNo }),
                 success: function (res) {
                     if (res.success) {
-                        $('#taxFormMsg').text(res.message).css('color', 'green');
+                                $('#taxFormMsg-submit').text('Otp re-send to your registered mobile number').css('color', 'green');
                     } else {
                         $('#taxFormMsg').text(res.message || 'Failed to resend OTP').css('color', 'red');
                     }
                 },
                 error: function (xhr) {
-                    $('#taxFormMsg').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#taxFormMsg-submit').text( 'Error occurred').css('color', 'red');
                 }
             });
         });
@@ -509,7 +517,7 @@
                     }
                 },
                 error: function (xhr) {
-                    $('#taxFormMsg2').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#taxFormMsg2').text( 'Error occurred').css('color', 'red');
                     $('#spin-load3').hide();
                 }
             });
@@ -519,6 +527,7 @@
 
             e.preventDefault();
                 const customerId = $('#customer_id_getting').val();
+
             const mobileNo = $('#mobileNo2').val();
             const otp = $('#otpInput2').val();
             $('#spin-very-load3').show();
@@ -594,7 +603,7 @@
                     }
                 },
                 error: function (xhr) {
-                    $('#taxFormMsg2').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#taxFormMsg2').text( 'Error occurred').css('color', 'red');
                     $('#spin-very-load3').hide();
                 }
             });
@@ -621,7 +630,7 @@
                     }
                 },
                 error: function (xhr) {
-                    $('#taxFormMsg2').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#taxFormMsg2').text( 'Error occurred').css('color', 'red');
                 }
             });
         });
@@ -668,7 +677,7 @@
                     }
                 },
                 error: function (xhr) {
-                    $('#taxFormMsg3').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#taxFormMsg3').text( 'Error occurred').css('color', 'red');
                     $('#spin-load1').hide();
                 }
             });
@@ -782,7 +791,7 @@
                     }
                 },
                 error: function (xhr) {
-                    $('#taxFormMsg3').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#taxFormMsg3').text( 'Error occurred').css('color', 'red');
                     $('#spin-very-load1').hide();
                 }
             });
@@ -815,7 +824,7 @@
                 },
                 error: function (xhr) {
                     $('#spin-load1').hide();
-                    $('#taxFormMsg3').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#taxFormMsg3').text( 'Error occurred').css('color', 'red');
                 }
             });
         });
@@ -857,7 +866,7 @@
                     }
                 },
                 error: function (xhr) {
-                    $('#taxFormMsg4').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#taxFormMsg4').text( 'Error occurred').css('color', 'red');
                     $('#spin-load4').hide();
                 }
             });
@@ -950,7 +959,7 @@
                     }
                 },
                 error: function (xhr) {
-                    $('#taxFormMsg4').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#taxFormMsg4').text( 'Error occurred').css('color', 'red');
                     $('#spin-very-load4').hide();
                 }
             });
@@ -983,7 +992,7 @@
                 },
                 error: function (xhr) {
                     $('#spin-load4').hide();
-                    $('#taxFormMsg4').text(xhr.responseText || 'Error occurred').css('color', 'red');
+                    $('#taxFormMsg4').text( 'Error occurred').css('color', 'red');
                 }
             });
         });

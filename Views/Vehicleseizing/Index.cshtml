@@ -2,6 +2,7 @@
     Layout = "~/Views/Shared/_Auction_layout.cshtml";
     ViewData["Title"] = "Seizing";
 }
+<script src="~/js/api.js"></script>
 <style>
     .welcome-container{
         display:flex;
@@ -10,6 +11,7 @@
         padding:30px;
         height: 250px;
         width:80%;
+        
     }
 
     .cards {
@@ -161,11 +163,13 @@
 
         </style>
 <button class="btn" id="top-btn" style="font-size: 25px;"><i class="fa-solid fa-arrow-up"></i></button>
-<div style="width:100%; display:flex; justify-content:center;">
+<div style="width:100%; display:flex; justify-content:center; position: relative;
+  z-index: 4; background-image:url('@Url.Content("~/images/welcome.png")'); background-size: cover;">
+
 
 
     <section class="welcome-container">
-        <div class="form-group" style="z-index: 40;">
+        <div class="form-group" style="z-index: 40; color:white; width:80%;">
 
             <p>Bikes</p>
             <h1>Not just bikes. A collection of pure passion on wheels.</h1>
@@ -173,10 +177,10 @@
                 Discover bikes crafted for elegance, performance, and power.
             </p>
         </div>
-        <div class="form-group" id="welcome-image">
+      @*   <div class="form-group" id="welcome-image">
 
             <img src="~/images/bike-back.png" />
-        </div>
+        </div> *@
     </section>
 </div>
 <section style="width:100%; background: #f7f7f7; min-height:350px; display:flex; position:relative;">
@@ -356,10 +360,10 @@
 </script>
 <script>
      $(window).on('scroll', function() {
-      if ($(this).scrollTop() > 150) {
+      if ($(this).scrollTop() > 250) {
         $('#inner-child').css('top', '5%');  // slide down (visible)
       } else {
-        $('#inner-child').css('top', '40%');  // slide back up (hidden)
+        $('#inner-child').css('top', '41%');  // slide back up (hidden)
       }
     });
         const button = document.querySelector('#top-btn');
@@ -368,7 +372,7 @@
       window.addEventListener('scroll', () => {
         console.log(window.scrollY);
 
-        if (window.scrollY > 100) {
+        if (window.scrollY > 250) {
           button.style.display = "block";
         } else {
           button.style.display = "none";
@@ -390,5 +394,48 @@
     displayButton();
     scrollToTop();
 
+
+</script>
+<script>
+       $(document).ready(function () {
+               // Get session string from Razor
+             var mobile = '@Context.Session.GetString("mobile")';
+           
+        $.ajax({
+            url: API.allapi.Finduser,
+            method: "GET",
+            data: { mobile: mobile },
+            success: function (re) {
+                console.log(re); // check what the API returns
+                
+                if (re && re.length > 0) {
+                      $('.fc-button-group').empty();
+               
+                    $('.fc-button-group').append(`
+                        
+                        <p style="padding:10px; text-transform:capitalize;">
+                            ${re[0].bidder_name}
+                        </p>
+                    
+                    `);
+                } else {
+                      $('.fc-button-group').empty();
+
+                    $('.fc-button-group').append(`
+
+                          <button class="btn btn-close-white btn-shadow">Singup</button><button class="btn btn-close-white btn-shadow">Login</button>
+                   `);
+                }
+            },
+            error: function (xhr, status, error) {
+              $('.fc-button-group').empty();
+
+                    $('.fc-button-group').append(`
+
+                          <button class="btn btn-close-white btn-shadow">Singup</button><button class="btn btn-close-white btn-shadow">Login</button>
+                   `);
+            }
+        });
+    });
 
 </script>

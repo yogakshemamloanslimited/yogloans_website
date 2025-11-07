@@ -5,8 +5,38 @@
 
 <!-- Optional: animate.css for animation effects -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<section class="welcome-container" style="background-image:url('@Url.Content("~/images/welcome/grievance.png")')">
 
-<section style="width:100%; display:flex; justify-content:center; align-items:center;">
+   @*  <h1 id="customer_name"> </h1> *@
+    <div class="button">
+        <h1 id="header"> Submit Grievances</h1>
+        @*    <p><a href="javascript:history.back()" id="return-link">Home</a>  - Online Services</p> *@
+    </div>
+
+</section>
+
+<style>
+    .welcome-container {
+        height: 300px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    p {
+        color: black;
+    }
+    @@media(max-width:780px){
+        section{
+            margin-top:0px !important;
+        }
+      
+    }
+</style>
+
+<section style="width:100%; display:flex; justify-content:center; align-items:center; margin-top: -80px;">
     <!-- Modal Structure -->
     @* <div class="modal fade" id="viewmodel" tabindex="-1" aria-labelledby="viewmodelLabel" aria-hidden="true">
         <div class="modal-dialog">

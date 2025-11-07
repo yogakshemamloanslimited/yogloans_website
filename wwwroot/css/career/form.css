@@ -24,15 +24,15 @@
             border-radius: 8px;
             font-size: 1rem;
         }
-        .application-form button {
-            background: #0056b3;
-            color: #fff;
-            border: none;
-            border-radius: 20px;
-            padding: 12px 35px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
+            .application-form button {
+                background: #B4181E;
+                color: #fff;
+                border: none;
+                border-radius: 20px;
+                padding: 12px 35px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
         .application-form button:hover { background: #003d80; }
         .faq-section {
             background: #f7f8fa;

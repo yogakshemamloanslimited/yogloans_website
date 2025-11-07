@@ -5,13 +5,14 @@
     margin: 40px auto;
     padding: 0 20px;
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content:center;
     align-items:stretch;
     gap: 25px;
 }
-.card{
-    max-width: 365px;
+.card {
+    max-width: 200px;
+    height: 220px;
 }
 
 
@@ -20,38 +21,45 @@
     font-size: 18px;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #f0f0f0;
+    /*border-bottom: 2px solid #f0f0f0;*/
     display: flex;
     justify-content: space-between;
     padding: 10px ;
 }
 
 .section-item p {
-    color: #666;
+    color: black;
     line-height: 1.6;
+    font-weight:600;
     margin-bottom: 20px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
 }
 .pdfs {
     margin-top: 15px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items:center;
+    flex-direction:column;
     gap: 10px;
 }
-
-.pdfs a {
-
-  
-    background-color: #044697;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    text-align: center;
-}
+    .pdfs img {
+        width: 50px;
+    }
+    .pdfs a {
+        background-color: #B4181E;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        padding: 10px;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
 

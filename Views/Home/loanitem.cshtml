@@ -30,6 +30,7 @@
                url: '@Url.Action("GetLoans", "Home")',
             method: "GET",
             success: function (response) {
+                
                 container.empty();
 
                 response.forEach(function (item) {
@@ -129,6 +130,35 @@
                 data: { id: loanId },
                 success: function (response) {
                     if (Array.isArray(response) && response.length > 0) {
+                           $('#redirectapply').off('click').on('click', function () {
+        const activeItem = $('.item.active');
+        const loanId = activeItem.data('id');
+        const loanname = activeItem.find('p').text();
+         $.ajax({
+                url: '@Url.Action("loandetails", "Home")',
+                method: "POST",
+                data: { loan: loanId, loanname: loanname },
+                success: function (res) {
+                    window.location.href = "/services";
+                }
+            });
+        
+    });
+                               $('#redirect2').off('click').on('click', function () {
+        const activeItem = $('.item.active');
+        const loanId = activeItem.data('id');
+        const loanname = activeItem.find('p').text();
+         $.ajax({
+                url: '@Url.Action("loandetails", "Home")',
+                method: "POST",
+                data: { loan: loanId, loanname: loanname },
+                success: function (res) {
+                    window.location.href = "/services";
+                }
+            });
+
+    });
+
                         const data = response[0];
                         $('#header').text(data.header);
                         $('#sub').text(data.subContent);
@@ -173,4 +203,5 @@
             });
         }
     });
+     
 </script>

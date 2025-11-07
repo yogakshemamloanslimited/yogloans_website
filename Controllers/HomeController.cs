@@ -7,6 +7,7 @@ using Azure.Core;
 using TechTalk.SpecFlow.CommonModels;
 using Microsoft.Extensions.Caching.Memory;
 using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
+using Microsoft.AspNetCore.Http;
 
 namespace yogloansdotnet.Controllers;
 
@@ -377,6 +378,19 @@ public class HomeController : Controller
         }
     }
 
+
+    [HttpGet]
+    [Route("post-mobile")]
+    public IActionResult Getuserno(string mobile)
+    {
+        // Validate input
+        
+        
+            // Store as string if not numeric
+            HttpContext.Session.SetString("mobile", mobile);
+            return Json(new { success = true, message = "Mobile stored successfully as text" });
+        
+    }
 
     [HttpPost]
     public JsonResult auctiondetails(string auctionId, string state_id)

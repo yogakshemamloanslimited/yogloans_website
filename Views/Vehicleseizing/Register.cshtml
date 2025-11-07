@@ -152,55 +152,56 @@
                 </div>
                 <p id="msgBox2" style="font-size:13px; text-align:left;  display:none;"></p>
 
-                <div class="input-group " id="name-section" style="display:none; margin-top:20px;">
+                <div class="input-group" id="name-section" style="display:none; margin-top:20px;">
                     <span class="input-group-text bg-white">
-                        <img src="/images/icon/id-card.png" alt="Dialpad Icon" >
-
+                        <img src="/images/icon/id-card.png" alt="Dialpad Icon">
                     </span>
                     <input id="name" type="text" class="form-control" name="name" placeholder="Enter Full Name">
-                   @*  <button class="btn btn-success btn-sm" id="verifyBtn" type="button"><img src="~/images/icon/approve.png" style="width:20px;height:20px; filter: invert();" /></button> *@
                 </div>
-                <div class="input-group " id="pan-section" style="display:none; margin-top:20px;">
-                    <span class="input-group-text bg-white">
-                        <img src="/images/icon/user(2).png" alt="Dialpad Icon" >
+                <span id="name-error" class="error-text text-danger"></span>
 
-                    </span>
-                    <input id="pan" type="text" class="form-control" name="pan" placeholder="Enter Pan Number">
-                    @*  <button class="btn btn-success btn-sm" id="verifyBtn" type="button"><img src="~/images/icon/approve.png" style="width:20px;height:20px; filter: invert();" /></button> *@
-                </div>
-                <div class="input-group " id="adhar-section" style="display:none; margin-top:20px;">
+                <div class="input-group" id="pan-section" style="display:none; margin-top:20px;">
                     <span class="input-group-text bg-white">
-                        <img src="/images/icon/driving.png" alt="Dialpad Icon" >
-
+                        <img src="/images/icon/user(2).png" alt="Dialpad Icon">
                     </span>
-                    <input id="adhar" type="text" class="form-control" name="adhar" placeholder="Enter Adhar Number">
-                    @*  <button class="btn btn-success btn-sm" id="verifyBtn" type="button"><img src="~/images/icon/approve.png" style="width:20px;height:20px; filter: invert();" /></button> *@
+                    <input id="pan" type="text" class="form-control" name="pan" placeholder="Enter Pan Number" value="ABCDE1234F">
                 </div>
-                <div class="input-group " id="gst-section" style="display:none; margin-top:20px;">
+                <span id="pan-error" class="error-text text-danger"></span>
+
+                <div class="input-group" id="adhar-section" style="display:none; margin-top:20px;">
                     <span class="input-group-text bg-white">
-                        <img src="/images/icon/board.png" alt="Dialpad Icon" >
-
+                        <img src="/images/icon/driving.png" alt="Dialpad Icon">
                     </span>
-                    <input id="gst" type="text" class="form-control" name="gst" placeholder="Enter Gst Number">
-                    @*  <button class="btn btn-success btn-sm" id="verifyBtn" type="button"><img src="~/images/icon/approve.png" style="width:20px;height:20px; filter: invert();" /></button> *@
+                    <input id="adhar" type="text" class="form-control" value="123456789012" name="adhar" placeholder="Enter Aadhar Number">
                 </div>
+                <span id="adhar-error" class="error-text text-danger"></span>
+
+                <div class="input-group" id="gst-section" style="display:none; margin-top:20px;">
+                    <span class="input-group-text bg-white">
+                        <img src="/images/icon/board.png" alt="Dialpad Icon">
+                    </span>
+                    <input id="gst" type="text" class="form-control" value="22ABCDE1234F1Z5" name="gst" placeholder="Enter GST Number">
+                </div>
+                <span id="gst-error" class="error-text text-danger"></span>
+
                 <div class="input-group" id="address-section" style="display:none; margin-top:20px;">
                     <span class="input-group-text bg-white">
-                        <img src="/images/icon/pin.png" alt="Dialpad Icon" >
-
+                        <img src="/images/icon/pin.png" alt="Dialpad Icon">
                     </span>
-                    <textarea id="address"  class="form-control" name="gst" placeholder="Enter Address Details"></textarea>
-                    @*  <button class="btn btn-success btn-sm" id="verifyBtn" type="button"><img src="~/images/icon/approve.png" style="width:20px;height:20px; filter: invert();" /></button> *@
+                    <textarea id="address" class="form-control" placeholder="Enter Address Details"></textarea>
                 </div>
-                <button type="button" class="btn btn-success" id="submit-details" style="display:none; margin-top:20px; left: 30%;
-  position: relative;">
+                <span id="address-error" class="error-text text-danger"></span>
+
+                <button type="button" class="btn btn-success" id="submit-details"
+                        style="display:none; margin-top:20px; left:30%; position:relative;">
                     Submit Details
                 </button>
+
             <div class="form-group" style="display:flex; margin-top:20px; justify-content:center; align-items:center; gap:5px; flex-direction:column;">
                     <a class="text-primary" style="cursor: pointer;
-  font-size: 15px;" href="/vehicleseizing/Login">Already have a account ?  Login</a>
+  font-size: 15px;  text-decoration: none !important;" href="/vehicleseizing/Login">Already have a account ?  Login</a>
                     <a class="text-primary" style="cursor: pointer;
-  font-size: 15px;" href="/vehicleseizing"> Skip For Now</a>
+  font-size: 15px;  text-decoration: none !important;" href="/vehicleseizing"> Skip For Now</a>
             </div>
            
             </div>
@@ -213,6 +214,7 @@
                    let isResent = false; // flag to know if resend is happening
 
         $('#sendBtn').on('click', function () {
+            
             var mobile = $('#mobile').val().trim();
 
             if (mobile === "" || mobile.length < 10) {
@@ -295,7 +297,82 @@
                         }
         
         });
-     
+
+                  $('#submit-details').on('click', function () {
+            // Clear previous errors
+            $('.error-text').text('');
+
+            const mobile = $('#mobile').val()?.trim();
+            const name = $('#name').val()?.trim();
+            const address = $('#address').val()?.trim();
+            const pan = $('#pan').val()?.trim();
+            const gst = $('#gst').val()?.trim();
+            const adhar = $('#adhar').val()?.trim();
+
+            let isValid = true;
+
+            // ======= Front-end Validations =======
+            if (!mobile) {
+                $('#mobile-error').text('Mobile number is required.');
+                isValid = false;
+            }
+            // } else if (!/^[6-9]\d{9}$/.test(mobile)) {
+            //     $('#mobile-error').text('Enter a valid 10-digit mobile number.');
+            //     isValid = false;
+            // }
+
+            if (!name) { $('#name-error').text('Name is required.'); isValid = false; }
+            if (!address) { $('#address-error').text('Address is required.'); isValid = false; }
+            if (!adhar) { $('#adhar-error').text('Aadhar number is required.'); isValid = false; }
+            // else if (!/^\d{12}$/.test(adhar)) {
+            //     $('#adhar-error').text('Enter a valid 12-digit Aadhar number.');
+            //     isValid = false;
+            // }
+            if (!gst) { $('#gst-error').text('GST number is required.'); isValid = false; }
+            // else if (!/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/.test(gst)) {
+            //     $('#gst-error').text('Enter a valid GST number.');
+            //     isValid = false;
+            // }
+            if (!pan) { $('#pan-error').text('PAN number is required.'); isValid = false; }
+            // else if (!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(pan)) {
+            //     $('#pan-error').text('Enter a valid PAN number.');
+            //     isValid = false;
+            // }
+
+            if (!isValid) return;
+
+            // Disable button to prevent resubmission
+            $('#submit-details').prop('disabled', true).text('Submitting...');
+
+            // ======= 1st API Call =======
+            $.ajax({
+                url: API.allapi.Submituserform,
+                method: "GET",
+                data:{mobile:mobile, name:name , address:address, pan:pan , gst:gst , adhar:adhar},
+                success: function (response) {
+                    if (response.message) {
+                        // ======= 2nd API Call: Save mobile in session =======
+                        $.get(`/post-mobile?mobile=${mobile}`)
+                            .done(function () {
+                                window.location.href = '/vehicleseizing';
+                            })
+                            .fail(function (xhr) {
+                                alert("Error saving mobile: " + xhr.status);
+                            });
+                    } else {
+                        alert("Something went wrong while submitting details.");
+                    }
+                },
+                error: function (xhr) {
+                    alert("Server error. Please try again later. (" + xhr.status + ")");
+                },
+                complete: function () {
+                    $('#submit-details').prop('disabled', false).text('Submit Details');
+                }
+            });
+        });
+
+
     </script>
 </body>
 

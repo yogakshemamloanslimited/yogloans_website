@@ -126,12 +126,32 @@
 
         }
 
+        .owl-carousel {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            justify-content: center;
+        }
+
+            .owl-carousel .allitem {
+                width:100%;
+            }
+        .copyright-area .col-4 {
+            color:white;
+        }
+
         .list-doc ul li, .card {
             cursor: pointer;
         }
         @@media(max-width:780px){
             .au-redirection i {
                 font-size:18px;
+            }
+
+            .copyright-area .col-4{
+                width:100%;
+                display:flex; justify-content:center;
+                align-items:center;
+                color:white;
             }
         }
     </style>
@@ -387,13 +407,14 @@
         </div>
 
         <div class="copyright-area">
-            <div class="container">
+            <div class="">
                 <div class="" style="width:100%; display:flex; justify-content:center; align-items:center;">
-                    <div class="col-xl-6 text-center text-lg-left">
-                        <p>2025 YOGAKSHEMAM LOANS Ltd. All rights reserved.</p>
+                    <div class="col-4 text-center">
+
+                        <p style="font-size:12px;">2025 YOGAKSHEMAM LOANS Ltd. All rights reserved.</p>
                     </div>
-                    <div class="col-xl-8 text-right d-none d-lg-block">
-                        <ul id="footer-menu" style="list-style:none; display:flex; justify-content:space-between;"></ul>
+                    <div class="col-7 text-right d-none d-lg-block">
+                        <ul id="footer-menu" style="list-style:none; font-size:12px; display:flex; justify-content:space-between;"></ul>
                     </div>
                 </div>
             </div>

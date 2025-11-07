@@ -508,12 +508,11 @@ all 0.5s ease;
     cursor: pointer;
 }
 
-.blog-allof .name {
-    background-color:#044697; /* optional overlay for readability */
-    padding: 10px;
-  
-    color: white;
-}
+    .blog-allof .name {
+      /* optional overlay for readability */
+      
+        color: white;
+    }
 .customer-content{
     padding: 20px;
 }

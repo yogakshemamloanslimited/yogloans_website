@@ -59,7 +59,11 @@ window.API = {
         Loanenquery: `${API_BASE}enquery`,
         Getapidata: `${API_BASE}Getapidata`,
         Gettrans: `${API_BASE}Qrcode/transaction`,
-        SeizingRegister: `${API_BASE}Vehicleseizing`
+
+        //vehicle seizing
+        SeizingRegister: `${API_BASE}Vehicleseizing`,
+        Submituserform: `${API_BASE}Vehicleseizing/submit-details`,
+        Finduser: `${API_BASE}Vehicleseizing/find-user`,
         // add other endpoints here
     }
 };
