@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\yogloansdotnet.props" />
-</Project>
