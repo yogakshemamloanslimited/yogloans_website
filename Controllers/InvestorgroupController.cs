@@ -1,12 +1,13 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using yogloansdotnet.Models;
-using yogloansdotnet.Data;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.IO;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+using yogloansdotnet.Data;
+using yogloansdotnet.Models;
+using static QRCoder.PayloadGenerator;
 
 namespace yogloansdotnet.Controllers
 {
@@ -27,7 +28,7 @@ namespace yogloansdotnet.Controllers
 
         [Route("addinvestor")]
         [HttpPost]
-        public async Task<IActionResult> addinvestor([FromForm] string Fullname, IFormFile Profile, [FromForm] string ids, [FromForm] string Role, [FromForm] string Phone, [FromForm] string Mobile, [FromForm] string Address)
+        public async Task<IActionResult> addinvestor([FromForm] string Fullname, IFormFile Profile, [FromForm] string ids, [FromForm] string Role, [FromForm] string Phone, [FromForm] string Mobile, [FromForm] string Address , [FromForm] string email)
         {
             try
             {
@@ -43,7 +44,8 @@ namespace yogloansdotnet.Controllers
                         Mobile = Mobile,
                         Address = Address,
                         Profile = filePath,
-                        Role = Role
+                        Role = Role,
+                        email = email
                     };
 
                     _context.Investor.Add(InvestoresGroup);
@@ -82,6 +84,7 @@ namespace yogloansdotnet.Controllers
                     existingInvestor.Address = Address;
                     existingInvestor.Profile = filePath;
                     existingInvestor.Role = Role;
+                    existingInvestor.email = email;
                     await _context.SaveChangesAsync();
 
                     return Json(new { 

@@ -21,12 +21,17 @@ namespace yogloansdotnet.Models
          [Required]
         public string Phone { get; set; } = string.Empty;
 
-        
-         [Required]
+
+
+        [Required]
         public string Mobile { get; set; } = string.Empty;
 
           
          [Required]
         public string Address { get; set; } = string.Empty;
+
+        [Required]
+        public string email { get; set; } = string.Empty;
+
     }
 } 

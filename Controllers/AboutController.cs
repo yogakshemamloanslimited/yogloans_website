@@ -85,5 +85,19 @@ public async Task<IActionResult> GetLeaders(int id)
                 RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier 
             });
         }
+        [Route("getVission")]
+        [HttpGet]
+        public async Task<IActionResult> GetVission()
+        {
+            var data = await _context.vission.ToListAsync();
+            return Json(data);
+        }
+        [Route("getmission")]
+        [HttpGet]
+        public async Task<IActionResult> GetMission()
+        {
+            var data = await _context.mission.ToListAsync();
+            return Json(data);
+        }
     }
 }

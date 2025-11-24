@@ -194,6 +194,63 @@ public class DepartmentController : Controller
             return Json(new { success = false, message = ex.Message });
         }
     }
-}
+        [Route("add-department")]
+        [HttpPost]
+        public async Task<IActionResult> DepartmentAdd([FromForm] DepartmentModel model)
+        {
+            try
+            {
+                if (model.Id > 0)
+                {
+                    // UPDATE
+                    var existing = await _context.Departments.FindAsync(model.Id);
+                    if (existing == null)
+                    {
+                        return Json(new
+                        {
+                            success = false,
+                            message = "Department not found"
+                        });
+                    }
+
+                    existing.Name = model.Name;
+                    existing.Discription = model.Discription;
+
+                    await _context.SaveChangesAsync();
+
+                    return Json(new
+                    {
+                        success = true,
+                        message = "Department updated successfully",
+                        Id = existing.Id
+                    });
+                }
+                else
+                {
+                    // CREATE
+                    _context.Departments.Add(model);
+                    await _context.SaveChangesAsync();
+
+                    return Json(new
+                    {
+                        success = true,
+                        message = "Department added successfully",
+                        Id = model.Id
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new
+                {
+                    success = false,
+                    message = "An error occurred",
+                    error = ex.Message
+                });
+            }
+        }
+
+
+    }
 
 }

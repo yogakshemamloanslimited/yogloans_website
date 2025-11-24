@@ -9,5 +9,7 @@ namespace yogloansdotnet.Models
         public List<AboutContentModel> AboutContent { get; set; } = new();
         public List<DirectorsModel> Directors { get; set; } = new();
         public List<LeadersModel> Leaders { get; set; } = new();
+
+        public List<mission> mission { get; set; } = new();
     }
 }
