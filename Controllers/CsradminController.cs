@@ -35,64 +35,56 @@ namespace yogloansdotnet.Controllers
 
       [Route("add-csr")]
         [HttpPost]
-        public async Task<IActionResult> addcsr([FromForm] string Title, IFormFile Pdf, [FromForm] string id)
+        public async Task<IActionResult> addcsr(CsrModel model, IFormFile FilePath)
         {
             try
             {
-                string filePath = await SavePdfAsync(Pdf);
+                byte[]? file = null;
 
-                if (string.IsNullOrEmpty(id))
+                if (FilePath != null && FilePath.Length > 0)
                 {
-                    // Create new disclosure
-                    var Csr = new CsrModel
+                    using var ms = new MemoryStream();
+                    await FilePath.CopyToAsync(ms);
+                    file = ms.ToArray();
+                }
+
+                var maxId = await _context.Csr
+                    .MaxAsync(x => (int?)x.Id) ?? 0;
+
+                if (model.Id == 0)
+                {
+                    var welcome = new CsrModel
                     {
-                        Title = Title,
-                        FilePath = filePath
+                        //Id = maxId + 1,
+                        FilePath = file,
+                        Title = model.Title
                     };
 
-                    _context.Csr.Add(Csr);
-                    await _context.SaveChangesAsync();
-
-                    return Json(new { 
-                        success = true, 
-                        message = "CSR added successfully",
-                        id = Csr.Id,
-                        title = Csr.Title,
-                        filePath = Csr.FilePath
-                    });
+                    _context.Csr.Add(welcome);
                 }
                 else
                 {
-                    // Update existing disclosure
-                    var existingDisclosure = await _context.Csr.FindAsync(int.Parse(id));
-                    if (existingDisclosure == null)
-                    {
-                        return Json(new { success = false, message = "CSR not found" });
-                    }
+                    var existing = await _context.Csr
+                        .FirstOrDefaultAsync(a => a.Id == model.Id);
 
-                    // Delete old file if it exists
-                    if (!string.IsNullOrEmpty(existingDisclosure.FilePath))
+                    if (existing != null)
                     {
-                        var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingDisclosure.FilePath.TrimStart('/'));
-                        if (System.IO.File.Exists(oldFilePath))
-                        {
-                            System.IO.File.Delete(oldFilePath);
-                        }
-                    }
-                    
-                    existingDisclosure.Title = Title;
-                    existingDisclosure.FilePath = filePath;
-                  
-                    await _context.SaveChangesAsync();
+                        existing.Title = model.Title;
 
-                    return Json(new { 
-                        success = true, 
-                        message = "CSR updated successfully",
-                        id = existingDisclosure.Id,
-                        title = existingDisclosure.Title,
-                        filePath = existingDisclosure.FilePath
-                    });
+                        if (file != null)   // ✅ Correct condition
+                            existing.FilePath = file;
+
+                        _context.Csr.Update(existing);
+                    }
                 }
+
+                await _context.SaveChangesAsync();
+
+                return Json(new
+                {
+                    success = true,
+                    message = "Saved successfully!"
+                });
             }
             catch (Exception ex)
             {
@@ -101,23 +93,7 @@ namespace yogloansdotnet.Controllers
             }
         }
 
-        private async Task<string> SavePdfAsync(IFormFile file)
-        {
-            var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
-            var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/Csr");
-
-            if (!Directory.Exists(uploads))
-                Directory.CreateDirectory(uploads);
-
-            var filePath = Path.Combine(uploads, fileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            return "/uploads/Csr/" + fileName;
-        }
+        
 
         [HttpPost("delete/{id}")]
         [ValidateAntiForgeryToken]
@@ -131,14 +107,7 @@ namespace yogloansdotnet.Controllers
                     return Json(new { success = false, message = "Csr not found" });
                 }
 
-                if (!string.IsNullOrEmpty(Csr.FilePath))
-                {
-                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, Csr.FilePath.TrimStart('/'));
-                    if (System.IO.File.Exists(filePath))
-                    {
-                        System.IO.File.Delete(filePath);
-                    }
-                }
+             
 
                 _context.Csr.Remove(Csr);
                 await _context.SaveChangesAsync();

@@ -60,7 +60,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
-
+app.UseStatusCodePagesWithReExecute("/_404");
 // ✅ Correct middleware order
 app.UseHttpsRedirection();
 app.UseStaticFiles();

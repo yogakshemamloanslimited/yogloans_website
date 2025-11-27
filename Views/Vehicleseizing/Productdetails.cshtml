@@ -1,0 +1,426 @@
+﻿@{
+    Layout = "~/Views/Shared/_Auction_layout.cshtml";
+    ViewData["Title"] = "Product Details";
+}
+<script src="~/js/api.js"></script>
+
+<style>
+    /* Container for main image */
+    #active-card-image {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .card-items {
+        width: 100%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+        /* Fade overlay layers */
+        #active-card-image .fade-layer {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out; /* smoother fade */
+            border-radius: 10px;
+        }
+
+            #active-card-image .fade-layer.show {
+                opacity: 1;
+            }
+
+    /* Thumbnail styles */
+    #vehicleImagesContainer img {
+        width: 80px;
+        height: 90px;
+        margin: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: transform 0.2s ease, border 0.2s ease;
+    }
+
+        #vehicleImagesContainer img.active {
+            border: 2px solid #007bff;
+            transform: scale(1.05);
+        }
+
+        #vehicleImagesContainer img:hover {
+            transform: scale(1.05);
+        }
+
+    /* Fullscreen overlay */
+    #fullscreen-view {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .fc-button-group {
+        display: block;
+    }
+        #fullscreen-view img {
+            width: 50%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+            position: relative;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+</style>
+<div class="modal fade" id="bidding-details" tabindex="-1" aria-labelledby="product_deatiled" aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title">Product Details</h6>
+            </div>
+            <div class="modal-body" id="bidding-body">
+            </div>
+            <div class="modal-footer">
+                <input type="text" class="form-control" style="width: 55%;" placeholder="Enter Your Bidd Amount" id="entered-amt" />
+                <button type="button" class="btn " id="finalize" style="background-color: #B4181E; color:white; position: relative;" onclick="finilize(this)" data-application="${item.application_id}" disabled>
+                    Call Your Bid
+                </button>
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Fullscreen Image Overlay -->
+<div id="fullscreen-view">
+    <img id="fullscreen-image" src="" alt="Fullscreen Image" />
+</div>
+
+<section class="product-details" style="width:100%; padding:10px; display:flex; justify-content:center;">
+    <div class="image" style="width:50%;">
+        <div class="image-section" id="active-card-image">
+            <div class="fade-layer" id="fade1"></div>
+            <div class="fade-layer" id="fade2"></div>
+        </div>
+
+        <div class="image-section" id="vehicleImagesContainer"
+             style="display:flex; flex-wrap:wrap; margin-top:10px; justify-content:space-between;">
+        </div>
+    </div>
+    <div class="product-data" style="width:50%; padding:15px;">
+
+    </div>
+</section>
+<div class="card-items">
+</div>
+<script>
+    var app_id = '@Context.Session.GetString("application_id")';
+    var autoSlideInterval = null;
+    var currentIndex = 0;
+    var images = [];
+    var showingFirst = true; // toggle between fade layers
+
+    $.ajax({
+        url: API.allapi.GetVehicleImages,
+        method: "GET",
+        data: { app_id: app_id },
+        success: function (re) {
+            images = re.images;
+            var data = re.data;
+
+            $('#bidding-body').empty();
+        if (data && data.length > 0) {
+            var item = data[0];
+            $('.product-data').append(`
+                
+            <h2>
+                ${item.product_name}
+            </h2>
+            <div style="width:100%; display:flex; width:100%; gap: 10px; justify-content:start;">
+            <p>Model Year: ${item.year} </p> / <p> Kilometer: ${item.kilometer}</p>
+            </div>
+            <h2>₹ ${item.Amount}</h2>
+
+               <button type="button" class="btn " style="background-color: #B4181E; color:white; margin-top: 10%;
+            position: relative;" onclick="calling(this)" data-application="${item.application_id}">
+    Call Your Bid</button>
+      <div class="" style="display:flex; color:gray; margin-top: 10px;
+    gap: 5px;
+    text-transform: capitalize !important;" >
+       <i class="fa-solid fa-location-dot"></i> <p >${item.yard_name}</p>
+    </div>
+          
+            `);
+            $('#bidding-body').append(`
+            <h6>
+                ${item.product_name}
+            </h6>
+            <div style="width:100%; display:flex; font-size: 12px;gap: 10px; width:100%; justify-content:start;">
+            <p>Model Year: ${item.year} </p> / <p> Kilometer: ${item.kilometer}</p>
+            </div>
+            <h6>₹ ${item.Amount}</h6>
+
+             <input type="hidden" value="${item.Amount}" id="bidd-mini" />
+      <div class="" style="display:flex; color:gray; margin-top: 10px;
+    gap: 5px; font-size: 12px;
+    text-transform: capitalize !important;" >
+       <i class="fa-solid fa-location-dot"></i> <p >${item.yard_name}</p>
+    </div>`);
+            
+        }
+            alert(data.Amount);
+            if (!images || images.length === 0) return;
+
+            images.forEach(function (item, index) {
+                var imgSrc = "data:image/jpeg;base64," + item.attachement_data;
+
+                var img = $('<img>')
+                    .attr('src', imgSrc)
+                    .attr('data-url', imgSrc);
+
+                if (index === 0) {
+                    img.addClass('active').css('border', '2px solid #007bff');
+                    $('#fade1').css('background-image', `url(${imgSrc})`).addClass('show');
+                }
+
+                img.on('click', function () {
+                    setActiveImage(index);
+                    resetAutoSlide();
+                });
+
+                $('#vehicleImagesContainer').append(img);
+            });
+
+            startAutoSlide();
+        },
+        error: function (xhr, status, error) {
+            console.error("Error fetching vehicle images:", error);
+        }
+    });
+
+    // --- IMAGE FUNCTIONS ---
+    function setActiveImage(index) {
+        currentIndex = index;
+
+        $('#vehicleImagesContainer img')
+            .removeClass('active')
+            .css('border', '2px solid transparent');
+
+        var selectedImg = $('#vehicleImagesContainer img').eq(index);
+        selectedImg.addClass('active').css('border', '2px solid #007bff');
+
+        var imgUrl = selectedImg.attr('data-url');
+        fadeToNewImage(imgUrl);
+    }
+
+    function fadeToNewImage(url) {
+        const fade1 = $('#fade1');
+        const fade2 = $('#fade2');
+
+        if (showingFirst) {
+            fade2.css('background-image', `url(${url})`).addClass('show');
+            fade1.removeClass('show');
+        } else {
+            fade1.css('background-image', `url(${url})`).addClass('show');
+            fade2.removeClass('show');
+        }
+        showingFirst = !showingFirst;
+    }
+
+    // --- AUTO SLIDE CONTROL ---
+    function startAutoSlide() {
+        stopAutoSlide(); // ✅ Prevent multiple timers
+        autoSlideInterval = setInterval(function () {
+            currentIndex = (currentIndex + 1) % images.length;
+            setActiveImage(currentIndex);
+        }, 2000);
+    }
+
+    function stopAutoSlide() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = null;
+        }
+    }
+
+    function resetAutoSlide() {
+        stopAutoSlide();
+        startAutoSlide();
+    }
+
+    // Pause auto slide on hover
+    $('#vehicleImagesContainer').on('mouseenter', function () {
+        stopAutoSlide();
+    });
+
+    $('#vehicleImagesContainer').on('mouseleave', function () {
+        startAutoSlide();
+    });
+
+    // --- FULLSCREEN HANDLING ---
+    $('#active-card-image').on('click', function () {
+        const activeImg = $('#vehicleImagesContainer img.active').attr('data-url');
+        if (activeImg) {
+            $('#fullscreen-image').attr('src', activeImg);
+            $('#fullscreen-view').fadeIn(300);
+            stopAutoSlide();
+        }
+    });
+
+    // Close fullscreen on click or ESC
+    $('#fullscreen-view').on('click', function () {
+        $(this).fadeOut(300);
+        startAutoSlide();
+    });
+
+    $(document).on('keydown', function (e) {
+        if (e.key === "Escape") {
+            $('#fullscreen-view').fadeOut(300);
+            startAutoSlide();
+        }
+    });
+      var mobile = '@Context.Session.GetString("mobile")';
+
+        $.ajax({
+            url: API.allapi.Finduser,
+            method: "GET",
+            data: { mobile: mobile },
+            success: function (re) {
+                console.log(re); // check what the API returns
+
+                if (re && re.length > 0) {
+                      $('.fc-button-group').empty();
+
+                    $('.fc-button-group').append(`
+
+                        <p style="padding:10px; text-transform:capitalize;">
+                            ${re[0].bidder_name}
+                        </p>
+
+                    `);
+                } else {
+                      $('.fc-button-group').empty();
+
+                    $('.fc-button-group').append(`
+
+                          <button class="btn btn-close-white btn-shadow">Singup</button><button class="btn btn-close-white btn-shadow">Login</button>
+                   `);
+                }
+            },
+            error: function (xhr, status, error) {
+              $('.fc-button-group').empty();
+
+                    $('.fc-button-group').append(`
+
+                          <button class="btn btn-close-white btn-shadow">Singup</button><button class="btn btn-close-white btn-shadow">Login</button>
+                   `);
+            }
+        });
+            function calling(button) {
+        if (mobile == null || mobile === "") {
+      var appId = '@Context.Session.GetString("application_id")';
+       const pagestate = 1;
+
+           $.ajax({
+        url: '@Url.Action("product_details", "Vehicleseizing")',
+        type: 'POST', // or 'POST'
+            data: { Application_Id: appId , pagestate :pagestate},
+        success: function (response) {
+                    window.location.href = '@Url.Action("Register", "Vehicleseizing")';
+        },
+        error: function (xhr, status, error) {
+            console.error(error);
+        }
+    });
+        }
+           else {
+        $('#bidding-details').modal('show');
+    }
+
+        }
+        
+      var appId = '@Context.Session.GetString("application_id")';
+
+    $.ajax({
+        url: API.allapi.Printitems,
+        method: "GET",
+        success: function (res) {
+            if (res.success && Array.isArray(res.data)) {
+                let bikeList = res.data;
+
+                // Filter out the current session's item
+                let filteredList = bikeList.filter(item => item.application_id != appId);
+
+                filteredList.forEach(item => {
+                    $('.card-items').append(`
+                        <div class="card" style="margin:5px; cursor:pointer;" data-application="${item.application_id}">
+                            <div class="top" style="position:relative; background-image:url('${item.image_url}');
+                                height:210px; background-position:center; background-repeat:no-repeat; background-size:contain;">
+                                <p style="position:absolute; left:0; top:0; background:black; color:white; padding:5px;
+                                    border-top-right-radius:20px; border-bottom-right-radius:20px;">
+                                    ₹${(item.Amount || 0).toLocaleString()}
+                                </p>
+                            </div>
+                            <div class="bottom-details" style="height:100px; padding:10px 20px;">
+                                <div style="font-weight:600">${item.product_name || ''}</div>
+                                <div style="font-size:12px; color:#666;">${item.make || ''} - ${item.Year || ''} - ${item.location || ''}</div>
+                            </div>
+                        </div>
+                    `);
+                });
+            }
+        }
+    });
+    $(document).on('click', '.card', function() {
+        const appId = $(this).data('application');
+
+
+           $.ajax({
+        url: '@Url.Action("Application_Id", "Vehicleseizing")',
+        type: 'POST', // or 'POST'
+            data: { Application_Id: appId },
+        success: function (response) {
+                    window.location.href = '@Url.Action("Productdetails", "Vehicleseizing")';
+        },
+        error: function (xhr, status, error) {
+            console.error(error);
+        }
+    });
+
+        });
+
+        $('#entered-amt').on('change keyup', function () {
+        var min = parseFloat($('#bidd-mini').val()) || 0;
+        var entered = parseFloat($('#entered-amt').val()) || 0;
+
+        if (entered > min) {
+            $('#finalize').removeAttr('disabled'); // ✅ enable button
+        } else {
+            $('#finalize').attr('disabled', true); // ✅ disable button
+        }
+    });
+
+       
+</script>

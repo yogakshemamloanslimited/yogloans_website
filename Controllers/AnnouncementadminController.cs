@@ -74,15 +74,19 @@ namespace yogloansdotnet.Controllers
                     existing.title = model.title;
 
                     if (imageBytes1 != null)
+                    {
                         existing.image = imageBytes1;
+                    }
+                       
 
                     if (imageBytes2 != null)
+                    {
                         existing.image2 = imageBytes2;
+                    }
+                       
 
                     _context.AnnouncementsWelcome.Update(existing);
-                    await _context.SaveChangesAsync();
-
-                    TempData["Success"] = "Content updated successfully!";
+                 
                 }
                 else
                 {
@@ -94,11 +98,11 @@ namespace yogloansdotnet.Controllers
                     };
 
                     _context.AnnouncementsWelcome.Add(obj);
-                    await _context.SaveChangesAsync();
-
-                    TempData["Success"] = "Content created successfully!";
+                   
                 }
+                await _context.SaveChangesAsync();
 
+                TempData["Success"] = "Content created successfully!";
                 return RedirectToAction("Welcome");
             }
             catch (Exception ex)
@@ -171,7 +175,7 @@ namespace yogloansdotnet.Controllers
                 }
 
                 await _context.SaveChangesAsync();
-                TempData["Success"] = "Announcement saved successfully!";
+                return Json(new { success = true, message = "Saved Successfully." });
             }
             catch (Exception ex)
             {

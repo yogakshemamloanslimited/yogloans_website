@@ -3,6 +3,7 @@ using yogloansdotnet.Migrations;
 using yogloansdotnet.Models;
 
 
+
 namespace yogloansdotnet.Data
 {
     public class ApplicationDbContext : DbContext
@@ -13,12 +14,16 @@ namespace yogloansdotnet.Data
         }
 
         public DbSet<AdminLoginModel> AdminLogins { get; set; }
+        public DbSet<AnnouncementData> AnnouncementData { get; set; }
+        public DbSet<AnnouncementsWelcomeModel> AnnouncementsWelcome { get; set; }
+        public DbSet<announcements_create> announcements_create { get; set; }
         public DbSet<HomwelcomeModel> Homwelcome { get; set; }
         public DbSet<LoanModel> Loans { get; set; }
         public DbSet<LoanPointModel> LoanPoints { get; set; }
         public DbSet<AboutContentModel> AboutContent { get; set; }
         public DbSet<CountsModel> Counts { get; set; }
-  
+       public DbSet<mission> mission { get; set; }
+        public DbSet<vission> vission { get; set; }
         public DbSet<OfferModel> Offer { get; set; }
         public DbSet<AnnualReportEntity> AnnualReports { get; set; }
         public DbSet<AnnouncementsModel> Announcements { get; set; }

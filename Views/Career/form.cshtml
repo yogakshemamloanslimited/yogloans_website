@@ -1,10 +1,10 @@
-
+﻿
 <link rel="stylesheet" href="~/css/career/form.css" asp-append-version="true">
 
 <section class="application-section" id="application">
     <div class="main-content">
         <h2>Connect For Future</h2>
-   <form class="application-form container">
+   <form class="application-form container" id="apply-career-form">
     <div class="row" style="width: 100%;">
         <div class="col-md-6">
             <label for="name" class="form-label">Full Name</label>
@@ -76,7 +76,7 @@
         </div>
         <div class="col-md-6">
             <label for="resume" class="form-label">Upload Resume</label>
-            <input type="file" id="resume" name="Resume" class="form-control" />
+            <input type="file" id="Resume" name="Resume" class="form-control" />
         </div>
     </div>
 
@@ -91,6 +91,9 @@
 
     </div>
 </section>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
     
@@ -109,65 +112,99 @@ $.ajax({
     }
 });
 
-  
 
 
 
-$('form').on('submit', function (e) {
-    e.preventDefault();
+        $('#apply-career-form').on('submit', function (e) {
+        e.preventDefault();
 
-    var formData = new FormData(this);
+        var formData = new FormData(this);
 
-    console.log('--- Form Data Entries ---');
-    for (var pair of formData.entries()) {
-        console.log(pair[0] + ':', pair[1]);
-    }
-
-    $.ajax({
-        url: API.allapi.CareerApply,  // Your correct API URL
-        type: 'POST',
-        data: formData,
-        enctype: 'multipart/form-data', // Optional but clear for file uploads
-        processData: false, // Important for FormData
-        contentType: false, // Important for FormData
-        cache: false, // Recommended for file uploads
-        success: function (response) {
-            console.log(response);
-            if (typeof Swal !== 'undefined') {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success',
-                    text: 'Candidate Profile Saved Successfully!'
-                }).then(() => {
-                    window.location.reload();
-                });
-            } else {
-                alert('Candidate Profile Saved Successfully!');
-                $('#candidateModal').modal('hide');
-                $('form')[0].reset();
-            }
-        },
-        error: function (xhr, status, error) {
-            console.error('Full Error:', xhr.responseText);
-            let errorMsg = 'Something went wrong.';
-            try {
-                var response = JSON.parse(xhr.responseText);
-                errorMsg = response.ExceptionMessage || response.Message || errorMsg;
-            } catch (e) {
-                console.log('JSON parse error:', e);
-            }
-            if (typeof Swal !== 'undefined') {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: errorMsg
-                });
-            } else {
-                alert(errorMsg);
-            }
+        console.log('--- Form Data Entries ---');
+        for (var pair of formData.entries()) {
+            console.log(pair[0] + ':', pair[1]);
         }
+
+        $.ajax({
+            url: API.allapi.CareerApply,
+            type: 'POST',
+            data: formData,
+            enctype: 'multipart/form-data',
+            processData: false,
+            contentType: false,
+            cache: false,
+
+            success: function (response) {
+                
+                if (typeof Swal !== 'undefined') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: 'Candidate Profile Saved Successfully!'
+                    }).then(() => {
+                        window.location.reload();
+                    });
+                } else {
+                    alert('Candidate Profile Saved Successfully!');
+                    $('#candidateModal').modal('hide');
+                    $('form')[0].reset();
+                }
+            },
+
+            error: function (xhr, status, error) {
+                console.error("Full Error:", xhr.responseText);
+
+                let errorMsg = "Something went wrong.";
+
+                try {
+                    let response = JSON.parse(xhr.responseText);
+
+                    // 1) Exception message
+                    if (response.ExceptionMessage) {
+                        errorMsg = response.ExceptionMessage;
+
+                    // 2) Common 'Message'
+                    } else if (response.Message) {
+                        errorMsg = response.Message;
+
+                    // 3) OAuth / Generic errors
+                    } else if (response.error_description) {
+                        errorMsg = response.error_description;
+                    } else if (response.error) {
+                        errorMsg = response.error;
+
+                    // 4) ASP.NET Core ModelState errors
+                    } else if (response.errors) {
+                        errorMsg = Object.values(response.errors)
+                            .flat()
+                            .join("\n");
+
+                    // 5) Custom "Errors" array
+                    } else if (response.Errors && Array.isArray(response.Errors)) {
+                        errorMsg = response.Errors.join("\n");
+                    }
+
+                } catch (e) {
+                    console.log("JSON parse failed:", e);
+
+                    // Fallback → raw text
+                    errorMsg = xhr.responseText || "Request failed.";
+                }
+
+                // Show alert
+                if (typeof Swal !== "undefined") {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Error",
+                        text: errorMsg
+                    });
+                } else {
+                    alert(errorMsg);
+                }
+            }
+        });
     });
-});
+
 
 // Ensure SweetAlert2 is included
 if (typeof Swal === 'undefined') {

@@ -3,6 +3,13 @@
     ViewData["Title"] = "Investors";
     Layout = "~/Views/admin/Shared/_Layout.cshtml";
 }
+<style>
+    .result{
+       
+        max-height: 600px;
+        overflow: scroll;
+    }
+</style>
 
 <div class="container-fluid">
     <div class="row">
@@ -25,29 +32,43 @@
                     }
                     <h4 class="card-title" style="padding: 10px;">Investors</h4>
           
-                <div class="card-body" style="display: flex; flex-direction: row; gap: 20px;">
-                <div class="side" style="width: 30%; ">
-                <ul class="card" style="width: 100%; height: 100%; padding: 10px; margin: 0; border-radius: 0; display: flex; flex-direction: column; gap: 20px;">
-                      
-                        <li class="annual-report active" style="cursor:pointer;">
+                <div class="card-body" style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="side" style="width: 100%; ">
+                <ul class="card" style="width: 100%; height: 100%; padding: 10px; margin: 0; overflow-x:scroll; border-radius: 0; display: flex; flex-direction: row; gap: 20px;">
+
+                            <li class="annual-report active" style="cursor:pointer; width: 300px;
+
+  white-space: nowrap; padding: 5px; text-align: center;
+
+ ">
                             Annual Report
                         </li>
-                        <li class="announcements" style="cursor:pointer;">
+                            <li class="announcements" style="cursor:pointer; width: 300px;
+
+  white-space: nowrap; padding: 5px; text-align: center;">
                             Announcements
                         </li>
-                        <li class="investor-contact" style="cursor:pointer;">
+                            <li class="investor-contact" style="cursor:pointer;  width: 300px;
+
+  white-space: nowrap; padding: 5px; text-align: center;">
                             Investor Contact
                         </li>
-                        <li class="public-disclosure" style="cursor:pointer;">
+                            <li class="public-disclosure" style="cursor:pointer;  width: 300px;
+
+  white-space: nowrap; padding: 5px; text-align: center;">
                             Public Disclosurer
                         </li>
-                        <li class="forms-for-tds-on-dividend" style="cursor:pointer;">
+                            <li class="forms-for-tds-on-dividend" style="cursor:pointer;  width: 300px;
+
+  white-space: nowrap; padding: 5px; text-align: center;">
                             Forms for TDS on Dividend
                         </li>
                        <!--  <li class="unpaid-dividend" style="cursor:pointer;">
                             Unpaid Dividend
                         </li> -->
-                        <li class="appointment-order-of-independent-directors" style="cursor:pointer;">
+                            <li class="appointment-order-of-independent-directors" style="cursor:pointer;  width: 300px;
+
+  white-space: nowrap; padding: 5px; text-align: center;">
                             Appointment Order of Independent Directors
                         </li>
                     <!--     <li class="digital-lending-partners" style="cursor:pointer;">
@@ -55,53 +76,31 @@
                         </li> -->
                 </ul>
                 </div>
-                <div class="main card" style="width: 70%;  padding: 10px; ">
-                <div class="annual-report2 " style="width:100%;">
-                <div style="display:flex; justify-content:space-between; width:100%">
-                <h5>Annual Report</h5>
-                <button class="btn btn-primary" style="" data-bs-toggle="modal" data-bs-target="#myModal" onclick="reportbtn()">Add Report +</button>
-                </div>
-                <div class="result" style="display:grid; grid-template-columns:repeat(2,1fr); margin-top:10px; gap:10px;">
-                @foreach(var report in Model.Report)
-                {
-                    <div class="report-item card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h6 style="margin:10px 0; font-weight:600; text-align:center;">@report.Title</h6>
-                        <a href="@report.FilePath" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
-                            <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
-                        </a>
-                        <button onclick="deletereport(@report.Id)" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; right:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                        <button onclick="editreport(@report.Id, '@report.Title', '@report.FilePath')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; left:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;" data-bs-toggle="modal" data-bs-target="#myModal">
-                            <i class="bi bi-pencil"></i>
+                    <div class="main card" style="width: 100%;  padding: 10px; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); ">
+                        <div class="annual-report2" style="width:100%;">
+                            <div style="display:flex; justify-content:space-between; width:100%">
+                                <h5>Annual Report</h5>
+                                <button class="btn btn-primary"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#myModal"
+                                        onclick="reportbtn()">
+                                    Add Report +
+                                </button>
+                            </div>
 
-                        </button>
-                    </div>
-                }
-                </div>
-                </div>
+                            <div class="result"
+                                 style="display:grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); margin-top:10px; gap:10px;"
+                                 id="annualReport-container">
+                            </div>
+                        </div>
+
                 <div class="announcements2" style="display:none; flex-direction:column; width:100%; justify-content:space-between">
                    <div style="display:flex; justify-content:space-between; width:100%">
                 <h5>Announcements</h5>
                 <button class="btn btn-primary" style="width:auto;" data-bs-toggle="modal" data-bs-target="#myModal2">Add Announcements +</button>
                 </div>
-                 <div class="result" style="display:grid; grid-template-columns:repeat(2,1fr); margin-top:10px; gap:10px;" >
-                @foreach(var Announcements in Model.Announcements)
-                {
-                    <div class="report-item_@Announcements.Id @Announcements.Title.Replace(" ", "-") card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h6 style="margin:10px 0; font-weight:600; text-align:center;">@Announcements.Title</h6>
-                        <a href="@Announcements.FilePath" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
-                            <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
-                        </a>
-                        <button onclick="deleteAnnouncement(@Announcements.Id, '@Announcements.Title')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; right:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                        <button onclick="editAnnouncement(@Announcements.Id, '@Announcements.Title', '@Announcements.FilePath')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; left:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;" data-bs-toggle="modal" data-bs-target="#myModal2">
-                            <i class="bi bi-pencil"></i>
-
-                        </button>
-                    </div>
-                }
+                            <div class="result" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); margin-top:10px; gap:10px;" id="announcement-container">
+            
                 </div>
                 </div>
                 <div class="investor-contact2" style="display:none; flex-direction:column; width:100%;">
@@ -109,43 +108,8 @@
                         <h5>Investor Contact</h5>
                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal3">Add +</button>
                     </div>
-                    <div class="result" style="display:grid; grid-template-columns:repeat(2,1fr); margin-top:10px; gap:10px;">
-                        @foreach(var investor in Model.Investor)
-                        {
-                            <div class="investor-item_@investor.Id @investor.FullName.Replace(" ", "-") card" style="width:100%; padding:20px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius:12px; transition: all 0.3s ease; background:white;">
-                                <div class="profile-view" style="display:flex; gap:20px; width:100%; justify-content:center; align-items:center; margin-bottom:20px;">
-                                    <img src="@investor.Profile" style="width:80px; height:80px; border-radius:50%; object-fit:cover; border:3px solid #f0f0f0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                    <div class="profile-name" style="flex:1;">
-                                        <h6 style="margin:0; font-weight:600; font-size:1.1rem; color:#333;">@investor.FullName</h6>
-                                        <p style="margin:5px 0 0; color:#666; font-size:0.9rem;">@investor.Role</p>
-                                    </div>
-                                </div>
-                                
-                                <div style="width:100%; display:flex; flex-direction:column; gap:12px; padding:15px; background:#f8f9fa; border-radius:8px;">
-                                    <p style="margin:0; display:flex; align-items:center; color:#555; font-size:0.95rem;">
-                                        <i class="bi bi-telephone" style="margin-right:12px; color:#0d6efd;"></i> @investor.Phone
-                                    </p>
-                                    <p style="margin:0; display:flex; align-items:center; color:#555; font-size:0.95rem;">
-                                        <i class="bi bi-phone" style="margin-right:12px; color:#0d6efd;"></i> @investor.Mobile
-                                    </p>
-                                    <p style="margin:0; display:flex; align-items:center; color:#555; font-size:0.95rem;">
-                                        <i class="bi bi-geo-alt" style="margin-right:12px; color:#0d6efd;"></i> @investor.Address
-                                    </p>
-                                </div>
-
-                                <div style="display:flex; gap:8px; width:70%; justify-content:space-between;">
-                                    <button onclick="editInvestor(@investor.Id, '@investor.FullName', '@investor.Profile', '@investor.Role', '@investor.Phone', '@investor.Mobile', '@investor.Address')" 
-                                            style="color:white; background-color:#0d6efd; border:none; border-radius:8px; height:32px; width:32px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s ease; box-shadow: 0 2px 4px rgba(13,110,253,0.2);" 
-                                            data-bs-toggle="modal" data-bs-target="#myModal3">
-                                        <i class="bi bi-pencil"></i>
-                                    </button>
-                                    <button onclick="deleteInvestor(@investor.Id, '@investor.FullName')" 
-                                            style="color:white; background-color:#dc3545; border:none; border-radius:8px; height:32px; width:32px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s ease; box-shadow: 0 2px 4px rgba(220,53,69,0.2);">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        }
+                    <div class="result" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); margin-top:10px; gap:10px;" id="investor-container">
+                       
                     </div>
                 </div>
                 <div class="public-disclosure2" style="display:none; justify-content:space-between">
@@ -153,23 +117,8 @@
                 <h5>Public Disclosure</h5>
                 <button class="btn btn-primary" style=" " data-bs-toggle="modal" data-bs-target="#myModal4">Add +</button>
                 </div>
-                 <div class="result" style="display:grid; grid-template-columns:repeat(2,1fr); margin-top:10px; gap:10px;">
-                    @foreach(var Disclosure in Model.Disclosure)
-                {
-                    <div class="report-item_@Disclosure.Id @Disclosure.Title.Replace(" ", "-") card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h6 style="margin:10px 0; font-weight:600; text-align:center;">@Disclosure.Title</h6>
-                        <a href="@Disclosure.FilePath" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
-                            <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
-                        </a>
-                        <button onclick="deleteDisclosure(@Disclosure.Id, '@Disclosure.Title')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; right:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                        <button onclick="editDisclosure(@Disclosure.Id, '@Disclosure.Title', '@Disclosure.FilePath')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; left:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;" data-bs-toggle="modal" data-bs-target="#myModal4">
-                            <i class="bi bi-pencil"></i>
-
-                        </button>
-                    </div>
-                }
+                 <div class="result" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); margin-top:10px; gap:10px;" id="disclouser-container">
+                   
                  </div>
                 </div>
                 <div class="forms-for-tds-on-dividend2" style="display:none; justify-content:space-between">
@@ -177,23 +126,8 @@
                 <h5>Forms for TDS on Dividend</h5>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal5">Add +</button>
                 </div>
-                <div class="result" style="display:grid; grid-template-columns:repeat(2,1fr); margin-top:10px; gap:10px;">
-                 @foreach(var Formdts in Model.Formdts)
-                {
-                    <div class="report-item_@Formdts.Id @Formdts.Title.Replace(" ", "-") card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h6 style="margin:10px 0; font-weight:600; text-align:center;">@Formdts.Title</h6>
-                        <a href="@Formdts.FilePath" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
-                            <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
-                        </a>
-                        <button onclick="deleteFormdts(@Formdts.Id, '@Formdts.Title')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; right:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                        <button onclick="editFormdts(@Formdts.Id, '@Formdts.Title', '@Formdts.FilePath')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; left:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;" data-bs-toggle="modal" data-bs-target="#myModal5">
-                            <i class="bi bi-pencil"></i>
-
-                        </button>
-                    </div>
-                }
+                <div class="result" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); margin-top:10px; gap:10px;" id="formtds-container">
+               
                 </div>
 
                 </div>
@@ -202,11 +136,11 @@
                 <h5>Unpaid Dividend</h5>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal6">Add +</button>
                 </div>
-                 <div class="result" style="display:grid; grid-template-columns:repeat(2,1fr); margin-top:10px; gap:10px;">
+                 <div class="result" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); margin-top:10px; gap:10px;">
                   @foreach(var Unpaid in Model.Unpaid)
                 {
                     <div class="report-item_@Unpaid.Id @Unpaid.Title.Replace(" ", "-") card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h6 style="margin:10px 0; font-weight:600; text-align:center;">@Unpaid.Title</h6>
+                        <h6 style="margin:10px 0; font-weight:600; overflow: hidden;  text-overflow: ellipsis; display: inline-block; max-width:60%; text-align:center; white-space: nowrap; ">@Unpaid.Title</h6>
                         <a href="@Unpaid.FilePath" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
                             <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
                         </a>
@@ -226,23 +160,8 @@
                 <h5>Appointment Order of Independent Directors</h5>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal7">Add +</button>
                 </div>
-                <div class="result" style="display:grid; grid-template-columns:repeat(2,1fr); margin-top:10px; gap:10px;">
-                  @foreach(var Apporder in Model.Apporder)
-                {
-                    <div class="report-item_@Apporder.Id @Apporder.Title.Replace(" ", "-") card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h6 style="margin:10px 0; font-weight:600; text-align:center;">@Apporder.Title</h6>
-                        <a href="@Apporder.FilePath" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
-                            <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
-                        </a>
-                        <button onclick="deleteApporder(@Apporder.Id, '@Apporder.Title')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; right:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                        <button onclick="editApporder(@Apporder.Id, '@Apporder.Title', '@Apporder.FilePath')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; left:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;" data-bs-toggle="modal" data-bs-target="#myModal7">
-                            <i class="bi bi-pencil"></i>
-
-                        </button>
-                    </div>
-                }
+                            <div class="result" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); margin-top:10px; gap:10px;" id="Apporder-container">
+               
                  </div>
                 </div>
                 <!-- <div class="digital-lending-partners2" style="display:none; justify-content:space-between">
@@ -299,7 +218,7 @@
 <div id="myModal2" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
     <form class="modal-content" method="post" action="/admin/Announcements/addannouncements" enctype="multipart/form-data" id="announcementForm">
-   <input name="ids" type="hidden" id="id2">
+   <input name="Id" type="hidden" id="id2" >
             <div class="modal-header">
                 <h5 class="modal-title">Add Announcements</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -314,7 +233,7 @@
                                 <div id="points-container">
                                       <div class="point-input-group" style="">
                                         <input type="text" placeholder="Give a Title" name="Title" class="form-control" id="title2">
-                                        <input type="file" name="Pdf" class="form-control" required>
+                                            <input type="file" name="Filepath" class="form-control" required>
                                         <button type="button" class="remove-point" onclick="removePoint(this)" style="display:none;">×</button>
                                     </div>
                                 </div>
@@ -336,7 +255,7 @@
 <div id="myModal3" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
     <form class="modal-content" method="post" action="/admin/Investorgroup/addinvestor" enctype="multipart/form-data" id="investorForm">
-   <input name="ids" type="hidden" id="id3">
+   <input name="Id" type="hidden" id="id3">
             <div class="modal-header">
                 <h5 class="modal-title">Add Investor</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -361,6 +280,9 @@
                                         <input type="text"  name="Role" class="form-control" >
                                          <label>Phone</label>
                                         <input type="text"  name="Phone" class="form-control" >
+                                           
+                                            <label>Email</label>
+                                            <input type="email" name="email" class="form-control" required>
                                     <label>Mobile</label>
                                         <input type="text"  name="Mobile" class="form-control" >
                                          <label>Address</label>
@@ -385,7 +307,7 @@
 <div id="myModal4" class="modal fade" tabindex="-1" role="dialog">
        <div class="modal-dialog">
    <form class="modal-content" method="post" action="/admin/Disclosure/add-disclosure" enctype="multipart/form-data" id="disclosure">
-   <input name="ids" type="hidden" id="id4">
+   <input name="Id" type="hidden" id="id4">
             <div class="modal-header">
                 <h5 class="modal-title">Add Disclosure</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -421,7 +343,7 @@
 <div id="myModal5" class="modal fade" tabindex="-1" role="dialog">
        <div class="modal-dialog">
    <form class="modal-content" method="post" action="/admin/Formdts/add-addFormdts" enctype="multipart/form-data" id="formdts">
-   <input name="ids" type="hidden" id="id5">
+   <input name="Id" type="hidden" id="id5">
             <div class="modal-header">
                 <h5 class="modal-title">Add Formdts</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -457,7 +379,7 @@
 <div id="myModal6" class="modal fade" tabindex="-1" role="dialog">
        <div class="modal-dialog">
    <form class="modal-content" method="post" action="/admin/Unpaid/add-Unpaid" enctype="multipart/form-data" id="Unpaid">
-   <input name="ids" type="hidden" id="id6">
+   <input name="Id" type="hidden" id="id6">
             <div class="modal-header">
                 <h5 class="modal-title">Add Unpaid devident</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -493,7 +415,7 @@
 <div id="myModal7" class="modal fade" tabindex="-1" role="dialog">
        <div class="modal-dialog">
    <form class="modal-content" method="post" action="/admin/Apporder/add-apporder" enctype="multipart/form-data" id="app-order">
-   <input name="ids" type="hidden" id="id7">
+   <input name="Id" type="hidden" id="id7">
             <div class="modal-header">
                 <h5 class="modal-title">Appointment Order of Independent Directors</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -574,8 +496,363 @@ display:flex; flex-direction:column; gap:10px;
     text-align:center;
 }
 </style>
-<script>
-function reportbtn(){
+    <script>
+        
+
+                            window.refreshApporder = function () {
+
+                                    var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Apporder));
+
+                                                    var container = document.getElementById("Apporder-container");
+                                    container.innerHTML = "";
+
+                                    if (!Array.isArray(data) || data.length === 0) {
+                                        container.innerHTML = "<p class='text-center text-muted'>No reports found</p>";
+                                        return;
+                                    }
+
+                                    data.forEach(item => {
+
+                                        let id = item.Id ?? 0;
+                                        let title = item.Title ?? "Untitled";
+                                        let safeTitle = title.replace(/'/g, "\\'");
+                                        let filePath = item.FilePath ?? "";
+
+                                        let base64Icon = filePath
+                                            ? "data:application/pdf;base64," + filePath
+                                            : "#";
+
+                                        var html = `
+                                            <div class="report-item_${id} card"
+                                                 style="width:100%; padding:15px; display:flex; flex-direction:column; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+
+                                                <h6 style="margin:10px 0; font-weight:600; overflow:hidden; text-overflow:ellipsis; max-width:60%; white-space:nowrap;">
+                                                    ${title}
+                                                </h6>
+
+                                                <a href="${base64Icon}" target="_blank"
+                                                   style="width:100%; background:#0d6efd; padding:10px; border-radius:5px; margin:10px 0; text-align:center; color:white; text-decoration:none;">
+                                                    View PDF
+                                                </a>
+
+                                                                                <button onclick="deleteApporder(${id}, '${safeTitle}')"
+                                                        style="color:white; background:#dc3545; border:none; border-radius:50%; height:35px; width:35px; position:absolute; top:10px; right:10px;">
+                                                    🗑
+                                                </button>
+
+                                                                                                                <button onclick="editApporder(${id}, '${safeTitle}', '${filePath}')"
+                                                        style="color:white; background:#0d6efd; border:none; border-radius:50%; height:35px; width:35px; position:absolute; top:10px; left:10px;"
+                                                        data-bs-toggle="modal" data-bs-target="#myModal7">
+                                                    ✏
+                                                </button>
+
+
+                                            </div>
+                                        `;
+
+                                        container.insertAdjacentHTML("beforeend", html);
+                                    });
+                                };
+                    window.refreshFormTds = function () {
+
+                            var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Formdts));
+
+                                            var container = document.getElementById("formtds-container");
+                            container.innerHTML = "";
+
+                            if (!Array.isArray(data) || data.length === 0) {
+                                container.innerHTML = "<p class='text-center text-muted'>No reports found</p>";
+                                return;
+                            }
+
+                            data.forEach(item => {
+
+                                let id = item.Id ?? 0;
+                                let title = item.Title ?? "Untitled";
+                                let safeTitle = title.replace(/'/g, "\\'");
+                                let filePath = item.FilePath ?? "";
+
+                                let base64Icon = filePath
+                                    ? "data:application/pdf;base64," + filePath
+                                    : "#";
+
+                                var html = `
+                                    <div class="report-item_${id} card"
+                                         style="width:100%; padding:15px; display:flex; flex-direction:column; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+
+                                        <h6 style="margin:10px 0; font-weight:600; overflow:hidden; text-overflow:ellipsis; max-width:60%; white-space:nowrap;">
+                                            ${title}
+                                        </h6>
+
+                                        <a href="${base64Icon}" target="_blank"
+                                           style="width:100%; background:#0d6efd; padding:10px; border-radius:5px; margin:10px 0; text-align:center; color:white; text-decoration:none;">
+                                            View PDF
+                                        </a>
+
+                                                                <button onclick="deleteFormdts(${id}, '${safeTitle}')"
+                                                style="color:white; background:#dc3545; border:none; border-radius:50%; height:35px; width:35px; position:absolute; top:10px; right:10px;">
+                                            🗑
+                                        </button>
+
+                                                                                        <button onclick="editFormdts(${id}, '${safeTitle}', '${filePath}')"
+                                                style="color:white; background:#0d6efd; border:none; border-radius:50%; height:35px; width:35px; position:absolute; top:10px; left:10px;"
+                                                data-bs-toggle="modal" data-bs-target="#myModal5">
+                                            ✏
+                                        </button>
+
+
+                                    </div>
+                                `;
+
+                                container.insertAdjacentHTML("beforeend", html);
+                            });
+                        };
+
+                             window.refreshDisclouser = function () {
+
+                    var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Disclosure));
+
+                            var container = document.getElementById("disclouser-container");
+                    container.innerHTML = "";
+
+                    if (!Array.isArray(data) || data.length === 0) {
+                        container.innerHTML = "<p class='text-center text-muted'>No reports found</p>";
+                        return;
+                    }
+
+                    data.forEach(item => {
+
+                        let id = item.Id ?? 0;
+                        let title = item.Title ?? "Untitled";
+                        let safeTitle = title.replace(/'/g, "\\'");
+                        let filePath = item.FilePath ?? "";
+
+                        let base64Icon = filePath
+                            ? "data:application/pdf;base64," + filePath
+                            : "#";
+
+                        var html = `
+                            <div class="report-item_${id} card"
+                                 style="width:100%; padding:15px; display:flex; flex-direction:column; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+
+                                <h6 style="margin:10px 0; font-weight:600; overflow:hidden; text-overflow:ellipsis; max-width:60%; white-space:nowrap;">
+                                    ${title}
+                                </h6>
+
+                                <a href="${base64Icon}" target="_blank"
+                                   style="width:100%; background:#0d6efd; padding:10px; border-radius:5px; margin:10px 0; text-align:center; color:white; text-decoration:none;">
+                                    View PDF
+                                </a>
+
+                                                <button onclick="deleteDisclosure(${id}, '${safeTitle}')"
+                                        style="color:white; background:#dc3545; border:none; border-radius:50%; height:35px; width:35px; position:absolute; top:10px; right:10px;">
+                                    🗑
+                                </button>
+
+                                                                <button onclick="editdisclosure(${id}, '${safeTitle}', '${filePath}')"
+                                        style="color:white; background:#0d6efd; border:none; border-radius:50%; height:35px; width:35px; position:absolute; top:10px; left:10px;"
+                                        data-bs-toggle="modal" data-bs-target="#myModal4">
+                                    ✏
+                                </button>
+                               
+
+                            </div>
+                        `;
+
+                        container.insertAdjacentHTML("beforeend", html);
+                    });
+                };
+            window.investorcontact = function () {
+
+            var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Investor));
+
+            var container = document.getElementById("investor-container");
+            container.innerHTML = "";
+
+            if (!Array.isArray(data) || data.length === 0) {
+                container.innerHTML = "<p class='text-center text-muted'>No Contact found</p>";
+                return;
+            }
+
+            data.forEach(item => {
+
+                // ✅ SAFE GUARDS
+                let id = item.Id ?? 0;
+                        let fullName = item.FullName ?? "Unknown";
+                                let safeFullName = fullName.replace(/'/g, "\\'");
+             
+                                        let profile = item.Profile
+                                    ? "data:application/pdf;base64," + item.Profile
+                                    : "/images/user-default.png";
+                let role = item.Role ?? "-";
+                let phone = item.Phone ?? "-";
+                let mobile = item.Mobile ?? "-";
+                let address = item.Address ?? "-";
+                let email = item.email ?? "_";
+
+                var html = `
+                    <div class="investor-item_${id} card"
+                         style="width:100%; padding:20px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow:0 4px 6px rgba(0,0,0,0.1); border-radius:12px; background:white;">
+
+                        <div class="profile-view"
+                             style="display:flex; gap:20px; width:100%; justify-content:center; align-items:center; margin-bottom:20px;">
+
+                            <img src="${profile}"
+                                 onerror="this.src='/images/user-default.png'"
+                                 style="width:80px; height:80px; border-radius:50%; object-fit:cover; border:3px solid #f0f0f0;">
+
+                            <div class="profile-name" style="flex:1;">
+                                <h6 style="margin:0; font-weight:600;">${fullName}</h6>
+                                <p style="margin:5px 0 0; color:#666; font-size:0.9rem;">${role}</p>
+                            </div>
+                        </div>
+
+                        <div style="width:100%; display:flex; flex-direction:column; gap:12px; padding:15px; background:#f8f9fa; border-radius:8px;">
+                            <p><i class="bi bi-telephone text-primary"></i> ${phone}</p>
+                            <p><i class="bi bi-phone text-primary"></i> ${mobile}</p>
+                            <p><i class="bi bi-geo-alt text-primary"></i> ${address}</p>
+                        </div>
+
+                        <div style="display:flex; gap:8px; width:70%; justify-content:space-between; margin-top:10px;">
+
+                                    <button onclick="editInvestor(${id}, '${safeFullName}', '${profile}', '${role}', '${phone}', '${mobile}', '${address}','${email}')"
+                                    class="btn btn-primary btn-sm"
+                                    data-bs-toggle="modal" data-bs-target="#myModal3">
+                                       ✏
+                            </button>
+
+                            <button onclick="deleteInvestor(${id}, '${safeFullName}')"
+                                    class="btn btn-danger btn-sm">
+                                           🗑
+                            </button>
+                        </div>
+
+                    </div>
+                `;
+
+                container.insertAdjacentHTML("beforeend", html);
+            });
+        };
+
+    // annualreport
+                                 window.refreshAnnualReport = function () {
+
+            var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Report));
+
+            var container = document.getElementById("annualReport-container");
+            container.innerHTML = "";
+
+            if (!Array.isArray(data) || data.length === 0) {
+                container.innerHTML = "<p class='text-center text-muted'>No reports found</p>";
+                return;
+            }
+
+            data.forEach(item => {
+
+                let id = item.Id ?? 0;
+                let title = item.Title ?? "Untitled";
+                let safeTitle = title.replace(/'/g, "\\'");
+                let filePath = item.FilePath ?? "";
+
+                let base64Icon = filePath
+                    ? "data:application/pdf;base64," + filePath
+                    : "#";
+
+                var html = `
+                    <div class="report-item_${id} card"
+                         style="width:100%; padding:15px; display:flex; flex-direction:column; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+
+                        <h6 style="margin:10px 0; font-weight:600; overflow:hidden; text-overflow:ellipsis; max-width:60%; white-space:nowrap;">
+                            ${title}
+                        </h6>
+
+                        <a href="${base64Icon}" target="_blank"
+                           style="width:100%; background:#0d6efd; padding:10px; border-radius:5px; margin:10px 0; text-align:center; color:white; text-decoration:none;">
+                            View PDF
+                        </a>
+
+                                <button onclick="deletereport(${id}, '${safeTitle}')"
+                                style="color:white; background:#dc3545; border:none; border-radius:50%; height:35px; width:35px; position:absolute; top:10px; right:10px;">
+                            🗑
+                        </button>
+
+                                        <button onclick="editreport(${id}, '${safeTitle}', '${filePath}')" 
+                                style="color:white; background:#0d6efd; border:none; border-radius:50%; height:35px; width:35px; position:absolute; top:10px; left:10px;"
+                                data-bs-toggle="modal" data-bs-target="#myModal">
+                            ✏
+                        </button>
+
+                    </div>
+                `;
+
+                container.insertAdjacentHTML("beforeend", html);
+            });
+        };
+
+
+    // announcement
+
+                     window.refreshAnnouncement = function () {
+
+            var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Announcements));
+
+            var container = document.getElementById("announcement-container");
+            container.innerHTML = "";
+
+            if (!Array.isArray(data) || data.length === 0) {
+                container.innerHTML = "<p class='text-center text-muted'>No announcements found</p>";
+                return;
+            }
+
+            data.forEach(item => {
+
+                // ✅ HARD SAFETY GUARDS
+                let id = item.Id ?? 0;
+                let title = item.Title ?? "Untitled";
+                let safeTitle = title.replace(/'/g, "\\'");
+                let filePath = item.FilePath ?? "";
+
+                let base64Icon = filePath
+                    ? "data:application/pdf;base64," + filePath
+                    : "#";
+
+                var html = `
+                    <div class="report-item_${id} card"
+                         style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+
+                        <h6 style="margin:10px 0; font-weight:600; overflow: hidden;  text-overflow: ellipsis; display: inline-block; max-width:60%; text-align:center; white-space: nowrap; ">
+                            ${title}
+                        </h6>
+
+                        <a href="${base64Icon}" target="_blank"
+                           style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; margin:10px 0; text-align:center; color:white; text-decoration:none;">
+                            View PDF
+                        </a>
+
+                        <button onclick="deleteAnnouncement(${id}, '${safeTitle}')"
+                                style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; position:absolute; top:10px; right:10px;">
+                            🗑
+                        </button>
+
+                        <button onclick="editAnnouncement(${id}, '${safeTitle}', '${filePath}')"
+                                style="color:white; background-color:#0d6efd; border:none; border-radius:50%; height:35px; width:35px; position:absolute; top:10px; left:10px;"
+                                data-bs-toggle="modal" data-bs-target="#myModal2">
+                            ✏
+                        </button>
+
+                    </div>
+                `;
+
+                container.insertAdjacentHTML("beforeend", html);
+            });
+        };
+
+                  $(document).ready(function(){
+                        refreshAnnualReport()
+            });
+
+
+        function reportbtn(){
      document.getElementById('id1').value="";
 }
 function editUnpaid(id,title){
@@ -619,9 +896,8 @@ function deleteDisclosure(id,title){
         },
         success: function(result) {
           if (result.success) {
-            alert("Deleted Successfully");
-            // Use the correct class selector to find and remove the element
-            $('.report-item_' + id + '.' + cleanedTitle).remove();
+                      localStorage.setItem("activeTab", "public-disclosure");
+                            location.reload();
           } else {
             alert('Error deleting report: ' + result.message);
           }
@@ -644,8 +920,8 @@ function deleteAnnouncement(id, title) {
         success: function(result) {
           if (result.success) {
             alert("Deleted Successfully");
-            // Use the correct class selector to find and remove the element
-            $('.report-item_' + id + '.' + cleanedTitle).remove();
+                     localStorage.setItem("activeTab", "announcements");
+                     location.reload();
           } else {
             alert('Error deleting report: ' + result.message);
           }
@@ -668,8 +944,8 @@ function deleteApporder(id, title) {
         success: function(result) {
           if (result.success) {
             alert("Deleted Successfully");
-            // Use the correct class selector to find and remove the element
-            $('.report-item_' + id + '.' + cleanedTitle).remove();
+                           localStorage.setItem("activeTab", "appointment-order-of-independent-directors");
+                                          location.reload();
           } else {
             alert('Error deleting report: ' + result.message);
           }
@@ -717,6 +993,7 @@ function deleteApporder(id, title) {
           if (result.success) {
 
             alert("Deleted Successfully");
+            localStorage.setItem("activeTab", "annual-report");
             location.reload();
           } else {
             alert('Error deleting report: ' + result.message);
@@ -740,8 +1017,10 @@ function deleteApporder(id, title) {
         success: function(result) {
           if (result.success) {
             alert("Deleted Successfully");
-            // Use the correct class selector to find and remove the element
-            $('.report-item_' + id + '.' + cleanedTitle).remove();
+
+                                       localStorage.setItem("activeTab", "forms-for-tds-on-dividend");
+                                               
+                                                     location.reload();
           } else {
             alert('Error deleting report: ' + result.message);
           }
@@ -787,48 +1066,55 @@ function deleteApporder(id, title) {
         });
 
     $(document).ready(function() {
-        $('.annual-report').click(function() {
-             $('.annual-report').addClass('active');
-              $('.announcements').removeClass('active');
-                $('.investor-contact').removeClass('active');
-                   $('.forms-for-tds-on-dividend').removeClass('active');
-   $('.public-disclosure').removeClass('active');
-   $('.unpaid-dividend').removeClass('active');
-     $('.appointment-order-of-independent-directors').removeClass('active');
-    /*   $('.digital-lending-partners').removeClass('active'); */
-            $('.annual-report2').show();
-         
+               $('.annual-report').click(function() {
 
+            // ✅ Save active tab
+            localStorage.setItem("activeTab", "annual-report");
+                                  refreshAnnualReport();
+            $('.annual-report').addClass('active');
+            $('.announcements').removeClass('active');
+            $('.investor-contact').removeClass('active');
+            $('.forms-for-tds-on-dividend').removeClass('active');
+            $('.public-disclosure').removeClass('active');
+            $('.unpaid-dividend').removeClass('active');
+            $('.appointment-order-of-independent-directors').removeClass('active');
+
+            $('.annual-report2').show();
             $('.announcements2').hide();
-        
             $('.investor-contact2').hide();
             $('.public-disclosure2').hide();
             $('.forms-for-tds-on-dividend2').hide();
             $('.unpaid-dividend2').hide();
             $('.appointment-order-of-independent-directors2').hide();
-          /*   $('.digital-lending-partners2').hide(); */
         });
- $('.announcements').click(function() {
-     $('.annual-report').removeClass('active');
-              $('.announcements').addClass('active');
-                    $('.investor-contact').removeClass('active');
-                            $('.public-disclosure').removeClass('active');
-                               $('.forms-for-tds-on-dividend').removeClass('active');
-                               $('.unpaid-dividend').removeClass('active');
-                                 $('.appointment-order-of-independent-directors').removeClass('active');
-   /*    $('.digital-lending-partners').removeClass('active'); */
+
+                $('.announcements').click(function () {
+
+            // ✅ Save active tab
+            localStorage.setItem("activeTab", "announcements");
+
+            refreshAnnouncement();
+
+            $('.annual-report').removeClass('active');
+            $('.announcements').addClass('active');
+            $('.investor-contact').removeClass('active');
+            $('.public-disclosure').removeClass('active');
+            $('.forms-for-tds-on-dividend').removeClass('active');
+            $('.unpaid-dividend').removeClass('active');
+            $('.appointment-order-of-independent-directors').removeClass('active');
+
             $('.annual-report2').hide();
-      
-            $('.announcements2').show();
-            $('.announcements2').css('display', 'flex');
+            $('.announcements2').show().css('display', 'flex');
             $('.investor-contact2').hide();
             $('.public-disclosure2').hide();
             $('.forms-for-tds-on-dividend2').hide();
             $('.unpaid-dividend2').hide();
             $('.appointment-order-of-independent-directors2').hide();
-            /* $('.digital-lending-partners2').hide(); */
         });
+
  $('.investor-contact').click(function() {
+                        localStorage.setItem("activeTab", "investor-contact");
+             investorcontact();
        $('.annual-report').removeClass('active');
               $('.announcements').removeClass('active');
                $('.investor-contact').addClass('active');
@@ -849,6 +1135,8 @@ function deleteApporder(id, title) {
          /*    $('.digital-lending-partners2').hide(); */
         });
  $('.public-disclosure').click(function() {
+                     localStorage.setItem("activeTab", "public-disclosure");
+             refreshDisclouser();
      $('.annual-report').removeClass('active');
               $('.announcements').removeClass('active');
                 $('.investor-contact').removeClass('active');
@@ -868,6 +1156,8 @@ function deleteApporder(id, title) {
          /*    $('.digital-lending-partners2').hide(); */
         });
          $('.forms-for-tds-on-dividend').click(function() {
+                       localStorage.setItem("activeTab", "forms-for-tds-on-dividend");
+                             refreshFormTds();
               $('.annual-report').removeClass('active');
               $('.announcements').removeClass('active');
                 $('.investor-contact').removeClass('active');
@@ -906,6 +1196,8 @@ function deleteApporder(id, title) {
             /* $('.digital-lending-partners2').hide(); */
         });
          $('.appointment-order-of-independent-directors').click(function() {
+                              localStorage.setItem("activeTab", "appointment-order-of-independent-directors");
+                     refreshApporder();
               $('.annual-report').removeClass('active');
               $('.announcements').removeClass('active');
                 $('.investor-contact').removeClass('active');
@@ -946,9 +1238,7 @@ function deleteApporder(id, title) {
     });
 
     // Add this new code for AJAX form submission
-    $(document).
-    
-    ready(function() {
+    $(document).  ready(function() {
         $('#announcementForm').on('submit', function(e) {
             e.preventDefault();
             
@@ -968,38 +1258,12 @@ function deleteApporder(id, title) {
                     if (response.success) {
                         // Close the modal and remove backdrop
                         $('#myModal2').modal('hide');
-                        $('body').removeClass('modal-open');
-                        $('.modal-backdrop').remove();
-                        
-                        if (isUpdate) {
-                            // Update existing announcement
-                            var existingItem = $(`.report-item_${response.id}`);
-                            existingItem.find('h6').text(response.title);
-                            existingItem.find('a').attr('href', response.filePath);
-                            existingItem.attr('class', `report-item_${response.id} ${response.title.replace(/\s+/g, '-')} card`);
-                        } else {
-                            // Add new announcement to the grid
-                            var newAnnouncement = `
-                                <div class="report-item_${response.id} ${response.title.replace(/\s+/g, '-')} card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                    <h6 style="margin:10px 0; font-weight:600; text-align:center;">${response.title}</h6>
-                                    <a href="${response.filePath}" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
-                                        <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
-                                    </a>
-                                    <button onclick="deleteAnnouncement(${response.id}, '${response.title}')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; right:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                    <button onclick="editAnnouncement(${response.id}, '${response.title}', '${response.filePath}')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; left:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;" data-bs-toggle="modal" data-bs-target="#myModal2">
-                                        <i class="bi bi-pencil"></i>
-                                    </button>
-                                </div>
-                            `;
-                            $('.announcements2 .result').append(newAnnouncement);
-                        }
-                        
-                        // Show success message
-                        alert(response.message);
-                        
-                        // Reset the form and clear the id
+                       
+                                      
+
+             localStorage.setItem("activeTab", "announcements");
+            location.reload();
+                                // Reset the form and clear the id
                         $('#announcementForm')[0].reset();
                         $('#id2').val('');
                     } else {
@@ -1035,31 +1299,8 @@ function deleteApporder(id, title) {
                         $('#myModal4').modal('hide');
                         $('body').removeClass('modal-open');
                         $('.modal-backdrop').remove();
-                        
-                        if (isUpdate) {
-                            // Update existing disclosure
-                            var existingItem = $(`.report-item_${response.id}`);
-                            existingItem.find('h6').text(response.title);
-                            existingItem.find('a').attr('href', response.filePath);
-                            existingItem.attr('class', `report-item_${response.id} ${response.title.replace(/\s+/g, '-')} card`);
-                        } else {
-                            // Add new disclosure to the grid
-                            var newDisclosure = `
-                                <div class="report-item_${response.id} ${response.title.replace(/\s+/g, '-')} card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                    <h6 style="margin:10px 0; font-weight:600; text-align:center;">${response.title}</h6>
-                                    <a href="${response.filePath}" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
-                                        <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
-                                    </a>
-                                    <button onclick="deleteDisclosure(${response.id}, '${response.title}')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; right:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                    <button onclick="editDisclosure(${response.id}, '${response.title}', '${response.filePath}')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; left:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;" data-bs-toggle="modal" data-bs-target="#myModal4">
-                                        <i class="bi bi-pencil"></i>
-                                    </button>
-                                </div>
-                            `;
-                            $('.public-disclosure2 .result').append(newDisclosure);
-                        }
+                    localStorage.setItem("activeTab", "public-disclosure");
+                    location.reload();
                         
                         // Show success message
                         alert(response.message);
@@ -1113,57 +1354,8 @@ function deleteApporder(id, title) {
                         $('#myModal3').modal('hide');
                         $('body').removeClass('modal-open');
                         $('.modal-backdrop').remove();
-                        
-                        if (isUpdate) {
-                            // Update existing investor
-                            var existingItem = $(`.investor-item_${response.id}`);
-                            existingItem.find('h6').text(response.title);
-                            existingItem.find('p:first').text(response.role);
-                            existingItem.find('a').attr('href', response.filePath);
-                            existingItem.find('p:nth-child(4)').html(`<i class="bi bi-telephone"></i> ${response.phone}`);
-                            existingItem.find('p:nth-child(5)').html(`<i class="bi bi-phone"></i> ${response.mobile}`);
-                            existingItem.find('p:nth-child(6)').html(`<i class="bi bi-geo-alt"></i> ${response.address}`);
-                            existingItem.attr('class', `investor-item_${response.id} ${response.title.replace(/\s+/g, '-')} card`);
-                        } else {
-                            // Add new investor to the grid
-                            var newInvestor = `
-                                <div class="investor-item_${response.id} ${response.title.replace(/\s+/g, '-')} card" style="width:100%; padding:20px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius:12px; transition: all 0.3s ease; background:white;">
-                                    <div class="profile-view" style="display:flex; gap:20px; width:100%; justify-content:center; align-items:center; margin-bottom:20px;">
-                                        <img src="${response.filePath}" style="width:80px; height:80px; border-radius:50%; object-fit:cover; border:3px solid #f0f0f0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                        <div class="profile-name" style="flex:1;">
-                                            <h6 style="margin:0; font-weight:600; font-size:1.1rem; color:#333;">${response.title}</h6>
-                                            <p style="margin:5px 0 0; color:#666; font-size:0.9rem;">${response.role}</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div style="width:100%; display:flex; flex-direction:column; gap:12px; padding:15px; background:#f8f9fa; border-radius:8px;">
-                                        <p style="margin:0; display:flex; align-items:center; color:#555; font-size:0.95rem;">
-                                            <i class="bi bi-telephone" style="margin-right:12px; color:#0d6efd;"></i> ${response.Phone}
-                                        </p>
-                                        <p style="margin:0; display:flex; align-items:center; color:#555; font-size:0.95rem;">
-                                            <i class="bi bi-phone" style="margin-right:12px; color:#0d6efd;"></i> ${response.mobile}
-                                        </p>
-                                        <p style="margin:0; display:flex; align-items:center; color:#555; font-size:0.95rem;">
-                                            <i class="bi bi-geo-alt" style="margin-right:12px; color:#0d6efd;"></i> ${response.address}
-                                        </p>
-                                    </div>
-
-                                    <div style="display:flex; gap:8px; width:70%; justify-content:space-between;">
-                                        <button onclick="editInvestor(${response.id}, '${response.title}', '${response.filePath}', '${response.role}', '${response.phone}', '${response.mobile}', '${response.address}')" 
-                                                style="color:white; background-color:#0d6efd; border:none; border-radius:8px; height:32px; width:32px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s ease; box-shadow: 0 2px 4px rgba(13,110,253,0.2);" 
-                                                data-bs-toggle="modal" data-bs-target="#myModal3">
-                                            <i class="bi bi-pencil"></i>
-                                        </button>
-                                        <button onclick="deleteInvestor(${response.id}, '${response.title}')" 
-                                                style="color:white; background-color:#dc3545; border:none; border-radius:8px; height:32px; width:32px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s ease; box-shadow: 0 2px 4px rgba(220,53,69,0.2);">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                </div>
-                            `;
-                            $('.investor-contact2 .result').append(newInvestor);
-                        }
+                              localStorage.setItem("activeTab", "investor-contact");
+                    location.reload();
                         
                         // Show success message
                         alert(response.message);
@@ -1183,14 +1375,14 @@ function deleteApporder(id, title) {
         });
     });
 
-    function editInvestor(id, fullName, profile, role, phone, mobile, address) {
+    function editInvestor(id, fullName, profile, role, phone, mobile, address,email) {
         $('#id3').val(id);
         $('input[name="FullName"]').val(fullName);
         $('input[name="Role"]').val(role);
         $('input[name="Phone"]').val(phone);
         $('input[name="Mobile"]').val(mobile);
         $('textarea[name="Address"]').val(address);
-        
+        $('input[name="email"]').val(email);
         // Update profile image preview if exists
         if (profile) {
             $('#profile img').attr('src', profile);
@@ -1208,7 +1400,8 @@ function deleteApporder(id, title) {
                 success: function(result) {
                     if (result.success) {
                         alert("Deleted Successfully");
-                        $(`.investor-item_${id}`).remove();
+                                  localStorage.setItem("activeTab", "investor-contact");
+                            location.reload();
                     } else {
                         alert('Error deleting investor: ' + result.message);
                     }
@@ -1242,31 +1435,10 @@ function deleteApporder(id, title) {
                         $('#myModal5').modal('hide');
                         $('body').removeClass('modal-open');
                         $('.modal-backdrop').remove();
-                        
-                        if (isUpdate) {
-                            // Update existing announcement
-                            var existingItem = $(`.report-item_${response.id}`);
-                            existingItem.find('h6').text(response.title);
-                            existingItem.find('a').attr('href', response.filePath);
-                            existingItem.attr('class', `report-item_${response.id} ${response.title.replace(/\s+/g, '-')} card`);
-                        } else {
-                            // Add new announcement to the grid
-                            var newAnnouncement = `
-                                <div class="report-item_${response.id} ${response.title.replace(/\s+/g, '-')} card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                    <h6 style="margin:10px 0; font-weight:600; text-align:center;">${response.title}</h6>
-                                    <a href="${response.filePath}" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
-                                        <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
-                                    </a>
-                                    <button onclick="deleteFormdts(${response.id}, '${response.title}')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; right:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                    <button onclick="editFormdts(${response.id}, '${response.title}', '${response.filePath}')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; left:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;" data-bs-toggle="modal" data-bs-target="#myModal2">
-                                        <i class="bi bi-pencil"></i>
-                                    </button>
-                                </div>
-                            `;
-                            $('.forms-for-tds-on-dividend2 .result').append(newAnnouncement);
-                        }
+
+                               localStorage.setItem("activeTab", "forms-for-tds-on-dividend");
+
+                                                             location.reload();
                         
                         // Show success message
                         alert(response.message);
@@ -1319,7 +1491,7 @@ function deleteApporder(id, title) {
                             // Add new announcement to the grid
                             var newAnnouncement = `
                                 <div class="report-item_${response.id} ${response.title.replace(/\s+/g, '-')} card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                    <h6 style="margin:10px 0; font-weight:600; text-align:center;">${response.title}</h6>
+                                    <h6 style="margin:10px 0; font-weight:600; overflow: hidden;  text-overflow: ellipsis; display: inline-block; max-width:60%; text-align:center; white-space: nowrap; ">${response.title}</h6>
                                     <a href="${response.filePath}" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
                                         <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
                                     </a>
@@ -1374,32 +1546,8 @@ function deleteApporder(id, title) {
                         $('#myModal7').modal('hide');
                         $('body').removeClass('modal-open');
                         $('.modal-backdrop').remove();
-                        
-                        if (isUpdate) {
-                            // Update existing announcement
-                            var existingItem = $(`.report-item_${response.id}`);
-                            existingItem.find('h6').text(response.title);
-                            existingItem.find('a').attr('href', response.filePath);
-                            existingItem.attr('class', `report-item_${response.id} ${response.title.replace(/\s+/g, '-')} card`);
-                        } else {
-                            // Add new announcement to the grid
-                            var newAnnouncement = `
-                                <div class="report-item_${response.id} ${response.title.replace(/\s+/g, '-')} card" style="width:100%; padding:15px; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                    <h6 style="margin:10px 0; font-weight:600; text-align:center;">${response.title}</h6>
-                                    <a href="${response.filePath}" target="_blank" style="width:100%; background-color:#0d6efd; padding:10px; border-radius:5px; cursor:pointer; margin:10px 0; text-align:center; color:white; text-decoration:none; transition:background-color 0.3s ease;">
-                                        <i class="bi bi-file-earmark-pdf-fill"></i> View PDF
-                                    </a>
-                                    <button onclick="deleteApporder(${response.id}, '${response.title}')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; right:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                    <button onclick="editApporder(${response.id}, '${response.title}', '${response.filePath}')" style="color:white; background-color:#dc3545; border:none; border-radius:50%; height:35px; width:35px; cursor:pointer; position:absolute; top:10px; left:10px; display:flex; align-items:center; justify-content:center; transition:background-color 0.3s ease;" data-bs-toggle="modal" data-bs-target="#myModal7">
-                                        <i class="bi bi-pencil"></i>
-                                    </button>
-                                </div>
-                            `;
-                            $('.appointment-order-of-independent-directors2 .result').append(newAnnouncement);
-                        }
-                        
+                                  localStorage.setItem("activeTab", "appointment-order-of-independent-directors");
+                                  location.reload();
                         // Show success message
                         alert(response.message);
                         
@@ -1415,5 +1563,34 @@ function deleteApporder(id, title) {
                 }
             });
         });
-    });
+            });
+            
+            $(document).ready(function () {
+
+            let activeTab = localStorage.getItem("activeTab");
+
+            if (activeTab === "announcements") {
+                $('.announcements').trigger('click');
+            }
+            else if (activeTab === "annual-report") {
+                $('.annual-report').trigger('click');
+            }
+            else if (activeTab === "investor-contact") {
+                                $('.investor-contact').trigger('click');
+                    }
+            else if (activeTab === "public-disclosure") {
+           $('.public-disclosure').trigger('click');
+           }
+                             else if (activeTab === "forms-for-tds-on-dividend") {
+                           $('.forms-for-tds-on-dividend').trigger('click');
+                   }
+                                          else if (activeTab === "appointment-order-of-independent-directors") {
+                                           $('.appointment-order-of-independent-directors').trigger('click');
+                           }
+                             
+            // ✅ If nothing is saved → your default first tab loads normally
+        });
+
+              
+
 </script>

@@ -22,7 +22,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" type="image/png" href="~/images/logo/logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         * {
             text-decoration: none !important;
@@ -154,10 +156,103 @@
                 color:white;
             }
         }
+
+        .csr-section {
+            width: 95%;
+            display: none;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            background: white;
+            padding: 10px;
+            position: fixed;
+            top: 8%;
+            left: 0%;
+            transform: translateX(-0%);
+            z-index: 40000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            max-height: 500px;
+            overflow-x: hidden;
+            max-height: 500px;
+            overflow-y: auto; /* only show scrollbar when necessary */
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            
+        }
+
+        .policy-section {
+            width: 95%;
+            display: none;
+            grid-template-columns: repeat(4, 1fr); /* always 4 on large screens */
+            gap: 10px;
+            background: white;
+            padding: 10px;
+            position: fixed;
+            top: 8%;
+            left: 0%;
+            z-index: 40000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            max-height: 500px;
+            overflow-y: auto;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            color: black;
+            opacity: 0;
+        }
+
+        /* Tablets (3 columns) */
+        @@media (max-width: 1024px) {
+            .policy-section
+
+        {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+            .csr-section {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Small tablets / large phones (2 columns) */
+        @@media (max-width: 768px) {
+            .policy-section
+
+        {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+            .csr-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Phones (1 column) */
+        @@media (max-width: 480px) {
+            .policy-section
+
+        {
+            grid-template-columns: 1fr;
+        }
+
+            .csr-section {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        .policy-section {
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease;
+        }
+
     </style>
 </head>
 
 <body>
+    <div class="csr-section"></div>
+    <div class="policy-section"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     @* gievance login model *@
     <input type="hidden" id="customer_id_getting" />
@@ -295,40 +390,95 @@
                     <ul class="service-list" id="service-items"></ul>
                     <li onclick="window.location.href='/investor'">Investors</li>
                     <li onclick="window.location.href='/Onlineservices'">Online Services</li>
-                    <li onclick="window.location.href='/policies'">Policies</li>
+                    <li  id="policy-menu">Policies</li>
+                    <li onclick="window.location.href='/Announcement'" >Announcements </li>
                     <li onclick="window.location.href='/career'">Career</li>
-                    <li onclick="window.location.href='/csr'">CSR</li>
+                    <li  id="csr-menu">CSR</li>
                     <li onclick="window.location.href='/contact'">Contact Us</li>
                 </ul>
             </div>
         </menu>
-
         <menu id="res-menu" style="z-index: 400000;">
-            <div class="menu-container" style="width: 70% !important;">
-                <ul>
-                    <div class="toggle">
-                        <img src="/images/icon/arrow(1).png" alt="" id="close">
-                    </div>
-                    <li onclick="window.location.href='/'"><i class="fas fa-home" style="margin-right: 40px;"></i> Home</li>
-                    <li onclick="window.location.href='/about'"><i class="fas fa-info-circle" style="margin-right: 40px;"></i> About</li>
-                    <li class="services-link2"><i class="fas fa-cogs" style="margin-right: 40px;"></i> Services</li>
-                    <ul class="service-list2" id="service-items2" style="overflow:visible;"></ul>
-                    <li onclick="window.location.href='/investor'"><i class="fas fa-hand-holding-usd" style="margin-right: 40px;"></i> Investors</li>
-                    <li onclick="window.location.href='/Onlineservices'"><i class="fas fa-globe" style="margin-right: 40px;"></i> Online Services</li>
-                    <li onclick="window.location.href='/policies'"><i class="fas fa-file-alt" style="margin-right: 40px;"></i> Policies</li>
-                    <li onclick="window.location.href='/career'"><i class="fas fa-briefcase" style="margin-right: 40px;"></i> Career</li>
-                    <li onclick="window.location.href='/csr'"><i class="fas fa-leaf" style="margin-right: 40px;"></i> CSR</li>
-                    <li onclick="window.location.href='/contact'"><i class="fas fa-envelope" style="margin-right: 40px;"></i> Contact Us</li>
-                </ul>
-                <div class="contact">
-                    <div class="icons" style="width: 100%; display: flex; justify-content:space-between;">
-                        <a href="https://www.facebook.com/share/18qcUVv3fJ/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f" style="color: black; font-size:15px;"></i></a>
-                        <a href="https://www.instagram.com/yogloansfinance?igsh=djhqZGI0dG92bGI0" target="_blank"><i class="fab fa-instagram" style="color: black; font-size:15px;"></i></a>
-                        <a href="https://www.linkedin.com/company/yogloans" target="_blank"><i class="fab fa-linkedin-in" style="color: black; font-size:15px;"></i></a>
-                    </div>
-                </div>
+    <div class="menu-container" style="width: 70% !important;">
+        <ul>
+
+            <div class="toggle">
+                <img src="/images/icon/arrow(1).png" alt="" id="close">
             </div>
-        </menu>
+
+            <li onclick="window.location.href='/'">
+                <i class="fas fa-home" style="margin-right: 40px;"></i> Home
+            </li>
+
+            <li onclick="window.location.href='/about'">
+                <i class="fas fa-info-circle" style="margin-right: 40px;"></i> About
+            </li>
+
+            <!-- Services Dropdown -->
+                    <li class="dropdown services-dropdown">
+                        <a class="dropdown-toggle" href="javascript:void(0);">
+                            <i class="fas fa-cogs" style="margin-right: 40px;"></i> Services
+                        </a>
+                        <ul class="dropdown-menu service-list2" id="service-items2" style="position: relative !important;
+        border: none !important;"></ul>
+                    </li>
+
+
+            <li onclick="window.location.href='/investor'">
+                <i class="fas fa-hand-holding-usd" style="margin-right: 40px;"></i> Investors
+            </li>
+
+            <!-- CUSTOM Dropdown Example -->
+            <li class="dropdown">
+                <a class="dropdown-toggle">
+                            <i class="fas fa-file-alt" style="margin-right: 40px;"></i> Policies
+                </a>
+                        <ul class="dropdown-menu" style="max-height:300px; overflow:auto; position: relative !important;
+        border: none !important;" id="policy-filling">
+               
+                </ul>
+            </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">
+                            <i class="fas fa-leaf" style="margin-right: 40px;"></i> CSR
+                        </a>
+                        <ul class="dropdown-menu" style="max-height:300px; overflow:auto; position: relative !important;
+        border: none !important;" id="csr-filling">
+                        </ul>
+                    </li>
+            <li onclick="window.location.href='/Onlineservices'">
+                <i class="fas fa-globe" style="margin-right: 40px;"></i> Online Services
+            </li>
+
+            @* <li onclick="window.location.href='/policies'">
+              Policies
+            </li> *@
+
+            <li onclick="window.location.href='/career'">
+                <i class="fas fa-briefcase" style="margin-right: 40px;"></i> Career
+            </li>
+
+            @* <li onclick="window.location.href='/csr'">
+                <i class="fas fa-leaf" style="margin-right: 40px;"></i> CSR
+            </li> *@
+
+            <li onclick="window.location.href='/contact'">
+                <i class="fas fa-envelope" style="margin-right: 40px;"></i> Contact Us
+            </li>
+
+        </ul>
+
+        <div class="contact">
+            <div class="icons" style="width: 100%; display: flex; justify-content: space-between;">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+    </div>
+</menu>
+
     </header>
 
     <!-- MAIN BODY -->
@@ -336,7 +486,7 @@
 
     <!-- Floating Hover Buttons -->
     <div class="activity">
-        <span class="au-redirection" id="auction-model-show" style="cursor:pointer;">
+        <span class="au-redirection" id="auction-model-show" style="cursor:pointer; display:none;" >
 
             <i class="fas fa-gavel"></i>
             <p>Auction</p>
@@ -345,7 +495,7 @@
             <i class="fas fa-user"></i>
             <p>Grievances</p>
         </span>
-        <a href="/vehicleseizing/Register" class="au-redirection" id="vehicle-seizing" style="cursor:pointer;">
+        <a href="/vehicleseizing/Register" class="au-redirection" id="vehicle-seizing" style="cursor:pointer; display:none;">
             <i class="fas fa-bicycle"></i>
             <p>Seizing</p>
         </a>
@@ -356,7 +506,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="col-xl-6 col-lg-6 mb-50">
                         <div class="footer-widget" style="text-align:justify;">
                             <div class="footer-text">
                                 <p>
@@ -373,7 +523,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
                         <div class="footer-widget">
                             <div class="footer-widget-heading"><h3>Useful Links</h3></div>
                             <ul style="padding-left: 0;">
@@ -389,7 +539,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50" style="display:none;">
                         <div class="footer-widget">
                             <div class="footer-widget-heading"><h3>Subscribe</h3></div>
                             <div class="footer-text mb-25"><p>Don't miss to subscribe to our new feeds</p></div>
@@ -421,9 +571,201 @@
         </div>
     </footer>
 
+    <script>
+
+        // ================= POLICY SECTION =================
+               $.ajax({
+          url: "/policy",
+          method: "GET",
+          success: function(response) {
+            if (Array.isArray(response) && response.length > 0) {
+
+              let html = '';
+              let html2 = '';
+
+              response.forEach(function(item) {
+                // Use MVC PDF viewer route
+
+             const pdfUrl = `data:application/pdf;base64,${item.fileBase64}`;
+
+                html += `
+                  <div style="margin-top:8px; padding:5px;
+                      display:flex; justify-content:center; flex-direction:row; align-items:center;">
+                      <img src="/images/icon/policy.png" width="20" height="20" class="me-1" />
+                      <a href="${pdfUrl}" target="_blank" style="width:300px; color: #B4181E;    white-space: nowrap;
+                   overflow: hidden;
+                   text-overflow: ellipsis;
+                   display: inline-block;
+                   max-width: 250px;  font-weight:400;">
+                        ${item.title}
+                      </a>
+                  </div>`;
+                   html2 +=`
+
+                 <li style="
+            margin-bottom:12px;
+            display:flex;
+            align-items:center;
+            gap:6px;
+        ">
+            <img src="/images/icon/policy.png" width="13" height="13" class="me-1" />
+
+            <a href="${pdfUrl}" target="_blank"
+               style="
+                   color:black;
+                   white-space: nowrap;
+                   overflow: hidden;
+                   text-overflow: ellipsis;
+                   display: inline-block;
+                   max-width: 250px;   /* adjust width as needed */
+               ">
+                ${item.title}
+            </a>
+        </li>
+
+
+              `;
+              });
+             
+              $('.policy-section').html(html);
+               $('#policy-filling').html(html2);
+            }
+          }
+        });
+
+
+        // ================= CSR SECTION =================
+               $.ajax({
+          url: "/csr-detials",
+          method: "GET",
+          success: function(response) {
+            if (Array.isArray(response) && response.length > 0) {
+
+              let html = '';
+               let html2 = '';
+              response.forEach(function(item) {
+                // Dynamically create the PDF viewer URL
+
+             const pdfUrl = `data:application/pdf;base64,${item.fileBase64}`;
+
+
+                html += `
+                  <div style="margin-top:8px; padding:5px;
+                      display:flex; justify-content:center; flex-direction:row; align-items:center;">
+                      <img src="/images/icon/csr.png" width="20" height="20" class="me-1" />
+                      <a href="${pdfUrl}" target="_blank" style="width:300px; color: #B4181E;    white-space: nowrap;
+                   overflow: hidden;
+                   text-overflow: ellipsis;
+                   display: inline-block;
+                   max-width: 250px; font-weight:400;">
+                        ${item.title}
+                      </a>
+                  </div>`;
+                   html2 +=`
+        <li style="
+            margin-bottom:12px;
+            display:flex;
+            align-items:center;
+            gap:6px;
+        ">
+            <img src="/images/icon/policy.png" width="13" height="13" class="me-1" />
+
+            <a href="${pdfUrl}" target="_blank"
+               style="
+                   color:black;
+                   white-space: nowrap;
+                   overflow: hidden;
+                   text-overflow: ellipsis;
+                   display: inline-block;
+                   max-width: 250px;   /* adjust width as needed */
+               ">
+                ${item.title}
+            </a>
+        </li>
+
+
+              `;
+              });
+
+              $('.csr-section').html(html);
+                  $('#csr-filling').html(html2);
+            }
+          }
+        });
+
+
+    </script>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+        //document.addEventListener("contextmenu", event => event.preventDefault());
+                        function showSection(sectionClass) {
+            $('.policy-section, .csr-section').css({
+                opacity: '0',
+                pointerEvents: 'none',
+                display: 'none'
+            });
+
+            $(sectionClass).css({
+                opacity: '1',
+                pointerEvents: 'auto',
+                display: 'grid'
+            });
+
+            $('.menu-container').css('background', '#044697');
+        }
+
+        function hideSections() {
+            $('.policy-section, .csr-section').css({
+                opacity: '0',
+                pointerEvents: 'none',
+                display: 'none'
+            });
+
+            // Background based on scroll
+            if ($(window).scrollTop() > 50) {
+                $('.menu-container').css('background', '#044697');
+            } else {
+                $('.menu-container').css('background', 'transparent');
+            }
+        }
+         const allListItems = document.querySelectorAll('ul li:not(#policy-menu):not(#csr-menu)');
+
+
+        allListItems.forEach(item => {
+            item.addEventListener('mouseenter', hideSections);
+        });
+
+        // Hover for Policy
+        $('#policy-menu, .policy-section').on('mouseenter', function () {
+            showSection('.policy-section');
+        });
+        $('.policy-section').on('mouseleave', hideSections);
+
+        // Hover for CSR
+        $('#csr-menu, .csr-section').on('mouseenter', function () {
+            showSection('.csr-section');
+        });
+        $('.csr-section').on('mouseleave', hideSections);
+
+        // Hover for Services (no dropdown)
+        $('.services-link').on('mouseenter', function () {
+            hideSections();
+            $('.menu-container').css('background', '#044697');
+        });
+        $('.services-link').on('mouseleave', hideSections);
+
+        // Scroll event (should be OUTSIDE functions)
+        $(window).on('scroll', function() {
+            if ($(this).scrollTop() > 50) {
+                $('.menu-container').css('background', '#044697');
+            } else {
+                $('.menu-container').css('background', 'transparent');
+            }
+        });
+
+
         // Your JS logic kept same as before (AJAX, owl, menu, etc.)
         $.ajax({
             url: "/Loan-forall",
@@ -431,9 +773,13 @@
             success: function (response) {
                 const data = response.data;
                 data.forEach(loan => {
-                    $('#service-items2').append(`<li onclick="locationservice(this)" style="display:flex; justify-content:space-between;" data-loan="${loan.id}" data-loanname="${loan.loanname}"><img src="${loan.icon}" style="width:17px; height:18px;"/>${loan.loanname}</li>`);
-                    $('#service-items').append(`<li onclick="locationservice(this)" style="display:flex; justify-content:space-between; color:black;" data-loan="${loan.id}" data-loanname="${loan.loanname}"><img src="${loan.icon}" style="width:17px; height:18px;"/>${loan.loanname}</li>`);
-                    $('#footer-menu').append(`<li onclick="window.location.href='/services/${loan.loanname}/${loan.id}'" style="color:white; cursor:pointer;"><img src="${loan.icon}" style="width:20px; height:20px; filter:invert(1);"/> ${loan.loanname}</li>`);
+                     let base64Icon = "";
+        if (loan.icon) {
+            base64Icon = "data:image/png;base64," + loan.icon;
+        }
+                    $('#service-items2').append(`<li onclick="locationservice(this)" style="display:flex; font-size: 12px !important; justify-content:space-between; margin-bottom:12px;" data-loan="${loan.id}" data-loanname="${loan.loanname}"><img src="${base64Icon}"  width="13" height="13" class="me-1" />${loan.loanname}</li>`);
+                    $('#service-items').append(`<li onclick="locationservice(this)" style="display:flex; justify-content:space-between; color:black;" data-loan="${loan.id}" data-loanname="${loan.loanname}"><img src="${base64Icon}" style="width:17px; height:18px;"/>${loan.loanname}</li>`);
+                    $('#footer-menu').append(`<li onclick="window.location.href='/services/${loan.loanname}/${loan.id}'" style="color:white; cursor:pointer;"><img src="${base64Icon}" style="width:20px; height:20px; filter:invert(1);"/> ${loan.loanname}</li>`);
                 });
             },
             error: function () {
@@ -475,7 +821,7 @@
                $(window).on('scroll', function() {
           // check how far the user has scrolled
           if ($(this).scrollTop() > 50) {
-            $('.menu-container').css('background', '#B4181E');
+            $('.menu-container').css('background', '#044697');
           } else {
             $('.menu-container').css('background', 'transparent');
           }
@@ -728,6 +1074,23 @@
                 }
             });
         }
+                // Mobile Services Dropdown Toggle
+       
+
+        // Generic dropdown example toggle
+           $('#res-menu .dropdown > .dropdown-toggle').on('click', function () {
+
+            let menu = $(this).next('.dropdown-menu');
+
+            // Close all others
+            $('#res-menu .dropdown-menu').not(menu).fadeOut(150);
+
+            // Toggle this one
+            menu.fadeToggle(150);
+        });
+
+
+
     </script>
     @* Auction login script end *@
     <script src="~/js/site.js" asp-append-version="true"></script>

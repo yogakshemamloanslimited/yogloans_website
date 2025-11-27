@@ -1,4 +1,5 @@
 @model yogloansdotnet.Models.AboutContentModel
+
 @{
     ViewData["Title"] = "About Content";
     Layout = "~/Views/admin/Shared/_Layout.cshtml";
@@ -63,7 +64,8 @@
                         <textarea placeholder="content paragraph" class="form-control" style="height:350px;" name="Content">@(Model?.Content ?? "")</textarea>
                         <button type="submit" style="background-color:#044697; color:white; padding:10px; width:15%; border:none;">Submit</button>
                     </form>
-
+                    <partial name="~/Views/admin/About/mission.cshtml" />
+                    <partial name="~/Views/admin/About/Vission.cshtml" />
                     <!-- <form action="/admin/aboutcontent/empty-table" method="post" class="col-12" style="display:flex; justify-content:center;">
                         <button type="submit" class="empty-table-btn" onclick="return confirm('Are you sure you want to empty the table? This action cannot be undone.')">Empty Table</button>
                     </form> -->
@@ -142,5 +144,6 @@
                 ]
             });
         });
+          
     </script>
 }

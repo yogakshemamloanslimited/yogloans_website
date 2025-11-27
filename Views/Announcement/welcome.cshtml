@@ -1,0 +1,100 @@
+﻿@model yogloansdotnet.Models.AnnouncementData
+
+@{
+    var firstWelcome = Model?.Welcome;
+
+    string image2Base64 = firstWelcome?.image2 != null
+        ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.image2)
+        : null;
+
+    string imageBase64 = firstWelcome?.image != null
+        ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.image)
+        : null;
+
+
+
+       
+}
+
+
+
+<section class="welcome-container"
+         style="background-image: url('@imageBase64')" id="welcome-desktop">
+
+    <h1 style="visibility:hidden;">
+        @firstWelcome.title
+    </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
+    <div class="button">
+        @*  <p><a href="javascript:history.back()" id="return-link">Home</a> - Investors</p> *@
+        <h1>
+            @firstWelcome.title
+        </h1>
+    </div>
+
+</section>
+
+
+<!-- Mobile Section (Image2) -->
+<section class="welcome-container"
+         style="background-image: url('@imageBase64')" id="welcome-mobile">
+    <h1 style="visibility:hidden;">
+        @firstWelcome.title
+    </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
+    <div class="button">
+        <h1>
+            @firstWelcome.title
+        </h1>
+        @*     <p><a href="javascript:history.back()" id="return-link">Home</a> - Investors</p> *@
+    </div>
+
+</section>
+
+
+<style>
+    .welcome-container {
+        height: 300px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #welcome-mobile {
+        display: none;
+    }
+
+    #welcome-desktop {
+        display: flex;
+    }
+
+    @@media (max-width: 767px) {
+        #welcome-desktop {
+            display: none;
+        }
+
+        #welcome-mobile {
+            display: flex;
+        }
+    }
+</style>
+
+
+<script>
+    const link = document.getElementById('return-link');
+    const ref = document.referrer;
+
+    if (ref) {
+        // Create a temporary anchor to parse the URL
+        const url = new URL(ref);
+
+        // Get the last part of the path (e.g., 'investors' from '/investors')
+        let pageName = url.pathname.split('/').filter(Boolean).pop() || 'Home';
+
+        // Make it user-friendly
+        pageName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+
+        link.textContent = pageName;
+        link.href = ref;
+    }
+</script>

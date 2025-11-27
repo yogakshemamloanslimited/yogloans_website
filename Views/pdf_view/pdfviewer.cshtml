@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+    var pdfFile = ViewBag.PdfFile as string;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Viewer</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+           
+        }
+
+        #pdfViewer {
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="pdfViewer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+    <script>
+        const pdfUrl = '@pdfFile';
+        const container = document.getElementById('pdfViewer');
+
+        pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+            const renderPage = (pageNumber) => {
+                pdf.getPage(pageNumber).then(page => {
+                    const viewport = page.getViewport({ scale: 1.5 });
+                    const canvas = document.createElement('canvas');
+                    container.appendChild(canvas);
+                    const context = canvas.getContext('2d');
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+                    page.render({ canvasContext: context, viewport: viewport });
+                });
+            };
+
+            for (let i = 1; i <= pdf.numPages; i++) {
+                renderPage(i);
+            }
+        });
+    </script>
+</body>
+</html>

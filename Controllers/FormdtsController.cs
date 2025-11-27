@@ -1,11 +1,12 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using yogloansdotnet.Models;
-using yogloansdotnet.Data;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.IO;
 using System.Threading.Tasks;
+using yogloansdotnet.Data;
+using yogloansdotnet.Models;
 
 namespace yogloansdotnet.Controllers
 {
@@ -26,88 +27,66 @@ namespace yogloansdotnet.Controllers
 
         [Route("add-addFormdts")]
         [HttpPost]
-        public async Task<IActionResult> addFormdts([FromForm] string Title, IFormFile Pdf, [FromForm] string ids)
+        public async Task<IActionResult> addFormdts(FormdtsModel model, IFormFile ImageFile)
         {
             try
             {
-                string filePath = await SavePdfAsync(Pdf);
+                byte[] imageBytes = null;
 
-                if (string.IsNullOrEmpty(ids))
+                // Convert uploaded file to byte array
+                if (ImageFile != null && ImageFile.Length > 0)
                 {
-                    // Create new disclosure
-                    var Formdts = new FormdtsModel
+                    using var ms = new MemoryStream();
+                    await ImageFile.CopyToAsync(ms);
+                    imageBytes = ms.ToArray();
+                }
+
+                if (model.Id == 0)
+                {
+                    // Create new announcement
+                    var newAnnouncement = new FormdtsModel
                     {
-                        Title = Title,
-                        FilePath = filePath
+                        Title = model.Title,
+                       
+                        FilePath = imageBytes
                     };
 
-                    _context.Formdts.Add(Formdts);
-                    await _context.SaveChangesAsync();
-
-                    return Json(new { 
-                        success = true, 
-                        message = "Disclosure added successfully",
-                        id = Formdts.Id,
-                        title = Formdts.Title,
-                        filePath = Formdts.FilePath
-                    });
+                    _context.Formdts.Add(newAnnouncement);
                 }
                 else
                 {
-                    // Update existing disclosure
-                    var existingDisclosure = await _context.Formdts.FindAsync(int.Parse(ids));
-                    if (existingDisclosure == null)
-                    {
-                        return Json(new { success = false, message = "Disclosure not found" });
-                    }
+                    // Update existing announcement
+                    var existing = await _context.Formdts
+                        .FirstOrDefaultAsync(a => a.Id == model.Id);
 
-                    // Delete old file if it exists
-                    if (!string.IsNullOrEmpty(existingDisclosure.FilePath))
+                    if (existing != null)
                     {
-                        var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingDisclosure.FilePath.TrimStart('/'));
-                        if (System.IO.File.Exists(oldFilePath))
+                        existing.Title = model.Title;
+                       
+
+                        // Only update image if a new file is uploaded
+                        if (imageBytes != null)
                         {
-                            System.IO.File.Delete(oldFilePath);
+                            existing.FilePath = imageBytes;
                         }
-                    }
-                    
-                    existingDisclosure.Title = Title;
-                    existingDisclosure.FilePath = filePath;
-                  
-                    await _context.SaveChangesAsync();
 
-                    return Json(new { 
-                        success = true, 
-                        message = "Disclosure updated successfully",
-                        id = existingDisclosure.Id,
-                        title = existingDisclosure.Title,
-                        filePath = existingDisclosure.FilePath
-                    });
+                        _context.Formdts.Update(existing);
+                    }
+                    else
+                    {
+                        TempData["Error"] = "Announcement not found!";
+                        return RedirectToAction("announcements");
+                    }
                 }
+
+                await _context.SaveChangesAsync();
+                return Json(new { success = true, message = "Saved Successfully." });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error saving disclosure");
                 return Json(new { success = false, message = "An error occurred while saving the disclosure. Please try again." });
             }
-        }
-
-        private async Task<string> SavePdfAsync(IFormFile file)
-        {
-            var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
-            var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/Formdts");
-
-            if (!Directory.Exists(uploads))
-                Directory.CreateDirectory(uploads);
-
-            var filePath = Path.Combine(uploads, fileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            return "/uploads/Formdts/" + fileName;
         }
 
         [HttpPost("delete/{id}")]
@@ -122,14 +101,7 @@ namespace yogloansdotnet.Controllers
                     return Json(new { success = false, message = "Formdts not found" });
                 }
 
-                if (!string.IsNullOrEmpty(Formdts.FilePath))
-                {
-                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, Formdts.FilePath.TrimStart('/'));
-                    if (System.IO.File.Exists(filePath))
-                    {
-                        System.IO.File.Delete(filePath);
-                    }
-                }
+                
 
                 _context.Formdts.Remove(Formdts);
                 await _context.SaveChangesAsync();

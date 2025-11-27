@@ -1,0 +1,194 @@
+﻿
+
+
+#cus_detailsDataGrid {
+    overflow-y: auto;
+    font-size: 9px;
+    width: 90%;
+    font-weight: 500;
+    border-collapse: collapse;
+}
+    #cus_detailsDataGrid th, #cus_detailsDataGrid td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        /*padding: 2px;*/
+        text-align: center;
+    }
+
+
+    #cus_detailsDataGrid th {
+        background-color: #4D759A;
+       
+        color: white;
+        padding: 3px;
+    }
+
+
+
+    #cus_detailsDataGrid thead th {
+        position: sticky;
+        top: 0;
+        background-color: #4D759A; /* Background color of the header */
+        z-index: 1000; /* Ensures it stays on top */
+        vertical-align: top !important;
+    }
+
+
+
+
+    #cus_detailsDataGrid td {
+        padding: 3px;
+        vertical-align: top !important;
+    }
+
+/*/////////////////////////////*/
+
+
+#cus_detailsDataGrid1 {
+    overflow-y: auto;
+    font-size: 9px;
+    width: 90%;
+    font-weight: 500;
+    border-collapse: collapse;
+}
+
+    #cus_detailsDataGrid1 th, #cus_detailsDataGrid1 td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        /*padding: 2px;*/
+        text-align: center;
+    }
+
+
+    #cus_detailsDataGrid1 th {
+        background-color: #4D759A;
+        color: white;
+        padding: 3px;
+    }
+
+
+
+    #cus_detailsDataGrid1 thead th {
+        position: sticky;
+        top: 0;
+        background-color: #4D759A; /* Background color of the header */
+        z-index: 1000; /* Ensures it stays on top */
+        vertical-align: top !important;
+    }
+
+
+
+
+    #cus_detailsDataGrid1 td {
+        padding: 3px;
+        vertical-align: top !important;
+    }
+
+
+
+
+/*//////////   suggestion class  for search ///////////////////*/
+
+
+.suggestionsclass_style {
+    font-size: 14px;
+    background-color: ghostwhite;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute; /* Ensures it's positioned relative to the input */
+    width: 100%; /* Matches the width of the input field */
+    z-index: 1000; /* Ensures it's above other elements */
+    border: 1px solid #ccc;
+    top: 100%; /* Positions it directly below the input field */
+    left: 0; /* Aligns it with the input field */
+}
+
+
+
+
+    .suggestionsclass_style li {
+        padding: 5px;
+        list-style-type: none;
+    }
+
+        .suggestionsclass_style li:hover {
+            background-color: darkgray;
+            cursor: pointer;
+            color: blue;
+        }
+
+
+
+
+
+
+/*--------------------------------------*/
+
+
+#added_row_table {
+    overflow-y: auto;
+    font-size: 9px;
+    /* font-size: 14px;*/
+    width: 90%;
+    font-weight: 500;
+    border-collapse: collapse;
+}
+
+#selectedRowTable {
+    overflow-y: auto;
+    font-size: 9px;
+    width: 100%;
+    font-weight: 500;
+    border-collapse: collapse;
+}
+
+
+
+
+#added_row_table th, #added_row_table td {
+    border: 1px solid #ccc;
+      padding: 8px;
+   /* padding: 2px;*/
+    text-align: center;
+}
+/* Styling for table header */
+#added_row_table th {
+    background-color: #4D759A;
+    color: white;
+
+}
+
+
+
+
+
+#selectedRowTable th, #selectedRowTable td {
+    border: 1px solid #ccc;
+      padding: 8px;
+   /* padding: 2px;*/
+    text-align: center;
+}
+
+/* Styling for table header */
+#selectedRowTable th {
+    background-color: #4D759A;
+    color: white;
+}
+
+/* Style for the selected row table */
+#selectedRowTable {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    #selectedRowTable th, #selectedRowTable td {
+        border: 1px solid #ccc;
+        /*  padding: 8px;*/
+        padding: 2px;
+        text-align: center;
+    }
+
+
+/*///////////////////////////////////////////////////////*/

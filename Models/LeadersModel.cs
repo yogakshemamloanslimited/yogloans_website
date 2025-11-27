@@ -18,9 +18,8 @@ namespace yogloansdotnet.Models
         [MaxWords(10)]
         public string Post { get; set; } = string.Empty;
 
-        [Required]
-        [MaxWords(500)]
-        public string Profile { get; set; } = string.Empty;
+     
+        public byte[]? Profile { get; set; } 
 
        
 

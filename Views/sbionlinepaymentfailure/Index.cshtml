@@ -5,17 +5,39 @@
 }
 
 <link rel="stylesheet" href="~/css/home/welcome.css" asp-append-version="true">
+
+@{
+    var firstWelcome = Model?.FirstOrDefault();
+}
+
 <section class="welcome-container"
-         style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
-    <h1>
-       Payment Failed
+         style="background-image: url(@(firstWelcome.Image1 != null ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image1) : ""))" id="welcome-desktop">
+    <h1 style="visibility:hidden;">
+        Payment Failed
     </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
     <div class="button">
-        <p><a href="javascript:history.back()" id="return-link">Home</a>-  Payment Failed</p>
+        <h1>
+            Payment Failed
+        </h1>
+        @* <p><a href="javascript:history.back()" id="return-link">Home</a>- Online Services</p> *@
     </div>
 
 </section>
 
+
+
+<section class="welcome-container"
+         style="background-image: url(@(firstWelcome.Image2 != null ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image2) : ""))" id="welcome-mobile">
+    <h1 style="visibility:hidden;">
+        Payment Failed
+    </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
+    <div class="button">
+        <h1>
+            Payment Failed
+        </h1>
+        @*  <p><a href="javascript:history.back()" id="return-link">Home</a> - Online Services</p> *@
+    </div>
+</section>
 <section>
     <div class="details">
         <div class="header">

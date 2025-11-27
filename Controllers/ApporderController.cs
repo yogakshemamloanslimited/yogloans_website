@@ -1,11 +1,12 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using yogloansdotnet.Models;
-using yogloansdotnet.Data;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.IO;
 using System.Threading.Tasks;
+using yogloansdotnet.Data;
+using yogloansdotnet.Models;
 
 namespace yogloansdotnet.Controllers
 {
@@ -26,64 +27,60 @@ namespace yogloansdotnet.Controllers
 
         [Route("add-apporder")]
         [HttpPost]
-        public async Task<IActionResult> addapporder([FromForm] string Title, IFormFile Pdf, [FromForm] string ids)
+        public async Task<IActionResult> addapporder(ApporderModel model, IFormFile ImageFile)
         {
             try
             {
-                string filePath = await SavePdfAsync(Pdf);
+                byte[] imageBytes = null;
 
-                if (string.IsNullOrEmpty(ids))
+                // Convert uploaded file to byte array
+                if (ImageFile != null && ImageFile.Length > 0)
                 {
-                    // Create new disclosure
-                    var Apporder = new ApporderModel
+                    using var ms = new MemoryStream();
+                    await ImageFile.CopyToAsync(ms);
+                    imageBytes = ms.ToArray();
+                }
+
+                if (model.Id == 0)
+                {
+                    // Create new announcement
+                    var newAnnouncement = new ApporderModel
                     {
-                        Title = Title,
-                        FilePath = filePath
+                        Title = model.Title,
+
+                        FilePath = imageBytes
                     };
 
-                    _context.Apporder.Add(Apporder);
-                    await _context.SaveChangesAsync();
-
-                    return Json(new { 
-                        success = true, 
-                        message = "Apporder added successfully",
-                        id = Apporder.Id,
-                        title = Apporder.Title,
-                        filePath = Apporder.FilePath
-                    });
+                    _context.Apporder.Add(newAnnouncement);
                 }
                 else
                 {
-                    // Update existing disclosure
-                    var existingDisclosure = await _context.Apporder.FindAsync(int.Parse(ids));
-                    if (existingDisclosure == null)
-                    {
-                        return Json(new { success = false, message = "Disclosure not found" });
-                    }
+                    // Update existing announcement
+                    var existing = await _context.Apporder
+                        .FirstOrDefaultAsync(a => a.Id == model.Id);
 
-                    // Delete old file if it exists
-                    if (!string.IsNullOrEmpty(existingDisclosure.FilePath))
+                    if (existing != null)
                     {
-                        var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingDisclosure.FilePath.TrimStart('/'));
-                        if (System.IO.File.Exists(oldFilePath))
+                        existing.Title = model.Title;
+
+
+                        // Only update image if a new file is uploaded
+                        if (imageBytes != null)
                         {
-                            System.IO.File.Delete(oldFilePath);
+                            existing.FilePath = imageBytes;
                         }
-                    }
-                    
-                    existingDisclosure.Title = Title;
-                    existingDisclosure.FilePath = filePath;
-                  
-                    await _context.SaveChangesAsync();
 
-                    return Json(new { 
-                        success = true, 
-                        message = "Apporder updated successfully",
-                        id = existingDisclosure.Id,
-                        title = existingDisclosure.Title,
-                        filePath = existingDisclosure.FilePath
-                    });
+                        _context.Apporder.Update(existing);
+                    }
+                    else
+                    {
+                        TempData["Error"] = "Announcement not found!";
+                        return RedirectToAction("announcements");
+                    }
                 }
+
+                await _context.SaveChangesAsync();
+                return Json(new { success = true, message = "Saved Successfully." });
             }
             catch (Exception ex)
             {
@@ -122,14 +119,7 @@ namespace yogloansdotnet.Controllers
                     return Json(new { success = false, message = "Apporder not found" });
                 }
 
-                if (!string.IsNullOrEmpty(Apporder.FilePath))
-                {
-                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, Apporder.FilePath.TrimStart('/'));
-                    if (System.IO.File.Exists(filePath))
-                    {
-                        System.IO.File.Delete(filePath);
-                    }
-                }
+               
 
                 _context.Apporder.Remove(Apporder);
                 await _context.SaveChangesAsync();

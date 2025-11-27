@@ -26,6 +26,7 @@ namespace yogloansdotnet.Controllers
         [Route("index")]
         public async Task<IActionResult> Index()
         {
+            // Build the view model with all required data
             var viewModel = new InvestorViewModel
             {
                 Report = await _context.AnnualReports.ToListAsync(),
@@ -36,7 +37,10 @@ namespace yogloansdotnet.Controllers
                 Unpaid = await _context.Unpaid.ToListAsync(),
                 Apporder = await _context.Apporder.ToListAsync()
             };
+
+            // Return the specific view with the populated view model
             return View("~/Views/admin/Investors/index.cshtml", viewModel);
         }
+
     }
 }

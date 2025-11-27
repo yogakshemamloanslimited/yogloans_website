@@ -1,13 +1,63 @@
 @model yogloansdotnet.Models.AboutContentModel
-    <link rel="stylesheet" href="~/css/about/aboutcontainer.css" asp-append-version="true">
-    <section class="about-container">
-        <div class="content">
-            <h1>
-              @Model.Header
-            </h1>
-            <p style="text-align:justify;">
-            @Model.Content
-              <!--   Yogakshemam Loans Limited (formerly Yogakshemam Kuries & Loans Private Limited) had its modest beginning in the unassuming environs of Anthikad, a small village in the Thrissur district of Kerala State in the year 1991. The company was registered as a Non Banking Financial Company with the Reserve Bank of India in the year 2000 – 01. The Company having shifted its base to the heart of Thrissur Town currently operates in the 4 Southern States of Kerala, Tamil Nadu, Karnataka and Andhra Pradesh has 169 branches. Originally promoted by Mr. N D Narayanan, a native of Thrissur, the Company and its promoters teamed up with Mr. Unnikrishnan I., a Chartered Accountant by qualification & a former MD of a leading NBFC and Mr. Ramachandran Ottapath, a Chartered Accountant by qualification and the current CEO of Choppies Group, Botswana in the year 2015. Further augmenting the capital base of the company to broad base its products offerings and to go for spatial expansion beyond Kerala Mr. I Unnikrishnan, Managing Director & CEO was named its Promoter. The strong legacy of the Company and its Management in the Gold Loan Sector has helped leverage and diversify its product offering to a variety of financial products in addition to gold loan. The objective of the company is to become a well-recognised NBFC with a diversified asset class.  -->
+<link rel="stylesheet" href="~/css/about/aboutcontainer.css" asp-append-version="true">
+@* background-color: #f9f9f9;  *@
+<section class="about-container" style="padding: 10px 5px; ">
+    <div class="content " style="display: flex; flex-direction: row; max-height:600px; gap: 30px; flex-wrap: wrap;">
+
+        <!-- Main Content -->
+        <div style="flex: 1 1 45%; min-width: 300px;">
+            <h2 style="margin-bottom: 20px; color: #B4181E; display:none;">@Model.Header</h2>
+            <p style="text-align: justify; line-height: 2; display:flex; height:100%; font-size: 1rem; max-height: 600px; overflow-y: auto; padding-right: 10px;">
+                @Model.Content
             </p>
         </div>
-    </section>
+
+        <!-- Mission & Vision Section -->
+        <div style="flex: 1 1 45%; display: flex; flex-direction: column; gap: 20px; min-width: 300px; padding:10px; max-height:100%; " >
+
+            <!-- Mission Card -->
+            <div class="card" style="padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 10px; max-height:50%; background-color: #fff; flex: 1 1 auto; overflow-y: auto;">
+                <h4 id="mission-head" style="color: #044697; margin-bottom: 15px;"><img src="~/images/icon/bullseye.png"/> </h4>
+                <p id="mission-content" style="line-height: 1.8; padding:5px; max-height:90%; overflow-x:auto;"></p>
+            </div>
+
+            <!-- Vision Card -->
+            <div class="card" style="padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 10px; max-height:50%; background-color: #fff; flex: 1 1 auto; overflow-y: auto;">
+                <h4 id="vission-head" style="color: #044697; margin-bottom: 15px;"><img src="~/images/icon/vision.png" /> </h4>
+                <p id="vission-content" style="line-height: 1.8;padding:5px; max-height:90%; overflow-x:auto;"></p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<script>
+    const bullseyeImg = '<img src="/images/icon/bullseye.png" alt="icon" style="margin-right: 5px; vertical-align: middle; width: 35px;">';
+     const vision = '<img src="/images/icon/vision.png" alt="icon" style="margin-right: 5px; vertical-align: middle; width: 35px;">';
+
+    $('#mission-head').empty();
+    $('#mission-content').empty();
+    $('#vission-head').empty();
+    $('#vission-content').empty();
+
+    $.ajax({
+        url: "/getmission",
+        method: "GET",
+        success: function(res){
+            if (res.length > 0) {
+                $('#mission-head').html(bullseyeImg + res[0].header);
+                $('#mission-content').text(res[0].content);
+            }
+        }
+    });
+
+    $.ajax({
+        url: "/getvission",
+        method: "GET",
+        success: function(res){
+            if (res.length > 0) {
+                $('#vission-head').html(vision + res[0].header);
+                $('#vission-content').text(res[0].content);
+            }
+        }
+    });
+</script>

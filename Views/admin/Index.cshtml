@@ -96,47 +96,62 @@
         .image-upload-group .text-danger {
             margin-top: 0.5rem;
         }
+
+    .image1{
+        object-fit: contain !important;
+        position: absolute !important;
+        height: 100% !important;
+        width: 100% !important;
+    }
+    
+    
 </style>
-
-
 <script>
-        $(document).ready(function () {
+    $(document).ready(function () {
+
         $.ajax({
             url: "/loans",
             method: "GET",
             success: function (response) {
-                console.log(response);
 
                 const container = $('.card-body');
-                container.empty(); // clear old content
+                container.empty();
 
-                if (Array.isArray(response) && response.length > 0) {
-                    response.forEach(function (item, index) {
-                        const formId = `loanForm-${index}`;
-                        const formHtml = `
-                            <div class="loan-section mb-4 p-3 border rounded">
-                                <h5 class="text-primary">${item.loanname || 'Loan ' + (index + 1)}</h5>
+                if (!Array.isArray(response) || response.length === 0) {
+                    container.html("<p class='text-center'>No loan data found.</p>");
+                    return;
+                }
 
-                                <!-- ✅ Use ASP.NET MVC controller/action -->
-                                <form class="col-12 loan-form"
-                                      id="${formId}"
-                                      asp-controller="Home"
-                                      asp-action="welcomecreate"
-                                      method="post"
-                                      enctype="multipart/form-data">
+                response.forEach((item, index) => {
 
-                                        @Html.AntiForgeryToken()
-                                    <input type="hidden" name="LoanType" value="${item.LoanType || ''}" />
-                                    <input type="hidden" name="loan_id" value="${item.id}" class="loan-id">
-                                    <div class="row g-3 mt-2">
-                                        <!-- Image 1 -->
-                                           <!-- Image 1 -->
+                    let img1 = item.Image1 ? "data:image/png;base64," + item.Image1 : "";
+                    let img2 = item.Image2 ? "data:image/png;base64," + item.Image2 : "";
+
+                    const formId = `loanForm-${index}`;
+
+                    const html = `
+    <div class="loan-section mb-4 p-3 border rounded">
+        <h5 class="text-primary">${item.loanname}</h5>
+
+        <form id="${formId}"
+              class="loan-form"
+              action="/Home/welcomecreate"
+              method="post"
+              enctype="multipart/form-data">
+
+            <input type="hidden" name="__RequestVerificationToken" value="@@token" />
+            <input type="hidden" name="loan_id" value="${item.id}" />
+            <input type="hidden" name="Id" value="0" /> <!-- will be updated later -->
+
+            <div class="row g-3">
+
+                                                         <!-- Image 1 -->
     <div class="col-md-6">
         <div class="image-upload-group">
             <label class="card" style="display:flex;justify-content:center;align-items:center;height:300px;cursor:pointer;position:relative;overflow:hidden;">
                 <input type="file" name="Image1" id="upload1-${index}" accept="image/*" style="width:100%;height:100%;position:absolute;visibility:hidden;">
-                <img id="placeholder1-${index}" src="~/images/icon/image.png" style="width:80px;height:80px;opacity:0.1;position:absolute;z-index:1;">
-                <img id="preview1-${index}" src="${item.Image1 || ''}" style="${item.Image1 ? 'width:100%;height:100%;object-fit:cover;position:absolute;z-index:0;' : 'display:none;'}">
+                <img id="placeholder1-${index}" src="images/icon/image.png" style="width:80px;height:80px;opacity:0.1;position:absolute;z-index:1;">
+                <img id="preview1-${index}" src="${img1 || ''}" style="${img1 ? 'width:100%; height:100%; object-fit:contain; position:absolute;z-index:0;' : 'display:none;'}" class="image1">
             </label>
         </div>
     </div>
@@ -151,174 +166,167 @@
                                                         style="width:100%;height:100%;position:absolute;visibility:hidden;">
                                                     <img id="placeholder2-${index}" src="images/icon/image.png"
                                                         style="width:80px;height:80px;opacity:0.1;position:absolute;z-index:1;">
-                                                    <img id="preview2-${index}" src="${item.Image2 || ''}"
-                                                        style="${item.Image2 ? 'width:100%;height:100%;object-fit:cover;position:absolute;z-index:0;' : 'display:none;'}">
+                                                    <img id="preview2-${index}" src="${img1 || ''}"
+                                                        style="${img2 ? 'width:100%;height:100%;object-fit:contain;position:absolute;z-index:0;' : 'display:none;'}" class="image1">
                                                 </label>
                                             </div>
                                         </div>
+                <!-- Header -->
+                <div class="col-12">
+                    <label>Main Header</label>
+                    <input class="form-control" name="Header" id="header-${index}" value="" />
+                    <span class="text-danger" id="headerError-${index}"></span>
+                </div>
 
-                                        <!-- Text fields -->
-                                        <div class="col-12">
-                                            <div class="form-group mb-3">
-                                                <label for="header-${index}">Main Header</label>
-                                                <input class="form-control" name="Header" id="header-${index}"
-                                                    value="${item.Header || ''}" placeholder="Enter main header">
-                                                <span class="text-danger small" id="headerError-${index}"></span>
-                                            </div>
+                <!-- Sub Content -->
+                <div class="col-12">
+                    <label>Sub Content</label>
+                    <textarea class="form-control" name="SubContent" id="content-${index}" rows="4"></textarea>
+                    <span class="text-danger" id="contentError-${index}"></span>
+                </div>
 
-                                            <div class="form-group mb-3">
-                                                <label for="content-${index}">Sub Content</label>
-                                                <textarea class="form-control" name="SubContent" id="content-${index}"
-                                                    placeholder="Enter sub content" rows="4">${item.SubContent || ''}</textarea>
-                                                <span class="text-danger small" id="contentError-${index}"></span>
-                                            </div>
-                                        </div>
-                                    </div>
+            </div>
 
-                                    <button type="submit" class="btn btn-primary w-100 mt-2"
-                                        style="background-color:#044697;border:none;">Save ${item.loanname || 'Loan'}</button>
-                                </form>
-                            </div>
-                        `;
+            <button class="btn btn-primary w-100 mt-3">Save ${item.loanname}</button>
+        </form>
+    </div>
+    `;
 
-                        container.append(formHtml);
-           
-        const loanId = item.id; // from your /loans loop
-    $.ajax({
-        url: "/Admin/welcomeget",
-        method: "GET",
-        data: { id: loanId },
-        success: function(response) {
-            if (Array.isArray(response) && response.length > 0) {
-                const welcomeItem = response[0]; // first record for this loan
+                    container.append(html);
 
-                console.log("Populating form for loan", loanId, welcomeItem);
+                    // Add image preview
+                    setupImageUpload(`upload1-${index}`, `preview1-${index}`, `placeholder1-${index}`);
+                    setupImageUpload(`upload2-${index}`, `preview2-${index}`, `placeholder2-${index}`);
 
-                // Find the correct form by loan_id
-                const form = $(`.loan-form input[name='loan_id'][value='${loanId}']`).closest('form');
+                    // Load existing welcome data
+                    loadWelcomeData(item.id, index);
 
-                // Fill header & subContent
-                form.find("input[name='Header']").val(welcomeItem.header || '');
-                form.find("textarea[name='SubContent']").val(welcomeItem.subContent || '');
-
-                // Fill images if they exist
-                if (welcomeItem.image1) {
-                    form.find("img[id^='preview1']").attr('src', welcomeItem.image1).show();
-                    form.find("img[id^='placeholder1']").hide();
-                }
-                if (welcomeItem.image2) {
-                    form.find("img[id^='preview2']").attr('src', welcomeItem.image2).show();
-                    form.find("img[id^='placeholder2']").hide();
-                }
-            } else {
-                console.log("No welcome data found for loan", loanId);
-            }
-        },
-        error: function(err) {
-            console.error("Error fetching welcome data for loan", loanId, err);
-        }
-    });
-
-          
-                        // ✅ Setup image uploads
-                        setupImageUpload(`upload1-${index}`, `preview1-${index}`, `placeholder1-${index}`);
-                        setupImageUpload(`upload2-${index}`, `preview2-${index}`, `placeholder2-${index}`);
-
-                        // ✅ Handle form submit (AJAX or normal post)
-                        $(`#${formId}`).on('submit', function (e) {
-                            e.preventDefault();
-
-                            if (!validateForm(index)) return;
-
-                            const formData = new FormData(this);
-
-                            $.ajax({
-                                url: '/Home/welcomecreate',
-                                method: 'POST',
-                                data: formData,
-                                processData: false,
-                                contentType: false,
-                                success: function (res) {
-                                    Swal.fire({
-                                        title: 'Saved Successfully!',
-                                        text: 'Loan details have been updated.',
-                                        imageUrl: '/images/icon/sign-up.png',
-                                        imageWidth: 80,
-                                        imageHeight: 80,
-                                        confirmButtonColor: '#044697',
-                                        confirmButtonText: 'OK'
-                                    }).then(() => {
-        window.location.reload(); // ✅ reloads the page
-    });
-                                },
-                                error: function (err) {
-                                    Swal.fire({
-                                        icon: 'error',
-                                        title: 'Error!',
-                                        text: 'Something went wrong while saving.',
-                                        confirmButtonColor: '#B4181E'
-                                    });
-                                    console.error(err);
-                                }
-                            });
-                        });
-                    });
-                } else {
-                    container.html('<p class="text-center text-muted">No loan data found.</p>');
-                }
-            },
-            error: function (xhr) {
-                console.error(xhr);
-                $('.card-body').html('<p class="text-danger text-center">Error fetching loan data.</p>');
+                    // Handle form submit
+                    setupFormSubmit(formId, index);
+                });
             }
         });
+
     });
 
 
-    // ✅ Helper: Image preview
-    function setupImageUpload(uploadId, previewId, placeholderId) {
-        const input = document.getElementById(uploadId);
-        const preview = document.getElementById(previewId);
-        const placeholder = document.getElementById(placeholderId);
+    // ===============================
+    // Load Existing Welcome Data
+    // ===============================
+    function loadWelcomeData(loanId, index) {
 
-        if (!input) return;
-        input.addEventListener('change', function () {
+        $.get("/Admin/welcomeget", { id: loanId }, function (data) {
+
+            if (!Array.isArray(data) || data.length === 0) return;
+
+            const w = data[0];
+            const form = $(`input[name='loan_id'][value='${loanId}']`).closest("form");
+
+            // Fill ID for update
+            form.find("input[name='Id']").val(w.id);
+
+            // Fill text
+            form.find("input[name='Header']").val(w.header || "");
+            form.find("textarea[name='SubContent']").val(w.subContent || "");
+
+            // Fill images
+            if (w.image1) {
+                const img = "data:image/png;base64," + w.image1;
+                $(`#preview1-${index}`).attr("src", img).show();
+                $(`#placeholder1-${index}`).hide();
+            }
+
+            if (w.image2) {
+                const img = "data:image/png;base64," + w.image2;
+                $(`#preview2-${index}`).attr("src", img).show();
+                $(`#placeholder2-${index}`).hide();
+            }
+
+        });
+    }
+
+
+    // ===============================
+    // Image Upload Preview
+    // ===============================
+    function setupImageUpload(inputId, previewId, placeholderId) {
+        $("#" + inputId).on("change", function () {
             const file = this.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    preview.src = e.target.result;
-                    preview.style.display = 'block';
-                    placeholder.style.display = 'none';
-                };
-                reader.readAsDataURL(file);
-            }
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                $("#" + previewId).attr("src", e.target.result).show();
+                $("#" + placeholderId).hide();
+            };
+            reader.readAsDataURL(file);
         });
     }
 
 
-    // ✅ Helper: Validation
-    function validateForm(index) {
-        const header = document.getElementById(`header-${index}`);
-        const content = document.getElementById(`content-${index}`);
-        const headerError = document.getElementById(`headerError-${index}`);
-        const contentError = document.getElementById(`contentError-${index}`);
-        let isValid = true;
+    // ===============================
+    // Form Submit Handler
+    // ===============================
+    function setupFormSubmit(formId, index) {
 
-        headerError.textContent = '';
-        contentError.textContent = '';
+        $("#" + formId).submit(function (e) {
+            e.preventDefault();
 
-        if (!header.value.trim()) {
-            headerError.textContent = 'Header is required';
-            isValid = false;
-        }
+            if (!validateForm(index)) return;
 
-        if (!content.value.trim()) {
-            contentError.textContent = 'Sub content is required';
-            isValid = false;
-        }
+            const formData = new FormData(this);
 
-        return isValid;
+            $.ajax({
+                url: "/Home/welcomecreate",
+                method: "POST",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function () {
+                    Swal.fire({
+                        title: "Saved!",
+                        text: "Data updated successfully",
+                        icon: "success",
+                        confirmButtonColor: "#044697"
+                    }).then(() => location.reload());
+                },
+                error: function () {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Error",
+                        text: "Failed to save"
+                    });
+                }
+            });
+        });
     }
-   
+
+
+    // ===============================
+    // Validation
+    // ===============================
+    function validateForm(index) {
+
+        const header = $(`#header-${index}`);
+        const content = $(`#content-${index}`);
+
+        let ok = true;
+
+        if (!header.val().trim()) {
+            $(`#headerError-${index}`).text("Header is required");
+            ok = false;
+        } else {
+            $(`#headerError-${index}`).text("");
+        }
+
+        if (!content.val().trim()) {
+            $(`#contentError-${index}`).text("Sub content is required");
+            ok = false;
+        } else {
+            $(`#contentError-${index}`).text("");
+        }
+
+        return ok;
+    }
+
 </script>

@@ -12,8 +12,7 @@ namespace yogloansdotnet.Models
         [Required]
         public string Title { get; set; } = string.Empty;
 
-        [Required]
-        [Pdf]
-        public string FilePath { get; set; } = string.Empty;
+       
+        public byte[]? FilePath { get; set; }
     }
 } 

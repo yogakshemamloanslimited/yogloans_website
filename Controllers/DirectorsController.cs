@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using yogloansdotnet.Models;
 using yogloansdotnet.Data;
 using Microsoft.EntityFrameworkCore;
+using TechTalk.SpecFlow.CommonModels;
 
 namespace yogloansdotnet.Controllers
 {
@@ -34,65 +35,60 @@ public async Task<IActionResult> Index()
 [ValidateAntiForgeryToken]
 [Route("add-director")]
 public async Task<IActionResult> addcsr(
-    [FromForm] string Name,
-    [FromForm] string Post,
-    [FromForm] string About,
-    IFormFile Profile,
-    [FromForm] string id)
+   DirectorsModel model,
+    IFormFile Profile
+   )
 {
     try
     {
-        string filePath = null;
-        if (Profile != null)
-        {
-            filePath = await SavePdfAsync(Profile);
-        }
-
-        if (string.IsNullOrEmpty(id))
-        {
-            // Create new director
-            var Directors = new DirectorsModel
-            {
-                Name = Name,
-                Profile = filePath ?? "",
-                Post = Post,
-                About = About
-            };
-
-            _context.Directors.Add(Directors);
-            await _context.SaveChangesAsync();
-
-            return Json(new { success = true, message = "Directors added successfully" });
-        }
-        else
-        {
-            // Update existing director
-            var existingDirectors = await _context.Directors.FindAsync(int.Parse(id));
-            if (existingDirectors == null)
-            {
-                return Json(new { success = false, message = "Directors not found" });
-            }
-
-            // Delete old file if new file is uploaded
-            if (!string.IsNullOrEmpty(filePath) && !string.IsNullOrEmpty(existingDirectors.Profile))
-            {
-                var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingDirectors.Profile.TrimStart('/'));
-                if (System.IO.File.Exists(oldFilePath))
+     byte[]? prfilebyte = null;
+        
+         if(Profile != null && Profile.Length > 0)
                 {
-                    System.IO.File.Delete(oldFilePath);
+                    using var sm = new MemoryStream();
+                    await Profile.CopyToAsync(sm);
+                    prfilebyte = sm.ToArray();
                 }
-                existingDirectors.Profile = filePath;
+
+        if(model.Id == 0)
+                {
+                    var director = new DirectorsModel()
+                    {
+                        Name = model.Name,
+                        Post = model.Post,
+                        About = model.About,
+                        Profile = prfilebyte
+                    };
+
+                    _context.Directors.Add(director);
+                }
+         else
+                {
+                    var existing = await _context.Directors.FirstOrDefaultAsync(a => a.Id == model.Id);
+                    if(existing != null)
+                    {
+                        existing.About = model.About;
+                        existing.Post = model.Post;
+                        existing.Name = model.Name;
+
+                        if(prfilebyte != null)
+                        {
+                            existing.Profile = prfilebyte;
+                            
+                        }
+
+                        _context.Directors.Update(existing);
+                    }
+                }
+               await _context.SaveChangesAsync();
+                return Json(new
+                {
+                    Success = true,
+                    Message = "Director details saved successfully"
+                });
+
+               
             }
-
-            existingDirectors.Name = Name;
-            existingDirectors.Post = Post;
-            existingDirectors.About = About;
-
-            await _context.SaveChangesAsync();
-
-            return Json(new { success = true, message = "Director updated successfully" });
-        }
-    }
    catch (Exception ex)
 {
     _logger.LogError(ex, "Error saving director");
@@ -104,24 +100,7 @@ public async Task<IActionResult> addcsr(
 
 }
 
-        private async Task<string> SavePdfAsync(IFormFile file)
-        {
-            var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
-            var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/Directors");
-
-            if (!Directory.Exists(uploads))
-                Directory.CreateDirectory(uploads);
-
-            var filePath = Path.Combine(uploads, fileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            return "/uploads/Directors/" + fileName;
-        }
-
+        
         [HttpPost("delete/{id}")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
@@ -134,15 +113,7 @@ public async Task<IActionResult> addcsr(
                     return Json(new { success = false, message = "Directors not found" });
                 }
 
-                if (!string.IsNullOrEmpty(Directors.Profile))
-                {
-                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, Directors.Profile.TrimStart('/'));
-                    if (System.IO.File.Exists(filePath))
-                    {
-                        System.IO.File.Delete(filePath);
-                    }
-                }
-
+               
                 _context.Directors.Remove(Directors);
                 await _context.SaveChangesAsync();
 

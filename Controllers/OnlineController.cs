@@ -32,95 +32,95 @@ namespace yogloansdotnet.Controllers
         }
     
 
-      [Route("add-services")]
-        [HttpPost]
-        public async Task<IActionResult> addservices([FromForm] string Title,[FromForm] string Subtitle, IFormFile image, [FromForm] string id)
-        {
-            try
-            {
-                string filePath = await SavePdfAsync(image);
+      //[Route("add-services")]
+      //  [HttpPost]
+      //  public async Task<IActionResult> addservices([FromForm] string Title,[FromForm] string Subtitle, IFormFile image, [FromForm] string id)
+      //  {
+      //      try
+      //      {
+      //          string filePath = await SavePdfAsync(image);
 
-                if (string.IsNullOrEmpty(id))
-                {
-                    // Create new service
-                    var Services = new ServicesModel
-                    {
-                        Title = Title,
-                        Subtitle = Subtitle,
-                        FilePath = filePath
-                    };
+      //          if (string.IsNullOrEmpty(id))
+      //          {
+      //              // Create new service
+      //              var Services = new ServicesModel
+      //              {
+      //                  Title = Title,
+      //                  Subtitle = Subtitle,
+      //                  FilePath = filePath
+      //              };
 
-                    _context.Services.Add(Services);
-                    await _context.SaveChangesAsync();
+      //              _context.Services.Add(Services);
+      //              await _context.SaveChangesAsync();
 
-                    return Json(new { 
-                        success = true, 
-                        message = "Service added successfully",
-                        id = Services.Id,
-                        title = Services.Title,
-                        subtitle = Services.Subtitle,
-                        filePath = Services.FilePath
-                    });
-                }
-                else
-                {
-                    // Update existing service
-                    var existingService = await _context.Services.FindAsync(int.Parse(id));
-                    if (existingService == null)
-                    {
-                        return Json(new { success = false, message = "Service not found" });
-                    }
+      //              return Json(new { 
+      //                  success = true, 
+      //                  message = "Service added successfully",
+      //                  id = Services.Id,
+      //                  title = Services.Title,
+      //                  subtitle = Services.Subtitle,
+      //                  filePath = Services.FilePath
+      //              });
+      //          }
+      //          else
+      //          {
+      //              // Update existing service
+      //              var existingService = await _context.Services.FindAsync(int.Parse(id));
+      //              if (existingService == null)
+      //              {
+      //                  return Json(new { success = false, message = "Service not found" });
+      //              }
 
-                    // Delete old file if it exists
-                    if (!string.IsNullOrEmpty(existingService.FilePath))
-                    {
-                        var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingService.FilePath.TrimStart('/'));
-                        if (System.IO.File.Exists(oldFilePath))
-                        {
-                            System.IO.File.Delete(oldFilePath);
-                        }
-                    }
+      //              // Delete old file if it exists
+      //              if (!string.IsNullOrEmpty(existingService.FilePath))
+      //              {
+      //                  var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingService.FilePath.TrimStart('/'));
+      //                  if (System.IO.File.Exists(oldFilePath))
+      //                  {
+      //                      System.IO.File.Delete(oldFilePath);
+      //                  }
+      //              }
                     
-                    existingService.Title = Title;
-                    existingService.Subtitle = Subtitle;
-                    existingService.FilePath = filePath;
+      //              existingService.Title = Title;
+      //              existingService.Subtitle = Subtitle;
+      //              existingService.FilePath = filePath;
                   
-                    await _context.SaveChangesAsync();
+      //              await _context.SaveChangesAsync();
 
-                    return Json(new { 
-                        success = true, 
-                        message = "Service updated successfully",
-                        id = existingService.Id,
-                        title = existingService.Title,
-                        subtitle = existingService.Subtitle,
-                        filePath = existingService.FilePath
-                    });
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error saving service");
-                return Json(new { success = false, message = "An error occurred while saving the service. Please try again." });
-            }
-        }
+      //              return Json(new { 
+      //                  success = true, 
+      //                  message = "Service updated successfully",
+      //                  id = existingService.Id,
+      //                  title = existingService.Title,
+      //                  subtitle = existingService.Subtitle,
+      //                  filePath = existingService.FilePath
+      //              });
+      //          }
+      //      }
+      //      catch (Exception ex)
+      //      {
+      //          _logger.LogError(ex, "Error saving service");
+      //          return Json(new { success = false, message = "An error occurred while saving the service. Please try again." });
+      //      }
+      //  }
 
-        private async Task<string> SavePdfAsync(IFormFile file)
-        {
-            var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
-            var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/Services");
+      //  private async Task<string> SavePdfAsync(IFormFile file)
+      //  {
+      //      var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
+      //      var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/Services");
 
-            if (!Directory.Exists(uploads))
-                Directory.CreateDirectory(uploads);
+      //      if (!Directory.Exists(uploads))
+      //          Directory.CreateDirectory(uploads);
 
-            var filePath = Path.Combine(uploads, fileName);
+      //      var filePath = Path.Combine(uploads, fileName);
 
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
+      //      using (var stream = new FileStream(filePath, FileMode.Create))
+      //      {
+      //          await file.CopyToAsync(stream);
+      //      }
 
-            return "/uploads/Services/" + fileName;
-        }
+      //      return "/uploads/Services/" + fileName;
+      //  }
 
         [HttpPost("delete/{id}")]
         [ValidateAntiForgeryToken]
@@ -166,96 +166,61 @@ namespace yogloansdotnet.Controllers
          [Route("add-welcome")]
         [HttpPost]
         public async Task<IActionResult> Addwelcome(
-            [FromForm] string Mainhead,
-            [FromForm] string Subhead,
+            OnlineWelcome model,
             IFormFile Image1,
-            IFormFile Image2,
-            [FromForm] string ExistingImage1,
-            [FromForm] string ExistingImage2)
+            IFormFile Image2
+          )
         {
-            // Only require an image if there is no existing image and no new file
-            if ((Image1 == null || Image1.Length == 0) && string.IsNullOrEmpty(ExistingImage1))
+            
+          try
             {
-                TempData["Error"] = "Please select the desktop image.";
-                return RedirectToAction("welcomes");
-            }
-            if ((Image2 == null || Image2.Length == 0) && string.IsNullOrEmpty(ExistingImage2))
-            {
-                TempData["Error"] = "Please select the mobile image.";
-                return RedirectToAction("welcomes");
-            }
-
-            var allowedTypes = new[] { "image/jpeg", "image/png", "image/webp", "image/gif" };
-            if (Image1 != null && Image1.Length > 0 && !allowedTypes.Contains(Image1.ContentType.ToLower()))
-            {
-                TempData["Error"] = "Only image files are allowed for desktop image.";
-                return RedirectToAction("welcomes");
-            }
-            if (Image2 != null && Image2.Length > 0 && !allowedTypes.Contains(Image2.ContentType.ToLower()))
-            {
-                TempData["Error"] = "Only image files are allowed for mobile image.";
-                return RedirectToAction("welcomes");
-            }
-
-            try
-            {
-                string image1Path = ExistingImage1;
-                string image2Path = ExistingImage2;
-
-                if (Image1 != null && Image1.Length > 0)
+                byte[]? imagebytes1 = null;
+                byte[]? imagebytes2 = null;
+                if(Image1 != null && Image1.Length > 0)
                 {
-                    image1Path = await SaveImageAsync(Image1);
-                    // Optionally delete old image1 file here if you want
+                    using var sm = new MemoryStream();
+                    await Image1.CopyToAsync(sm);
+                    imagebytes1 = sm.ToArray();
+
                 }
                 if (Image2 != null && Image2.Length > 0)
                 {
-                    image2Path = await SaveImageAsync(Image2);
-                    // Optionally delete old image2 file here if you want
+                    using var sm = new MemoryStream();
+                    await Image2.CopyToAsync(sm);
+                    imagebytes2 = sm.ToArray();
+
+                }
+                var existing = await _context.OnlineWelcome.FirstOrDefaultAsync();
+
+                if (existing != null)
+                {
+                    existing.Mainhead = model.Mainhead;
+                    existing.Subhead = model.Subhead;
+                    if (imagebytes1 != null)
+                    {
+                        existing.Image1 = imagebytes1;
+                    }
+                    if (imagebytes2 != null)
+                    {
+                        existing.Image2 = imagebytes2;
+                    }
+
+                    _context.OnlineWelcome.Update(existing);
                 }
 
-                // Only one record should exist
-                var welcome = await _context.Set<OnlineWelcome>().FirstOrDefaultAsync();
-                if (welcome == null)
-                {
-                    // Create new welcome entry
-                    welcome = new OnlineWelcome
-                    {
-                        Mainhead = Mainhead,
-                        Subhead = Subhead,
-                        Image1 = image1Path,
-                        Image2 = image2Path
-                    };
-                    _context.Add(welcome);
-                    TempData["Success"] = "Welcome section added successfully.";
-                }
                 else
                 {
-                    // Optionally delete old images if you replaced them
-                    if ((Image1 != null && Image1.Length > 0) && !string.IsNullOrEmpty(welcome.Image1))
+                    var welcome = new OnlineWelcome()
                     {
-                        var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, welcome.Image1.TrimStart('/'));
-                        if (System.IO.File.Exists(oldFilePath))
-                        {
-                            System.IO.File.Delete(oldFilePath);
-                        }
-                    }
-                    if ((Image2 != null && Image2.Length > 0) && !string.IsNullOrEmpty(welcome.Image2))
-                    {
-                        var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, welcome.Image2.TrimStart('/'));
-                        if (System.IO.File.Exists(oldFilePath))
-                        {
-                            System.IO.File.Delete(oldFilePath);
-                        }
-                    }
-
-                    welcome.Mainhead = Mainhead;
-                    welcome.Subhead = Subhead;
-                    welcome.Image1 = image1Path;
-                    welcome.Image2 = image2Path;
-                    TempData["Success"] = "Welcome section updated successfully.";
+                        Subhead = model.Subhead,
+                        Mainhead = model.Mainhead,
+                        Image1 = imagebytes1,
+                        Image2 = imagebytes2
+                    };
+                    _context.OnlineWelcome.Add(welcome);
                 }
 
-                await _context.SaveChangesAsync();
+                    await _context.SaveChangesAsync();
                 return RedirectToAction("welcomes");
             }
             catch (Exception ex)
@@ -266,23 +231,6 @@ namespace yogloansdotnet.Controllers
             }
         }
 
-        private async Task<string> SaveImageAsync(IFormFile file)
-        {
-            var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
-            var uploads = Path.Combine(_webHostEnvironment.WebRootPath, "uploads/online");
-
-            if (!Directory.Exists(uploads))
-                Directory.CreateDirectory(uploads);
-
-            var filePath = Path.Combine(uploads, fileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            return "/uploads/online/" + fileName;
-        }
         
 
 }

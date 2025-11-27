@@ -1,0 +1,251 @@
+﻿<!-- Font Awesome -->
+
+<div class="contact-card">
+
+    <!-- CARD 1 -->
+    <div class="card">
+        <i class="fas fa-exclamation-circle fa-2x icon-top"></i>
+        <h4 class="title">For grievances other than two wheeler Loans</h4>
+
+        <button class="toggle-btn">
+            <i class="fa fa-chevron-down arrow-icon"></i>
+        </button>
+
+        <div class="info-section">
+            <table class="info">
+                <tr><td><i class="fas fa-user"></i></td><td>Mr. Sreenivas KK</td></tr>
+                <tr><td><i class="fas fa-phone"></i></td><td>94496869379</td></tr>
+                <tr><td><i class="fas fa-envelope"></i></td><td>sreenivas@yogloans.com</td></tr>
+            </table>
+            <button class="hide-btn">
+                <i class="fa fa-chevron-up arrow-icon"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+        <i class="fas fa-motorcycle fa-2x icon-top"></i>
+        <h4 class="title">For grievances of Two wheeler Loans</h4>
+
+        <button class="toggle-btn">
+            <i class="fa fa-chevron-down arrow-icon"></i>
+        </button>
+
+        <div class="info-section">
+            <table class="info">
+                <tr><td><i class="fas fa-user"></i></td><td>Mr. Rakesh K Venugopal</td></tr>
+                <tr><td><i class="fas fa-phone"></i></td><td>9497713000</td></tr>
+                <tr><td><i class="fas fa-envelope"></i></td><td>rakeshvenugopal@yogloans.com</td></tr>
+            </table>
+            <button class="hide-btn">
+                <i class="fa fa-chevron-up arrow-icon"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+        <i class="fas fa-building fa-2x icon-top"></i>
+        <h4 class="title">Regional Office of RBI</h4>
+
+        <button class="toggle-btn">
+            <i class="fa fa-chevron-down arrow-icon"></i>
+        </button>
+
+        <div class="info-section">
+            <table class="info">
+                <tr>
+                    <td><i class="fas fa-map-marker-alt"></i></td>
+                    <td>Bakery Junction, Thiruvananthapuram, Kerala – 695033</td>
+                </tr>
+                <tr><td><i class="fas fa-phone"></i></td><td>(0471) 2338818</td></tr>
+                <tr><td><i class="fas fa-envelope"></i></td><td>ssmnbfcthiro@rbi.org.in</td></tr>
+            </table>
+            <button class="hide-btn">
+                <i class="fa fa-chevron-up arrow-icon"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card">
+        <i class="fas fa-user-tie fa-2x icon-top"></i>
+        <h4 class="title">Nodal Officer – Integrated Ombudsman</h4>
+
+        <button class="toggle-btn">
+            <i class="fa fa-chevron-down arrow-icon"></i>
+        </button>
+
+        <div class="info-section">
+            <table class="info">
+                <tr><td><i class="fas fa-user"></i></td><td>Mr. Rajesh Kumar K Pillai</td></tr>
+                <tr><td><i class="fas fa-phone"></i></td><td>9495551922</td></tr>
+                <tr><td><i class="fas fa-envelope"></i></td><td>rajesh@yogloans.com</td></tr>
+            </table>
+            <button class="hide-btn">
+                <i class="fa fa-chevron-up arrow-icon"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card">
+        <i class="fas fa-balance-scale fa-2x icon-top"></i>
+        <h4 class="title">Office of Banking Ombudsman</h4>
+
+        <button class="toggle-btn">
+            <i class="fa fa-chevron-down arrow-icon"></i>
+        </button>
+
+        <div class="info-section">
+            <table class="info">
+                <tr><td><i class="fas fa-phone"></i></td><td>(044) 25395964</td></tr>
+                <tr><td><i class="fas fa-envelope"></i></td><td>chennainbfcs@rbi.org</td></tr>
+            </table>
+            <button class="hide-btn">
+                <i class="fa fa-chevron-up arrow-icon"></i>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .contact-card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        align-items: start;
+    }
+
+        .contact-card .card {
+        background: #fff;
+        padding: 6px;
+        border-radius: 0px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        transition: .3s;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .icon-top {
+        margin-bottom: 10px;
+        color: #B4181E;
+        margin-top: 10px;
+    }
+
+    .title {
+        font-size: 16px;
+        font-weight: 600;
+        min-height: 46px;
+        margin-bottom: 12px;
+    }
+
+    .toggle-btn, .hide-btn {
+        background: #B4181E;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+        margin-top:20px;
+    }
+
+    .arrow-icon {
+        transition: .3s ease;
+    }
+
+    /* Smooth slide animation container */
+    .info-section {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height .4s ease, opacity .3s ease;
+        margin-top: 12px;
+    }
+
+        /* When visible */
+        .info-section.active {
+            opacity: 1;
+            max-height: 500px; /* Enough for any content */
+        }
+
+    .contact-card .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+    }
+
+    .info {
+        width: 100%;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+        border-spacing: 0 8px;
+    }
+
+        .info td {
+            font-size: 14px;
+            text-align: start;
+            padding-left: 5px;
+            padding-top: 20px;
+        }
+
+        .info i {
+            width: 18px;
+            font-size:18px;
+        }
+
+    /* FIX KEYFRAMES */
+    @@keyframes fadeIn {
+        from
+
+    {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    }
+</style>
+<script>
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        const showBtn = card.querySelector(".toggle-btn");
+        const hideBtn = card.querySelector(".hide-btn");
+        const info = card.querySelector(".info-section");
+
+        if (!showBtn || !hideBtn) return;
+
+        // Show card
+        showBtn.addEventListener("click", () => {
+            cards.forEach(c => {
+                c.querySelector(".info-section").classList.remove("active");
+                c.querySelector(".toggle-btn").style.display = "block";
+                c.querySelector(".hide-btn").style.display = "none";
+            });
+
+            info.classList.add("active");
+            showBtn.style.display = "none";
+            hideBtn.style.display = "block";
+        });
+
+        // Hide card
+        hideBtn.addEventListener("click", () => {
+            info.classList.remove("active");
+            hideBtn.style.display = "none";
+            showBtn.style.display = "block";
+        });
+    });
+</script>

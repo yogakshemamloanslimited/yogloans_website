@@ -1,0 +1,133 @@
+﻿@{
+    var announcemnetcontent = Model?.Create;
+
+}
+
+<div class="card-container">
+
+
+<div class="contact-card">
+    @foreach (var item in announcemnetcontent)
+    {
+        var uid = Guid.NewGuid();  // unique identifier for each card
+                                   <div class="card" id="append-@uid" onclick="sendContent(this)" >
+            @if (item.image != null)
+            {
+                var img = "data:image/png;base64," + Convert.ToBase64String(item.image);
+                <img src="@img" style="width: 100%;
+          height: 250px;
+          position: relative;
+          object-fit: contain;" />
+            }
+
+            <h7 style="
+      height: 50px;
+       
+        overflow: hidden;
+        text-overflow: ellipsis;
+text-align:center;
+    
+    ">
+                @item.title
+            </h7>
+
+
+          
+
+            <input type="hidden"
+                   value="@item.content"
+                   id="content-@uid" />
+
+        </div>
+    }
+</div>
+</div>
+<style>
+    .card-container{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+    .contact-card {
+      
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        justify-content: start; /* items start from left */
+        align-items: start;
+        width:80%;
+    }
+
+    
+
+        .contact-card .card {
+            background: #fff;
+            padding: 6px;
+            border-radius: 0px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: .3s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            width:100%;
+         
+        }
+
+            .contact-card .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+            }
+            @@media(max-width:850px){
+        .contact-card {
+            width:100%;
+        }
+            }
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script>
+       function sendContent(elem) {
+        var content = $(elem).data('content');
+
+
+            $.ajax({
+        url: "/Announcement/contentsession",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({ content: content }),
+        success: function (res) {
+          window.location.href = "/Showannoun";
+        }
+    });
+
+    }
+
+
+
+
+    $(document).ready(function () {
+        var key = "MySecretKey12345";
+
+        // loop through all hidden input fields
+        $("input[id^='content-']").each(function () {
+            var $input = $(this);
+            var id = $input.attr("id").replace("content-", "");
+            var encrypted = $input.val();
+
+            // decrypt
+            var bytes = CryptoJS.AES.decrypt(encrypted, key);
+            var decrypted = bytes.toString(CryptoJS.enc.Utf8);
+          
+            // safely select the card by escaping ID
+            var $card = $("#append-" + id.replace(/([:.])/g, "\\$1"));
+
+            // attach decrypted content as data attribute
+            $card.attr('data-content', decrypted);
+        });
+    });
+
+</script>
+

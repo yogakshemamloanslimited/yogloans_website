@@ -1,0 +1,553 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = yogloansdotnet
+build_property.RootNamespace = yogloansdotnet
+build_property.ProjectDir = C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/500/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcNTAwXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/About/about.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcYWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/About/aboutcontainer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcYWJvdXRjb250YWluZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/About/director.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcZGlyZWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/About/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/About/Mission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcTWlzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/About/model.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcbW9kZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/About/reviews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRccmV2aWV3cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/About/Vision.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcVmlzaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/About/visionmission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcdmlzaW9ubWlzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/About/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/About/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQWJvdXRcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/About/mission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQWJvdXRcbWlzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/About/Vission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQWJvdXRcVmlzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/About/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQWJvdXRcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Announcementadmin/announcements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQW5ub3VuY2VtZW50YWRtaW5cYW5ub3VuY2VtZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Announcementadmin/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQW5ub3VuY2VtZW50YWRtaW5cd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Career/departments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ2FyZWVyXGRlcGFydG1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Career/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ2FyZWVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Career/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ2FyZWVyXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Contact/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ29udGFjdFx3ZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Counts/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ291bnRzXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Csr/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ3NyXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Csr/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cQ3NyXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Directors/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cRGlyZWN0b3JzXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Galleryadmin/gallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cR2FsbGVyeWFkbWluXGdhbGxlcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Galleryadmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cR2FsbGVyeWFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Homeloan/loansection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSG9tZWxvYW5cbG9hbnNlY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Homeloan/offer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSG9tZWxvYW5cb2ZmZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Homeloan/points.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSG9tZWxvYW5ccG9pbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Investors/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSW52ZXN0b3JzXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Investors/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSW52ZXN0b3JzXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Leaders/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cTGVhZGVyc1xpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Login/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cTG9naW5caW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Nearby/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cTmVhcmJ5XHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Online/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cT25saW5lXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Online/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cT25saW5lXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/policy/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5ccG9saWN5XGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/policy/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5ccG9saWN5XHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Announcement/cards.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50XGNhcmRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Announcement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Announcement/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50XHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Auctineer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVjdGluZWVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Auctineer/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVjdGluZWVyXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Auction/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVjdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Auction/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVjdGlvblxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Auction/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVjdGlvblx3ZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Branch/branchcard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXGJyYW5jaGNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Branch/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Branch/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Career/cardsection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXGNhcmRzZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Career/dippartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXGRpcHBhcnRtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Career/faq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXGZhcS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Career/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXGZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Career/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Career/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZWVyXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Contact/contactcard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxjb250YWN0Y2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Contact/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxmb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Contact/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Contact/map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxtYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Contact/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFx3ZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Csr/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3NyXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Csr/reportcard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3NyXHJlcG9ydGNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Csr/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3NyXFdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Gallery/gallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbGVyeVxnYWxsZXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Gallery/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbGVyeVxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Gallery/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FsbGVyeVx3ZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Generateqrcode/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhdGVxcmNvZGVcRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Generateqrcode/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhdGVxcmNvZGVcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Generateqrcode/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhdGVxcmNvZGVcV2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Grievance/attachments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JpZXZhbmNlXGF0dGFjaG1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Grievance/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JpZXZhbmNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Grievance/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JpZXZhbmNlXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Home/about.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Home/contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Home/count.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Home/loanitem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2FuaXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Home/map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxtYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Home/SbiRedirectForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYmlSZWRpcmVjdEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Home/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx3ZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Investor/creditrate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3JcY3JlZGl0cmF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Investor/director.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3JcZGlyZWN0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Investor/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3JcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Investor/list.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3JcbGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Investor/model.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3JcbW9kZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Investor/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0b3Jcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/nach/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbmFjaFxmb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/nach/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbmFjaFxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/nach/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbmFjaFxXZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Online15g/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lMTVnXGZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Online15g/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lMTVnXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Online15g/pdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lMTVnXHBkZi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Online15g/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lMTVnXHdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Onlinepay/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lcGF5XEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Onlinepay/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lcGF5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Onlinepay/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lcGF5XFdlbGNvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Onlineservices/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lc2VydmljZXNcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Onlineservices/services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lc2VydmljZXNcc2VydmljZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Onlineservices/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25saW5lc2VydmljZXNcV2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/pdf_view/pdfviewer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGRmX3ZpZXdccGRmdmlld2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Policies/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Policies/policy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNccG9saWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Policies/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWNpZXNcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/sbionlinepaymentfailure/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2Jpb25saW5lcGF5bWVudGZhaWx1cmVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/sbionlinepaymentsuccess/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2Jpb25saW5lcGF5bWVudHN1Y2Nlc3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Services/benefit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcYmVuZWZpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Services/form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcZm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Services/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Services/map.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcbWFwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Services/section.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcc2VjdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Services/welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcd2VsY29tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Shared/_Auction_layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdWN0aW9uX2xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Shared/_ChatBot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaGF0Qm90LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Showannoun/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvd2Fubm91blxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/test/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcdGVzdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/UPIPayment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVVBJUGF5bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Vehicleseizing/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNlaXppbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Vehicleseizing/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNlaXppbmdcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Vehicleseizing/Productdetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNlaXppbmdcUHJvZHVjdGRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Vehicleseizing/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNlaXppbmdcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/_404/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcXzQwNFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/admin/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-vr67hvh6yz
+
+[C:/Users/Ajithkumar/Desktop/yogakshemamloanslimited/yogloans_website/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wwjvih1rpr

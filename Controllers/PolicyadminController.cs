@@ -35,64 +35,56 @@ namespace yogloansdotnet.Controllers
 
       [Route("add-policy")]
         [HttpPost]
-        public async Task<IActionResult> addpolicy([FromForm] string Title, IFormFile Pdf, [FromForm] string id)
+        public async Task<IActionResult> addpolicy(PolicyModel model, IFormFile FilePath)
         {
             try
             {
-                string filePath = await SavePdfAsync(Pdf);
+                byte[]? file = null;
 
-                if (string.IsNullOrEmpty(id))
+                if (FilePath != null && FilePath.Length > 0)
                 {
-                    // Create new disclosure
-                    var Policy = new PolicyModel
+                    using var ms = new MemoryStream();
+                    await FilePath.CopyToAsync(ms);
+                    file = ms.ToArray();
+                }
+
+                var maxId = await _context.Csr
+                    .MaxAsync(x => (int?)x.Id) ?? 0;
+
+                if (model.Id == 0)
+                {
+                    var welcome = new PolicyModel
                     {
-                        Title = Title,
-                        FilePath = filePath
+                        //Id = maxId + 1,
+                        FilePath = file,
+                        Title = model.Title
                     };
 
-                    _context.Policy.Add(Policy);
-                    await _context.SaveChangesAsync();
-
-                    return Json(new { 
-                        success = true, 
-                        message = "Policy added successfully",
-                        id = Policy.Id,
-                        title = Policy.Title,
-                        filePath = Policy.FilePath
-                    });
+                    _context.Policy.Add(welcome);
                 }
                 else
                 {
-                    // Update existing disclosure
-                    var existingDisclosure = await _context.Policy.FindAsync(int.Parse(id));
-                    if (existingDisclosure == null)
-                    {
-                        return Json(new { success = false, message = "Policy not found" });
-                    }
+                    var existing = await _context.Policy
+                        .FirstOrDefaultAsync(a => a.Id == model.Id);
 
-                    // Delete old file if it exists
-                    if (!string.IsNullOrEmpty(existingDisclosure.FilePath))
+                    if (existing != null)
                     {
-                        var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingDisclosure.FilePath.TrimStart('/'));
-                        if (System.IO.File.Exists(oldFilePath))
-                        {
-                            System.IO.File.Delete(oldFilePath);
-                        }
-                    }
-                    
-                    existingDisclosure.Title = Title;
-                    existingDisclosure.FilePath = filePath;
-                  
-                    await _context.SaveChangesAsync();
+                        existing.Title = model.Title;
 
-                    return Json(new { 
-                        success = true, 
-                        message = "CSR updated successfully",
-                        id = existingDisclosure.Id,
-                        title = existingDisclosure.Title,
-                        filePath = existingDisclosure.FilePath
-                    });
+                        if (file != null)   // ✅ Correct condition
+                            existing.FilePath = file;
+
+                        _context.Policy.Update(existing);
+                    }
                 }
+
+                await _context.SaveChangesAsync();
+
+                return Json(new
+                {
+                    success = true,
+                    message = "Saved successfully!"
+                });
             }
             catch (Exception ex)
             {
@@ -129,15 +121,6 @@ namespace yogloansdotnet.Controllers
                 if (Policy == null)
                 {
                     return Json(new { success = false, message = "Policy not found" });
-                }
-
-                if (!string.IsNullOrEmpty(Policy.FilePath))
-                {
-                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, Policy.FilePath.TrimStart('/'));
-                    if (System.IO.File.Exists(filePath))
-                    {
-                        System.IO.File.Delete(filePath);
-                    }
                 }
 
                 _context.Policy.Remove(Policy);

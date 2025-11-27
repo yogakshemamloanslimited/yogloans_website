@@ -1,7 +1,21 @@
 
  @model List<yogloansdotnet.Models.CareerWelcomeModel>
+@{
+    var firstWelcome = Model?.FirstOrDefault();
+    string imageBase641 = null;
+    if (firstWelcome?.Image1 != null)
+    {
+        imageBase641 = "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image1);
+    }
 
-<section class="hero-career" style="background: url(@(Model.FirstOrDefault()?.Image1 ?? "")); background-position:center; background-repeat: no-repeat;
+    string imageBase642 = null;
+    if (firstWelcome?.Image2 != null)
+    {
+        imageBase642 = "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image2);
+    }
+
+}
+<section class="hero-career" style="background: url(@(imageBase641)); background-position:center; background-repeat: no-repeat;
   background-size: cover;" id="welcome-desktop">
     <div class="main-content" style="width:80%;">
     <h1>Explore our openings and start your journey with us today</h1>
@@ -9,7 +23,7 @@
 </section>
 
 
-<section class="hero-career" style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""));" id="welcome-mobile">
+<section class="hero-career" style="background-image: url(@(imageBase642));" id="welcome-mobile">
     <div class="main-content" style="width:100%;">
           <h1>Explore our openings and start your journey with us today</h1>
     </div>

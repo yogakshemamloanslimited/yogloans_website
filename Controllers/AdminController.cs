@@ -21,17 +21,26 @@ namespace yogloansdotnet.Controllers
 
         public IActionResult Login()
         {
-            // If already logged in, redirect to dashboard
-            if (User.Identity?.IsAuthenticated == true)
+
+            int? code = HttpContext.Session.GetInt32("code");
+
+            if (code == 100)
             {
-                return RedirectToAction("Index");
+                return View("~/Views/admin/Login/index.cshtml", new LoginFormModel
+                {
+                    Username = string.Empty,
+                    Password = string.Empty
+                });
             }
-            return View("~/Views/admin/Login/index.cshtml", new LoginFormModel 
-            { 
-                Username = string.Empty,
-                Password = string.Empty
-            });
+
+            else
+            {
+                return View("~/Views/_404/index.cshtml");
+             
+            }
+               
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginFormModel model)
@@ -68,6 +77,7 @@ namespace yogloansdotnet.Controllers
                         CookieAuthenticationDefaults.AuthenticationScheme,
                         new ClaimsPrincipal(claimsIdentity),
                         authProperties);
+                    HttpContext.Session.SetInt32("Code", 100);
 
                     return RedirectToAction("Index");
                 }
@@ -80,10 +90,16 @@ namespace yogloansdotnet.Controllers
 
         public IActionResult Index()
         {
-            
+            var codeValue = HttpContext.Session.GetInt32("code"); // FIXED
 
-            return View();
+            if (codeValue.HasValue && codeValue.Value == 100)
+            {
+                return View();
+            }
+
+            return RedirectToAction("Login");
         }
+
         [HttpGet]
         public async Task<IActionResult> welcomeget(int id) // use int instead of string
         {
@@ -100,7 +116,10 @@ namespace yogloansdotnet.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            HttpContext.Session.SetInt32("code", 0);
             return RedirectToAction("Login");
         }
+     
+
     }
 } 

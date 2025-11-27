@@ -15,7 +15,7 @@ $(document).ready(function() {
             if (Array.isArray(response) && response.length > 0) {
                 response.forEach(function(item) {
                     $('#annual-reports').append(`
-                        <div class="reports" onclick="window.open('${item.filePath}', '_blank')">
+                        <div class="reports view-pdf" data-src="${item.filePath || ''}">
                             <div class="img">
                                 <img src="images/icon/pdf.png" alt="PDF Icon">
                             </div>
@@ -42,7 +42,7 @@ $.ajax({
         if (Array.isArray(response) && response.length > 0) {
             response.forEach(function(item) {
                 $('#announcement').append(`
-                    <div class="reports" onclick="window.open('${item.filePath}', '_blank')">
+                    <div class="reports view-pdf" data-src="${item.filePath || ''}">
                         <div class="img">
                             <img src="images/icon/pdf.png" alt="PDF Icon">
                         </div>
@@ -87,6 +87,7 @@ $.ajax({
                         <div class="address">
                             <p style="color: black;">${item.phone}</p>
                             <p style="color: black;">${item.mobile}</p>
+                             <p style="color: black;">${item.email}</p>
                             <p style="color: black;">${item.address} </p>
                            
                         </div>
@@ -114,7 +115,7 @@ $.ajax({
         if (Array.isArray(response) && response.length > 0) {
             response.forEach(function(item) {
                 $('#Public-Disclosure').append(`
-                  <div class="reports" onclick="window.open('${item.filePath}', '_blank')">
+                  <div class="reports view-pdf" data-src="${item.filePath || ''}">
                         <div class="img">
                             <img src="images/icon/pdf.png" alt="PDF Icon">
                         </div>
@@ -149,7 +150,7 @@ $.ajax({
         if (Array.isArray(response) && response.length > 0) {
             response.forEach(function(item) {
                 $('#Forms-TDS').append(`
-                  <div class="reports" onclick="window.open('${item.filePath}', '_blank')">
+                  <div class="reports view-pdf" data-src="${item.filePath || ''}">
                         <div class="img">
                             <img src="images/icon/pdf.png" alt="PDF Icon">
                         </div>
@@ -176,7 +177,7 @@ $.ajax({
         if (Array.isArray(response) && response.length > 0) {
             response.forEach(function(item) {
                 $('#appointment-order').append(`
-                  <div class="reports" onclick="window.open('${item.filePath}', '_blank')">
+                  <div class="reports view-pdf" data-src="${item.filePath || ''}">
                         <div class="img">
                             <img src="images/icon/pdf.png" alt="PDF Icon">
                         </div>
@@ -193,4 +194,39 @@ $.ajax({
         }
     }
 });
+});
+
+/*showing pdf*/
+
+$(document).on('click', '.view-pdf', async function () {
+    const pdfUrl = $(this).data('src');
+    $('#pdfContainer').html('<p>Loading PDF...</p>');
+    $('#pdfModal1').modal('show');
+
+    try {
+        const loadingTask = pdfjsLib.getDocument(pdfUrl);
+        const pdf = await loadingTask.promise;
+        $('#pdfContainer').html('');
+
+        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+            const page = await pdf.getPage(pageNum);
+            const viewport = page.getViewport({ scale: 1.2 });
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            canvas.style.marginBottom = '10px';
+            $('#pdfContainer').append(canvas);
+
+            await page.render({ canvasContext: context, viewport: viewport }).promise;
+        }
+    } catch (error) {
+        console.error("Error loading PDF:", error);
+        $('#pdfContainer').html('<p>Failed to load PDF.</p>');
+    }
+});
+
+// Clear on close
+$('#pdfModal1').on('hidden.bs.modal', function () {
+    $('#pdfContainer').html('');
 });

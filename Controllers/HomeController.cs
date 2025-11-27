@@ -1,13 +1,14 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using yogloansdotnet.Models;
-using yogloansdotnet.Data;
-using Microsoft.EntityFrameworkCore;
-using Azure.Core;
-using TechTalk.SpecFlow.CommonModels;
-using Microsoft.Extensions.Caching.Memory;
-using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
+﻿using Azure.Core;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
+using System.Diagnostics;
+using System.Drawing;
+using TechTalk.SpecFlow.CommonModels;
+using yogloansdotnet.Data;
+using yogloansdotnet.Models;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
 namespace yogloansdotnet.Controllers;
 
@@ -103,143 +104,214 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 
+    //[HttpPost]
+    //[ValidateAntiForgeryToken]
+    //public async Task<IActionResult> welcomecreate(HomwelcomeModel model, IFormFile Image1, IFormFile Image2)
+    //{
+    //    try
+    //    {
+    //        _logger.LogInformation($"Received form submission. Header: {model.Header}");
+
+    //        // Get existing image paths (if editing existing record)
+    //        var existingImage1 = Request.Form["ExistingImage1"].ToString();
+    //        var existingImage2 = Request.Form["ExistingImage2"].ToString();
+
+    //        // ✅ Validate required fields
+    //        if (string.IsNullOrWhiteSpace(model.Header))
+    //        {
+    //            TempData["Error"] = "Header is required";
+    //            return RedirectToAction("Index", "Admin", new { area = "Admin" });
+    //        }
+
+    //        if (string.IsNullOrWhiteSpace(model.SubContent))
+    //        {
+    //            TempData["Error"] = "Content is required";
+    //            return RedirectToAction("Index", "Admin", new { area = "Admin" });
+    //        }
+
+    //        if (model.loan_id == 0)
+    //        {
+    //            TempData["Error"] = "Please select a valid Loan ID.";
+    //            return RedirectToAction("Index", "Admin", new { area = "Admin" });
+    //        }
+
+    //        // ✅ Verify database connection
+    //        try
+    //        {
+    //            await _context.Database.OpenConnectionAsync();
+    //            _logger.LogInformation("Database connection successful");
+    //            await _context.Database.CloseConnectionAsync();
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            _logger.LogError(ex, "Database connection failed");
+    //            TempData["Error"] = "Database connection failed. Please try again.";
+    //            throw;
+    //        }
+
+    //        // ✅ Check if record exists for this loan_id
+    //        var existingRecord = await _context.Homwelcome.FirstOrDefaultAsync(h => h.loan_id == model.loan_id);
+    //        _logger.LogInformation($"Existing record found: {existingRecord != null}");
+
+    //        string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+    //        if (!Directory.Exists(uploadsFolder))
+    //        {
+    //            Directory.CreateDirectory(uploadsFolder);
+    //        }
+
+    //        if (existingRecord != null)
+    //        {
+    //            // ✅ Update existing record
+    //            existingRecord.Header = model.Header;
+    //            existingRecord.SubContent = model.SubContent;
+    //            existingRecord.loan_id = model.loan_id;
+
+    //            // ✅ Handle Image1
+    //            if (Image1 != null)
+    //            {
+    //                string uniqueFileName1 = Guid.NewGuid().ToString() + "_" + Image1.FileName;
+    //                string filePath1 = Path.Combine(uploadsFolder, uniqueFileName1);
+    //                using (var fileStream = new FileStream(filePath1, FileMode.Create))
+    //                {
+    //                    await Image1.CopyToAsync(fileStream);
+    //                }
+    //                existingRecord.Image1 = "/uploads/" + uniqueFileName1;
+    //            }
+    //            else if (!string.IsNullOrEmpty(existingImage1))
+    //            {
+    //                existingRecord.Image1 = existingImage1;
+    //            }
+
+    //            // ✅ Handle Image2
+    //            if (Image2 != null)
+    //            {
+    //                string uniqueFileName2 = Guid.NewGuid().ToString() + "_" + Image2.FileName;
+    //                string filePath2 = Path.Combine(uploadsFolder, uniqueFileName2);
+    //                using (var fileStream = new FileStream(filePath2, FileMode.Create))
+    //                {
+    //                    await Image2.CopyToAsync(fileStream);
+    //                }
+    //                existingRecord.Image2 = "/uploads/" + uniqueFileName2;
+    //            }
+    //            else if (!string.IsNullOrEmpty(existingImage2))
+    //            {
+    //                existingRecord.Image2 = existingImage2;
+    //            }
+
+    //            _context.Homwelcome.Update(existingRecord);
+    //            TempData["Success"] = "Loan details updated successfully!";
+    //        }
+    //        else
+    //        {
+    //            // ✅ Create new record
+    //            if (Image1 != null)
+    //            {
+    //                string uniqueFileName1 = Guid.NewGuid().ToString() + "_" + Image1.FileName;
+    //                string filePath1 = Path.Combine(uploadsFolder, uniqueFileName1);
+    //                using (var fileStream = new FileStream(filePath1, FileMode.Create))
+    //                {
+    //                    await Image1.CopyToAsync(fileStream);
+    //                }
+    //                model.Image1 = "/uploads/" + uniqueFileName1;
+    //            }
+    //            else if (!string.IsNullOrEmpty(existingImage1))
+    //            {
+    //                model.Image1 = existingImage1;
+    //            }
+
+    //            if (Image2 != null)
+    //            {
+    //                string uniqueFileName2 = Guid.NewGuid().ToString() + "_" + Image2.FileName;
+    //                string filePath2 = Path.Combine(uploadsFolder, uniqueFileName2);
+    //                using (var fileStream = new FileStream(filePath2, FileMode.Create))
+    //                {
+    //                    await Image2.CopyToAsync(fileStream);
+    //                }
+    //                model.Image2 = "/uploads/" + uniqueFileName2;
+    //            }
+    //            else if (!string.IsNullOrEmpty(existingImage2))
+    //            {
+    //                model.Image2 = existingImage2;
+    //            }
+
+    //            _context.Homwelcome.Add(model);
+    //            TempData["Success"] = "Loan details added successfully!";
+    //        }
+
+    //        // ✅ Save changes
+    //        var result = await _context.SaveChangesAsync();
+    //        _logger.LogInformation($"Database save completed. Rows affected: {result}");
+
+    //        return RedirectToAction("Index", "Admin", new { area = "Admin" });
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        _logger.LogError(ex, "Error occurred while processing form submission");
+    //        TempData["Error"] = "An error occurred while processing your request. Please try again.";
+    //        return RedirectToAction("Index", "Admin", new { area = "Admin" });
+    //    }
+    //}
+
     [HttpPost]
-    [ValidateAntiForgeryToken]
     public async Task<IActionResult> welcomecreate(HomwelcomeModel model, IFormFile Image1, IFormFile Image2)
     {
         try
         {
-            _logger.LogInformation($"Received form submission. Header: {model.Header}");
+            byte[]? imageBytes = null;
+            byte[]? imageBytes2 = null;
 
-            // Get existing image paths (if editing existing record)
-            var existingImage1 = Request.Form["ExistingImage1"].ToString();
-            var existingImage2 = Request.Form["ExistingImage2"].ToString();
-
-            // ✅ Validate required fields
-            if (string.IsNullOrWhiteSpace(model.Header))
+            // Convert Image1
+            if (Image1 != null && Image1.Length > 0)
             {
-                TempData["Error"] = "Header is required";
-                return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                using var ms = new MemoryStream();
+                await Image1.CopyToAsync(ms);
+                imageBytes = ms.ToArray();
             }
 
-            if (string.IsNullOrWhiteSpace(model.SubContent))
+            // Convert Image2
+            if (Image2 != null && Image2.Length > 0)
             {
-                TempData["Error"] = "Content is required";
-                return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                using var ms = new MemoryStream();
+                await Image2.CopyToAsync(ms);
+                imageBytes2 = ms.ToArray();
             }
 
-            if (model.loan_id == 0)
+            if (model.Id == 0)
             {
-                TempData["Error"] = "Please select a valid Loan ID.";
-                return RedirectToAction("Index", "Admin", new { area = "Admin" });
-            }
-
-            // ✅ Verify database connection
-            try
-            {
-                await _context.Database.OpenConnectionAsync();
-                _logger.LogInformation("Database connection successful");
-                await _context.Database.CloseConnectionAsync();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Database connection failed");
-                TempData["Error"] = "Database connection failed. Please try again.";
-                throw;
-            }
-
-            // ✅ Check if record exists for this loan_id
-            var existingRecord = await _context.Homwelcome.FirstOrDefaultAsync(h => h.loan_id == model.loan_id);
-            _logger.LogInformation($"Existing record found: {existingRecord != null}");
-
-            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-            if (!Directory.Exists(uploadsFolder))
-            {
-                Directory.CreateDirectory(uploadsFolder);
-            }
-
-            if (existingRecord != null)
-            {
-                // ✅ Update existing record
-                existingRecord.Header = model.Header;
-                existingRecord.SubContent = model.SubContent;
-                existingRecord.loan_id = model.loan_id;
-
-                // ✅ Handle Image1
-                if (Image1 != null)
+                // INSERT
+                var welcome = new HomwelcomeModel
                 {
-                    string uniqueFileName1 = Guid.NewGuid().ToString() + "_" + Image1.FileName;
-                    string filePath1 = Path.Combine(uploadsFolder, uniqueFileName1);
-                    using (var fileStream = new FileStream(filePath1, FileMode.Create))
-                    {
-                        await Image1.CopyToAsync(fileStream);
-                    }
-                    existingRecord.Image1 = "/uploads/" + uniqueFileName1;
-                }
-                else if (!string.IsNullOrEmpty(existingImage1))
-                {
-                    existingRecord.Image1 = existingImage1;
-                }
+                    Image1 = imageBytes,
+                    Image2 = imageBytes2,
+                    Header = model.Header,
+                    loan_id = model.loan_id,
+                    SubContent = model.SubContent
+                };
 
-                // ✅ Handle Image2
-                if (Image2 != null)
-                {
-                    string uniqueFileName2 = Guid.NewGuid().ToString() + "_" + Image2.FileName;
-                    string filePath2 = Path.Combine(uploadsFolder, uniqueFileName2);
-                    using (var fileStream = new FileStream(filePath2, FileMode.Create))
-                    {
-                        await Image2.CopyToAsync(fileStream);
-                    }
-                    existingRecord.Image2 = "/uploads/" + uniqueFileName2;
-                }
-                else if (!string.IsNullOrEmpty(existingImage2))
-                {
-                    existingRecord.Image2 = existingImage2;
-                }
-
-                _context.Homwelcome.Update(existingRecord);
-                TempData["Success"] = "Loan details updated successfully!";
+                _context.Homwelcome.Add(welcome);
             }
             else
             {
-                // ✅ Create new record
-                if (Image1 != null)
-                {
-                    string uniqueFileName1 = Guid.NewGuid().ToString() + "_" + Image1.FileName;
-                    string filePath1 = Path.Combine(uploadsFolder, uniqueFileName1);
-                    using (var fileStream = new FileStream(filePath1, FileMode.Create))
-                    {
-                        await Image1.CopyToAsync(fileStream);
-                    }
-                    model.Image1 = "/uploads/" + uniqueFileName1;
-                }
-                else if (!string.IsNullOrEmpty(existingImage1))
-                {
-                    model.Image1 = existingImage1;
-                }
+                // UPDATE
+                var existing = await _context.Homwelcome.FirstOrDefaultAsync(a => a.Id == model.Id);
 
-                if (Image2 != null)
+                if (existing != null)
                 {
-                    string uniqueFileName2 = Guid.NewGuid().ToString() + "_" + Image2.FileName;
-                    string filePath2 = Path.Combine(uploadsFolder, uniqueFileName2);
-                    using (var fileStream = new FileStream(filePath2, FileMode.Create))
-                    {
-                        await Image2.CopyToAsync(fileStream);
-                    }
-                    model.Image2 = "/uploads/" + uniqueFileName2;
-                }
-                else if (!string.IsNullOrEmpty(existingImage2))
-                {
-                    model.Image2 = existingImage2;
-                }
+                    existing.Header = model.Header;
+                    existing.SubContent = model.SubContent;
+                    existing.loan_id = model.loan_id;
 
-                _context.Homwelcome.Add(model);
-                TempData["Success"] = "Loan details added successfully!";
+                    // Update only when new file is uploaded
+                    if (imageBytes != null)
+                        existing.Image1 = imageBytes;
+
+                    if (imageBytes2 != null)
+                        existing.Image2 = imageBytes2;
+                }
             }
 
-            // ✅ Save changes
-            var result = await _context.SaveChangesAsync();
-            _logger.LogInformation($"Database save completed. Rows affected: {result}");
+            // 👉 Most important
+            await _context.SaveChangesAsync();
 
             return RedirectToAction("Index", "Admin", new { area = "Admin" });
         }
@@ -250,7 +322,6 @@ public class HomeController : Controller
             return RedirectToAction("Index", "Admin", new { area = "Admin" });
         }
     }
-
 
 
     [HttpGet]
@@ -650,8 +721,18 @@ public class HomeController : Controller
         }
     }
 
-   
 
+    [HttpPost("code-set")]
+    public IActionResult setcode(string value)
+    {
+        if (int.TryParse(value, out int code))
+        {
+            HttpContext.Session.SetInt32("code", code);
+            return Ok("Code Saved");
+        }
+
+        return BadRequest("Invalid number");
+    }
     private void OK(object value)
     {
         throw new NotImplementedException();

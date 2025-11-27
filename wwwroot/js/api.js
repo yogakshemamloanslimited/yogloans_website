@@ -1,5 +1,5 @@
-﻿const API_BASE = "http://localhost:8085/api/";
-const mainurlweb = "http://localhost:5132/";
+﻿const API_BASE = "https://localhost:8085/api/";
+const mainurlweb = "http://localhost:7162/";
 
 window.API = {
     base: API_BASE,
@@ -23,7 +23,7 @@ window.API = {
         Get15g: `${API_BASE}15g/get-pdf-data`,
         Getdata15g: `${API_BASE}15g/get-data`,
         Get15g2: `${API_BASE}15g/get15g/`,
-        GetAppartment: `${API_BASE}api/Get-department`,  // ❌ double "api/"
+        GetAppartment: `${API_BASE}Get-department`,  // ❌ double "api/"
         EnachGet: `${API_BASE}enach/get-loans/`,
         EnachStop: `${API_BASE}enach/stop`,
         EnachCancle: `${API_BASE}enach/cancel`, // ❌ spelling: probably "Cancel"
@@ -32,7 +32,7 @@ window.API = {
         gsubmitapplication: `${API_BASE}15g/submit-application`,
         ggetpdfdata: `${API_BASE}15g/get-pdf-data/`,
         EnqueryOccupations: `${API_BASE}Enquery/Occupations`, 
-        webonline:`${API_BASE}api/proc15/online`,
+        webonline:`${API_BASE}proc15/online`,
         onlineCustomer: `${API_BASE}proc15/online?customerId=`,  // ❌ likely typo: should it be "onlineCustomer"
         sbifailure :`${API_BASE}sbi-failure`,
         paynow1: `${API_BASE}payonline/Paynow/step1`,
@@ -62,8 +62,11 @@ window.API = {
 
         //vehicle seizing
         SeizingRegister: `${API_BASE}Vehicleseizing`,
+        SeizingLogin: `${API_BASE}Vehicleseizing/login`,
         Submituserform: `${API_BASE}Vehicleseizing/submit-details`,
         Finduser: `${API_BASE}Vehicleseizing/find-user`,
+        Printitems: `${API_BASE}Vehicleseizing/getVehicleDtls`,
+        GetVehicleImages: `${API_BASE}Vehicleseizing/getVehicleImages`
         // add other endpoints here
     }
 };

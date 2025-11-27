@@ -1,0 +1,93 @@
+﻿
+
+
+
+
+.search-division {
+    position: relative;
+    overflow: hidden;
+}
+
+    .search-division .groups {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        overflow: hidden;
+    }
+
+        .search-division .groups input,
+        .search-division .groups button {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            border-radius: 40px;
+            transition: 0.5s;
+        }
+
+        .search-division .groups #close-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .search-division .groups #close-icon.active {
+                position: relative;
+                font-size: 20px;
+            }
+
+        .search-division .groups button {
+            cursor: pointer;
+            border: none;
+        }
+
+        .search-division .groups .active {
+            position: relative;
+            width: 40px;
+            top: 0%;
+            left: 0%;
+            transform: translate(-0%, -0%);
+            border: none;
+        }
+
+        .search-division .groups.active {
+            display: flex;
+            width: 350px;
+            border-radius: 40px;
+        }
+
+        .search-division .groups button.active {
+            position: relative;
+            border-radius: 40px;
+            background: #b7bece;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .search-division .groups input.active {
+            width: 300px;
+            box-shadow: 0px 0px 1px 0px #b7bece;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+#suggestions {
+    position: absolute;
+    background: white;
+    width: 30%;
+    height: auto;
+    overflow-y: auto;
+}
+
+    #suggestions.active {
+        left: 50% !important;
+        transform: translate(-50%,0%)
+    }
+
+    #suggestions li {
+        list-style: none;
+        cursor: pointer;
+    }

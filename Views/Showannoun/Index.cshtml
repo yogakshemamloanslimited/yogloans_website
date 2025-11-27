@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "Announcement";
+
+}
+@model List<yogloansdotnet.Models.AnnouncementsWelcomeModel>
+@{
+    var content = Context.Session.GetString("content");
+    var firstWelcome = Model?.FirstOrDefault();
+
+    string image2Base64 = firstWelcome?.image2 != null
+        ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.image2)
+        : null;
+
+    string imageBase64 = firstWelcome?.image != null
+        ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.image)
+        : null;
+}
+
+<link rel="stylesheet" href="~/css/home/welcome.css" asp-append-version="true">
+
+<section class="welcome-container"
+         style="background-image: url('@(imageBase64 ?? "/images/default.png")')" id="welcome-desktop">
+    <h1 style="visibility:hidden;">@firstWelcome?.title</h1>
+    <div class="button">
+        <h1>@firstWelcome?.title</h1>
+    </div>
+</section>
+
+<div id="announcement-content">
+    @Html.Raw(content)
+</div>
+<style>
+    .welcome-container {
+        height: 300px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #welcome-mobile {
+        display: none;
+    }
+
+    #welcome-desktop {
+        display: flex;
+    }
+
+    @@media (max-width: 767px) {
+        #welcome-desktop {
+            display: none;
+        }
+
+        #welcome-mobile {
+            display: flex;
+        }
+    }
+
+    @@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif !important;
+        transition: 0.5s;
+    }
+</style>
+
+<style>
+    #announcement-content {
+        width: 100%;
+        max-width: 1536px; /* optional, to limit very wide text */
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        padding:20px;
+    }
+
+        #announcement-content p {
+            text-align: center;
+            color: black;
+            line-height: 1.6; /* better readability */
+            margin-bottom: 1em;
+        }
+
+</style>
+<script>
+        $(document).ready(function() {
+        $('table').addClass('table table-bordered');
+    });
+
+</script>

@@ -32,16 +32,22 @@
             success: function (response) {
                 
                 container.empty();
+    response.forEach(function (item) {
 
-                response.forEach(function (item) {
-                    const id = item.loanname.replace(/\s+/g, '-').toLowerCase();
-                    container.append(`
-                        <div class="item" id="${id}" data-content="${item.content}" data-id="${item.id}">
-                            <img src="${item.icon}" alt="">
-                            <p>${item.loanname}</p>
-                        </div>
-                    `);
-                });
+        let base64Icon = "";
+        if (item.icon) {
+            base64Icon = "data:image/png;base64," + item.icon;
+        }
+        const id = item.loanname.replace(/\s+/g, '-').toLowerCase();
+
+        container.append(`
+            <div class="item" id="${id}" data-content="${item.content}" data-id="${item.id}">
+                <img src="${base64Icon}" alt="${item.loanname}">
+                <p>${item.loanname}</p>
+            </div>
+        `);
+    });
+
 
                 // === Update content for active item ===
                 function updateActiveContent() {
@@ -162,9 +168,16 @@
                         const data = response[0];
                         $('#header').text(data.header);
                         $('#sub').text(data.subContent);
-
+                         let image1byte = "";
+        if (data.image1) {
+            image1byte = "data:image/png;base64," + data.image1;
+        }
+         let image2byte = "";
+        if (data.image2) {
+            image2byte = "data:image/png;base64," + data.image2;
+        }
                         const container = $('.welcome-container');
-                        const imageUrl = window.innerWidth <= 768 ? data.image2 : data.image1;
+                        const imageUrl = window.innerWidth <= 768 ? image2byte : image1byte;
 
                         // === Preload background image ===
                         const img = new Image();

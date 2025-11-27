@@ -1,0 +1,563 @@
+D:\yogloansdotnet - Copy\bin\Release\net9.0\appsettings.Development.json
+D:\yogloansdotnet - Copy\bin\Release\net9.0\appsettings.json
+D:\yogloansdotnet - Copy\bin\Release\net9.0\yogloansdotnet.staticwebassets.runtime.json
+D:\yogloansdotnet - Copy\bin\Release\net9.0\yogloansdotnet.staticwebassets.endpoints.json
+D:\yogloansdotnet - Copy\bin\Release\net9.0\yogloansdotnet.exe
+D:\yogloansdotnet - Copy\bin\Release\net9.0\yogloansdotnet.deps.json
+D:\yogloansdotnet - Copy\bin\Release\net9.0\yogloansdotnet.runtimeconfig.json
+D:\yogloansdotnet - Copy\bin\Release\net9.0\yogloansdotnet.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\yogloansdotnet.pdb
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Azure.Core.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Azure.Identity.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Humanizer.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Build.Locator.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.CodeAnalysis.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Data.SqlClient.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Extensions.Caching.Memory.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Extensions.DependencyInjection.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Extensions.DependencyModel.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Extensions.Logging.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Extensions.Options.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Extensions.Primitives.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Identity.Client.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.SqlServer.Server.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\Mono.TextTemplating.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.ClientModel.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.CodeDom.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Composition.AttributedModel.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Composition.Convention.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Composition.Hosting.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Composition.Runtime.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Composition.TypedParts.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Configuration.ConfigurationManager.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Drawing.Common.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Formats.Asn1.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Memory.Data.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Runtime.Caching.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Security.Cryptography.ProtectedData.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Security.Permissions.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Text.Json.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\System.Windows.Extensions.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\yogloansdotnet - Copy\bin\Release\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.csproj.AssemblyReference.cache
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.GeneratedMSBuildEditorConfig.editorconfig
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.AssemblyInfoInputs.cache
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.AssemblyInfo.cs
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.csproj.CoreCompileInputs.cache
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.MvcApplicationPartsAssemblyInfo.cache
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.RazorAssemblyInfo.cache
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.RazorAssemblyInfo.cs
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.sourcelink.json
+D:\yogloansdotnet - Copy\obj\Release\net9.0\scopedcss\Views\admin\Shared\_Layout.cshtml.rz.scp.css
+D:\yogloansdotnet - Copy\obj\Release\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\yogloansdotnet - Copy\obj\Release\net9.0\scopedcss\bundle\yogloansdotnet.styles.css
+D:\yogloansdotnet - Copy\obj\Release\net9.0\scopedcss\projectbundle\yogloansdotnet.bundle.scp.css
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\4ejy8gtjcv-h6puv8qieg.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\inql6onuc8-4m06domx3y.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\te2ogf2xr0-7777krg88w.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\4pg8pwdid3-j5iverje9n.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\u3w50u8azq-xabihs3opq.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\e66vs2ekmx-3tobktd3ut.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\6o5bm9dtot-yevbtd8c2z.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\7t9vvlxr1e-f8iekp3gzv.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\662vehrkja-b9sayid5wm.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\h4nfgd743o-61n19gt1b8.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\wz0ugh2yn1-m5tqvotluv.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\ig32mwjwbs-m9qm4tazc0.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\xn842w2ih1-bqjiyaj88i.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\3a1rt0cxze-c2jlpeoesf.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\wzxndgy0kh-erw9l3u2r3.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\445421w9ak-aexeepp0ev.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\rznzwfecj6-d7shbmvgxk.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\hrf0c9k8i5-ausgxo2sd3.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\r8er31142r-k8d9w2qqmf.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\4odihw028h-cosvhxvwiu.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\d0kzazt4qm-ub07r2b239.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\0nto2c9bhj-fvhpjtyr6v.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\hr6u4pt0sm-b7pk76d08c.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\2zrcxqgtvv-fsbi9cje9m.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\dj2n6ngxmd-rzd6atqjts.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\t73f561w15-ee0r1s7dh0.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\d62lf3qxbk-dxx9fxp4il.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\9e5koq5xzy-jd9uben2k1.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\ueo86d4i95-khv3u5hwcm.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\8k1m3g99lu-r4e9w2rdcm.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\3jenfupibr-lcd1t2u6c8.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\h60x1hw6cz-c2oey78nd0.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\89snsk4lqe-tdbxkamptv.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\r8tci26ica-j5mq2jizvt.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\xrrtqrsnvl-06098lyss8.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\kcq71r6490-nvvlpmu67g.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\5m59ivtg3m-46ein0sx1k.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\5j2ujye0l2-pk9g2wxc8p.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\yn1yt2rcc2-6cfz1n2cew.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\2eifh3j6nz-6pdc2jztkx.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\xp6xdbhb2f-493y06b0oq.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\c87ozxeg8w-iovd86k7lj.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\k6ntxt9t72-vr1egmr9el.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\2a1pw21lf7-kbrnm935zg.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\g2hjkcrown-jj8uyg4cgr.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\th22z9cnoi-y7v9cxd14o.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\8hzj5j9ohx-notf2xhcfb.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\zylj8r7hch-h1s4sie4z3.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\xr545id1g5-63fj8s7r0e.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\ghphiuaago-0j3bgjxly4.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\cn8nhgv94g-47otxtyo56.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\btfnnbhji5-4v8eqarkd7.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\4klnn465fk-356vix0kms.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\7b5zwhogk1-83jwlth58m.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\90b2ir106q-mrlpezrjn3.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\gxfzzrbssr-lzl9nlhx6b.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\s5muk3vbc4-ag7o75518u.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\v9z6x3m228-x0q3zqp4vz.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\7yvegt0sq0-0i3buxo5is.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\1ac3k5kh30-o1o13a6vjx.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\9eom5z135d-ttgo8qnofa.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\n7hl5epa1j-2z0ns9nrw6.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\x8mmc7hkdu-muycvpuwrr.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\wake4po0p8-87fc7y1x7t.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\e434phf3pn-mlv21k5csn.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\staticwebassets.build.json
+D:\yogloansdotnet - Copy\obj\Release\net9.0\staticwebassets.development.json
+D:\yogloansdotnet - Copy\obj\Release\net9.0\staticwebassets.build.endpoints.json
+D:\yogloansdotnet - Copy\obj\Release\net9.0\staticwebassets\msbuild.yogloansdotnet.Microsoft.AspNetCore.StaticWebAssets.props
+D:\yogloansdotnet - Copy\obj\Release\net9.0\staticwebassets\msbuild.yogloansdotnet.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\yogloansdotnet - Copy\obj\Release\net9.0\staticwebassets\msbuild.build.yogloansdotnet.props
+D:\yogloansdotnet - Copy\obj\Release\net9.0\staticwebassets\msbuild.buildMultiTargeting.yogloansdotnet.props
+D:\yogloansdotnet - Copy\obj\Release\net9.0\staticwebassets\msbuild.buildTransitive.yogloansdotnet.props
+D:\yogloansdotnet - Copy\obj\Release\net9.0\staticwebassets.pack.json
+D:\yogloansdotnet - Copy\obj\Release\net9.0\staticwebassets.upToDateCheck.txt
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloans.A33A1D1B.Up2Date
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.dll
+D:\yogloansdotnet - Copy\obj\Release\net9.0\refint\yogloansdotnet.dll
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.pdb
+D:\yogloansdotnet - Copy\obj\Release\net9.0\yogloansdotnet.genruntimeconfig.cache
+D:\yogloansdotnet - Copy\obj\Release\net9.0\ref\yogloansdotnet.dll
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\p1bgzrp416-b4xmki2984.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\3zatwzz2c5-cj6k2rky45.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\88micy7443-dpsldfvu4p.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\voz9tei4il-jrb5gwgyh2.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\rsqgh38mmq-difkck64fe.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\p3fs1amq2a-lalanobss8.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\a7hjf7yvaf-qsr5pszndi.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\zitbjho43y-0yccxxby6k.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\mfcj1t9qvc-5a4u9zsz5b.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\g5vfzt5d9t-75fbhb7xv2.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\rqynun2trw-wdqujzk4x3.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\tvkkcrebz3-acmtnfsrkp.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\k34487yphp-jlahyjxfr3.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\72qp9rndbp-svliz52fwx.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\f25cfgdxkh-k7t5ay4rl1.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\vby8an2ra7-vvq755xz6q.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\fk7bb3rk17-ss9y8gazbz.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\0x1km8oxjq-hgb5z1jzs8.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\2uk72kucmj-x4m34lsa9e.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\zhjbtipgg6-fl08rtasrz.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\lwabdmqn4b-j9ty8lpbpg.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\dcdjonoais-g9n574gdci.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\1k4dhw95d1-vcq26zhvy0.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\05cdezug7r-5yb5qhdp8h.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\q677rvfh81-fcv6q6jveh.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\rbicoreknq-zbd3e2n60q.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\foxjv1gbjy-76oc9xqaos.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\j0d6neyycm-honbwl2jnx.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\swm5hwlfod-bnesodo2hl.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\6gsfp5zce5-zckdaop0w6.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\ybagdx1jsb-ew5nan0wqd.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\r42n2ejwnb-7elsonie4u.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\mgognln46h-aqbqj12awu.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\03v3t9vb31-p5bg5q3fvz.gz
+D:\yogloansdotnet - Copy\obj\Release\net9.0\compressed\27imwwwibd-p5bg5q3fvz.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\appsettings.Development.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\appsettings.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\yogloansdotnet.staticwebassets.runtime.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\yogloansdotnet.staticwebassets.endpoints.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\yogloansdotnet.exe
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\yogloansdotnet.deps.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\yogloansdotnet.runtimeconfig.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\yogloansdotnet.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\yogloansdotnet.pdb
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Azure.Core.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Azure.Identity.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\BoDi.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Gherkin.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Humanizer.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.barcodes.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.bouncy-castle-connector.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.forms.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.io.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.kernel.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.layout.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.pdfa.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.pdfua.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.sign.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.styledxmlparser.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.svg.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.commons.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\itext.html2pdf.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Build.Locator.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.CodeAnalysis.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Extensions.Logging.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Identity.Client.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.SqlServer.Server.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Mono.TextTemplating.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\QRCoder.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\Rotativa.AspNetCore.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\TechTalk.SpecFlow.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\SpecFlow.Internal.Json.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.ClientModel.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.CodeDom.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Composition.AttributedModel.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Composition.Convention.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Composition.Hosting.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Composition.Runtime.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Composition.TypedParts.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Drawing.Common.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Memory.Data.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Runtime.Caching.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Security.Permissions.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\System.Windows.Extensions.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\bin\Release\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.csproj.AssemblyReference.cache
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\rpswa.dswa.cache.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.AssemblyInfoInputs.cache
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.AssemblyInfo.cs
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.csproj.CoreCompileInputs.cache
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.RazorAssemblyInfo.cache
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.RazorAssemblyInfo.cs
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.sourcelink.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\rjimswa.dswa.cache.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\scopedcss\Views\admin\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\scopedcss\bundle\yogloansdotnet.styles.css
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\scopedcss\projectbundle\yogloansdotnet.bundle.scp.css
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\voz9tei4il-jrb5gwgyh2.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\rsqgh38mmq-hmdu0mq36x.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\p3fs1amq2a-dsna5azf3m.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\a7hjf7yvaf-qsr5pszndi.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\4ejy8gtjcv-h6puv8qieg.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\zitbjho43y-zg7h5p8ta0.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\mfcj1t9qvc-5a4u9zsz5b.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\g5vfzt5d9t-75fbhb7xv2.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\rqynun2trw-rtx3yj01ht.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\tvkkcrebz3-acmtnfsrkp.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\k34487yphp-jlahyjxfr3.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\inql6onuc8-xhvaiilpi2.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\72qp9rndbp-9gr6uyakn2.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\te2ogf2xr0-7777krg88w.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\3x2s89ff19-mc5ri6wiqi.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\4pg8pwdid3-j5iverje9n.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\f25cfgdxkh-uufu2m894e.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\vby8an2ra7-2ntgbf4qa1.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\u3w50u8azq-xpu8oid3re.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\fk7bb3rk17-3gmyncutka.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\0x1km8oxjq-3vkmquwu6g.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\e66vs2ekmx-twyari5zt7.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\6o5bm9dtot-yevbtd8c2z.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\2uk72kucmj-1mpbxlceti.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\ffcq8db722-ehdda8zt5z.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\7t9vvlxr1e-f8iekp3gzv.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\lwabdmqn4b-j9ty8lpbpg.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\dcdjonoais-g9n574gdci.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\1k4dhw95d1-71tvcyhncj.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\662vehrkja-b9sayid5wm.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\h4nfgd743o-61n19gt1b8.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\05cdezug7r-5yb5qhdp8h.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\a96bw495oj-6c17ulp1qk.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\q677rvfh81-3eg6nonf8s.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\rbicoreknq-x1hjug8vsj.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\foxjv1gbjy-gwqa3wgtf9.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\wz0ugh2yn1-pvfvikfxzu.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\ig32mwjwbs-m9qm4tazc0.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\80uzl2utn8-jgu29j862x.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\p1bgzrp416-e0z1goekgi.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\3zatwzz2c5-5ipweew5fc.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\kesa6y15va-8h8s8jic5s.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\88micy7443-voinsdzcrg.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\xn842w2ih1-t1cqhe9u97.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\3a1rt0cxze-c2jlpeoesf.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\wzxndgy0kh-sejl45xvog.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\445421w9ak-aexeepp0ev.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\rznzwfecj6-xvp3kq03qx.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\hrf0c9k8i5-ausgxo2sd3.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\r8er31142r-22vffe00uq.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\4odihw028h-cosvhxvwiu.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\d0kzazt4qm-qesaa3a1fm.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\0nto2c9bhj-fvhpjtyr6v.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\hr6u4pt0sm-tmc1g35s3z.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\2zrcxqgtvv-fsbi9cje9m.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\dj2n6ngxmd-rxsg74s51o.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\t73f561w15-ee0r1s7dh0.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\d62lf3qxbk-q9ht133ko3.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\9e5koq5xzy-jd9uben2k1.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\ueo86d4i95-gye83jo8yx.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\8k1m3g99lu-r4e9w2rdcm.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\3jenfupibr-wl58j5mj3v.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\h60x1hw6cz-c2oey78nd0.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\89snsk4lqe-d4r6k3f320.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\r8tci26ica-j5mq2jizvt.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\xrrtqrsnvl-keugtjm085.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\kcq71r6490-nvvlpmu67g.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\j0d6neyycm-pc8g3cogwk.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\swm5hwlfod-bnesodo2hl.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\5m59ivtg3m-43atpzeawx.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\6gsfp5zce5-zckdaop0w6.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\ybagdx1jsb-w0qoikp02l.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\r42n2ejwnb-7elsonie4u.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\5j2ujye0l2-c63t5i9ira.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\mgognln46h-aqbqj12awu.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\yn1yt2rcc2-4094rpi4f9.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\2eifh3j6nz-6pdc2jztkx.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\xp6xdbhb2f-hd3gran6i8.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\c87ozxeg8w-iovd86k7lj.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\k6ntxt9t72-ltid2c489k.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\2a1pw21lf7-kbrnm935zg.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\g2hjkcrown-8vyfqsqgz1.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\th22z9cnoi-y7v9cxd14o.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\8hzj5j9ohx-u9q1upor1n.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\zylj8r7hch-h1s4sie4z3.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\xr545id1g5-4d85u1mtcx.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\ghphiuaago-0j3bgjxly4.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\cn8nhgv94g-03hjc8e09r.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\btfnnbhji5-48y08845bh.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\4klnn465fk-356vix0kms.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\7b5zwhogk1-83jwlth58m.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\90b2ir106q-mrlpezrjn3.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\gxfzzrbssr-worgj0nhwm.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\s5muk3vbc4-gk0pw8i4co.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\v9z6x3m228-x0q3zqp4vz.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\7yvegt0sq0-d6nrnj6jjx.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\1ac3k5kh30-m9qm4tazc0.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\9eom5z135d-ttgo8qnofa.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\n7hl5epa1j-jjsuc0puko.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\x8mmc7hkdu-9vr69e8ynj.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\wake4po0p8-87fc7y1x7t.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\e434phf3pn-mlv21k5csn.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\03v3t9vb31-p5bg5q3fvz.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\27imwwwibd-p5bg5q3fvz.gz
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\staticwebassets.build.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\staticwebassets.build.json.cache
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\staticwebassets.development.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\staticwebassets.build.endpoints.json
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloans.A33A1D1B.Up2Date
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\refint\yogloansdotnet.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.pdb
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\yogloansdotnet.genruntimeconfig.cache
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\ref\yogloansdotnet.dll
+C:\Users\Ajithkumar\Desktop\yogakshemamloanslimited\yogloans_website\obj\Release\net9.0\compressed\zhjbtipgg6-fkubs61cyx.gz

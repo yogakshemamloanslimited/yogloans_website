@@ -1,0 +1,62 @@
+﻿
+<h4 class="card-title"> Mission</h4>
+<form id="missionForm">
+    <div id="message"></div>
+    <div class="mb-3">
+        <label class="form-label">Header</label>
+        <input type="text" class="form-control" name="header" required  id="mission-header1"/>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Content</label>
+        <textarea class="form-control" name="content" rows="5" required id="mission-content1"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Mission</button>
+</form>
+<script>
+  
+    document.getElementById("missionForm").addEventListener("submit", async function (e) {
+         e.preventDefault();
+
+         const formData = new FormData(this);
+
+         const response = await fetch("MissionVission/addmission", {
+             method: "POST",
+             body: formData
+         });
+
+         const data = await response.json();
+         const messageDiv = document.getElementById("message");
+               loadmission();
+         if (response.ok) {
+             messageDiv.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+         } else {
+             messageDiv.innerHTML = `<div class="alert alert-danger">${data.message}</div>`;
+         }
+     });
+           function loadmission() {
+        $('#mission-header1').empty();
+        $('#mission-content1').empty();
+
+        $.ajax({
+            url: "/admin/MissionVission/getmission",  // Keep only one url
+            method: "GET",
+            success: function (response) {
+                if (response && response.length > 0) {
+               
+                    $('#mission-header1').val(response[0].header);
+                    $('#mission-content1').val(response[0].content);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error("AJAX error:", status, error);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        loadmission();
+    });
+
+</script>

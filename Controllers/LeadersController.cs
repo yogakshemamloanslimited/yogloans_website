@@ -33,89 +33,67 @@ public async Task<IActionResult> Index()
       [Route("add-leaders")]
 [HttpPost]
 public async Task<IActionResult> addcsr(
-    [FromForm] string Name,
-    [FromForm] string Post,
-    [FromForm] string About,
-    IFormFile Profile,
-    [FromForm] string id)
-{
-    try
-    {
-        string filePath = null;
-        if (Profile != null)
+   LeadersModel model,
+  
+    IFormFile Profile
+  )
         {
-            filePath = await SavePdfAsync(Profile);
-        }
-
-        if (string.IsNullOrEmpty(id))
-        {
-            // Create new director
-            var Leaders = new LeadersModel
+            try
             {
-                Name = Name,
-                Profile = filePath ?? "",
-                Post = Post,
-                About = About
-            };
+                byte[]? prfilebyte = null;
 
-            _context.Leaders.Add(Leaders);
-            await _context.SaveChangesAsync();
-
-            return Json(new { success = true, message = "Leaders added successfully" });
-        }
-        else
-        {
-            // Update existing director
-            var existingLeaders = await _context.Leaders.FindAsync(int.Parse(id));
-            if (existingLeaders == null)
-            {
-                return Json(new { success = false, message = "Leaders not found" });
-            }
-
-            // Delete old file if new file is uploaded
-            if (!string.IsNullOrEmpty(filePath) && !string.IsNullOrEmpty(existingLeaders.Profile))
-            {
-                var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingLeaders.Profile.TrimStart('/'));
-                if (System.IO.File.Exists(oldFilePath))
+                if (Profile != null && Profile.Length > 0)
                 {
-                    System.IO.File.Delete(oldFilePath);
+                    using var sm = new MemoryStream();
+                    await Profile.CopyToAsync(sm);
+                    prfilebyte = sm.ToArray();
                 }
-                existingLeaders.Profile = filePath;
+
+                if (model.Id == 0)
+                {
+                    var director = new LeadersModel()
+                    {
+                        Name = model.Name,
+                        Post = model.Post,
+                        About = model.About,
+                        Profile = prfilebyte
+                    };
+
+                    _context.Leaders.Add(director);
+                }
+                else
+                {
+                    var existing = await _context.Leaders.FirstOrDefaultAsync(a => a.Id == model.Id);
+                    if (existing != null)
+                    {
+                        existing.About = model.About;
+                        existing.Post = model.Post;
+                        existing.Name = model.Name;
+
+                        if (prfilebyte != null)
+                        {
+                            existing.Profile = prfilebyte;
+
+                        }
+
+                        _context.Leaders.Update(existing);
+                    }
+                }
+                await _context.SaveChangesAsync();
+                return Json(new
+                {
+                    Success = true,
+                    Message = "Leaders details saved successfully"
+                });
+
+
             }
-
-            existingLeaders.Name = Name;
-            existingLeaders.Post = Post;
-            existingLeaders.About = About;
-
-            await _context.SaveChangesAsync();
-
-            return Json(new { success = true, message = "Leaders updated successfully" });
-        }
-    }
-    catch (Exception ex)
+            catch (Exception ex)
     {
         _logger.LogError(ex, "Error saving Leaders");
         return Json(new { success = false, message = "An error occurred while saving the Leaders. Please try again." });
     }
 }
-
-        private async Task<string> SavePdfAsync(IFormFile file)
-        {
-            var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
-            var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/Leaders");
-
-            if (!Directory.Exists(uploads))
-                Directory.CreateDirectory(uploads);
-
-            var filePath = Path.Combine(uploads, fileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            return "/uploads/Leaders/" + fileName;
-        }
 
         [HttpPost("delete/{id}")]
         [ValidateAntiForgeryToken]
@@ -129,14 +107,7 @@ public async Task<IActionResult> addcsr(
                     return Json(new { success = false, message = "Leaders not found" });
                 }
 
-                if (!string.IsNullOrEmpty(Leaders.Profile))
-                {
-                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, Leaders.Profile.TrimStart('/'));
-                    if (System.IO.File.Exists(filePath))
-                    {
-                        System.IO.File.Delete(filePath);
-                    }
-                }
+               
 
                 _context.Leaders.Remove(Leaders);
                 await _context.SaveChangesAsync();

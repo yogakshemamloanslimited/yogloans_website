@@ -1,0 +1,937 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\yogloansdotnet.bundle.scp.css",
+      "PackagePath": "staticwebassets\\yogloansdotnet.p5bg5q3fvz.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\Gallery\\style.css",
+      "PackagePath": "staticwebassets\\css\\Gallery\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\Gold\\benefit.css",
+      "PackagePath": "staticwebassets\\css\\Gold\\benefit.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\Gold\\section.css",
+      "PackagePath": "staticwebassets\\css\\Gold\\section.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\about\\about.css",
+      "PackagePath": "staticwebassets\\css\\about\\about.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\about\\aboutcontainer.css",
+      "PackagePath": "staticwebassets\\css\\about\\aboutcontainer.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\about\\director.css",
+      "PackagePath": "staticwebassets\\css\\about\\director.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\about\\reviews.css",
+      "PackagePath": "staticwebassets\\css\\about\\reviews.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\about\\welcome.css",
+      "PackagePath": "staticwebassets\\css\\about\\welcome.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\branch\\branch.css",
+      "PackagePath": "staticwebassets\\css\\branch\\branch.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\career\\card.css",
+      "PackagePath": "staticwebassets\\css\\career\\card.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\career\\faq.css",
+      "PackagePath": "staticwebassets\\css\\career\\faq.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\career\\form.css",
+      "PackagePath": "staticwebassets\\css\\career\\form.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\career\\welcome.css",
+      "PackagePath": "staticwebassets\\css\\career\\welcome.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\chat\\chat.css",
+      "PackagePath": "staticwebassets\\css\\chat\\chat.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\contact\\contact.css",
+      "PackagePath": "staticwebassets\\css\\contact\\contact.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\csr\\reportcard.css",
+      "PackagePath": "staticwebassets\\css\\csr\\reportcard.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\departments.css",
+      "PackagePath": "staticwebassets\\css\\departments.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\home\\about.css",
+      "PackagePath": "staticwebassets\\css\\home\\about.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\home\\clients.css",
+      "PackagePath": "staticwebassets\\css\\home\\clients.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\home\\contact.css",
+      "PackagePath": "staticwebassets\\css\\home\\contact.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\home\\loanitem.css",
+      "PackagePath": "staticwebassets\\css\\home\\loanitem.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\home\\welcome.css",
+      "PackagePath": "staticwebassets\\css\\home\\welcome.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\investor\\creditrate.css",
+      "PackagePath": "staticwebassets\\css\\investor\\creditrate.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\investor\\list.css",
+      "PackagePath": "staticwebassets\\css\\investor\\list.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\layout.css",
+      "PackagePath": "staticwebassets\\css\\layout.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\main.d810cf0ae7f39f28f336.css",
+      "PackagePath": "staticwebassets\\css\\main.d810cf0ae7f39f28f336.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\online15g\\form.css",
+      "PackagePath": "staticwebassets\\css\\online15g\\form.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\online\\services.css",
+      "PackagePath": "staticwebassets\\css\\online\\services.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\onlinepay\\style.css",
+      "PackagePath": "staticwebassets\\css\\onlinepay\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\policy\\policy.css",
+      "PackagePath": "staticwebassets\\css\\policy\\policy.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\Payment Processing.gif",
+      "PackagePath": "staticwebassets\\images\\Payment Processing.gif"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\Payment verify loader.gif",
+      "PackagePath": "staticwebassets\\images\\Payment verify loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\Terms&conditions.pdf",
+      "PackagePath": "staticwebassets\\images\\Terms&conditions.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\Tiredman.jpg",
+      "PackagePath": "staticwebassets\\images\\Tiredman.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\bike-back.png",
+      "PackagePath": "staticwebassets\\images\\bike-back.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\cardbreak.png",
+      "PackagePath": "staticwebassets\\images\\cardbreak.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\crisil.jpg",
+      "PackagePath": "staticwebassets\\images\\crisil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\Mohandas.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\Mohandas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\Rajeshkumar.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\Rajeshkumar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\Sandy_Ppl-09_Single-01.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\Sandy_Ppl-09_Single-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\Shaju.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\Shaju.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\Sreenivas.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\Sreenivas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\prasad.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\prasad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\rajesh.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\rajesh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\rakesh.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\rakesh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\ramachandran.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\ramachandran.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\santosh.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\santosh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\silpa.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\silpa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\unnikrishnan.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\unnikrishnan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\unnirajan.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\unnirajan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\directors\\vijayan.jpg",
+      "PackagePath": "staticwebassets\\images\\directors\\vijayan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\approve.png",
+      "PackagePath": "staticwebassets\\images\\icon\\approve.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\arrow(1).png",
+      "PackagePath": "staticwebassets\\images\\icon\\arrow(1).png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\auction.png",
+      "PackagePath": "staticwebassets\\images\\icon\\auction.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\bike.png",
+      "PackagePath": "staticwebassets\\images\\icon\\bike.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\board.png",
+      "PackagePath": "staticwebassets\\images\\icon\\board.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\checklist.png",
+      "PackagePath": "staticwebassets\\images\\icon\\checklist.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\cooperation.png",
+      "PackagePath": "staticwebassets\\images\\icon\\cooperation.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\dialpad.png",
+      "PackagePath": "staticwebassets\\images\\icon\\dialpad.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\download-pdf.png",
+      "PackagePath": "staticwebassets\\images\\icon\\download-pdf.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\driving.png",
+      "PackagePath": "staticwebassets\\images\\icon\\driving.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\electric-appliances.png",
+      "PackagePath": "staticwebassets\\images\\icon\\electric-appliances.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\email.png",
+      "PackagePath": "staticwebassets\\images\\icon\\email.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\facebook.png",
+      "PackagePath": "staticwebassets\\images\\icon\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\gold.png",
+      "PackagePath": "staticwebassets\\images\\icon\\gold.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\googlepay.png",
+      "PackagePath": "staticwebassets\\images\\icon\\googlepay.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\id-card.png",
+      "PackagePath": "staticwebassets\\images\\icon\\id-card.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\image.png",
+      "PackagePath": "staticwebassets\\images\\icon\\image.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\judge.png",
+      "PackagePath": "staticwebassets\\images\\icon\\judge.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\linkedin-logo.png",
+      "PackagePath": "staticwebassets\\images\\icon\\linkedin-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\location.png",
+      "PackagePath": "staticwebassets\\images\\icon\\location.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\mail.png",
+      "PackagePath": "staticwebassets\\images\\icon\\mail.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\maps-and-flags.png",
+      "PackagePath": "staticwebassets\\images\\icon\\maps-and-flags.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\note.png",
+      "PackagePath": "staticwebassets\\images\\icon\\note.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\open-menu.png",
+      "PackagePath": "staticwebassets\\images\\icon\\open-menu.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\password.png",
+      "PackagePath": "staticwebassets\\images\\icon\\password.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\paytm.png",
+      "PackagePath": "staticwebassets\\images\\icon\\paytm.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\pdf.png",
+      "PackagePath": "staticwebassets\\images\\icon\\pdf.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\phone-pe.png",
+      "PackagePath": "staticwebassets\\images\\icon\\phone-pe.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\pin.png",
+      "PackagePath": "staticwebassets\\images\\icon\\pin.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\printer.png",
+      "PackagePath": "staticwebassets\\images\\icon\\printer.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\search.png",
+      "PackagePath": "staticwebassets\\images\\icon\\search.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\seen.png",
+      "PackagePath": "staticwebassets\\images\\icon\\seen.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\send-data.png",
+      "PackagePath": "staticwebassets\\images\\icon\\send-data.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\send.png",
+      "PackagePath": "staticwebassets\\images\\icon\\send.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\show.png",
+      "PackagePath": "staticwebassets\\images\\icon\\show.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\sign-up.png",
+      "PackagePath": "staticwebassets\\images\\icon\\sign-up.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\social-media.png",
+      "PackagePath": "staticwebassets\\images\\icon\\social-media.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\style.css",
+      "PackagePath": "staticwebassets\\images\\icon\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\telephone.png",
+      "PackagePath": "staticwebassets\\images\\icon\\telephone.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\user(2).png",
+      "PackagePath": "staticwebassets\\images\\icon\\user(2).png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\user.png",
+      "PackagePath": "staticwebassets\\images\\icon\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\icon\\viewpng.png",
+      "PackagePath": "staticwebassets\\images\\icon\\viewpng.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\Logo2.png",
+      "PackagePath": "staticwebassets\\images\\logo\\Logo2.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\chat-icon.png",
+      "PackagePath": "staticwebassets\\images\\logo\\chat-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\close.png",
+      "PackagePath": "staticwebassets\\images\\logo\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\logo\\logo2.jpg",
+      "PackagePath": "staticwebassets\\images\\logo\\logo2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\online\\cancel.jpg",
+      "PackagePath": "staticwebassets\\images\\online\\cancel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\online\\gold.png",
+      "PackagePath": "staticwebassets\\images\\online\\gold.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\online\\onlinepayment.png",
+      "PackagePath": "staticwebassets\\images\\online\\onlinepayment.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\online\\qrcode.png",
+      "PackagePath": "staticwebassets\\images\\online\\qrcode.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\online\\tax.jpg",
+      "PackagePath": "staticwebassets\\images\\online\\tax.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\payment\\failed-to-make-payment-by-credit-card-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-vector.jpg",
+      "PackagePath": "staticwebassets\\images\\payment\\failed-to-make-payment-by-credit-card-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-vector.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRCommittee.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRCommittee.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRProject2020-21.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRProject2020-21.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRProject2021-22.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRProject2021-22.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRProject2022-23.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRProject2022-23.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRProject2023-24.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRProject2023-24.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\CSRProject2024-25.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\CSRProject2024-25.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\csr\\approvedCSRPolicy.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\csr\\approvedCSRPolicy.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport-2014-15.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport-2014-15.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport-2020-21.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport-2020-21.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport-2021-22.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport-2021-22.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport2015-16.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport2015-16.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport2016-17.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport2016-17.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport2022-21.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport2022-21.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\AnnualReport2023-24.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\AnnualReport2023-24.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\announcement\\Yogloans-AnnualReport2017-2018.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\announcement\\Yogloans-AnnualReport2017-2018.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\31stAGMNotice2021-2022.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\31stAGMNotice2021-2022.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\32ndAGMNotice.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\32ndAGMNotice.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\32ndScrutinizerReport.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\32ndScrutinizerReport.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\33rdAGMNotice.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\33rdAGMNotice.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\33rdScrutinizerReport.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\33rdScrutinizerReport.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\ScrutinizerReportSummary2023.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\ScrutinizerReportSummary2023.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\annual\\egm.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\annual\\egm.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\appoi\\Pushpangadan.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\appoi\\Pushpangadan.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\appoi\\SantoshKurup.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\appoi\\SantoshKurup.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\appoi\\anoopg.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\appoi\\anoopg.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\DeclarationUnderRule37BC.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\DeclarationUnderRule37BC.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\FORM10F.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\FORM10F.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\FORM15G.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\FORM15G.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\FORM15H.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\FORM15H.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\JointShareholdersDeclaration.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\JointShareholdersDeclaration.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\Non-ResidentTaxDeclaration.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\Non-ResidentTaxDeclaration.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\ResidentTaxDeclaration.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\ResidentTaxDeclaration.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\SelfDeclarationforavailmentofTreatyBenefit.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\SelfDeclarationforavailmentofTreatyBenefit.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\forms\\tds.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\forms\\tds.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\investor\\publicdis\\LiquidityRiskasonjune302021.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\investor\\publicdis\\LiquidityRiskasonjune302021.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\KYCpolicy.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\KYCpolicy.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\auction.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\auction.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\co-lending.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\co-lending.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\compromise.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\compromise.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\dividend.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\dividend.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\income.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\income.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\interest.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\interest.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\pdf\\policiesitems\\loan.pdf",
+      "PackagePath": "staticwebassets\\images\\pdf\\policiesitems\\loan.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\rbi.jpg",
+      "PackagePath": "staticwebassets\\images\\rbi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\seizingauth.png",
+      "PackagePath": "staticwebassets\\images\\seizingauth.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\upipay.png",
+      "PackagePath": "staticwebassets\\images\\upipay.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome-mobile.png",
+      "PackagePath": "staticwebassets\\images\\welcome-mobile.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome.png",
+      "PackagePath": "staticwebassets\\images\\welcome.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\goldLoan@3x.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\goldLoan@3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\images\\welcome\\grievance.png",
+      "PackagePath": "staticwebassets\\images\\welcome\\grievance.png"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\api.js",
+      "PackagePath": "staticwebassets\\js\\api.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\branch\\branch.js",
+      "PackagePath": "staticwebassets\\js\\branch\\branch.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\chat\\chat.js",
+      "PackagePath": "staticwebassets\\js\\chat\\chat.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\chat\\knowledge.json",
+      "PackagePath": "staticwebassets\\js\\chat\\knowledge.json"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\investor\\investors.js",
+      "PackagePath": "staticwebassets\\js\\investor\\investors.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\jaquery.js",
+      "PackagePath": "staticwebassets\\js\\jaquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\main.d810cf0ae7f39f28f336.js",
+      "PackagePath": "staticwebassets\\js\\main.d810cf0ae7f39f28f336.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\nach\\script.js",
+      "PackagePath": "staticwebassets\\js\\nach\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\online15\\script.js",
+      "PackagePath": "staticwebassets\\js\\online15\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\qrious.min.js",
+      "PackagePath": "staticwebassets\\js\\qrious.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Anas\\OneDrive\\Desktop\\latest\\yogloansdotnet - Copy\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.yogloansdotnet.props",
+      "PackagePath": "build\\yogloansdotnet.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.yogloansdotnet.props",
+      "PackagePath": "buildMultiTargeting\\yogloansdotnet.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.yogloansdotnet.props",
+      "PackagePath": "buildTransitive\\yogloansdotnet.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.yogloansdotnet.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.yogloansdotnet.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

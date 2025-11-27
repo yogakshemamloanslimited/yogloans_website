@@ -1,6 +1,23 @@
  @model List<yogloansdotnet.Models.NearbyModel>
+
+@{
+    var firstWelcome = Model?.FirstOrDefault();
+    string imageBase641 = null;
+    if (firstWelcome?.Image1 != null)
+    {
+        imageBase641 = "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image1);
+    }
+
+    string imageBase642 = null;
+    if (firstWelcome?.Image2 != null)
+    {
+        imageBase642 = "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image2);
+    }
+
+}
+
  <section class="welcome-container"
-      style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? "")); justify-content:center;" id="welcome-desktop">
+         style="background-image: url(@(imageBase641 ?? "" )); justify-content:center;" id="welcome-desktop">
         <h1 >Nearby Branches
         
             </h1>
@@ -17,7 +34,7 @@
 
 
      <section class="welcome-container"
-      style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
+         style="background-image: url(@(imageBase642 ?? ""))" id="welcome-mobile">
     <h1 >
         Nearby Branches
 

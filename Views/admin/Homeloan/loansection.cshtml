@@ -2,6 +2,8 @@
 @{
     ViewData["Title"] = "Admin Dashboard";
     Layout = "~/Views/admin/Shared/_Layout.cshtml";
+
+
 }
 <style>
     td{
@@ -40,10 +42,13 @@
                                     <tr>
                                         <td></td>
                                         <td>
-                                            @if (!string.IsNullOrEmpty(loan.icon))
+                                            @if (loan.icon != null && loan.icon.Length > 0)
                                             {
-                                                <img src="@loan.icon" alt="@loan.Loanname" style="width: 50px; height: 50px; object-fit: cover;" />
+                                                <img src="data:image/png;base64,@Convert.ToBase64String(loan.icon)"
+                                                     alt="@loan.Loanname"
+                                                     style="width:50px; height:50px; object-fit:cover;" />
                                             }
+
                                         </td>
                                         <td>@loan.Loanname</td>
                                         <td>@loan.Content</td>

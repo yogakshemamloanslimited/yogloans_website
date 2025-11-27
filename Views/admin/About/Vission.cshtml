@@ -1,0 +1,58 @@
+﻿
+<h4 class="card-title"> Vission</h4>
+<form id="vissionForm">
+    <div id="message2"></div>
+    <div id="danger2"></div>
+    <div class="mb-3">
+        <label class="form-label">Header</label>
+        <input type="text" class="form-control" name="header" required id="vission-header" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Content</label>
+        <textarea class="form-control" name="content" rows="5" required id="vission-content"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Mission</button>
+</form>
+<script>
+
+    document.getElementById("vissionForm").addEventListener("submit", async function (e) {
+         e.preventDefault();
+
+         const formData = new FormData(this);
+
+         const response = await fetch("MissionVission/addVission", {
+             method: "POST",
+             body: formData
+         });
+
+         const data = await response.json();
+         const messageDiv = document.getElementById("message2");
+               loadvission();
+         if (response.ok) {
+             messageDiv.innerHTML = `<div class="alert alert-success2">${data.message}</div>`;
+         } else {
+             messageDiv.innerHTML = `<div class="alert alert-danger2">${data.message}</div>`;
+         }
+     });
+        function loadvission() {
+            $('#vission-header').empty();
+            $('#vission-content').empty();
+        $.ajax({
+            url: "/admin/MissionVission/getVission",
+            method: "GET",
+            success: function (response) {
+
+                if (response.length > 0) {
+                    $('#vission-header').val(response[0].header);
+                    $('#vission-content').val(response[0].content);
+                }
+            }
+        });
+    }
+        $(document).ready(function () {
+        loadvission();
+    });
+
+</script>

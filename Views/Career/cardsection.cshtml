@@ -15,7 +15,7 @@
 <div class="modal fade" id="candidateModal" tabindex="-1" aria-labelledby="candidateModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-    <form enctype="multipart/form-data">
+            <form enctype="multipart/form-data" id="form">
 
         <div class="modal-header border-0 bg-white">
           <h5 class="modal-title w-100 text-center" id="candidateModalLabel" style="font-weight:700; letter-spacing:1px;">Add Profile</h5>
@@ -25,9 +25,9 @@
           <div class="profile-pic-section text-center mb-4">
             <div class="profile-pic-wrapper">
               <img id="profilePreview" src="https://ui-avatars.com/api/?name=Profile&background=eee&color=888&rounded=true" class="profile-pic-img" alt="Profile Preview">
-              <label for="profileInput" class="profile-pic-upload">
+              <label for="Profile" class="profile-pic-upload">
                 <i class="fas fa-camera"></i>
-                <input type="file" id="profileInput" name="Profile" accept="image/*" style="display:none;">
+                <input type="file" id="Profile" name="Profile" accept="image/*" style="display:none;">
               </label>
             </div>
             <div class="profile-pic-caption">Change Photo</div>
@@ -616,7 +616,7 @@ $.ajax({
         $('#postSelect').empty(); 
     var pin = $(this).val(); // get the current value
     $.ajax({
-        url : API.allapi.getapplicationData + pin,
+        url : API.allapi.getapplicationData2 + pin,
         method : "GET",
         success : function (response){
             const data =response;
@@ -663,7 +663,7 @@ $('#postSelect').on('change', function(){
 });
 
 // Profile image preview logic
-$(document).on('change', '#profileInput', function(e) {
+$(document).on('change', '#Profile', function(e) {
   const [file] = this.files;
   if (file) {
     const reader = new FileReader();
@@ -674,7 +674,7 @@ $(document).on('change', '#profileInput', function(e) {
   }
 });
 
-$('form').on('submit', function (e) {
+$('#form').on('submit', function (e) {
     e.preventDefault();
 
     var formData = new FormData(this);

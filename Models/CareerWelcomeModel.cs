@@ -9,11 +9,9 @@ namespace yogloansdotnet.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        public string Image1 { get; set; } = string.Empty;
+        public byte[]? Image1 { get; set; } 
 
-         [Required]
-        public string Image2 { get; set; } = string.Empty;
+        public byte[]? Image2 { get; set; } 
 
         [Required]
         public string Mainhead { get; set; } = string.Empty;

@@ -1,10 +1,19 @@
 @model List<yogloansdotnet.Models.AboutWelcome>
  
 
+    @{
+    var firstWelcome = Model?.FirstOrDefault();
+    string imageBase64 = firstWelcome?.Image1 != null
+? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image1)
 
+: null;
+    string image2Base64 = firstWelcome?.Image2 != null
+    ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image2)
+    : null;
+    }
 <!-- Desktop/Tablet Section (Image1) -->
 <section class="welcome-container"
-    style="background-image: url(@(Model.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
+         style="background-image: url(@(imageBase64 ?? ""))" id="welcome-desktop">
     <h1 id="header" style="visibility:hidden;">About Us</h1>
     <div class="button">
         <h1 id="header">About Us</h1>
@@ -14,7 +23,7 @@
 
 <!-- Mobile Section (Image2) -->
 <section class="welcome-container"
-    style="background-image: url(@(Model.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
+         style="background-image: url(@(image2Base64 ?? ""))" id="welcome-mobile">
     <h1 id="header" style="visibility:hidden;">About Us</h1>
     <div class="button">
         <h1 id="header">About Us</h1>
@@ -39,21 +48,3 @@
 </style>
 
 
-<script>
-    const link = document.getElementById('return-link');
-    const ref = document.referrer;
-
-    if (ref) {
-        // Create a temporary anchor to parse the URL
-        const url = new URL(ref);
-
-        // Get the last part of the path (e.g., 'investors' from '/investors')
-        let pageName = url.pathname.split('/').filter(Boolean).pop() || 'Home';
-
-        // Make it user-friendly
-        pageName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-
-        link.textContent = pageName;
-        link.href = ref;
-    }
-</script>

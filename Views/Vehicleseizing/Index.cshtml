@@ -14,13 +14,23 @@
         
     }
 
+    .loader {
+        display:none;
+    }
+
     .cards {
 
-        width: 100%;
+  
+        gap: 20px; /* optional spacing between cards */
+        display: flex;
+        flex-direction: column;
+    }
+    .card-items{
+              width: 100%;
         padding:20px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px; /* optional spacing between cards */
+        gap:20px;
     }
 
     #top-btn {
@@ -71,6 +81,33 @@
         top:50%;
         transition:0.5s;
     }
+
+    .filter-popping {
+        width: 100%;
+        position: fixed;
+        z-index: 800000;
+      
+        bottom: 0%;
+        display: none;
+    }
+
+        .filter-popping img {
+            width: 40px;
+            height: 40px;
+            /* background: white;
+            padding:20px;
+            border-radius:50%; */
+        }
+
+    .filter-image{
+        width: 70px;
+        height: 70px;
+       background: white;
+                padding:20px;
+                border-radius:50%;
+                display:flex; justify-content:center;
+                align-items:center;
+    }
     @@media(max-width:780px){
         .welcome-container {
             display: flex;
@@ -81,6 +118,12 @@
             width: 100%;
         }
 
+        .filter-popping {
+        display:flex;
+        justify-content:center; 
+        align-items:center;
+        padding:10px;
+        }
         .welcome-container .form-group{
             width:100%;
         }
@@ -112,6 +155,41 @@
         .fc-button-group2 {
             display: block;
         }
+
+        .filter{
+           width:100% !important;
+          visibility:hidden;
+           /*  
+            z-index:400000; */
+            height:0px !important;
+            position:absolute;
+            z-index: 40000;
+            display:none;
+        }
+
+        .filter-section #inner-child {
+            width:100%;
+        }
+        .cards{
+            width:100% !important;
+        }
+
+        .sort-by{
+            width:100% !important;
+        }
+
+.top-filter{
+    flex-direction:column !important;
+    gap:15px !important;
+}
+
+        #search-bike{
+            width:100% !important;
+        }
+
+        .welcome-container .form-group{
+            width:100% !important;
+        }
     }
 
     .price-range {
@@ -132,7 +210,7 @@
         width: 100%;
         height: 8px;
         border-radius: 5px;
-        background: linear-gradient(90deg, #ffb300 50%, #ddd 50%);
+        background: linear-gradient(90deg, #044697 100%, #ddd 50%);
         outline: none;
         transition: background 0.3s;
     }
@@ -143,14 +221,14 @@
             width: 22px;
             height: 22px;
             border-radius: 50%;
-            background: #ffb300;
+            background: #044697;
             cursor: pointer;
             box-shadow: 0 0 6px rgba(0,0,0,0.3);
             transition: background 0.3s ease;
         }
 
             .price-slider::-webkit-slider-thumb:hover {
-                background: #ff9800;
+                background: #044697;
             }
 
     .range-values {
@@ -161,7 +239,23 @@
         color: #666;
     }
 
-        </style>
+    @@keyframes icon {
+        0%
+
+    {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+    }
+
+    .loading-icon {
+        animation: icon 1s linear infinite;
+    }
+</style>
 <button class="btn" id="top-btn" style="font-size: 25px;"><i class="fa-solid fa-arrow-up"></i></button>
 <div style="width:100%; display:flex; justify-content:center; position: relative;
   z-index: 4; background-image:url('@Url.Content("~/images/welcome.png")'); background-size: cover;">
@@ -205,25 +299,23 @@
                     <h5>Filter By Company</h5>
 
 
-                    <div class="range-values" style="display:flex; justify-content:center; align-items:start; gap:8px; flex-direction:column;">
-                        <span style="display:flex; gap:3px;"><input type="checkbox" />ALL</span>
-                        <span style="display:flex; gap:3px;"><input type="checkbox" />Company Details</span>
+                    <div class="values-com" style="display:flex; justify-content:center; align-items:start; gap:8px; flex-direction:column;">
+                       
                     </div>
                 </div>
                 <div class="" style="margin-bottom:35px; width: 300px;
   margin: 20px auto;
     margin-bottom: 35px;
   font-family: 'Poppins', sans-serif;">
-                    <h5>Filter By Model</h5>
+                    <h5>Filter By Model Year</h5>
 
 
-                    <div class="range-values" style="display:flex; justify-content:center; align-items:start; gap:8px; flex-direction:column;">
-                        <span style="display:flex; gap:3px;"><input type="checkbox" />ALL</span>
-                        <span style="display:flex; gap:3px;"><input type="checkbox" />Model Details</span>
+                    <div class="filter-model" style="display:flex; justify-content:center; align-items:start; gap:8px; flex-direction:column;">
+                       
                     </div>
                 </div>
                 
-                <div class="" style="margin-bottom:35px; width: 300px;
+               @*  <div class="" style="margin-bottom:35px; width: 300px;
   margin: 20px auto;
     margin-bottom: 35px;
   font-family: 'Poppins', sans-serif;">
@@ -234,115 +326,54 @@
                         <span style="display:flex; gap:3px;"><input type="checkbox" />ALL</span>
                         <span style="display:flex; gap:3px;"><input type="checkbox" />Model Details</span>
                     </div>
-                </div>
+                </div> *@
             </div>
             </div>
 
             </div>
            
-          </div>
-        
-    </div>
+          
     <div class="cards" style="position: relative; width:75%;">
-        <div class="top-bar" style="position:absolute; width:100%; padding:10px; ">
-
-            <div class="top-fiter" style="width:100%; display:flex; flex-direction:row; align-items: center; justify-content:space-between;">
-                <input type="text"  class="form-control" style="width:30%" placeholder="search your dream bike"/>
-                <div class="sort-by" style="width:40%; display:flex; gap: 5px;
- justify-content:center; align-items:center;">
+       
+      
+        <div class="top-bar" style="width:100%; padding:10px; max-height:200px;">
+            <div class="top-filter" style="width:100%; display:flex; flex-direction:row; align-items:center; justify-content:space-between;">
+                <input type="text" id="search-bike" class="form-control" style="width:30%" placeholder="Search your dream bike" />
+                <div class="sort-by" style="width:40%; display:flex; gap:5px; justify-content:center; align-items:center;">
                     <label>Sort By :</label>
-                    <select class="form-control" style="width: 70%;">
-                        <option>-select-</option>
-                        <option>Price [Lowest to Highest]</option>
-                        <option>Price [Highest to Lowest]</option>
-                        <option>Name [A to Z]</option>
+                    <select id="sort-bikes" class="form-control" style="width:70%;">
+                        <option value="">-select-</option>
+                        <option value="price-low">Price [Lowest to Highest]</option>
+                        <option value="price-high">Price [Highest to Lowest]</option>
+                        <option value="name">Name [A to Z]</option>
                     </select>
                 </div>
             </div>
-
         </div>
-        <div class="card">
-            <div class="top" style="position:relative">
-                <p style="position:absolute; left:0%; top:0%; background:black; color:white; width: auto;
-  padding: 5px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;">
-                    ₹ 4000000
-                </p>
-                <img src="https://lirp.cdn-website.com/072a18a0/dms3rep/multi/opt/ducati-scrambler-dark-1920w.jpeg" alt="Sport Bike">
-            </div>
-            <div class="bottom-details" style="height:100px;">
-                <p style="padding: 20px;">
-                    Ducati Scrambler Dark 1920w
-                </p>
-            </div>
+        <div class="preloader2" style="width:100%; height:100%; background:white;  position:absolute; 
+  max-height: 550px;
+  z-index: 4000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;">
+            <img src="/images/icon/mountain-bike.png"
+                 class="loading-icon"
+                 style="width:50px; height:50px;  top:50%; left:50%; transform:translate(-50%, -50%);" />
         </div>
-        <div class="card">
-            <div class="top" style="position:relative">
-                <p style="position:absolute; left:0%; top:0%; background:black; color:white; width: auto;
-  padding: 5px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;">
-                    ₹ 40000000000
-                </p>
-                <img src="https://lirp.cdn-website.com/072a18a0/dms3rep/multi/opt/bmw-1948-r24-800x600-1920w.jpeg" alt="Classic Bike">
-            </div>
-            <div class="bottom-details" style="height:100px;">
-                <p style="padding: 20px;">
-                    1948 BMW R24
-                </p>
-            </div>
+        <div class="card-items">
+         
         </div>
-        <div class="card">
-            <div class="top" style="position:relative">
-                <p style="position:absolute; left:0%; top:0%; background:black; color:white; width: auto;
-  padding: 5px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;">
-                    ₹ 40000000000
-                </p>
-                <img src="https://lirp.cdn-website.com/072a18a0/dms3rep/multi/opt/1960-fb-mondial-88-sport-1920w.jpg" alt="Adventure Bike">
-            </div>
-            <div class="bottom-details" style="height:100px;">
-                <p style="padding: 20px;">
-                    960 fb-MONDIAL-88-SPORT
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="top" style="position:relative">
-                <p style="position:absolute; left:0%; top:0%; background:black; color:white; width: auto;
-  padding: 5px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;">
-                    ₹ 40000000000
-                </p>
-                <img src="https://lirp.cdn-website.com/072a18a0/dms3rep/multi/opt/bmw-1935-r17-800x600-1920w.jpeg" alt="Classic Bike">
-            </div>
-            <div class="bottom-details" style="height:100px;">
-                <p style="padding: 20px;">
-                    BMW 1935 R17
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="top" style="position:relative">
-                <p style="position:absolute; left:0%; top:0%; background:black; color:white; width: auto;
-  padding: 5px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;">
-                    ₹ 40000000000
-                </p>
-                <img src="https://lirp.cdn-website.com/072a18a0/dms3rep/multi/opt/ktm-r-100-1953-1920w.jpg" alt="Adventure Bike">
-            </div>
-            <div class="bottom-details" style="height:100px;">
-                <p style="padding: 20px;">
-                    KTM R 100-1953-1920w
-                </p>
-            </div>
-        </div>
+       
+     
+    </div>
 
 </section>
+<div class="filter-popping">
+    <div class="filter-image">
+        <img src="~/images/icon/filter.png" id="filter-image" />
+    </div>
+  
+</div>
 <script>
    
     
@@ -354,7 +385,7 @@
       output.textContent = `₹${parseInt(this.value).toLocaleString()}`;
 
       const percent = ((this.value - this.min) / (this.max - this.min)) * 100;
-      this.style.background = `linear-gradient(90deg, #ffb300 ${percent}%, #ddd ${percent}%)`;
+      this.style.background = `linear-gradient(90deg, #044697 ${percent}%, #ddd ${percent}%)`;
     };
 </script>
 <script>
@@ -397,7 +428,13 @@
 </script>
 <script>
        $(document).ready(function () {
-               // Get session string from Razor
+                  $('.loader-mask').append(`
+        <img src="/images/icon/mountain-bike.png"
+             class="loading-icon"
+             style="width:50px; height:50px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);" />
+    `);
+
+                   // Get session string from Razor
              var mobile = '@Context.Session.GetString("mobile")';
            
         $.ajax({
@@ -435,6 +472,177 @@
                    `);
             }
         });
+
+        });
+              $.ajax({
+        url: API.allapi.Printitems,
+        method: "GET",
+        success: function (res) {
+            if (res.success && Array.isArray(res.data)) {
+
+                   // inside your $.ajax success where res.data exists
+    let bikeList = res.data;
+
+    // normalize field names if necessary (optional)
+    // bikeList.forEach(b => { b.Year = b.Year?.toString(); b.make = b.make?.toString(); });
+
+    let minPrice = Math.min(...bikeList.map(b => b.Amount));
+    let maxPrice = Math.max(...bikeList.map(b => b.Amount));
+        $('.range-values').empty();
+                         $('.range-values').append(`<span>${minPrice}</span> <span>${maxPrice}</span>`);
+    $('#priceRange').attr('min', minPrice).attr('max', maxPrice).val(maxPrice);
+    $('#priceValue').text('₹' + maxPrice.toLocaleString());
+
+    // render cards (purely visual)
+    function renderCards(list) {
+                      $('.preloader2').show();
+                  //$('.loader-mask').delay(450).fadeOut('slow');
+        $('.card-items').empty();
+        if (!list.length) {
+                   $('.preloader2').fadeOut();
+                $('.card-items').append('<img src="/images/Tiredman.jpg"  style="width:200px; height:200px; position:absolute; left:50%; opacity:0.3; transform: translate(-50%,-10%);"/>');
+            return;
+        }
+        list.forEach(item => {
+            $('.card-items').append(`
+                       <div class="card" style="margin:5px;" data-application="${item.application_id}">
+                    <div class="top" style="position:relative; background-image:url('${item.image_url}');
+                        height:210px; background-position:center; background-repeat:no-repeat; background-size:contain;">
+                        <p style="position:absolute; left:0; top:0; background:black; color:white; padding:5px;
+                            border-top-right-radius:20px; border-bottom-right-radius:20px;">
+                            ₹${(item.Amount || 0).toLocaleString()}
+                        </p>
+                    </div>
+                    <div class="bottom-details" style="height:100px; padding:10px 20px;">
+                        <div style="font-weight:600">${item.product_name || ''}</div>
+                        <div style="font-size:12px; color:#666;">${item.make || ''} - ${item.Year || ''} - ${item.location || ''}</div>
+                    </div>
+                </div>
+            `);
+        });
+              $('.preloader2').fadeOut();
+    }
+
+    // generate unique checkbox lists ONCE
+    let uniqueMakes = [...new Set(bikeList.map(b => b.make).filter(Boolean))].sort();
+    let uniqueModels = [...new Set(bikeList.map(b => b.Year).filter(v => v !== undefined && v !== null))].map(String);
+    uniqueModels = [...new Set(uniqueModels)].sort((a,b) => a.localeCompare(b)); // ensure unique & string
+
+    $('.values-com').empty();
+    $('.filter-model').empty();
+
+    uniqueMakes.forEach(make => {
+        // name/class used for selecting checked values
+        $('.values-com').append(`<span style="display:flex; gap:6px; align-items:center;">
+            <input type="checkbox" class="make-filter" value="${make}" /> <span>${make}</span>
+        </span>`);
     });
 
+    uniqueModels.forEach(year => {
+        // convert to string for the checkbox value
+        $('.filter-model').append(`<span style="display:flex; gap:6px; align-items:center;">
+            <input type="checkbox" class="model-filter" value="${year}" /> <span>${year}</span>
+        </span>`);
+    });
+
+    // Combined filter function (search + price + makes + models + sort)
+    function applyFilters() {
+        let searchTerm = $('#search-bike').val()?.toLowerCase() || '';
+        let selectedPrice = parseFloat($('#priceRange').val()) || maxPrice;
+        let sortValue = $('#sort-bikes').val();
+
+        let selectedMakes = $('.make-filter:checked').map(function(){ return $(this).val(); }).get();
+        let selectedModels = $('.model-filter:checked').map(function(){ return $(this).val(); }).get();
+
+        // DEBUG (uncomment if you need)
+        // console.log({searchTerm, selectedPrice, selectedMakes, selectedModels, sortValue});
+
+        let filtered = bikeList.filter(bike => {
+            // normalize for comparison (convert everything to string)
+            let pname = (bike.product_name || '').toLowerCase();
+            let make = bike.make == null ? '' : String(bike.make);
+            let year = bike.Year == null ? '' : String(bike.Year);
+
+            let matchSearch = pname.includes(searchTerm);
+            let matchPrice = (typeof bike.Amount === 'number') ? (bike.Amount <= selectedPrice) : true;
+            let matchMake = selectedMakes.length === 0 || selectedMakes.includes(make);
+            let matchModel = selectedModels.length === 0 || selectedModels.includes(year);
+
+            return matchSearch && matchPrice && matchMake && matchModel;
+        });
+
+        // sorting
+        if (sortValue === 'price-low') filtered.sort((a,b) => (a.Amount||0) - (b.Amount||0));
+        else if (sortValue === 'price-high') filtered.sort((a,b) => (b.Amount||0) - (a.Amount||0));
+        else if (sortValue === 'name') filtered.sort((a,b) => (a.product_name||'').localeCompare(b.product_name||''));
+
+        renderCards(filtered);
+    }
+
+    // initial render
+    renderCards(bikeList);
+
+    // wire events to the single applyFilters function
+    $(document).on('input', '#search-bike', applyFilters);
+    $(document).on('input', '#priceRange', function(){
+        $('#priceValue').text('₹' + parseInt($(this).val()).toLocaleString());
+        applyFilters();
+    });
+    $(document).on('change', '#sort-bikes', applyFilters);
+    $(document).on('change', '.make-filter, .model-filter', applyFilters);
+
+            } else {
+                console.error("Unexpected response format:", res);
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("AJAX Error:", error);
+        }
+    });
+           $('.filter-popping').on('click', function () {
+            const filterBox = $('.filter');
+        const filterIcon = $('#filter-image');
+
+        if (filterBox.is(':visible')) {
+            // 🔹 Hide filter
+            filterBox.css({
+                visibility: 'hidden',
+                opacity: '0',
+                transform: 'translateY(20px)',
+                display: 'none',
+                position:'absolute'
+            });
+            // Change icon to "filter"
+            filterIcon.attr('src', '/images/icon/filter.png');
+        } else {
+            // 🔹 Show filter
+            filterBox.css({
+                visibility: 'visible',
+                opacity: '1',
+                transform: 'translateY(0)',
+                display: 'block',
+                           position:'absolute'
+            });
+            // Change icon to "close"
+            filterIcon.attr('src', '/images/icon/arrow(1).png');
+        }
+});
+
+    $(document).on('click', '.card', function() {
+        const appId = $(this).data('application');
+     
+  
+           $.ajax({
+        url: '@Url.Action("Application_Id", "Vehicleseizing")',
+        type: 'POST', // or 'POST'
+            data: { Application_Id: appId },
+        success: function (response) {
+                    window.location.href = '@Url.Action("Productdetails", "Vehicleseizing")';
+        },
+        error: function (xhr, status, error) {
+            console.error(error);
+        }
+    });
+
+        });
 </script>

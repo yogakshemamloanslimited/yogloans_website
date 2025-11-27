@@ -1,9 +1,10 @@
-using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+using iText.Commons.Actions.Contexts;
 using Microsoft.AspNetCore.Authorization;
-using yogloansdotnet.Models;
-using yogloansdotnet.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
+using yogloansdotnet.Data;
+using yogloansdotnet.Models;
 
 namespace yogloansdotnet.Controllers
 {
@@ -33,7 +34,7 @@ namespace yogloansdotnet.Controllers
             };
             return View("/Views/admin/Homeloan/loansection.cshtml", viewModel);
         }
-        
+
         [Route("points")]
         public async Task<IActionResult> points()
         {
@@ -88,139 +89,202 @@ namespace yogloansdotnet.Controllers
             }
         }
 
+        //[HttpPost]
+        //[Route("create")]
+        //public async Task<IActionResult> Loancreate(LoanModel model, IFormFile icon)
+        //{
+        //    try
+        //    {
+        //        _logger.LogInformation($"Received form submission. Loanname: {model.Loanname}, Content: {model.Content}");
+
+        //        // Validate required fields
+        //        if (string.IsNullOrWhiteSpace(model.Loanname))
+        //        {
+        //            TempData["Error"] = "Loanname is required";
+        //            return RedirectToAction("Index", "Admin", new { area = "Admin" });
+        //        }
+
+        //        if (string.IsNullOrWhiteSpace(model.Content))
+        //        {
+        //            TempData["Error"] = "Content is required";
+        //            return RedirectToAction("Index", "Admin", new { area = "Admin" });
+        //        }
+
+        //        // Verify database connection
+        //        try
+        //        {
+        //            await _context.Database.OpenConnectionAsync();
+        //            _logger.LogInformation("Database connection successful");
+        //            await _context.Database.CloseConnectionAsync();
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            _logger.LogError(ex, "Database connection failed");
+        //            TempData["Error"] = "Database connection failed. Please try again.";
+        //            throw;
+        //        }
+
+        //        // Check if we're updating an existing record
+        //        if (model.Id > 0)
+        //        {
+        //            var existingRecord = await _context.Loans.FindAsync(model.Id);
+        //            if (existingRecord != null)
+        //            {
+        //                _logger.LogInformation("Updating existing record");
+        //                existingRecord.Loanname = model.Loanname;
+        //                existingRecord.Content = model.Content;
+
+        //                // Handle icon upload
+        //                if (icon != null)
+        //                {
+        //                    _logger.LogInformation("Processing icon upload");
+        //                    string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+        //                    if (!Directory.Exists(uploadsFolder))
+        //                    {
+        //                        Directory.CreateDirectory(uploadsFolder);
+        //                    }
+
+        //                    // Delete old icon if exists
+        //                    if (!string.IsNullOrEmpty(existingRecord.icon))
+        //                    {
+        //                        var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingRecord.icon.TrimStart('/'));
+        //                        if (System.IO.File.Exists(oldFilePath))
+        //                        {
+        //                            System.IO.File.Delete(oldFilePath);
+        //                        }
+        //                    }
+
+        //                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + icon.FileName;
+        //                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+        //                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+        //                    {
+        //                        await icon.CopyToAsync(fileStream);
+        //                    }
+        //                    existingRecord.icon = "/uploads/" + uniqueFileName;
+        //                }
+
+        //                _context.Loans.Update(existingRecord);
+        //                _logger.LogInformation("Updated record in context");
+        //                TempData["Success"] = $"{model.Loanname} loan details updated successfully!";
+        //            }
+        //            else
+        //            {
+        //                TempData["Error"] = "Record not found";
+        //                return RedirectToAction("Index", "Admin", new { area = "Admin" });
+        //            }
+        //        }
+        //        else
+        //        {
+        //            _logger.LogInformation("Creating new record");
+        //            // Handle icon upload for new record
+        //            if (icon != null)
+        //            {
+        //                _logger.LogInformation("Processing icon upload for new record");
+        //                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+        //                if (!Directory.Exists(uploadsFolder))
+        //                {
+        //                    Directory.CreateDirectory(uploadsFolder);
+        //                }
+
+        //                string uniqueFileName = Guid.NewGuid().ToString() + "_" + icon.FileName;
+        //                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+        //                using (var fileStream = new FileStream(filePath, FileMode.Create))
+        //                {
+        //                    await icon.CopyToAsync(fileStream);
+        //                }
+        //                model.icon = "/uploads/" + uniqueFileName;
+        //            }
+
+        //            _context.Loans.Add(model);
+        //            _logger.LogInformation("Added new record to context");
+        //            TempData["Success"] = $"{model.Loanname} loan details added successfully!";
+        //        }
+
+        //        try
+        //        {
+        //            var result = await _context.SaveChangesAsync();
+        //            _logger.LogInformation($"Database save completed. Affected rows: {result}");
+        //        }
+        //        catch (DbUpdateException ex)
+        //        {
+        //            _logger.LogError(ex, "Database update failed");
+        //            _logger.LogError($"Inner exception: {ex.InnerException?.Message}");
+        //            TempData["Error"] = "Failed to save changes. Please try again.";
+        //            throw;
+        //        }
+
+        //        return RedirectToAction("Index", "Admin", new { area = "Admin" });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError(ex, "Error occurred while processing form submission");
+        //        TempData["Error"] = "An error occurred while processing your request. Please try again.";
+        //        return RedirectToAction("Index", "Admin", new { area = "Admin" });
+        //    }
+        //}
+
         [HttpPost]
         [Route("create")]
-        public async Task<IActionResult> Loancreate(LoanModel model, IFormFile icon)
+        public async Task<IActionResult> Loancreate(LoanModel model, IFormFile? icon)
         {
             try
             {
-                _logger.LogInformation($"Received form submission. Loanname: {model.Loanname}, Content: {model.Content}");
+                byte[]? imageBytes = null;
 
-                // Validate required fields
-                if (string.IsNullOrWhiteSpace(model.Loanname))
+                // Convert uploaded icon to bytes
+                if (icon != null && icon.Length > 0)
                 {
-                    TempData["Error"] = "Loanname is required";
-                    return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                    using var ms = new MemoryStream();
+                    await icon.CopyToAsync(ms);
+                    imageBytes = ms.ToArray();
                 }
 
-                if (string.IsNullOrWhiteSpace(model.Content))
+                if (model.Id == 0)  // CREATE
                 {
-                    TempData["Error"] = "Content is required";
-                    return RedirectToAction("Index", "Admin", new { area = "Admin" });
-                }
-
-                // Verify database connection
-                try
-                {
-                    await _context.Database.OpenConnectionAsync();
-                    _logger.LogInformation("Database connection successful");
-                    await _context.Database.CloseConnectionAsync();
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Database connection failed");
-                    TempData["Error"] = "Database connection failed. Please try again.";
-                    throw;
-                }
-
-                // Check if we're updating an existing record
-                if (model.Id > 0)
-                {
-                    var existingRecord = await _context.Loans.FindAsync(model.Id);
-                    if (existingRecord != null)
+                    var loan = new LoanModel
                     {
-                        _logger.LogInformation("Updating existing record");
-                        existingRecord.Loanname = model.Loanname;
-                        existingRecord.Content = model.Content;
+                        Loanname = model.Loanname,
+                        Content = model.Content,
+                        icon = imageBytes   // will be null if no icon uploaded
+                    };
 
-                        // Handle icon upload
-                        if (icon != null)
+                    _context.Loans.Add(loan);
+                }
+                else  // UPDATE
+                {
+                    var existing = await _context.Loans.FirstOrDefaultAsync(a => a.Id == model.Id);
+
+                    if (existing != null)
+                    {
+                        existing.Loanname = model.Loanname;
+                        existing.Content = model.Content;
+
+                        // Update icon only if new one uploaded
+                        if (imageBytes != null)
                         {
-                            _logger.LogInformation("Processing icon upload");
-                            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                            if (!Directory.Exists(uploadsFolder))
-                            {
-                                Directory.CreateDirectory(uploadsFolder);
-                            }
-
-                            // Delete old icon if exists
-                            if (!string.IsNullOrEmpty(existingRecord.icon))
-                            {
-                                var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingRecord.icon.TrimStart('/'));
-                                if (System.IO.File.Exists(oldFilePath))
-                                {
-                                    System.IO.File.Delete(oldFilePath);
-                                }
-                            }
-
-                            string uniqueFileName = Guid.NewGuid().ToString() + "_" + icon.FileName;
-                            string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                            using (var fileStream = new FileStream(filePath, FileMode.Create))
-                            {
-                                await icon.CopyToAsync(fileStream);
-                            }
-                            existingRecord.icon = "/uploads/" + uniqueFileName;
+                            existing.icon = imageBytes;
                         }
 
-                        _context.Loans.Update(existingRecord);
-                        _logger.LogInformation("Updated record in context");
-                        TempData["Success"] = $"{model.Loanname} loan details updated successfully!";
-                    }
-                    else
-                    {
-                        TempData["Error"] = "Record not found";
-                        return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                        _context.Loans.Update(existing);
                     }
                 }
-                else
-                {
-                    _logger.LogInformation("Creating new record");
-                    // Handle icon upload for new record
-                    if (icon != null)
-                    {
-                        _logger.LogInformation("Processing icon upload for new record");
-                        string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                        if (!Directory.Exists(uploadsFolder))
-                        {
-                            Directory.CreateDirectory(uploadsFolder);
-                        }
 
-                        string uniqueFileName = Guid.NewGuid().ToString() + "_" + icon.FileName;
-                        string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                        using (var fileStream = new FileStream(filePath, FileMode.Create))
-                        {
-                            await icon.CopyToAsync(fileStream);
-                        }
-                        model.icon = "/uploads/" + uniqueFileName;
-                    }
+                await _context.SaveChangesAsync();
 
-                    _context.Loans.Add(model);
-                    _logger.LogInformation("Added new record to context");
-                    TempData["Success"] = $"{model.Loanname} loan details added successfully!";
-                }
-
-                try
-                {
-                    var result = await _context.SaveChangesAsync();
-                    _logger.LogInformation($"Database save completed. Affected rows: {result}");
-                }
-                catch (DbUpdateException ex)
-                {
-                    _logger.LogError(ex, "Database update failed");
-                    _logger.LogError($"Inner exception: {ex.InnerException?.Message}");
-                    TempData["Error"] = "Failed to save changes. Please try again.";
-                    throw;
-                }
-
-                return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                TempData["Success"] = $"{model.Loanname} loan details added successfully!";
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error occurred while processing form submission");
-                TempData["Error"] = "An error occurred while processing your request. Please try again.";
+                _logger.LogError(ex, "Error processing loan create");
+                TempData["Error"] = "An error occurred while processing your request.";
                 return RedirectToAction("Index", "Admin", new { area = "Admin" });
             }
         }
+
+
+
+
 
         [HttpPost]
         [Route("delete/{id}")]
@@ -236,15 +300,7 @@ namespace yogloansdotnet.Controllers
                 }
 
                 // Delete the icon file if it exists
-                if (!string.IsNullOrEmpty(loan.icon))
-                {
-                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, loan.icon.TrimStart('/'));
-                    if (System.IO.File.Exists(filePath))
-                    {
-                        System.IO.File.Delete(filePath);
-                    }
-                }
-
+               
                 _context.Loans.Remove(loan);
                 await _context.SaveChangesAsync();
 

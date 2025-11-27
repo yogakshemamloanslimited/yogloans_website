@@ -1,109 +1,90 @@
-@*   
+<link rel="stylesheet" href="~/css/policy/policy.css" asp-append-version="true">
 
-  <link rel="stylesheet" href="~/css/csr/reportcard.css" asp-append-version="true">
-    <div class="report-cards" id="card-report">
-
-        
-  </div>
-
-
-
-  
-  
-<script>
-  $.ajax({
-    url : "/csr-detials",
-    method : "GET",
-   success : function(response){
-        console.log( response); // Shows the array
-        if (Array.isArray(response) && response.length > 0) {
-            response.forEach(function(item) {
-               $('#card-report').append(`
-                   <div class="section">
-          <div class="section-item">
-            <h3>${item.title}</h3>
-          <iframe src="${item.filePath}" width="100%" height="300px"></iframe>
-
-            <div class="pdf">
-              <a href="${item.filePath}" target="_blank">Download PDF</a>
-            </div>
-          </div>
-        </div>
-               `);
-            });
-        } else {
-            console.warn("Response is empty or not an array");
-        }
-    }
-  })
-</script> *@
-
-
- 
- <link rel="stylesheet" href="~/css/policy/policy.css" asp-append-version="true">
-  <div class="report-cards" id="policy-report">
-     
-</div>
+<div class="report-cards" id="policy-report"></div>
 
 <!-- Bootstrap Modal -->
 <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" style="height:80vh;">
-        <iframe id="pdfViewer" src="" width="100%" height="100%"></iframe>
-      </div>
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height:80vh; overflow:auto;">
+                <div id="pdfContainer" style="text-align:center;"></div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
 <script>
-  
- $.ajax({
-  url: "/csr-detials",
-  method: "GET",
-  success: function(response) {
-    if (Array.isArray(response) && response.length > 0) {
-      let html = '';
-      response.forEach(function(item) {
-        html += `
-          <div class="card">
-            <div class="section-item">
-             
-             @*   <button class="btn btn-primary view-pdf" data-src="${item.filePath}">View PDF</button></h3> *@
-             
-              <div class="pdfs">
-                    <img src="/images/icon/pdf.png" />
-                   <p>${item.title}
+    // Fetch PDF list from backend
+    $.ajax({
+      url: "/csr-detials",
+      method: "GET",
+      success: function(response) {
+        if (Array.isArray(response) && response.length > 0) {
+          let html = '';
+          response.forEach(function(item) {
+            html += `
+              <div class="card p-3 mb-3">
+                <div class="section-item d-flex justify-content-between align-items-center" style="flex-direction: column;">
+                  <div class="pdfs d-flex align-items-center" style="flex-direction:column;">
+                    <img src="/images/icon/pdf.png" width="40" class="me-2" />
+                    <p class="mb-0">${item.title}</p>
+                  </div>
+                  <div>
+                    <button class="btn view-pdf" data-src="${item.filePath}" style="background-color: #B4181E; color:white;">View PDF</button>
 
-                  </p>
-                <a href="${item.filePath}" target="_blank">Download PDF </a>
-             
+                  </div>
+                </div>
               </div>
-            </div> 
-          </div>
-        `;
-      });
-      $('#policy-report').html(html);
-    } else {
-      console.warn("Response is empty or not an array");
-    }
-  }
-});
+            `;
+          });
+          $('#policy-report').html(html);
+        } else {
+          $('#policy-report').html('<p>No policies found.</p>');
+        }
+      },
+      error: function() {
+        $('#policy-report').html('<p>Error loading policies.</p>');
+      }
+    });
 
-// Open modal and load PDF
-$(document).on('click', '.view-pdf', function() {
-  const src = $(this).data('src');
-  $('#pdfViewer').attr('src', src);
-  $('#pdfModal').modal('show');
-});
+    // When View PDF button clicked
+    $(document).on('click', '.view-pdf', async function() {
+      const pdfUrl = $(this).data('src');
+      $('#pdfContainer').html('<p>Loading PDF...</p>');
+      $('#pdfModal').modal('show');
 
-// Clear PDF when modal closes
-$('#pdfModal').on('hidden.bs.modal', function () {
-  $('#pdfViewer').attr('src', '');
-});
+      try {
+        const loadingTask = pdfjsLib.getDocument(pdfUrl);
+        const pdf = await loadingTask.promise;
+        $('#pdfContainer').html('');
 
+        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+          const page = await pdf.getPage(pageNum);
+          const viewport = page.getViewport({ scale: 1.2 });
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+          canvas.style.marginBottom = '10px';
+          $('#pdfContainer').append(canvas);
+
+          await page.render({ canvasContext: context, viewport: viewport }).promise;
+        }
+      } catch (error) {
+        console.error("Error loading PDF:", error);
+        $('#pdfContainer').html('<p>Failed to load PDF.</p>');
+      }
+    });
+
+    // Clear on close
+    $('#pdfModal').on('hidden.bs.modal', function () {
+      $('#pdfContainer').html('');
+    });
 </script>

@@ -15,11 +15,11 @@ namespace yogloansdotnet.Models
         [Required]
         public string SubContent { get; set; } = string.Empty;
 
-        [StringLength(255)]
-        public string? Image1 { get; set; }
+       
+        public byte[]? Image1 { get; set; }
 
-        [StringLength(255)]
-        public string? Image2 { get; set; }
+        
+        public byte[]? Image2 { get; set; }
 
         [Required]
         public int loan_id { get; set; }

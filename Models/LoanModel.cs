@@ -14,8 +14,8 @@ namespace yogloansdotnet.Models
 
         [Required]
         public string Content { get; set; } = string.Empty;
-        [StringLength(255)]
-        public string? icon { get; set; }
+        
+        public byte[]? icon { get; set; }
 
     
     

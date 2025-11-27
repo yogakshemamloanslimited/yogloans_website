@@ -36,11 +36,19 @@
                             <tbody>
                                 @foreach(var Policy in Model)
                                 {
+                                    string pdfSrc = "";
+
+                                    if (Policy.FilePath != null)
+                                    {
+                                        var base64 = Convert.ToBase64String(Policy.FilePath);
+                                        pdfSrc = $"data:application/pdf;base64,{base64}";
+                                    }
+
                                     <tr>
                                         <td></td>
                                         <td>@Policy.Title</td>
                                         <td>
-                                            <a href="@Policy.FilePath" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
+                                            <a href="@pdfSrc" target="_blank" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
                                         </td>
                                         <td>
                                             <button class="btn btn-sm btn-info" onclick="editCsr(@Policy.Id, '@Policy.Title')">Edit</button>
@@ -61,7 +69,7 @@
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog">
         <form class="modal-content" method="post" action="/admin/Policyadmin/add-policy" enctype="multipart/form-data" id="csr">
-        <input type="hidden" id="id" name="id">
+        <input type="hidden" id="id" name="Id">
             <div class="modal-header">
                 <h5 class="modal-title">Add Policy </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -92,7 +100,7 @@
                                         <input type="text" name="Title" class="form-control" placeholder="Title" required>
                                       
                                     </div>
-                                        <input type="file" name="pdf" id="gold-upload-icon" accept="application/pdf" class="form-control" required>
+                            <input type="file" name="FilePath" id="gold-upload-icon" accept="application/pdf" class="form-control" required>
       
                                     
                                 </div>

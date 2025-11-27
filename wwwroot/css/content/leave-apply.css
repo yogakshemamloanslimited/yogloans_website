@@ -1,0 +1,150 @@
+﻿.page-title-heading {
+    width: 100%;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-control {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+.name-profile {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: start !important;
+    line-height: .2;
+}
+
+h2, p {
+    color: black;
+}
+
+.leave-history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+    color: #007bff;
+}
+
+    .leave-history .form-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+table.dataTable tbody tr td {
+    text-align: center;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+#leaveTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+    #leaveTable thead {
+        background-color: #103db0;
+        color: white;
+    }
+
+    #leaveTable th, #leaveTable td {
+        padding: 12px 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    #leaveTable tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    #leaveTable tbody tr:hover {
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
+    #leaveTable a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        #leaveTable a:hover {
+            text-decoration: underline;
+        }
+
+.modal-backdrop {
+    display: none;
+}
+
+.modal {
+ /*   position: absolute;*/
+
+}
+
+.modal-open .modal {
+    overflow-x: visible;
+    overflow-y: visible;
+   /* position: absolute;*/
+    z-index: 20000;
+    padding-top:40px;
+}
+
+.modal-backdrop {
+    z-index: 10;
+}
+
+#card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vertical-nav-menu ul > li > a {
+    text-decoration: none;
+}
+
+.card-header {
+    width: 100%;
+}
+
+
+@media (max-width:750px) {
+    #card {
+        flex-direction: column;
+    }
+
+    .name-profile {
+        align-items: center !important;
+    }
+
+    .card-header:first-child {
+        width: 100%;
+    }
+
+    .card-body {
+        width: 100%;
+        overflow: scroll;
+    }
+}

@@ -1,8 +1,12 @@
 @model yogloansdotnet.Models.InvestoreViewModel
 
-
+@{
+    var firstWelcome = Model?.InvestorsWelcome.FirstOrDefault();
+    string image1base64 = firstWelcome?.Image1 != null ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image1) : null;
+    string image2base64 = firstWelcome?.Image2 != null ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image2) : null;
+}
 <section class="welcome-container"
-    style="background-image: url(@(Model.InvestorsWelcome.FirstOrDefault()?.Image1 ?? ""))" id="welcome-desktop">
+    style="background-image: url(@(image1base64)" id="welcome-desktop">
         <h1 style="visibility:hidden;">Investors
         </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
         <div class="button">
@@ -17,7 +21,7 @@
 
     <!-- Mobile Section (Image2) -->
 <section class="welcome-container"
-    style="background-image: url(@(Model.InvestorsWelcome.FirstOrDefault()?.Image2 ?? ""))" id="welcome-mobile">
+    style="background-image: url(@(image2base64)" id="welcome-mobile">
    <h1 style="visibility:hidden;">Investors
         </h1><!--    <p id="sub">Experience Door Step Gold Loan Services</p>  -->
         <div class="button">

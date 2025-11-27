@@ -1,0 +1,450 @@
+﻿@model List<yogloansdotnet.Models.announcements_create>
+
+@{
+
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "~/Views/admin/Shared/_Layout.cshtml";
+    
+
+}
+<style>
+    .fr-box.fr-basic .fr-element {
+        height:400px;
+    
+    }
+ 
+</style>
+<link rel="stylesheet" href="~/css/content/mail/css/froala_editor.css" />
+
+<link rel="stylesheet" href="~/css/content/mail/css/froala_style.css">
+
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/code_view.css">
+
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/draggable.css">
+
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/colors.css">
+
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/emoticons.css">
+
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/image_manager.css">
+
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/image.css">
+
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/line_breaker.css">
+
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/table.css">
+
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/char_counter.css">
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/video.css">
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/fullscreen.css">
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/file.css">
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/quick_insert.css">
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/help.css">
+<link rel="stylesheet" href="~/css/content/mail/css/third_party/spell_checker.css">
+<link rel="stylesheet" href="~/css/content/mail/css/plugins/special_characters.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="col-12" style="display:flex; justify-content: end; gap:20px;">
+                        <!-- <button type="button" class="btn btn-primary" onclick="window.location.href='/admin/Careeradmin/departments'">Add Departments +</button> -->
+                        <!--                         <button type="button" class="btn btn-primary" onclick="window.location.href='/admin/Careeradmin/designation'">Add Designation +</button> -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-ann" onclick="addclear()">Add Announcements +</button>
+
+                        <!--                         <button type="button" class="btn btn-primary" onclick="window.location.href='/admin/homeloan/offer'">Add Offer +</button> -->
+                    </div>
+
+                    <div class="table-responsive mt-3">
+                        <table id="loansTable" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>title</th>
+                                    <th> banner</th>
+                                    <th>content show</th>
+                                   
+                                   
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                           
+                                @{
+                                    int count = 1;
+                                }
+                                @foreach (var data in Model)
+                                {
+                                    var imgBase64 = data.image != null ? "data:image/png;base64," + Convert.ToBase64String(data.image) : "";
+
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>@data.title</td>
+                                        <td style="cursor:pointer;">
+                                            @if (data.image != null)
+                                            {
+                                                <img src="@imgBase64"
+                                                     style="width:100px; height:50px; object-fit:contain; cursor:pointer;"
+                                                     onclick="showImagePopup('@imgBase64')" />
+                                            }
+                                        </td>
+                                        <td style="cursor:pointer;" onclick='showContent("@data.content")'>
+                                            <i class="fa fa-eye"></i>
+                                        </td>
+                                        <td style="display:flex; gap:10px;">
+                                            <button class="btn btn-sm btn-warning"
+                                                    onclick='editAnnouncement("@data.Id", @Html.Raw(System.Text.Json.JsonSerializer.Serialize(data.title)), "@imgBase64", "@data.content")'>
+                                                Edit
+                                            </button>
+                                            <button class="btn btn-sm btn-danger" onclick="deleteAnnouncement(@data.Id)">Delete</button>
+                                        </td>
+                                    </tr>
+                                    count++;
+                                }
+
+
+                            </tbody>
+                       </table>
+                         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="add-ann" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create Announcements</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+            </div>
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["Success"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @TempData["Error"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            } 
+            <div class="model-body" style="padding: 40px;">
+                <form id="myForm"
+                      action="/admin/Announcementadmin/add-aanouncements"
+                      method="post"
+                      enctype="multipart/form-data"
+                      class="col-12"
+                      style="display:flex; flex-direction:column; gap:20px; justify-content:center; align-items:center;">
+
+                      <input type="hidden" value="" name="id" id="id">
+
+                    <!-- TITLE -->
+                    <div class="col-12">
+                        <p>Title</p>
+                        <input type="text" name="title" id="title" class="form-control" placeholder="Enter Title" required />
+                    </div>
+
+                    <img src="" id="image" style="width:100%; height:250px; object-fit:contain; display:none; " />
+
+                    <!-- PDF UPLOAD -->
+                    <div class="col-12">
+                        <p>Upload PDF</p>
+                        <input type="file" name="ImageFile" class="form-control" accept="image/*" required />
+                    </div>
+
+
+
+                    <!-- ANNOUNCEMENT CONTENT (FROALA) -->
+                    <div class="col-12">
+                        <p>Announcement Content</p>
+
+                        <!-- Froala Editor Textarea (DO NOT GIVE NAME HERE) -->
+                        <textarea id="edit" class="form-control" rows="5" style="height:600px;"></textarea>
+
+                        <!-- Hidden input (THIS sends encrypted content to backend) -->
+                        <input type="hidden" id="encryptedContent" name="content" />
+                    </div>
+
+
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="col-12" style="text-align:center;">
+                        <button type="submit" class="btn btn-primary" id="sb-btn">Create Announcement</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img id="popupImage" src="" style="max-width:100%; max-height:500px;" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="contentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Announcement Content</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modalContent" style="max-height: 70vh; overflow-y: auto;">
+                <!-- Decrypted content will be inserted here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/xml/xml.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.7/purify.min.js"></script>
+
+@*encript*@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+<script type="text/javascript" src="~/js/mail/js/froala_editor.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/align.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/char_counter.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/code_beautifier.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/code_view.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/colors.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/draggable.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/emoticons.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/entities.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/file.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/font_size.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/font_family.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/fullscreen.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/image.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/image_manager.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/line_breaker.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/inline_style.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/link.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/lists.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/paragraph_format.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/paragraph_style.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/quick_insert.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/quote.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/table.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/save.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/url.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/video.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/help.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/print.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/third_party/spell_checker.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/special_characters.min.js"></script>
+<script type="text/javascript" src="~/js/mail/js/plugins/word_paste.min.js"></script>
+
+
+
+<script>
+
+    var editorInstance;
+
+    // Convert any FILE (image/video) to Base64
+    function fileToBase64(file, callback) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            callback(e.target.result);
+        };
+        reader.readAsDataURL(file);
+    }
+
+    // Convert <img> tag src to Base64
+    function convertImageToBase64($img) {
+        if ($img.attr('src').startsWith('data:')) return;
+
+        fetch($img.attr('src'))
+            .then(res => res.blob())
+            .then(blob => {
+                fileToBase64(blob, function (base64) {
+                    $img.attr('src', base64);
+                });
+            });
+    }
+
+    // Convert <video> tag src to Base64
+    function convertVideoToBase64($video) {
+        if ($video.attr('src').startsWith('data:')) return;
+
+        fetch($video.attr('src'))
+            .then(res => res.blob())
+            .then(blob => {
+                fileToBase64(blob, function (base64) {
+                    $video.attr('src', base64);
+                });
+            });
+    }
+
+
+    // Initialize Froala
+    new FroalaEditor('#edit', {
+
+        imageUpload: true,      // allow local image upload
+        videoUpload: true,      // allow local video upload
+        fileUpload: false,      // you don’t need this
+
+        // prevent actual server upload
+        imageUploadURL: null,
+        videoUploadURL: null,
+
+        events: {
+
+            initialized: function () {
+                editorInstance = this;
+            },
+
+            // When image is uploaded (local)
+            'image.beforeUpload': function (files) {
+                const editor = this;
+
+                fileToBase64(files[0], function (base64) {
+                    editor.image.insert(base64, null, null, editor.image.get());
+                });
+
+                return false; // stop server upload
+            },
+
+            // When video is uploaded (local)
+            'video.beforeUpload': function (files) {
+                const editor = this;
+
+                fileToBase64(files[0], function (base64) {
+                    editor.video.insert(base64, null, null, editor.video.get());
+                });
+
+                return false; // stop server upload
+            },
+
+            // When pasting HTML content containing images/videos
+            'paste.after': function () {
+
+                $('#edit img').each(function () {
+                    convertImageToBase64($(this));
+                });
+
+                $('#edit video').each(function () {
+                    convertVideoToBase64($(this));
+                });
+            }
+        }
+
+    });
+
+
+    // Encrypt on submit
+    $('#myForm').on('submit', function () {
+
+        var content = editorInstance.html.get();
+        var key = "MySecretKey12345";
+
+        var encrypted = CryptoJS.AES.encrypt(content, key).toString();
+
+        $('#encryptedContent').val(encrypted);
+    });
+     function showImagePopup(base64) {
+        $('#popupImage').attr('src', base64);
+        var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+        modal.show();
+    }
+       function showContent(encryptedContent) {
+        var key = "MySecretKey12345";
+        var decrypted = CryptoJS.AES.decrypt(encryptedContent, key).toString(CryptoJS.enc.Utf8);
+
+        // Inject decrypted HTML into modal
+        document.getElementById("modalContent").innerHTML = decrypted;
+
+        // Show Bootstrap modal
+        var modal = new bootstrap.Modal(document.getElementById("contentModal"));
+        modal.show();
+    }
+
+           function editAnnouncement(id, title, image, encryptedContent) {
+                 $('#image').attr('src', '');
+                 $('#sb-btn').text('');
+                 $('#sb-btn').text('Edit Announcement');
+                 
+        // Show modal
+        var modal = new bootstrap.Modal(document.getElementById('add-ann'));
+        modal.show();
+
+        // Set hidden ID field
+                $('#id').val('');
+
+        $('#id').val(id);
+
+        // Set title input
+         $('#title').val('');
+        $('#title').val(title);
+
+        // Set image preview
+         $('#image').show();
+        $('#image').attr('src', image);
+        
+        // Wait for Froala editor to be initialized
+        var checkEditor = setInterval(function () {
+            if (editorInstance) {
+                clearInterval(checkEditor);
+
+                // Decrypt content
+                var key = "MySecretKey12345";
+                var decrypted = CryptoJS.AES.decrypt(encryptedContent, key).toString(CryptoJS.enc.Utf8);
+
+                // Set Froala editor content
+                editorInstance.html.set(decrypted);
+            }
+        }, 100);
+    }
+    function addclear() {
+              $('#sb-btn').text('');
+                 $('#sb-btn').text('Create Announcement');
+        // Clear all text inputs
+        $('#myForm').find('input[type="text"], input[type="file"], input[type="hidden"]').val('');
+
+        // Clear image preview
+        $('#image').attr('src', '');
+            $('#image').hide();
+        // Clear Froala editor content
+        if (editorInstance) {
+            editorInstance.html.set('');
+        }
+    }
+     function deleteAnnouncement(id) {
+         alert(id);
+        if (!confirm("Are you sure you want to delete this announcement?")) return;
+
+        $.ajax({
+            url: '/admin/Announcementadmin/deleteannoun', // make sure path matches your controller
+            type: 'POST',
+            data: { id: id },
+            headers: {
+                'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+            },
+            success: function () {
+                alert("Announcement deleted successfully!");
+                location.reload(); // reload page to update table
+            },
+            error: function () {
+                alert("Error deleting announcement. Try again.");
+            }
+        });
+    }
+
+
+</script>
+

@@ -9,8 +9,8 @@ namespace yogloansdotnet.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        public string Profile { get; set; } = string.Empty;
+     
+        public byte[]? Profile { get; set; } 
 
         [Required]
         public string FullName { get; set; } = string.Empty;

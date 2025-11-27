@@ -7,12 +7,11 @@ namespace yogloansdotnet.Models
     public class AnnouncementsModel
     {
         [Key]
-        public int Id { get; set; }
+        public int Id { get; set; } 
 
-        [Required]
         public string Title { get; set; } = string.Empty;
 
-        [Required]
-        public string FilePath { get; set; } = string.Empty;
+       
+        public byte[]? FilePath { get; set; } 
     }
 } 

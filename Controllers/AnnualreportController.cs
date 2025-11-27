@@ -1,11 +1,13 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using yogloansdotnet.Models;
-using yogloansdotnet.Data;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
+using yogloansdotnet.Data;
+using yogloansdotnet.Models;
 
 namespace yogloansdotnet.Controllers
 {
@@ -26,67 +28,46 @@ namespace yogloansdotnet.Controllers
 
         [Route("addannualreport")]
         [HttpPost]
-        public async Task<IActionResult> AddAnnualReport([FromForm] string Title, IFormFile Pdf, [FromForm] string id)
+        public async Task<IActionResult> AddAnnualReport(AnnualReportEntity model, IFormFile pdf)
         {
-            if (Pdf == null || Pdf.Length == 0)
-            {
-                TempData["Error"] = "Please select a PDF file";
-                return RedirectToAction("Index", "Investors", new { area = "admin" });
-            }
-
-            var allowedTypes = new[] { "application/pdf" };
-            if (!allowedTypes.Contains(Pdf.ContentType.ToLower()))
-            {
-                TempData["Error"] = "Only PDF files are allowed";
-                return RedirectToAction("Index", "Investors", new { area = "admin" });
-            }
-
             try
             {
-                string filePath = await SavePdfAsync(Pdf);
+                byte[]? file = null;
 
-                if (string.IsNullOrEmpty(id))
+                if(pdf != null && pdf.Length > 0)
                 {
-                    // Create new report
-                    var annualReport = new AnnualReportEntity
+                    using var ms = new MemoryStream();
+                    await pdf.CopyToAsync(ms);
+                    file = ms.ToArray();
+                }
+
+                if(model.Id == 0)
+                {
+                    var welcome = new AnnualReportEntity
                     {
-                        Title = Title,
-                        FilePath = filePath
+                        FilePath = file,
+                        Title = model.Title
                     };
-
-                    _context.AnnualReports.Add(annualReport);
-                    await _context.SaveChangesAsync();
-
-                    TempData["Success"] = "Annual report added successfully";
+                    
+                    _context.AnnualReports.Add(welcome);
                 }
                 else
                 {
-                    // Update existing report
-                    var report = await _context.AnnualReports.FindAsync(int.Parse(id));
-                    if (report == null)
+                    var existing = await _context.AnnualReports.FirstOrDefaultAsync(a => a.Id == model.Id);
+                    if(existing != null)
                     {
-                        TempData["Error"] = "Report not found";
-                        return RedirectToAction("Index", "Investors", new { area = "admin" });
+                        existing.Title = model.Title;
+                       
+                    }
+                    if(existing.FilePath != null)
+                    {
+                        existing.FilePath = file;
                     }
 
-                    // Delete old file if it exists
-                    if (!string.IsNullOrEmpty(report.FilePath))
-                    {
-                        var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, report.FilePath.TrimStart('/'));
-                        if (System.IO.File.Exists(oldFilePath))
-                        {
-                            System.IO.File.Delete(oldFilePath);
-                        }
-                    }
-
-                    report.Title = Title;
-                    report.FilePath = filePath;
-                    await _context.SaveChangesAsync();
-
-                    TempData["Success"] = "Annual report updated successfully";
+                    _context.AnnualReports.Update(existing);
                 }
-
-                return Redirect("/admin/AdminInvestor");
+                    await  _context.SaveChangesAsync();
+                    return Redirect("/admin/AdminInvestor");
             }
             catch (Exception ex)
             {
@@ -95,24 +76,7 @@ namespace yogloansdotnet.Controllers
                 return Redirect("/admin/AdminInvestor");
             }
         }
-
-        private async Task<string> SavePdfAsync(IFormFile file)
-        {
-            var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
-            var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/reports");
-
-            if (!Directory.Exists(uploads))
-                Directory.CreateDirectory(uploads);
-
-            var filePath = Path.Combine(uploads, fileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            return "/uploads/reports/" + fileName;
-        }
+         
 
         [HttpPost("delete/{id}")]
         [ValidateAntiForgeryToken]
@@ -126,14 +90,7 @@ namespace yogloansdotnet.Controllers
                     return Json(new { success = false, message = "Report not found" });
                 }
 
-                if (!string.IsNullOrEmpty(report.FilePath))
-                {
-                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, report.FilePath.TrimStart('/'));
-                    if (System.IO.File.Exists(filePath))
-                    {
-                        System.IO.File.Delete(filePath);
-                    }
-                }
+             
 
                 _context.AnnualReports.Remove(report);
                 await _context.SaveChangesAsync();

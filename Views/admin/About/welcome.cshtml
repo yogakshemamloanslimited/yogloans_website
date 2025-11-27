@@ -4,6 +4,12 @@
     ViewData["Title"] = "Admin Dashboard";
     Layout = "~/Views/admin/Shared/_Layout.cshtml";
     var firstWelcome = Model?.FirstOrDefault();
+    string image1Base64 = firstWelcome?.Image1 != null
+        ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image1)
+        : null;
+    string image2Base64 = firstWelcome?.Image2 != null
+        ? "data:image/png;base64," + Convert.ToBase64String(firstWelcome.Image2)
+        : null;
 }
 
 <div class="container-fluid">
@@ -37,9 +43,9 @@
                                 <div class="image-upload-group">
                                     <label class="card" style="display: flex; justify-content: center; align-items: center; height:300px; cursor:pointer; position:relative; overflow: hidden;" for="cd-upload-1">
                                         <input type="file" name="Image1" id="cd-upload-1" accept="image/*" style="width: 100%; height: 100%; position: absolute; visibility: hidden;">
-                                        <img id="cd-placeholder-1" src="@(firstWelcome?.Image1)" style="@(string.IsNullOrEmpty(firstWelcome?.Image1) ? "display: none;" : "width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0;")">
-                                        <img id="cd-preview-1" src="" style="display: none;width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0;" />
-<!--                                         <img id="cd-preview-1" src="@(firstWelcome?.Image1 ?? "images/icon/image.png")" style=";width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0; @(string.IsNullOrEmpty(firstWelcome?.Image1) ? "display: none;" : "width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0;")" /> -->
+                                    <img id="cd-placeholder-1" src="@(image1Base64)" style="@(string.IsNullOrEmpty(image1Base64) ? "display: none;" : "width: 100%; height: 100%; object-fit: contain; position: absolute; z-index: 0;")">
+                                        <img id="cd-preview-1" src="" style="display: none;width: 100%; height: 100%; object-fit: contain; position: absolute; z-index: 0;" />
+                                    <!--                                         <img id="cd-preview-1" src="@(image1Base64 ?? "images/icon/image.png")" style=";width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0; @(string.IsNullOrEmpty(image1Base64) ? "display: none;" : "width: 100%; height: 100%; object-fit: contain; position: absolute; z-index: 0;")" /> -->
                                     </label>
                                     <span class="text-danger" id="cdImage1Error"></span>
                                 </div>
@@ -50,8 +56,8 @@
                                     <label class="card" style="display: flex; justify-content: center; align-items: center; height:300px; cursor:pointer; position:relative; overflow: hidden;" for="cd-upload-2">
                                         <input type="file" name="Image2" id="cd-upload-2" accept="image/*" style="width: 100%; height: 100%; position: absolute; visibility: hidden;">
                                         <!-- <img id="cd-placeholder-2" src="images/icon/image.png" alt="Upload" style="width: 80px; height: 80px; opacity: 0.1; position: absolute; z-index: 1;"> -->
-                                        <img id="cd-placeholder-2" src="@(firstWelcome?.Image2)" style="@(string.IsNullOrEmpty(firstWelcome?.Image2) ? "display: none;" : "width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0;")">
-                                        <img id="cd-preview-2" src="" style="display: none; width: 100%; height: 100%; object-fit: cover; position: absolute; z-index: 0;"/>
+                                    <img id="cd-placeholder-2" src="@(image2Base64)" style="@(string.IsNullOrEmpty(image2Base64) ? "display: none;" : "width: 100%; height: 100%; object-fit: contain; position: absolute; z-index: 0;")">
+                                    <img id="cd-preview-2" src="" style="display: none; width: 100%; height: 100%; object-fit: contain; position: absolute; z-index: 0;" />
                                     </label>
                                     <span class="text-danger" id="cdImage2Error"></span>
                                 </div>

@@ -29,8 +29,16 @@ namespace yogloansdotnet.Controllers
 [Route("policy")]
 public async Task<IActionResult> Policy()
 {
-    var Policy = await _context.Policy.ToListAsync();
-    return Json(Policy); 
+    var Policy = await _context.Policy
+          .Select(c => new
+               {
+                   c.Id,
+                   c.Title,
+                   // Convert byte[] to Base64 string if it exists
+                   FileBase64 = c.FilePath != null ? Convert.ToBase64String(c.FilePath) : null
+               })
+               .ToListAsync();
+            return Json(Policy); 
 }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

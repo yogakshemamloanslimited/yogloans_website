@@ -1,7 +1,7 @@
 @{
     ViewData["Title"] = "Investors";
 }
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <link rel="stylesheet" href="~/css/home/welcome.css" asp-append-version="true">
 <partial name="Welcome" />
 <partial name="list" />
@@ -13,3 +13,17 @@
         width: 100%;
     }
 </style>
+
+<div class="modal fade" id="pdfModal1" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pdfModalLabel">PDF Viewer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height:80vh; overflow:auto;">
+                <div id="pdfContainer" style="text-align:center;"></div>
+            </div>
+        </div>
+    </div>
+</div>

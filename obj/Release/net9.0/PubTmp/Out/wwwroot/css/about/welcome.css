@@ -1,0 +1,11 @@
+  a{
+        text-decoration: none;
+        color: white;
+    }
+    .welcome-container {
+        height: 300px;
+        gap: 0px    ;
+    }
+    .welcome-container .button p{
+        font-size: 18px;
+    }

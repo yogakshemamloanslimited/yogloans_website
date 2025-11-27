@@ -14,3 +14,14 @@
         width: 100%;
     } 
 </style>
+<script>
+    $(document).ready(function(){
+     const loanname = '@(Context.Session.GetString("loanname") ?? "")';
+     if( loanname =="Gold Loan"){
+         $('#auction-model-show').show();
+     }
+     else if(loanname == "Two Wheeler Loan"){
+         $('#vehicle-seizing').show();
+     }
+    });
+</script>

@@ -1,76 +1,198 @@
 
+<partial name="contactcard" />
 
-<link rel="stylesheet" href="~/css/contact/contact.css" asp-append-version="true">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<section class="contact"  style="flex-direction: column; justify-content: start; align-items: center; gap:10px position:relative; border:1px solid;">
-    
-                   <div class="redirect"
-     style="
-        width:200px;
-        height:70px;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        cursor:pointer;
-        box-shadow:0px 0px 1px 0px gray;
-        background-color:#044697;
-        color:white;
-        position:fixed;
-        top:75%;
-        left:0;
-        transform:translateY(-50%) rotate(-90deg);
-        transform-origin: left top;
-        z-index:1000;
-     "
-     onclick="window.location.href='/branch'">
-    View Nearby Branches
-</div>
+<section class="contact" style="display:flex; justify-content:center; width:100%; margin-top:20px;">
+    <div class="card" style="width:90%; display:flex; flex-direction:row; padding:0px; justify-content:center; align-items:center; height:100%;">
+        <form id="enquiryForm" class="styled-form">
+            <h2>Get In Touch</h2>
 
-            
-        <div class="contact-container">
-            
-            <div class="address">
-                <div class="item">
-                    <div class="image">
-                        <img src="images/icon/maps-and-flags.png" alt="" srcset="">
+            <!-- ROW 1: NAME / EMAIL / PHONE -->
+            <div class="row">
+                <div class="col">
+                    <div class="input-box">
+                        <input type="text" id="enquiry_name" name="enquiry_name" required>
+                        <label for="enquiry_name">Full Name</label>
                     </div>
-                    <p>
-                        Door No: 28/315 D2, 3rd Floor ,Ottappath Tower, Aswini Junction,Patturaikkal, Thiruvambady-PO,
-                        Thrissur, Kerala-680022
-                    </p>
+                </div>
 
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="images/icon/mail.png" alt="" srcset="">
+                <div class="col">
+                    <div class="input-box">
+                        <input type="email" id="email_id" name="email_id" required>
+                        <label for="email_id">Email Address</label>
                     </div>
-                    <p>mail@yogloans.com</p>
                 </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="images/icon/telephone.png" alt="" srcset="">
+
+                <div class="col">
+                    <div class="input-box">
+                        <input type="text" id="contact_no" name="contact_no" required>
+                        <label for="contact_no">Mobile Number</label>
                     </div>
-                    <p>0487-2320102,2320103</p>
                 </div>
             </div>
-                 <form id="enquiryForm">
-                <h2>Get In Touch</h2>
-                
-                <label for="enquiry_name">Full Name</label>
-                <input type="text" id="enquiry_name" name="enquiry_name" required>
-                <label for="email_id">Email Address</label>
-                <input type="email" id="email_id" name="email_id" required>
-                <label for="contact_no">Mobile Number</label>
-                <input type="text" id="contact_no" name="contact_no" required>
-                <label for="enquiry_address">Full Address</label>
+
+            <!-- ROW 2: ADDRESS FULL WIDTH -->
+            <div class="input-box full">
                 <textarea id="enquiry_address" name="enquiry_address" required></textarea>
-                <button type="submit">Send Enquiry</button>
-            </form>
+                <label for="enquiry_address">Full Address</label>
+            </div>
 
-        </div>
-    </section>
+            <button type="submit" class="btn col-6" style="margin-top:10px;">Send Enquiry</button>
+        </form>
+            <div class="" style="width:40%;" id="map-section">
+                <partial name="map" />
+            </div>
 
-    
+    </div>
+</section>
+
+<style>
+    #enquiryForm{
+        width:60%;
+    }
+    /* FORM MAIN */
+    .styled-form {
+        width: 100%;
+      /*   max-width: 900px;
+        margin: auto; */
+        padding: 30px 25px;
+        background: #ffffff;
+        border-radius: 12px;
+        font-family: "Poppins", sans-serif;
+    }
+
+        .styled-form h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+            font-weight: 600;
+        }
+
+    /* GRID LAYOUT */
+    .row {
+        display: flex;
+     /*    gap: 20px;
+        margin-bottom: 25px; */
+    }
+
+    .col {
+        flex: 1;
+    }
+
+    /* FULL WIDTH ROW */
+    .input-box.full {
+        width: 100%;
+    }
+
+    /* FLOATING LABEL INPUT BOX */
+    .input-box {
+        position: relative;
+        width: 100%;
+    }
+
+        .input-box input,
+        .input-box textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ccc;
+          /*   border-radius: 8px; */
+            font-size: 15px;
+            background: transparent;
+            outline: none;
+            transition: 0.3s ease;
+            resize: none;
+        }
+
+        .input-box textarea {
+            height: 90px;
+        }
+
+        /* Floating label */
+        .input-box label {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: #fff;
+            padding: 0 6px;
+            color: #777;
+            font-size: 15px;
+            pointer-events: none;
+            transition: 0.3s ease;
+        }
+
+        /* On focus OR typed */
+        .input-box input:focus,
+        .input-box textarea:focus {
+            border-color: #B4181E;
+        }
+
+            .input-box input:focus + label,
+            .input-box input:not(:placeholder-shown) + label,
+            .input-box textarea:focus + label,
+            .input-box textarea:not(:placeholder-shown) + label {
+                top: -9px;
+                font-size: 12px;
+                color: #B4181E;
+            }
+
+    /* SUBMIT BUTTON */
+    .styled-form .btn {
+        width: 100%;
+        padding: 14px;
+        background: #B4181E;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+        .styled-form .btn:hover {
+            background: #8d1217;
+        }
+        @@media(max-width:900px){
+            .card{
+            flex-direction: column !important;
+            width:100% !important;
+            }
+
+        #enquiryForm {
+            width: 100%;
+        }
+
+        .input-box.full {
+            width: 100%;
+            margin: 10px;
+        }
+
+        .col {
+          
+            width: 100%;
+            margin: 10px;
+        }
+
+        .styled-form .btn {
+            margin: 10px;
+            
+        }
+
+        #map-section{
+            width:100% !important;
+        }
+
+        .form-group {
+            flex-direction:column;
+            justify-content:center  ;
+            align-items:center;
+        }
+
+            .form-group .card {
+                width: 90% !important;
+            }
+        }
+
+</style>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
@@ -121,4 +243,4 @@
             });
         });
     });
-    </script>Z
+    </script>

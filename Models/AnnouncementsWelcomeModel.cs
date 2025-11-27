@@ -6,13 +6,13 @@ namespace yogloansdotnet.Models
     [Table("Announcementswelcome")]
     public class AnnouncementsWelcomeModel
     {
-        [Key] [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-       
+        [Key]
 
+        public string title { get; set; } = string.Empty;
         public byte[]? image { get; set; }    // not required
         public byte[]? image2 { get; set; }   // not required
 
      
-        public string title { get; set; } = string.Empty;
+    
     }
 }

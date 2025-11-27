@@ -343,7 +343,7 @@
 
             // Disable button to prevent resubmission
             $('#submit-details').prop('disabled', true).text('Submitting...');
-
+               var pagestate = '@Context.Session.GetString("pagestate")';
             // ======= 1st API Call =======
             $.ajax({
                 url: API.allapi.Submituserform,
@@ -354,7 +354,12 @@
                         // ======= 2nd API Call: Save mobile in session =======
                         $.get(`/post-mobile?mobile=${mobile}`)
                             .done(function () {
-                                window.location.href = '/vehicleseizing';
+                                if(pagestate == 1){
+                                     window.location.href = '/vehicleseizing/productdetails';
+                                }
+                               else{
+                                      window.location.href = '/vehicleseizing';
+                               }
                             })
                             .fail(function (xhr) {
                                 alert("Error saving mobile: " + xhr.status);

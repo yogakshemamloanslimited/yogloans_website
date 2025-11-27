@@ -1,11 +1,12 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using yogloansdotnet.Models;
-using yogloansdotnet.Data;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.IO;
 using System.Threading.Tasks;
+using yogloansdotnet.Data;
+using yogloansdotnet.Models;
 
 namespace yogloansdotnet.Controllers
 {
@@ -26,64 +27,62 @@ namespace yogloansdotnet.Controllers
 
         [Route("add-disclosure")]
         [HttpPost]
-        public async Task<IActionResult> adddisclosure([FromForm] string Title, IFormFile Pdf, [FromForm] string ids)
+        public async Task<IActionResult> adddisclosure(DisclosureModel model, IFormFile FilePath)
         {
             try
             {
-                string filePath = await SavePdfAsync(Pdf);
+             
+                byte[] imageBytes = null;
 
-                if (string.IsNullOrEmpty(ids))
+                // Convert uploaded file to byte array
+                if (FilePath != null && FilePath.Length > 0)
                 {
-                    // Create new disclosure
-                    var disclosure = new DisclosureModel
+                    using var ms = new MemoryStream();
+                    await FilePath.CopyToAsync(ms);
+                    imageBytes = ms.ToArray();
+                }
+
+                if (model.Id == 0)
+                {
+                    
+                    var newAnnouncement = new DisclosureModel
                     {
-                        Title = Title,
-                        FilePath = filePath
+                        Title = model.Title,
+                    
+                        FilePath = imageBytes
                     };
 
-                    _context.Disclosure.Add(disclosure);
-                    await _context.SaveChangesAsync();
-
-                    return Json(new { 
-                        success = true, 
-                        message = "Disclosure added successfully",
-                        id = disclosure.Id,
-                        title = disclosure.Title,
-                        filePath = disclosure.FilePath
-                    });
+                    _context.Disclosure.Add(newAnnouncement);
                 }
                 else
                 {
-                    // Update existing disclosure
-                    var existingDisclosure = await _context.Disclosure.FindAsync(int.Parse(ids));
-                    if (existingDisclosure == null)
-                    {
-                        return Json(new { success = false, message = "Disclosure not found" });
-                    }
+                    // Update existing announcement
+                    var existing = await _context.Disclosure
+                        .FirstOrDefaultAsync(a => a.Id == model.Id);
 
-                    // Delete old file if it exists
-                    if (!string.IsNullOrEmpty(existingDisclosure.FilePath))
+                    if (existing != null)
                     {
-                        var oldFilePath = Path.Combine(_webHostEnvironment.WebRootPath, existingDisclosure.FilePath.TrimStart('/'));
-                        if (System.IO.File.Exists(oldFilePath))
+                        existing.Title = model.Title;
+                       
+
+                        // Only update image if a new file is uploaded
+                        if (imageBytes != null)
                         {
-                            System.IO.File.Delete(oldFilePath);
+                            existing.FilePath = imageBytes;
                         }
-                    }
-                    
-                    existingDisclosure.Title = Title;
-                    existingDisclosure.FilePath = filePath;
-                  
-                    await _context.SaveChangesAsync();
 
-                    return Json(new { 
-                        success = true, 
-                        message = "Disclosure updated successfully",
-                        id = existingDisclosure.Id,
-                        title = existingDisclosure.Title,
-                        filePath = existingDisclosure.FilePath
-                    });
+                        _context.Disclosure.Update(existing);
+                    }
+                    else
+                    {
+                        TempData["Error"] = "Announcement not found!";
+                        return RedirectToAction("announcements");
+                    }
                 }
+
+                await _context.SaveChangesAsync();
+                return Json(new { success = true, message = "Saved Successfully." });
+
             }
             catch (Exception ex)
             {
@@ -92,24 +91,7 @@ namespace yogloansdotnet.Controllers
             }
         }
 
-        private async Task<string> SavePdfAsync(IFormFile file)
-        {
-            var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName);
-            var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/disclosure");
-
-            if (!Directory.Exists(uploads))
-                Directory.CreateDirectory(uploads);
-
-            var filePath = Path.Combine(uploads, fileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            return "/uploads/disclosure/" + fileName;
-        }
-
+     
         [HttpPost("delete/{id}")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
@@ -122,15 +104,7 @@ namespace yogloansdotnet.Controllers
                     return Json(new { success = false, message = "Disclosure not found" });
                 }
 
-                if (!string.IsNullOrEmpty(disclosure.FilePath))
-                {
-                    var filePath = Path.Combine(_webHostEnvironment.WebRootPath, disclosure.FilePath.TrimStart('/'));
-                    if (System.IO.File.Exists(filePath))
-                    {
-                        System.IO.File.Delete(filePath);
-                    }
-                }
-
+                
                 _context.Disclosure.Remove(disclosure);
                 await _context.SaveChangesAsync();
 

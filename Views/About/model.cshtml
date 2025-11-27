@@ -25,7 +25,7 @@
             <div class="modal-content instagram-modal">
                 <div class="modal-header instagram-header">
                     <div class="d-flex align-items-center">
-                        <img src="" alt="" id="modalDirectorImage" class="director-avatar">
+                      @*   <img src="" alt="" id="modalDirectorImage" class="director-avatar"> *@
                         <div class="ms-3">
                             <h5 id="modalDirectorName" class="mb-0"></h5>
                             <p id="modalDirectorPosition" class="text-muted mb-0"></p>
@@ -73,7 +73,7 @@ function director(id) {
     
             $('#modalDirectorName').text(data.name);
 $('#modalDirectorPosition').text(data.post);
-$('#modalDirectorImage').attr('src', data.profile);
+// $('#modalDirectorImage').attr('src', data.profile);
 $('#modalDirectorBio').text(data.about);
             
         // Show modal
